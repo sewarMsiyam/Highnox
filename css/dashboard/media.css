@@ -1,0 +1,747 @@
+@media (min-width: 1400px) {
+    .custom-cont-table{
+      width: 20% !important;
+    }
+    
+  }
+  @media (min-width:1400px) and (max-width: 1700px) {
+    
+  
+    .investment-card{
+      width: calc(33% - 2rem);
+    }
+      .box {
+        position: relative;
+        top: -40px;
+      }
+    
+      .item-li {
+        padding: 0 10px;
+      }
+    
+      /* .bi {
+        font-size: 1.5rem;
+      } */
+      .scroll2 {
+        overflow-x: auto !important;
+        overflow-y: hidden;
+      }
+    }
+    
+    
+    @media screen and (max-width: 1600px) {
+      .navbarColor {
+        padding-bottom: 0px;
+        padding-top: 0px;
+      }
+/*     
+      .nav-link {
+        font-size: 1rem !important;
+      } */
+    
+    }
+    
+    @media screen and (max-width: 1500px) {
+      .justify {
+        justify-content: flex-start !important;
+      }
+    
+      .item-li {
+        padding: 0 10px;
+      }
+    
+      .prof {
+        padding-left: 20px;
+      }
+    }
+    
+    @media screen and (max-width: 1400px) {
+      .investment-card{
+        width: calc(50% - 2rem);
+      }
+      .nav-li {
+        font-size: 12px !important;
+      }
+    
+      #section-chart {
+        flex-direction: column !important;
+      }
+    
+      #colsec {
+        /* display: none !important; */
+        flex-direction: row !important;
+        width: 100% !important;
+        flex-wrap: wrap;
+      }
+    
+      .chart1,
+      .chart2,
+      .chart3 {
+        width: 30% !important;
+        height: auto !important;
+        padding: 23px 0 !important;
+      }
+    
+      .chart4,
+      .chart5,
+      .chart6 {
+        width: 100% !important;
+        height: auto !important;
+        padding: 23px 0 !important;
+      }
+    
+      #colchart2 {
+        width: 100% !important;
+      }
+    
+      .box-hero-section h3 {
+        font-size: 18px !important;
+      }
+    
+      .box-hero-section span {
+        font-size: 16px !important;
+      }
+    
+      .slideContainer {
+        width: 25% !important;
+      }
+    
+      .scroll {
+        overflow-x: auto;
+      }
+    
+      .nav-tabs {
+        /* padding-bottom: 4px !important; */
+      }
+    
+      /* .nav-item2 {
+          padding: 0 .6%;
+      } */
+      .scroll2 {
+        overflow-x: auto !important;
+        overflow-y: hidden;
+      }
+    
+    }
+    
+    
+    @media screen and (max-width: 1300px) {
+  
+      .offer-section {
+        flex-direction: column !important;
+        gap: 1.5rem;
+      }
+      .containerBox {
+        flex-wrap: wrap;
+      }
+    
+      .box-hero-section {
+        width: 48% !important;
+        margin-bottom: 20px;
+      }
+    
+      .nav-tabs .nav-item.show .nav-link,
+      .nav-tabs .nav-link.active {
+        /* border-bottom: 2px solid #3A29D8 !important;
+        color: #3A29D8 !important; */
+      }
+    
+      .nav-item2,
+      .nav-item {
+        flex-grow: 0;
+        /* height: 50px; */
+      }
+    
+      .nav-tabs {
+        /* padding-bottom: 12px !important; */
+      }
+    
+      
+    
+      /* .nav-item2 {
+          padding: 0 0%;
+      } */
+      .wrapper .tooltip {
+        width: 160px !important;
+        padding: 10px;
+      }
+    
+      .sales-container {
+        justify-content: flex-start !important;
+      }
+    
+      .column {
+        width: calc(95% /3);
+        margin-left: 7px;
+        margin-right: 7px;
+        margin-bottom: 20px;
+      }
+    
+      .cont-table {
+        width: 30% !important;
+      }
+    
+      .profile .nav-f-s
+      {
+        height: auto !important;
+        padding:0 30px;
+        width: 100% !important;
+      }
+      .container-offer {
+        flex-direction: column;
+      }
+    
+      .left-box {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+    
+      .right-box {
+        width: 100%;
+      }
+    
+      .width-75 {
+        width: 100% !important;
+      }
+    }
+    
+    @media screen and (max-width: 1200px) {
+      .img-box {
+        max-height: inherit;
+      }
+    
+      .container-info {
+        margin-left: 0;
+      }
+    }
+    
+    @media screen and (max-width: 1100px) {
+  
+      .chart1,
+      .chart2,
+      .chart3 {
+        width: 40% !important;
+        margin-left: 10px;
+        margin-right: 10px;
+        height: auto !important;
+        padding: 23px 0 !important;
+        flex-grow: 1;
+      }
+    
+      .slideContainer {
+        width: 30% !important;
+      }
+    
+      .sales-container {
+        justify-content: space-between !important;
+      }
+    
+      .column {
+        width: calc(95% /2);
+      }
+    
+      .input-form {
+        width: 50%;
+      }
+    
+      .box2-offer {
+        flex-wrap: wrap;
+        justify-content: flex-start !important;
+      }
+    
+      .container-box {
+        width: calc(95%/3);
+        margin-right: 8px;
+        margin-bottom: 10px;
+      }
+    
+      .example {
+        width: 30%;
+      }
+    
+      .pe-4 {
+        padding: 0 !important;
+        margin-bottom: 30px;
+      }
+    }
+    
+    @media screen and (max-width: 993px) {
+      .note-container-input{
+        width: 55% !important;
+      }
+      .file-container-input{
+        width: 40%;
+      }
+      .offer-section{
+        gap: 0.9rem !important;
+      }
+      .c-article ul
+      {
+        width: 50% !important;
+      }
+      .item-ul {
+        width: 100% !important;
+    
+      }
+    
+      .item-li {
+        width: 100%;
+        justify-content: flex-end;
+      }
+    
+      .prof {
+        border: none !important;
+        padding: 10px !important;
+      }
+    
+      .form-control-nav {
+        width: 100% !important;
+        margin-top: 20px;
+      }
+    
+      .nav-customer {
+        display: flex;
+        flex-direction: column !important;
+      }
+    
+      .profile-box {
+        transform: translateX(-64px);
+      }
+    
+      .container-fluid {
+        padding-bottom: 30px;
+      }
+    
+      .display {
+        flex-direction: column;
+      }
+    
+      .btn1 {
+        width: 50% !important;
+      }
+    
+      .input-form {
+        width: 100% !important;
+      }
+      
+      .cont-table {
+        width: 70% !important;
+      }
+      .custom-cont-table{
+        width: 100% !important;
+      }
+    
+      .example {
+        margin-top: 10px;
+      }
+    
+      .offer-section ul {
+        width: 100% !important;
+      }
+    
+      .offer-section nav {
+        width: 50% !important;
+      }
+    
+      .meeting .container-box {
+        width: 100%;
+      }
+    
+      .print tr td:first-child {
+        padding-left: 0;
+      }
+    
+      .print tr td {
+        padding: 0 30px !important;
+      }
+    
+      .section-add {
+        height: auto !important;
+      }
+    
+      .pos .m-left {
+        margin-left: 0 !important;
+      }
+      
+    }
+    
+    @media screen and (max-width: 800px) {
+      .investment-card{
+        width: 100%;
+      }
+      .nav {
+        display: flex;
+      }
+    
+      .nav-li {
+        width: 100% !important;
+        font-size: 14px;
+        height: 40px;
+      }
+    
+    
+      .slideContainer {
+        width: 40% !important;
+      }
+    
+    }
+    
+    @media screen and (max-width: 766px) {
+      .descripton-area-container{
+        width: 100% !important;
+      }
+      .offers-icons{
+        width: 15%;
+        display: flex;
+        justify-content: space-between;
+  
+  
+      }
+      .second-offers-section{
+        gap: 0.5rem !important;
+      }
+      .offers-section-form-container{
+        gap: 0.5rem !important;
+      }
+      .button-add, .add{
+        padding: 0.3rem 0.5rem;
+      }
+      .profile-picture
+      {
+        top: -120px;
+      }
+      .col-lg-4-custom,
+      .col-lg-3-custom {
+        width: 100%;
+      }
+    
+      .box-hero-section {
+        width: 100% !important;
+        margin-bottom: 20px;
+      }
+    
+      .box-hero-section h3 {
+        font-size: 16px !important;
+      }
+    
+      .box-hero-section span {
+        font-size: 14px !important;
+      }
+    
+      .style-table {
+        flex-direction: column !important;
+        align-items: baseline !important;
+      }
+    
+      .style-table div span,
+      .style-table .cell-table {
+        width: 100% !important;
+        font-size: 14px;
+        padding: 5px 0;
+      }
+    
+      .btn-table {
+        width: 100% !important;
+      }
+    
+      .chart1,
+      .chart2,
+      .chart3 {
+        width: 100% !important;
+        margin-left: 0;
+        margin-right: 0;
+      }
+    
+      .sales-container {
+        justify-content: center !important;
+      }
+    
+      .column {
+        width: 90%;
+        margin-bottom: 15px;
+      }
+    
+      .floor-map>div {
+        padding: 20px !important;
+      }
+    
+      /* .nav-link {
+          padding: 8px !important;
+      } */
+    
+      /* .nav-tabs .nav-item.show .nav-link,
+      .nav-tabs .nav-link.active {
+          border-bottom: 2px solid #3A29D8 !important;
+      } */
+      .box2-offer {
+        justify-content: space-between !important;
+      }
+    
+      .container-box {
+        width: calc(95%/2);
+        margin-right: 0px;
+      }
+    
+     
+      .cont-table {
+        width: 70% !important;
+      }
+      .custom-cont-table{
+        width: 100% !important;
+      }
+    
+      .left-box {
+        width: 100%;
+      }
+    
+      .flex-box {
+        flex-direction: column;
+      }
+    
+      .container-select {
+        width: 100% !important;
+      }
+    
+      .text-select {
+        margin: 10px 0;
+      }
+    
+      .btn-box {
+        margin-top: 20px;
+        width: 70%;
+        height: 35px;
+      }
+    
+      .form-group {
+        width: 100% !important;
+      }
+    
+      .scroll-role,
+      .scroll-depart {
+        overflow-x: scroll;
+      }
+    
+      .scroll-role table,
+      .scroll-depart table {
+        min-width: 600px;
+      }
+    
+      button {
+        font-size: 14px;
+      }
+    
+      .to-do,
+      .activities,
+      .offers {
+        border-bottom: 1px solid #D9D9D9;
+      }
+    
+      .scroll_pos {
+        overflow-x: scroll;
+      }
+      .container-pos
+      {
+        width: 100% !important;
+      }
+      
+    }
+    
+    @media (max-width: 1020px) {
+
+      .check-box-label{
+        width: 100% !important;
+        height: fit-content;
+      }
+      
+    }
+    @media screen and (max-width: 576px) {
+      .note-file-container{
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      .note-container-input{
+        width: 100% !important;
+      }
+      .file-container-input{
+        width: 100%;
+      }
+      .second-offers-section{
+        flex-direction: column-reverse !important;
+      }
+      .offers-section-form-container{
+        width: 100%;
+      }
+      .offers-icons{
+        align-self: flex-start;
+        width: unset;
+      }
+      .c-article ul
+      {
+        width: 80% !important;
+      }
+      .email-box {
+        padding-bottom: 16px;
+      }
+    
+      .email-box .border-right {
+        border-right: none;
+      }
+    
+      .email-box>div {
+        margin: 15px 30px;
+      }
+    
+      .email-box .m-left {
+        margin-left: 0 !important;
+      }
+      /* .dataTables_paginate
+      {
+        right: 35px;
+        top: 270px;
+      } */
+      .switch-box {
+        width: 100% !important;
+        margin-top: 15px;
+      }
+      .switch-box .container-select {
+        justify-content: flex-start !important;
+      }
+      
+    }
+    
+    @media screen and (max-width: 500px) {
+       .custom-btn{
+        width: 100% !important;
+        text-align: center;
+      }
+      .custom-btns-container{
+        gap: 1rem !important;
+      } 
+      .cont {
+        padding: 0 10px !important;
+      }
+    
+      .slideContainer {
+        width: 60% !important;
+      }
+    
+      .navbar {
+        padding-left: 0px;
+        padding-right: 0px;
+      }
+    
+      .profile-box {
+        position: absolute !important;
+        left: -215px !important;
+        top: 56px !important;
+        width: 324px !important;
+      }
+    
+      .prof-ic {
+        transform: translateX(-37px) !important;
+      }
+    
+      .reverse {
+        position: absolute !important;
+        left: -302px !important;
+        width: 350px !important;
+      }
+    
+      .notification-icon {
+        position: absolute;
+        left: 308px !important;
+      }
+    
+      .setting-icon {
+        left: 185px !important;
+      }
+    
+      .setting-box {
+        left: -180px !important;
+        width: 220px !important;
+      }
+    
+      .reverse-prof {
+        position: absolute !important;
+        left: -219px !important;
+        width: 260px !important;
+      }
+    
+      .prof-ic {
+        position: absolute;
+        left: 262px;
+      }
+    
+      /* .testme{
+          width: 300px !important;
+          left: -260px !important;
+      } */
+      .footer-box {
+        flex-direction: column !important;
+        padding: 10px 20px !important;
+      }
+    
+      .box1,
+      .box2 {
+        width: 100% !important;
+      }
+    
+      .box2-h3 {
+        justify-content: flex-start !important;
+      }
+    
+      .box2-offer {
+        flex-direction: column !important;
+      }
+    
+      .container-box {
+        width: 100%;
+      }
+    
+      .cont-table {
+        width: 100% !important;
+      }
+    
+      .offer-section ul {
+        width: 100% !important;
+      }
+    
+      .offer-section nav {
+        width: 100% !important;
+      }
+    
+      /* .nav-item.list{
+        width: 49%;
+      } */
+      .offer-section .nav-tabs .nav-item.list > button{
+        width: 100%;
+        border: 1px solid black !important;
+      }
+      .offer-section .nav-tabs {
+        width: 100% !important;
+        gap: 0.5rem 0!important;
+      }
+    
+      button {
+        font-size: 12px;
+      }
+    
+      .floor-map .container-box {
+        width: 100%;
+      }
+      .rooms_1 .container-box
+      {
+        width: 100% !important;
+      }
+    }
+    
+    @media screen and (max-width: 320px) {
+  
+      .slideContainer {
+        width: 100% !important;
+      }
+      .c-article ul
+      {
+        width: 100% !important;
+      }
+    }

@@ -1,0 +1,58 @@
+@font-face {
+  font-family: "brushcriptmtkursiv";
+  src: url("../fonts/brushcriptmtkursiv.ttf");
+}
+@font-face {
+  font-family: "MontserratBold";
+  src: url("../fonts/Montserrat-Bold.ttf");
+}
+@font-face {
+  font-family: "MontserratItalic";
+  src: url("../fonts/Montserrat-Italic.ttf");
+}
+@font-face {
+  font-family: "MontserratLight";
+  src: url("../fonts/Montserrat-Light.ttf");
+}
+@font-face {
+  font-family: "MontserratRegular";
+  src: url("../fonts/Montserrat-Regular.ttf");
+}
+@font-face {
+  font-family: "MontserratMedium";
+  src: url("../fonts/Montserrat-Medium.ttf");
+}
+@font-face {
+  font-family: "MontserratSemiBold";
+  src: url("../fonts/Montserrat-SemiBold.ttf");
+}
+
+:root {
+  --primary: #233450;
+  --secondary: #4d78ee;
+  --third: #2f3b4e;
+  --light: #ffffff;
+  --selected: #031737;
+  --gray: #cccccc;
+
+  --width-sidebar:250px;
+  --width-sidebar-minimize:75px;
+  --logo-sidebar-height:65px;
+  --side-text-color:#ECE6F5;
+}
+
+body {
+  background-color: #edf2f6;
+}
+
+ul {
+  list-style: none !important;
+}
+
+table td {
+  font-family: "MontserratSemiBold";
+}
+a{
+  text-decoration: none !important;
+}
+/*** Layout ***/

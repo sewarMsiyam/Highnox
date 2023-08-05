@@ -1,0 +1,4 @@
+<svg id="video_horizontal" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <rect id="Bounding_box" data-name="Bounding box" width="24" height="24" fill="rgba(255,255,255,0)"/>
+  <path id="Icon_color" data-name="Icon color" d="M18,16H2a2,2,0,0,1-2-2V2A2,2,0,0,1,2,0H18a2,2,0,0,1,2,2V14A2,2,0,0,1,18,16ZM8.75,4.651A.749.749,0,0,0,8,5.4v5.2a.75.75,0,0,0,1.17.62l3.89-2.6a.741.741,0,0,0,0-1.24L9.17,4.78A.749.749,0,0,0,8.75,4.651Z" transform="translate(2 4)" fill="#364153"/>
+</svg>

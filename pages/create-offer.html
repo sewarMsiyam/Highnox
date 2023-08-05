@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Clients</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+  <link rel="stylesheet" href="../css/semantic.min.css"  >
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js">
+</script>
+<script src="../JS/semantic.min.js">
+</script>
+  <!-- global style -->
+  <link href="../css/global/bootstrap/bootstrap.min.css" rel="stylesheet">
+  <link href="../css/global-style.css" rel="stylesheet">
+
+<link href="../css/global/datepicker/datepicker.css" rel="stylesheet" type="text/css" />
+  <!-- dashboard style -->
+  <link href="../css/dashboard/main-dashboard.css" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="../css/dashboard/style.css">
+  <link rel="stylesheet" type="text/css" href="../css/dashboard/screen.css">
+  <link href="../css/dashboard/media.css" rel="stylesheet">
+
+  <!-- Icon Font Stylesheet cdn -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Libraries Stylesheet -->
+  <link href="../css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/css/bootstrap-datepicker.min.css">
+  
+    <style>
+      .tr{
+        border-top: 1px solid #EEEAEA !important;
+      }
+      .tr:hover{
+        background-color: #f6f6f6;
+      }
+      .table-responsive{
+        box-shadow:0 3px 6px #00000029
+      }
+      .style-th{
+        color:#364153;
+        font-family: 'MontserratMedium';
+      }
+      .text-select {
+        margin-bottom: 5px !important;
+      }
+    </style>
+</head>
+
+<body>
+  <main class="container-xxl position-relative d-flex p-0">
+    <!-- Sidebar Start -->
+    <div class="sidebar pe-4 pb-3">
+      <nav class="navbar bg-light navbar-light d-flex align-items-start justify-content-center py-2">
+        <a href="index.html" class="mx-4 w-100 justify-content-center mb-0 d-flex align-items-center"
+          style="height: 55px;">
+          <h3 class="title d-inline">Highnox</h3>
+          <h3 class="logo title d-none">Hig</h3>
+        </a>
+        <div class="image-container d-flex align-items-center flex-column w-100 mb-2">
+          <div class="image d-flex justify-content-center align-items-center position-relative rounded-circle">
+            <img class="rounded-circle" src="../img/boss.png" alt="">
+          </div>
+          <div class="ms-4">
+            <span class="navbar-span">omr roxico</span>
+          </div>
+        </div>
+        <div class="navbar-nav w-100">
+          <a href="../index.html" class="nav-item nav-link"><i class="bi bi-grid-1x2-fill"></i><span
+              class="sidebar-title show-title">Dashboard</span></a>
+              <a href="#" class="nav-item nav-link display-client-menu"><i class="bi bi-person-fill"></i>
+                <div class="d-flex justify-content-between sidebar-title" style="width:100%">
+                  <span
+                    class="sidebar-title show-title">Client</span><i class="bi bi-caret-right-fill sidebar-arrow-down"></i>
+                </div>
+                </a>
+                    <div class="client-menu-display">
+                      <a href="#" class="nav-item nav-link sidebar-active"><i class="bi bi-caret-right-fill"></i><span
+                        class="sidebar-title show-title">Mange Client</span></a>
+                    <a href="./create-new-client.html" class="nav-item nav-link"><i class="bi bi-caret-right-fill"></i><span
+                        class="sidebar-title show-title">Create New Client
+                        </span></a>
+                    </div>
+                    <a href="#" class="nav-item nav-link display-contact-menu"><i class="bi bi-person-fill"></i>
+                      <div class="d-flex justify-content-between sidebar-title" style="width:100%">
+                        <span
+                          class="sidebar-title show-title">Contracts</span><i class="bi bi-caret-right-fill contract-sidebar"></i>
+                      </div>
+                      </a>
+                          <div class="contact-menu-display">
+                            <a href="./manage-contract.html" class="nav-item nav-link"><i class="bi bi-caret-right-fill"></i><span
+                              class="sidebar-title show-title">Mange Contracts</span></a>
+                          <a href="./create-new-contract.html" class="nav-item nav-link"><i class="bi bi-caret-right-fill"></i><span
+                              class="sidebar-title show-title">Create New Contracts
+                              </span></a>
+                          </div>
+          <a href="#" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i><span
+              class="sidebar-title show-title">Floor
+              drawing</span></a>
+          <a href="meeting-rooms.html" class="nav-item nav-link"><i class="bi bi-telephone-fill"></i><span
+              class="sidebar-title show-title">Meeting
+              rooms</span></a>
+          <a href="#" class="nav-item nav-link"><i class="bi bi-pie-chart"></i><span
+              class="sidebar-title show-title">Invoices/Debts</span></a>
+          <a href="#" class="nav-item nav-link"><i class="bi bi-arrow-repeat"></i><span
+              class="sidebar-title show-title">Operations</span></a>
+          <a href="#" class="nav-item nav-link"><i class="bi bi-exclamation-octagon-fill"></i><span
+              class="sidebar-title show-title">Reports</span></a>
+          <a href="#" class="nav-item nav-link"><i class="bi bi-heptagon-fill"></i><span
+              class="sidebar-title show-title">POS</span></a>
+          <a href="#" class="nav-item nav-link"><i class="bi bi-box-arrow-left"></i><span
+              class="sidebar-title show-title">LogOut</span></a>
+        </div>
+      </nav>
+    </div>
+    <!-- Sidebar End -->
+
+
+    <!-- Content Start -->
+    <div class="content">
+      <!-- Navbar Start -->
+      <div class="w-100 search-container d-none">
+        <input class="w-100 "
+          style="height: 65px; padding:0px 4rem; background-color: #f0f0f0f0; border: none; outline: none;"
+          placeholder="Search for anything">
+        <a class="cancel-icon" style=""><i class="bi bi-x"></i></a>
+
+      </div>
+      <nav class="navbar navbar-open-search navbar-expand sticky-top px-4 py-0 d-flex align-items-center"
+        style="height: 65px;">
+        <i class="sidebar-toggler fa fa-bars"></i>
+        <a href="index.html" class="d-flex d-lg-none me-4 justify-content-center ">
+          <h3 class="mb-0 logo title">Highnox</h3>
+        </a>
+        <i class="bi bi-three-dots-vertical"></i>
+        <div class="navbar-icons-container navbar-nav align-items-center ms-auto" style="gap: 0.7rem; flex-wrap: wrap;">
+          <!-- <div class="nav-item">
+            <a href="#" class="nav-link open-search-bar">
+              <i class="bi bi-search"></i>
+            </a>
+          </div> -->
+          <!--languages drop down starts-->
+          <div class="nav-item dropdown nav-link-position">
+            <a href="#" class="nav-link" data-bs-toggle="dropdown" style="width: 32px;
+            height: 32px;
+            display: inline-flex;
+            align-items: center;
+            border-radius: 32px;
+            border: 1px solid gray;
+            justify-content: center;">
+              <!-- <i class="flag"><span class="fi fi-gb"></span></i> -->
+              <img src="../img/icons/uk.svg" alt="" class="inner-circle-img">
+            </a>
+            <div class="flags dropdown-down dropdown-menu dropdown-menu-end border-0 m-0 p-0">
+              <div class="triangle" style="top:-7px;right:9px"></div>
+              <a href="#" class="dropdown-item py-2 border-bottom" style="height: 75px;"><img src="../img/icons/gr.svg"
+                  alt="">Germany</a>
+              <a href="#" class="dropdown-item py-2 border-bottom" style="height: 75px;"><img
+                  src="../img/icons/rasha.svg" alt="">Russia</a>
+              <a href="#" class="dropdown-item py-2 border-bottom" style="height: 75px;"><img src="../img/icons/em.svg"
+                  alt="">Emirates</a>
+            </div>
+          </div>
+          <!--languages drop down ends-->
+          <div class="nav-item dropdown">
+            <a href="#" class="nav-link" data-bs-toggle="dropdown" id="zoom-button">
+              <i class="bi bi-fullscreen"></i>
+            </a>
+          </div>
+          <!--notification drop down starts-->
+          <div class="nav-item dropdown nav-link-position">
+            <a href="#" class="nav-link position-relative" data-bs-toggle="dropdown">
+              <i class="bi bi-bell"></i>
+              <span class="bg-danger text-white notification-num ">0</span>
+            </a>
+            <div class="dropdown-down dropdown-menu dropdown-menu-end bg-light border-0 m-0 p-0">
+              <div class="triangle" style="border-color: transparent transparent #2f3b4e; right: 10px; top: -8px;">
+              </div>
+
+              <div class="notification">
+                <p style="border-top-right-radius: 10px; border-top-left-radius: 10px;">7 NEW NOTIFICATION <span>Mark
+                    All Read</span></p>
+                <div class="">
+                  <a href="#" style="height: 80px;" class="dropdown-item d-flex align-items-center border-bottom">
+                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M15.1011 29.605C23.1092 29.605 29.6011 23.1131 29.6011 15.105C29.6011 7.09685 23.1092 0.60498 15.1011 0.60498C7.09295 0.60498 0.601074 7.09685 0.601074 15.105C0.601074 23.1131 7.09295 29.605 15.1011 29.605Z"
+                        fill="#E6F8FF" />
+                      <path
+                        d="M15.1011 20.105C14.1122 20.105 13.1455 19.8117 12.3232 19.2623C11.501 18.7129 10.8601 17.932 10.4817 17.0184C10.1032 16.1048 10.0042 15.0994 10.1972 14.1295C10.3901 13.1596 10.8663 12.2687 11.5655 11.5694C12.2648 10.8702 13.1557 10.394 14.1256 10.2011C15.0955 10.0081 16.1009 10.1071 17.0145 10.4856C17.9281 10.864 18.709 11.5049 19.2584 12.3271C19.8078 13.1494 20.1011 14.1161 20.1011 15.105C20.0995 16.4306 19.5722 17.7014 18.6349 18.6388C17.6975 19.5761 16.4267 20.1034 15.1011 20.105ZM13.3661 14.905C13.3333 14.905 13.3008 14.9118 13.2707 14.9248C13.2406 14.9379 13.2135 14.957 13.1911 14.981L12.9261 15.246C12.9025 15.2692 12.8838 15.2968 12.871 15.3273C12.8583 15.3577 12.8517 15.3904 12.8517 15.4235C12.8517 15.4565 12.8583 15.4892 12.871 15.5197C12.8838 15.5502 12.9025 15.5778 12.9261 15.601L14.1161 16.776C14.1384 16.8 14.1655 16.8192 14.1956 16.8323C14.2257 16.8454 14.2582 16.8522 14.2911 16.8522C14.3239 16.8522 14.3564 16.8454 14.3865 16.8323C14.4166 16.8192 14.4437 16.8 14.4661 16.776L17.2761 13.966C17.3204 13.9195 17.3451 13.8577 17.3451 13.7935C17.3451 13.7292 17.3204 13.6675 17.2761 13.621L17.0111 13.36C16.9642 13.3144 16.9014 13.2889 16.8361 13.2889C16.7707 13.2889 16.7079 13.3144 16.6611 13.36L14.2911 15.73L13.5411 14.985C13.519 14.9603 13.4921 14.9404 13.4619 14.9267C13.4318 14.9129 13.3992 14.9055 13.3661 14.905Z"
+                        fill="#9598FF" />
+                    </svg>
+
+                    <span class="ml-2 d-flex flex-column">
+                      <span>
+                        Space Management
+                        <svg class="ml-2" width="6" height="10" viewBox="0 0 6 10" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M1.11805 9.1978C1.07157 9.24467 1.01627 9.28187 0.95534 9.30725C0.89441 9.33263 0.829057 9.3457 0.763052 9.3457C0.697046 9.3457 0.631693 9.33263 0.570763 9.30725C0.509833 9.28187 0.454533 9.24467 0.408051 9.1978L0.208051 8.9978C0.160098 8.95109 0.122227 8.89505 0.0967722 8.83313C0.0713176 8.77121 0.0588202 8.70474 0.0600514 8.6378L0.0600514 1.4778C0.0590787 1.41073 0.07189 1.34416 0.097692 1.28224C0.123494 1.22031 0.161737 1.16435 0.210052 1.1178L0.410051 0.917804C0.456533 0.87094 0.511833 0.833743 0.572763 0.808358C0.633693 0.782974 0.699045 0.769905 0.765051 0.769905C0.831057 0.769905 0.89641 0.782974 0.95734 0.808358C1.01827 0.833743 1.07357 0.87094 1.12005 0.917804L4.90805 4.7078C4.95588 4.75269 4.994 4.80691 5.02006 4.86711C5.04613 4.92731 5.05957 4.99221 5.05957 5.0578C5.05957 5.1234 5.04613 5.1883 5.02006 5.2485C4.994 5.3087 4.95588 5.36291 4.90805 5.4078L1.11805 9.1978Z"
+                            fill="#393A62" />
+                        </svg>
+                      </span>
+                      <span style="color: #AEAEAE; font-size: 10px;">1 hour ago</span>
+                    </span>
+
+
+                  </a>
+                  <a href="#" style="height: 80px;" class="dropdown-item d-flex align-items-center border-bottom">
+                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M15.1011 29.605C23.1092 29.605 29.6011 23.1131 29.6011 15.105C29.6011 7.09685 23.1092 0.60498 15.1011 0.60498C7.09295 0.60498 0.601074 7.09685 0.601074 15.105C0.601074 23.1131 7.09295 29.605 15.1011 29.605Z"
+                        fill="#FFECE9" />
+                      <path
+                        d="M15.0763 21.605H10.8513C10.5133 21.5979 10.1919 21.4571 9.95757 21.2134C9.72325 20.9697 9.59512 20.643 9.60129 20.305V9.90498C9.59512 9.56696 9.72325 9.24029 9.95757 8.9966C10.1919 8.7529 10.5133 8.61207 10.8513 8.60498H18.3513C18.6893 8.61207 19.0107 8.7529 19.245 8.9966C19.4793 9.24029 19.6075 9.56696 19.6013 9.90498V16.899C19.6038 17.4123 19.4066 17.9065 19.0513 18.277L16.4013 21.033C16.2308 21.2133 16.0254 21.3569 15.7976 21.4553C15.5698 21.5536 15.3244 21.6045 15.0763 21.605ZM10.8513 9.90498V20.305H14.6013V17.055C14.5983 16.886 14.6624 16.7228 14.7796 16.6009C14.8967 16.4791 15.0573 16.4087 15.2263 16.405H18.3513V9.90498H10.8513ZM14.9133 15.105H12.4133C12.3289 15.1031 12.2486 15.0679 12.1901 15.007C12.1316 14.946 12.0997 14.8644 12.1013 14.78V14.13C12.1005 14.0881 12.108 14.0464 12.1233 14.0074C12.1386 13.9684 12.1614 13.9328 12.1905 13.9026C12.2195 13.8725 12.2543 13.8483 12.2927 13.8315C12.3311 13.8148 12.3724 13.8058 12.4143 13.805H14.9143C14.9562 13.8058 14.9975 13.8148 15.0359 13.8315C15.0743 13.8483 15.109 13.8725 15.1381 13.9026C15.1672 13.9328 15.19 13.9684 15.2053 14.0074C15.2206 14.0464 15.2281 14.0881 15.2273 14.13V14.781C15.2279 14.8229 15.2204 14.8645 15.2049 14.9034C15.1895 14.9424 15.1666 14.9779 15.1374 15.008C15.1082 15.0381 15.0734 15.0622 15.035 15.0788C14.9965 15.0954 14.9552 15.1043 14.9133 15.105ZM16.7893 12.505H12.4143C12.3298 12.5031 12.2494 12.4679 12.1908 12.407C12.1321 12.3461 12.0999 12.2645 12.1013 12.18V11.53C12.0999 11.4454 12.1321 11.3638 12.1908 11.3029C12.2494 11.242 12.3298 11.2068 12.4143 11.205H16.7893C16.8737 11.2068 16.954 11.2421 17.0125 11.303C17.071 11.3639 17.1029 11.4455 17.1013 11.53V12.18C17.1029 12.2644 17.071 12.346 17.0125 12.407C16.954 12.4679 16.8737 12.5031 16.7893 12.505Z"
+                        fill="#DBA09E" />
+                    </svg>
+
+                    <span class="ml-2 d-flex flex-column">
+                      <span>Conference Management
+
+                        <svg class="ml-2" width="6" height="10" viewBox="0 0 6 10" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M1.11805 9.1978C1.07157 9.24467 1.01627 9.28187 0.95534 9.30725C0.89441 9.33263 0.829057 9.3457 0.763052 9.3457C0.697046 9.3457 0.631693 9.33263 0.570763 9.30725C0.509833 9.28187 0.454533 9.24467 0.408051 9.1978L0.208051 8.9978C0.160098 8.95109 0.122227 8.89505 0.0967722 8.83313C0.0713176 8.77121 0.0588202 8.70474 0.0600514 8.6378L0.0600514 1.4778C0.0590787 1.41073 0.07189 1.34416 0.097692 1.28224C0.123494 1.22031 0.161737 1.16435 0.210052 1.1178L0.410051 0.917804C0.456533 0.87094 0.511833 0.833743 0.572763 0.808358C0.633693 0.782974 0.699045 0.769905 0.765051 0.769905C0.831057 0.769905 0.89641 0.782974 0.95734 0.808358C1.01827 0.833743 1.07357 0.87094 1.12005 0.917804L4.90805 4.7078C4.95588 4.75269 4.994 4.80691 5.02006 4.86711C5.04613 4.92731 5.05957 4.99221 5.05957 5.0578C5.05957 5.1234 5.04613 5.1883 5.02006 5.2485C4.994 5.3087 4.95588 5.36291 4.90805 5.4078L1.11805 9.1978Z"
+                            fill="#393A62" />
+                        </svg>
+                      </span>
+                      <span style="color: #AEAEAE; font-size: 10px;">1 hour ago</span>
+                    </span>
+
+
+                  </a>
+                  <a style="height: 80px;" href="#" class="dropdown-item d-flex align-items-center"><svg width="30"
+                      height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M15.1011 29.605C23.1092 29.605 29.6011 23.1131 29.6011 15.105C29.6011 7.09685 23.1092 0.60498 15.1011 0.60498C7.09295 0.60498 0.601074 7.09685 0.601074 15.105C0.601074 23.1131 7.09295 29.605 15.1011 29.605Z"
+                        fill="#C4FFC4" />
+                      <path
+                        d="M16.4119 20.057C16.2068 20.0565 16.0034 20.0186 15.8119 19.945L15.5749 19.857C15.189 19.7068 14.7609 19.7068 14.3749 19.857L14.1379 19.945C13.7358 20.0994 13.2898 20.0941 12.8915 19.9301C12.4932 19.7661 12.1727 19.4558 11.9959 19.063L11.8959 18.831C11.732 18.4499 11.4348 18.1416 11.0599 17.964L10.8279 17.861C10.4348 17.6847 10.1238 17.3648 9.95873 16.9668C9.79365 16.5688 9.78693 16.1228 9.93994 15.72L10.0279 15.482C10.1786 15.0962 10.1786 14.6678 10.0279 14.282L9.93994 14.048C9.78668 13.6452 9.79328 13.199 9.95838 12.801C10.1235 12.4029 10.4346 12.083 10.8279 11.907L11.0599 11.807C11.4292 11.6366 11.7256 11.3402 11.8959 10.971L12.0099 10.736C12.1868 10.3395 12.5097 10.0265 12.9114 9.86208C13.3132 9.69762 13.7629 9.69436 14.1669 9.85296L14.4049 9.93596C14.5962 10.0104 14.7997 10.0483 15.0049 10.048C15.2092 10.0479 15.4116 10.0099 15.6019 9.93596L15.8399 9.85296C16.2422 9.69883 16.6882 9.70443 17.0865 9.86861C17.4848 10.0328 17.8052 10.3431 17.9819 10.736L18.0819 10.968C18.2524 11.3371 18.5488 11.6335 18.9179 11.804L19.1499 11.922C19.5423 12.0993 19.8521 12.4198 20.016 12.8179C20.1799 13.2161 20.1856 13.6618 20.0319 14.064L19.9439 14.301C19.7932 14.6868 19.7932 15.1152 19.9439 15.501L20.0319 15.754C20.1856 16.156 20.1799 16.6016 20.0159 16.9995C19.852 17.3975 19.5422 17.7178 19.1499 17.895L18.9179 17.995C18.537 18.1591 18.2288 18.4563 18.0509 18.831L17.9509 19.063C17.817 19.359 17.6007 19.6102 17.3277 19.7864C17.0548 19.9627 16.7369 20.0566 16.4119 20.057ZM13.1969 14.697C13.163 14.6969 13.1295 14.7038 13.0984 14.7172C13.0672 14.7306 13.0392 14.7503 13.0159 14.775L12.7419 15.049C12.7178 15.0729 12.6987 15.1015 12.6856 15.1329C12.6725 15.1643 12.6658 15.1979 12.6658 15.232C12.6658 15.266 12.6725 15.2997 12.6856 15.3311C12.6987 15.3625 12.7178 15.391 12.7419 15.415L13.9719 16.628C13.9951 16.6526 14.0231 16.6722 14.0541 16.6856C14.0852 16.699 14.1186 16.7059 14.1524 16.7059C14.1863 16.7059 14.2197 16.699 14.2507 16.6856C14.2818 16.6722 14.3098 16.6526 14.3329 16.628L17.2329 13.728C17.2789 13.6801 17.3046 13.6163 17.3046 13.55C17.3046 13.4836 17.2789 13.4198 17.2329 13.372L16.9589 13.098C16.9107 13.0508 16.8459 13.0243 16.7784 13.0243C16.711 13.0243 16.6462 13.0508 16.5979 13.098L14.1519 15.544L13.3779 14.775C13.3548 14.7501 13.3268 14.7304 13.2956 14.717C13.2645 14.7035 13.2309 14.6967 13.1969 14.697Z"
+                        fill="#409703" />
+                    </svg>
+                    <span class="ml-2 d-flex flex-column">
+                      <span>Tickets
+                        <svg class="ml-2" width="6" height="10" viewBox="0 0 6 10" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M1.11805 9.1978C1.07157 9.24467 1.01627 9.28187 0.95534 9.30725C0.89441 9.33263 0.829057 9.3457 0.763052 9.3457C0.697046 9.3457 0.631693 9.33263 0.570763 9.30725C0.509833 9.28187 0.454533 9.24467 0.408051 9.1978L0.208051 8.9978C0.160098 8.95109 0.122227 8.89505 0.0967722 8.83313C0.0713176 8.77121 0.0588202 8.70474 0.0600514 8.6378L0.0600514 1.4778C0.0590787 1.41073 0.07189 1.34416 0.097692 1.28224C0.123494 1.22031 0.161737 1.16435 0.210052 1.1178L0.410051 0.917804C0.456533 0.87094 0.511833 0.833743 0.572763 0.808358C0.633693 0.782974 0.699045 0.769905 0.765051 0.769905C0.831057 0.769905 0.89641 0.782974 0.95734 0.808358C1.01827 0.833743 1.07357 0.87094 1.12005 0.917804L4.90805 4.7078C4.95588 4.75269 4.994 4.80691 5.02006 4.86711C5.04613 4.92731 5.05957 4.99221 5.05957 5.0578C5.05957 5.1234 5.04613 5.1883 5.02006 5.2485C4.994 5.3087 4.95588 5.36291 4.90805 5.4078L1.11805 9.1978Z"
+                            fill="#393A62" />
+                        </svg>
+                      </span>
+                      <span style="color: #AEAEAE; font-size: 10px;">1 hour ago</span>
+                    </span>
+
+
+                  </a>
+                </div>
+                <a class="dropdown-item view-all">VIEW ALL</a>
+              </div>
+            </div>
+          </div>
+          <!--notification drop down ends-->
+          <!--dashboard drop down starts-->
+          <div class="nav-item dropdown nav-link-position">
+            <a href="#" class="nav-link" data-bs-toggle="dropdown">
+              <i class="bi bi-grid"></i>
+            </a>
+            <div class="dropdown-down dropdown-menu dropdown-menu-end bg-light border-0 m-0 p-0">
+              <div class="triangle" style="border-color: transparent transparent #2f3b4e; right: 10px; top: -8px;">
+              </div>
+              <div class="settings dashboard">
+                <p style="border-top-right-radius: 10px; border-top-left-radius: 10px;">Dashboard</p>
+                <div>
+                  <a href="#" class="dropdown-item"><i class="bi bi-grid"></i>Space Management</a>
+                  <a href="#" class="dropdown-item"><i class="bi bi-grid"></i>Conference Management</a>
+                  <a href="#" class="dropdown-item"><i class="bi bi-grid"></i>Tickets</a>
+                  <a href="#" class="dropdown-item"><i class="bi bi-grid"></i>CRM</a>
+                  <a href="#" class="dropdown-item"><i class="bi bi-grid"></i>Mass Email</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- dashboard drop down end -->
+          <!-- settings drop down start -->
+          <div class="nav-item dropdown nav-link-position gear-container">
+            <a href="#" class="nav-link" data-bs-toggle="dropdown">
+              <i class="bi bi-gear-fill"></i>
+            </a>
+            <div class="dropdown-down dropdown-menu dropdown-menu-end bg-light border-0 m-0 p-0">
+              <div class="triangle" style="border-color: transparent transparent #2f3b4e; right: 10px; top: -8px;">
+              </div>
+              <div class="settings">
+                <p style="border-top-right-radius: 10px; border-top-left-radius: 10px;">Settings</p>
+                <div>
+                  <a href="settings.html" class="dropdown-item"><i class="bi bi-gear"></i>User setting</a>
+                  <a href="room.html" class="dropdown-item"><i class="bi bi-gear"></i>Rooms</a>
+                  <a href="articles.html" class="dropdown-item"><i class="bi bi-gear"></i>Articles</a>
+                  <a href="inventory-list.html" class="dropdown-item"><i class="bi bi-gear"></i>Inventory list</a>
+                  <a href="agency.html" class="dropdown-item"><i class="bi bi-gear"></i>Booking agencies</a>
+                  <a href="suppliers.html" class="dropdown-item"><i class="bi bi-gear"></i>Suppliers</a>
+                  <a href="budget.html" class="dropdown-item"><i class="bi bi-gear"></i>Budget</a>
+                  <a href="buildings.html" class="dropdown-item"><i class="bi bi-gear"></i>Buildings</a>
+                  <a href="other-settings.html" class="dropdown-item"><i class="bi bi-gear"></i>Other settings</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- settings drop down end -->
+          <!-- user drop down start -->
+          <div class="nav-item dropdown position-relative nav-link-position">
+            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" style="width: 30px;
+            height: 30px;
+            display: inline-flex;
+            align-items: center;
+            border-radius: 30px;
+            border: 1px solid gray;
+            justify-content: center;">
+              <img src="../img/boss.png" alt="" class="inner-circle-img">
+            </a>
+            <div class="dropdown-down dropdown-menu dropdown-menu-end border-0 m-0 p-0" style="top:45px">
+              <div class="user-details d-flex justify-content-center align-items-center flex-column"
+                style="border-top-right-radius: 10px; border-top-left-radius: 10px;">
+                <div class="triangle" style="border-color: transparent transparent #2f3b4e; right: 10px; top: -8px;">
+                </div>
+
+                <div class="image-container d-flex align-items-center flex-column w-100 mb-3">
+                  <div class="image d-flex justify-content-center align-items-center position-relative rounded-circle">
+                    <img class="rounded-circle" src="../img/boss.png" alt="">
+                  </div>
+                  <div class="ms-4">
+                    <h3 class="navbar-span text-center">Sarah Joe</h3>
+                    <span class="text-center">Premium member</span>
+                  </div>
+                </div>
+              </div>
+              <a href="#" class="dropdown-item link"><i class="bi bi-person-fill"></i>My Profile</a>
+              <a href="#" class="dropdown-item link"><i class="bi bi-pencil-fill"></i>Edit Profile</a>
+              <a href="#" class="dropdown-item link"><i class="bi bi-clock-history"></i>Activity Logs</a>
+              <a href="#" class="dropdown-item link"><i class="bi bi-gear-fill"></i>Account Settings</a>
+              <a href="#" class="dropdown-item link"><i class="bi bi-box-arrow-in-right"></i>Log Out</a>
+            </div>
+          </div>
+          <!-- user drop down end -->
+        </div>
+      </nav>
+
+         <div class="d-flex flex-column mb-3 justify-content-evenly p-5" style="gap:20px">
+                        <h3 class="investment-container-title">Investment International LTD</h3>
+                        <div class="investment-sub-container">
+                            <div class="investment-cards-container">
+                                <div class="investment-card">
+                                    <div class="investment-card-content">
+                                        <div class="investment-card-content-title"> Organization Number </div>
+                                        <div class="investment-card-content-value">978 - 059 - 000 - 258</div>
+                                    </div>
+                                    <div class="investment-card-img">
+                                        <img src="../img/icons/organization.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="investment-card">
+                                    <div class="investment-card-content">
+                                        <div class="investment-card-content-title">Account Managers </div>
+                                        <div class="investment-card-content-value">Sam Hansson , Frank Hanibal</div>
+                                    </div>
+                                    <div class="investment-card-img">
+                                        <img src="../img/icons/managers.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="investment-card">
+                                    <div class="investment-card-content">
+                                        <div class="investment-card-content-title">Address </div>
+                                        <div class="investment-card-content-value">Mark street 1234 stockholm</div>
+                                    </div>
+                                    <div class="investment-card-img">
+                                        <img src="../img/icons/address.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="investment-card">
+                                    <div class="investment-card-content">
+                                        <div class="investment-card-content-title">Contact Info </div>
+                                        <div class="investment-card-content-value">Tel number : 085698562</div>
+                                        <div class="investment-card-content-value">Main Contact : Hassan boior</div>
+
+                                    </div>
+                                    <div class="investment-card-img">
+                                        <img src="../img/icons/contact.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-container">
+                          <div class="content-top d-flex justify-content-start align-items-center py-1">
+                            <h4 class="px-4 my-0 py-2">Offers</h4>
+                          </div>
+                          <div class="content-body p-4">
+                            <div class="container-fluid content-form py-4">
+                              <form>
+                                <div class="form-row my-4">
+                                  <div class="col-md-2 col-12 padding-top-small-10">
+                                    <div>
+                                      <label>Type of offer</label>
+                                    </div>
+                                      <div class="second-select-input">
+                                        <select name="year" class="basicInput">
+                                          <option>Select Activity</option>
+                                          <option>Activity 1</option>
+                                          <option>Activity 2</option>
+                                          <option>Activity 3</option>
+                                        </select>
+                                      </div>
+                                  </div>
+                                  <div class="col-md-2 col-12 padding-top-small-10">
+                                    <div>
+                                      <label>Priority</label>
+                                    </div>
+                                      <div class="second-select-input">
+                                        <select name="year" class="basicInput">
+                                          <option>Select Priority</option>
+                                          <option>Priority 1</option>
+                                          <option>Priority 2</option>
+                                          <option>Priority 3</option>
+                                        </select>
+                                      </div>
+                                  </div>
+                                  <div class="col-md-2 col-6">
+                                    <div>
+                                      <label>Client</label>
+                                    </div>
+                                    <div class="second-select-input">
+                                      <input type="text" class="form-control" placeholder="joe moner">
+                                    </div>
+                                  </div>
+                                  <div class="col-md-2 col-6">
+                                    <div>
+                                      <label>Offer Start date</label>
+                                    </div>
+                                    <div class="second-select-input">
+                                        <div class="input-group date datepicker" data-provide="datepicker">
+                                          <input type="text" class="form-control date-input" placeholder="Select date">
+                                          <div class="input-group-addon" style="">
+                                            <span class="glyphicon glyphicon-th"></span>
+                                          </div>
+                                        </div>
+                                      <img class="input-svg" src="../images/date.svg">
+                                    </div>
+                                  </div>
+                                  <div class="col-md-2 col-6">
+                                    <div>
+                                      <label>Activity close date</label>
+                                    </div>
+                                    <div class="second-select-input">
+                                        <div class="input-group date datepicker" data-provide="datepicker">
+                                          <input type="text" class="form-control date-input" placeholder="Select date">
+                                          <div class="input-group-addon" style="">
+                                            <span class="glyphicon glyphicon-th"></span>
+                                          </div>
+                                        </div>
+                                      <img class="input-svg" src="../images/date.svg">
+                                    </div>
+                                  </div>
+                                  <div class="col-md-2 col-12 padding-top-small-10">
+                                    <div>
+                                      <label>Contact Person</label>
+                                    </div>
+                                      <div class="second-select-input">
+                                        <select name="year" class="basicInput">
+                                          <option>Select Contact</option>
+                                          <option>Contact 1</option>
+                                          <option>Contact 2</option>
+                                          <option>Contact 3</option>
+                                        </select>
+                                      </div>
+                                  </div>
+
+                                  </div>
+                                  <div class="form-row my-4">
+                                  <div class="col-md-2 col-12 padding-top-small-10">
+                                    <div>
+                                      <label>Stage</label>
+                                    </div>
+                                      <div class="second-select-input">
+                                        <select name="year" class="basicInput">
+                                          <option>Select Stage</option>
+                                          <option>Stage 1</option>
+                                          <option>Stage 2</option>
+                                          <option>Stage 3</option>
+                                        </select>
+                                      </div>
+                                  </div>
+
+                                  <div class="col-md-2 col-12 padding-top-small-10">
+                                    <div>
+                                      <label>Account Manager</label>
+                                    </div>
+                                      <div class="second-select-input">
+                                        <select name="year" class="basicInput">
+                                          <option>Select Account</option>
+                                          <option>Account 1</option>
+                                          <option>Account 2</option>
+                                          <option>Account 3</option>
+                                        </select>
+                                      </div>
+                                  </div>
+
+                                  <div class="col-md-2 col-12 padding-top-small-10">
+                                    <div>
+                                      <label>Location/Building</label>
+                                    </div>
+                                      <div class="second-select-input">
+                                        <select name="year" class="basicInput">
+                                          <option>Select Account</option>
+                                          <option>Account 1</option>
+                                          <option>Account 2</option>
+                                          <option>Account 3</option>
+                                        </select>
+                                      </div>
+                                  </div>
+
+                                  <div class="col-md-2 col-12 padding-top-small-10">
+                                    <div>
+                                      <label>language</label>
+                                    </div>
+                                      <div class="second-select-input">
+                                        <select name="year" class="basicInput">
+                                          <option>Select language</option>
+                                          <option>language 1</option>
+                                          <option>language 2</option>
+                                          <option>language 3</option>
+                                        </select>
+                                      </div>
+                                  </div>
+                                   <div class="col-md-2 col-12 padding-top-small-10">
+                                      <div>
+                                        <label>Compaign</label>
+                                      </div>
+                                        <div class="second-select-input">
+                                          <select name="year" class="basicInput">
+                                            <option>Select Compaign</option>
+                                            <option>Compaign 1</option>
+                                            <option>Compaign 2</option>
+                                            <option>Compaign 3</option>
+                                          </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-6 mt-4">
+                                      <div>
+                                        <label>Description</label>
+                                      </div>
+                                      <div class="second-select-input">
+                                        <input type="text" class="form-control" placeholder="joe moner">
+                                      </div>
+                                    </div>
+                                  </div>
+                                  
+                                   
+                                 
+                                </div>                            
+                              </form>
+                          
+                            <!-- add new row -->
+                            <div class="container-fluid content-form bg-light mt-4 px-0">
+                              <div class="py-4 border-radius-20" style="background: #e8e8e8;">
+                                <!-- add new row -->
+                                <div class="px-4">
+                                    <div class="d-flex justify-content-between">
+                                      <div class="py-2 d-flex justify-content-start align-items-center flex-column-responsive">
+                                        <div class="form-check form-switch col-12-responsive">
+                                          <label class="switch">
+                                            <input type="checkbox">
+                                            <span class="slider round"></span>
+                                          </label>
+                                          <label class="form-check-label" for="flexSwitchCheckChecked">Debt this activity</label>
+                                        </div>
+                                      </div>
+                                      <div class="d-flex justify-content-start align-items-center">
+                                        <a href="#" class="btn btn-primary create-btn add_new_row">
+                                          <i class="bi bi-plus-circle-fill"></i>
+                                          Add Row
+                                       </a>
+                                      </div>
+                                    </div>
+                                    <div class="table-responsive bg-light mt-4 border-radius-20">
+                                          <div class="secondTableContainer">
+                                            <table id="myTable">
+                                              <thead>
+                                                <tr class="tr">
+                                                  <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
+                                                  <th onclick="sortTable(0, 'myTable')" class="style-th">
+                                                    <div>
+                                                      <span>Articler</span><span><img src="../images/sort-ic.svg"></span>
+                                                    </div>
+                                                  </th>
+                                                  <th onclick="sortTable(1, 'myTable')" class="style-th">
+                                                    <div>
+                                                      <span>QTY</span><span><img src="../images/sort-ic.svg"></span>
+                                                    </div>
+                                                  </th>
+                                                  <th onclick="sortTable(2, 'myTable')" class="style-th">
+                                                    <div>
+                                                      <span>Unit</span><span><img src="../images/sort-ic.svg"></span>
+                                                    </div>
+                                                  </th>
+                                                  <th onclick="sortTable(3, 'myTable')" class="style-th">
+                                                    <div>
+                                                      <span>Price</span><span><img src="../images/sort-ic.svg"></span>
+                                                    </div>
+                                                  </th>
+                                                  <th onclick="sortTable(4, 'myTable')" class="style-th">
+                                                    <div>
+                                                      <span>Discount</span><span><img src="../images/sort-ic.svg"></span>
+                                                    </div>
+                                                  </th>
+                                                  <th onclick="sortTable(5, 'myTable')" class="style-th">
+                                                    <div>
+                                                      <span>VAT</span><span><img src="../images/sort-ic.svg"></span>
+                                                    </div>
+                                                  </th>
+                                                  <th onclick="sortTable(6, 'myTable')" class="style-th">
+                                                    <div>
+                                                      <span>Total after discount</span><span><img src="../images/sort-ic.svg"></span>
+                                                    </div>
+                                                  </th>
+                                                  <th onclick="sortTable(7, 'myTable')" class="style-th">
+                                                    <div>
+                                                      <span>Total Incl VAT</span><span><img src="../images/sort-ic.svg"></span>
+                                                    </div>
+                                                  </th>
+                                                  <th onclick="sortTable(8, 'myTable')" class="style-th">
+                                                    <div>
+                                                      <span>Delete List</span><span><img src="../images/sort-ic.svg"></span>
+                                                    </div>
+                                                  </th>
+                                                </tr>
+                                              </thead>
+                                              <tbody>
+                                                <tr class="tr style-table-my1 tr-active">
+                                                  <td class="style-td">
+                                                    test
+                                                  </td>
+                                                  <td class="style-td">
+                                                    123546
+                                                  </td>
+                                                  <td class="style-td">
+                                                    2
+                                                  </td>
+                                                  <td class="style-td">
+                                                    1
+                                                  </td>
+                                                  <td class="style-td">
+                                                    2
+                                                  </td>
+                                                  <td class="style-td">
+                                                    3
+                                                  </td>
+                                                  <td class="style-td">
+                                                    3
+                                                  </td>
+                                                  <td class="style-td">
+                                                    3
+                                                  </td>
+                                                  <td class="style-td">
+                                                    <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
+                                                    <i class="fa fa-trash"></i>
+                                                    </button>
+                                                  </td>
+                                                </tr>
+                                              </tbody>
+                                            </table>
+                                          </div>
+                                        </div>
+                                          <div class="firstNav row justify-content-between ">
+                                           <!-- totals -->
+                                           <div class="form-row my-4 justify-content-between gap-responsive-10 w-100">
+                                              <div class="col-md-3 col-12">
+                                                <div class="d-flex h-40 bg-light box-shadow justify-content-between px-4">
+                                                  <div class="d-flex align-items-center h-40  px-2 py-1">
+                                                    <p>Discount</p>
+                                                  </div>
+                                                  <div class="d-flex align-items-center h-40 px-2 py-1">
+                                                    <p>2000 SEK</p>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              <div class="col-md-3 col-12">
+                                                <div class="d-flex h-40 bg-light box-shadow justify-content-between px-4">
+                                                  <div class="d-flex align-items-center h-40 px-2 py-1">
+                                                    <p>Vat</p>
+                                                  </div>
+                                                  <div class="d-flex align-items-center h-40 px-2 py-1">
+                                                    <p>2000 SEK</p>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              <div class="col-md-3 col-12">
+                                                <div class="d-flex h-40 bg-light box-shadow justify-content-between px-4">
+                                                  <div class="d-flex align-items-center h-40  px-2 py-1">
+                                                    <p>Amount Excel VAT</p>
+                                                  </div>
+                                                  <div class="d-flex align-items-center h-40 px-2 py-1">
+                                                    <p>2000 SEK</p>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              <div class="col-md-3 col-12">
+                                                <div class="d-flex h-40  box-shadow justify-content-between px-4 main-backgorund-color text-light">
+                                                  <div class="d-flex align-items-center h-40  px-2 py-1">
+                                                    <p>Total Incl VAT</p>
+                                                  </div>
+                                                  <div class="d-flex align-items-center h-40 px-2 py-1">
+                                                    <p>2000 SEK</p>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                           <!-- end totals -->
+                                          </div>
+                                  </div>
+                                <!-- end add new row -->
+                              </div>
+                            </div>
+                            <!-- end new row -->
+                            <div class="container-fluid content-form py-4 mt-4">
+                              <form>
+                                <div class="form-row my-4">
+                                  <div class="col-md-10 col-12">
+                                    <div>
+                                      <label>Note</label>
+                                    </div>
+                                    <div class="second-select-input">
+                                      <input type="text" class="form-control" placeholder="Enter your Note">
+                                    </div>
+                                  </div>
+                                  <div class="col-md-2 col-12">
+                                    <div>
+                                      <label>Attachment</label>
+                                    </div>
+                                    <div class="file-container-input">
+                                      <button type="button" class="file-button" onclick="openFile(this)">
+                                        <span>Attach File</span>
+                                        <img src="../img//icons/upload.svg" alt="">
+                                      </button>
+                                      <input type="file" class="file-input d-none" id="attachment">
+                                    </div>
+                                  </div>
+                                </div>
+                              </form>
+                            </div>
+                            <div class="container-fluid py-4 d-flex justify-content-end">
+                                  <div class="col-md-4 col-12 text-right">
+                                    <button class="btn btn-primary  cancel-btn" type="submit">
+                                    Cancel
+                                    </button>
+                                      <button class="btn btn-primary submit-btn" type="submit">
+                                      Save
+                                    </button>                        
+                                  </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+  </main>
+
+  <script>
+    $('.ui.dropdown').dropdown();
+</script>
+
+  <!-- global js -->
+  <script src="../JS/global/jquery/jquery-3.4.1.min.js"></script>
+  <script src="../JS/global/jspdf/jspdf.js"></script>
+  <script src="../JS/client/main.js"></script>
+  <script src="../JS/global/bootstrap/bootstrap.bundle.min.js"></script>
+
+  <!-- this page -->
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+  <script src="../JS/global/datePicker/datepicker.js"></script>
+  <!-- js -->
+  <script type="text/javascript">
+    $(document).ready(function() {
+        $('.basicInput').select2();
+    });
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })
+  </script>
+  <script type="text/javascript">
+    $(function () {
+
+    // Start counting from the third row
+    var counter = 1;
+
+    $(".add_new_row").on("click", function (event) {
+        event.preventDefault();
+
+        var newRow = $('<tr class="tr style-table-my1 tr-active">');
+        var cols = '';
+
+        // Table columns
+        cols += '<td style="width:10%;" class="style-td"><input class="form-control rounded-0" type="text" name="firstname" placeholder="First name"></td>';
+        cols += '<td style="width:7%;" class="style-td"><input class="form-control rounded-0" type="text" name="lastname" placeholder="Last name"></td>';
+        cols += '<td style="width:7%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
+        cols += '<td style="width:7%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
+        cols += '<td style="width:7%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
+        cols += '<td style="width:7%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
+        cols += '<td style="width:14%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
+        cols += '<td style="width:7%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
+        cols += '<td style="width:7%;" class="style-td"><button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom"><i class="fa fa-trash"></i></button></td>';
+
+        // cols += '<td><button class="btn btn-danger rounded-0" id ="deleteRow"><i class="fa fa-trash"></i></button</td>';
+
+        // Insert the columns inside a row
+        newRow.append(cols);
+
+        // Insert the row inside a table
+        $("table").append(newRow);
+
+        // Increase counter after each row insertion
+        counter++;
+    });
+
+    // Remove row when delete btn is clicked
+    $("table").on("click", "#deleteRow", function (event) {
+        $(this).closest("tr").remove();
+        counter -= 1
+    });
+});
+  </script>
+  <script type="text/javascript">
+    $('.create-budget-table-btn').on('click', function(e) {
+      e.preventDefault();
+      $('.budget-table').show();
+      $('.budget-account-manger').hide();
+    });
+
+    $('.create-budget-account-manger').on('click', function(e) {
+      e.preventDefault();
+      $('.budget-account-manger-table').show();
+      $('.budget-active').hide();
+    });
+    // budget-active
+  </script>
+</body>
+
+</html>

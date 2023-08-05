@@ -1,0 +1,206 @@
+/* sales Dashboard start */
+.sales-cards-title {
+    color: var(--light);
+    font-size: 13px;
+    font-family: "MontserratSemiBold";
+    margin-top: -20px;
+  }
+  .sales-header-value {
+    color: var(--light);
+    font-size: 10px;
+    font-family: "MontserratMedium";
+  }
+  .column {
+    width: 215px !important;
+  }
+  .column-header {
+    background-color: #364153 ;
+  }
+  
+  .tooltip-wrapper  {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--light);
+  }
+  .icon-p:hover {
+    cursor: pointer;
+  }
+  .sales-user-img{
+    width: 25px;
+    height: 25px;
+  }
+  /* Dragula CSS */
+  .column-wraper {
+    justify-content: center;
+  }
+  .task {
+      background-color: #F2F2F2;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    list-style-type: none;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    margin-bottom: 1rem;
+    height: 150px;
+    border-radius: 5px;
+    cursor: move;
+    box-shadow: 0 1px 3px #F2F2F2;
+    padding: 15px;
+    justify-content: space-between;
+  }
+  .task-list {
+      min-height: 100% 
+  }
+  .row-1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 10px;
+    margin-bottom: 25px;
+  }
+  
+  .gu-mirror {
+    position: fixed !important;
+    margin: 0 !important;
+    z-index: 9999 !important;
+    opacity: 0.8;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+    filter: alpha(opacity=80);
+  }
+  
+  .gu-hide {
+    display: none !important;
+  }
+  
+  .gu-unselectable {
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+  }
+  
+  .gu-transit {
+    opacity: 0.2;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+    filter: alpha(opacity=20);
+  }
+  /* information */
+  .wrapper  {
+    position: relative;
+
+  }
+  .tooltip-wrapper{
+    width: 40px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .wrapper  .tooltip {
+    background: #364153;
+    position: absolute;
+    top: 50px;
+    left: -75px;
+    color: #fff;
+    display: block;
+    margin-bottom: 15px;
+    opacity: 0;
+    padding: 20px;
+    border-radius: 10px;
+    pointer-events: none;
+    position: absolute;
+    width: 200px;
+    -webkit-transform: translateY(10px);
+    -moz-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    -o-transform: translateY(10px);
+    transform: translateY(10px);
+    -webkit-transition: all .25s ease-out;
+    -moz-transition: all .25s ease-out;
+    -ms-transition: all .25s ease-out;
+    -o-transition: all .25s ease-out;
+    transition: all .25s ease-out;
+    box-shadow: 0px 3px 6px #364153;
+    /* transform: rotate(180deg); */
+    z-index: 19999;
+  }
+  
+  
+  
+  /* CSS Triangles - see Trevor's post */
+  .wrapper  .tooltip:after {
+    border-left: solid transparent 7px;
+    border-right: solid transparent 7px;
+    border-top: solid transparent 7px;
+    border-bottom: solid #364153 7px;
+    top: -13px;
+    content: " ";
+    height: 0;
+    left: 22px !important;
+    margin-left: -13px;
+    position: absolute;
+    width: 0;
+  }
+  .wrapper  .position-absolute:after {
+    border-left: solid transparent 7px;
+    border-right: solid transparent 7px;
+    border-top: solid transparent 7px;
+    border-bottom: solid #364153 7px;
+    top: -13px;
+    content: " ";
+    height: 0;
+    left: 100px !important;
+    margin-left: -13px;
+    position: absolute;
+    width: 0;
+  }
+  
+  .wrapper :hover .tooltip {
+    opacity: 1;
+    pointer-events: auto;
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    -o-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+  
+  /* IE can just show/hide with no transition */
+  .lte8 .wrapper  .tooltip {
+    display: none;
+  }
+  
+  .lte8 .wrapper :hover .tooltip {
+    display: block;
+  }
+  .tooltip .info-text {
+    font-size: 7px;
+    font-family: "MontserratRegular";
+  }
+  
+  .business-name {
+    font-size: 13px;
+    font-family: "MontserratMedium";
+  }
+  .business-sales{
+    font-size: 10px;
+    font-family: "MontserratMedium";
+  }
+  .business-date{
+    font-size: 8px;
+    font-family: "MontserratRegular";
+    width: 100%;
+    text-align: right;
+  }
+
+
+  @media (min-width : 1600px){
+    .column-wraper {
+      justify-content: space-around;
+    }
+  }
+  /* sales Dashboard ends */

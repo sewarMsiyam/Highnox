@@ -1,0 +1,816 @@
+
+/* dashboard Taps */
+.nav-btn {
+  outline: none !important;
+  height: 100% !important;
+  color: var(--primary) !important;
+  font-size: 1rem !important;
+  font-family: "MontserratSemiBold" !important;
+}
+
+.nav-btn.active {
+  border: 1px solid transparent !important;
+  border-bottom: 4px solid var(--secondary) !important;
+}
+/* dashboard Taps End */
+
+/* Main Dashboard */
+article {
+  filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161));
+  overflow: hidden;
+  /* height: 333px; */
+}
+
+section {
+  margin-bottom: 1.5rem;
+}
+
+#pie-char {
+  width: 100%;
+}
+
+#pie-chart rect {
+  fill: var(--light) !important;
+  width: 100%;
+}
+
+article > div {
+  border-radius: 0.8rem !important;
+  background-color: var(--light);
+}
+
+article ul {
+  margin: 0 1rem;
+}
+
+article ul li h6 {
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.title {
+  font-family: "brushcriptmtkursiv";
+  font-size: 1.75rem !important;
+}
+
+.back-to-top {
+  position: fixed;
+  display: none;
+  right: 45px;
+  bottom: 45px;
+  z-index: 99;
+}
+
+.search-container {
+  position: relative;
+  margin: 0 auto;
+}
+
+.cancel-icon {
+  position: absolute;
+  right: 40px;
+  top: 20px;
+  z-index: 1500;
+}
+
+.cancel-icon:hover {
+  cursor: pointer;
+}
+
+.new-orders {
+  font-family: "MontserratMedium";
+}
+
+a:hover {
+  text-decoration: none !important;
+}
+
+/*** Button ***/
+.view-all {
+  border-bottom-right-radius: 10px;
+   border-bottom-left-radius: 10px;
+}
+.view-all:hover {
+ color: var(--light) !important;
+ cursor: pointer;
+}
+.btn {
+  background-color: var(--primary);
+  box-shadow: none !important;
+  color: var(--light);
+  transition: 0.5s;
+}
+.dropdown a:focus{
+  background-color: #eeeeee !important;
+  color:black !important
+}
+.btn:hover {
+  color: var(--light);
+}
+
+.btn.btn-primary {
+  color: #ffffff;
+}
+
+.btn-square {
+  width: 38px;
+  height: 38px;
+}
+
+.btn-sm-square {
+  width: 32px;
+  height: 32px;
+}
+
+.btn-lg-square {
+  width: 48px;
+  height: 48px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-lg-square {
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: normal;
+  border-radius: 50px;
+}
+
+.circle > div:nth-child(1) {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+}
+
+
+.circle .details h4 {
+  font-size: 8px;
+  font-family: "MontserratSemiBold";
+  margin: 0px !important
+}
+
+.circle .details p {
+  font-size: 20px;
+  font-family: "MontserratSemiBold";
+  margin: 0px !important
+}
+
+.circle .details span {
+  font-size: 9px;
+  font-family: "MontserratSemiBold";
+  margin: 0px !important
+}
+
+.circle-progress-container {
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+/* 
+.content .navbar i {
+  font-weight: 800;
+}
+
+.content .navbar .logo {
+  color: var(--primary);
+}
+
+.content .navbar .logo::first-letter {
+  color: var(--secondary);
+}
+
+.content .navbar .image {
+  width: 80px;
+  height: 80px;
+  border: 1px solid gray;
+}
+
+.content .navbar .image img {
+  width: 100%;
+}
+
+.content .navbar .navbar-nav .nav-link {
+  margin-left: 5px;
+  padding: 12px 0;
+  color: var(--primary);
+  outline: none;
+}
+
+.content .navbar .navbar-nav .nav-link:hover,
+.content .navbar .navbar-nav .nav-link.active {
+}
+
+.content .navbar .sidebar-toggler {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 40px;
+}
+.content .navbar .sidebar-toggler:hover {
+  cursor: pointer;
+}
+.content .navbar .navbar-nav .nav-link i,
+.content .navbar .navbar-nav .nav-link img {
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 30px;
+  border: 1px solid gray;
+  justify-content: center;
+} */
+.inner-circle-img {
+  width: 20px !important;
+  height: 20px !important;
+  border: none !important;
+}
+
+.notification-num {
+  font-size: 0.5rem;
+  border-radius: 50%;
+  position: absolute;
+  right: 10px;
+  width: 10px;
+  height: 10px;
+  line-height: 9px;
+  text-align: center;
+  top: 16px;
+}
+
+.circle-label {
+  margin-top: 1rem;
+  font-family: "MontserratSemiBold";
+}
+
+.bi-three-dots-vertical {
+  display: none;
+}
+
+.dropdown-toggle::after {
+  display: none !important;
+}
+
+/* .navbar-icons-container .nav-item {
+  width: 40px;
+  margin: auto;
+} */
+@media (max-width: 575.98px) {
+  .triangle {
+    display: none;
+  }
+  /* .content .navbar .navbar-nav .nav-link {
+    margin-left: 3px;
+  } */
+
+  .circle-progress-container {
+    flex-direction: column;
+  }
+
+  .bi-three-dots-vertical {
+    display: inline;
+  }
+
+  .gear-container {
+    /* order: 2; */
+  }
+
+  .show-title.display-none {
+    display: block !important;
+  }
+
+  /* .content .navbar {
+    padding: 0 2rem !important;
+  } */
+
+  /* .content .navbar {
+    position: relative;
+    padding: 0.8rem 2rem !important;
+  } */
+
+  .navbar-icons-container {
+    position: absolute;
+    right: -100%;
+    top: 100%;
+    width: 100%;
+    background-color: var(--light);
+    display: none;
+    justify-content: center;
+    padding: 0 2rem;
+    box-shadow: 0 4px 4px #cccccc;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .navbar-icons-container.active {
+    right: 0;
+    display: flex;
+  }
+
+  /* .container-fluid {
+    padding: 1.5rem 2rem !important;
+  } */
+
+  section {
+    margin-bottom: 0 !important;
+  }
+
+  article {
+    margin-top: 1rem;
+  }
+
+  .nav-link-position {
+    position: static !important;
+  }
+
+  .nav-item .dropdown-down {
+    width: 90% !important;
+    right: 50% !important;
+    transform: translateX(50%);
+    top: 55px!important
+  }
+
+  .dropdown-menu .settings,
+  .dropdown-menu .notification,
+  .dropdown-menu .user-details {
+    width: 100% !important;
+  }
+}
+
+/*** Date Picker ***/
+/* .bootstrap-datetimepicker-widget.bottom {
+  top: auto !important;
+} */
+/* 
+.bootstrap-datetimepicker-widget .table * {
+  border-bottom-width: 0px;
+}
+
+.bootstrap-datetimepicker-widget .table th {
+  font-weight: 500;
+} */
+/* .table thead th {
+    border-bottom: 0px !important
+    
+  } */
+/* 
+.bootstrap-datetimepicker-widget.dropdown-menu {
+  padding: 10px;
+  border-radius: 2px;
+  background-color: var(--light);
+}
+
+.custom-icon {
+  border-radius: 50%;
+  background-color: #354c7473;
+  width: 40px;
+  height: 40px;
+}
+
+.display-inline {
+  display: inline !important;
+}
+.display-flex {
+  display: flex !important;
+} */
+
+.dropdown-menu {
+  border-radius: 15px;
+  background-color: var(--light);
+  right: 0;
+  left: auto;
+  /* overflow: hidden; */
+  width: auto !important;
+  box-shadow: 0 3px 6px #00000029;
+}
+
+.dropdown-menu .user-details {
+  background-color: var(--third);
+  padding: 1rem;
+  width: 18rem;
+}
+
+.dropdown-menu .settings {
+  display: flex;
+  flex-direction: column;
+  width: 15rem;
+}
+
+.dropdown-menu .dashboard {
+  width: 18rem;
+}
+
+.dropdown-menu .notification {
+  width: 20rem;
+}
+
+.dropdown-menu .notification p {
+  background-color: var(--third);
+  color: var(--light);
+  font-size: 12px;
+  font-weight: 500;
+  padding: 0.8rem 1.5rem;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dropdown-menu .notification > a {
+  background-color: var(--third);
+  color: #ece6f5;
+  padding: 0.4rem 1.5rem;
+  font-weight: 700;
+  font-size: 13px;
+  text-align: center;
+}
+
+.dropdown-menu .notification p span {
+  background-color: #ffe856;
+  color: #656565;
+  border-radius: 30px;
+  padding: 0.2rem 0.6rem;
+  font-weight: 700;
+  font-size: 10px;
+}
+
+.dropdown-menu .settings .dropdown-item {
+  padding: 0.6rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-bottom: 0.5px solid #eeeeee;
+}
+
+.dropdown-menu .settings .dropdown-item:hover {
+  background-color: #f3f3f3;
+}
+
+.dropdown-menu .settings .dropdown-item i {
+  background-color: var(--light);
+  box-shadow: 0 3px 6px #00000029;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.dropdown-menu .settings p {
+  background-color: var(--third);
+  color: var(--light);
+  font-size: 15px;
+  font-weight: 400;
+  padding: 1rem 1.5rem;
+  margin: 0;
+}
+
+.dropdown-menu .dropdown-item.link {
+  padding: 0.8rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  border-bottom: 0.5px solid #eeeeee;
+}
+
+.dropdown-menu .dropdown-item.link i {
+  font-size: 1.2rem;
+}
+
+.dropdown-menu .dropdown-item.link:nth-last-child(1) {
+  border-bottom: 0px !important;
+}
+
+.dropdown-menu .user-details .image-container > div:nth-child(2) {
+  width: 100%;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+  margin-top: 10px;
+}
+
+.dropdown-menu.flags a {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.flag {
+  display: inline-block;
+  width: 25px !important;
+  height: 25px !important;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 0.8rem;
+}
+
+.flag span {
+  width: 100%;
+  height: 100%;
+}
+
+.dropdown-menu.flags a span {
+  border-radius: 50%;
+}
+/* 
+.content .navbar .dropdown-menu .user-details h3 {
+  color: #ece6f5;
+  font-size: 20px;
+  font-family: "MontserratBold";
+  flex-shrink: 0;
+  margin-top: 5px;
+}
+
+.content .navbar .dropdown-menu .user-details span {
+  color: #aeaeae;
+  font-size: 10px;
+  font-family: "MontserratSemiBold";
+} */
+
+/* table style starts */
+
+/* .table-section {
+  margin-bottom: 3rem;
+} */
+
+.table-container {
+  border-radius: 15px;
+  padding: 0;
+}
+
+.table-container h6 {
+  background-color: var(--third);
+  padding: 1rem 2rem;
+  color: var(--light);
+  font-weight: 700;
+  font-size: 20px;
+  margin: 0 !important;
+  font-family: "MontserratSemiBold";
+}
+
+.table-container .table {
+  margin: 0 !important;
+}
+
+.table-container .table thead {
+  background-color: #f6f6f6;
+}
+
+.table-container .table label {
+  padding: 0.4rem 1.2rem;
+  font-weight: 400;
+  font-size: 12px;
+  text-align: center;
+  border-radius: 5px;
+  color: var(--light);
+  background-color: var(--third);
+}
+.table-container .table .rejected {
+  background-color: red !important;
+}
+.table-container .table .approve {
+  background-color: #0BDA51 !important;
+}
+.table-container .table .pending {
+  background-color: #FFC300 !important;
+}
+.table-container .table .close {
+  background-color: var(--third);
+}
+.table-container .table button {
+  padding: 0.2rem 0.4rem;
+  background-color: var(--third);
+  font-weight: 400;
+  font-size: 12px;
+  text-align: center;
+  border-radius: 5px;
+  color: var(--light);
+  cursor: pointer;
+}
+
+.table-container .table button i {
+  font-size: 1rem;
+}
+.table-container th img {
+  margin-left: 7px;
+}
+
+article.table-container > div {
+  border-radius: 0 !important;
+}
+
+.table-container .table.another label {
+  width: 8rem;
+}
+
+.table-container .table.another tr:hover,
+tbody tr:hover {
+  background-color: #f6f6f6;
+}
+.search-placeholder::placeholder{
+  color: gray !important;
+}
+.table-container .table.another tr td:nth-child(1) {
+  text-align: start;
+  padding: 1rem 4rem 0;
+}
+
+.table-container .table tr th:nth-child(1),
+.table-container .table tr td:nth-child(1) {
+  text-align: start;
+  padding: 1rem 0 1rem 4rem;
+}
+
+.table-container .table tr th:nth-child(6),
+.table-container .table tr td:nth-child(6) {
+  text-align: center;
+  padding: 1rem 4rem 1rem 0;
+}
+
+.table-container .table tr td:nth-child(6) {
+  display: flex;
+  justify-content: center;
+}
+
+.table-container .table.another tr td:nth-child(3) {
+  padding: 1rem 4rem 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.flags {
+  position: relative;
+  top:40px
+}
+.dropdown-down .triangle {
+  content: "";
+  position: absolute;
+  top: -10px;
+  right: 5px;
+  margin-left: -5px;
+  border-width: 0 10px 10px;
+  border-style: solid;
+  border-color: transparent transparent #fff;
+}
+
+@media (max-width: 1200px) {
+  article {
+    margin-bottom: 2rem !important;
+  }
+}
+/* table style ends */
+
+.table-responsive .responsive-show-action {
+  display: none;
+}
+
+.bootstrap-datetimepicker-widget table td.active,
+.bootstrap-datetimepicker-widget table td.active:hover {
+  background: var(--primary);
+}
+
+.bootstrap-datetimepicker-widget table td.today::before {
+  border-bottom-color: var(--primary);
+}
+
+@media (min-width: 992px) {
+  .sidebar {
+    margin-left: 0;
+  }
+  .display-none {
+    display: none !important;
+  }
+
+  .sidebar.open {
+    width: 90px;
+  }
+
+  /* .content {
+    width: calc(100% - 250px);
+  }
+
+  .content.open {
+    width: 100%;
+    margin-left: 90px;
+  } */
+}
+
+@media (max-width: 991.98px) {
+  .sidebar {
+    margin-left: -250px;
+  }
+
+  .sidebar.open {
+    margin-left: 0;
+  }
+
+  /* .content {
+    width: 100%;
+    margin-left: 0;
+  } */
+}
+
+@media (max-width: 575.98px) {
+  .d-less-md-none {
+    display: none;
+  }
+  .d-less-sm-block {
+    display: block;
+  }
+}
+
+/* fake table */
+.fake-table-header {
+  padding: 1rem 2.5rem;
+  border-bottom: 1px solid #ddd;
+  gap: 1rem;
+}
+/* .fake-table-content {
+  padding: 1rem 2.5rem;
+  gap: 1rem;
+} */
+.fake-table-header-btn,
+.fake-table-action-btn,
+.fake-table-status,
+.fake-table-work {
+  padding: 0.2rem 0.4rem;
+  background-color: var(--third);
+  font-weight: 400;
+  font-size: 12px;
+  text-align: center;
+  border-radius: 5px;
+  color: var(--light);
+  cursor: pointer;
+  border: none;
+}
+.fake-table-work {
+  width: 8rem;
+}
+/* Main Dashboard End */
+
+
+
+/* @keyframes animate-dropdown-menu  {
+  from {
+    transform: rotateY(90deg)
+  }
+
+  to {
+    transform: rotateY(0deg)
+  }
+}
+
+
+.dropdown-down{
+  animation-name: animate-dropdown-menu ;
+  animation-duration: 1s;
+} */
+
+.bg-secondary{
+  background-color: #e8e8e8 !important;
+}
+
+
+
+
+
+.tooltip-left {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip-left .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  right: 110%;
+}
+
+.tooltip-left .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent transparent black;
+}
+.tooltip-left:hover .tooltiptext {
+  visibility: visible;
+}

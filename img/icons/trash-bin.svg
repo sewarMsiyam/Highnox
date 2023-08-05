@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="37" height="36" viewBox="0 0 37 36">
+  <defs>
+    <filter id="Rectangle_2449" x="0" y="0" width="37" height="36" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.071"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Rectangle_2449)">
+    <rect id="Rectangle_2449-2" data-name="Rectangle 2449" width="19" height="18" rx="5" transform="translate(9 6)" fill="#fff"/>
+  </g>
+  <path id="Icon_color" data-name="Icon color" d="M5.318,10H1.693a.937.937,0,0,1-.875-.93L.437,3H6.563L6.19,9.07A.935.935,0,0,1,5.318,10ZM6.782,2H.219A.236.236,0,0,1,0,1.75v-.5A.236.236,0,0,1,.219,1H2.188V.5A.473.473,0,0,1,2.625,0h1.75a.473.473,0,0,1,.437.5V1H6.782A.236.236,0,0,1,7,1.25v.5A.236.236,0,0,1,6.782,2Z" transform="translate(15 10)" fill="#364153"/>
+</svg>
