@@ -1,6 +1,6 @@
 @media (min-width: 1400px) {
     .custom-cont-table{
-      width: 20% !important;
+      width: 25% !important;
     }
     
   }
@@ -326,9 +326,6 @@
       
       .cont-table {
         width: 70% !important;
-      }
-      .custom-cont-table{
-        width: 100% !important;
       }
     
       .example {
