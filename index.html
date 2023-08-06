@@ -14,7 +14,6 @@
   <link href="css/global-style.css" rel="stylesheet">
   <link href="css/global/datepicker/datepicker.css" rel="stylesheet" type="text/css" />
 
-  <link rel="stylesheet" href="css/global/font-awesome/css/all.css">
   <!-- select -->
   <link href="css/select2.min.css" rel="stylesheet" />
 
@@ -28,6 +27,7 @@
   <link href="css/dashboard/media.css" rel="stylesheet">
 
   <!-- Icon Font Stylesheet cdn -->
+  <link rel="stylesheet" href="css/global/font-awesome/css/all.css">
   <link rel="stylesheet" href="css/global/font-awesome/css/fontawesome.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
   <link href="css/global/bootstrap/bootstrap-icons.css" rel="stylesheet">
@@ -39,8 +39,7 @@
   <script src="JS/semantic.min.js"> </script>
   <link rel="stylesheet" href="css/semantic.css">
 
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.14.0-beta2/css/bootstrap-select.min.css"
-    rel="stylesheet">
+  <link href="css/global/bootstrap/bootstrap-select.css" rel="stylesheet">
 
   <script src="JS/dashboard/textEditor/tinymce.min.js" referrerpolicy="origin"></script>
   <script src="JS/dashboard/textEditor/textEditor.js"></script>
@@ -5855,8 +5854,7 @@
   <script src="JS/dashboard/main.js"></script>
   <script src="JS/dashboard/todo.js"></script>
   <script src="JS/dashboard/chart.js"></script>
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.14.0-beta2/js/bootstrap-select.min.js"></script>
+  <script src="JS/global/bootstrap/bootstrap-select.js"></script>
   <!-- <script src="JS/dashboard/textEditor/tinymce.min.js" referrerpolicy="origin"></script> -->
 
   <!-- <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js"></script>
@@ -5941,13 +5939,6 @@
       $('.basicInput-1').select2();
     });
 
-    $(function () {
-      $('.datepicker').datepicker({
-        uiLibrary: 'bootstrap5',
-        orientation: 'bottom',
-        center: true,
-      });
-    });
 
 
     //   $(document).ready(function () {
@@ -5962,19 +5953,7 @@
     //   });
     // });
 
-    $(document).ready(function () {
-      $('.selectpicker').selectpicker();
-
-      $('.selectpicker').on('changed.bs.select', function (e) {
-        const selectedItems = $(this).val();
-        const selectedCount = selectedItems.length;
-
-        if (selectedCount >= 3) {
-          $(this).parent().find('.filter-option-inner-inner').html(`<span style="color: #495057 !important;">${selectedCount} options selected</span>`);
-        }
-      });
-    });
-
+ 
 
   </script>
 

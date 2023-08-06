@@ -268,7 +268,7 @@ a{
   border-radius:0;
 }
 .serch-nav .ui.selection.dropdown{
-  min-width: 115px;
+  min-width: 130px;
   min-height:35px; 
   border-radius: 5px 0 0 5px !important;
 }

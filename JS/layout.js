@@ -28,7 +28,28 @@ toggleBtn.click(function () {
   isHovered = false;
 });
 
+$(function () {
+  $('.datepicker').datepicker({
+    uiLibrary: 'bootstrap5',
+    orientation: 'bottom',
+    center: true,
+  });
+});
 
+
+
+$(document).ready(function () {
+  $('.selectpicker').selectpicker();
+
+  $('.selectpicker').on('changed.bs.select', function (e) {
+    const selectedItems = $(this).val();
+    const selectedCount = selectedItems.length;
+
+    if (selectedCount >= 3) {
+      $(this).parent().find('.filter-option-inner-inner').html(`<span style="color: #495057 !important;">${selectedCount} options selected</span>`);
+    }
+  });
+});
 
 
 var toggleSliderMenu = document.querySelectorAll(".display-menu");
@@ -52,3 +73,6 @@ var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggl
 var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
   return new bootstrap.Tooltip(tooltipTriggerEl)
 })
+
+
+

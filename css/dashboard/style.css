@@ -547,6 +547,7 @@ input:checked + .slider:before {
 .cover {
   background: url('../../images/cover.webp');
   height: 190px;
+  border-radius: 10px;
 }
 .profile-image-white {
   border: 10px solid white;
@@ -620,7 +621,7 @@ input:checked + .slider:before {
       height: 50px;
 }
 .pos-delete {
-  padding: 5px 7px !important;
+  padding: 3px 6px !important;
 }
 .delete-pos img {
   padding-bottom: 3px !important;
@@ -733,4 +734,44 @@ input:checked + .slider:before {
 .btn-light:not(:disabled):not(.disabled).active:focus, .btn-light:not(:disabled):not(.disabled):active:focus, .show>.btn-light.dropdown-toggle:focus {
   box-shadow: 0 0 0 0.2rem rgba(248,249,250,.5);
   outline: none !important;
+}
+.rounded-4{
+  border-radius: 1rem;
+}
+.text, .number {
+    padding: 0px;
+}
+.container-box-meetingroom {
+  width: calc(86% / 6);
+  justify-content: space-between;
+}
+.fs-7{
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  padding: 0.59em 1.5em 0.59em !important;
+  border-radius: 3px;
+  box-shadow: 0 3px 6px #00000029;
+}
+
+.pagination {
+  gap: 1rem;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 1rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  min-width: 240px;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 49px !important;
+  box-shadow: 0px 0px 8px #dcdcdc;
+}
+.tit-meetroom{
+  color:#364153;
+  font-size: 20px;
+  font-weight: 700;
+
+}
+.shadow{
+  box-shadow: 0 3px 6px #00000029;
 }
