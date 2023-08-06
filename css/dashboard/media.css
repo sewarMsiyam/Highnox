@@ -110,9 +110,6 @@
         overflow-x: auto;
       }
     
-      .nav-tabs {
-        /* padding-bottom: 4px !important; */
-      }
     
       /* .nav-item2 {
           padding: 0 .6%;
@@ -139,28 +136,13 @@
         width: 48% !important;
         margin-bottom: 20px;
       }
-    
-      .nav-tabs .nav-item.show .nav-link,
-      .nav-tabs .nav-link.active {
-        /* border-bottom: 2px solid #3A29D8 !important;
-        color: #3A29D8 !important; */
-      }
-    
+  
       .nav-item2,
       .nav-item {
         flex-grow: 0;
         /* height: 50px; */
       }
     
-      .nav-tabs {
-        /* padding-bottom: 12px !important; */
-      }
-    
-      
-    
-      /* .nav-item2 {
-          padding: 0 0%;
-      } */
       .wrapper .tooltip {
         width: 160px !important;
         padding: 10px;
