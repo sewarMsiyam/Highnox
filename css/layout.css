@@ -262,3 +262,25 @@ a{
 }.tox-tinymce {
   border: 1px solid #ccc0 !important;
 }
+
+.serch-nav .ui.selection.dropdown , .serch-nav .ui.input > input{
+  height: 35px; 
+  border-radius:0;
+}
+.serch-nav .ui.selection.dropdown{
+  min-width: 115px;
+  min-height:35px; 
+  border-radius: 5px 0 0 5px !important;
+}
+.serch-nav .ui.input > input , .serch-nav  .ui.button{
+  height: 35px; 
+  border-left: 1px solid #fff0;
+  border-radius:0;
+}
+.serch-nav  .ui.button{
+  height: 35px; 
+  border-left: 1px solid #fff0;
+  border-radius:0;
+  background: var(--primary);
+    color: var(--light);
+}
