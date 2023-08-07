@@ -3,58 +3,33 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Clients</title>
+  <title>room</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
+  <link rel="icon" href="../images/Highnox.png" type="image/x-icon" />
+
   <link rel="stylesheet" href="../css/semantic.min.css"  >
-  <script src="https://code.jquery.com/jquery-3.1.1.min.js">
-</script>
-<script src="../JS/semantic.min.js">
-</script>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="../JS/semantic.min.js"></script>
   <!-- global style -->
   <link href="../css/global/bootstrap/bootstrap.min.css" rel="stylesheet">
   <link href="../css/global-style.css" rel="stylesheet">
+  <link href="../css/global/datepicker/datepicker.css" rel="stylesheet" type="text/css" />
+  <link href="../css/global/bootstrap/bootstrap-select.css" rel="stylesheet">
 
-<link href="../css/global/datepicker/datepicker.css" rel="stylesheet" type="text/css" />
   <!-- dashboard style -->
   <link href="../css/dashboard/main-dashboard.css" rel="stylesheet">
-
   <link rel="stylesheet" type="text/css" href="../css/dashboard/style.css">
   <link rel="stylesheet" type="text/css" href="../css/dashboard/screen.css">
-  <link href="../css/dashboard/media.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/dashboard/media.css" >
 
   <!-- Icon Font Stylesheet cdn -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/global/font-awesome/css/all.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-
-  <!-- Libraries Stylesheet -->
-  <link href="../css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/css/bootstrap-datepicker.min.css">
+  
   <link rel="stylesheet" href="../css/layout.css">
-
-    <style>
-      .tr{
-        border-top: 1px solid #EEEAEA !important;
-      }
-      .tr:hover{
-        background-color: #f6f6f6;
-      }
-      .table-responsive{
-        box-shadow:0 3px 6px #00000029
-      }
-      .style-th{
-        color:#364153;
-        font-family: 'MontserratMedium';
-      }
-      .text-select {
-        margin-bottom: 5px !important;
-      }
-    </style>
 </head>
-
 <body>
   <main class="layout" data-sidebar-minimize="off">
     <!-- Sidebar Start -->
@@ -151,7 +126,7 @@
           </li>
 
           <li class="nav-item">
-            <a href="meeting-rooms.html" class="nav-link active">
+            <a href="meeting-rooms.html" class="nav-link">
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 19">
                 <path id="Icon_color" data-name="Icon color"
                   d="M16,19H2a2,2,0,0,1-2-2V4A2,2,0,0,1,2,2H3V.5A.5.5,0,0,1,3.5,0h1A.5.5,0,0,1,5,.5V2h8V.5a.5.5,0,0,1,.5-.5h1a.5.5,0,0,1,.5.5V2h1a2,2,0,0,1,2,2V17A2,2,0,0,1,16,19ZM2,6V17H16V6Zm11.5,8h-1a.5.5,0,0,1-.5-.5v-1a.5.5,0,0,1,.5-.5h1a.5.5,0,0,1,.5.5v1A.5.5,0,0,1,13.5,14Zm-4,0h-5a.5.5,0,0,1-.5-.5v-1a.5.5,0,0,1,.5-.5h5a.5.5,0,0,1,.5.5v1A.5.5,0,0,1,9.5,14Zm4-4h-5A.5.5,0,0,1,8,9.5v-1A.5.5,0,0,1,8.5,8h5a.5.5,0,0,1,.5.5v1A.5.5,0,0,1,13.5,10Zm-8,0h-1A.5.5,0,0,1,4,9.5v-1A.5.5,0,0,1,4.5,8h1a.5.5,0,0,1,.5.5v1A.5.5,0,0,1,5.5,10Z"
@@ -506,7 +481,7 @@
       <!-- End Navbar  -->
 
       <div class="container-fluid p-4" id="back-client">
-        <div class="content-container">
+        <div class="content-container rounded bg-white shadow py-3">
           <div class="content-top d-flex justify-content-start align-items-center py-1">
             <h4 class="px-4 py-2">Room</h4>
           </div>
@@ -580,12 +555,14 @@
                                 <label>Building</label>
                               </div>
                               <div class="select-input select-input-responsive">
-                                <select name="buliding" class="basicInput">
-                                  <option>Seelct Building </option>
-                                  <option>Building 1</option>
-                                  <option>Building 2</option>
-                                  <option>Building 3</option>
+                                <select class=" w-100 selectpicker" multiple aria-label="size 3 select example" data-live-search="true">
+                                  <option>Building</option>
+                                  <option>2</option>
+                                  <option>3</option>
+                                  <option>4</option>
+                                  <option>5</option>
                                 </select>
+                                <img class="input-svg" width="12" src="../images/img-droplist.svg">  
                               </div>
                             </div>
                             <div class="col-md-2 col-6">
@@ -593,35 +570,37 @@
                                 <label>City</label>
                               </div>
                               <div class="select-input select-input-responsive">
-                                <select name="buliding" class="basicInput">
+                                <select class=" selectpicker" multiple aria-label="size 3 select example" data-live-search="true">
                                   <option>Seelct City </option>
                                   <option>City 1</option>
                                   <option>City 2</option>
                                   <option>City 3</option>
                                 </select>
+                                <img class="input-svg" width="12" src="../images/img-droplist.svg">  
                               </div>
                             </div>
-                            <div class="col-md-3 col-6">
+                            <div class="col-md-2 col-6">
                               <div>
                                 <label>Room Category</label>
                               </div>
                               <div class="select-input select-input-responsive">
-                                <select name="buliding" class="basicInput">
+                                <select class=" selectpicker" multiple aria-label="size 3 select example" data-live-search="true">
                                   <option>Seelct Category </option>
                                   <option>Category 1</option>
                                   <option>Category 2</option>
                                   <option>Category 3</option>
                                 </select>
+                                <img class="input-svg" width="12" src="../images/img-droplist.svg">  
+
                               </div>
                             </div>
                           </div>
                         </form>
-                        <div class="table-responsive bg-light mt-4 border-radius-20">
+                        <div class="table-responsive bg-light mt-4 border-radius-20 shadow">
                           <div class="secondTableContainer">
-                            <table id="myTable">
+                            <table class="table" id="myTable">
                               <thead>
                                 <tr class="tr" >
-                                  <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
                                   <th onclick="sortTable(0, 'myTable')" class="style-th">
                                     <div>
                                       <input type="checkbox" class="" id="customCheck1">
@@ -713,7 +692,7 @@
                                 </tr>
                               </thead>
                               <tbody>
-                                <tr class="tr style-table-my1 tr-active">
+                                <tr class="tr trtabler tr-active">
                                   <td class="style-td">
                                       <input type="checkbox" class="" id="customCheck1">
                                   </td>
@@ -757,18 +736,19 @@
                                     110000
                                   </td>
                                   <td class="style-td">
-                                    <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" data-bs-toggle="modal" data-bs-target="#exampleModalCenter" data-bs-original-title="" title="">
-                                      <img src="../images/client-image.svg" class="image-actions">
+                                    <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom"  data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
+                                      <img src="../images/client-image.svg" class="image-actions" />
                                     </button>
-                                    <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
-                                      <img src="../images/client-person.svg" class="image-actions">
-                                    </button>
+                                    <div class="tooltip-left btn btn-secondary dataTableButtons">
+                                      <img src="../images/client-person.svg" class="image-actions" />
+                                      <span class="tooltiptext">Tooltip text</span>
+                                    </div>
                                     <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
                                       <i class="fa fa-trash"></i>
                                     </button>
                                   </td>
                                 </tr>
-                                <tr class="tr style-table-my1 tr-active">
+                                <tr class="tr trtabler tr-active">
                                   <td class="style-td">
                                       <input type="checkbox" class="" id="customCheck1">
                                   </td>
@@ -812,18 +792,19 @@
                                     110000
                                   </td>
                                   <td class="style-td">
-                                    <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" data-bs-toggle="modal" data-bs-target="#exampleModalCenter" data-bs-original-title="" title="">
-                                      <img src="../images/client-image.svg" class="image-actions">
+                                    <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom"  data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
+                                      <img src="../images/client-image.svg" class="image-actions" />
                                     </button>
-                                    <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
-                                      <img src="../images/client-person.svg" class="image-actions">
-                                    </button>
+                                    <div class="tooltip-left btn btn-secondary dataTableButtons">
+                                      <img src="../images/client-person.svg" class="image-actions" />
+                                      <span class="tooltiptext">Tooltip text</span>
+                                    </div>
                                     <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
                                       <i class="fa fa-trash"></i>
                                     </button>
                                   </td>
                                 </tr>
-                                <tr class="tr style-table-my1 tr-active">
+                                <tr class="tr trtabler tr-active">
                                   <td class="style-td">
                                       <input type="checkbox" class="" id="customCheck1">
                                   </td>
@@ -867,18 +848,19 @@
                                     110000
                                   </td>
                                   <td class="style-td">
-                                    <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" data-bs-toggle="modal" data-bs-target="#exampleModalCenter" data-bs-original-title="" title="">
-                                      <img src="../images/client-image.svg" class="image-actions">
+                                    <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom"  data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
+                                      <img src="../images/client-image.svg" class="image-actions" />
                                     </button>
-                                    <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
-                                      <img src="../images/client-person.svg" class="image-actions">
-                                    </button>
+                                    <div class="tooltip-left btn btn-secondary dataTableButtons">
+                                      <img src="../images/client-person.svg" class="image-actions" />
+                                      <span class="tooltiptext">Tooltip text</span>
+                                    </div>
                                     <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
                                       <i class="fa fa-trash"></i>
                                     </button>
                                   </td>
                                 </tr>
-                                <tr class="tr style-table-my1 tr-active">
+                                <tr class="tr trtabler tr-active">
                                   <td class="style-td">
                                       <input type="checkbox" class="" id="customCheck1">
                                   </td>
@@ -922,12 +904,13 @@
                                     110000
                                   </td>
                                   <td class="style-td">
-                                    <button type="button" class="btn btn-secondary dataTableButtons">
-                                      <img src="../images/client-image.svg" class="image-actions">
+                                    <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom"  data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
+                                      <img src="../images/client-image.svg" class="image-actions" />
                                     </button>
-                                    <button type="button" class="btn btn-secondary dataTableButtons">
-                                      <img src="../images/client-person.svg" class="image-actions">
-                                    </button>
+                                    <div class="tooltip-left btn btn-secondary dataTableButtons">
+                                      <img src="../images/client-person.svg" class="image-actions" />
+                                      <span class="tooltiptext">Tooltip text</span>
+                                    </div>
                                     <button type="button" class="btn btn-secondary dataTableButtons">
                                       <i class="fa fa-trash"></i>
                                     </button>
@@ -936,6 +919,20 @@
                               </tbody>
                             </table>
                           </div>
+                        </div>
+                        <div class="d-flex flex-column-reverse flex-lg-row align-items-center justify-content-between my-4">
+                          <div class="pagination-container my-1">
+                            <ul class="pagination d-flex">
+                              <li class="prev-icon"><i class="fas fa-angle-left"></i></li>
+                              <div class="numbers">
+                                <li class="active"><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                              </div>
+                              <li><a href="#" class="next-link">next</a></li>
+                              <li class="next-icon"><i class="fas fa-angle-right"></i></li>
+                            </ul>
+                          </div>  
                         </div>
                       </div>
 
@@ -964,32 +961,64 @@
 
   </main>
 
+  <!-- modals -->
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header d-flex justify-content-end ">
+            <button type="button" class="close-btn" data-bs-dismiss="modal" aria-label="Close">
+              <i class="bi bi-x modal-close-icon"></i>
+            </button>
+          </div>
+          <div class="modal-body d-flex justify-content-center align-items-center">
+            <div class="container-img">
+              <img src="../images/icon-modal.svg" class="img-fluid"/>
+            </div>
+          </div>
+          <div class="modal-footer d-flex justify-content-center">
+            <button type="button" class="btn btn-primary"
+              data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!-- end modals -->
+
   <script>
     $('.ui.dropdown').dropdown();
-</script>
+  </script>
 
   <!-- global js -->
   <script src="../JS/global/jquery/jquery-3.4.1.min.js"></script>
-  <script src="../JS/global/jspdf/jspdf.js"></script>
   <script src="../JS/client/main.js"></script>
   <script src="../JS/global/bootstrap/bootstrap.bundle.min.js"></script>
-
-  <!-- this page -->
-  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+  <script src="../JS/global/bootstrap/bootstrap-select.js"></script>
   <script src="../JS/global/datePicker/datepicker.js"></script>
-
   <script src="../JS/layout.js"></script>
 
-  <!-- js -->
+  
   <script type="text/javascript">
-    $(document).ready(function() {
-        $('.basicInput').select2();
-    });
-    $(function () {
-      $('[data-toggle="tooltip"]').tooltip()
-    })
-  </script>
+    $('.trtabler').on('click', function (event) {
+      const target = $(event.target);
 
+      if (target.is('td:last-child')) {
+        event.preventDefault();
+      } else if (target.is('td:last-child button')) {
+        event.preventDefault();
+      } else if (target.is('td:last-child button img')) {
+        event.preventDefault();
+      } else if (target.is('td:last-child .tooltip-left')) {
+        event.preventDefault();
+      } else if (target.is('td:last-child div img')) {
+        event.preventDefault();
+      }else if (target.is('td:last-child button i')) {
+        event.preventDefault();
+      } else {
+        window.location.href = 'create-room.html';
+      }
+    });
+  </script>
 </body>
 
 </html>

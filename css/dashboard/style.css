@@ -136,12 +136,16 @@ table {
 }
 .close-btn {
   position: relative;
-  border: 0;
-  background: #364153;
-  color: #Fff;
-  border-radius: 50%;
-  width: 20px;
-  cursor: pointer;
+    border: 0;
+    background: #364153;
+    color: #Fff;
+    border-radius: 50%;
+    width: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20px;
 }
 .bg-gray {
   background: #F2F2F2 !important;
@@ -253,6 +257,7 @@ table {
   }
   .document-btns {
     padding: 0;
+    white-space: nowrap;
   }
   .document-btns button, .document-btns img {
     border: none;
@@ -774,4 +779,37 @@ input:checked + .slider:before {
 }
 .shadow{
   box-shadow: 0 3px 6px #00000029;
+}
+
+.container-box {
+  width: calc(95% / 5);
+  justify-content: space-between;
+}
+
+.numbers {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+.numbers li a {
+  color: #ccc;
+  font-size: 16px;
+  font-family: "MontserratMedium";
+}
+.numbers li.active {
+  border-radius: 0.3rem;
+  background-color: #364153;
+  padding: 0.05rem 0.5rem;
+}
+.next-link {
+  color: #364153;
+  font-size: 16;
+  font-size: 16px;
+  font-family: "MontserratMedium";
+}
+.prev-icon {
+  color: #ccc;
+}
+.next-icon {
+  color: #364153;
 }
