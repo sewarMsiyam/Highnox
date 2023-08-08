@@ -523,15 +523,12 @@
                        <label>From</label>
                       </div>
                       <div class="select-input bg-secondary">
-                        
-                          <div class="input-group date datepicker" data-provide="datepicker">
-                            <input type="text" class="form-control date-input bg-secondary" placeholder="Select date"
-                              >
-                            <div class="input-group-addon">
-                              <span class="glyphicon glyphicon-th"></span>
-                            </div>
+                        <div class="input-group date datepicker" data-provide="datepicker">
+                          <input type="text" class="form-control date-input bg-secondary border-0" placeholder="Select date" >
+                          <div class="input-group-addon">
+                            <span class="glyphicon glyphicon-th"></span>
                           </div>
-                          
+                        </div>                          
                         <img class="input-svg" src="../images/date.svg">
                       </div>                   
                     </div>
@@ -540,16 +537,12 @@
                        <label>Until</label>
                       </div>
                       <div class="select-input bg-secondary">
-                        
-                          <div class="input-group date datepicker" data-provide="datepicker">
-                            <input type="text" class="form-control date-input bg-secondary" placeholder="Select date"
-                              >
-                            <div class="input-group-addon">
-                              <span class="glyphicon glyphicon-th"></span>
-                            </div>
-                          </div>
-                          
-                        <img class="input-svg" src="../images/date.svg">
+                        <select class=" selectpicker" multiple aria-label="size 3 select example" data-live-search="true">
+                          <option>Seelct Until </option>
+                          <option>Until 1</option>
+                          <option>Until 2</option>
+                          <option>Until 3</option>
+                        </select>                          
                       </div> 
                     </div>
                     <div class="col-md-2 col-12">
@@ -557,14 +550,14 @@
                         <label>Building</label>
                       </div>
                       <div class="select-input select-input-responsive">
-                        <select name="buliding" class="basicInput">
-                          <option>Seelct Building </option>
-                          <option>Building 1</option>
-                          <option>Building 2</option>
-                          <option>Building 3</option>
+                        <select class=" w-100 selectpicker" multiple aria-label="size 3 select example" data-live-search="true">
+                          <option>Building</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
                         </select>
-                        <img class="input-svg" src="../images/business.svg">
-
+                        <img class="input-svg" width="12" src="../images/img-droplist.svg"> 
                       </div>
                     </div>
                     <div class="col-md-3 col-12 padding-top-small-10">
@@ -572,7 +565,7 @@
                         <label>Choose report</label>
                       </div>
                       <div class="select-input select-input-responsive">
-                        <select name="choose_report" class="basicInput choose_report">
+                        <select name="choose_report" class=" w-100 selectpicker" multiple aria-label="size 3 select example" data-live-search="true">
                           <option value="room_revenue_report">Room Revenue Report</option>
                           <option value="contract_revenue_report">Contract Revenue Report </option>
                           <option value="rented_sqm_report">Rented SQM Report </option>
