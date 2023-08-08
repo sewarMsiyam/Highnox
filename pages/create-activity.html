@@ -7,53 +7,29 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
+  <link rel="icon" href="../images/Highnox.png" type="image/x-icon" />
+
   <link rel="stylesheet" href="../css/semantic.min.css"  >
-  <script src="https://code.jquery.com/jquery-3.1.1.min.js">
-</script>
-<script src="../JS/semantic.min.js">
-</script>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="../JS/semantic.min.js"></script>
   <!-- global style -->
   <link href="../css/global/bootstrap/bootstrap.min.css" rel="stylesheet">
   <link href="../css/global-style.css" rel="stylesheet">
+  <link href="../css/global/datepicker/datepicker.css" rel="stylesheet" type="text/css" />
+  <link href="../css/global/bootstrap/bootstrap-select.css" rel="stylesheet">
 
-<link href="../css/global/datepicker/datepicker.css" rel="stylesheet" type="text/css" />
   <!-- dashboard style -->
   <link href="../css/dashboard/main-dashboard.css" rel="stylesheet">
-
   <link rel="stylesheet" type="text/css" href="../css/dashboard/style.css">
   <link rel="stylesheet" type="text/css" href="../css/dashboard/screen.css">
-  <link href="../css/dashboard/media.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/dashboard/media.css" >
 
   <!-- Icon Font Stylesheet cdn -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/global/font-awesome/css/all.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-  <!-- Libraries Stylesheet -->
-  <link href="../css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/css/bootstrap-datepicker.min.css">
-  
-    <style>
-      .tr{
-        border-top: 1px solid #EEEAEA !important;
-      }
-      .tr:hover{
-        background-color: #f6f6f6;
-      }
-      .table-responsive{
-        box-shadow:0 3px 6px #00000029
-      }
-      .style-th{
-        color:#364153;
-        font-family: 'MontserratMedium';
-      }
-      .text-select {
-        margin-bottom: 5px !important;
-      }
-    </style>
+  <link rel="stylesheet" href="../css/layout.css">
 </head>
-
 <body>
   <main class="layout" data-sidebar-minimize="off">
     <!-- Sidebar Start -->
@@ -115,13 +91,13 @@
               </div>
             </a>
             <div class="toggle-display">
-              <a href="manage-client.html" class="nav-link">
+              <a href="manage-contract.html" class="nav-link">
                 <i class="fa-solid fa-circle"></i>
-                <span class="">Mange Client</span>
+                <span class="">Mange contract</span>
               </a>
-              <a href="create-new-client1.html" class="nav-link">
+              <a href="create-new-contract-1.html" class="nav-link">
                 <i class="fa-solid fa-circle"></i>
-                <span class="">Create New Client</span>
+                <span class="">Create New contract</span>
               </a>
             </div>
           </li>
@@ -186,7 +162,7 @@
           </li>
 
           <li class="nav-item">
-            <a href="operations.html" class="nav-link active">
+            <a href="operations.html" class="nav-link">
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 21.996 16">
                 <path id="Icon_color" data-name="Icon color"
                   d="M11,16a8.008,8.008,0,0,1-4-1.072.519.519,0,0,1-.239-.371.5.5,0,0,1,.14-.42l.73-.731a.5.5,0,0,1,.355-.149.5.5,0,0,1,.235.059,5.952,5.952,0,0,0,2.775.69H11A6,6,0,0,0,17,8H14.631a.493.493,0,0,1-.353-.15l-.2-.2a.5.5,0,0,1,0-.711L17.608,3.4a.509.509,0,0,1,.71,0l3.53,3.543a.5.5,0,0,1,0,.711l-.2.2a.49.49,0,0,1-.353.15H19a8,8,0,0,1-8,8ZM4.033,12.749a.5.5,0,0,1-.355-.144L.148,9.061a.5.5,0,0,1,0-.711l.2-.2A.49.49,0,0,1,.7,8H3A8,8,0,0,1,15,1.073a.524.524,0,0,1,.26.371.5.5,0,0,1-.139.42l-.741.741a.507.507,0,0,1-.357.146.512.512,0,0,1-.232-.056,5.847,5.847,0,0,0-2.774-.7H11A6.01,6.01,0,0,0,5,8H7.364a.49.49,0,0,1,.353.15l.2.2a.5.5,0,0,1,0,.711L4.388,12.6A.5.5,0,0,1,4.033,12.749Z"
@@ -504,7 +480,7 @@
       </nav>
       <!-- End Navbar  -->
 
-         <div class="d-flex flex-column mb-3 justify-content-evenly p-5" style="gap:20px">
+         <div class="d-flex flex-column mb-3 justify-content-evenly p-5">
                         <h3 class="investment-container-title">Investment International LTD</h3>
                         <div class="investment-sub-container">
                             <div class="investment-cards-container">
@@ -548,8 +524,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="content-container">
-                          <div class="content-top d-flex justify-content-start align-items-center py-1">
+                        <div class="content-container rounded bg-white shadow mt-4">
+                          <div class="content-top d-flex justify-content-start align-items-center py-3">
                             <h4 class="px-4 my-0 py-2">Activity  nr 1</h4>
                           </div>
                           <div class="content-body p-4">
@@ -561,7 +537,7 @@
                                       <label>Activity Type</label>
                                     </div>
                                       <div class="second-select-input">
-                                        <select name="year" class="basicInput">
+                                        <select name="year" class="form-control border-0">
                                           <option>Select Activity</option>
                                           <option>Activity 1</option>
                                           <option>Activity 2</option>
@@ -574,7 +550,7 @@
                                       <label>Priority</label>
                                     </div>
                                       <div class="second-select-input">
-                                        <select name="year" class="basicInput">
+                                        <select name="year" class="form-control border-0">
                                           <option>Select Priority</option>
                                           <option>Priority 1</option>
                                           <option>Priority 2</option>
@@ -595,7 +571,7 @@
                                       <label>Compaign</label>
                                     </div>
                                       <div class="second-select-input">
-                                        <select name="year" class="basicInput">
+                                        <select name="year" class="form-control border-0">
                                           <option>Select Compaign</option>
                                           <option>Compaign 1</option>
                                           <option>Compaign 2</option>
@@ -608,7 +584,7 @@
                                       <label>Contact Person</label>
                                     </div>
                                       <div class="second-select-input">
-                                        <select name="year" class="basicInput">
+                                        <select name="year" class="form-control border-0">
                                           <option>Select Contact</option>
                                           <option>Contact 1</option>
                                           <option>Contact 2</option>
@@ -630,6 +606,7 @@
                                       <img class="input-svg" src="../images/date.svg">
                                     </div>
                                   </div>
+                                </div>
                                   <div class="form-row my-4">
                                   <div class="col-md-2 col-6">
                                     <div>
@@ -650,7 +627,7 @@
                                       <label>Participants</label>
                                     </div>
                                       <div class="second-select-input">
-                                        <select name="year" class="basicInput">
+                                        <select name="year" class="form-control border-0">
                                           <option>Select Participants</option>
                                           <option>Participants 1</option>
                                           <option>Participants 2</option>
@@ -696,7 +673,7 @@
                                   </div>
                                 </div>
                                 <div class="form-row my-4">
-                                  <div class="col-md-7 col-6">
+                                  <div class="col-md-3 col-6">
                                     <div>
                                       <label>Location / Building / Venue</label>
                                     </div>
@@ -704,12 +681,12 @@
                                       <input type="text" class="form-control" placeholder="joe moner">
                                     </div>
                                   </div>
-                                  <div class="col-md-5 col-12 padding-top-small-10">
+                                  <div class="col-md-3 col-12 padding-top-small-10">
                                     <div>
                                       <label>language</label>
                                     </div>
                                       <div class="second-select-input">
-                                        <select name="year" class="basicInput">
+                                        <select name="year" class="form-control border-0">
                                           <option>Select language</option>
                                           <option>language 1</option>
                                           <option>language 2</option>
@@ -722,7 +699,7 @@
                               </form>
                             </div>
                             <!-- add new row -->
-                            <div class="container-fluid content-form bg-light mt-4 px-0">
+                            <div class="container-fluid content-form bg-light mt-4 px-4">
                               <div class="py-4 border-radius-20" style="background: #e8e8e8;">
                                 <!-- add new row -->
                                 <div class="px-4">
@@ -811,7 +788,7 @@
                               </div>
                             </div>
                             <!-- end new row -->
-                            <div class="container-fluid content-form py-4 mt-4">
+                            <div class="content-body shadow rounded content-form m-4 p-4">
                               <form>
                                 <div class="form-row my-4">
                                   <div class="col-md-10 col-12">
@@ -837,43 +814,159 @@
                                 </div>
                               </form>
                             </div>
-                            <div class="container-fluid py-4 d-flex justify-content-end">
-                                  <div class="col-md-4 col-12 text-right">
-                                    <button class="btn btn-primary  cancel-btn" type="submit">
-                                    Cancel
-                                    </button>
-                                      <button class="btn btn-primary submit-btn" type="submit">
-                                      Save
-                                    </button>                        
+                            <div class="container-fluid py-4 d-flex justify-content-end print-dropdown">
+                              <form class="offers-btn d-flex justify-content-center flex-wrap justify-content-md-end" style="gap: 1rem;">
+                                <button class="btn btn-primary  cancel-btn" > Cancel </button>
+                                <button class="btn btn-primary submit-btn">  Save  </button>
+                                
+                                  <div class="ui inline dropdown h-100  cancel-btn text-dark">
+                                    <div class="text">
+                                      Printout
+                                    </div>
+                                    <i class="dropdown icon"></i>
+                                    <div class="menu w-100">
+                                      <div class="item">
+                                        Printout
+                                      </div>
+                                      <div class="item" data-bs-toggle="modal" data-bs-target="#EmailModal">
+                                        Email
+                                      </div>
+                                      <div class="item">
+                                        close
+                                      </div>
+                                    </div>
                                   </div>
+                                <button class="btn btn-primary submit-btn" type="submit" style="margin-left: 10px; border-top-left-radius: none !important;  border-bottom-left-radius: none !important;">Send </button>
+                                <button class="btn btn-primary submit-btn" type="submit"> Create Invoice </button>
+                              </form>
                             </div>
                           </div>
                         </div>
                     </div>
   </main>
 
+
+  
+<!-- email modal -->
+<div class="modal fade" id="EmailModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+        <div class="modal-header d-flex justify-content-end ">
+            <button type="button" class="close-btn" data-bs-dismiss="modal" aria-label="Close">
+                <i class="bi bi-x modal-close-icon"></i>
+            </button>
+        </div>
+        <div class="d-flex flex-column descripton-area-container px-4 py-1 mb-3" style="width: 100%;">
+            <div class="text-select">
+                Sender Email
+            </div>
+            <div class="container-inner" style="background-color: #F3F2F2;">
+                <input class="form-control input" type="text" placeholder="Enter Name"
+                    style="background-color: #F3F2F2;" />
+            </div>
+        </div>
+        <div class="d-flex flex-column descripton-area-container px-4 py-1 mb-3" style="width: 100%;">
+            <div class="text-select">
+                Reciver Email
+            </div>
+            <div class="container-inner" style="background-color: #F3F2F2;">
+                <input class="form-control input" type="text" placeholder="Enter Name"
+                    style="background-color: #F3F2F2;" />
+            </div>
+        </div>
+        <div class="d-flex flex-row  px-4 py-1 mb-3" style="gap:25px">
+            <div class="d-flex flex-column descripton-area-container" style="width: 100%;">
+                <div class="text-select">
+                    CC
+                </div>
+                <div class="container-inner" style="background-color: #F3F2F2;">
+                    <input class="form-control input" type="text" placeholder="Enter Name"
+                        style="background-color: #F3F2F2;" />
+                </div>
+            </div>
+
+        </div>
+        <div class="d-flex flex-row  px-4 py-1 mb-3" style="gap:25px">
+            <div class="d-flex flex-column descripton-area-container" style="width: 100%;">
+                <div class="text-select">
+                    BC
+                </div>
+
+                <div class="container-inner" style="background-color: #F3F2F2;">
+                    <input class="form-control input" type="text" placeholder="Enter Name"
+                        style="background-color: #F3F2F2;" />
+                </div>
+            </div>
+
+        </div>
+        <div class="d-flex flex-row  px-4 py-1 mb-3" style="gap:25px">
+            <div class="d-flex flex-column descripton-area-container" style="width: 100%;">
+                <div class="text-select">
+                    Subject
+                </div>
+                <div class="container-inner" style="background-color: #F3F2F2;">
+                    <input class="form-control input" type="text" placeholder="Enter Name"
+                        style="background-color: #F3F2F2;" />
+                </div>
+            </div>
+
+        </div>
+
+        <div class="file-container-input px-4 py-1 mb-3" style="width: 100%;">
+            <label
+                style=" font-size: 16px !important; font-family: 'MontserratSemiBold';  color: #364153;">Message</label>
+            <textarea class="form-control" id="editor" style="background-color: #F3F2F2;"></textarea>
+        </div>
+        <div class="d-flex justify-content-center align-items-center m-3 flex-wrap" style="gap:15px">
+            <div class="d-flex p-3   justify-content-between" id="download-contract-word"
+                style="width:45%;background-color: #F3F2F2;">
+                <div class="d-flex" style="gap:10px">
+                    <img src="../img/icons/word.svg" />
+                    <div class="d-flex flex-column">
+                        <span>Research.rar</span>
+                        <span>5.778 gbs</span>
+                    </div>
+                </div>
+                <img src="../img/icons/download-solid.svg" />
+            </div>
+            <div class="d-flex p-3 justify-content-between" id="download-contract-excel"
+                style="width:45%;background-color: #F3F2F2;">
+                <div class="d-flex" style="gap:10px">
+                    <img src="../img/icons/excel.svg" />
+                    <div class="d-flex flex-column">
+                        <span>Research.rar</span>
+                        <span>5.778 gbs</span>
+                    </div>
+                </div>
+                <img src="../img/icons/download-solid.svg" />
+            </div>
+        </div>
+        <div class="modal-footer d-flex justify-content-center">
+            <button type="button" class="btn"
+                style="background-color: #E1E1E1; color: #364153; border-radius:5px; width:100px"
+                data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn"
+                style="background-color: #364153; color: white; border-radius:5px; width:100px"
+                data-bs-dismiss="modal">Save</button>
+        </div>
+    </div>
+</div>
+</div>
+<!-- End email modal -->
+    
   <script>
     $('.ui.dropdown').dropdown();
-</script>
+  </script>
 
   <!-- global js -->
   <script src="../JS/global/jquery/jquery-3.4.1.min.js"></script>
-  <script src="../JS/global/jspdf/jspdf.js"></script>
   <script src="../JS/client/main.js"></script>
   <script src="../JS/global/bootstrap/bootstrap.bundle.min.js"></script>
-
-  <!-- this page -->
-  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+  <script src="../JS/global/bootstrap/bootstrap-select.js"></script>
   <script src="../JS/global/datePicker/datepicker.js"></script>
-  <!-- js -->
-  <script type="text/javascript">
-    $(document).ready(function() {
-        $('.basicInput').select2();
-    });
-    $(function () {
-      $('[data-toggle="tooltip"]').tooltip()
-    })
-  </script>
+  <script src="../JS/layout.js"></script>
+
   <script type="text/javascript">
     $(function () {
 

@@ -3,47 +3,32 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Mange Contract</title>
+  <title>Clients</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
+  <link rel="icon" href="../images/Highnox.png" type="image/x-icon" />
 
-
-  <link rel="stylesheet"
-  href=
-"../css/semantic.min.css"  >
-  <script src=
-"https://code.jquery.com/jquery-3.1.1.min.js">
-</script>
-<script src=
-"../JS/semantic.min.js">
-</script>
+  <link rel="stylesheet" href="../css/semantic.min.css"  >
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="../JS/semantic.min.js"></script>
   <!-- global style -->
   <link href="../css/global/bootstrap/bootstrap.min.css" rel="stylesheet">
   <link href="../css/global-style.css" rel="stylesheet">
-
+  <link href="../css/global/datepicker/datepicker.css" rel="stylesheet" type="text/css" />
+  <link href="../css/global/bootstrap/bootstrap-select.css" rel="stylesheet">
 
   <!-- dashboard style -->
   <link href="../css/dashboard/main-dashboard.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="../css/dashboard/style.css">
   <link rel="stylesheet" type="text/css" href="../css/dashboard/screen.css">
+  <link rel="stylesheet" href="../css/dashboard/media.css" >
 
   <!-- Icon Font Stylesheet cdn -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/global/font-awesome/css/all.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-  <!-- Libraries Stylesheet -->
-  <link href="../css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
-
-  <style>
-    .tr{
-      border-top: 1px solid #EEEAEA !important;
-    }
-    .tr:hover{
-      background-color: #f6f6f6;
-    }
-  </style>
-
+  <link rel="stylesheet" href="../css/layout.css">
 </head>
 
 <body>
@@ -96,7 +81,7 @@
           </li>
 
           <li class="nav-item">
-            <a href="#" class="nav-link display-menu">
+            <a href="#" class="nav-link active display-menu">
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 16">
                 <path id="Icon_color" data-name="Icon color"
                   d="M18,16H2a2,2,0,0,1-2-2V2A2,2,0,0,1,2,0H18a2,2,0,0,1,2,2V14A2,2,0,0,1,18,16ZM2,4V14H18V4Z"
@@ -107,13 +92,13 @@
               </div>
             </a>
             <div class="toggle-display">
-              <a href="manage-client.html" class="nav-link">
+              <a href="manage-contract.html" class="nav-link active">
                 <i class="fa-solid fa-circle"></i>
-                <span class="">Mange Client</span>
+                <span class="">Mange contract</span>
               </a>
-              <a href="create-new-client1.html" class="nav-link">
+              <a href="create-new-contract-1.html" class="nav-link">
                 <i class="fa-solid fa-circle"></i>
-                <span class="">Create New Client</span>
+                <span class="">Create New contract</span>
               </a>
             </div>
           </li>
@@ -178,7 +163,7 @@
           </li>
 
           <li class="nav-item">
-            <a href="operations.html" class="nav-link active">
+            <a href="operations.html" class="nav-link">
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 21.996 16">
                 <path id="Icon_color" data-name="Icon color"
                   d="M11,16a8.008,8.008,0,0,1-4-1.072.519.519,0,0,1-.239-.371.5.5,0,0,1,.14-.42l.73-.731a.5.5,0,0,1,.355-.149.5.5,0,0,1,.235.059,5.952,5.952,0,0,0,2.775.69H11A6,6,0,0,0,17,8H14.631a.493.493,0,0,1-.353-.15l-.2-.2a.5.5,0,0,1,0-.711L17.608,3.4a.509.509,0,0,1,.71,0l3.53,3.543a.5.5,0,0,1,0,.711l-.2.2a.49.49,0,0,1-.353.15H19a8,8,0,0,1-8,8ZM4.033,12.749a.5.5,0,0,1-.355-.144L.148,9.061a.5.5,0,0,1,0-.711l.2-.2A.49.49,0,0,1,.7,8H3A8,8,0,0,1,15,1.073a.524.524,0,0,1,.26.371.5.5,0,0,1-.139.42l-.741.741a.507.507,0,0,1-.357.146.512.512,0,0,1-.232-.056,5.847,5.847,0,0,0-2.774-.7H11A6.01,6.01,0,0,0,5,8H7.364a.49.49,0,0,1,.353.15l.2.2a.5.5,0,0,1,0,.711L4.388,12.6A.5.5,0,0,1,4.033,12.749Z"
@@ -569,7 +554,7 @@
                       <div class="tab-pane fade show active " id="all" role="tabpanel1" aria-labelledby="all-tab" >
                         <div class="table-responsive bg-light mt-4 border-radius-20">
                           <div class="secondTableContainer">
-                            <table id="myTable">
+                            <table id="myTable" class="table m-0">
                               <thead>
                                 <tr class="tr" >
                                   <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
@@ -629,7 +614,7 @@
                                 </tr>
                               </thead>
                               <tbody>
-                                <tr class="tr style-table-my1 tr-active">
+                                <tr class="tr trtabler tr-active">
                                   <td class="style-td">
                                       1234
                                   </td>
@@ -655,21 +640,22 @@
                                     yes 
                                   </td>
                                   <td class="style-td">
-                                    <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" data-bs-toggle="modal" data-bs-target="#exampleModalCenter" data-bs-original-title="" title="">
-                                      <img src="../images/client-image.svg" class="image-actions">
+                                    <button type="button" class="btn btn-secondary dataTableButtons" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
+                                      <img src="../images/client-image.svg" class="image-actions" />
                                     </button>
-                                    <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
-                                      <img src="../images/client-person.svg" class="image-actions">
-                                    </button>
-                                    <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
-                                      <img src="../images/client-icon-copy.svg" class="image-actions">
-                                    </button>
-                                    <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
+                                    <div class="tooltip-left btn btn-secondary dataTableButtons">
+                                      <img src="../images/client-person.svg" class="image-actions" />
+                                      <span class="tooltiptext">Tooltip text</span>
+                                    </div>
+                                    <a href="create-new-contract-1.html" class="btn btn-secondary dataTableButtons" >
+                                      <img src="../images/client-icon-copy.svg" class="image-actions" />
+                                    </a>
+                                    <button type="button" class="btn btn-secondary dataTableButtons" data-bs-toggle="modal" data-bs-target="#EmailModal">
                                       <img src="../images/email.svg" class="image-actions">
                                     </button>
                                   </td>
                                 </tr>
-                              <tr class="tr style-table-my1 tr-active">
+                              <tr class="tr trtabler tr-active">
                                   <td class="style-td">
                                       1234
                                   </td>
@@ -695,21 +681,22 @@
                                     yes 
                                   </td>
                                   <td class="style-td">
-                                    <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" data-bs-toggle="modal" data-bs-target="#exampleModalCenter" data-bs-original-title="" title="">
-                                      <img src="../images/client-image.svg" class="image-actions">
+                                    <button type="button" class="btn btn-secondary dataTableButtons" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
+                                      <img src="../images/client-image.svg" class="image-actions" />
                                     </button>
-                                    <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
-                                      <img src="../images/client-person.svg" class="image-actions">
-                                    </button>
-                                    <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
-                                      <img src="../images/client-icon-copy.svg" class="image-actions">
-                                    </button>
-                                    <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
+                                    <div class="tooltip-left btn btn-secondary dataTableButtons">
+                                      <img src="../images/client-person.svg" class="image-actions" />
+                                      <span class="tooltiptext">Tooltip text</span>
+                                    </div>
+                                    <a href="create-new-contract-1.html" class="btn btn-secondary dataTableButtons" >
+                                      <img src="../images/client-icon-copy.svg" class="image-actions" />
+                                    </a>
+                                    <button type="button" class="btn btn-secondary dataTableButtons" data-bs-toggle="modal" data-bs-target="#EmailModal">
                                       <img src="../images/email.svg" class="image-actions">
                                     </button>
                                   </td>
                                 </tr>
-                                <tr class="tr style-table-my1 tr-active">
+                                <tr class="tr trtabler tr-active">
                                   <td class="style-td">
                                       1234
                                   </td>
@@ -735,21 +722,22 @@
                                     yes 
                                   </td>
                                   <td class="style-td">
-                                    <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" data-bs-toggle="modal" data-bs-target="#exampleModalCenter" data-bs-original-title="" title="">
-                                      <img src="../images/client-image.svg" class="image-actions">
+                                    <button type="button" class="btn btn-secondary dataTableButtons" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
+                                      <img src="../images/client-image.svg" class="image-actions" />
                                     </button>
-                                    <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
-                                      <img src="../images/client-person.svg" class="image-actions">
-                                    </button>
-                                    <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
-                                      <img src="../images/client-icon-copy.svg" class="image-actions">
-                                    </button>
-                                    <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
+                                    <div class="tooltip-left btn btn-secondary dataTableButtons">
+                                      <img src="../images/client-person.svg" class="image-actions" />
+                                      <span class="tooltiptext">Tooltip text</span>
+                                    </div>
+                                    <a href="create-new-contract-1.html" class="btn btn-secondary dataTableButtons" >
+                                      <img src="../images/client-icon-copy.svg" class="image-actions" />
+                                    </a>
+                                    <button type="button" class="btn btn-secondary dataTableButtons" data-bs-toggle="modal" data-bs-target="#EmailModal">
                                       <img src="../images/email.svg" class="image-actions">
                                     </button>
                                   </td>
                                 </tr>
-                                <tr class="tr style-table-my1 tr-active">
+                                <tr class="tr trtabler tr-active">
                                   <td class="style-td">
                                       1234
                                   </td>
@@ -775,16 +763,17 @@
                                     yes 
                                   </td>
                                   <td class="style-td">
-                                    <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" data-bs-toggle="modal" data-bs-target="#exampleModalCenter" data-bs-original-title="" title="">
-                                      <img src="../images/client-image.svg" class="image-actions">
+                                    <button type="button" class="btn btn-secondary dataTableButtons" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
+                                      <img src="../images/client-image.svg" class="image-actions" />
                                     </button>
-                                    <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
-                                      <img src="../images/client-person.svg" class="image-actions">
-                                    </button>
-                                    <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
-                                      <img src="../images/client-icon-copy.svg" class="image-actions">
-                                    </button>
-                                    <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
+                                    <div class="tooltip-left btn btn-secondary dataTableButtons">
+                                      <img src="../images/client-person.svg" class="image-actions" />
+                                      <span class="tooltiptext">Tooltip text</span>
+                                    </div>
+                                    <a href="create-new-contract-1.html" class="btn btn-secondary dataTableButtons" >
+                                      <img src="../images/client-icon-copy.svg" class="image-actions" />
+                                    </a>
+                                    <button type="button" class="btn btn-secondary dataTableButtons" data-bs-toggle="modal" data-bs-target="#EmailModal">
                                       <img src="../images/email.svg" class="image-actions">
                                     </button>
                                   </td>
@@ -793,6 +782,20 @@
                             </table>
                           </div>
                         </div>
+                        <div class="d-flex flex-column-reverse flex-lg-row align-items-center justify-content-end my-4">
+                          <div class="pagination-container my-1">
+                              <ul class="pagination d-flex">
+                                  <li class="prev-icon"><i class="fas fa-angle-left"></i></li>
+                                  <div class="numbers">
+                                      <li class="active"><a href="#">1</a></li>
+                                      <li><a href="#">2</a></li>
+                                      <li><a href="#">3</a></li>
+                                  </div>
+                                  <li><a href="#" class="next-link">next</a></li>
+                                  <li class="next-icon"><i class="fas fa-angle-right"></i></li>
+                              </ul>
+                          </div>
+                      </div>
                       </div>
 
                       <div class="tab-pane fade table-tab-pane" id="active-section" role="tabpanel1" aria-labelledby="active-tab">
@@ -817,299 +820,171 @@
         
         <!-- clients end -->
 
-      <!-- Content End -->
 
-      <!-- Modal -->
-      <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
-        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content">
-            <div class="modal-header d-flex justify-content-end ">
-              <button type="button" class="close-btn" data-bs-dismiss="modal" aria-label="Close"
-                style="position:relative">
-                <i class="bi bi-x modal-close-icon"></i>
-              </button>
-            </div>
-            <div class="modal-body d-flex justify-content-center align-items-center">
-              <div class="container-img">
-                <img src="../images/icon-modal.svg" />
-              </div>
-            </div>
-            <div class="modal-footer d-flex justify-content-center">
-              <button type="button" class="btn"
-                style="background-color: #364153; color: white; border-radius:5px; width:100px"
-                data-bs-dismiss="modal">Close</button>
-            </div>
-          </div>
+    <!-- modals -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header d-flex justify-content-end ">
+        <button type="button" class="close-btn" data-bs-dismiss="modal" aria-label="Close">
+          <i class="bi bi-x modal-close-icon"></i>
+        </button>
+      </div>
+      <div class="modal-body d-flex justify-content-center align-items-center">
+        <div class="container-img">
+          <img src="../images/icon-modal.svg" class="img-fluid"/>
         </div>
       </div>
-
-      <div class="modal fade" id="dragulaModalCenter" tabindex="-1" role="dialog"
-      aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header d-flex justify-content-end ">
-            <button type="button" class="close-btn" data-bs-dismiss="modal" aria-label="Close"
-              style="position:relative">
-              <i class="bi bi-x modal-close-icon"></i>
-            </button>
-          </div>
-          <div class="d-flex flex-column descripton-area-container px-4 py-1 mb-3" style="width: 100%;">
-            <div class="text-select">
-              Sender Email
-            </div>
-            <div class="container-inner" style="background-color: #F3F2F2;">
-              <input
-                class="input"
-                type="text"
-                placeholder="Enter Name"
-                style="background-color: #F3F2F2;"
-              />
-            </div>
-          </div>
-          <div class="d-flex flex-column descripton-area-container px-4 py-1 mb-3" style="width: 100%;">
-            <div class="text-select">
-              Reciver Email
-            </div>
-            <div class="container-inner" style="background-color: #F3F2F2;">
-              <input
-                class="input"
-                type="text"
-                placeholder="Enter Name"
-                style="background-color: #F3F2F2;"
-              />
-            </div>
-          </div>
-          <div class="d-flex flex-row  px-4 py-1 mb-3" style="gap:25px">
-            <div class="d-flex flex-column descripton-area-container" style="width: 100%;">
-              <div class="text-select">
-                CC
-              </div>
-              <div class="container-inner" style="background-color: #F3F2F2;">
-                <input
-                  class="input"
-                  type="text"
-                  placeholder="Enter Name"
-                  style="background-color: #F3F2F2;"
-                />
-              </div>
-            </div>
-            
-          </div>
-          <div class="d-flex flex-row  px-4 py-1 mb-3" style="gap:25px">
-            <div class="d-flex flex-column descripton-area-container" style="width: 100%;">
-              <div class="text-select">
-                BC
-              </div>
-
-              <div class="container-inner" style="background-color: #F3F2F2;">
-                <input
-                  class="input"
-                  type="text"
-                  placeholder="Enter Name"
-                  style="background-color: #F3F2F2;"
-                />
-              </div>
-            </div>
-            
-          </div>
-          <div class="d-flex flex-row  px-4 py-1 mb-3" style="gap:25px">
-            <div class="d-flex flex-column descripton-area-container" style="width: 100%;">
-              <div class="text-select">
-                Subject
-              </div>
-              <div class="container-inner" style="background-color: #F3F2F2;">
-                <input
-                  class="input"
-                  type="text"
-                  placeholder="Enter Name"
-                  style="background-color: #F3F2F2;"
-                />
-              </div>
-            </div>
-            
-          </div>
-
-          <div class="file-container-input px-4 py-1 mb-3" style="width: 100%;">
-            <label for="attachment" style="
-    font-size: 16px !important;
-    font-family: 'MontserratSemiBold';
-    color: #364153;">Message</label>
-            <textarea id="editor" style="background-color: #F3F2F2;"></textarea>
-          </div>
-          <div class="d-flex justify-content-center align-items-center m-3 flex-wrap" style="gap:15px">
-            <div class="d-flex p-3   justify-content-between" id="download-contract-word"   style="width:45%;background-color: #F3F2F2;">
-             <div class="d-flex" style="gap:10px">
-               <img src="img/icons/word.svg" />
-             <div class="d-flex flex-column">
-               <span>Research.rar</span>
-               <span>5.778 gbs</span>
-             </div>
-             </div>
-             <img src="../img/icons/download-solid.svg" />
-            </div>
-            <div class="d-flex p-3 justify-content-between" id="download-contract-excel"  style="width:45%;background-color: #F3F2F2;">
-             <div class="d-flex" style="gap:10px">
-               <img src="img/icons/excel.svg" />
-             <div class="d-flex flex-column">
-               <span>Research.rar</span>
-               <span>5.778 gbs</span>
-             </div>
-             </div>
-             <img src="img/icons/download-solid.svg" />
-            </div>
-           </div>
-          <div class="modal-footer d-flex justify-content-center">
-            <button type="button" class="btn"
-              style="background-color: #E1E1E1; color: #364153; border-radius:5px; width:100px"
-              data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn"
-              style="background-color: #364153; color: white; border-radius:5px; width:100px"
-              data-bs-dismiss="modal">Save</button>
-          </div>
-        </div>
+      <div class="modal-footer d-flex justify-content-center">
+        <button type="button" class="btn btn-primary"
+          data-bs-dismiss="modal">Close</button>
       </div>
     </div>
-      <!-- email modal end -->
-  </main>
+  </div>
+</div>
+<!-- end modals -->
 
-  <script>
-    $('.ui.dropdown').dropdown();
+<!-- email modal -->
+<div class="modal fade" id="EmailModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header d-flex justify-content-end ">
+                <button type="button" class="close-btn" data-bs-dismiss="modal" aria-label="Close">
+                    <i class="bi bi-x modal-close-icon"></i>
+                </button>
+            </div>
+            <div class="d-flex flex-column descripton-area-container px-4 py-1 mb-3" style="width: 100%;">
+                <div class="text-select">
+                    Sender Email
+                </div>
+                <div class="container-inner" style="background-color: #F3F2F2;">
+                    <input class="form-control input" type="text" placeholder="Enter Name"
+                        style="background-color: #F3F2F2;" />
+                </div>
+            </div>
+            <div class="d-flex flex-column descripton-area-container px-4 py-1 mb-3" style="width: 100%;">
+                <div class="text-select">
+                    Reciver Email
+                </div>
+                <div class="container-inner" style="background-color: #F3F2F2;">
+                    <input class="form-control input" type="text" placeholder="Enter Name"
+                        style="background-color: #F3F2F2;" />
+                </div>
+            </div>
+            <div class="d-flex flex-row  px-4 py-1 mb-3" style="gap:25px">
+                <div class="d-flex flex-column descripton-area-container" style="width: 100%;">
+                    <div class="text-select">
+                        CC
+                    </div>
+                    <div class="container-inner" style="background-color: #F3F2F2;">
+                        <input class="form-control input" type="text" placeholder="Enter Name"
+                            style="background-color: #F3F2F2;" />
+                    </div>
+                </div>
+
+            </div>
+            <div class="d-flex flex-row  px-4 py-1 mb-3" style="gap:25px">
+                <div class="d-flex flex-column descripton-area-container" style="width: 100%;">
+                    <div class="text-select">
+                        BC
+                    </div>
+
+                    <div class="container-inner" style="background-color: #F3F2F2;">
+                        <input class="form-control input" type="text" placeholder="Enter Name"
+                            style="background-color: #F3F2F2;" />
+                    </div>
+                </div>
+
+            </div>
+            <div class="d-flex flex-row  px-4 py-1 mb-3" style="gap:25px">
+                <div class="d-flex flex-column descripton-area-container" style="width: 100%;">
+                    <div class="text-select">
+                        Subject
+                    </div>
+                    <div class="container-inner" style="background-color: #F3F2F2;">
+                        <input class="form-control input" type="text" placeholder="Enter Name"
+                            style="background-color: #F3F2F2;" />
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="file-container-input px-4 py-1 mb-3" style="width: 100%;">
+                <label
+                    style=" font-size: 16px !important; font-family: 'MontserratSemiBold';  color: #364153;">Message</label>
+                <textarea class="form-control" id="editor" style="background-color: #F3F2F2;"></textarea>
+            </div>
+            <div class="d-flex justify-content-center align-items-center m-3 flex-wrap" style="gap:15px">
+                <div class="d-flex p-3   justify-content-between" id="download-contract-word"
+                    style="width:45%;background-color: #F3F2F2;">
+                    <div class="d-flex" style="gap:10px">
+                        <img src="../img/icons/word.svg" />
+                        <div class="d-flex flex-column">
+                            <span>Research.rar</span>
+                            <span>5.778 gbs</span>
+                        </div>
+                    </div>
+                    <img src="../img/icons/download-solid.svg" />
+                </div>
+                <div class="d-flex p-3 justify-content-between" id="download-contract-excel"
+                    style="width:45%;background-color: #F3F2F2;">
+                    <div class="d-flex" style="gap:10px">
+                        <img src="../img/icons/excel.svg" />
+                        <div class="d-flex flex-column">
+                            <span>Research.rar</span>
+                            <span>5.778 gbs</span>
+                        </div>
+                    </div>
+                    <img src="../img/icons/download-solid.svg" />
+                </div>
+            </div>
+            <div class="modal-footer d-flex justify-content-center">
+                <button type="button" class="btn"
+                    style="background-color: #E1E1E1; color: #364153; border-radius:5px; width:100px"
+                    data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn"
+                    style="background-color: #364153; color: white; border-radius:5px; width:100px"
+                    data-bs-dismiss="modal">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End email modal -->
+
+<script>
+  $('.ui.dropdown').dropdown();
 </script>
 
   <!-- global js -->
   <script src="../JS/global/jquery/jquery-3.4.1.min.js"></script>
-  <script src="../JS/global/jspdf/jspdf.js"></script>
-  <!-- <script src="../JS/select2.min.js"></script> -->
   <script src="../JS/client/main.js"></script>
   <script src="../JS/global/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="../JS/global/bootstrap/bootstrap-select.js"></script>
+  <script src="../JS/global/datePicker/datepicker.js"></script>
+  <script src="../JS/layout.js"></script>
 
-  <!-- navbar -->
+  
   <script type="text/javascript">
-    
-var toggleSliderMenu = document.querySelector(".display-client-menu");
-var toggleSliderMenuClientArrow = document.querySelector(".client-sidebar");
-var toggleSliderMenuContractArrow = document.querySelector(".contract-sidebar");
-var toggleSliderMenuInvoicesArrow = document.querySelector(".invoices-sidebar");
-var toggleSliderMenufloordrawingArrow = document.querySelector(".floor-drawing-sidebar");
+    $('.trtabler').on('click', function (event) {
+      const target = $(event.target);
 
-toggleSliderMenu.addEventListener("click", function () {
-  const toggleDisplay = document.querySelector(".toggle-display");
-
-  toggleDisplay.classList.toggle("display-toggle-menu");
-  toggleSliderMenuClientArrow.classList.toggle("sidebar-arrow-down");
-});
-var toggleSliderMenu = document.querySelector(".display-contact-menu");
-
-toggleSliderMenu.addEventListener("click", function () {
-  const toggleDisplay = document.querySelector(".contract-display");
-
-  toggleSliderMenuContractArrow.classList.toggle("sidebar-arrow-down");
-  toggleDisplay.classList.toggle("display-toggle-menu");
-});
-
-var toggleSliderMenuInvoices = document.querySelector(".display-invoices-menu");
-
-toggleSliderMenuInvoices.addEventListener("click", function () {
-  const toggleDisplay2 = document.querySelector(".invoices-display");
-
-  toggleSliderMenuInvoicesArrow.classList.toggle("sidebar-arrow-down");
-  toggleDisplay2.classList.toggle("display-toggle-menu");
-});
-
-var toggleSliderMenufloordrwing = document.querySelector(".display-floor-drawing-menu");
-
-toggleSliderMenufloordrwing.addEventListener("click", function () {
-  const toggleDisplay3 = document.querySelector(".floor-drawing-display");
-
-  toggleSliderMenufloordrawingArrow.classList.toggle("sidebar-arrow-down");
-  toggleDisplay3.classList.toggle("display-toggle-menu");
-});
-
-
-
-const sidebarLinks = document.querySelectorAll(".sidebar .navbar .nav-link");
-
-sidebarLinks.forEach((ele) => {
-  let location = window.location.pathname.split(".")[0].split("/");
-  if (ele.childNodes[1].textContent.toLowerCase() === location[1]) {
-    ele.classList.add("sidebar-active");
-  } else {
-    if (
-      ele.childNodes[1].textContent.toLowerCase() === "dashboard" &&
-      location[1] === "index"
-    ) {
-      ele.classList.add("sidebar-active");
-    } 
-    // else ele.classList.remove("sidebar-active");
-  }
-});
-$(function() {
-  "use strict";
-
-
-  // search bar toggle
-  const searchContainer = document.querySelector(".search-container");
-  const navbarSearch = document.querySelector(".navbar-open-search");
-
-
-  $(".open-search-bar").click(function () {
-  
-    searchContainer.classList.replace("d-none", "d-flex");
-    navbarSearch.classList.replace("d-flex", "d-none");
-    scrollToTop();
-    return false;
-  });
-
-  $(".bi-three-dots-vertical").click(function () {
-   
-    $(".navbar-icons-container").toggleClass("active");
-    return false;
-  });
-
-  $(".content-container").click(function () {
-
-    if (window.innerWidth <= 991) {
-      $(".image-container").removeClass("display-none");
-      $(".sidebar-title").removeClass("display-none");
-      $(".title.d-none").removeClass("display-inline");
-      $(".sidebar .navbar .nav-link i").removeClass("custom-icon");
-      $(".sidebar, .content").removeClass("open");
-      return false;
-    }
-  });
-
-  $(".search-container .cancel-icon").click(function () {
-  
-    searchContainer.classList.replace("d-flex", "d-none");
-    navbarSearch.classList.replace("d-none", "d-flex");
-    return false;
-  });
-
-  // Sidebar Toggler
-  let $isSideBar_open = false;
-
-  $(".sidebar-toggler").click(function () {
-    $isSideBar_open = !$isSideBar_open;
-    $(".image-container").toggleClass("display-none");
-    if (window.innerWidth > 575.98) {
-      $(".sidebar-title").toggleClass("display-none");
-    }
-    $(".title.d-inline").toggleClass("display-none");
-    $(".title.d-none").toggleClass("display-inline");
-    $(".sidebar, .content").toggleClass("open");
-    $(".sidebar .navbar .nav-link i").toggleClass("custom-icon");
-
-    return false;
-  });
-
-  if (window.innerWidth <= 575.98) {
-    $(".sidebar-title").removeClass("display-none");
-  }
-
-});
+      if (target.is('td:last-child')) {
+        event.preventDefault();
+      } else if (target.is('td:last-child button')) {
+        event.preventDefault();
+      } else if (target.is('td:last-child button img')) {
+        event.preventDefault();
+      } else if (target.is('td:last-child .tooltip-left')) {
+        event.preventDefault();
+      } else if (target.is('td:last-child div img')) {
+        event.preventDefault();
+      } else {
+        window.location.href = 'create-new-contract-1.html';
+      }
+    });
   </script>
-<!-- end sidebar -->
 </body>
 
 </html>

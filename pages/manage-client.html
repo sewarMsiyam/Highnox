@@ -92,13 +92,13 @@
               </div>
             </a>
             <div class="toggle-display">
-              <a href="manage-client.html" class="nav-link">
+              <a href="manage-contract.html" class="nav-link">
                 <i class="fa-solid fa-circle"></i>
-                <span class="">Mange Client</span>
+                <span class="">Mange contract</span>
               </a>
-              <a href="create-new-client1.html" class="nav-link">
+              <a href="create-new-contract-1.html" class="nav-link">
                 <i class="fa-solid fa-circle"></i>
-                <span class="">Create New Client</span>
+                <span class="">Create New contract</span>
               </a>
             </div>
           </li>
@@ -567,9 +567,9 @@
 
                           <div class="tab-content" id="myTabContent2">
                             <div class="tab-pane fade show active " id="all" role="tabpanel1" aria-labelledby="all-tab" >
-                              <div class="table-responsive bg-light mt-4 border-radius-20">
+                              <div class="table-responsive bg-light mt-4 border-radius-20 shadow">
                                 <div class="secondTableContainer">
-                                  <table id="myTable">
+                                  <table id="myTable" class="table">
                                     <thead>
                                       <tr class="tr" >
                                         <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
@@ -655,7 +655,7 @@
                                           Yes
                                         </td>
                                         <td class="style-td">
-                                          <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom"  data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
+                                          <button type="button" class="btn btn-secondary dataTableButtons" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
                                             <img src="../images/client-image.svg" class="image-actions" />
                                           </button>
                                           <div class="tooltip-left btn btn-secondary dataTableButtons">
@@ -665,7 +665,7 @@
                                           <a href="create-new-client1.html" class="btn btn-secondary dataTableButtons" >
                                             <img src="../images/client-icon-copy.svg" class="image-actions" />
                                           </a>
-                                          <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
+                                          <button type="button" class="btn btn-secondary dataTableButtons" data-bs-toggle="modal" data-bs-target="#EmailModal">
                                             <img src="../images/email.svg" class="image-actions">
                                           </button>
                                         </td>
@@ -696,7 +696,7 @@
                                           Yes
                                         </td>
                                         <td class="style-td">
-                                          <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom"  data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
+                                          <button type="button" class="btn btn-secondary dataTableButtons" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
                                             <img src="../images/client-image.svg" class="image-actions" />
                                           </button>
                                           <div class="tooltip-left btn btn-secondary dataTableButtons">
@@ -706,7 +706,7 @@
                                           <a href="create-new-client1.html" class="btn btn-secondary dataTableButtons" >
                                             <img src="../images/client-icon-copy.svg" class="image-actions" />
                                           </a>
-                                          <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
+                                          <button type="button" class="btn btn-secondary dataTableButtons" data-bs-toggle="modal" data-bs-target="#EmailModal">
                                             <img src="../images/email.svg" class="image-actions">
                                           </button>
                                         </td>
@@ -737,7 +737,7 @@
                                           Yes
                                         </td>
                                         <td class="style-td">
-                                          <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom"  data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
+                                          <button type="button" class="btn btn-secondary dataTableButtons" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
                                             <img src="../images/client-image.svg" class="image-actions" />
                                           </button>
                                           <div class="tooltip-left btn btn-secondary dataTableButtons">
@@ -747,7 +747,7 @@
                                           <a href="create-new-client1.html" class="btn btn-secondary dataTableButtons" >
                                             <img src="../images/client-icon-copy.svg" class="image-actions" />
                                           </a>
-                                          <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
+                                          <button type="button" class="btn btn-secondary dataTableButtons" data-bs-toggle="modal" data-bs-target="#EmailModal">
                                             <img src="../images/email.svg" class="image-actions">
                                           </button>
                                         </td>
@@ -778,7 +778,7 @@
                                           Yes
                                         </td>
                                         <td class="style-td">
-                                          <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom"  data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
+                                          <button type="button" class="btn btn-secondary dataTableButtons" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
                                             <img src="../images/client-image.svg" class="image-actions" />
                                           </button>
                                           <div class="tooltip-left btn btn-secondary dataTableButtons">
@@ -788,7 +788,7 @@
                                           <a href="create-new-client1.html" class="btn btn-secondary dataTableButtons" >
                                             <img src="../images/client-icon-copy.svg" class="image-actions" />
                                           </a>
-                                          <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
+                                          <button type="button" class="btn btn-secondary dataTableButtons" data-bs-toggle="modal" data-bs-target="#EmailModal">
                                             <img src="../images/email.svg" class="image-actions">
                                           </button>
                                         </td>
@@ -797,7 +797,7 @@
                                   </table>
                                 </div>
                               </div>
-                              <div class="d-flex flex-column-reverse flex-lg-row align-items-center justify-content-between my-4">
+                              <div class="d-flex flex-column-reverse flex-lg-row align-items-center justify-content-end my-4">
                                 <div class="pagination-container my-1">
                                   <ul class="pagination d-flex">
                                     <li class="prev-icon"><i class="fas fa-angle-left"></i></li>
@@ -835,8 +835,7 @@
           </div>
         </div>
       </div>
-        <div class=" tab-pane fade" id="contacts" role="tabpanel" aria-labelledby="contacts-tab"
-          >
+        <div class=" tab-pane fade" id="contacts" role="tabpanel" aria-labelledby="contacts-tab">
           <div class="container-fluid " id="back-client">
               <div class="">
                 <div class="content-body">
@@ -848,14 +847,14 @@
                             <div class="col-md-6 col-12 padding-0">
                               <ul class="nav nav-tabs  align-items-center nav-f-s">
                               <li class="nav-item list" role="presentation">
-                                <button class="nav-link nav-btn active all" id="all-tab" data-bs-toggle="tab" data-bs-target="#all"
+                                <button class="nav-link nav-btn active all" id="all-tab" data-bs-toggle="tab" data-bs-target="#all-contacts"
                                   type="button" role="tab" aria-controls="all-tab" aria-selected="false">
                                   All
                                 </button>
                               </li>
                               <li class="nav-item list" role="presentation">
                                 <button class="nav-link nav-btn all" id="active-tab" data-bs-toggle="tab"
-                                  data-bs-target="#active-section" type="button" role="tab" aria-controls="active-tab"
+                                  data-bs-target="#active-contacts" type="button" role="tab" aria-controls="active-tab"
                                   aria-selected="false">
                                   Active
                                 </button>
@@ -863,7 +862,7 @@
 
                               <li class="nav-item list" role="presentation">
                                 <button class="nav-link nav-btn all" id="not-active" data-bs-toggle="tab"
-                                  data-bs-target="#not-active-section" type="button" role="tab" aria-controls="not-active"
+                                  data-bs-target="#notactive-contacts" type="button" role="tab" aria-controls="not-active"
                                   aria-selected="false">
                                   Not Active
                                 </button>
@@ -901,10 +900,10 @@
                           </div>
 
                           <div class="tab-content" id="myTabContent2">
-                            <div class="tab-pane fade show active " id="all" role="tabpanel1" aria-labelledby="all-tab" >
-                              <div class="table-responsive bg-light mt-4 border-radius-20">
+                            <div class="tab-pane fade show active " id="all-contacts" role="tabpanel1" aria-labelledby="all-tab" >
+                              <div class="table-responsive bg-light mt-4 border-radius-20 shadow">
                                 <div class="secondTableContainer">
-                                  <table id="myTable">
+                                  <table id="myTable" class="table">
                                     <thead>
                                       <tr class="tr" >
                                         <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
@@ -964,7 +963,7 @@
                                       </tr>
                                     </thead>
                                     <tbody>
-                                      <tr class="tr trtabler tr-active">
+                                      <tr class="tr trcontacts tr-active">
                                         <td class="style-td">
                                             356912
                                         </td>
@@ -990,22 +989,22 @@
                                           Yes
                                         </td>
                                         <td class="style-td">
-                                          <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom"  data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
+                                          <button type="button" class="btn btn-secondary dataTableButtons" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
                                             <img src="../images/client-image.svg" class="image-actions" />
                                           </button>
                                           <div class="tooltip-left btn btn-secondary dataTableButtons">
                                             <img src="../images/client-person.svg" class="image-actions" />
                                             <span class="tooltiptext">Tooltip text</span>
                                           </div>
-                                          <a href="create-new-client1.html" class="btn btn-secondary dataTableButtons" >
+                                          <a href="create-contact.html" class="btn btn-secondary dataTableButtons" >
                                             <img src="../images/client-icon-copy.svg" class="image-actions" />
                                           </a>
-                                          <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
+                                          <button type="button" class="btn btn-secondary dataTableButtons" data-bs-toggle="modal" data-bs-target="#EmailModal">
                                             <img src="../images/email.svg" class="image-actions">
                                           </button>
                                         </td>
                                       </tr>
-                                      <tr class="tr trtabler tr-active">
+                                      <tr class="tr trcontacts tr-active">
                                         <td class="style-td">
                                             356912
                                         </td>
@@ -1031,22 +1030,22 @@
                                           Yes
                                         </td>
                                         <td class="style-td">
-                                          <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom"  data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
+                                          <button type="button" class="btn btn-secondary dataTableButtons" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
                                             <img src="../images/client-image.svg" class="image-actions" />
                                           </button>
                                           <div class="tooltip-left btn btn-secondary dataTableButtons">
                                             <img src="../images/client-person.svg" class="image-actions" />
                                             <span class="tooltiptext">Tooltip text</span>
                                           </div>
-                                          <a href="create-new-client1.html" class="btn btn-secondary dataTableButtons" >
+                                          <a href="create-contact.html" class="btn btn-secondary dataTableButtons" >
                                             <img src="../images/client-icon-copy.svg" class="image-actions" />
                                           </a>
-                                          <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
+                                          <button type="button" class="btn btn-secondary dataTableButtons" data-bs-toggle="modal" data-bs-target="#EmailModal">
                                             <img src="../images/email.svg" class="image-actions">
                                           </button>
                                         </td>
                                       </tr>
-                                      <tr class="tr trtabler tr-active">
+                                      <tr class="tr trcontacts tr-active">
                                         <td class="style-td">
                                             356912
                                         </td>
@@ -1072,22 +1071,22 @@
                                           Yes
                                         </td>
                                         <td class="style-td">
-                                          <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom"  data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
+                                          <button type="button" class="btn btn-secondary dataTableButtons" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
                                             <img src="../images/client-image.svg" class="image-actions" />
                                           </button>
                                           <div class="tooltip-left btn btn-secondary dataTableButtons">
                                             <img src="../images/client-person.svg" class="image-actions" />
                                             <span class="tooltiptext">Tooltip text</span>
                                           </div>
-                                          <a href="create-new-client1.html" class="btn btn-secondary dataTableButtons" >
+                                          <a href="create-contact.html" class="btn btn-secondary dataTableButtons" >
                                             <img src="../images/client-icon-copy.svg" class="image-actions" />
                                           </a>
-                                          <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
+                                          <button type="button" class="btn btn-secondary dataTableButtons" data-bs-toggle="modal" data-bs-target="#EmailModal">
                                             <img src="../images/email.svg" class="image-actions">
                                           </button>
                                         </td>
                                       </tr>
-                                      <tr class="tr trtabler tr-active">
+                                      <tr class="tr trcontacts tr-active">
                                         <td class="style-td">
                                             356912
                                         </td>
@@ -1113,17 +1112,17 @@
                                           Yes
                                         </td>
                                         <td class="style-td">
-                                          <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom"  data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
+                                          <button type="button" class="btn btn-secondary dataTableButtons" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
                                             <img src="../images/client-image.svg" class="image-actions" />
                                           </button>
                                           <div class="tooltip-left btn btn-secondary dataTableButtons">
                                             <img src="../images/client-person.svg" class="image-actions" />
                                             <span class="tooltiptext">Tooltip text</span>
                                           </div>
-                                          <a href="create-new-client1.html" class="btn btn-secondary dataTableButtons" >
+                                          <a href="create-contact.html" class="btn btn-secondary dataTableButtons" >
                                             <img src="../images/client-icon-copy.svg" class="image-actions" />
                                           </a>
-                                          <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
+                                          <button type="button" class="btn btn-secondary dataTableButtons" data-bs-toggle="modal" data-bs-target="#EmailModal">
                                             <img src="../images/email.svg" class="image-actions">
                                           </button>
                                         </td>
@@ -1132,7 +1131,7 @@
                                   </table>
                                 </div>
                               </div>
-                              <div class="d-flex flex-column-reverse flex-lg-row align-items-center justify-content-between my-4">
+                              <div class="d-flex flex-column-reverse flex-lg-row align-items-center justify-content-end my-4">
                                 <div class="pagination-container my-1">
                                   <ul class="pagination d-flex">
                                     <li class="prev-icon"><i class="fas fa-angle-left"></i></li>
@@ -1148,21 +1147,19 @@
                               </div>
                             </div>
 
-                            <div class="tab-pane fade table-tab-pane" id="active-section" role="tabpanel1" aria-labelledby="active-tab">
+                            <div class="tab-pane fade table-tab-pane" id="active-contacts" role="tabpanel1" aria-labelledby="active-tab">
                               <div class="table-responsive">
                                 .
                               </div>
                             </div>
 
-                            <div class="tab-pane fade table-tab-pane" id="not-active-section" role="tabpanel1" aria-labelledby="not-active">
+                            <div class="tab-pane fade table-tab-pane" id="notactive-contacts" role="tabpanel1" aria-labelledby="not-active">
                               <div class="table-responsive">
                                 .
                               </div>
                             </div>
                         </div>
                       </div>
-                   
-                      <!-- clients end -->
                     </div>
                   </div>
                 </div>
@@ -1173,187 +1170,140 @@
       </div>
     </div>
       <!-- Content End -->
-
-      <!-- Modal -->
-      <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
-        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content">
-            <div class="modal-header d-flex justify-content-end ">
-              <button type="button" class="close-btn" data-bs-dismiss="modal" aria-label="Close"
-                style="position:relative">
-                <i class="bi bi-x modal-close-icon"></i>
-              </button>
-            </div>
-            <div class="modal-body d-flex justify-content-center align-items-center">
-              <div class="container-img">
-                <img src="../images/icon-modal.svg" />
-              </div>
-            </div>
-            <div class="modal-footer d-flex justify-content-center">
-              <button type="button" class="btn"
-                style="background-color: #364153; color: white; border-radius:5px; width:100px"
-                data-bs-dismiss="modal">Close</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="modal fade" id="dragulaModalCenter" tabindex="-1" role="dialog"
-        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content">
-            <div class="modal-header d-flex justify-content-end ">
-              <button type="button" class="close-btn" data-bs-dismiss="modal" aria-label="Close"
-                style="position:relative">
-                <i class="bi bi-x modal-close-icon"></i>
-              </button>
-            </div>
-            <div class="d-flex flex-column descripton-area-container px-4 py-1" style="width: 100%;">
-              <div class="text-select">
-                Sender Email
-              </div>
-              <div class="container-inner" style="background-color: #F3F2F2;">
-                <input
-                  class="input"
-                  type="text"
-                  placeholder="Enter Name"
-                  style="background-color: #F3F2F2;"
-                />
-              </div>
-            </div>
-            <div class="d-flex flex-column descripton-area-container px-4 py-1" style="width: 100%;">
-              <div class="text-select">
-                Reciver Email
-              </div>
-              <div class="container-inner" style="background-color: #F3F2F2;">
-                <input
-                  class="input"
-                  type="text"
-                  placeholder="Enter Name"
-                  style="background-color: #F3F2F2;"
-                />
-              </div>
-            </div>
-            <div class="d-flex flex-row  px-4 py-1" style="gap:25px">
-              <div class="d-flex flex-column descripton-area-container" style="width: 100%;">
-                <div class="text-select">
-                  CC
-                </div>
-                <div class="container-inner" style="background-color: #F3F2F2;">
-                  <input
-                    class="input"
-                    type="text"
-                    placeholder="Enter Name"
-                    style="background-color: #F3F2F2;"
-                  />
-                </div>
-              </div>
-              
-            </div>
-            <div class="d-flex flex-row  px-4 py-1" style="gap:25px">
-              <div class="d-flex flex-column descripton-area-container" style="width: 100%;">
-                <div class="text-select">
-                  BC
-                </div>
-
-                <div class="container-inner" style="background-color: #F3F2F2;">
-                  <input
-                    class="input"
-                    type="text"
-                    placeholder="Enter Name"
-                    style="background-color: #F3F2F2;"
-                  />
-                </div>
-              </div>
-              
-            </div>
-            <div class="d-flex flex-row  px-4 py-1" style="gap:25px">
-              <div class="d-flex flex-column descripton-area-container" style="width: 100%;">
-                <div class="text-select">
-                  Subject
-                </div>
-                <div class="container-inner" style="background-color: #F3F2F2;">
-                  <input
-                    class="input"
-                    type="text"
-                    placeholder="Enter Name"
-                    style="background-color: #F3F2F2;"
-                  />
-                </div>
-              </div>
-              
-            </div>
-
-            <div class="file-container-input px-4 py-1" style="width: 100%;">
-              <label for="attachment" style="
-      font-size: 16px !important;
-      font-family: 'MontserratSemiBold';
-      color: #364153;">Message</label>
-              <textarea id="editor" style="background-color: #F3F2F2;"></textarea>
-            </div>
-            <div class="d-flex justify-content-center align-items-center m-3 flex-wrap" style="gap:15px">
-              <div class="d-flex p-3   justify-content-between" id="download-contract-word"   style="width:45%;background-color: #F3F2F2;">
-               <div class="d-flex" style="gap:10px">
-                 <img src="../img/icons/word.svg" />
-               <div class="d-flex flex-column">
-                 <span>Research.rar</span>
-                 <span>5.778 gbs</span>
-               </div>
-               </div>
-               <img src="../img/icons/download-solid.svg" />
-              </div>
-              <div class="d-flex p-3 justify-content-between" id="download-contract-excel"  style="width:45%;background-color: #F3F2F2;">
-               <div class="d-flex" style="gap:10px">
-                 <img src="../img/icons/excel.svg" />
-               <div class="d-flex flex-column">
-                 <span>Research.rar</span>
-                 <span>5.778 gbs</span>
-               </div>
-               </div>
-               <img src="../img/icons/download-solid.svg" />
-              </div>
-             </div>
-            <div class="modal-footer d-flex justify-content-center">
-              <button type="button" class="btn"
-                style="background-color: #E1E1E1; color: #364153; border-radius:5px; width:100px"
-                data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn"
-                style="background-color: #364153; color: white; border-radius:5px; width:100px"
-                data-bs-dismiss="modal">Save</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- email modal end -->
   </main>
 
 
-
-  
-  <!-- modals -->
-  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
-        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" role="document">
+<!-- modals img -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
-          <div class="modal-header d-flex justify-content-end ">
-            <button type="button" class="close-btn" data-bs-dismiss="modal" aria-label="Close">
-              <i class="bi bi-x modal-close-icon"></i>
-            </button>
-          </div>
-          <div class="modal-body d-flex justify-content-center align-items-center">
-            <div class="container-img">
-              <img src="../images/icon-modal.svg" class="img-fluid"/>
+            <div class="modal-header d-flex justify-content-end ">
+                <button type="button" class="close-btn" data-bs-dismiss="modal" aria-label="Close">
+                    <i class="bi bi-x modal-close-icon"></i>
+                </button>
             </div>
-          </div>
-          <div class="modal-footer d-flex justify-content-center">
-            <button type="button" class="btn btn-primary"
-              data-bs-dismiss="modal">Close</button>
-          </div>
+            <div class="modal-body d-flex justify-content-center align-items-center">
+                <div class="container-img">
+                    <img src="../images/icon-modal.svg" class="img-fluid" />
+                </div>
+            </div>
+            <div class="modal-footer d-flex justify-content-center">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+            </div>
         </div>
-      </div>
     </div>
-  
+</div>
+<!-- end modals -->
+
+<!-- email modal -->
+<div class="modal fade" id="EmailModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header d-flex justify-content-end ">
+                <button type="button" class="close-btn" data-bs-dismiss="modal" aria-label="Close">
+                    <i class="bi bi-x modal-close-icon"></i>
+                </button>
+            </div>
+            <div class="d-flex flex-column descripton-area-container px-4 py-1 mb-3" style="width: 100%;">
+                <div class="text-select">
+                    Sender Email
+                </div>
+                <div class="container-inner" style="background-color: #F3F2F2;">
+                    <input class="form-control input" type="text" placeholder="Enter Name"
+                        style="background-color: #F3F2F2;" />
+                </div>
+            </div>
+            <div class="d-flex flex-column descripton-area-container px-4 py-1 mb-3" style="width: 100%;">
+                <div class="text-select">
+                    Reciver Email
+                </div>
+                <div class="container-inner" style="background-color: #F3F2F2;">
+                    <input class="form-control input" type="text" placeholder="Enter Name"
+                        style="background-color: #F3F2F2;" />
+                </div>
+            </div>
+            <div class="d-flex flex-row  px-4 py-1 mb-3" style="gap:25px">
+                <div class="d-flex flex-column descripton-area-container" style="width: 100%;">
+                    <div class="text-select">
+                        CC
+                    </div>
+                    <div class="container-inner" style="background-color: #F3F2F2;">
+                        <input class="form-control input" type="text" placeholder="Enter Name"
+                            style="background-color: #F3F2F2;" />
+                    </div>
+                </div>
+
+            </div>
+            <div class="d-flex flex-row  px-4 py-1 mb-3" style="gap:25px">
+                <div class="d-flex flex-column descripton-area-container" style="width: 100%;">
+                    <div class="text-select">
+                        BC
+                    </div>
+
+                    <div class="container-inner" style="background-color: #F3F2F2;">
+                        <input class="form-control input" type="text" placeholder="Enter Name"
+                            style="background-color: #F3F2F2;" />
+                    </div>
+                </div>
+
+            </div>
+            <div class="d-flex flex-row  px-4 py-1 mb-3" style="gap:25px">
+                <div class="d-flex flex-column descripton-area-container" style="width: 100%;">
+                    <div class="text-select">
+                        Subject
+                    </div>
+                    <div class="container-inner" style="background-color: #F3F2F2;">
+                        <input class="form-control input" type="text" placeholder="Enter Name"
+                            style="background-color: #F3F2F2;" />
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="file-container-input px-4 py-1 mb-3" style="width: 100%;">
+                <label
+                    style=" font-size: 16px !important; font-family: 'MontserratSemiBold';  color: #364153;">Message</label>
+                <textarea class="form-control" id="editor" style="background-color: #F3F2F2;"></textarea>
+            </div>
+            <div class="d-flex justify-content-center align-items-center m-3 flex-wrap" style="gap:15px">
+                <div class="d-flex p-3   justify-content-between" id="download-contract-word"
+                    style="width:45%;background-color: #F3F2F2;">
+                    <div class="d-flex" style="gap:10px">
+                        <img src="../img/icons/word.svg" />
+                        <div class="d-flex flex-column">
+                            <span>Research.rar</span>
+                            <span>5.778 gbs</span>
+                        </div>
+                    </div>
+                    <img src="../img/icons/download-solid.svg" />
+                </div>
+                <div class="d-flex p-3 justify-content-between" id="download-contract-excel"
+                    style="width:45%;background-color: #F3F2F2;">
+                    <div class="d-flex" style="gap:10px">
+                        <img src="../img/icons/excel.svg" />
+                        <div class="d-flex flex-column">
+                            <span>Research.rar</span>
+                            <span>5.778 gbs</span>
+                        </div>
+                    </div>
+                    <img src="../img/icons/download-solid.svg" />
+                </div>
+            </div>
+            <div class="modal-footer d-flex justify-content-center">
+                <button type="button" class="btn"
+                    style="background-color: #E1E1E1; color: #364153; border-radius:5px; width:100px"
+                    data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn"
+                    style="background-color: #364153; color: white; border-radius:5px; width:100px"
+                    data-bs-dismiss="modal">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End email modal -->
+
 
     
   <script>
@@ -1387,6 +1337,27 @@
         window.location.href = 'create-new-client1.html';
       }
     });
+
+    $('.trcontacts').on('click', function (event) {
+      const target = $(event.target);
+
+      if (target.is('td:last-child')) {
+        event.preventDefault();
+      } else if (target.is('td:last-child button')) {
+        event.preventDefault();
+      } else if (target.is('td:last-child button img')) {
+        event.preventDefault();
+      } else if (target.is('td:last-child .tooltip-left')) {
+        event.preventDefault();
+      } else if (target.is('td:last-child div img')) {
+        event.preventDefault();
+      } else {
+        window.location.href = 'create-contact.html';
+      }
+    });
+
+
+    
   </script>
 </body>
 

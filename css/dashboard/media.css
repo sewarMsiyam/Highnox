@@ -221,11 +221,7 @@
       .column {
         width: calc(95% /2);
       }
-    
-      .input-form {
-        width: 50%;
-      }
-    
+   
       .box2-offer {
         flex-wrap: wrap;
         justify-content: flex-start !important;

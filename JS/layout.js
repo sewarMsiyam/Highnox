@@ -72,7 +72,43 @@ resptoggleSide.addEventListener("click", function () {
 var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
 var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
   return new bootstrap.Tooltip(tooltipTriggerEl)
-})
+});
+
+
+
+  // Fullscreen
+  let myDocuments = document.documentElement;
+  let zoomButton = document.getElementById("zoom-button");
+
+  zoomButton.addEventListener("click", function () {
+    if (myDocuments.requestFullscreen) {
+      myDocuments.requestFullscreen();
+      document.getElementsByClassName("fullsec")[0].classList.add("d-none");
+      document.getElementsByClassName("existsec")[0].classList.add("d-flex");
+    } else if (myDocuments.webkitRequestFullscreen) {
+      /* Safari */
+      myDocuments.webkitRequestFullscreen();
+    } else if (myDocuments.msRequestFullscreen) {
+      /* IE11 */
+      myDocuments.msRequestFullscreen();
+    }
+  });
+
+  let fullScreenButton = document.getElementById("zoom-button");
+
+  fullScreenButton.addEventListener("click", function () {
+    if (document.fullscreenElement) {
+      document.exitFullscreen();
+      document.getElementsByClassName("fullsec")[0].classList.remove("d-none");
+      document.getElementsByClassName("existsec")[0].classList.remove("d-flex");
+    } else if (document.webkitFullscreenElement) {
+      /* Safari */
+      document.webkitExitFullscreen();
+    } else if (document.msFullscreenElement) {
+      /* IE11 */
+      document.msExitFullscreen();
+    }
+  });
 
 
 

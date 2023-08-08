@@ -116,13 +116,13 @@
               </div>
             </a>
             <div class="toggle-display">
-              <a href="manage-client.html" class="nav-link">
+              <a href="manage-contract.html" class="nav-link">
                 <i class="fa-solid fa-circle"></i>
-                <span class="">Mange Client</span>
+                <span class="">Mange contract</span>
               </a>
-              <a href="create-new-client1.html" class="nav-link">
+              <a href="create-new-contract-1.html" class="nav-link">
                 <i class="fa-solid fa-circle"></i>
-                <span class="">Create New Client</span>
+                <span class="">Create New contract</span>
               </a>
             </div>
           </li>
@@ -506,7 +506,7 @@
       <!-- End Navbar  -->
 
 
-         <div class="d-flex flex-column mb-3 justify-content-evenly p-5" style="gap:20px">
+         <div class="d-flex flex-column mb-3 justify-content-evenly p-5" >
                         <h3 class="investment-container-title">Investment International LTD</h3>
                         <div class="investment-sub-container">
                             <div class="investment-cards-container">
@@ -550,7 +550,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="content-container">
+                        <div class="content-container rounded bg-white shadow mt-4">
                           <div class="content-top d-flex justify-content-start align-items-center py-1">
                             <h4 class="px-4 my-0 py-2">Offers</h4>
                           </div>
@@ -563,7 +563,7 @@
                                       <label>Type of offer</label>
                                     </div>
                                       <div class="second-select-input">
-                                        <select name="year" class="basicInput">
+                                        <select class="form-control border-0">
                                           <option>Select Activity</option>
                                           <option>Activity 1</option>
                                           <option>Activity 2</option>
@@ -576,7 +576,7 @@
                                       <label>Priority</label>
                                     </div>
                                       <div class="second-select-input">
-                                        <select name="year" class="basicInput">
+                                        <select class="form-control border-0">
                                           <option>Select Priority</option>
                                           <option>Priority 1</option>
                                           <option>Priority 2</option>
@@ -625,7 +625,7 @@
                                       <label>Contact Person</label>
                                     </div>
                                       <div class="second-select-input">
-                                        <select name="year" class="basicInput">
+                                        <select class="form-control border-0">
                                           <option>Select Contact</option>
                                           <option>Contact 1</option>
                                           <option>Contact 2</option>
@@ -641,7 +641,7 @@
                                       <label>Stage</label>
                                     </div>
                                       <div class="second-select-input">
-                                        <select name="year" class="basicInput">
+                                        <select class="form-control border-0">
                                           <option>Select Stage</option>
                                           <option>Stage 1</option>
                                           <option>Stage 2</option>
@@ -655,7 +655,7 @@
                                       <label>Account Manager</label>
                                     </div>
                                       <div class="second-select-input">
-                                        <select name="year" class="basicInput">
+                                        <select class="form-control border-0">
                                           <option>Select Account</option>
                                           <option>Account 1</option>
                                           <option>Account 2</option>
@@ -669,7 +669,7 @@
                                       <label>Location/Building</label>
                                     </div>
                                       <div class="second-select-input">
-                                        <select name="year" class="basicInput">
+                                        <select class="form-control border-0">
                                           <option>Select Account</option>
                                           <option>Account 1</option>
                                           <option>Account 2</option>
@@ -683,7 +683,7 @@
                                       <label>language</label>
                                     </div>
                                       <div class="second-select-input">
-                                        <select name="year" class="basicInput">
+                                        <select class="form-control border-0">
                                           <option>Select language</option>
                                           <option>language 1</option>
                                           <option>language 2</option>
@@ -696,7 +696,7 @@
                                         <label>Compaign</label>
                                       </div>
                                         <div class="second-select-input">
-                                          <select name="year" class="basicInput">
+                                          <select class="form-control border-0">
                                             <option>Select Compaign</option>
                                             <option>Compaign 1</option>
                                             <option>Compaign 2</option>
@@ -907,15 +907,31 @@
                                 </div>
                               </form>
                             </div>
-                            <div class="container-fluid py-4 d-flex justify-content-end">
-                                  <div class="col-md-4 col-12 text-right">
-                                    <button class="btn btn-primary  cancel-btn" type="submit">
-                                    Cancel
-                                    </button>
-                                      <button class="btn btn-primary submit-btn" type="submit">
-                                      Save
-                                    </button>                        
+                            <div class="container-fluid py-4 d-flex justify-content-end print-dropdown">
+                              <form class="offers-btn d-flex justify-content-center flex-wrap justify-content-md-end" style="gap: 1rem;">
+                                <button class="btn btn-primary  cancel-btn" > Cancel </button>
+                                <button class="btn btn-primary submit-btn">  Save  </button>
+                                
+                                  <div class="ui inline dropdown h-100  cancel-btn text-dark">
+                                    <div class="text">
+                                      Printout
+                                    </div>
+                                    <i class="dropdown icon"></i>
+                                    <div class="menu w-100">
+                                      <div class="item">
+                                        Printout
+                                      </div>
+                                      <div class="item" data-bs-toggle="modal" data-bs-target="#EmailModal">
+                                        Email
+                                      </div>
+                                      <div class="item">
+                                        close
+                                      </div>
+                                    </div>
                                   </div>
+                                <button class="btn btn-primary submit-btn" type="submit" style="margin-left: 10px; border-top-left-radius: none !important;  border-bottom-left-radius: none !important;">Send </button>
+                                <button class="btn btn-primary submit-btn" type="submit"> Create Invoice </button>
+                              </form>
                             </div>
                           </div>
                         </div>
