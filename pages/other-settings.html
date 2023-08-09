@@ -3445,25 +3445,18 @@
 
     if (allInputsFilled) {
       container.find(".value-danger").addClass("d-none");
-
       var tableClass = container.attr("class").split(" ")[1];
-
       if (!counterMap[tableClass]) {
         counterMap[tableClass] = 1;
       }
-
       var newRow = $('<tr class="tr style-table-my1 tr-active">');
       var cols = '';
-
       cols += `<td class="style-td"><input type="checkbox" class="" id="customCheck1"></td>`;
       cols += `<td class="style-td">${counterMap[tableClass] + 1}</td>`;
-
       inputs.each(function() {
         cols += `<td class="style-td"><input class="form-control text-center border-0 bg-white" readonly  value="${$(this).val()}" /></td>`;
       });
-
       cols += `<td  style="width:30%;" class="style-td"><button type="button" class="btn btn-secondary dataTableButtons edite-row"> <i class="fa fa-pen"></i> </button><div class="tooltip-left btn btn-secondary dataTableButtons"> <img src="../images/client-person.svg" class="image-actions" /> <span class="tooltiptext">Tooltip text</span> </div><button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" id="deleteRow" title="" data-bs-original-title="Tooltip on bottom"><i class="fa fa-trash"></i></button></td>`;
-     
       newRow.append(cols);
       container.find(".table").find("tbody").append(newRow);
       counterMap[tableClass]++;
@@ -3472,14 +3465,12 @@
       container.find(".value-danger").removeClass("d-none");
     }
   });
-
   $(".table").on("click", "#deleteRow", function (event) {
     var table = $(this).closest(".table");
     var tableClass = table.attr("class").split(" ")[1];
     $(this).closest("tr").remove();
     counterMap[tableClass]--;
   });
-
   $(document).on("click", ".edite-row", function () {
     var inputRoleElement = $(this).closest("tr").find("td .form-control");
     inputRoleElement.prop("readonly", false);
