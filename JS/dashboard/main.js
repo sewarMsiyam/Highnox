@@ -1,17 +1,17 @@
-document.getElementById('mySelect-offer').addEventListener('change', function() {
-  var selectedValue = this.value;
-  if (selectedValue === 'Email') {
-    var modal = new bootstrap.Modal(document.getElementById('EmailModal'));
-    modal.show();
-  }
-});
-document.getElementById('mySelect-activity').addEventListener('change', function() {
-  var selectedValue = this.value;
-  if (selectedValue === 'Email') {
-    var modal = new bootstrap.Modal(document.getElementById('EmailModal'));
-    modal.show();
-  }
-});
+// document.getElementById('mySelect-offer').addEventListener('change', function() {
+//   var selectedValue = this.value;
+//   if (selectedValue === 'Email') {
+//     var modal = new bootstrap.Modal(document.getElementById('EmailModal'));
+//     modal.show();
+//   }
+// });
+// document.getElementById('mySelect-activity').addEventListener('change', function() {
+//   var selectedValue = this.value;
+//   if (selectedValue === 'Email') {
+//     var modal = new bootstrap.Modal(document.getElementById('EmailModal'));
+//     modal.show();
+//   }
+// });
 
 
 const downloadPdfActivityBtnWord = document.getElementById("download-contract-word");
@@ -64,15 +64,15 @@ $(".js-example-placeholder-multiple").select2({
 });
 
 // download file
-const downloadPdfOfferBtn = document.getElementById("download-pdf-offer");
-downloadPdfOfferBtn.addEventListener("click", () => {
-  downloadTablePdf();
-});
+// const downloadPdfOfferBtn = document.getElementById("download-pdf-offer");
+// downloadPdfOfferBtn.addEventListener("click", () => {
+//   downloadTablePdf();
+// });
 
-const downloadPdfActivityBtn = document.getElementById("download-pdf-activity");
-downloadPdfActivityBtn.addEventListener("click", () => {
-  downloadTablePdf();
-});
+// const downloadPdfActivityBtn = document.getElementById("download-pdf-activity");
+// downloadPdfActivityBtn.addEventListener("click", () => {
+//   downloadTablePdf();
+// });
 
 function downloadTablePdf() {
   // Get the table element
@@ -113,14 +113,14 @@ function downloadTablePdf() {
   doc.save("table.pdf");
 }
 
-const downloadOfferBtn = document.getElementById("download-excel-offer");
-downloadOfferBtn.addEventListener("click", () => {
-  downloadTable();
-});
-const downloadActivityBtn = document.getElementById("download-excel-activity");
-downloadActivityBtn.addEventListener("click", () => {
-  downloadTable();
-});
+// const downloadOfferBtn = document.getElementById("download-excel-offer");
+// downloadOfferBtn.addEventListener("click", () => {
+//   downloadTable();
+// });
+// const downloadActivityBtn = document.getElementById("download-excel-activity");
+// downloadActivityBtn.addEventListener("click", () => {
+//   downloadTable();
+// });
 
 function downloadTable() {
   // Get the table element
@@ -152,88 +152,88 @@ function downloadTable() {
   link.click();
 }
 
-function backOffer(back_offer, add_offer) {
-  var x = document.getElementById(back_offer);
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-  var y = document.getElementById(add_offer);
-  if (y.style.display === "block") {
-    y.style.display = "none";
-  } else {
-    y.style.display = "block";
-  }
-}
+// function backOffer(back_offer, add_offer) {
+//   var x = document.getElementById(back_offer);
+//   if (x.style.display === "none") {
+//     x.style.display = "block";
+//   } else {
+//     x.style.display = "none";
+//   }
+//   var y = document.getElementById(add_offer);
+//   if (y.style.display === "block") {
+//     y.style.display = "none";
+//   } else {
+//     y.style.display = "block";
+//   }
+// }
 
-function addOffer(back_offer, add_offer) {
-  var x = document.getElementById(back_offer);
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-  var y = document.getElementById(add_offer);
-  if (y.style.display === "block") {
-    y.style.display = "none";
-  } else {
-    y.style.display = "block";
-  }
-}
+// function addOffer(back_offer, add_offer) {
+//   var x = document.getElementById(back_offer);
+//   if (x.style.display === "none") {
+//     x.style.display = "block";
+//   } else {
+//     x.style.display = "none";
+//   }
+//   var y = document.getElementById(add_offer);
+//   if (y.style.display === "block") {
+//     y.style.display = "none";
+//   } else {
+//     y.style.display = "block";
+//   }
+// }
 
-function goToOffers() {
-  var salesDashboardTab = document.getElementById("sales-dashboard-tab");
-  var offersTab = document.getElementById("offers-tab");
-  var salesDashboard = document.getElementById("sales-dashboard");
-  var offers = document.getElementById("offers");
+// function goToOffers() {
+//   var salesDashboardTab = document.getElementById("sales-dashboard-tab");
+//   var offersTab = document.getElementById("offers-tab");
+//   var salesDashboard = document.getElementById("sales-dashboard");
+//   var offers = document.getElementById("offers");
 
-  salesDashboardTab.classList.remove("active");
-  salesDashboardTab.setAttribute("aria-selected", "false");
-  salesDashboard.classList.remove("show", "active");
+//   salesDashboardTab.classList.remove("active");
+//   salesDashboardTab.setAttribute("aria-selected", "false");
+//   salesDashboard.classList.remove("show", "active");
 
-  offersTab.classList.add("active");
-  offersTab.setAttribute("aria-selected", "true");
-  offers.classList.add("show", "active");
-  goToAddOffer("back-offer", "add-offer");
-}
+//   offersTab.classList.add("active");
+//   offersTab.setAttribute("aria-selected", "true");
+//   offers.classList.add("show", "active");
+//   goToAddOffer("back-offer", "add-offer");
+// }
 
-function goToAddOffer(back_offer, add_offer) {
-  var x = document.getElementById(back_offer);
-  x.style.display = "none";
-  var y = document.getElementById(add_offer);
-  y.style.display = "block";
-}
+// function goToAddOffer(back_offer, add_offer) {
+//   var x = document.getElementById(back_offer);
+//   x.style.display = "none";
+//   var y = document.getElementById(add_offer);
+//   y.style.display = "block";
+// }
 
-function backActivity(back_activity, add_activity) {
-  var x = document.getElementById(back_activity);
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-  var y = document.getElementById(add_activity);
-  if (y.style.display === "block") {
-    y.style.display = "none";
-  } else {
-    y.style.display = "block";
-  }
-}
+// function backActivity(back_activity, add_activity) {
+//   var x = document.getElementById(back_activity);
+//   if (x.style.display === "none") {
+//     x.style.display = "block";
+//   } else {
+//     x.style.display = "none";
+//   }
+//   var y = document.getElementById(add_activity);
+//   if (y.style.display === "block") {
+//     y.style.display = "none";
+//   } else {
+//     y.style.display = "block";
+//   }
+// }
 
-function addActivity(back_activity, add_activity) {
-  var x = document.getElementById(back_activity);
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-  var y = document.getElementById(add_activity);
-  if (y.style.display === "block") {
-    y.style.display = "none";
-  } else {
-    y.style.display = "block";
-  }
-}
+// function addActivity(back_activity, add_activity) {
+//   var x = document.getElementById(back_activity);
+//   if (x.style.display === "none") {
+//     x.style.display = "block";
+//   } else {
+//     x.style.display = "none";
+//   }
+//   var y = document.getElementById(add_activity);
+//   if (y.style.display === "block") {
+//     y.style.display = "none";
+//   } else {
+//     y.style.display = "block";
+//   }
+// }
 
 function myFunction(id, id_table, id_row) {
   const tableRow = `
@@ -355,41 +355,41 @@ function sortTable(n, table_id) {
   }
 }
 
-const copyIcons = document.querySelectorAll(".copy-icon");
-copyIcons.forEach((icon) => {
-  icon.addEventListener("click", function () {
-    backOffer("back-offer", "add-offer");
-  });
-});
-const copyActivityIcons = document.querySelectorAll(".copy-activity-icon");
-copyIcons.forEach((icon) => {
-  icon.addEventListener("click", function () {
-    backActivity("back-activity", "add-activity");
-  });
-});
-const close_btns = document.querySelectorAll(".close-ic");
+// const copyIcons = document.querySelectorAll(".copy-icon");
+// copyIcons.forEach((icon) => {
+//   icon.addEventListener("click", function () {
+//     backOffer("back-offer", "add-offer");
+//   });
+// });
+// const copyActivityIcons = document.querySelectorAll(".copy-activity-icon");
+// copyIcons.forEach((icon) => {
+//   icon.addEventListener("click", function () {
+//     backActivity("back-activity", "add-activity");
+//   });
+// });
+// const close_btns = document.querySelectorAll(".close-ic");
 
-close_btns.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    btn.parentElement.closest(".task").style.display = "none";
-  });
-});
+// close_btns.forEach((btn) => {
+//   btn.addEventListener("click", () => {
+//     btn.parentElement.closest(".task").style.display = "none";
+//   });
+// });
 
-const sidebarLinks = document.querySelectorAll(".sidebar .navbar .nav-link");
+// const sidebarLinks = document.querySelectorAll(".sidebar .navbar .nav-link");
 
-sidebarLinks.forEach((ele) => {
-  let location = window.location.pathname.split(".")[0].split("/");
-  if (ele.childNodes[1].textContent.toLowerCase() === location[1]) {
-    ele.classList.add("sidebar-active");
-  } else {
-    if (
-      ele.childNodes[1].textContent.toLowerCase() === "dashboard" &&
-      location[1] === "index"
-    ) {
-      ele.classList.add("sidebar-active");
-    } else ele.classList.remove("sidebar-active");
-  }
-});
+// sidebarLinks.forEach((ele) => {
+//   let location = window.location.pathname.split(".")[0].split("/");
+//   if (ele.childNodes[1].textContent.toLowerCase() === location[1]) {
+//     ele.classList.add("sidebar-active");
+//   } else {
+//     if (
+//       ele.childNodes[1].textContent.toLowerCase() === "dashboard" &&
+//       location[1] === "index"
+//     ) {
+//       ele.classList.add("sidebar-active");
+//     } else ele.classList.remove("sidebar-active");
+//   }
+// });
 (function ($) {
   "use strict";
 
@@ -406,8 +406,8 @@ sidebarLinks.forEach((ele) => {
 
 
   // search bar toggle
-  const searchContainer = document.querySelector(".search-container");
-  const navbarSearch = document.querySelector(".navbar-open-search");
+  // const searchContainer = document.querySelector(".search-container");
+  // const navbarSearch = document.querySelector(".navbar-open-search");
 
   function scrollToTop() {
     window.scrollTo({
@@ -415,34 +415,34 @@ sidebarLinks.forEach((ele) => {
       behavior: "smooth", // You can change this to 'auto' for instant scrolling
     });
   }
-  $(".open-search-bar").click(function () {
-    searchContainer.classList.replace("d-none", "d-flex");
-    navbarSearch.classList.replace("d-flex", "d-none");
-    scrollToTop();
-    return false;
-  });
+  // $(".open-search-bar").click(function () {
+  //   searchContainer.classList.replace("d-none", "d-flex");
+  //   navbarSearch.classList.replace("d-flex", "d-none");
+  //   scrollToTop();
+  //   return false;
+  // });
 
-  $(".bi-three-dots-vertical").click(function () {
-    $(".navbar-icons-container").toggleClass("active");
-    return false;
-  });
+  // $(".bi-three-dots-vertical").click(function () {
+  //   $(".navbar-icons-container").toggleClass("active");
+  //   return false;
+  // });
 
-  $(".content-container").click(function () {
-    if (window.innerWidth <= 991) {
-      $(".image-container").removeClass("display-none");
-      $(".sidebar-title").removeClass("display-none");
-      $(".title.d-none").removeClass("display-inline");
-      $(".sidebar .navbar .nav-link i").removeClass("custom-icon");
-      $(".sidebar, .content").removeClass("open");
-      return false;
-    }
-  });
+  // $(".content-container").click(function () {
+  //   if (window.innerWidth <= 991) {
+  //     $(".image-container").removeClass("display-none");
+  //     $(".sidebar-title").removeClass("display-none");
+  //     $(".title.d-none").removeClass("display-inline");
+  //     $(".sidebar .navbar .nav-link i").removeClass("custom-icon");
+  //     $(".sidebar, .content").removeClass("open");
+  //     return false;
+  //   }
+  // });
 
-  $(".search-container .cancel-icon").click(function () {
-    searchContainer.classList.replace("d-flex", "d-none");
-    navbarSearch.classList.replace("d-none", "d-flex");
-    return false;
-  });
+  // $(".search-container .cancel-icon").click(function () {
+  //   searchContainer.classList.replace("d-flex", "d-none");
+  //   navbarSearch.classList.replace("d-none", "d-flex");
+  //   return false;
+  // });
   // Sidebar Toggler
   //let $isSideBar_open = false;
 
