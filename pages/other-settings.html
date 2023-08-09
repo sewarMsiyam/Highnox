@@ -29,6 +29,20 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
   
   <link rel="stylesheet" href="../css/layout.css">
+
+  
+  <style>
+    td .form-control{
+  background-color:#fff !important;
+  border :1px solid #000 !important;
+}
+    .form-control:disabled, .form-control[readonly] {
+    background-color: #fff0 !important;
+    border :none !important;
+    opacity: 1;
+}
+
+  </style>
 </head>
 
 <body>
@@ -549,7 +563,7 @@
             <div class="container-fluid">
               <div class="tab-content" id="myTabContent">
                 <div class=" tab-pane fade show active" id="clients" role="tabpanel" aria-labelledby="clients-tab">
-                  <div class="container-fluid px-4 pb-4" id="back-client">
+                  <div class="container-fluid pb-4 px-4" id="back-client">
                     <div class="tab-content" id="myTabContent2">
                       <div class="tab-pane fade show active " id="all" role="tabpanel1" aria-labelledby="all-tab" >
                         <div class="container-fluid content-form py-2 border-radius-20">
@@ -732,25 +746,28 @@
                       <div class="tab-pane fade table-tab-pane" id="active-section" role="tabpanel1" aria-labelledby="active-tab">
                         <div class="d-flex">
                           <div class="col">
-                            <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow" style="background:#F2F2F2 !important;">
+                            <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow px-0" style="background:#F2F2F2 !important;">
                               <div class="px-4">
                                 <div class="d-flex justify-content-between">
                                   <div class="py-2 d-flex justify-content-start align-items-center flex-column-responsive">
                                     <h4 class="py-2">VAT</h4>
                                   </div>
                                   <div class="d-flex justify-content-start align-items-center ">
-                                    <a href="#" class="btn btn-secondary2 mx-3" style="background: #E8E8E8 !important;">
-                                      User
-                                    </a>
-                                    <a href="#" class="btn btn-primary create-btn add_new_row1 border-radius-2 height-auto">
-                                      <i class="bi bi-plus-circle-fill"></i>
-                                      Add new
-                                    </a>
+                                    <div class="d-flex justify-content-start align-items-center ">
+                                      <div class=" mx-3">
+                                        <input class="form-control border-0 bg-white input-row " placeholder="25% " />
+                                        <small class="form-text position-absolute text-danger d-none value-danger" >add VAT  </small>
+                                      </div>
+                                      <a href="#" class="btn btn-primary create-btn add_new_row  border-radius-2 height-auto">
+                                        <i class="bi bi-plus-circle-fill"></i>
+                                        Add new VAT
+                                      </a>
+                                    </div>
                                   </div>
                                 </div>
                                 <div class="table-responsive bg-light mt-4 border-radius-20">
                                       <div class="secondTableContainer">
-                                        <table id="myTable" class="table1">
+                                        <table id="myTable" class="table">
                                           <thead>
                                             <tr class="tr">
                                               <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
@@ -788,10 +805,14 @@
                                                 Office
                                               </td>
                                               <td class="style-td">
-                                                <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
-                                                  <img src="../images/client-person.svg" class="image-actions">
+                                                <button type="button" class="btn btn-secondary dataTableButtons edite-Role">
+                                                  <i class="fa fa-pen"></i>
                                                 </button>
-                                                <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
+                                                <div class="tooltip-left btn btn-secondary dataTableButtons">
+                                                  <img src="../images/client-person.svg" class="image-actions" />
+                                                  <span class="tooltiptext">Tooltip text</span>
+                                                </div>
+                                                <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom">
                                                   <i class="fa fa-trash"></i>
                                                 </button>
                                               </td>
@@ -804,17 +825,18 @@
                             </div>
                           </div>
                           <div class="col">
-                            <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow" style="background:#F2F2F2 !important;">
+                            <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow px-0" style="background:#F2F2F2 !important;">
                               <div class="px-4">
                                 <div class="d-flex justify-content-between">
                                   <div class="py-2 d-flex justify-content-start align-items-center flex-column-responsive">
                                     <h4 class="py-2">Type of Debts</h4>
                                   </div>
                                   <div class="d-flex justify-content-start align-items-center ">
-                                    <a href="#" class="btn btn-secondary2 mx-3" style="background: #E8E8E8 !important;">
-                                      One off
-                                    </a>
-                                    <a href="#" class="btn btn-primary create-btn add_new_row2 border-radius-2 height-auto">
+                                    <div class=" mx-3">
+                                      <input class="form-control border-0 bg-white input-row " placeholder="One off " />
+                                      <small class="form-text position-absolute text-danger d-none value-danger" >add Debts  </small>
+                                    </div>
+                                    <a href="#" class="btn btn-primary create-btn add_new_row  border-radius-2 height-auto">
                                       <i class="bi bi-plus-circle-fill"></i>
                                       Add new
                                     </a>
@@ -822,7 +844,7 @@
                                 </div>
                                 <div class="table-responsive bg-light mt-4 border-radius-20">
                                   <div class="secondTableContainer">
-                                    <table id="myTable" class="table2">
+                                    <table id="myTable" class="table">
                                       <thead>
                                         <tr class="tr">
                                           <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
@@ -859,14 +881,19 @@
                                           <td class="style-td">
                                             Office
                                           </td>
-                                          <td class="style-td">
-                                            <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
-                                              <img src="../images/client-person.svg" class="image-actions">
-                                            </button>
-                                            <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
-                                              <i class="fa fa-trash"></i>
-                                            </button>
-                                          </td>
+                                          
+<td class="style-td">
+  <button type="button" class="btn btn-secondary dataTableButtons edite-Role">
+    <i class="fa fa-pen"></i>
+  </button>
+  <div class="tooltip-left btn btn-secondary dataTableButtons">
+    <img src="../images/client-person.svg" class="image-actions" />
+    <span class="tooltiptext">Tooltip text</span>
+  </div>
+  <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom">
+    <i class="fa fa-trash"></i>
+  </button>
+</td>
                                         </tr>
                                       </tbody>
                                     </table>
@@ -878,25 +905,26 @@
                         </div>
                         <div class="d-flex">
                           <div class="col">
-                            <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow" style="background:#F2F2F2 !important;">
+                            <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow px-0" style="background:#F2F2F2 !important;">
                               <div class="px-4">
                                 <div class="d-flex justify-content-between">
                                   <div class="py-2 d-flex justify-content-start align-items-center flex-column-responsive">
                                     <h4 class="py-2">Payments</h4>
                                   </div>
                                   <div class="d-flex justify-content-start align-items-center ">
-                                    <a href="#" class="btn btn-secondary2 mx-3" style="background: #E8E8E8 !important;">
-                                      Credit Card
-                                    </a>
-                                    <a href="#" class="btn btn-primary create-btn add_new_row3 border-radius-2 height-auto">
+                                    <div class=" mx-3">
+                                      <input class="form-control border-0 bg-white input-row " placeholder="Credit Card " />
+                                      <small class="form-text position-absolute text-danger d-none value-danger" >add Card  </small>
+                                    </div>
+                                    <a href="#" class="btn btn-primary create-btn add_new_row  border-radius-2 height-auto">
                                       <i class="bi bi-plus-circle-fill"></i>
                                       Add new
                                     </a>
-                                  </div>
+                                  </div>                                  
                                 </div>
                                 <div class="table-responsive bg-light mt-4 border-radius-20">
                                   <div class="secondTableContainer">
-                                    <table id="myTable" class="table3">
+                                    <table id="myTable" class="table">
                                       <thead>
                                         <tr class="tr">
                                           <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
@@ -933,14 +961,19 @@
                                           <td class="style-td">
                                             Office
                                           </td>
-                                          <td class="style-td">
-                                            <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
-                                              <img src="../images/client-person.svg" class="image-actions">
-                                            </button>
-                                            <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
-                                              <i class="fa fa-trash"></i>
-                                            </button>
-                                          </td>
+                                          
+<td class="style-td">
+  <button type="button" class="btn btn-secondary dataTableButtons edite-Role">
+    <i class="fa fa-pen"></i>
+  </button>
+  <div class="tooltip-left btn btn-secondary dataTableButtons">
+    <img src="../images/client-person.svg" class="image-actions" />
+    <span class="tooltiptext">Tooltip text</span>
+  </div>
+  <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom">
+    <i class="fa fa-trash"></i>
+  </button>
+</td>
                                         </tr>
                                       </tbody>
                                     </table>
@@ -950,17 +983,18 @@
                             </div>
                           </div>
                           <div class="col">
-                            <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow" style="background:#F2F2F2 !important;">
+                            <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow px-0" style="background:#F2F2F2 !important;">
                               <div class="px-4">
                                 <div class="d-flex justify-content-between">
                                   <div class="py-2 d-flex justify-content-start align-items-center flex-column-responsive">
                                     <h4 class="py-2">Invoice Type</h4>
                                   </div>
                                   <div class="d-flex justify-content-start align-items-center ">
-                                    <a href="#" class="btn btn-secondary2 mx-3" style="background: #E8E8E8 !important;">
-                                      Debit
-                                    </a>
-                                    <a href="#" class="btn btn-primary create-btn add_new_row4 border-radius-2 height-auto">
+                                    <div class=" mx-3">
+                                      <input class="form-control border-0 bg-white input-row " placeholder="Invoice Type" />
+                                      <small class="form-text position-absolute text-danger d-none value-danger" >add Invoice  </small>
+                                    </div>
+                                    <a href="#" class="btn btn-primary create-btn add_new_row  border-radius-2 height-auto">
                                       <i class="bi bi-plus-circle-fill"></i>
                                       Add new
                                     </a>
@@ -968,7 +1002,7 @@
                                 </div>
                                 <div class="table-responsive bg-light mt-4 border-radius-20">
                                   <div class="secondTableContainer">
-                                    <table id="myTable" class="table4">
+                                    <table id="myTable" class="table">
                                       <thead>
                                         <tr class="tr">
                                           <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
@@ -1005,14 +1039,20 @@
                                           <td class="style-td">
                                             Office
                                           </td>
-                                          <td class="style-td">
-                                            <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
-                                              <img src="../images/client-person.svg" class="image-actions">
-                                            </button>
-                                            <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
-                                              <i class="fa fa-trash"></i>
-                                            </button>
-                                          </td>
+                                          
+<td class="style-td">
+  <button type="button" class="btn btn-secondary dataTableButtons edite-Role">
+    <i class="fa fa-pen"></i>
+  </button>
+  <div class="tooltip-left btn btn-secondary dataTableButtons">
+    <img src="../images/client-person.svg" class="image-actions" />
+    <span class="tooltiptext">Tooltip text</span>
+  </div>
+  <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom">
+    <i class="fa fa-trash"></i>
+  </button>
+</td>
+
                                         </tr>
                                       </tbody>
                                     </table>
@@ -1024,23 +1064,22 @@
                         </div>
                         <div class="d-flex">
                           <div class="col">
-                            <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow" style="background:#F2F2F2 !important;">
+                            <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow px-0" style="background:#F2F2F2 !important;">
                               <div class="px-4">
                                 <div class="d-flex justify-content-between">
                                   <div class="py-2 d-flex justify-content-start align-items-center flex-column-responsive">
                                     <h4 class="py-2">Payment Conditions</h4>
                                   </div>
                                   <div class="d-flex justify-content-start align-items-center ">
-                                    <a href="#" class="btn btn-secondary2 mx-3" style="background: #E8E8E8 !important;">
-                                      30
-                                    </a>
-                                    <a href="#" class="btn btn-secondary2 mx-3" style="background: #E8E8E8 !important;">
-                                      Days
-                                    </a>
-                                    <a href="#" class="btn btn-secondary2 mx-3" style="background: #E8E8E8 !important;">
-                                      30 day unit
-                                    </a>
-                                    <a href="#" class="btn btn-primary create-btn add_new_row5 border-radius-2 height-auto">
+                                    <div class=" mx-3">
+                                      <select class="form-control border-0 bg-white input-row "  placeholder="Payment Conditions " >
+                                        <option>Payment Conditions 1</option>
+                                        <option>Payment Conditions 2</option>
+                                        <option>Payment Conditions 2</option>
+                                      </select>
+                                      <small class="form-text position-absolute text-danger d-none value-danger" >Payment Conditions </small>
+                                    </div>
+                                    <a href="#" class="btn btn-primary create-btn add_new_row  border-radius-2 height-auto">
                                       <i class="bi bi-plus-circle-fill"></i>
                                       Add new
                                     </a>
@@ -1048,7 +1087,7 @@
                                 </div>
                                 <div class="table-responsive bg-light mt-4 border-radius-20">
                                   <div class="secondTableContainer">
-                                    <table id="myTable" class="table5">
+                                    <table id="myTable" class="table">
                                       <thead>
                                         <tr class="tr">
                                           <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
@@ -1085,14 +1124,20 @@
                                           <td class="style-td">
                                             Office
                                           </td>
-                                          <td class="style-td">
-                                            <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
-                                              <img src="../images/client-person.svg" class="image-actions">
-                                            </button>
-                                            <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
-                                              <i class="fa fa-trash"></i>
-                                            </button>
-                                          </td>
+                                        
+<td class="style-td">
+  <button type="button" class="btn btn-secondary dataTableButtons edite-Role">
+    <i class="fa fa-pen"></i>
+  </button>
+  <div class="tooltip-left btn btn-secondary dataTableButtons">
+    <img src="../images/client-person.svg" class="image-actions" />
+    <span class="tooltiptext">Tooltip text</span>
+  </div>
+  <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom">
+    <i class="fa fa-trash"></i>
+  </button>
+</td>
+
                                         </tr>
                                       </tbody>
                                     </table>
@@ -1102,17 +1147,22 @@
                             </div>
                           </div>
                           <div class="col">
-                            <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow" style="background:#F2F2F2 !important;">
+                            <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow px-0" style="background:#F2F2F2 !important;">
                               <div class="px-4">
                                 <div class="d-flex justify-content-between">
                                   <div class="py-2 d-flex justify-content-start align-items-center flex-column-responsive">
                                     <h4 class="py-2">Add Currency</h4>
                                   </div>
                                   <div class="d-flex justify-content-start align-items-center ">
-                                    <a href="#" class="btn btn-secondary2 mx-3" style="background: #E8E8E8 !important;">
-                                      SEK
-                                    </a>
-                                    <a href="#" class="btn btn-primary create-btn add_new_row6 border-radius-2 height-auto">
+                                    <div class=" mx-3">
+                                      <select class="form-control border-0 bg-white input-row "  placeholder="Payment Conditions " >
+                                        <option>Payment Conditions 1</option>
+                                        <option>Payment Conditions 2</option>
+                                        <option>Payment Conditions 2</option>
+                                      </select>
+                                      <small class="form-text position-absolute text-danger d-none value-danger" >Currency</small>
+                                    </div>
+                                    <a href="#" class="btn btn-primary create-btn add_new_row  border-radius-2 height-auto">
                                       <i class="bi bi-plus-circle-fill"></i>
                                       Add new
                                     </a>
@@ -1120,7 +1170,7 @@
                                 </div>
                                 <div class="table-responsive bg-light mt-4 border-radius-20">
                                   <div class="secondTableContainer">
-                                    <table id="myTable" class="table6">
+                                    <table id="myTable" class="table">
                                       <thead>
                                         <tr class="tr">
                                           <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
@@ -1157,14 +1207,20 @@
                                           <td class="style-td">
                                             Office
                                           </td>
-                                          <td class="style-td">
-                                            <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
-                                              <img src="../images/client-person.svg" class="image-actions">
-                                            </button>
-                                            <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
-                                              <i class="fa fa-trash"></i>
-                                            </button>
-                                          </td>
+                                          
+<td class="style-td">
+  <button type="button" class="btn btn-secondary dataTableButtons edite-Role">
+    <i class="fa fa-pen"></i>
+  </button>
+  <div class="tooltip-left btn btn-secondary dataTableButtons">
+    <img src="../images/client-person.svg" class="image-actions" />
+    <span class="tooltiptext">Tooltip text</span>
+  </div>
+  <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom">
+    <i class="fa fa-trash"></i>
+  </button>
+</td>
+
                                         </tr>
                                       </tbody>
                                     </table>
@@ -1176,17 +1232,22 @@
                         </div>
                         <div class="d-flex">
                           <div class="col-md-6 col-12">
-                            <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow" style="background:#F2F2F2 !important;">
+                            <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow px-0" style="background:#F2F2F2 !important;">
                               <div class="px-4">
                                 <div class="d-flex justify-content-between">
                                   <div class="py-2 d-flex justify-content-start align-items-center flex-column-responsive">
                                     <h4 class="py-2">Invoicing Period</h4>
                                   </div>
                                   <div class="d-flex justify-content-start align-items-center ">
-                                    <a href="#" class="btn btn-secondary2 mx-3" style="background: #E8E8E8 !important;">
-                                      Monthly
-                                    </a>
-                                    <a href="#" class="btn btn-primary create-btn add_new_row7 border-radius-2 height-auto">
+                                    <div class=" mx-3">
+                                      <select class="form-control border-0 bg-white input-row "  placeholder="Invoicing Period " >
+                                        <option>Invoicing Period 1</option>
+                                        <option>Invoicing Period 2</option>
+                                        <option>Invoicing Period 3</option>
+                                      </select>
+                                      <small class="form-text position-absolute text-danger d-none value-danger" >Invoicing Period</small>
+                                    </div>
+                                    <a href="#" class="btn btn-primary create-btn add_new_row  border-radius-2 height-auto">
                                       <i class="bi bi-plus-circle-fill"></i>
                                       Add new
                                     </a>
@@ -1194,7 +1255,7 @@
                                 </div>
                                 <div class="table-responsive bg-light mt-4 border-radius-20">
                                   <div class="secondTableContainer">
-                                    <table id="myTable" class="table7">
+                                    <table id="myTable" class="table">
                                       <thead>
                                         <tr class="tr">
                                           <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
@@ -1231,14 +1292,20 @@
                                           <td class="style-td">
                                             Office
                                           </td>
-                                          <td class="style-td">
-                                            <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
-                                              <img src="../images/client-person.svg" class="image-actions">
-                                            </button>
-                                            <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
-                                              <i class="fa fa-trash"></i>
-                                            </button>
-                                          </td>
+                                          
+<td class="style-td">
+  <button type="button" class="btn btn-secondary dataTableButtons edite-Role">
+    <i class="fa fa-pen"></i>
+  </button>
+  <div class="tooltip-left btn btn-secondary dataTableButtons">
+    <img src="../images/client-person.svg" class="image-actions" />
+    <span class="tooltiptext">Tooltip text</span>
+  </div>
+  <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom">
+    <i class="fa fa-trash"></i>
+  </button>
+</td>
+
                                         </tr>
                                       </tbody>
                                     </table>
@@ -1253,17 +1320,18 @@
                       <div class="tab-pane fade table-tab-pane" id="not-active-section" role="tabpanel1" aria-labelledby="not-active">
                         <div class="d-flex">
                           <div class="col">
-                            <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow" style="background:#F2F2F2 !important;">
+                            <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow px-0" style="background:#F2F2F2 !important;">
                               <div class="px-4">
                                 <div class="d-flex justify-content-between">
                                   <div class="py-2 d-flex justify-content-start align-items-center flex-column-responsive">
                                     <h4 class="py-2">VAT</h4>
                                   </div>
                                   <div class="d-flex justify-content-start align-items-center ">
-                                    <a href="#" class="btn btn-secondary2 mx-3" style="background: #E8E8E8 !important;">
-                                      User
-                                    </a>
-                                    <a href="#" class="btn btn-primary create-btn add_new_row8 border-radius-2 height-auto">
+                                    <div class=" mx-3">
+                                      <input class="form-control border-0 bg-white input-row " placeholder="VAT" />
+                                      <small class="form-text position-absolute text-danger d-none value-danger" >VAT</small>
+                                    </div>
+                                    <a href="#" class="btn btn-primary create-btn add_new_row  border-radius-2 height-auto">
                                       <i class="bi bi-plus-circle-fill"></i>
                                       Add new
                                     </a>
@@ -1271,7 +1339,7 @@
                                 </div>
                                 <div class="table-responsive bg-light mt-4 border-radius-20">
                                       <div class="secondTableContainer">
-                                        <table id="myTable" class="table8">
+                                        <table id="myTable" class="table">
                                           <thead>
                                             <tr class="tr">
                                               <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
@@ -1308,14 +1376,20 @@
                                               <td class="style-td">
                                                 Office
                                               </td>
-                                              <td class="style-td">
-                                                <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
-                                                  <img src="../images/client-person.svg" class="image-actions">
-                                                </button>
-                                                <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
-                                                  <i class="fa fa-trash"></i>
-                                                </button>
-                                              </td>
+                                             
+<td class="style-td">
+  <button type="button" class="btn btn-secondary dataTableButtons edite-Role">
+    <i class="fa fa-pen"></i>
+  </button>
+  <div class="tooltip-left btn btn-secondary dataTableButtons">
+    <img src="../images/client-person.svg" class="image-actions" />
+    <span class="tooltiptext">Tooltip text</span>
+  </div>
+  <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom">
+    <i class="fa fa-trash"></i>
+  </button>
+</td>
+
                                             </tr>
                                           </tbody>
                                         </table>
@@ -1325,25 +1399,26 @@
                             </div>
                           </div>
                           <div class="col">
-                            <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow" style="background:#F2F2F2 !important;">
+                            <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow px-0" style="background:#F2F2F2 !important;">
                               <div class="px-4">
                                 <div class="d-flex justify-content-between">
                                   <div class="py-2 d-flex justify-content-start align-items-center flex-column-responsive">
                                     <h4 class="py-2">Type of Debts</h4>
                                   </div>
                                   <div class="d-flex justify-content-start align-items-center ">
-                                    <a href="#" class="btn btn-secondary2 mx-3" style="background: #E8E8E8 !important;">
-                                      One off
-                                    </a>
-                                    <a href="#" class="btn btn-primary create-btn add_new_row9 border-radius-2 height-auto">
+                                    <div class=" mx-3">
+                                      <input class="form-control border-0 bg-white input-row " placeholder="Debts" />
+                                      <small class="form-text position-absolute text-danger d-none value-danger" >Debts</small>
+                                    </div>
+                                    <a href="#" class="btn btn-primary create-btn add_new_row  border-radius-2 height-auto">
                                       <i class="bi bi-plus-circle-fill"></i>
                                       Add new
                                     </a>
-                                  </div>
+                                  </div>       
                                 </div>
                                 <div class="table-responsive bg-light mt-4 border-radius-20">
                                   <div class="secondTableContainer">
-                                    <table id="myTable" class="table9">
+                                    <table id="myTable" class="table">
                                       <thead>
                                         <tr class="tr">
                                           <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
@@ -1380,14 +1455,20 @@
                                           <td class="style-td">
                                             Office
                                           </td>
-                                          <td class="style-td">
-                                            <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
-                                              <img src="../images/client-person.svg" class="image-actions">
-                                            </button>
-                                            <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
-                                              <i class="fa fa-trash"></i>
-                                            </button>
-                                          </td>
+                                          
+<td class="style-td">
+  <button type="button" class="btn btn-secondary dataTableButtons edite-Role">
+    <i class="fa fa-pen"></i>
+  </button>
+  <div class="tooltip-left btn btn-secondary dataTableButtons">
+    <img src="../images/client-person.svg" class="image-actions" />
+    <span class="tooltiptext">Tooltip text</span>
+  </div>
+  <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom">
+    <i class="fa fa-trash"></i>
+  </button>
+</td>
+
                                         </tr>
                                       </tbody>
                                     </table>
@@ -1399,25 +1480,26 @@
                         </div>
                         <div class="d-flex">
                           <div class="col">
-                            <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow" style="background:#F2F2F2 !important;">
+                            <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow px-0" style="background:#F2F2F2 !important;">
                               <div class="px-4">
                                 <div class="d-flex justify-content-between">
                                   <div class="py-2 d-flex justify-content-start align-items-center flex-column-responsive">
                                     <h4 class="py-2">Payments</h4>
                                   </div>
                                   <div class="d-flex justify-content-start align-items-center ">
-                                    <a href="#" class="btn btn-secondary2 mx-3" style="background: #E8E8E8 !important;">
-                                      Credit Card
-                                    </a>
-                                    <a href="#" class="btn btn-primary create-btn add_new_row10 border-radius-2 height-auto">
+                                    <div class=" mx-3">
+                                      <input class="form-control border-0 bg-white input-row " placeholder="Payments" />
+                                      <small class="form-text position-absolute text-danger d-none value-danger" >Payments</small>
+                                    </div>
+                                    <a href="#" class="btn btn-primary create-btn add_new_row  border-radius-2 height-auto">
                                       <i class="bi bi-plus-circle-fill"></i>
                                       Add new
                                     </a>
-                                  </div>
+                                  </div>                                 
                                 </div>
                                 <div class="table-responsive bg-light mt-4 border-radius-20">
                                   <div class="secondTableContainer">
-                                    <table id="myTable" class="table10">
+                                    <table id="myTable" class="table">
                                       <thead>
                                         <tr class="tr">
                                           <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
@@ -1454,14 +1536,20 @@
                                           <td class="style-td">
                                             Office
                                           </td>
-                                          <td class="style-td">
-                                            <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
-                                              <img src="../images/client-person.svg" class="image-actions">
-                                            </button>
-                                            <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
-                                              <i class="fa fa-trash"></i>
-                                            </button>
-                                          </td>
+                                          
+<td class="style-td">
+  <button type="button" class="btn btn-secondary dataTableButtons edite-Role">
+    <i class="fa fa-pen"></i>
+  </button>
+  <div class="tooltip-left btn btn-secondary dataTableButtons">
+    <img src="../images/client-person.svg" class="image-actions" />
+    <span class="tooltiptext">Tooltip text</span>
+  </div>
+  <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom">
+    <i class="fa fa-trash"></i>
+  </button>
+</td>
+
                                         </tr>
                                       </tbody>
                                     </table>
@@ -1471,17 +1559,18 @@
                             </div>
                           </div>
                           <div class="col">
-                            <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow" style="background:#F2F2F2 !important;">
+                            <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow px-0" style="background:#F2F2F2 !important;">
                               <div class="px-4">
                                 <div class="d-flex justify-content-between">
                                   <div class="py-2 d-flex justify-content-start align-items-center flex-column-responsive">
                                     <h4 class="py-2">Invoice Type</h4>
                                   </div>
                                   <div class="d-flex justify-content-start align-items-center ">
-                                    <a href="#" class="btn btn-secondary2 mx-3" style="background: #E8E8E8 !important;">
-                                      Debit
-                                    </a>
-                                    <a href="#" class="btn btn-primary create-btn add_new_row11 border-radius-2 height-auto">
+                                    <div class=" mx-3">
+                                      <input class="form-control border-0 bg-white input-row " placeholder="Invoice Type" />
+                                      <small class="form-text position-absolute text-danger d-none value-danger" >Invoice Type</small>
+                                    </div>
+                                    <a href="#" class="btn btn-primary create-btn add_new_row  border-radius-2 height-auto">
                                       <i class="bi bi-plus-circle-fill"></i>
                                       Add new
                                     </a>
@@ -1489,7 +1578,7 @@
                                 </div>
                                 <div class="table-responsive bg-light mt-4 border-radius-20">
                                   <div class="secondTableContainer">
-                                    <table id="myTable" class="table11">
+                                    <table id="myTable" class="table">
                                       <thead>
                                         <tr class="tr">
                                           <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
@@ -1526,14 +1615,20 @@
                                           <td class="style-td">
                                             Office
                                           </td>
-                                          <td class="style-td">
-                                            <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
-                                              <img src="../images/client-person.svg" class="image-actions">
-                                            </button>
-                                            <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
-                                              <i class="fa fa-trash"></i>
-                                            </button>
-                                          </td>
+                                         
+<td class="style-td">
+  <button type="button" class="btn btn-secondary dataTableButtons edite-Role">
+    <i class="fa fa-pen"></i>
+  </button>
+  <div class="tooltip-left btn btn-secondary dataTableButtons">
+    <img src="../images/client-person.svg" class="image-actions" />
+    <span class="tooltiptext">Tooltip text</span>
+  </div>
+  <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom">
+    <i class="fa fa-trash"></i>
+  </button>
+</td>
+
                                         </tr>
                                       </tbody>
                                     </table>
@@ -1545,23 +1640,18 @@
                         </div>
                         <div class="d-flex">
                           <div class="col">
-                            <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow" style="background:#F2F2F2 !important;">
+                            <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow px-0" style="background:#F2F2F2 !important;">
                               <div class="px-4">
                                 <div class="d-flex justify-content-between">
                                   <div class="py-2 d-flex justify-content-start align-items-center flex-column-responsive">
                                     <h4 class="py-2">Payment Conditions</h4>
                                   </div>
                                   <div class="d-flex justify-content-start align-items-center ">
-                                    <a href="#" class="btn btn-secondary2 mx-3" style="background: #E8E8E8 !important;">
-                                      30
-                                    </a>
-                                    <a href="#" class="btn btn-secondary2 mx-3" style="background: #E8E8E8 !important;">
-                                      Days
-                                    </a>
-                                    <a href="#" class="btn btn-secondary2 mx-3" style="background: #E8E8E8 !important;">
-                                      30 day unit
-                                    </a>
-                                    <a href="#" class="btn btn-primary create-btn add_new_row12 border-radius-2 height-auto">
+                                    <div class=" mx-3">
+                                      <input class="form-control border-0 bg-white input-row " placeholder="Payment Conditions" />
+                                      <small class="form-text position-absolute text-danger d-none value-danger" >Payment Conditions</small>
+                                    </div>
+                                    <a href="#" class="btn btn-primary create-btn add_new_row  border-radius-2 height-auto">
                                       <i class="bi bi-plus-circle-fill"></i>
                                       Add new
                                     </a>
@@ -1569,7 +1659,7 @@
                                 </div>
                                 <div class="table-responsive bg-light mt-4 border-radius-20">
                                   <div class="secondTableContainer">
-                                    <table id="myTable" class="table12">
+                                    <table id="myTable" class="table">
                                       <thead>
                                         <tr class="tr">
                                           <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
@@ -1606,14 +1696,20 @@
                                           <td class="style-td">
                                             Office
                                           </td>
-                                          <td class="style-td">
-                                            <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
-                                              <img src="../images/client-person.svg" class="image-actions">
-                                            </button>
-                                            <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
-                                              <i class="fa fa-trash"></i>
-                                            </button>
-                                          </td>
+                                          
+<td class="style-td">
+  <button type="button" class="btn btn-secondary dataTableButtons edite-Role">
+    <i class="fa fa-pen"></i>
+  </button>
+  <div class="tooltip-left btn btn-secondary dataTableButtons">
+    <img src="../images/client-person.svg" class="image-actions" />
+    <span class="tooltiptext">Tooltip text</span>
+  </div>
+  <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom">
+    <i class="fa fa-trash"></i>
+  </button>
+</td>
+
                                         </tr>
                                       </tbody>
                                     </table>
@@ -1623,17 +1719,18 @@
                             </div>
                           </div>
                           <div class="col">
-                            <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow" style="background:#F2F2F2 !important;">
+                            <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow px-0" style="background:#F2F2F2 !important;">
                               <div class="px-4">
                                 <div class="d-flex justify-content-between">
                                   <div class="py-2 d-flex justify-content-start align-items-center flex-column-responsive">
                                     <h4 class="py-2">Add Currency</h4>
                                   </div>
                                   <div class="d-flex justify-content-start align-items-center ">
-                                    <a href="#" class="btn btn-secondary2 mx-3" style="background: #E8E8E8 !important;">
-                                      SEK
-                                    </a>
-                                    <a href="#" class="btn btn-primary create-btn add_new_row13 border-radius-2 height-auto">
+                                    <div class=" mx-3">
+                                      <input class="form-control border-0 bg-white input-row " placeholder="Currency" />
+                                      <small class="form-text position-absolute text-danger d-none value-danger" >Currency</small>
+                                    </div>
+                                    <a href="#" class="btn btn-primary create-btn add_new_row  border-radius-2 height-auto">
                                       <i class="bi bi-plus-circle-fill"></i>
                                       Add new
                                     </a>
@@ -1641,7 +1738,7 @@
                                 </div>
                                 <div class="table-responsive bg-light mt-4 border-radius-20">
                                   <div class="secondTableContainer">
-                                    <table id="myTable" class="table13">
+                                    <table id="myTable" class="table">
                                       <thead>
                                         <tr class="tr">
                                           <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
@@ -1678,14 +1775,20 @@
                                           <td class="style-td">
                                             Office
                                           </td>
-                                          <td class="style-td">
-                                            <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
-                                              <img src="../images/client-person.svg" class="image-actions">
-                                            </button>
-                                            <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
-                                              <i class="fa fa-trash"></i>
-                                            </button>
-                                          </td>
+                                          
+<td class="style-td">
+  <button type="button" class="btn btn-secondary dataTableButtons edite-Role">
+    <i class="fa fa-pen"></i>
+  </button>
+  <div class="tooltip-left btn btn-secondary dataTableButtons">
+    <img src="../images/client-person.svg" class="image-actions" />
+    <span class="tooltiptext">Tooltip text</span>
+  </div>
+  <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom">
+    <i class="fa fa-trash"></i>
+  </button>
+</td>
+
                                         </tr>
                                       </tbody>
                                     </table>
@@ -1697,17 +1800,18 @@
                         </div>
                         <div class="d-flex">
                           <div class="col-md-6 col-12">
-                            <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow" style="background:#F2F2F2 !important;">
+                            <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow px-0" style="background:#F2F2F2 !important;">
                               <div class="px-4">
                                 <div class="d-flex justify-content-between">
                                   <div class="py-2 d-flex justify-content-start align-items-center flex-column-responsive">
                                     <h4 class="py-2">Invoicing Period</h4>
                                   </div>
                                   <div class="d-flex justify-content-start align-items-center ">
-                                    <a href="#" class="btn btn-secondary2 mx-3" style="background: #E8E8E8 !important;">
-                                      Monthly
-                                    </a>
-                                    <a href="#" class="btn btn-primary create-btn add_new_row14 border-radius-2 height-auto">
+                                    <div class=" mx-3">
+                                      <input class="form-control border-0 bg-white input-row " placeholder="Invoicing Period" />
+                                      <small class="form-text position-absolute text-danger d-none value-danger" >add Invoicing Period</small>
+                                    </div>
+                                    <a href="#" class="btn btn-primary create-btn add_new_row  border-radius-2 height-auto">
                                       <i class="bi bi-plus-circle-fill"></i>
                                       Add new
                                     </a>
@@ -1715,7 +1819,7 @@
                                 </div>
                                 <div class="table-responsive bg-light mt-4 border-radius-20">
                                   <div class="secondTableContainer">
-                                    <table id="myTable" class="table14">
+                                    <table id="myTable" class="table">
                                       <thead>
                                         <tr class="tr">
                                           <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
@@ -1752,14 +1856,20 @@
                                           <td class="style-td">
                                             Office
                                           </td>
-                                          <td class="style-td">
-                                            <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
-                                              <img src="../images/client-person.svg" class="image-actions">
-                                            </button>
-                                            <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
-                                              <i class="fa fa-trash"></i>
-                                            </button>
-                                          </td>
+                                          
+<td class="style-td">
+  <button type="button" class="btn btn-secondary dataTableButtons edite-Role">
+    <i class="fa fa-pen"></i>
+  </button>
+  <div class="tooltip-left btn btn-secondary dataTableButtons">
+    <img src="../images/client-person.svg" class="image-actions" />
+    <span class="tooltiptext">Tooltip text</span>
+  </div>
+  <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom">
+    <i class="fa fa-trash"></i>
+  </button>
+</td>
+
                                         </tr>
                                       </tbody>
                                     </table>
@@ -1774,17 +1884,18 @@
                       <div class="tab-pane fade table-tab-pane" id="section4" role="tabpanel1" aria-labelledby="not-active">
                         <div class="d-flex">
                           <div class="col">
-                            <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow" style="background:#F2F2F2 !important;">
+                            <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow px-0" style="background:#F2F2F2 !important;">
                               <div class="px-4">
                                 <div class="d-flex justify-content-between">
                                   <div class="py-2 d-flex justify-content-start align-items-center flex-column-responsive">
                                     <h4 class="py-2">Unit Price</h4>
                                   </div>
                                   <div class="d-flex justify-content-start align-items-center ">
-                                    <a href="#" class="btn btn-secondary2 mx-3" style="background: #E8E8E8 !important;">
-                                      Hour
-                                    </a>
-                                    <a href="#" class="btn btn-primary create-btn add_new_row15 border-radius-2 height-auto">
+                                    <div class=" mx-3">
+                                      <input class="form-control border-0 bg-white input-row " placeholder="Unit Price" />
+                                      <small class="form-text position-absolute text-danger d-none value-danger" >Unit Price</small>
+                                    </div>
+                                    <a href="#" class="btn btn-primary create-btn add_new_row  border-radius-2 height-auto">
                                       <i class="bi bi-plus-circle-fill"></i>
                                       Add new
                                     </a>
@@ -1792,7 +1903,7 @@
                                 </div>
                                 <div class="table-responsive bg-light mt-4 border-radius-20">
                                       <div class="secondTableContainer">
-                                        <table id="myTable" class="table15">
+                                        <table id="myTable" class="table">
                                           <thead>
                                             <tr class="tr">
                                               <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
@@ -1829,14 +1940,20 @@
                                               <td class="style-td">
                                                 Office
                                               </td>
-                                              <td class="style-td">
-                                                <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
-                                                  <img src="../images/client-person.svg" class="image-actions">
-                                                </button>
-                                                <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
-                                                  <i class="fa fa-trash"></i>
-                                                </button>
-                                              </td>
+                                              
+<td class="style-td">
+  <button type="button" class="btn btn-secondary dataTableButtons edite-Role">
+    <i class="fa fa-pen"></i>
+  </button>
+  <div class="tooltip-left btn btn-secondary dataTableButtons">
+    <img src="../images/client-person.svg" class="image-actions" />
+    <span class="tooltiptext">Tooltip text</span>
+  </div>
+  <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom">
+    <i class="fa fa-trash"></i>
+  </button>
+</td>
+
                                             </tr>
                                           </tbody>
                                         </table>
@@ -1846,17 +1963,18 @@
                             </div>
                           </div>
                           <div class="col">
-                            <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow" style="background:#F2F2F2 !important;">
+                            <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow px-0" style="background:#F2F2F2 !important;">
                               <div class="px-4">
                                 <div class="d-flex justify-content-between">
                                   <div class="py-2 d-flex justify-content-start align-items-center flex-column-responsive">
                                     <h4 class="py-2">Type of Article</h4>
                                   </div>
                                   <div class="d-flex justify-content-start align-items-center ">
-                                    <a href="#" class="btn btn-secondary2 mx-3" style="background: #E8E8E8 !important;">
-                                      One off
-                                    </a>
-                                    <a href="#" class="btn btn-primary create-btn add_new_row16 border-radius-2 height-auto">
+                                    <div class=" mx-3">
+                                      <input class="form-control border-0 bg-white input-row " placeholder="Article Type" />
+                                      <small class="form-text position-absolute text-danger d-none value-danger" >Article Type</small>
+                                    </div>
+                                    <a href="#" class="btn btn-primary create-btn add_new_row  border-radius-2 height-auto">
                                       <i class="bi bi-plus-circle-fill"></i>
                                       Add new
                                     </a>
@@ -1864,7 +1982,7 @@
                                 </div>
                                 <div class="table-responsive bg-light mt-4 border-radius-20">
                                   <div class="secondTableContainer">
-                                    <table id="myTable" class="table16">
+                                    <table id="myTable" class="table">
                                       <thead>
                                         <tr class="tr">
                                           <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
@@ -1901,13 +2019,20 @@
                                           <td class="style-td">
                                             Office
                                           </td>
-                                          <td class="style-td">
-                                            <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
-                                              <img src="../images/client-person.svg" class="image-actions">
-                                            </button>
-                                            <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
-                                              <i class="fa fa-trash"></i>
-                                            </button>
+                                          
+<td class="style-td">
+  <button type="button" class="btn btn-secondary dataTableButtons edite-Role">
+    <i class="fa fa-pen"></i>
+  </button>
+  <div class="tooltip-left btn btn-secondary dataTableButtons">
+    <img src="../images/client-person.svg" class="image-actions" />
+    <span class="tooltiptext">Tooltip text</span>
+  </div>
+  <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom">
+    <i class="fa fa-trash"></i>
+  </button>
+</td>
+
                                           </td>
                                         </tr>
                                       </tbody>
@@ -1920,17 +2045,18 @@
                         </div>
                         <div class="d-flex">
                           <div class="col">
-                            <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow" style="background:#F2F2F2 !important;">
+                            <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow px-0" style="background:#F2F2F2 !important;">
                               <div class="px-4">
                                 <div class="d-flex justify-content-between">
                                   <div class="py-2 d-flex justify-content-start align-items-center flex-column-responsive">
                                     <h4 class="py-2">Room Type</h4>
                                   </div>
                                   <div class="d-flex justify-content-start align-items-center ">
-                                    <a href="#" class="btn btn-secondary2 mx-3" style="background: #E8E8E8 !important;">
-                                      Office
-                                    </a>
-                                    <a href="#" class="btn btn-primary create-btn add_new_row17 border-radius-2 height-auto">
+                                    <div class=" mx-3">
+                                      <input class="form-control border-0 bg-white input-row " placeholder="Room Type" />
+                                      <small class="form-text position-absolute text-danger d-none value-danger" >Room Type</small>
+                                    </div>
+                                    <a href="#" class="btn btn-primary create-btn add_new_row  border-radius-2 height-auto">
                                       <i class="bi bi-plus-circle-fill"></i>
                                       Add new
                                     </a>
@@ -1938,7 +2064,7 @@
                                 </div>
                                 <div class="table-responsive bg-light mt-4 border-radius-20">
                                   <div class="secondTableContainer">
-                                    <table id="myTable" class="table17">
+                                    <table id="myTable" class="table">
                                       <thead>
                                         <tr class="tr">
                                           <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
@@ -1975,14 +2101,20 @@
                                           <td class="style-td">
                                             Office
                                           </td>
-                                          <td class="style-td">
-                                            <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
-                                              <img src="../images/client-person.svg" class="image-actions">
-                                            </button>
-                                            <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
-                                              <i class="fa fa-trash"></i>
-                                            </button>
-                                          </td>
+                                          
+<td class="style-td">
+  <button type="button" class="btn btn-secondary dataTableButtons edite-Role">
+    <i class="fa fa-pen"></i>
+  </button>
+  <div class="tooltip-left btn btn-secondary dataTableButtons">
+    <img src="../images/client-person.svg" class="image-actions" />
+    <span class="tooltiptext">Tooltip text</span>
+  </div>
+  <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom">
+    <i class="fa fa-trash"></i>
+  </button>
+</td>
+
                                         </tr>
                                       </tbody>
                                     </table>
@@ -1992,17 +2124,18 @@
                             </div>
                           </div>
                           <div class="col">
-                            <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow" style="background:#F2F2F2 !important;">
+                            <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow px-0" style="background:#F2F2F2 !important;">
                               <div class="px-4">
                                 <div class="d-flex justify-content-between">
                                   <div class="py-2 d-flex justify-content-start align-items-center flex-column-responsive">
                                     <h4 class="py-2">Meeting Type</h4>
                                   </div>
                                   <div class="d-flex justify-content-start align-items-center ">
-                                    <a href="#" class="btn btn-secondary2 mx-3" style="background: #E8E8E8 !important;">
-                                      Conference
-                                    </a>
-                                    <a href="#" class="btn btn-primary create-btn add_new_row18 border-radius-2 height-auto">
+                                    <div class=" mx-3">
+                                      <input class="form-control border-0 bg-white input-row " placeholder="Meeting Type" />
+                                      <small class="form-text position-absolute text-danger d-none value-danger" >Meeting Type</small>
+                                    </div>
+                                    <a href="#" class="btn btn-primary create-btn add_new_row  border-radius-2 height-auto">
                                       <i class="bi bi-plus-circle-fill"></i>
                                       Add new
                                     </a>
@@ -2010,7 +2143,7 @@
                                 </div>
                                 <div class="table-responsive bg-light mt-4 border-radius-20">
                                   <div class="secondTableContainer">
-                                    <table id="myTable" class="table18">
+                                    <table id="myTable" class="table">
                                       <thead>
                                         <tr class="tr">
                                           <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
@@ -2047,14 +2180,20 @@
                                           <td class="style-td">
                                             Office
                                           </td>
-                                          <td class="style-td">
-                                            <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
-                                              <img src="../images/client-person.svg" class="image-actions">
-                                            </button>
-                                            <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
-                                              <i class="fa fa-trash"></i>
-                                            </button>
-                                          </td>
+                                          
+<td class="style-td">
+  <button type="button" class="btn btn-secondary dataTableButtons edite-Role">
+    <i class="fa fa-pen"></i>
+  </button>
+  <div class="tooltip-left btn btn-secondary dataTableButtons">
+    <img src="../images/client-person.svg" class="image-actions" />
+    <span class="tooltiptext">Tooltip text</span>
+  </div>
+  <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom">
+    <i class="fa fa-trash"></i>
+  </button>
+</td>
+
                                         </tr>
                                       </tbody>
                                     </table>
@@ -2069,17 +2208,18 @@
                       <div class="tab-pane fade table-tab-pane" id="section5" role="tabpanel1" aria-labelledby="not-active">
                         <div class="d-flex">
                           <div class="col">
-                            <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow" style="background:#F2F2F2 !important;">
+                            <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow px-0" style="background:#F2F2F2 !important;">
                               <div class="px-4">
                                 <div class="d-flex justify-content-between">
                                   <div class="py-2 d-flex justify-content-start align-items-center flex-column-responsive">
                                     <h4 class="py-2">Index</h4>
                                   </div>
                                   <div class="d-flex justify-content-start align-items-center ">
-                                    <a href="#" class="btn btn-secondary2 mx-3" style="background: #E8E8E8 !important;">
-                                      1%
-                                    </a>
-                                    <a href="#" class="btn btn-primary create-btn add_new_row19 border-radius-2 height-auto">
+                                    <div class=" mx-3">
+                                      <input class="form-control border-0 bg-white input-row " placeholder="Index" />
+                                      <small class="form-text position-absolute text-danger d-none value-danger" >Index</small>
+                                    </div>
+                                    <a href="#" class="btn btn-primary create-btn add_new_row  border-radius-2 height-auto">
                                       <i class="bi bi-plus-circle-fill"></i>
                                       Add new
                                     </a>
@@ -2087,7 +2227,7 @@
                                 </div>
                                 <div class="table-responsive bg-light mt-4 border-radius-20">
                                   <div class="secondTableContainer">
-                                    <table id="myTable" class="table19">
+                                    <table id="myTable" class="table">
                                       <thead>
                                         <tr class="tr">
                                           <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
@@ -2124,14 +2264,20 @@
                                           <td class="style-td">
                                             Office
                                           </td>
-                                          <td class="style-td">
-                                            <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
-                                              <img src="../images/client-person.svg" class="image-actions">
-                                            </button>
-                                            <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
-                                              <i class="fa fa-trash"></i>
-                                            </button>
-                                          </td>
+                                         
+<td class="style-td">
+  <button type="button" class="btn btn-secondary dataTableButtons edite-Role">
+    <i class="fa fa-pen"></i>
+  </button>
+  <div class="tooltip-left btn btn-secondary dataTableButtons">
+    <img src="../images/client-person.svg" class="image-actions" />
+    <span class="tooltiptext">Tooltip text</span>
+  </div>
+  <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom">
+    <i class="fa fa-trash"></i>
+  </button>
+</td>
+
                                         </tr>
                                       </tbody>
                                     </table>
@@ -2141,17 +2287,18 @@
                             </div>
                           </div>
                           <div class="col">
-                            <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow" style="background:#F2F2F2 !important;">
+                            <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow px-0" style="background:#F2F2F2 !important;">
                               <div class="px-4">
                                 <div class="d-flex justify-content-between">
                                   <div class="py-2 d-flex justify-content-start align-items-center flex-column-responsive">
                                     <h4 class="py-2">Type Of Contract</h4>
                                   </div>
                                   <div class="d-flex justify-content-start align-items-center ">
-                                    <a href="#" class="btn btn-secondary2 mx-3" style="background: #E8E8E8 !important;">
-                                      Office
-                                    </a>
-                                    <a href="#" class="btn btn-primary create-btn add_new_row20 border-radius-2 height-auto">
+                                    <div class=" mx-3">
+                                      <input class="form-control border-0 bg-white input-row " placeholder="Contract" />
+                                      <small class="form-text position-absolute text-danger d-none value-danger" >Type Of Contract </small>
+                                    </div>
+                                    <a href="#" class="btn btn-primary create-btn add_new_row  border-radius-2 height-auto">
                                       <i class="bi bi-plus-circle-fill"></i>
                                       Add new
                                     </a>
@@ -2159,7 +2306,7 @@
                                 </div>
                                 <div class="table-responsive bg-light mt-4 border-radius-20">
                                   <div class="secondTableContainer">
-                                    <table id="myTable" class="table20">
+                                    <table id="myTable" class="table">
                                       <thead>
                                         <tr class="tr">
                                           <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
@@ -2196,14 +2343,20 @@
                                           <td class="style-td">
                                             Office
                                           </td>
-                                          <td class="style-td">
-                                            <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
-                                              <img src="../images/client-person.svg" class="image-actions">
-                                            </button>
-                                            <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
-                                              <i class="fa fa-trash"></i>
-                                            </button>
-                                          </td>
+                                          
+<td class="style-td">
+  <button type="button" class="btn btn-secondary dataTableButtons edite-Role">
+    <i class="fa fa-pen"></i>
+  </button>
+  <div class="tooltip-left btn btn-secondary dataTableButtons">
+    <img src="../images/client-person.svg" class="image-actions" />
+    <span class="tooltiptext">Tooltip text</span>
+  </div>
+  <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom">
+    <i class="fa fa-trash"></i>
+  </button>
+</td>
+
                                         </tr>
                                       </tbody>
                                     </table>
@@ -2215,23 +2368,24 @@
                         </div>
                         <div class="d-flex">
                           <div class="col">
-                            <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow" style="background:#F2F2F2 !important;">
+                            <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow px-0" style="background:#F2F2F2 !important;">
                               <div class="px-4">
                                 <div class="d-flex justify-content-between">
                                   <div class="py-2 d-flex justify-content-start align-items-center flex-column-responsive">
-                                    <h4 class="py-2">Termination Conditions Supplier</h4>
+                                    <h5 class="py-2">Termination Conditions Supplier</h5>
                                   </div>
                                   <div class="d-flex justify-content-start align-items-center ">
-                                    <a href="#" class="btn btn-secondary2 mx-3" style="background: #E8E8E8 !important;">
-                                      30
-                                    </a>
-                                    <a href="#" class="btn btn-secondary2 mx-3" style="background: #E8E8E8 !important;">
-                                      Days
-                                    </a>
-                                    <a href="#" class="btn btn-secondary2 mx-3" style="background: #E8E8E8 !important;">
-                                      30 day unit
-                                    </a>
-                                    <a href="#" class="btn btn-primary create-btn add_new_row21 border-radius-2 height-auto">
+                                    <div class=" ">
+                                      <input class="form-control border-0 bg-white input-row " placeholder="QTY" />
+                                      <small class="form-text position-absolute text-danger d-none value-danger" >Termination Conditions Supplier </small>
+                                    </div>
+                                    <select class="form-control border-0 bg-white input-row mx-1 px-1 "  placeholder="Unit "  style=" width: 80px; ">
+                                      <option>Days1</option>
+                                      <option>Days 2</option>
+                                      <option>Days 2</option>
+                                    </select>
+                                    <input class="form-control border-0 bg-white input-row mx-1" placeholder="30 day unit" />
+                                    <a href="#" class="btn btn-primary create-btn add_new_row  border-radius-2 height-auto">
                                       <i class="bi bi-plus-circle-fill"></i>
                                       Add new
                                     </a>
@@ -2239,7 +2393,7 @@
                                 </div>
                                 <div class="table-responsive bg-light mt-4 border-radius-20">
                                   <div class="secondTableContainer">
-                                    <table id="myTable" class="table21">
+                                    <table id="myTable" class="table">
                                       <thead>
                                         <tr class="tr">
                                           <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
@@ -2284,16 +2438,28 @@
                                             123546
                                           </td>
                                           <td class="style-td">
-                                            Office
+                                            20
                                           </td>
                                           <td class="style-td">
-                                            <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
-                                              <img src="../images/client-person.svg" class="image-actions">
-                                            </button>
-                                            <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
-                                              <i class="fa fa-trash"></i>
-                                            </button>
+                                            Unit
                                           </td>
+                                          <td class="style-td">
+                                            Description
+                                          </td>
+                                          
+<td class="style-td">
+  <button type="button" class="btn btn-secondary dataTableButtons edite-Role">
+    <i class="fa fa-pen"></i>
+  </button>
+  <div class="tooltip-left btn btn-secondary dataTableButtons">
+    <img src="../images/client-person.svg" class="image-actions" />
+    <span class="tooltiptext">Tooltip text</span>
+  </div>
+  <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom">
+    <i class="fa fa-trash"></i>
+  </button>
+</td>
+
                                         </tr>
                                       </tbody>
                                     </table>
@@ -2303,23 +2469,24 @@
                             </div>
                           </div>
                           <div class="col">
-                            <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow" style="background:#F2F2F2 !important;">
+                            <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow px-0" style="background:#F2F2F2 !important;">
                               <div class="px-4">
                                 <div class="d-flex justify-content-between">
                                   <div class="py-2 d-flex justify-content-start align-items-center flex-column-responsive">
                                     <h4 class="py-2">Meeting Type</h4>
                                   </div>
                                   <div class="d-flex justify-content-start align-items-center ">
-                                    <a href="#" class="btn btn-secondary2 mx-3" style="background: #E8E8E8 !important;">
-                                      30
-                                    </a>
-                                    <a href="#" class="btn btn-secondary2 mx-3" style="background: #E8E8E8 !important;">
-                                      Days
-                                    </a>
-                                    <a href="#" class="btn btn-secondary2 mx-3" style="background: #E8E8E8 !important;">
-                                      30 day unit
-                                    </a>
-                                    <a href="#" class="btn btn-primary create-btn add_new_row22 border-radius-2 height-auto">
+                                    <div class=" mx-3">
+                                      <input class="form-control border-0 bg-white input-row " placeholder="QTY" />
+                                      <small class="form-text position-absolute text-danger d-none value-danger" >Termination Meeting Type </small>
+                                    </div>
+                                    <select class="form-control border-0 bg-white input-row mx-1 px-1 "  placeholder="Unit "  style=" width: 80px; ">
+                                      <option>Days1</option>
+                                      <option>Days 2</option>
+                                      <option>Days 2</option>
+                                    </select>
+                                    <input class="form-control border-0 bg-white input-row mx-1" placeholder="30 day unit" />
+                                    <a href="#" class="btn btn-primary create-btn add_new_row  border-radius-2 height-auto">
                                       <i class="bi bi-plus-circle-fill"></i>
                                       Add new
                                     </a>
@@ -2327,7 +2494,7 @@
                                 </div>
                                 <div class="table-responsive bg-light mt-4 border-radius-20">
                                   <div class="secondTableContainer">
-                                    <table id="myTable" class="table22">
+                                    <table id="myTable" class="table">
                                       <thead>
                                         <tr class="tr">
                                           <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
@@ -2374,14 +2541,20 @@
                                           <td class="style-td">
                                             Office
                                           </td>
-                                          <td class="style-td">
-                                            <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
-                                              <img src="../images/client-person.svg" class="image-actions">
-                                            </button>
-                                            <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
-                                              <i class="fa fa-trash"></i>
-                                            </button>
-                                          </td>
+                                          
+<td class="style-td">
+  <button type="button" class="btn btn-secondary dataTableButtons edite-Role">
+    <i class="fa fa-pen"></i>
+  </button>
+  <div class="tooltip-left btn btn-secondary dataTableButtons">
+    <img src="../images/client-person.svg" class="image-actions" />
+    <span class="tooltiptext">Tooltip text</span>
+  </div>
+  <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom">
+    <i class="fa fa-trash"></i>
+  </button>
+</td>
+
                                         </tr>
                                       </tbody>
                                     </table>
@@ -2393,23 +2566,24 @@
                         </div>
                         <div class="d-flex">
                           <div class="col-md-6 col-12">
-                            <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow" style="background:#F2F2F2 !important;">
+                            <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow px-0" style="background:#F2F2F2 !important;">
                               <div class="px-4">
                                 <div class="d-flex justify-content-between">
                                   <div class="py-2 d-flex justify-content-start align-items-center flex-column-responsive">
                                     <h4 class="py-2">Termination Conditions </h4>
                                   </div>
                                   <div class="d-flex justify-content-start align-items-center ">
-                                    <a href="#" class="btn btn-secondary2 mx-3" style="background: #E8E8E8 !important;">
-                                      30
-                                    </a>
-                                    <a href="#" class="btn btn-secondary2 mx-3" style="background: #E8E8E8 !important;">
-                                      Days
-                                    </a>
-                                    <a href="#" class="btn btn-secondary2 mx-3" style="background: #E8E8E8 !important;">
-                                      30 day unit
-                                    </a>
-                                    <a href="#" class="btn btn-primary create-btn add_new_row23 border-radius-2 height-auto">
+                                    <div class=" mx-3">
+                                      <input class="form-control border-0 bg-white input-row " placeholder="QTY" />
+                                      <small class="form-text position-absolute text-danger d-none value-danger" >Termination Conditions  </small>
+                                    </div>
+                                    <select class="form-control border-0 bg-white input-row mx-1 px-1 "  placeholder="Unit "  style=" width: 80px; ">
+                                      <option>Days1</option>
+                                      <option>Days 2</option>
+                                      <option>Days 2</option>
+                                    </select>
+                                    <input class="form-control border-0 bg-white input-row mx-1" placeholder="30 day unit" />
+                                    <a href="#" class="btn btn-primary create-btn add_new_row  border-radius-2 height-auto">
                                       <i class="bi bi-plus-circle-fill"></i>
                                       Add new
                                     </a>
@@ -2417,7 +2591,7 @@
                                 </div>
                                 <div class="table-responsive bg-light mt-4 border-radius-20">
                                   <div class="secondTableContainer">
-                                    <table id="myTable" class="table23">
+                                    <table id="myTable" class="table">
                                       <thead>
                                         <tr class="tr">
                                           <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
@@ -2464,14 +2638,20 @@
                                           <td class="style-td">
                                             Office
                                           </td>
-                                          <td class="style-td">
-                                            <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
-                                              <img src="../images/client-person.svg" class="image-actions">
-                                            </button>
-                                            <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
-                                              <i class="fa fa-trash"></i>
-                                            </button>
-                                          </td>
+                                          
+<td class="style-td">
+  <button type="button" class="btn btn-secondary dataTableButtons edite-Role">
+    <i class="fa fa-pen"></i>
+  </button>
+  <div class="tooltip-left btn btn-secondary dataTableButtons">
+    <img src="../images/client-person.svg" class="image-actions" />
+    <span class="tooltiptext">Tooltip text</span>
+  </div>
+  <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom">
+    <i class="fa fa-trash"></i>
+  </button>
+</td>
+
                                         </tr>
                                       </tbody>
                                     </table>
@@ -2486,17 +2666,18 @@
                       <div class="tab-pane fade table-tab-pane" id="section6" role="tabpanel1" aria-labelledby="not-active">
                         <div class="d-flex">
                           <div class="col">
-                            <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow" style="background:#F2F2F2 !important;">
+                            <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow px-0" style="background:#F2F2F2 !important;">
                               <div class="px-4">
                                 <div class="d-flex justify-content-between">
                                   <div class="py-2 d-flex justify-content-start align-items-center flex-column-responsive">
                                     <h4 class="py-2">Add new  customer category</h4>
                                   </div>
                                   <div class="d-flex justify-content-start align-items-center ">
-                                    <a href="#" class="btn btn-secondary2 mx-3" style="background: #E8E8E8 !important;">
-                                      Conference
-                                    </a>
-                                    <a href="#" class="btn btn-primary create-btn add_new_row24 border-radius-2 height-auto">
+                                    <div class=" mx-3">
+                                      <input class="form-control border-0 bg-white input-row " placeholder="customer category " />
+                                      <small class="form-text position-absolute text-danger d-none value-danger" >Add new  customer category </small>
+                                    </div>
+                                    <a href="#" class="btn btn-primary create-btn add_new_row  border-radius-2 height-auto">
                                       <i class="bi bi-plus-circle-fill"></i>
                                       Add new
                                     </a>
@@ -2504,7 +2685,7 @@
                                 </div>
                                 <div class="table-responsive bg-light mt-4 border-radius-20">
                                   <div class="secondTableContainer">
-                                    <table id="myTable" class="table24">
+                                    <table id="myTable" class="table">
                                       <thead>
                                         <tr class="tr">
                                           <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
@@ -2541,14 +2722,20 @@
                                           <td class="style-td">
                                             Office
                                           </td>
-                                          <td class="style-td">
-                                            <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
-                                              <img src="../images/client-person.svg" class="image-actions">
-                                            </button>
-                                            <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
-                                              <i class="fa fa-trash"></i>
-                                            </button>
-                                          </td>
+                                          
+<td class="style-td">
+  <button type="button" class="btn btn-secondary dataTableButtons edite-Role">
+    <i class="fa fa-pen"></i>
+  </button>
+  <div class="tooltip-left btn btn-secondary dataTableButtons">
+    <img src="../images/client-person.svg" class="image-actions" />
+    <span class="tooltiptext">Tooltip text</span>
+  </div>
+  <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom">
+    <i class="fa fa-trash"></i>
+  </button>
+</td>
+
                                         </tr>
                                       </tbody>
                                     </table>
@@ -2558,17 +2745,18 @@
                             </div>
                           </div>
                           <div class="col">
-                            <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow" style="background:#F2F2F2 !important;">
+                            <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow px-0" style="background:#F2F2F2 !important;">
                               <div class="px-4">
                                 <div class="d-flex justify-content-between">
                                   <div class="py-2 d-flex justify-content-start align-items-center flex-column-responsive">
                                     <h4 class="py-2">Add  new groups</h4>
                                   </div>
                                   <div class="d-flex justify-content-start align-items-center ">
-                                    <a href="#" class="btn btn-secondary2 mx-3" style="background: #E8E8E8 !important;">
-                                      Lawyer
-                                    </a>
-                                    <a href="#" class="btn btn-primary create-btn add_new_row25 border-radius-2 height-auto">
+                                    <div class=" mx-3">
+                                      <input class="form-control border-0 bg-white input-row " placeholder=" new groups " />
+                                      <small class="form-text position-absolute text-danger d-none value-danger" >Add  new groups  </small>
+                                    </div>
+                                    <a href="#" class="btn btn-primary create-btn add_new_row  border-radius-2 height-auto">
                                       <i class="bi bi-plus-circle-fill"></i>
                                       Add new
                                     </a>
@@ -2576,7 +2764,7 @@
                                 </div>
                                 <div class="table-responsive bg-light mt-4 border-radius-20">
                                   <div class="secondTableContainer">
-                                    <table id="myTable" class="table25">
+                                    <table id="myTable" class="table">
                                       <thead>
                                         <tr class="tr">
                                           <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
@@ -2613,14 +2801,20 @@
                                           <td class="style-td">
                                             Office
                                           </td>
-                                          <td class="style-td">
-                                            <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
-                                              <img src="../images/client-person.svg" class="image-actions">
-                                            </button>
-                                            <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
-                                              <i class="fa fa-trash"></i>
-                                            </button>
-                                          </td>
+                                         
+<td class="style-td">
+  <button type="button" class="btn btn-secondary dataTableButtons edite-Role">
+    <i class="fa fa-pen"></i>
+  </button>
+  <div class="tooltip-left btn btn-secondary dataTableButtons">
+    <img src="../images/client-person.svg" class="image-actions" />
+    <span class="tooltiptext">Tooltip text</span>
+  </div>
+  <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom">
+    <i class="fa fa-trash"></i>
+  </button>
+</td>
+
                                         </tr>
                                       </tbody>
                                     </table>
@@ -2632,17 +2826,18 @@
                         </div>
                         <div class="d-flex">
                           <div class="col">
-                            <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow" style="background:#F2F2F2 !important;">
+                            <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow px-0" style="background:#F2F2F2 !important;">
                               <div class="px-4">
                                 <div class="d-flex justify-content-between">
                                   <div class="py-2 d-flex justify-content-start align-items-center flex-column-responsive">
                                     <h4 class="py-2">Status</h4>
                                   </div>
                                   <div class="d-flex justify-content-start align-items-center ">
-                                    <a href="#" class="btn btn-secondary2 mx-3" style="background: #E8E8E8 !important;">
-                                      preliminary
-                                    </a>
-                                    <a href="#" class="btn btn-primary create-btn add_new_row26 border-radius-2 height-auto">
+                                    <div class=" mx-3">
+                                      <input class="form-control border-0 bg-white input-row " placeholder="Status " />
+                                      <small class="form-text position-absolute text-danger d-none value-danger" >add Status  </small>
+                                    </div>
+                                    <a href="#" class="btn btn-primary create-btn add_new_row  border-radius-2 height-auto">
                                       <i class="bi bi-plus-circle-fill"></i>
                                       Add new
                                     </a>
@@ -2650,7 +2845,7 @@
                                 </div>
                                 <div class="table-responsive bg-light mt-4 border-radius-20">
                                   <div class="secondTableContainer">
-                                    <table id="myTable" class="table26">
+                                    <table id="myTable" class="table">
                                       <thead>
                                         <tr class="tr">
                                           <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
@@ -2687,14 +2882,20 @@
                                           <td class="style-td">
                                             Office
                                           </td>
-                                          <td class="style-td">
-                                            <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
-                                              <img src="../images/client-person.svg" class="image-actions">
-                                            </button>
-                                            <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
-                                              <i class="fa fa-trash"></i>
-                                            </button>
-                                          </td>
+                                          
+<td class="style-td">
+  <button type="button" class="btn btn-secondary dataTableButtons edite-Role">
+    <i class="fa fa-pen"></i>
+  </button>
+  <div class="tooltip-left btn btn-secondary dataTableButtons">
+    <img src="../images/client-person.svg" class="image-actions" />
+    <span class="tooltiptext">Tooltip text</span>
+  </div>
+  <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom">
+    <i class="fa fa-trash"></i>
+  </button>
+</td>
+
                                         </tr>
                                       </tbody>
                                     </table>
@@ -2704,17 +2905,18 @@
                             </div>
                           </div>
                           <div class="col">
-                            <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow" style="background:#F2F2F2 !important;">
+                            <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow px-0" style="background:#F2F2F2 !important;">
                               <div class="px-4">
                                 <div class="d-flex justify-content-between">
                                   <div class="py-2 d-flex justify-content-start align-items-center flex-column-responsive">
                                     <h4 class="py-2">Compaigns</h4>
                                   </div>
                                   <div class="d-flex justify-content-start align-items-center ">
-                                    <a href="#" class="btn btn-secondary2 mx-3" style="background: #E8E8E8 !important;">
-                                      Malmo
-                                    </a>
-                                    <a href="#" class="btn btn-primary create-btn add_new_row27 border-radius-2 height-auto">
+                                    <div class=" mx-3">
+                                      <input class="form-control border-0 bg-white input-row " placeholder="Compaigns " />
+                                      <small class="form-text position-absolute text-danger d-none value-danger" >Compaigns  </small>
+                                    </div>
+                                    <a href="#" class="btn btn-primary create-btn add_new_row  border-radius-2 height-auto">
                                       <i class="bi bi-plus-circle-fill"></i>
                                       Add new
                                     </a>
@@ -2722,7 +2924,7 @@
                                 </div>
                                 <div class="table-responsive bg-light mt-4 border-radius-20">
                                   <div class="secondTableContainer">
-                                    <table id="myTable" class="table27">
+                                    <table id="myTable" class="table">
                                       <thead>
                                         <tr class="tr">
                                           <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
@@ -2759,14 +2961,20 @@
                                           <td class="style-td">
                                             Office
                                           </td>
-                                          <td class="style-td">
-                                            <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
-                                              <img src="../images/client-person.svg" class="image-actions">
-                                            </button>
-                                            <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
-                                              <i class="fa fa-trash"></i>
-                                            </button>
-                                          </td>
+                                         
+<td class="style-td">
+  <button type="button" class="btn btn-secondary dataTableButtons edite-Role">
+    <i class="fa fa-pen"></i>
+  </button>
+  <div class="tooltip-left btn btn-secondary dataTableButtons">
+    <img src="../images/client-person.svg" class="image-actions" />
+    <span class="tooltiptext">Tooltip text</span>
+  </div>
+  <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom">
+    <i class="fa fa-trash"></i>
+  </button>
+</td>
+
                                         </tr>
                                       </tbody>
                                     </table>
@@ -2778,17 +2986,18 @@
                         </div>
                         <div class="d-flex">
                           <div class="col-md-6 col-12">
-                            <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow" style="background:#F2F2F2 !important;">
+                            <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow px-0" style="background:#F2F2F2 !important;">
                               <div class="px-4">
                                 <div class="d-flex justify-content-between">
                                   <div class="py-2 d-flex justify-content-start align-items-center flex-column-responsive">
                                     <h4 class="py-2">Type of Activities</h4>
                                   </div>
                                   <div class="d-flex justify-content-start align-items-center ">
-                                    <a href="#" class="btn btn-secondary2 mx-3" style="background: #E8E8E8 !important;">
-                                      Meetings
-                                    </a>
-                                    <a href="#" class="btn btn-primary create-btn add_new_row28 border-radius-2 height-auto">
+                                    <div class=" mx-3">
+                                      <input class="form-control border-0 bg-white input-row " placeholder="Type of Activities " />
+                                      <small class="form-text position-absolute text-danger d-none value-danger" >add Activities  </small>
+                                    </div>
+                                    <a href="#" class="btn btn-primary create-btn add_new_row  border-radius-2 height-auto">
                                       <i class="bi bi-plus-circle-fill"></i>
                                       Add new
                                     </a>
@@ -2796,7 +3005,7 @@
                                 </div>
                                 <div class="table-responsive bg-light mt-4 border-radius-20">
                                   <div class="secondTableContainer">
-                                    <table id="myTable" class="table28">
+                                    <table id="myTable" class="table">
                                       <thead>
                                         <tr class="tr">
                                           <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
@@ -2833,14 +3042,20 @@
                                           <td class="style-td">
                                             Office
                                           </td>
-                                          <td class="style-td">
-                                            <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
-                                              <img src="../images/client-person.svg" class="image-actions">
-                                            </button>
-                                            <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
-                                              <i class="fa fa-trash"></i>
-                                            </button>
-                                          </td>
+                                         
+<td class="style-td">
+  <button type="button" class="btn btn-secondary dataTableButtons edite-Role">
+    <i class="fa fa-pen"></i>
+  </button>
+  <div class="tooltip-left btn btn-secondary dataTableButtons">
+    <img src="../images/client-person.svg" class="image-actions" />
+    <span class="tooltiptext">Tooltip text</span>
+  </div>
+  <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom">
+    <i class="fa fa-trash"></i>
+  </button>
+</td>
+
                                         </tr>
                                       </tbody>
                                     </table>
@@ -2855,17 +3070,18 @@
                       <div class="tab-pane fade table-tab-pane" id="section7" role="tabpanel1" aria-labelledby="not-active">
                         <div class="d-flex">
                           <div class="col">
-                            <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow" style="background:#F2F2F2 !important;">
+                            <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow px-0" style="background:#F2F2F2 !important;">
                               <div class="px-4">
                                 <div class="d-flex justify-content-between">
                                   <div class="py-2 d-flex justify-content-start align-items-center flex-column-responsive">
                                     <h4 class="py-2">CITIES</h4>
                                   </div>
                                   <div class="d-flex justify-content-start align-items-center ">
-                                    <a href="#" class="btn btn-secondary2 mx-3" style="background: #E8E8E8 !important;">
-                                      MALMO
-                                    </a>
-                                    <a href="#" class="btn btn-primary create-btn add_new_row29 border-radius-2 height-auto">
+                                    <div class=" mx-3">
+                                      <input class="form-control border-0 bg-white input-row " placeholder="CITIES " />
+                                      <small class="form-text position-absolute text-danger d-none value-danger" >add CITIES  </small>
+                                    </div>
+                                    <a href="#" class="btn btn-primary create-btn add_new_row  border-radius-2 height-auto">
                                       <i class="bi bi-plus-circle-fill"></i>
                                       Add new
                                     </a>
@@ -2873,7 +3089,7 @@
                                 </div>
                                 <div class="table-responsive bg-light mt-4 border-radius-20">
                                   <div class="secondTableContainer">
-                                    <table id="myTable" class="table29">
+                                    <table id="myTable" class="table">
                                       <thead>
                                         <tr class="tr">
                                           <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
@@ -2910,14 +3126,20 @@
                                           <td class="style-td">
                                             Office
                                           </td>
-                                          <td class="style-td">
-                                            <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
-                                              <img src="../images/client-person.svg" class="image-actions">
-                                            </button>
-                                            <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
-                                              <i class="fa fa-trash"></i>
-                                            </button>
-                                          </td>
+                                          
+<td class="style-td">
+  <button type="button" class="btn btn-secondary dataTableButtons edite-Role">
+    <i class="fa fa-pen"></i>
+  </button>
+  <div class="tooltip-left btn btn-secondary dataTableButtons">
+    <img src="../images/client-person.svg" class="image-actions" />
+    <span class="tooltiptext">Tooltip text</span>
+  </div>
+  <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom">
+    <i class="fa fa-trash"></i>
+  </button>
+</td>
+
                                         </tr>
                                       </tbody>
                                     </table>
@@ -2927,17 +3149,18 @@
                             </div>
                           </div>
                           <div class="col">
-                            <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow" style="background:#F2F2F2 !important;">
+                            <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow px-0" style="background:#F2F2F2 !important;">
                               <div class="px-4">
                                 <div class="d-flex justify-content-between">
                                   <div class="py-2 d-flex justify-content-start align-items-center flex-column-responsive">
                                     <h4 class="py-2">Add  New Language</h4>
                                   </div>
                                   <div class="d-flex justify-content-start align-items-center ">
-                                    <a href="#" class="btn btn-secondary2 mx-3" style="background: #E8E8E8 !important;">
-                                      English
-                                    </a>
-                                    <a href="#" class="btn btn-primary create-btn add_new_row30 border-radius-2 height-auto">
+                                    <div class=" mx-3">
+                                      <input class="form-control border-0 bg-white input-row " placeholder="Language " />
+                                      <small class="form-text position-absolute text-danger d-none value-danger" >add Language  </small>
+                                    </div>
+                                    <a href="#" class="btn btn-primary create-btn add_new_row  border-radius-2 height-auto">
                                       <i class="bi bi-plus-circle-fill"></i>
                                       Add new
                                     </a>
@@ -2945,7 +3168,7 @@
                                 </div>
                                 <div class="table-responsive bg-light mt-4 border-radius-20">
                                   <div class="secondTableContainer">
-                                    <table id="myTable" class="table30">
+                                    <table id="myTable" class="table">
                                       <thead>
                                         <tr class="tr">
                                           <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
@@ -2982,14 +3205,20 @@
                                           <td class="style-td">
                                             Office
                                           </td>
-                                          <td class="style-td">
-                                            <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
-                                              <img src="../images/client-person.svg" class="image-actions">
-                                            </button>
-                                            <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
-                                              <i class="fa fa-trash"></i>
-                                            </button>
-                                          </td>
+                                      
+<td class="style-td">
+  <button type="button" class="btn btn-secondary dataTableButtons edite-Role">
+    <i class="fa fa-pen"></i>
+  </button>
+  <div class="tooltip-left btn btn-secondary dataTableButtons">
+    <img src="../images/client-person.svg" class="image-actions" />
+    <span class="tooltiptext">Tooltip text</span>
+  </div>
+  <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom">
+    <i class="fa fa-trash"></i>
+  </button>
+</td>
+
                                         </tr>
                                       </tbody>
                                     </table>
@@ -3001,17 +3230,18 @@
                         </div>
                         <div class="d-flex">
                           <div class="col">
-                            <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow" style="background:#F2F2F2 !important;">
+                            <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow px-0" style="background:#F2F2F2 !important;">
                               <div class="px-4">
                                 <div class="d-flex justify-content-between">
                                   <div class="py-2 d-flex justify-content-start align-items-center flex-column-responsive">
                                     <h4 class="py-2">Type of Budget</h4>
                                   </div>
                                   <div class="d-flex justify-content-start align-items-center ">
-                                    <a href="#" class="btn btn-secondary2 mx-3" style="background: #E8E8E8 !important;">
-                                      preliminary
-                                    </a>
-                                    <a href="#" class="btn btn-primary create-btn add_new_row31 border-radius-2 height-auto">
+                                    <div class=" mx-3">
+                                      <input class="form-control border-0 bg-white input-row " placeholder="Budget " />
+                                      <small class="form-text position-absolute text-danger d-none value-danger" >add Budget  </small>
+                                    </div>
+                                    <a href="#" class="btn btn-primary create-btn add_new_row  border-radius-2 height-auto">
                                       <i class="bi bi-plus-circle-fill"></i>
                                       Add new
                                     </a>
@@ -3019,7 +3249,7 @@
                                 </div>
                                 <div class="table-responsive bg-light mt-4 border-radius-20">
                                   <div class="secondTableContainer">
-                                    <table id="myTable" class="table31">
+                                    <table id="myTable" class="table">
                                       <thead>
                                         <tr class="tr">
                                           <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
@@ -3056,14 +3286,20 @@
                                           <td class="style-td">
                                             Office
                                           </td>
-                                          <td class="style-td">
-                                            <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
-                                              <img src="../images/client-person.svg" class="image-actions">
-                                            </button>
-                                            <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
-                                              <i class="fa fa-trash"></i>
-                                            </button>
-                                          </td>
+                                          
+<td class="style-td">
+  <button type="button" class="btn btn-secondary dataTableButtons edite-Role">
+    <i class="fa fa-pen"></i>
+  </button>
+  <div class="tooltip-left btn btn-secondary dataTableButtons">
+    <img src="../images/client-person.svg" class="image-actions" />
+    <span class="tooltiptext">Tooltip text</span>
+  </div>
+  <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom">
+    <i class="fa fa-trash"></i>
+  </button>
+</td>
+
                                         </tr>
                                       </tbody>
                                     </table>
@@ -3073,17 +3309,18 @@
                             </div>
                           </div>
                           <div class="col">
-                            <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow" style="background:#F2F2F2 !important;">
+                            <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow px-0" style="background:#F2F2F2 !important;">
                               <div class="px-4">
                                 <div class="d-flex justify-content-between">
                                   <div class="py-2 d-flex justify-content-start align-items-center flex-column-responsive">
                                     <h4 class="py-2">Priorities</h4>
                                   </div>
                                   <div class="d-flex justify-content-start align-items-center ">
-                                    <a href="#" class="btn btn-secondary2 mx-3" style="background: #E8E8E8 !important;">
-                                      High
-                                    </a>
-                                    <a href="#" class="btn btn-primary create-btn add_new_row32 border-radius-2 height-auto">
+                                    <div class=" mx-3">
+                                      <input class="form-control border-0 bg-white input-row " placeholder="Priorities " />
+                                      <small class="form-text position-absolute text-danger d-none value-danger" >add Priorities  </small>
+                                    </div>
+                                    <a href="#" class="btn btn-primary create-btn add_new_row  border-radius-2 height-auto">
                                       <i class="bi bi-plus-circle-fill"></i>
                                       Add new
                                     </a>
@@ -3091,7 +3328,7 @@
                                 </div>
                                 <div class="table-responsive bg-light mt-4 border-radius-20">
                                   <div class="secondTableContainer">
-                                    <table id="myTable" class="table32">
+                                    <table id="myTable" class="table">
                                       <thead>
                                         <tr class="tr">
                                           <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
@@ -3128,14 +3365,20 @@
                                           <td class="style-td">
                                             Office
                                           </td>
-                                          <td class="style-td">
-                                            <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
-                                              <img src="../images/client-person.svg" class="image-actions">
-                                            </button>
-                                            <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
-                                              <i class="fa fa-trash"></i>
-                                            </button>
-                                          </td>
+                                          
+<td class="style-td">
+  <button type="button" class="btn btn-secondary dataTableButtons edite-Role">
+    <i class="fa fa-pen"></i>
+  </button>
+  <div class="tooltip-left btn btn-secondary dataTableButtons">
+    <img src="../images/client-person.svg" class="image-actions" />
+    <span class="tooltiptext">Tooltip text</span>
+  </div>
+  <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom">
+    <i class="fa fa-trash"></i>
+  </button>
+</td>
+
                                         </tr>
                                       </tbody>
                                     </table>
@@ -3176,54 +3419,87 @@
 
 <!-- global js -->
 <script src="../JS/global/jquery/jquery-3.4.1.min.js"></script>
-<script src="../JS/client/main.js"></script>
 <script src="../JS/global/bootstrap/bootstrap.bundle.min.js"></script>
 <script src="../JS/global/bootstrap/bootstrap-select.js"></script>
 <script src="../JS/global/datePicker/datepicker.js"></script>
 <script src="../JS/layout.js"></script>
 
 
-<!-- add row -->
+
 <script type="text/javascript">
-    $(function () {
+  $(function () {
+  var counterMap = {};
 
-    // Start counting from the third row
-    var counter = 1;
+  $(".add_new_row").on("click", function (event) {
+    event.preventDefault();
+    var container = $(this).closest(".budget-table");
+    var inputs = container.find(".input-row");
+    var allInputsFilled = true;
 
-    $(".add_new_row1").on("click", function (event) {
-        event.preventDefault();
-
-        var newRow = $('<tr class="tr style-table-my1 tr-active">');
-        var cols = '';
-
-        // Table columns
-        cols += '<td class="style-td"><input type="checkbox" class="" id="customCheck1"></td>';
-        cols += '<td style="width:25%;" class="style-td"><input class="form-control rounded-0" type="text" name="firstname" placeholder="First name"></td>';
-        cols += '<td style="width:30%;" class="style-td"><input class="form-control rounded-0" type="text" name="lastname" placeholder="Last name"></td>';
-        
-        cols += '<td  class="style-td"><button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom"><img src="../images/client-person.svg" class="image-actions"></button><button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" id="deleteRow" title="" data-bs-original-title="Tooltip on bottom"><i class="fa fa-trash"></i></button></td>';
-
-        // cols += '<td><button class="btn btn-danger rounded-0" id ="deleteRow"><i class="fa fa-trash"></i></button</td>';
-
-        // Insert the columns inside a row
-        newRow.append(cols);
-
-        // Insert the row inside a table
-        $(".table1").append(newRow);
-
-        // Increase counter after each row insertion
-        counter++;
+    inputs.each(function() {
+      if ($(this).val().length === 0) {
+        allInputsFilled = false;
+        return false; 
+      }
     });
 
-    // Remove row when delete btn is clicked
-    $(".table1").on("click", "#deleteRow", function (event) {
-        $(this).closest("tr").remove();
-        counter -= 1
-    });
-});
+    if (allInputsFilled) {
+      container.find(".value-danger").addClass("d-none");
+
+      var tableClass = container.attr("class").split(" ")[1];
+
+      if (!counterMap[tableClass]) {
+        counterMap[tableClass] = 1;
+      }
+
+      var newRow = $('<tr class="tr style-table-my1 tr-active">');
+      var cols = '';
+
+      cols += `<td class="style-td"><input type="checkbox" class="" id="customCheck1"></td>`;
+      cols += `<td class="style-td">${counterMap[tableClass] + 1}</td>`;
+
+      inputs.each(function() {
+        cols += `<td class="style-td"><input class="form-control text-center border-0 bg-white" readonly  value="${$(this).val()}" /></td>`;
+      });
+
+      cols += `<td  style="width:25%;" class="style-td"><button type="button" class="btn btn-secondary dataTableButtons edite-row"> <i class="fa fa-pen"></i> </button><div class="tooltip-left btn btn-secondary dataTableButtons"> <img src="../images/client-person.svg" class="image-actions" /> <span class="tooltiptext">Tooltip text</span> </div><button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" id="deleteRow" title="" data-bs-original-title="Tooltip on bottom"><i class="fa fa-trash"></i></button></td>`;
+     
+      newRow.append(cols);
+      container.find(".table").find("tbody").append(newRow);
+      counterMap[tableClass]++;
+      inputs.val(""); 
+    } else {
+      container.find(".value-danger").removeClass("d-none");
+    }
+  });
+
+  $(".table").on("click", "#deleteRow", function (event) {
+    var table = $(this).closest(".table");
+    var tableClass = table.attr("class").split(" ")[1];
+    $(this).closest("tr").remove();
+    counterMap[tableClass]--;
+  });
+
+  $(document).on("click", ".edite-row", function () {
+    var inputRoleElement = $(this).closest("tr").find("td .form-control");
+    inputRoleElement.prop("readonly", false);
+    inputRoleElement.focus();
+  });
+
+  $(document).on("blur", "td .form-control", function () {
+    $(this).prop("readonly", true);
+  });});
+
+
 </script>
 
-  
+
+
+
+
+
+
+
 </body>
 
 </html>
