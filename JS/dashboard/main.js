@@ -14,33 +14,33 @@
 // });
 
 
-const downloadPdfActivityBtnWord = document.getElementById("download-contract-word");
-downloadPdfActivityBtnWord.addEventListener("click", () => {
-  downloadWordFile();
-});
+// const downloadPdfActivityBtnWord = document.getElementById("download-contract-word");
+// downloadPdfActivityBtnWord.addEventListener("click", () => {
+//   downloadWordFile();
+// });
 
-function downloadWordFile() {
-  var fileUrl = 'path/to/your/file.docx';
-  var link = document.createElement('a');
-  link.href = fileUrl;
-  link.download = 'filename.docx';
-  link.click();
-}
+// function downloadWordFile() {
+//   var fileUrl = 'path/to/your/file.docx';
+//   var link = document.createElement('a');
+//   link.href = fileUrl;
+//   link.download = 'filename.docx';
+//   link.click();
+// }
 
 
 
-const downloadActivityBtnExcel = document.getElementById("download-contract-excel");
-downloadActivityBtnExcel.addEventListener("click", () => {
-  downloadFile();
-});
+// const downloadActivityBtnExcel = document.getElementById("download-contract-excel");
+// downloadActivityBtnExcel.addEventListener("click", () => {
+//   downloadFile();
+// });
 
-function downloadFile() {
-  var fileUrl = 'path/to/your/file.xlsx';
-  var link = document.createElement('a');
-  link.href = fileUrl;
-  link.download = 'filename.xlsx';
-  link.click();
-}
+// function downloadFile() {
+//   var fileUrl = 'path/to/your/file.xlsx';
+//   var link = document.createElement('a');
+//   link.href = fileUrl;
+//   link.download = 'filename.xlsx';
+//   link.click();
+// }
 
 
 // var toggleSliderMenuContractArrow = document.querySelector(".contract-sidebar");
@@ -56,12 +56,12 @@ function downloadFile() {
 //   toggleDisplay.classList.toggle("display-toggle-menu");
 // });
 
-$(document).ready(function () {
-  $(".js-example-basic-multiple").select2();
-});
-$(".js-example-placeholder-multiple").select2({
-  placeholder: "Select a state",
-});
+// $(document).ready(function () {
+//   $(".js-example-basic-multiple").select2();
+// });
+// $(".js-example-placeholder-multiple").select2({
+//   placeholder: "Select a state",
+// });
 
 // download file
 // const downloadPdfOfferBtn = document.getElementById("download-pdf-offer");

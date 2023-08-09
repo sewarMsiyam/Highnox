@@ -813,3 +813,59 @@ input:checked + .slider:before {
 .next-icon {
   color: #364153;
 }
+
+.modal .text-select {
+  margin-bottom: 15px;
+  font-size: 14px !important;
+  font-family: "MontserratSemiBold";
+  color: #364153;
+}
+.modal input {
+  border: 0px !important;
+  height: 40px;
+  border-radius: 5px;
+  padding: 0 10px;
+  background-color: #F3F2F2;
+  width: 100%;
+  font-size: 14px !important;
+  font-family: 'MontserratRegular' !important;
+  outline: none;
+  }
+  .modal input{
+    /* height: 40px; */
+    border: 1px solid #e8e8e8;
+  }
+  .modal input:hover {
+    border: 1px solid rgba(34, 36, 38, 0.35)
+  } 
+  .modal input:focus-within {
+    border: 1px solid rgb(150, 200, 218) !important
+  } 
+  .modal input::placeholder {
+    color: rgba(191,191,191,.87);
+    font-size: 12px !important;
+  }
+
+
+
+
+.modal .logo{
+  font-family: "brushcriptmtkursiv";
+  font-size: 2.5rem !important;
+  margin: 0;
+  color: var(--primary);
+  font-weight: 500;
+}
+.modal .bg-primary{
+  background-color: var(--primary) !important;
+  color:#fff;
+}
+.modal .table td, .modal .table th {
+  padding: 0.55rem;
+  vertical-align: middle;
+  border-top: none;
+  text-align: center;
+}
+.modal tr {
+  height: 44px;
+}

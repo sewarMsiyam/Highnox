@@ -29,6 +29,19 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
   
   <link rel="stylesheet" href="../css/layout.css">
+
+  <style>
+    td .form-control{
+  background-color:#fff0 !important;
+  border :1px solid #000 !important;
+}
+    .form-control:disabled, .form-control[readonly] {
+    background-color: #fff0 !important;
+    border :none !important;
+    opacity: 1;
+}
+
+  </style>
 </head>
 
 <body >
@@ -530,7 +543,7 @@
                           </div>
                           <div class="col col-md-3 col-12">
                          
-                             <a class="btn btn-primary create-btn" href="">
+                             <a class="btn btn-primary create-btn" href="Create-userSettings.html">
                                 <i class="bi bi-plus-circle-fill"></i>
                                 Create user
                             </a>
@@ -758,7 +771,7 @@
                                           <img src="../images/client-person.svg" class="image-actions" />
                                           <span class="tooltiptext">Tooltip text</span>
                                         </div>
-                                        <a href="" class="btn btn-secondary dataTableButtons" >
+                                        <a href="Create-userSettings.html" class="btn btn-secondary dataTableButtons" >
                                           <img src="../images/client-icon-copy.svg" class="image-actions">
                                         </a>
                                       </td>
@@ -816,7 +829,7 @@
                                           <img src="../images/client-person.svg" class="image-actions" />
                                           <span class="tooltiptext">Tooltip text</span>
                                         </div>
-                                        <a href="" class="btn btn-secondary dataTableButtons" >
+                                        <a href="Create-userSettings.html" class="btn btn-secondary dataTableButtons" >
                                           <img src="../images/client-icon-copy.svg" class="image-actions">
                                         </a>
                                       </td>
@@ -874,7 +887,7 @@
                                           <img src="../images/client-person.svg" class="image-actions" />
                                           <span class="tooltiptext">Tooltip text</span>
                                         </div>
-                                        <a href="" class="btn btn-secondary dataTableButtons" >
+                                        <a href="Create-userSettings.html" class="btn btn-secondary dataTableButtons" >
                                           <img src="../images/client-icon-copy.svg" class="image-actions">
                                         </a>
                                       </td>
@@ -932,7 +945,7 @@
                                           <img src="../images/client-person.svg" class="image-actions" />
                                           <span class="tooltiptext">Tooltip text</span>
                                         </div>
-                                        <a href="" class="btn btn-secondary dataTableButtons" >
+                                        <a href="Create-userSettings.html" class="btn btn-secondary dataTableButtons" >
                                           <img src="../images/client-icon-copy.svg" class="image-actions">
                                         </a>
                                       </td>
@@ -982,9 +995,10 @@
                                           <h4 class="py-2">Role</h4>
                                         </div>
                                         <div class="d-flex justify-content-start align-items-center ">
-                                          <a href="#" class="btn btn-secondary2 mx-3" style="background: #E8E8E8 !important;">
-                                            User
-                                          </a>
+                                          <div class=" mx-3">
+                                            <input class="form-control border-0 bg-white" id="input_Role" placeholder="user" />
+                                            <small id="input_Roleval" class="form-text position-absolute text-danger d-none" >add user  </small>
+                                          </div>
                                           <a href="#" class="btn btn-primary create-btn add_new_role border-radius-2 height-auto">
                                             <i class="bi bi-plus-circle-fill"></i>
                                             Add new
@@ -1034,9 +1048,13 @@
                                                       Office
                                                     </td>
                                                     <td class="style-td">
-                                                      <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
-                                                        <img src="../images/client-person.svg" class="image-actions">
+                                                      <button type="button" class="btn btn-secondary dataTableButtons edite-Role">
+                                                        <i class="fa fa-pen"></i>
                                                       </button>
+                                                      <div class="tooltip-left btn btn-secondary dataTableButtons">
+                                                        <img src="../images/client-person.svg" class="image-actions" />
+                                                        <span class="tooltiptext">Tooltip text</span>
+                                                      </div>
                                                       <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
                                                         <i class="fa fa-trash"></i>
                                                       </button>
@@ -1057,9 +1075,10 @@
                                           <h4 class="py-2">Department</h4>
                                         </div>
                                         <div class="d-flex justify-content-start align-items-center ">
-                                          <a href="#" class="btn btn-secondary2 mx-3" style="background: #E8E8E8 !important;">
-                                            IT
-                                          </a>
+                                          <div class=" mx-3">
+                                            <input class="form-control border-0 bg-white" id="input_IT" placeholder="IT" />
+                                            <small id="input_ITval" class="form-text position-absolute text-danger d-none" >add Department  </small>
+                                          </div>
                                           <a href="#" class="btn btn-primary create-btn add_new_department border-radius-2 height-auto">
                                             <i class="bi bi-plus-circle-fill"></i>
                                             Add new
@@ -1109,9 +1128,13 @@
                                                       Office
                                                     </td>
                                                     <td class="style-td">
-                                                      <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
-                                                        <img src="../images/client-person.svg" class="image-actions">
+                                                      <button type="button" class="btn btn-secondary dataTableButtons edite-Department">
+                                                        <i class="fa fa-pen"></i>
                                                       </button>
+                                                      <div class="tooltip-left btn btn-secondary dataTableButtons">
+                                                        <img src="../images/client-person.svg" class="image-actions" />
+                                                        <span class="tooltiptext">Tooltip text</span>
+                                                      </div>
                                                       <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
                                                         <i class="fa fa-trash"></i>
                                                       </button>
@@ -1138,10 +1161,33 @@
           </div>
         </div>
       </div>
-      
-      <!-- Content End -->
 
-  </main>
+</main>
+
+
+  <!-- modals img-->
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header d-flex justify-content-end ">
+            <button type="button" class="close-btn" data-bs-dismiss="modal" aria-label="Close">
+              <i class="bi bi-x modal-close-icon"></i>
+            </button>
+          </div>
+          <div class="modal-body d-flex justify-content-center align-items-center">
+            <div class="container-img">
+              <img src="../images/icon-modal.svg" class="img-fluid"/>
+            </div>
+          </div>
+          <div class="modal-footer d-flex justify-content-center">
+            <button type="button" class="btn btn-primary"
+              data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!-- end modals -->
 
 <!-- modal -->
 
@@ -1262,100 +1308,100 @@
                               <div class="d-flex">
                                 <div class="col-6 mt-4">
                                   <h4>Sales Dashboard</h4>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can see</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can see</label>
                                   </div>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can Edit</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can Edit</label>
                                   </div>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can Delete</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can Delete</label>
                                   </div>
                                 </div>
                                 <div class="col-6 mt-4">
                                   <h4>Activites</h4>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can see</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can see</label>
                                   </div>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can Edit</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can Edit</label>
                                   </div>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can Delete</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can Delete</label>
                                   </div>
                                 </div>
                               </div>
                               <div class="d-flex">
                                 <div class="col-6 mt-4">
                                   <h4>Offers</h4>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can see</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can see</label>
                                   </div>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can Edit</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can Edit</label>
                                   </div>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can Delete</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can Delete</label>
                                   </div>
                                 </div>
                                 <div class="col-6 mt-4">
                                   <h4>TO DO</h4>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can see</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can see</label>
                                   </div>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can Edit</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can Edit</label>
                                   </div>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can Delete</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can Delete</label>
                                   </div>
                                 </div>
                               </div>
@@ -1372,200 +1418,200 @@
                               <div class="d-flex">
                                 <div class="col-6 mt-4">
                                   <h4>Main Information</h4>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can see</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can see</label>
                                   </div>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can Edit</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can Edit</label>
                                   </div>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can Delete</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can Delete</label>
                                   </div>
                                 </div>
                                 <div class="col-6 mt-4">
                                   <h4>Contacts</h4>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can see</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can see</label>
                                   </div>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can Edit</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can Edit</label>
                                   </div>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can Delete</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can Delete</label>
                                   </div>
                                 </div>
                               </div>
                               <div class="d-flex">
                                 <div class="col-6 mt-4">
                                   <h4>Contacts</h4>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can see</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can see</label>
                                   </div>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can Edit</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can Edit</label>
                                   </div>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can Delete</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can Delete</label>
                                   </div>
                                 </div>
                                 <div class="col-6 mt-4">
                                   <h4>Payment Condition</h4>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can see</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can see</label>
                                   </div>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can Edit</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can Edit</label>
                                   </div>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can Delete</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can Delete</label>
                                   </div>
                                 </div>
                               </div>
                               <div class="d-flex">
                                 <div class="col-6 mt-4">
                                   <h4>Activities</h4>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can see</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can see</label>
                                   </div>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can Edit</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can Edit</label>
                                   </div>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can Delete</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can Delete</label>
                                   </div>
                                 </div>
                                 <div class="col-6 mt-4">
                                   <h4>Offers</h4>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can see</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can see</label>
                                   </div>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can Edit</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can Edit</label>
                                   </div>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can Delete</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can Delete</label>
                                   </div>
                                 </div>
                               </div>
                               <div class="d-flex">
                                 <div class="col-6 mt-4">
                                   <h4>Invoices</h4>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can see</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can see</label>
                                   </div>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can Edit</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can Edit</label>
                                   </div>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can Delete</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can Delete</label>
                                   </div>
                                 </div>
                                 <div class="col-6 mt-4">
                                   <h4>Signage</h4>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can see</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can see</label>
                                   </div>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can Edit</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can Edit</label>
                                   </div>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can Delete</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can Delete</label>
                                   </div>
                                 </div>
                               </div>
@@ -1584,150 +1630,150 @@
                               <div class="d-flex">
                                 <div class="col-6 mt-4">
                                   <h4>Lodger Information</h4>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can see</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can see</label>
                                   </div>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can Edit</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can Edit</label>
                                   </div>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can Delete</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can Delete</label>
                                   </div>
                                 </div>
                                 <div class="col-6 mt-4">
                                   <h4>Rental Details</h4>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can see</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can see</label>
                                   </div>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can Edit</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can Edit</label>
                                   </div>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can Delete</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can Delete</label>
                                   </div>
                                 </div>
                               </div>
                               <div class="d-flex">
                                 <div class="col-6 mt-4">
                                   <h4>Payment Condition</h4>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can see</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can see</label>
                                   </div>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can Edit</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can Edit</label>
                                   </div>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can Delete</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can Delete</label>
                                   </div>
                                 </div>
                                 <div class="col-6 mt-4">
                                   <h4>Other Condition</h4>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can see</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can see</label>
                                   </div>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can Edit</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can Edit</label>
                                   </div>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can Delete</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can Delete</label>
                                   </div>
                                 </div>
                               </div>
                               <div class="d-flex">
                                 <div class="col-6 mt-4">
                                   <h4>Termination</h4>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can see</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can see</label>
                                   </div>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can Edit</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can Edit</label>
                                   </div>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can Delete</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can Delete</label>
                                   </div>
                                 </div>
                                 <div class="col-6 mt-4">
                                   <h4>Contact Summary</h4>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can see</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can see</label>
                                   </div>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can Edit</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can Edit</label>
                                   </div>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can Delete</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can Delete</label>
                                   </div>
                                 </div>
                               </div>
@@ -1747,150 +1793,150 @@
                               <div class="d-flex">
                                 <div class="col-6 mt-4">
                                   <h4>Lodger Information</h4>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can see</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can see</label>
                                   </div>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can Edit</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can Edit</label>
                                   </div>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can Delete</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can Delete</label>
                                   </div>
                                 </div>
                                 <div class="col-6 mt-4">
                                   <h4>Rental Details</h4>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can see</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can see</label>
                                   </div>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can Edit</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can Edit</label>
                                   </div>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can Delete</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can Delete</label>
                                   </div>
                                 </div>
                               </div>
                               <div class="d-flex">
                                 <div class="col-6 mt-4">
                                   <h4>Payment Condition</h4>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can see</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can see</label>
                                   </div>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can Edit</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can Edit</label>
                                   </div>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can Delete</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can Delete</label>
                                   </div>
                                 </div>
                                 <div class="col-6 mt-4">
                                   <h4>Other Condition</h4>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can see</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can see</label>
                                   </div>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can Edit</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can Edit</label>
                                   </div>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can Delete</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can Delete</label>
                                   </div>
                                 </div>
                               </div>
                               <div class="d-flex">
                                 <div class="col-6 mt-4">
                                   <h4>Termination</h4>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can see</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can see</label>
                                   </div>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can Edit</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can Edit</label>
                                   </div>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can Delete</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can Delete</label>
                                   </div>
                                 </div>
                                 <div class="col-6 mt-4">
                                   <h4>Contact Summary</h4>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can see</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can see</label>
                                   </div>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can Edit</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can Edit</label>
                                   </div>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can Delete</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can Delete</label>
                                   </div>
                                 </div>
                               </div>
@@ -1910,76 +1956,76 @@
                               <div class="d-flex">
                                 <div class="col-6 mt-4">
                                   <h4>Main Information</h4>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can see</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can see</label>
                                   </div>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can Edit</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can Edit</label>
                                   </div>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can Delete</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can Delete</label>
                                   </div>
                                 </div>
                                 <div class="col-6 mt-4">
                                   <h4>Booking</h4>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can see</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can see</label>
                                   </div>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can Edit</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can Edit</label>
                                   </div>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can Delete</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can Delete</label>
                                   </div>
                                 </div>
                               </div>
                               <div class="d-flex">
                                 <div class="col-6 mt-4">
                                   <h4>Print Out Lists</h4>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can see</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can see</label>
                                   </div>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can Edit</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can Edit</label>
                                   </div>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can Delete</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can Delete</label>
                                   </div>
                                 </div>
                               </div>
@@ -1999,100 +2045,100 @@
                               <div class="d-flex">
                                 <div class="col-6 mt-4">
                                   <h4>Lodger Information</h4>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can see</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can see</label>
                                   </div>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can Edit</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can Edit</label>
                                   </div>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can Delete</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can Delete</label>
                                   </div>
                                 </div>
                                 <div class="col-6 mt-4">
                                   <h4>Debits</h4>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can see</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can see</label>
                                   </div>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can Edit</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can Edit</label>
                                   </div>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can Delete</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can Delete</label>
                                   </div>
                                 </div>
                               </div>
                               <div class="d-flex">
                                 <div class="col-6 mt-4">
                                   <h4>Rows</h4>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can see</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can see</label>
                                   </div>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can Edit</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can Edit</label>
                                   </div>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can Delete</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can Delete</label>
                                   </div>
                                 </div>
                                 <div class="col-6 mt-4">
                                   <h4>Change Date</h4>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can see</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can see</label>
                                   </div>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can Edit</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can Edit</label>
                                   </div>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can Delete</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can Delete</label>
                                   </div>
                                 </div>
                               </div>
@@ -2112,100 +2158,100 @@
                               <div class="d-flex">
                                 <div class="col-6 mt-4">
                                   <h4>Lodger Information</h4>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can see</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can see</label>
                                   </div>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can Edit</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can Edit</label>
                                   </div>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can Delete</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can Delete</label>
                                   </div>
                                 </div>
                                 <div class="col-6 mt-4">
                                   <h4>Debits</h4>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can see</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can see</label>
                                   </div>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can Edit</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can Edit</label>
                                   </div>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can Delete</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can Delete</label>
                                   </div>
                                 </div>
                               </div>
                               <div class="d-flex">
                                 <div class="col-6 mt-4">
                                   <h4>Rows</h4>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can see</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can see</label>
                                   </div>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can Edit</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can Edit</label>
                                   </div>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can Delete</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can Delete</label>
                                   </div>
                                 </div>
                                 <div class="col-6 mt-4">
                                   <h4>Change Date</h4>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can see</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can see</label>
                                   </div>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can Edit</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can Edit</label>
                                   </div>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can Delete</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can Delete</label>
                                   </div>
                                 </div>
                               </div>
@@ -2225,76 +2271,76 @@
                               <div class="d-flex">
                                 <div class="col-6 mt-4">
                                   <h4>Lodger Information</h4>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can see</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can see</label>
                                   </div>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can Edit</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can Edit</label>
                                   </div>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can Delete</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can Delete</label>
                                   </div>
                                 </div>
                                 <div class="col-6 mt-4">
                                   <h4>Rows</h4>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can see</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can see</label>
                                   </div>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can Edit</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can Edit</label>
                                   </div>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can Delete</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can Delete</label>
                                   </div>
                                 </div>
                               </div>
                               <div class="d-flex">
                                 <div class="col-6 mt-4">
                                   <h4>Change Date</h4>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can see</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can see</label>
                                   </div>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can Edit</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can Edit</label>
                                   </div>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can Delete</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can Delete</label>
                                   </div>
                                 </div>
                               </div>
@@ -2314,76 +2360,76 @@
                               <div class="d-flex">
                                 <div class="col-6 mt-4">
                                   <h4>Lodger Information</h4>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can see</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can see</label>
                                   </div>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can Edit</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can Edit</label>
                                   </div>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can Delete</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can Delete</label>
                                   </div>
                                 </div>
                                 <div class="col-6 mt-4">
                                   <h4>Rows</h4>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can see</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can see</label>
                                   </div>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can Edit</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can Edit</label>
                                   </div>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can Delete</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can Delete</label>
                                   </div>
                                 </div>
                               </div>
                               <div class="d-flex">
                                 <div class="col-6 mt-4">
                                   <h4>Change Date</h4>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can see</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can see</label>
                                   </div>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can Edit</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can Edit</label>
                                   </div>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can Delete</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can Delete</label>
                                   </div>
                                 </div>
                               </div>
@@ -2403,26 +2449,26 @@
                               <div class="d-flex">
                                 <div class="col-6 mt-4">
                                   <h4>Main Information</h4>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can see</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can see</label>
                                   </div>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can Edit</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can Edit</label>
                                   </div>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can Delete</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can Delete</label>
                                   </div>
                                 </div>
                               </div>
@@ -2443,26 +2489,26 @@
                               <div class="d-flex">
                                 <div class="col-6 mt-4">
                                   <h4>Main Information</h4>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can see</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can see</label>
                                   </div>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can Edit</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can Edit</label>
                                   </div>
-                                  <div class="form-check form-switch col-12-responsive mt-4">
+                                  <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
                                     <label class="switch">
                                       <input type="checkbox" class="group-article">
                                       <span class="slider round"></span>
                                     </label>
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Can Delete</label>
+                                    <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Can Delete</label>
                                   </div>
                                 </div>
                               </div>
@@ -2484,7 +2530,7 @@
         </div>
         <div class="modal-footer d-flex justify-content-center">
             <div class="col-md-4 col-12 text-center">
-              <button class="btn btn-primary  cancel-btn" type="submit">
+              <button class="btn btn-primary  cancel-btn" data-bs-dismiss="modal">
               Cancel
               </button>
                 <button class="btn btn-primary submit-btn" type="submit">
@@ -2524,21 +2570,23 @@
 <script type="text/javascript">
     $(function () {
 
-    // Start counting from the third row
+    // Start counting from the third row        sewar       edite-Role  edite-Department
     var counter = 1;
 
     $(".add_new_role").on("click", function (event) {
-        event.preventDefault();
+      event.preventDefault();
+
+        if(document.getElementById("input_Role").value.length > 0 ){
+          $("#input_Roleval").addClass("d-none");
 
         var newRow = $('<tr class="tr style-table-my1 tr-active">');
         var cols = '';
 
         // Table columns
-        cols += '<td class="style-td"><input type="checkbox" class="" id="customCheck1"></td>';
-        cols += '<td style="width:25%;" class="style-td"><input class="form-control rounded-0" type="text" name="firstname" placeholder="First name"></td>';
-        cols += '<td style="width:25%;" class="style-td"><input class="form-control rounded-0" type="text" name="lastname" placeholder="Last name"></td>';
-        
-        cols += '<td  class="style-td"><button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom"><img src="../images/client-person.svg" class="image-actions"></button><button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" id="deleteRow" title="" data-bs-original-title="Tooltip on bottom"><i class="fa fa-trash"></i></button></td>';
+        cols += `<td class="style-td"><input type="checkbox" class="" id="customCheck1"></td>`;
+        cols += `<td style="width:25%;" class="style-td">${counter +1}</td>`;
+        cols += `<td style="width:25%;" class="style-td"><input class="form-control text-center border-0 bg-white" readonly  value="${document.getElementById("input_Role").value}" /></td>`;
+        cols += `<td  class="style-td"><button type="button" class="btn btn-secondary dataTableButtons edite-Role"> <i class="fa fa-pen"></i> </button><div class="tooltip-left btn btn-secondary dataTableButtons"> <img src="../images/client-person.svg" class="image-actions" /> <span class="tooltiptext">Tooltip text</span> </div><button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" id="deleteRow" title="" data-bs-original-title="Tooltip on bottom"><i class="fa fa-trash"></i></button></td>`;
 
         // cols += '<td><button class="btn btn-danger rounded-0" id ="deleteRow"><i class="fa fa-trash"></i></button</td>';
 
@@ -2550,6 +2598,14 @@
 
         // Increase counter after each row insertion
         counter++;
+        document.getElementById("input_Role").value="";
+
+
+
+      }else{
+        $("#input_Roleval").removeClass("d-none");
+
+      }
     });
 
     // Remove row when delete btn is clicked
@@ -2569,15 +2625,17 @@
     $(".add_new_department").on("click", function (event) {
         event.preventDefault();
 
+        if(document.getElementById("input_IT").value.length > 0 ){
+          $("#input_ITval").addClass("d-none");
+       
         var newRow = $('<tr class="tr style-table-my1 tr-active">');
         var cols = '';
 
         // Table columns
-        cols += '<td class="style-td"><input type="checkbox" class="" id="customCheck1"></td>';
-        cols += '<td style="width:25%;" class="style-td"><input class="form-control rounded-0" type="text" name="firstname" placeholder="First name"></td>';
-        cols += '<td style="width:25%;" class="style-td"><input class="form-control rounded-0" type="text" name="lastname" placeholder="Last name"></td>';
-        
-        cols += '<td  class="style-td"><button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom"><img src="../images/client-person.svg" class="image-actions"></button><button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" id="deleteRow" title="" data-bs-original-title="Tooltip on bottom"><i class="fa fa-trash"></i></button></td>';
+        cols += `<td class="style-td"><input type="checkbox" class="" id="customCheck1"></td>`;
+        cols += `<td style="width:25%;" class="style-td">${counter +1}</td>`;
+        cols += `<td style="width:25%;" class="style-td"><input class="form-control text-center border-0 bg-white" readonly  value="${document.getElementById("input_IT").value}" /></td>`;
+        cols += `<td  class="style-td"><button type="button" class="btn btn-secondary dataTableButtons edite-IT"> <i class="fa fa-pen"></i> </button><div class="tooltip-left btn btn-secondary dataTableButtons"> <img src="../images/client-person.svg" class="image-actions" /> <span class="tooltiptext">Tooltip text</span> </div><button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" id="deleteRow" title="" data-bs-original-title="Tooltip on bottom"><i class="fa fa-trash"></i></button></td>`;
 
         // cols += '<td><button class="btn btn-danger rounded-0" id ="deleteRow"><i class="fa fa-trash"></i></button</td>';
 
@@ -2589,6 +2647,11 @@
 
         // Increase counter after each row insertion
         counter++;
+        document.getElementById("input_IT").value="";
+      }else{
+            $("#input_ITval").removeClass("d-none");
+        }
+
     });
 
     // Remove row when delete btn is clicked
@@ -2596,6 +2659,27 @@
         $(this).closest("tr").remove();
         counter -= 1
     });
+});
+
+$(document).on("click", ".edite-Role", function () {
+  var inputRoleElement = $(this).closest("tr").find("td .form-control");
+  inputRoleElement.prop("readonly", false);
+  inputRoleElement.focus();
+});
+
+$(document).on("blur", "td .form-control", function () {
+  $(this).prop("readonly", true);
+});
+
+
+$(document).on("click", ".edite-IT", function () {
+  var inputRoleElement = $(this).closest("tr").find("td .form-control");
+  inputRoleElement.prop("readonly", false);
+  inputRoleElement.focus();
+});
+
+$(document).on("blur", "td .form-control", function () {
+  $(this).prop("readonly", true);
 });
 </script>
 
