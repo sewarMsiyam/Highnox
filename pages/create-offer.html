@@ -3,39 +3,32 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Clients</title>
+  <title>room</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
+  <link rel="icon" href="../images/Highnox.png" type="image/x-icon" />
+
   <link rel="stylesheet" href="../css/semantic.min.css"  >
-  <script src="https://code.jquery.com/jquery-3.1.1.min.js">
-</script>
-<script src="../JS/semantic.min.js">
-</script>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="../JS/semantic.min.js"></script>
   <!-- global style -->
   <link href="../css/global/bootstrap/bootstrap.min.css" rel="stylesheet">
   <link href="../css/global-style.css" rel="stylesheet">
+  <link href="../css/global/datepicker/datepicker.css" rel="stylesheet" type="text/css" />
+  <link href="../css/global/bootstrap/bootstrap-select.css" rel="stylesheet">
 
-<link href="../css/global/datepicker/datepicker.css" rel="stylesheet" type="text/css" />
   <!-- dashboard style -->
   <link href="../css/dashboard/main-dashboard.css" rel="stylesheet">
-
   <link rel="stylesheet" type="text/css" href="../css/dashboard/style.css">
   <link rel="stylesheet" type="text/css" href="../css/dashboard/screen.css">
-  <link href="../css/dashboard/media.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/dashboard/media.css" >
 
   <!-- Icon Font Stylesheet cdn -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/global/font-awesome/css/all.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-
-  <!-- Libraries Stylesheet -->
-  <link href="../css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/css/bootstrap-datepicker.min.css">
   
   <link rel="stylesheet" href="../css/layout.css">
- 
 </head>
 
 <body>
@@ -573,6 +566,7 @@
                                     </div>
                                     <div class="second-select-input">
                                       <input type="text" class="form-control" placeholder="joe moner">
+                                      <a href="create-new-client1.html"><i class="bi bi-plus-circle-fill input-svg h-5" style="color: #616161;"></i></a>
                                     </div>
                                   </div>
                                   <div class="col-md-2 col-6">
@@ -582,7 +576,7 @@
                                     <div class="second-select-input">
                                         <div class="input-group date datepicker" data-provide="datepicker">
                                           <input type="text" class="form-control date-input" placeholder="Select date">
-                                          <div class="input-group-addon" style="">
+                                          <div class="input-group-addon" >
                                             <span class="glyphicon glyphicon-th"></span>
                                           </div>
                                         </div>
@@ -596,7 +590,7 @@
                                     <div class="second-select-input">
                                         <div class="input-group date datepicker" data-provide="datepicker">
                                           <input type="text" class="form-control date-input" placeholder="Select date">
-                                          <div class="input-group-addon" style="">
+                                          <div class="input-group-addon" >
                                             <span class="glyphicon glyphicon-th"></span>
                                           </div>
                                         </div>
@@ -608,13 +602,14 @@
                                       <label>Contact Person</label>
                                     </div>
                                       <div class="second-select-input">
-                                        <select class="form-control border-0">
-                                          <option>Select Contact</option>
-                                          <option>Contact 1</option>
-                                          <option>Contact 2</option>
-                                          <option>Contact 3</option>
-                                        </select>
-                                      </div>
+                                          <select class=" selectpicker" multiple aria-label="size 3 select example" data-live-search="true">
+                                            <option>Seelct Contact </option>
+                                            <option>Contact 1</option>
+                                            <option>Contact 2</option>
+                                            <option>Contact 3</option>
+                                          </select>
+                                          <img class="input-svg" width="12" src="../images/img-droplist.svg">  
+                                        </div>
                                   </div>
 
                                   </div>
@@ -624,12 +619,12 @@
                                       <label>Stage</label>
                                     </div>
                                       <div class="second-select-input">
-                                        <select class="form-control border-0">
-                                          <option>Select Stage</option>
+                                        <select class=" selectpicker" multiple aria-label="size 3 select example" data-live-search="true" >
                                           <option>Stage 1</option>
                                           <option>Stage 2</option>
                                           <option>Stage 3</option>
                                         </select>
+                                        <img class="input-svg" width="12" src="../images/img-droplist.svg">  
                                       </div>
                                   </div>
 
@@ -638,12 +633,13 @@
                                       <label>Account Manager</label>
                                     </div>
                                       <div class="second-select-input">
-                                        <select class="form-control border-0">
+                                        <select class=" selectpicker" multiple aria-label="size 3 select example" data-live-search="true" >
                                           <option>Select Account</option>
                                           <option>Account 1</option>
                                           <option>Account 2</option>
                                           <option>Account 3</option>
                                         </select>
+                                        <img class="input-svg" width="12" src="../images/img-droplist.svg">  
                                       </div>
                                   </div>
 
@@ -652,12 +648,13 @@
                                       <label>Location/Building</label>
                                     </div>
                                       <div class="second-select-input">
-                                        <select class="form-control border-0">
+                                        <select class=" selectpicker" multiple aria-label="size 3 select example" data-live-search="true" >
                                           <option>Select Account</option>
                                           <option>Account 1</option>
                                           <option>Account 2</option>
                                           <option>Account 3</option>
                                         </select>
+                                        <img class="input-svg" width="12" src="../images/img-droplist.svg">  
                                       </div>
                                   </div>
 
@@ -666,12 +663,13 @@
                                       <label>language</label>
                                     </div>
                                       <div class="second-select-input">
-                                        <select class="form-control border-0">
+                                        <select class=" selectpicker" multiple aria-label="size 3 select example" data-live-search="true" >
                                           <option>Select language</option>
                                           <option>language 1</option>
                                           <option>language 2</option>
                                           <option>language 3</option>
                                         </select>
+                                        <img class="input-svg" width="12" src="../images/img-droplist.svg">  
                                       </div>
                                   </div>
                                    <div class="col-md-2 col-12 padding-top-small-10">
@@ -679,15 +677,16 @@
                                         <label>Compaign</label>
                                       </div>
                                         <div class="second-select-input">
-                                          <select class="form-control border-0">
+                                          <select  class=" selectpicker" multiple aria-label="size 3 select example" data-live-search="true" >
                                             <option>Select Compaign</option>
                                             <option>Compaign 1</option>
                                             <option>Compaign 2</option>
                                             <option>Compaign 3</option>
                                           </select>
+                                          <img class="input-svg" width="12" src="../images/img-droplist.svg">  
                                         </div>
                                     </div>
-                                    <div class="col-md-4 col-6 mt-4">
+                                    <div class="col-md-12 col-6 mt-4">
                                       <div>
                                         <label>Description</label>
                                       </div>
@@ -726,7 +725,7 @@
                                     </div>
                                     <div class="table-responsive bg-light mt-4 border-radius-20">
                                           <div class="secondTableContainer">
-                                            <table id="myTable">
+                                            <table id="myTable" class="table table-Articler">
                                               <thead>
                                                 <tr class="tr">
                                                   <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
@@ -804,6 +803,9 @@
                                                     3
                                                   </td>
                                                   <td class="style-td">
+                                                    <button type="button" class="btn btn-secondary dataTableButtons edite-Role">
+                                                      <i class="fa fa-pen"></i>
+                                                    </button>
                                                     <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
                                                     <i class="fa fa-trash"></i>
                                                     </button>
@@ -1147,30 +1149,18 @@
 
 
 
-  <script>
-    $('.ui.dropdown').dropdown();
+<script>
+  $('.ui.dropdown').dropdown();
 </script>
 
-  <!-- global js -->
-  <script src="../JS/global/jquery/jquery-3.4.1.min.js"></script>
-  <script src="../JS/global/jspdf/jspdf.js"></script>
-  <script src="../JS/client/main.js"></script>
-  <script src="../JS/global/bootstrap/bootstrap.bundle.min.js"></script>
+<!-- global js -->
+<script src="../JS/global/jquery/jquery-3.4.1.min.js"></script>
+<script src="../JS/global/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="../JS/global/bootstrap/bootstrap-select.js"></script>
+<script src="../JS/global/datePicker/datepicker.js"></script>
+<script src="../JS/layout.js"></script>
 
-  <!-- this page -->
-  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-  <script src="../JS/global/datePicker/datepicker.js"></script>
 
-  <script src="../JS/layout.js"></script>
-  <!-- js -->
-  <script type="text/javascript">
-    $(document).ready(function() {
-        $('.basicInput').select2();
-    });
-    $(function () {
-      $('[data-toggle="tooltip"]').tooltip()
-    })
-  </script>
   <script type="text/javascript">
     $(function () {
 
@@ -1192,7 +1182,7 @@
         cols += '<td style="width:7%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
         cols += '<td style="width:14%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
         cols += '<td style="width:7%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
-        cols += '<td style="width:7%;" class="style-td"><button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom"><i class="fa fa-trash"></i></button></td>';
+        cols += '<td style="width:7%;" class="style-td"><button type="button" class="btn btn-secondary dataTableButtons edite-Role"> <i class="fa fa-pen"></i> </button><button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom"><i class="fa fa-trash"></i></button></td>';
 
         // cols += '<td><button class="btn btn-danger rounded-0" id ="deleteRow"><i class="fa fa-trash"></i></button</td>';
 
@@ -1200,14 +1190,14 @@
         newRow.append(cols);
 
         // Insert the row inside a table
-        $("table").append(newRow);
+        $(".table-Articler").append(newRow);
 
         // Increase counter after each row insertion
         counter++;
     });
 
     // Remove row when delete btn is clicked
-    $("table").on("click", "#deleteRow", function (event) {
+    $(".table-Articler").on("click", "#deleteRow", function (event) {
         $(this).closest("tr").remove();
         counter -= 1
     });

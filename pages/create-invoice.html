@@ -150,7 +150,7 @@
                 <span class="">Invoices/Debts</span><i class="fa-solid fa-angle-right sidebar-arrow-down"></i>
               </div>
             </a>
-            <div class="toggle-display">
+            <div class="toggle-display display-toggle-menu">
               <a href="invoices.html" class="nav-link active">
                 <i class="fa-solid fa-circle"></i>
                 <span class="">Invoices</span>
@@ -829,21 +829,252 @@
                     </div>
                   </form>
                 </div>
-                <div class="container-fluid py-4 d-flex justify-content-end">
-                      <div class="col-md-4 col-12 text-end">
-                        <button class="btn btn-primary  cancel-btn" type="submit">
-                        Cancel
-                        </button>
-                          <button class="btn btn-primary submit-btn" type="submit">
-                          Save
-                        </button>                        
+                <div class="container-fluid py-4 d-flex justify-content-end print-dropdown">
+                  <form class="offers-btn d-flex justify-content-center flex-wrap justify-content-md-end" style="gap: 1rem;">
+                    <button class="btn btn-primary  cancel-btn"> Cancel </button>
+                    <button class="btn btn-primary submit-btn">  Save  </button>
+                    
+                      <div class="ui inline dropdown h-100  cancel-btn text-dark" tabindex="0">
+                        <div class="text">
+                          Printout
+                        </div>
+                        <i class="dropdown icon"></i>
+                        <div class="menu w-100" tabindex="-1">
+                          <div class="item" data-bs-toggle="modal" data-bs-target="#pdfModal">
+                            Print pdf
+                          </div>
+                          <div class="item" data-bs-toggle="modal" data-bs-target="#EmailModal">
+                            Email
+                          </div>
+                        </div>
                       </div>
+                    <button class="btn btn-primary submit-btn" type="submit" style="margin-left: 10px; border-top-left-radius: none !important;  border-bottom-left-radius: none !important;">Send </button>
+                    <button class="btn btn-primary submit-btn" type="submit"> Create Invoice </button>
+                  </form>
                 </div>
               </div>
             </div>
         </div>
   </main>
 
+
+<!-- email   modal -->
+<div class="modal fade" id="EmailModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg  modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header d-flex justify-content-end  border-0">
+                <button type="button" class="close-btn" data-bs-dismiss="modal" aria-label="Close">
+                    <i class="bi bi-x modal-close-icon"></i>
+                </button>
+            </div>
+            <div class="d-flex flex-column descripton-area-container px-4 py-1 mb-3" style="width: 100%;">
+                <div class="text-select">
+                    Sender Email
+                </div>
+                <div class="container-inner" style="background-color: #F3F2F2;">
+                    <input class="form-control input" type="text" placeholder="Enter Name"
+                        style="background-color: #F3F2F2;" />
+                </div>
+            </div>
+            <div class="d-flex flex-column descripton-area-container px-4 py-1 mb-3" style="width: 100%;">
+                <div class="text-select">
+                    Reciver Email
+                </div>
+                <div class="container-inner" style="background-color: #F3F2F2;">
+                    <input class="form-control input" type="text" placeholder="Enter Name"
+                        style="background-color: #F3F2F2;" />
+                </div>
+            </div>
+            <div class="d-flex flex-row  px-4 py-1 mb-3" style="gap:25px">
+                <div class="d-flex flex-column descripton-area-container" style="width: 100%;">
+                    <div class="text-select">
+                        CC
+                    </div>
+                    <div class="container-inner" style="background-color: #F3F2F2;">
+                        <input class="form-control input" type="text" placeholder="Enter Name"
+                            style="background-color: #F3F2F2;" />
+                    </div>
+                </div>
+
+            </div>
+            <div class="d-flex flex-row  px-4 py-1 mb-3" style="gap:25px">
+                <div class="d-flex flex-column descripton-area-container" style="width: 100%;">
+                    <div class="text-select">
+                        BC
+                    </div>
+
+                    <div class="container-inner" style="background-color: #F3F2F2;">
+                        <input class="form-control input" type="text" placeholder="Enter Name"
+                            style="background-color: #F3F2F2;" />
+                    </div>
+                </div>
+
+            </div>
+            <div class="d-flex flex-row  px-4 py-1 mb-3" style="gap:25px">
+                <div class="d-flex flex-column descripton-area-container" style="width: 100%;">
+                    <div class="text-select">
+                        Subject
+                    </div>
+                    <div class="container-inner" style="background-color: #F3F2F2;">
+                        <input class="form-control input" type="text" placeholder="Enter Name"
+                            style="background-color: #F3F2F2;" />
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="file-container-input px-4 py-1 mb-3" style="width: 100%;">
+              <div class="text-select">  Message  </div>
+              <textarea class="form-control" id="editor" style="background-color: #F3F2F2;"></textarea>    
+            </div>
+            <div class="d-flex justify-content-center align-items-center m-3 flex-wrap" style="gap:15px">
+                <div class="d-flex p-3   justify-content-between" id="download-contract-word"
+                    style="width:45%;background-color: #F3F2F2;">
+                    <div class="d-flex" style="gap:10px">
+                        <img src="../img/icons/word.svg" />
+                        <div class="d-flex flex-column">
+                            <span>Research.rar</span>
+                            <span>5.778 gbs</span>
+                        </div>
+                    </div>
+                    <img src="../img/icons/download-solid.svg" />
+                </div>
+                <div class="d-flex p-3 justify-content-between" id="download-contract-excel"
+                    style="width:45%;background-color: #F3F2F2;">
+                    <div class="d-flex" style="gap:10px">
+                        <img src="../img/icons/excel.svg" />
+                        <div class="d-flex flex-column">
+                            <span>Research.rar</span>
+                            <span>5.778 gbs</span>
+                        </div>
+                    </div>
+                    <img src="../img/icons/download-solid.svg" />
+                </div>
+            </div>
+            <div class="modal-footer d-flex justify-content-center">
+                <button type="button" class="btn"
+                    style="background-color: #E1E1E1; color: #364153; border-radius:5px; width:100px"
+                    data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn"
+                    style="background-color: #364153; color: white; border-radius:5px; width:100px"
+                    data-bs-dismiss="modal">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End email modal -->
+
+
+<!-- pdf  modal -->
+<div class="modal fade" id="pdfModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg  modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="d-flex justify-content-between align-items-center">
+            <h3 class="logo pl-2 pl-lg-5">Highnox</h3>
+            <div class="d-flex justify-content-between  align-items-center">
+              <h3 class="pr-2 pr-lg-5">Quotation</h3>
+              <i class="bi bi-x modal-close-icon display-5 text-secondary" data-bs-dismiss="modal"></i>
+            </div>
+          </div>
+          <div class="bg-primary d-flex justify-content-between  align-items-center w-100 py-3 px-lg-5 px-3 ">
+            <p class="m-0">Invoice # 52148</p>
+            <p class="m-0">Date 01 / 02 / 2020</p>
+          </div>
+          <div class="px-2 px-lg-5 py-4">
+            <h4>Invoice to : Dwyane Clark</h4>
+            <p class="w-25 mx-5">24 dummy street area . location .lorem ipsum. 570xx59x</p>
+          </div>
+
+
+          <table class="table table-bordered">
+            <thead class="bg-primary">
+              <tr>
+                <td class="col-1">SL.</td>
+                <td>Item Description</td>
+                <td>Price</td>
+                <td>QTY</td>
+                <td>Total</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="content-form rounded-0">1</td>
+                <td>Lorem Ipsum Dolor</td>
+                <td>50.00$</td>
+                <td>1</td>
+                <td>50.00$</td>
+              </tr>
+              <tr>
+                <td class="content-form rounded-0">2</td>
+                <td>pellerum id neoejreu iuso</td>
+                <td>50.00$</td>
+                <td>1</td>
+                <td>50.00$</td>
+              </tr>
+              <tr>
+                <td class="content-form rounded-0">3</td>
+                <td>Lorem Ipsum Dolor</td>
+                <td>50.00$</td>
+                <td>1</td>
+                <td>50.00$</td>
+              </tr>
+              <tr>
+                <td class="content-form rounded-0">4</td>
+                <td>pellerum id neoejreu iuso</td>
+                <td>50.00$</td>
+                <td>1</td>
+                <td>50.00$</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="row py-4 px-2 px-lg-5">
+            <div class="col-12 col-lg-8">
+              <h4>Payment Info :</h4>
+              <p>Account # : 12556555</p>
+              <p>Account Name : 12556555</p>
+              <p>Bank Details : Add your bank details</p>
+              <br>
+              <h4>Term & Conditions</h4>
+              <p>Lorem Ipsum Dolor<p>
+            </div>
+            <div class="col-12 col-lg-4">
+              <div class="bg-primary shadow d-flex  mb-3">
+                <div class="w-100 py-3 border text-center">
+                  <p>Sub Total</p>
+                </div>
+                <div class="w-100 py-3 border text-center">
+                  <p>2000 SEK</p>
+                </div>
+              </div>
+              <div class="bg-primary shadow d-flex  mb-3">
+                <div class="w-100 py-3 border text-center">
+                  <p>Tax</p>
+                </div>
+                <div class="w-100 py-3 border text-center">
+                  <p>0.00%</p>
+                </div>
+              </div>
+              <div class="bg-primary shadow d-flex  mb-3">
+                <div class="w-100 py-3 border text-center">
+                  <p>Total</p>
+                </div>
+                <div class="w-100 py-3 border text-center">
+                  <p>2000 SEK</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-primary w-100 py-1 px-lg-5 px-3 ">
+            Thank you for your Business
+          </div>
+            
+        </div>
+    </div>
+</div>
+<!-- End pdf modal -->
 
   <script>
     $('.ui.dropdown').dropdown();
@@ -857,6 +1088,51 @@
   <script src="../JS/global/datePicker/datepicker.js"></script>
   <script src="../JS/layout.js"></script>
 
+  
+<script type="text/javascript">
+
+  $(function () {
+
+
+
+  // Start counting from the third row
+  var counter = 1;
+
+  $(".add_new_row_new8").on("click", function (event) {
+      event.preventDefault();
+
+      var newRow = $('<tr class="tr style-table-my1 tr-active">');
+      var cols = '';
+
+      // Table columns
+      cols += '<td style="width:7%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
+      cols += '<td style="width:7%;" class="style-td"><input class="form-control rounded-0" type="date" name="handle" placeholder="Handle"></td>';
+      cols += '<td style="width:7%;" class="style-td"><input class="form-control rounded-0" type="date" name="handle" placeholder="Handle"></td>';
+      cols += '<td style="width:10%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
+      cols += '<td style="width:10%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
+      cols += '<td style="width:10%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
+      cols += '<td style="width:10%;" class="style-td"><button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom"><i class="fa fa-trash"></i></button></td>';
+
+
+      // cols += '<td><button class="btn btn-danger rounded-0" id ="deleteRow"><i class="fa fa-trash"></i></button</td>';
+
+      // Insert the columns inside a row
+      newRow.append(cols);
+
+      // Insert the row inside a table
+      $("#myTable_new8").append(newRow);
+
+      // Increase counter after each row insertion
+      counter++;
+  });
+
+  // Remove row when delete btn is clicked
+  $("#myTable_new8").on("click", "#deleteRow", function (event) {
+      $(this).closest("tr").remove();
+      counter -= 1
+  });
+});
+</script>
 </body>
 
 </html>

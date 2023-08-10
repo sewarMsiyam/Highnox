@@ -106,7 +106,7 @@
                 <span class="">Contract</span><i class="fa-solid fa-angle-right sidebar-arrow-down"></i>
               </div>
             </a>
-            <div class="toggle-display">
+            <div class="toggle-display display-toggle-menu">
               <a href="manage-contract.html" class="nav-link">
                 <i class="fa-solid fa-circle"></i>
                 <span class="">Mange contract</span>
@@ -629,24 +629,25 @@
                                   </div>
                                   <div class="col-md-2 col-6">
                                     <div>
-                                      <label>Parent Company Name</label>
-                                    </div>
-                                    <div class="second-select-input">
-                                      <input type="text" class="form-control" placeholder="joe moner">
-                                    </div>
-                                  </div>
-                                  <div class="col-md-2 col-6">
-                                    <div>
-                                      <label>Account manageer</label>
+                                      <label>Account manager</label>
                                     </div>
                                         <div class="second-select-input">
-                                          <select class="form-control border-0">
-                                              <option>select</option>
+                                          <select class=" w-100 selectpicker" multiple aria-label="size 3 select example" data-live-search="true">
+                                            <option>select</option>
                                               <option>manageer 1</option>
                                               <option>manageer 2</option>
                                               <option>manageer 3</option>
                                             </select>
+                                            <img class="input-svg" width="12" src="../images/img-droplist.svg">  
                                        </div>
+                                  </div>
+                                  <div class="col-md-2 col-12 padding-top-small-10">
+                                    <div>
+                                      <label>Email Address</label>
+                                    </div>
+                                    <div class="second-select-input">
+                                      <input type="text" class="form-control" placeholder="stokholm">
+                                    </div>
                                   </div>
                                 </div>
                                 <div class="form-row my-4">
@@ -694,25 +695,18 @@
                                     <div>
                                       <label>Client Category</label>
                                     </div>
-                                        <div class="second-select-input">
-                                          <select class="form-control border-0">
-                                              <option>select</option>
-                                              <option>Category 1</option>
-                                              <option>Category 2</option>
-                                              <option>Category 3</option>
-                                            </select>
-                                       </div>
+                                    <div class="second-select-input">
+                                      <select class=" w-100 selectpicker" multiple aria-label="size 3 select example" data-live-search="true">
+                                        <option>select</option>
+                                          <option>Category 1</option>
+                                          <option>Category 2</option>
+                                          <option>Category 3</option>
+                                        </select>
+                                        <img class="input-svg" width="12" src="../images/img-droplist.svg">  
+                                   </div>
                                   </div>
                                 </div>
                                 <div class="form-row my-4">
-                                  <div class="col-md-3 col-12 padding-top-small-10">
-                                    <div>
-                                      <label>Email Address</label>
-                                    </div>
-                                    <div class="second-select-input">
-                                      <input type="text" class="form-control" placeholder="stokholm">
-                                    </div>
-                                  </div>
                                   <div class="col-md-2 col-6 padding-top-small-10">
                                     <div>
                                       <label>Post number/Zip Code</label>
@@ -981,15 +975,7 @@
                                         <h4 class="d-flex align-items-center m-0">Rental Details</h4>
                                       
                                       <div class="d-flex justify-content-start align-items-center">
-                                        <div class="py-2 mx-4 d-flex justify-content-start align-items-center flex-column-responsive">
-                                            <div class="form-check form-switch col-12-responsive">
-                                              <label class="switch">
-                                                <input type="checkbox">
-                                                <span class="slider round"></span>
-                                              </label>
-                                              <label class="form-check-label" for="flexSwitchCheckChecked">Activate discount for this contract</label>
-                                            </div>
-                                          </div>
+                                        
                                         <a href="#" class="btn btn-primary create-btn add_new_row_new1">
                                           <i class="bi bi-plus-circle-fill"></i>
                                           Add Row
@@ -1136,6 +1122,15 @@
                                         <h4 class="d-flex align-items-center m-0">Discount</h4>
                                       
                                       <div class="d-flex justify-content-start align-items-center">
+                                        <div class="py-2 mx-4 d-flex justify-content-start align-items-center flex-column-responsive">
+                                          <div class="form-check form-switch col-12-responsive">
+                                            <label class="switch">
+                                              <input type="checkbox">
+                                              <span class="slider round"></span>
+                                            </label>
+                                            <label class="form-check-label" for="flexSwitchCheckChecked">Activate discount for this contract</label>
+                                          </div>
+                                        </div>
                                         <a href="#" class="btn btn-primary create-btn add_new_row_new2">
                                           <i class="bi bi-plus-circle-fill"></i>
                                           Add Row
@@ -1861,6 +1856,30 @@
                         <div class="content-container rounded bg-white shadow mt-4">
                           <div class="content-top d-flex justify-content-between align-items-center py-1">
                             <h4 class="px-4 my-0 py-2">Payment Conditions</h4>
+                            <div class="px-4 py-2 d-flex justify-content-start align-items-center flex-column-responsive">
+                              <div class="form-check form-switch col-12-responsive">
+                                  <label class="switch">
+                                      <input type="checkbox">
+                                      <span class="slider round"></span>
+                                  </label>
+                                  <label class="form-check-label" for="flexSwitchCheckChecked"> Invoice by
+                                      email</label>
+                              </div>
+                              <div class="form-check form-switch col-12-responsive">
+                                  <label class="switch">
+                                      <input type="checkbox">
+                                      <span class="slider round"></span>
+                                  </label>
+                                  <label class="form-check-label" for="flexSwitchCheckChecked"> Collection ageny                                  </label>
+                              </div>
+                              <div class="form-check form-switch col-12-responsive">
+                                  <label class="switch">
+                                      <input type="checkbox">
+                                      <span class="slider round"></span>
+                                  </label>
+                                  <label class="form-check-label" for="flexSwitchCheckChecked">Interest</label>
+                              </div>
+                          </div>
                           </div>
                           <div class="content-body p-4">
                             <div class="container-fluid content-form py-4">
@@ -1973,26 +1992,6 @@
                                       <input type="text" class="form-control" placeholder="joe moner">
                                     </div>
                                   </div>
-                                  <div class="col-md-2 col-12 d-flex align-items-end pb-2">
-                                    <div class="form-check form-switch col-12-responsive">
-                                      <label class="switch">
-                                        <input type="checkbox">
-                                        <span class="slider round"></span>
-                                      </label>
-                                      <label class="form-check-label" for="flexSwitchCheckChecked">Invoice by email</label>
-                                    </div>
-                                  </div>
-                              </div>
-                              <div class="form-row my-4">
-                                  <div class="col-md-2 col-12 d-flex align-items-end pb-2">
-                                    <div class="form-check form-switch col-12-responsive">
-                                      <label class="switch">
-                                        <input type="checkbox">
-                                        <span class="slider round"></span>
-                                      </label>
-                                      <label class="form-check-label" for="flexSwitchCheckChecked">Collection ageny</label>
-                                    </div>
-                                  </div>
                                   <div class="col-md-2 col-6">
                                     <div>
                                       <label>interest percentage</label>
@@ -2001,17 +2000,7 @@
                                       <input type="text" class="form-control" placeholder="joe moner">
                                     </div>
                                   </div>
-                                  <div class="col-md-2 col-12 d-flex align-items-end pb-2">
-                                    <div class="form-check form-switch col-12-responsive">
-                                      <label class="switch">
-                                        <input type="checkbox">
-                                        <span class="slider round"></span>
-                                      </label>
-                                      <label class="form-check-label" for="flexSwitchCheckChecked">Interest</label>
-                                    </div>
-                                  </div>
-                                  </div>
-                               
+                              </div>
                               </form>
                             </div>
                           </div>
@@ -2024,9 +2013,17 @@
                                 <!-- add new row -->
                                 <div class="px-4">
                                     <div class="d-flex justify-content-between">
-                                        <h4 class="d-flex align-items-center m-0">Order Rows</h4>
+                                        <h4 class="d-flex align-items-center m-0">indextion table</h4>
                                       
-                                      <div class="d-flex justify-content-start align-items-center">
+                                      <div class="d-flex justify-content-start align-items-center mx-3">
+                                        <div class="form-check form-switch col-12-responsive">
+                                          <label class="switch">
+                                              <input type="checkbox">
+                                              <span class="slider round"></span>
+                                          </label>
+                                          <label class="form-check-label" for="flexSwitchCheckChecked">Indexation</label>
+                                      </div>
+
                                         <a href="#" class="btn btn-primary create-btn add_new_row_new5">
                                           <i class="bi bi-plus-circle-fill"></i>
                                           Add Row
@@ -2190,7 +2187,7 @@
                             <h4 class="px-4 my-0">Singutre</h4>
                           </div>
                           <div class="content-body p-4">
-                            <div class="container-fluid  py-4">
+                            <!-- <div class="container-fluid  py-4">
                                 <div>
                                   <section class="px-4 row g-4">
                                     <article class="col-12">
@@ -2205,7 +2202,7 @@
                                     </article>
                                   </section>
                                 </div>
-                            </div>
+                            </div> -->
                             <!-- table -->
                             <div class="container-fluid content-form py-4 my-4">
                               <form>
@@ -2881,6 +2878,29 @@
                             </div>
                               <!-- tyr -->
                           </div>
+                          <div class="container-fluid py-4 d-flex justify-content-end print-dropdown">
+                            <form class="offers-btn d-flex justify-content-center flex-wrap justify-content-md-end" style="gap: 1rem;">
+                              <button class="btn btn-primary  cancel-btn"> Cancel </button>
+                              <button class="btn btn-primary submit-btn">  Save  </button>
+                              
+                                <div class="ui inline dropdown h-100  cancel-btn text-dark" tabindex="0">
+                                  <div class="text">
+                                    Printout
+                                  </div>
+                                  <i class="dropdown icon"></i>
+                                  <div class="menu w-100" tabindex="-1">
+                                    <div class="item" data-bs-toggle="modal" data-bs-target="#pdfModal">
+                                      Print pdf
+                                    </div>
+                                    <div class="item" data-bs-toggle="modal" data-bs-target="#EmailModal">
+                                      Email
+                                    </div>
+                                  </div>
+                                </div>
+                              <button class="btn btn-primary submit-btn" type="submit" style="margin-left: 10px; border-top-left-radius: none !important;  border-bottom-left-radius: none !important;">Send </button>
+                              <button class="btn btn-primary submit-btn" type="submit"> Create Invoice </button>
+                            </form>
+                          </div>
                         </div>
                      <!-- invoice table -->
 
@@ -2916,132 +2936,224 @@
             </div>
           </div>
     
-          <div class="modal fade" id="dragulaModalCenter" tabindex="-1" role="dialog"
-          aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-              <div class="modal-header d-flex justify-content-end ">
-                <button type="button" class="close-btn" data-bs-dismiss="modal" aria-label="Close"
-                  style="position:relative">
-                  <i class="bi bi-x modal-close-icon"></i>
-                </button>
-              </div>
-              <div class="d-flex flex-column descripton-area-container px-4 py-1" style="width: 100%;">
+<!-- email   modal -->
+<div class="modal fade" id="EmailModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+aria-hidden="true">
+<div class="modal-dialog modal-lg  modal-dialog-centered" role="document">
+    <div class="modal-content">
+        <div class="modal-header d-flex justify-content-end  border-0">
+            <button type="button" class="close-btn" data-bs-dismiss="modal" aria-label="Close">
+                <i class="bi bi-x modal-close-icon"></i>
+            </button>
+        </div>
+        <div class="d-flex flex-column descripton-area-container px-4 py-1 mb-3" style="width: 100%;">
+            <div class="text-select">
+                Sender Email
+            </div>
+            <div class="container-inner" style="background-color: #F3F2F2;">
+                <input class="form-control input" type="text" placeholder="Enter Name"
+                    style="background-color: #F3F2F2;" />
+            </div>
+        </div>
+        <div class="d-flex flex-column descripton-area-container px-4 py-1 mb-3" style="width: 100%;">
+            <div class="text-select">
+                Reciver Email
+            </div>
+            <div class="container-inner" style="background-color: #F3F2F2;">
+                <input class="form-control input" type="text" placeholder="Enter Name"
+                    style="background-color: #F3F2F2;" />
+            </div>
+        </div>
+        <div class="d-flex flex-row  px-4 py-1 mb-3" style="gap:25px">
+            <div class="d-flex flex-column descripton-area-container" style="width: 100%;">
                 <div class="text-select">
-                  Sender Email
-                </div>
-                <div class="container-inner" style="background-color: #F3F2F2;">
-                  <input
-                    class="input"
-                    type="text"
-                    placeholder="Enter Name"
-                    style="background-color: #F3F2F2;"
-                  />
-                </div>
-              </div>
-              <div class="d-flex flex-column descripton-area-container px-4 py-1" style="width: 100%;">
-                <div class="text-select">
-                  Reciver Email
-                </div>
-                <div class="container-inner" style="background-color: #F3F2F2;">
-                  <input
-                    class="input"
-                    type="text"
-                    placeholder="Enter Name"
-                    style="background-color: #F3F2F2;"
-                  />
-                </div>
-              </div>
-              <div class="d-flex flex-row  px-4 py-1" style="gap:25px">
-                <div class="d-flex flex-column descripton-area-container" style="width: 100%;">
-                  <div class="text-select">
                     CC
-                  </div>
-                  <div class="container-inner" style="background-color: #F3F2F2;">
-                    <input
-                      class="input"
-                      type="text"
-                      placeholder="Enter Name"
-                      style="background-color: #F3F2F2;"
-                    />
-                  </div>
                 </div>
-                
-              </div>
-              <div class="d-flex flex-row  px-4 py-1" style="gap:25px">
-                <div class="d-flex flex-column descripton-area-container" style="width: 100%;">
-                  <div class="text-select">
+                <div class="container-inner" style="background-color: #F3F2F2;">
+                    <input class="form-control input" type="text" placeholder="Enter Name"
+                        style="background-color: #F3F2F2;" />
+                </div>
+            </div>
+
+        </div>
+        <div class="d-flex flex-row  px-4 py-1 mb-3" style="gap:25px">
+            <div class="d-flex flex-column descripton-area-container" style="width: 100%;">
+                <div class="text-select">
                     BC
-                  </div>
-  
-                  <div class="container-inner" style="background-color: #F3F2F2;">
-                    <input
-                      class="input"
-                      type="text"
-                      placeholder="Enter Name"
-                      style="background-color: #F3F2F2;"
-                    />
-                  </div>
                 </div>
-                
-              </div>
-              <div class="d-flex flex-row  px-4 py-1" style="gap:25px">
-                <div class="d-flex flex-column descripton-area-container" style="width: 100%;">
-                  <div class="text-select">
+
+                <div class="container-inner" style="background-color: #F3F2F2;">
+                    <input class="form-control input" type="text" placeholder="Enter Name"
+                        style="background-color: #F3F2F2;" />
+                </div>
+            </div>
+
+        </div>
+        <div class="d-flex flex-row  px-4 py-1 mb-3" style="gap:25px">
+            <div class="d-flex flex-column descripton-area-container" style="width: 100%;">
+                <div class="text-select">
                     Subject
-                  </div>
-                  <div class="container-inner" style="background-color: #F3F2F2;">
-                    <input
-                      class="input"
-                      type="text"
-                      placeholder="Enter Name"
-                      style="background-color: #F3F2F2;"
-                    />
-                  </div>
                 </div>
-                
-              </div>
-  
-              <div class="file-container-input px-4 py-1" style="width: 100%;">
-                <label for="attachment" style="
-        font-size: 16px !important;
-        font-family: 'MontserratSemiBold';
-        color: #364153;">Message</label>
-                <textarea id="editor" style="background-color: #F3F2F2;"></textarea>
-              </div>
-              <div class="d-flex justify-content-center align-items-center m-3 flex-wrap" style="gap:15px">
-                <div class="d-flex p-3   justify-content-between" id="download-contract-word"   style="width:45%;background-color: #F3F2F2;">
-                 <div class="d-flex" style="gap:10px">
-                   <img src="../img/icons/word.svg" />
-                 <div class="d-flex flex-column">
-                   <span>Research.rar</span>
-                   <span>5.778 gbs</span>
-                 </div>
-                 </div>
-                 <img src="../img/icons/download-solid.svg" />
+                <div class="container-inner" style="background-color: #F3F2F2;">
+                    <input class="form-control input" type="text" placeholder="Enter Name"
+                        style="background-color: #F3F2F2;" />
                 </div>
-                <div class="d-flex p-3 justify-content-between" id="download-contract-excel"  style="width:45%;background-color: #F3F2F2;">
-                 <div class="d-flex" style="gap:10px">
-                   <img src="../img/icons/excel.svg" />
-                 <div class="d-flex flex-column">
-                   <span>Research.rar</span>
-                   <span>5.778 gbs</span>
-                 </div>
-                 </div>
-                 <img src="../img/icons/download-solid.svg" />
+            </div>
+
+        </div>
+
+        <div class="file-container-input px-4 py-1 mb-3" style="width: 100%;">
+          <div class="text-select">  Message  </div>
+          <textarea class="form-control" id="editor" style="background-color: #F3F2F2;"></textarea>    
+        </div>
+        <div class="d-flex justify-content-center align-items-center m-3 flex-wrap" style="gap:15px">
+            <div class="d-flex p-3   justify-content-between" id="download-contract-word"
+                style="width:45%;background-color: #F3F2F2;">
+                <div class="d-flex" style="gap:10px">
+                    <img src="../img/icons/word.svg" />
+                    <div class="d-flex flex-column">
+                        <span>Research.rar</span>
+                        <span>5.778 gbs</span>
+                    </div>
                 </div>
-               </div>
-              <div class="modal-footer d-flex justify-content-center">
-                <button type="button" class="btn"
-                  style="background-color: #E1E1E1; color: #364153; border-radius:5px; width:100px"
-                  data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn"
-                  style="background-color: #364153; color: white; border-radius:5px; width:100px"
-                  data-bs-dismiss="modal">Save</button>
-              </div>
+                <img src="../img/icons/download-solid.svg" />
+            </div>
+            <div class="d-flex p-3 justify-content-between" id="download-contract-excel"
+                style="width:45%;background-color: #F3F2F2;">
+                <div class="d-flex" style="gap:10px">
+                    <img src="../img/icons/excel.svg" />
+                    <div class="d-flex flex-column">
+                        <span>Research.rar</span>
+                        <span>5.778 gbs</span>
+                    </div>
+                </div>
+                <img src="../img/icons/download-solid.svg" />
+            </div>
+        </div>
+        <div class="modal-footer d-flex justify-content-center">
+            <button type="button" class="btn"
+                style="background-color: #E1E1E1; color: #364153; border-radius:5px; width:100px"
+                data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn"
+                style="background-color: #364153; color: white; border-radius:5px; width:100px"
+                data-bs-dismiss="modal">Save</button>
+        </div>
+    </div>
+</div>
+</div>
+<!-- End email modal -->
+
+
+<!-- pdf  modal -->
+<div class="modal fade" id="pdfModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+aria-hidden="true">
+<div class="modal-dialog modal-lg  modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="d-flex justify-content-between align-items-center">
+        <h3 class="logo pl-2 pl-lg-5">Highnox</h3>
+        <div class="d-flex justify-content-between  align-items-center">
+          <h3 class="pr-2 pr-lg-5">Quotation</h3>
+          <i class="bi bi-x modal-close-icon display-5 text-secondary" data-bs-dismiss="modal"></i>
+        </div>
+      </div>
+      <div class="bg-primary d-flex justify-content-between  align-items-center w-100 py-3 px-lg-5 px-3 ">
+        <p class="m-0">Invoice # 52148</p>
+        <p class="m-0">Date 01 / 02 / 2020</p>
+      </div>
+      <div class="px-2 px-lg-5 py-4">
+        <h4>Invoice to : Dwyane Clark</h4>
+        <p class="w-25 mx-5">24 dummy street area . location .lorem ipsum. 570xx59x</p>
+      </div>
+
+
+      <table class="table table-bordered">
+        <thead class="bg-primary">
+          <tr>
+            <td class="col-1">SL.</td>
+            <td>Item Description</td>
+            <td>Price</td>
+            <td>QTY</td>
+            <td>Total</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="content-form rounded-0">1</td>
+            <td>Lorem Ipsum Dolor</td>
+            <td>50.00$</td>
+            <td>1</td>
+            <td>50.00$</td>
+          </tr>
+          <tr>
+            <td class="content-form rounded-0">2</td>
+            <td>pellerum id neoejreu iuso</td>
+            <td>50.00$</td>
+            <td>1</td>
+            <td>50.00$</td>
+          </tr>
+          <tr>
+            <td class="content-form rounded-0">3</td>
+            <td>Lorem Ipsum Dolor</td>
+            <td>50.00$</td>
+            <td>1</td>
+            <td>50.00$</td>
+          </tr>
+          <tr>
+            <td class="content-form rounded-0">4</td>
+            <td>pellerum id neoejreu iuso</td>
+            <td>50.00$</td>
+            <td>1</td>
+            <td>50.00$</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="row py-4 px-2 px-lg-5">
+        <div class="col-12 col-lg-8">
+          <h4>Payment Info :</h4>
+          <p>Account # : 12556555</p>
+          <p>Account Name : 12556555</p>
+          <p>Bank Details : Add your bank details</p>
+          <br>
+          <h4>Term & Conditions</h4>
+          <p>Lorem Ipsum Dolor<p>
+        </div>
+        <div class="col-12 col-lg-4">
+          <div class="bg-primary shadow d-flex  mb-3">
+            <div class="w-100 py-3 border text-center">
+              <p>Sub Total</p>
+            </div>
+            <div class="w-100 py-3 border text-center">
+              <p>2000 SEK</p>
+            </div>
+          </div>
+          <div class="bg-primary shadow d-flex  mb-3">
+            <div class="w-100 py-3 border text-center">
+              <p>Tax</p>
+            </div>
+            <div class="w-100 py-3 border text-center">
+              <p>0.00%</p>
+            </div>
+          </div>
+          <div class="bg-primary shadow d-flex  mb-3">
+            <div class="w-100 py-3 border text-center">
+              <p>Total</p>
+            </div>
+            <div class="w-100 py-3 border text-center">
+              <p>2000 SEK</p>
             </div>
           </div>
         </div>
+      </div>
+      <div class="bg-primary w-100 py-1 px-lg-5 px-3 ">
+        Thank you for your Business
+      </div>
+        
+    </div>
+</div>
+</div>
+<!-- End pdf modal -->
+
 
     </main>
 

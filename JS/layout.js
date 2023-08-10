@@ -52,6 +52,9 @@ $(document).ready(function () {
 });
 
 
+
+
+
 var toggleSliderMenu = document.querySelectorAll(".display-menu");
 const toggleDisplay = document.querySelectorAll(".toggle-display");
 

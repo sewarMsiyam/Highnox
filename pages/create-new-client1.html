@@ -18,6 +18,7 @@
   <link href="../css/global/datepicker/datepicker.css" rel="stylesheet" type="text/css" />
   <link href="../css/global/bootstrap/bootstrap-select.css" rel="stylesheet">
 
+
   <!-- dashboard style -->
   <link href="../css/dashboard/main-dashboard.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="../css/dashboard/style.css">
@@ -27,7 +28,8 @@
   <!-- Icon Font Stylesheet cdn -->
   <link rel="stylesheet" href="../css/global/font-awesome/css/all.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-  
+  <link href="../css/select2.min.css" rel="stylesheet" />
+
   <link rel="stylesheet" href="../css/layout.css">
 </head>
 <body>
@@ -67,7 +69,7 @@
                 <span class="">Client</span><i class="fa-solid fa-angle-right sidebar-arrow-down"></i>
               </div>
             </a>
-            <div class="toggle-display">
+            <div class="toggle-display display-toggle-menu">
               <a href="manage-client.html" class="nav-link">
                 <i class="fa-solid fa-circle"></i>
                 <span class="">Mange Client</span>
@@ -643,7 +645,7 @@
                                                 <input type="text" class="form-control" placeholder="joe moner">
                                             </div>
                                         </div>
-                                        <div class="col-md-2 col-6">
+                                        <div class="col-md-4 col-6">
                                             <div>
                                                 <label>Customer name</label>
                                             </div>
@@ -651,7 +653,7 @@
                                                 <input type="text" class="form-control" placeholder="joe moner">
                                             </div>
                                         </div>
-                                        <div class="col-md-3 col-6">
+                                        <div class="col-md-2 col-6">
                                             <div>
                                                 <label>Address 1</label>
                                             </div>
@@ -659,7 +661,7 @@
                                                 <input type="text" class="form-control" placeholder="joe moner">
                                             </div>
                                         </div>
-                                        <div class="col-md-3 col-6">
+                                        <div class="col-md-2 col-6">
                                             <div>
                                                 <label>Post number / Zip Code</label>
                                             </div>
@@ -703,20 +705,32 @@
                                         </div>
                                         <div class="col-md-2 col-12 padding-top-small-10">
                                             <div>
-                                                <label>Building</label>
+                                              <label>Building</label>
                                             </div>
-                                            <div class="second-select-input">
-                                                <input type="text" class="form-control" placeholder="stokholm">
-                                            </div>
-                                        </div>
+                                              <div class="second-select-input">
+                                                <select class=" selectpicker" multiple aria-label="size 3 select example" data-live-search="true" >
+                                                  <option>Select Building</option>
+                                                  <option>Building 1</option>
+                                                  <option>Building 2</option>
+                                                  <option>Building 3</option>
+                                                </select>
+                                                <img class="input-svg" width="12" src="../images/img-droplist.svg">  
+                                              </div>
+                                          </div>
                                     </div>
                                     <div class="form-row my-4">
-                                        <div class="col-md-1 col-12">
+                                        <div class="col-md-2 col-12">
                                             <div>
                                                 <label>Floor</label>
                                             </div>
                                             <div class="second-select-input">
-                                                <input type="text" class="form-control" placeholder="stokholm">
+                                                <select class=" selectpicker" multiple aria-label="size 3 select example" data-live-search="true" >
+                                                    <option>Select Floor</option>
+                                                    <option>Floor 1</option>
+                                                    <option>Floor 2</option>
+                                                    <option>Floor 3</option>
+                                                  </select>
+                                                  <img class="input-svg" width="12" src="../images/img-droplist.svg">  
                                             </div>
                                         </div>
                                         <div class="col-md-2 col-12 padding-top-small-10">
@@ -724,7 +738,13 @@
                                                 <label>Room Number</label>
                                             </div>
                                             <div class="second-select-input">
-                                                <input type="text" class="form-control" placeholder="stokholm">
+                                                <select class=" selectpicker" multiple aria-label="size 3 select example" data-live-search="true" >
+                                                    <option>Room Number</option>
+                                                    <option>Room 1</option>
+                                                    <option>Room 2</option>
+                                                    <option>Room 3</option>
+                                                  </select>
+                                                  <img class="input-svg" width="12" src="../images/img-droplist.svg">  
                                             </div>
                                         </div>
                                         <div class="col-md-1 col-12 padding-top-small-10">
@@ -732,7 +752,7 @@
                                                 <label>Door code</label>
                                             </div>
                                             <div class="second-select-input">
-                                                <input type="text" class="form-control" placeholder="stokholm">
+                                                <input type="text" class="form-control" placeholder="Door">
                                             </div>
                                         </div>
                                         <div class="col-md-1 col-6 padding-top-small-10">
@@ -740,7 +760,7 @@
                                                 <label>Printer code</label>
                                             </div>
                                             <div class="second-select-input">
-                                                <input type="text" class="form-control" placeholder="stokholm">
+                                                <input type="text" class="form-control" placeholder="Printer">
                                             </div>
                                         </div>
                                         <div class="col-md-2 col-6 padding-top-small-10">
@@ -748,7 +768,13 @@
                                                 <label>Customer category</label>
                                             </div>
                                             <div class="second-select-input">
-                                                <input type="text" class="form-control" placeholder="stokholm">
+                                                <select class=" selectpicker" multiple aria-label="size 3 select example" data-live-search="true" >
+                                                    <option>Customer category</option>
+                                                    <option>Customer 1</option>
+                                                    <option>Customer 2</option>
+                                                    <option>Customer 3</option>
+                                                  </select>
+                                                  <img class="input-svg" width="12" src="../images/img-droplist.svg">  
                                             </div>
                                         </div>
                                         <div class="col-md-2 col-6 padding-top-small-10">
@@ -756,7 +782,13 @@
                                                 <label>Account manager</label>
                                             </div>
                                             <div class="second-select-input">
-                                                <input type="text" class="form-control" placeholder="stokholm">
+                                                <select class=" selectpicker" multiple aria-label="size 3 select example" data-live-search="true" >
+                                                    <option>Account manager</option>
+                                                    <option>Account 1</option>
+                                                    <option>Account 2</option>
+                                                    <option>Account 3</option>
+                                                  </select>
+                                                  <img class="input-svg" width="12" src="../images/img-droplist.svg">  
                                             </div>
                                         </div>
                                     </div>
@@ -768,7 +800,7 @@
                                     <div class="form-row my-4">
                                         <div class="col-md-2 col-6">
                                             <div>
-                                                <label>Floor</label>
+                                                <label>From</label>
                                             </div>
                                             <div class="second-select-input">
                                                 <div class="input-group date datepicker" data-provide="datepicker">
@@ -800,16 +832,22 @@
                                             <div>
                                                 <label>Blocked By</label>
                                             </div>
-                                            <div class="second-select-input">
-                                                <input type="text" class="form-control" placeholder="joe moner">
+                                            <div class="second-select-input w-100">
+                                                <select class="w-100 selectpicker" multiple aria-label="size 3 select example" data-live-search="true" >
+                                                    <option>Blocked By</option>
+                                                    <option>Blocked 1</option>
+                                                    <option>Blocked 2</option>
+                                                    <option>Blocked 3</option>
+                                                  </select>
+                                                  <img class="input-svg" width="12" src="../images/img-droplist.svg">  
                                             </div>
                                         </div>
                                         <div class="col-md-12 col-12 mt-4">
                                             <div>
-                                                <label>Booking status</label>
+                                                <label>Booking issue</label>
                                             </div>
-                                            <div class="second-select-input">
-                                                <input type="text" class="form-control" placeholder="joe moner">
+                                            <div>
+                                                <textarea class="form-control" placeholder="Enter Booking issue" rows="2"></textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -978,7 +1016,13 @@
                                                 <label>Building</label>
                                             </div>
                                             <div class="second-select-input">
-                                                <input type="text" class="form-control" placeholder="joe moner">
+                                                <select class=" selectpicker" multiple aria-label="size 3 select example" data-live-search="true" >
+                                                    <option>Select Building</option>
+                                                    <option>Building 1</option>
+                                                    <option>Building 2</option>
+                                                    <option>Building 3</option>
+                                                  </select>
+                                                  <img class="input-svg" width="12" src="../images/img-droplist.svg">  
                                             </div>
                                         </div>
                                     </div>
@@ -1036,7 +1080,13 @@
                                                 <label>Termination months</label>
                                             </div>
                                             <div class="second-select-input">
-                                                <input type="text" class="form-control" placeholder="joe moner">
+                                                <select class=" selectpicker" multiple aria-label="size 3 select example" data-live-search="true" >
+                                                    <option>Termination months</option>
+                                                    <option>Termination 1</option>
+                                                    <option>Termination 2</option>
+                                                    <option>Termination 3</option>
+                                                  </select>
+                                                  <img class="input-svg" width="12" src="../images/img-droplist.svg">  
                                             </div>
                                         </div>
                                         <div class="col-md-2 col-6">
@@ -1144,18 +1194,18 @@
                             <div class="d-flex justify-content-between">
                                 <div
                                     class="py-2 d-flex justify-content-start align-items-center flex-column-responsive">
-                                    <h4 class="py-2">Add Comission By Buildings</h4>
+                                    <h4 class="py-2">Booking credits</h4>
                                 </div>
                                 <div class="d-flex justify-content-start align-items-center">
                                     <a href="#" class="btn btn-primary create-btn add_new_row">
                                         <i class="bi bi-plus-circle-fill"></i>
-                                        Add new Comission
+                                        Add new credits
                                     </a>
                                 </div>
                             </div>
                             <div class="table-responsive bg-light mt-4 border-radius-20 shadow">
                                 <div class="secondTableContainer">
-                                    <table id="myTable" class="table">
+                                    <table id="myTable" class="table table_Booking">
                                         <thead>
                                             <tr class="tr">
                                                 <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
@@ -1307,7 +1357,7 @@
                                     aria-labelledby="all-tab">
                                     <div class="table-responsive bg-light mt-4 border-radius-20 shadow">
                                         <div class="secondTableContainer">
-                                            <table id="myTable" class="table">
+                                            <table >
                                                 <thead>
                                                     <tr class="tr">
                                                         <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
@@ -1830,6 +1880,50 @@
             <div class="tab-pane fade" id="Offers" role="tabpanel" aria-labelledby="Offers-tab">
               <!-- offers tab -->
               <div class="d-flex flex-column mb-3 justify-content-evenly p-5 gap">
+                <h3 class="investment-container-title">Investment International LTD</h3>
+                <div class="investment-sub-container mb-4">
+                    <div class="investment-cards-container">
+                        <div class="investment-card">
+                            <div class="investment-card-content">
+                                <div class="investment-card-content-title"> Organization Number </div>
+                                <div class="investment-card-content-value">978 - 059 - 000 - 258</div>
+                            </div>
+                            <div class="investment-card-img">
+                                <img src="../img/icons/organization.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="investment-card">
+                            <div class="investment-card-content">
+                                <div class="investment-card-content-title">Account Managers </div>
+                                <div class="investment-card-content-value">Sam Hansson , Frank Hanibal</div>
+                            </div>
+                            <div class="investment-card-img">
+                                <img src="../img/icons/managers.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="investment-card">
+                            <div class="investment-card-content">
+                                <div class="investment-card-content-title">Address </div>
+                                <div class="investment-card-content-value">Mark street 1234 stockholm</div>
+                            </div>
+                            <div class="investment-card-img">
+                                <img src="../img/icons/address.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="investment-card">
+                            <div class="investment-card-content">
+                                <div class="investment-card-content-title">Contact Info </div>
+                                <div class="investment-card-content-value">Tel number : 085698562</div>
+                                <div class="investment-card-content-value">Main Contact : Hassan boior</div>
+
+                            </div>
+                            <div class="investment-card-img">
+                                <img src="../img/icons/contact.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                   <div class="topSection">
                       <form>
                           <div
@@ -3468,6 +3562,49 @@
             <div class="tab-pane fade" id="Activities" role="tabpanel" aria-labelledby="Activities-tab">
                 <!-- activities table -->
                 <div class="d-flex flex-column mb-3 justify-content-evenly p-5 gap">
+                    <h3 class="investment-container-title">Investment International LTD</h3>
+                    <div class="investment-sub-container mb-4">
+                        <div class="investment-cards-container">
+                            <div class="investment-card">
+                                <div class="investment-card-content">
+                                    <div class="investment-card-content-title"> Organization Number </div>
+                                    <div class="investment-card-content-value">978 - 059 - 000 - 258</div>
+                                </div>
+                                <div class="investment-card-img">
+                                    <img src="../img/icons/organization.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="investment-card">
+                                <div class="investment-card-content">
+                                    <div class="investment-card-content-title">Account Managers </div>
+                                    <div class="investment-card-content-value">Sam Hansson , Frank Hanibal</div>
+                                </div>
+                                <div class="investment-card-img">
+                                    <img src="../img/icons/managers.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="investment-card">
+                                <div class="investment-card-content">
+                                    <div class="investment-card-content-title">Address </div>
+                                    <div class="investment-card-content-value">Mark street 1234 stockholm</div>
+                                </div>
+                                <div class="investment-card-img">
+                                    <img src="../img/icons/address.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="investment-card">
+                                <div class="investment-card-content">
+                                    <div class="investment-card-content-title">Contact Info </div>
+                                    <div class="investment-card-content-value">Tel number : 085698562</div>
+                                    <div class="investment-card-content-value">Main Contact : Hassan boior</div>
+
+                                </div>
+                                <div class="investment-card-img">
+                                    <img src="../img/icons/contact.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                   <div class="topSection">
                       <form>
                           <div
@@ -5181,7 +5318,12 @@
                                                 <label>Invoice Language</label>
                                             </div>
                                             <div class="second-select-input">
-                                                <input type="text" class="form-control" placeholder="joe moner">
+                                                <select class="form-control border-0">
+                                                    <option>Select period</option>
+                                                    <option>period 1</option>
+                                                    <option>period 2</option>
+                                                    <option>period 3</option>
+                                                </select>
                                             </div>
                                         </div>
                                         <div class="col-md-2 col-6">
@@ -5210,7 +5352,7 @@
                                         </div>
                                         <div class="col-md-2 col-6">
                                             <div>
-                                                <label>Cost number / Pro</label>
+                                                <label>Cost number / Po</label>
                                             </div>
                                             <div class="second-select-input">
                                                 <input type="text" class="form-control" placeholder="joe moner">
@@ -5244,6 +5386,14 @@
                                         </div>
                                         <div class="col-md-2 col-6">
                                             <div>
+                                                <label>Post number / Zip code</label>
+                                            </div>
+                                            <div class="second-select-input">
+                                                <input type="text" class="form-control" placeholder="joe moner">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2 col-6">
+                                            <div>
                                                 <label>State</label>
                                             </div>
                                             <div class="second-select-input">
@@ -5253,14 +5403,6 @@
                                         <div class="col-md-2 col-6">
                                             <div>
                                                 <label>Country</label>
-                                            </div>
-                                            <div class="second-select-input">
-                                                <input type="text" class="form-control" placeholder="joe moner">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-2 col-6">
-                                            <div>
-                                                <label>Post number / Zip code</label>
                                             </div>
                                             <div class="second-select-input">
                                                 <input type="text" class="form-control" placeholder="joe moner">
@@ -5291,15 +5433,16 @@
                                         </div>
                                         <div class="col-md-2 col-6">
                                             <div>
-                                                <label>Payment methods</label>
+                                                <label>Payment methods </label>
                                             </div>
                                             <div class="second-select-input">
-                                                <select name="period" class="form-control border-0">
+                                                <select class=" w-100 selectpicker" multiple aria-label="size 3 select example" data-live-search="true">
                                                     <option>Select methods</option>
                                                     <option>methods 1</option>
                                                     <option>methods 2</option>
                                                     <option>methods 3</option>
                                                 </select>
+                                                <img class="input-svg" width="12" src="../images/img-droplist.svg">  
                                             </div>
                                         </div>
                                         <div class="col-md-2 col-6">
@@ -5341,6 +5484,34 @@
                                                 <input type="text" class="form-control" placeholder="joe moner">
                                             </div>
                                         </div>
+                                        <div class="col-md-2 col-6 mt-3">
+                                            <div>
+                                                <label>Payment methods one of debts </label>
+                                            </div>
+                                            <div class="second-select-input">
+                                                <select class=" w-100 selectpicker" multiple aria-label="size 3 select example" data-live-search="true">
+                                                    <option>Select methods</option>
+                                                    <option>methods 1</option>
+                                                    <option>methods 2</option>
+                                                    <option>methods 3</option>
+                                                </select>
+                                                <img class="input-svg" width="12" src="../images/img-droplist.svg">  
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2 col-6 mt-3">
+                                            <div>
+                                                <label>unite invocing on debts</label>
+                                            </div>
+                                            <div class="second-select-input">
+                                                <select class=" w-100 selectpicker" multiple aria-label="size 3 select example" data-live-search="true">
+                                                    <option>Select </option>
+                                                    <option> 1</option>
+                                                    <option> 2</option>
+                                                    <option> 3</option>
+                                                </select>
+                                                <img class="input-svg" width="12" src="../images/img-droplist.svg">  
+                                            </div>
+                                        </div>
                                     </div>
 
                                 </form>
@@ -5352,12 +5523,12 @@
                             <div class="d-flex justify-content-between">
                                 <div
                                     class="py-2 d-flex justify-content-start align-items-center flex-column-responsive">
-                                    <h4 class="py-2">Add Comission By Buildings</h4>
+                                    <h4 class="py-2">Booking credits </h4>
                                 </div>
                                 <div class="d-flex justify-content-start align-items-center">
                                     <a href="#" class="btn btn-primary create-btn add_new_row2">
                                         <i class="bi bi-plus-circle-fill"></i>
-                                        Add new Comission
+                                        Add new credits
                                     </a>
                                 </div>
                             </div>
@@ -5522,8 +5693,7 @@
                         </div>
                         <div class="content-body p-4">
                             <div class="form-row my-4">
-                                <div class="col-md-2 col-6">
-                                    <div>
+                                    <div class="mx-2">
                                         <label>date</label>
                                     </div>
                                     <div class="second-select-input">
@@ -5536,7 +5706,6 @@
                                         </div>
                                         <img class="input-svg" src="../images/date.svg">
                                     </div>
-                                </div>
                             </div>
 
 
@@ -6182,8 +6351,8 @@
                         </div>
                     </div>
                     <!-- invoice charts -->
-                    <div class="content-container bg-white shadow py-3">
-                        <div class="content-top d-flex justify-content-start align-items-center py-1">
+                    <!-- <div class="content-container bg-white shadow py-3">
+                       <div class="content-top d-flex justify-content-start align-items-center py-1">
                             <h4 class="px-4 my-0">Invoice</h4>
                         </div>
                         <div class="content-body p-4">
@@ -6203,14 +6372,13 @@
                                     </section>
                                 </div>
                             </div>
-                        </div>
+                        </div> 
+                    </div>-->
 
-                    </div>
                     <!-- invoice table -->
 
                     <!-- activities table -->
-                    <div class="container-fluid py-4 px-0">
-
+                    <div class="container-fluid px-0">
                         <div class="firstNav row justify-content-between">
                             <div class="col-md-6 col-12 padding-0">
                                 <ul class="nav nav-tabs justify-content-between align-items-center nav-f-s">
@@ -6745,10 +6913,11 @@
 
   <!-- global js -->
   <script src="../JS/global/jquery/jquery-3.4.1.min.js"></script>
-  <script src="../JS/client/main.js"></script>
   <script src="../JS/global/bootstrap/bootstrap.bundle.min.js"></script>
   <script src="../JS/global/bootstrap/bootstrap-select.js"></script>
   <script src="../JS/global/datePicker/datepicker.js"></script>
+  <script src="../JS/select2.min.js"></script>
+
   <script src="../JS/layout.js"></script>
 
 
@@ -6825,46 +6994,17 @@
         window.location.href = 'create-offer.html';
       }
     });
+
+    $('.sewar').select2({
+    theme: 'bootstrap4',
+    closeOnSelect: false ;
+  });
+
   </script>
 
 
 
-
-
-
-
-
-
-
-
-
-<script>
-  $(document).ready(function(){
-    $("#myInput-invoise").on("keyup", function() {
-      var value = $(this).val().toLowerCase();
-      $("#myInvoiseTable tr").filter(function() {
-        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-      });
-  });
-  });
-  $(document).ready(function(){
-    $("#myInput").on("keyup", function() {
-      var value = $(this).val().toLowerCase();
-      $("#myTable tr").filter(function() {
-        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-      });
-  });
-  });
-</script>
-
-
-<!-- add row 1 -->
-
 <script type="text/javascript">
-
-$(document).ready(function() {
-    $('.basicInput').select2();
-});
 
 $(function () {
 
@@ -6880,12 +7020,12 @@ $(".add_new_row").on("click", function (event) {
     var cols = '';
 
     // Table columns
-    cols += '<td style="width:13%;" class="style-td"><input class="form-control rounded-0" type="date" name="firstname" placeholder="First name"></td>';
-    cols += '<td style="width:13%;" class="style-td"><input class="form-control rounded-0" type="date" name="firstname" placeholder="First name"></td>';
-    cols += '<td style="width:10%;" class="style-td"><input class="form-control rounded-0" type="text" name="lastname" placeholder="Last name"></td>';
-    cols += '<td style="width:10%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
-    cols += '<td style="width:10%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
-    cols += '<td style="width:10%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
+    cols += '<td style="width:16%;" class="style-td"><input class="form-control rounded-0" type="date" name="firstname" placeholder="First name"></td>';
+    cols += '<td style="width:16%;" class="style-td"><input class="form-control rounded-0" type="date" name="firstname" placeholder="First name"></td>';
+    cols += '<td style="width:16%;" class="style-td"><input class="form-control rounded-0" type="text" name="lastname" placeholder="Credits"></td>';
+    cols += '<td style="width:16%;" class="style-td"><select class="form-control border-0"> <option>select</option> <option>manageer 1</option> <option>manageer 2</option> <option>manageer 3</option> </select></td>';
+    cols += '<td style="width:16%;" class="style-td"><select class="form-control border-0"> <option>select</option> <option>manageer 1</option> <option>manageer 2</option> <option>manageer 3</option> </select></td>';
+    cols += '<td style="width:16%;" class="style-td"><select class="form-control border-0"> <option>select</option> <option>manageer 1</option> <option>manageer 2</option> <option>manageer 3</option> </select></td>';
 
     // cols += '<td><button class="btn btn-danger rounded-0" id ="deleteRow"><i class="fa fa-trash"></i></button</td>';
 
@@ -6893,14 +7033,14 @@ $(".add_new_row").on("click", function (event) {
     newRow.append(cols);
 
     // Insert the row inside a table
-    $("table").append(newRow);
+    $(".table_Booking").append(newRow);
 
     // Increase counter after each row insertion
     counter++;
 });
 
 // Remove row when delete btn is clicked
-$("table").on("click", "#deleteRow", function (event) {
+$(".table_Booking").on("click", "#deleteRow", function (event) {
     $(this).closest("tr").remove();
     counter -= 1
 });
@@ -6926,12 +7066,12 @@ $(".add_new_row2").on("click", function (event) {
     var cols = '';
 
     // Table columns
-    cols += '<td style="width:13%;" class="style-td"><input class="form-control rounded-0" type="date" name="firstname" placeholder="First name"></td>';
-    cols += '<td style="width:13%;" class="style-td"><input class="form-control rounded-0" type="date" name="firstname" placeholder="First name"></td>';
-    cols += '<td style="width:10%;" class="style-td"><input class="form-control rounded-0" type="text" name="lastname" placeholder="Last name"></td>';
-    cols += '<td style="width:10%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
-    cols += '<td style="width:10%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
-    cols += '<td style="width:10%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
+    cols += '<td style="width:16%;" class="style-td"><input class="form-control rounded-0" type="date" name="firstname" placeholder="First name"></td>';
+    cols += '<td style="width:16%;" class="style-td"><input class="form-control rounded-0" type="date" name="firstname" placeholder="First name"></td>';
+    cols += '<td style="width:16%;" class="style-td"><input class="form-control rounded-0" type="text" name="lastname" placeholder="Credits"></td>';
+    cols += '<td style="width:16%;" class="style-td"><select class="form-control border-0"> <option>select</option> <option>manageer 1</option> <option>manageer 2</option> <option>manageer 3</option> </select></td>';
+    cols += '<td style="width:16%;" class="style-td"><select class="form-control border-0"> <option>select</option> <option>manageer 1</option> <option>manageer 2</option> <option>manageer 3</option> </select></td>';
+    cols += '<td style="width:16%;" class="style-td"><select class="form-control border-0"> <option>select</option> <option>manageer 1</option> <option>manageer 2</option> <option>manageer 3</option> </select></td>';
 
     // cols += '<td><button class="btn btn-danger rounded-0" id ="deleteRow"><i class="fa fa-trash"></i></button</td>';
 
@@ -7019,18 +7159,18 @@ $(".add_new_row4").on("click", function (event) {
     var cols = '';
 
     // Table columns
-    cols += '<td style="width:5%;" class="style-td"><input class="form-control rounded-0" type="date" name="firstname" placeholder="First name"></td>';
-    cols += '<td style="width:5%;" class="style-td"><input class="form-control rounded-0" type="text" name="firstname" placeholder="First name"></td>';
-    cols += '<td style="width:5%;" class="style-td"><input class="form-control rounded-0" type="text" name="lastname" placeholder="Last name"></td>';
-    cols += '<td style="width:5%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
-    cols += '<td style="width:5%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
-    cols += '<td style="width:5%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
-    cols += '<td style="width:5%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
-    cols += '<td style="width:5%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
-    cols += '<td style="width:5%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
-    cols += '<td style="width:5%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
-    cols += '<td style="width:5%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
-    cols += '<td style="width:5%;" id="deleteRow" class="style-td"><button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom"><i class="fa fa-trash"></i></button></td>';
+    cols += '<td style="width:3%;" class="style-td"><input class="form-control rounded-0" type="date" name="firstname" placeholder="First name"></td>';
+    cols += '<td class="style-td"><select class="form-control border-0"> <option>select</option> <option>manageer 1</option> <option>manageer 2</option> <option>manageer 3</option> </select></td>';
+    cols += '<td class="style-td"><select class="form-control border-0"> <option>select</option> <option>manageer 1</option> <option>manageer 2</option> <option>manageer 3</option> </select></td>';
+    cols += '<td class="style-td"><select class="form-control border-0"> <option>select</option> <option>manageer 1</option> <option>manageer 2</option> <option>manageer 3</option> </select></td>';
+    cols += '<td class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
+    cols += '<td class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
+    cols += '<td class="style-td"><select class="form-control border-0"> <option>select</option> <option>manageer 1</option> <option>manageer 2</option> <option>manageer 3</option> </select></td>';
+    cols += '<td class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
+    cols += '<td class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
+    cols += '<td class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
+    cols += '<td class="style-td"><select class="form-control border-0"> <option>select</option> <option>manageer 1</option> <option>manageer 2</option> <option>manageer 3</option> </select></td>';
+    cols += '<td id="deleteRow" class="style-td"><button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom"><i class="fa fa-trash"></i></button></td>';
 
     // cols += '<td><button class="btn btn-danger rounded-0" id ="deleteRow"><i class="fa fa-trash"></i></button</td>';
 
@@ -7054,94 +7194,87 @@ $("#myTable4").on("click", "#deleteRow", function (event) {
 <!-- end add row 4 -->
 
 
+
 <!-- charts -->
 <!-- line chart -->
 
-<!-- end line chart -->
+<!-- end line chart 
 <script type="text/javascript">
-var options4 = {
-series: [
-{
-  name: "Sales",
-  data: [4, 3, 10, 9, 29, 19, 22, 9, 12, 7, 19, 5, 13, 9, 17, 2, 7, 5],
-},
-],
-chart: {
-height: 350,
-type: "line",
-},
-forecastDataPoints: {},
-stroke: {
-width: 5,
-curve: "smooth",
-},
-xaxis: {
-type: "datetime",
-categories: [
-  "1/11/2000",
-  "2/11/2000",
-  "3/11/2000",
-  "4/11/2000",
-  "5/11/2000",
-  "6/11/2000",
-  "7/11/2000",
-  "8/11/2000",
-  "9/11/2000",
-  "10/11/2000",
-  "11/11/2000",
-  "12/11/2000",
-  "1/11/2001",
-  "2/11/2001",
-  "3/11/2001",
-  "4/11/2001",
-  "5/11/2001",
-  "6/11/2001",
-],
-tickAmount: 10,
-labels: {
-  formatter: function (value, timestamp, opts) {
-    return opts.dateFormatter(new Date(timestamp), "dd MMM");
+    var options4 = {
+  series: [
+    {
+      name: "Sales",
+      data: [4, 3, 10, 9, 29, 19, 22, 9, 12, 7, 19, 5, 13, 9, 17, 2, 7, 5],
+    },
+  ],
+  chart: {
+    height: 350,
+    type: "line",
   },
-},
-},
-title: {
-text: "Sales",
-align: "left",
-style: {
-  fontSize: "16px",
-  color: "#666",
-},
-},
-fill: {
-type: "gradient",
-gradient: {
-  shade: "dark",
-  gradientToColors: ["#FDD835"],
-  shadeIntensity: 1,
-  type: "horizontal",
-  opacityFrom: 1,
-  opacityTo: 1,
-  stops: [0, 100, 100, 100],
-},
-},
-yaxis: {
-min: -10,
-max: 40,
-},
+  forecastDataPoints: {},
+  stroke: {
+    width: 5,
+    curve: "smooth",
+  },
+  xaxis: {
+    type: "datetime",
+    categories: [
+      "1/11/2000",
+      "2/11/2000",
+      "3/11/2000",
+      "4/11/2000",
+      "5/11/2000",
+      "6/11/2000",
+      "7/11/2000",
+      "8/11/2000",
+      "9/11/2000",
+      "10/11/2000",
+      "11/11/2000",
+      "12/11/2000",
+      "1/11/2001",
+      "2/11/2001",
+      "3/11/2001",
+      "4/11/2001",
+      "5/11/2001",
+      "6/11/2001",
+    ],
+    tickAmount: 10,
+    labels: {
+      formatter: function (value, timestamp, opts) {
+        return opts.dateFormatter(new Date(timestamp), "dd MMM");
+      },
+    },
+  },
+  title: {
+    text: "Sales",
+    align: "left",
+    style: {
+      fontSize: "16px",
+      color: "#666",
+    },
+  },
+  fill: {
+    type: "gradient",
+    gradient: {
+      shade: "dark",
+      gradientToColors: ["#FDD835"],
+      shadeIntensity: 1,
+      type: "horizontal",
+      opacityFrom: 1,
+      opacityTo: 1,
+      stops: [0, 100, 100, 100],
+    },
+  },
+  yaxis: {
+    min: -10,
+    max: 40,
+  },
 };
 
 var chart = new ApexCharts(document.querySelector("#line-chart"), options4);
 chart.render();
 </script>
-
-
-
-
-
-
-
-
-
+ end charts -->
 
 
 
