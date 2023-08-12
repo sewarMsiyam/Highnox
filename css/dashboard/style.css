@@ -48,7 +48,7 @@ table {
       padding-right: 0 !important;
 }
 .input-svg {
-  height: 15px;
+  height: 18px;
 }
 .padding-0 {
   padding: 0;
@@ -894,4 +894,15 @@ td.ui-sortable {
 .table-responsive {
   border-radius: 15px;
   overflow-x: visible;
+}
+
+
+.table .form-control{
+  text-align: center;
+    font-weight: 400;
+    color:#212529;
+    font-size: 11px;
+}
+.table-bordered td, .table-bordered th {
+  vertical-align: middle !important;
 }

@@ -315,3 +315,25 @@ a{
   height: 100%;
   object-fit: cover;
 }
+
+input[type="date"] {
+  display: inline-block;
+  position: relative;
+  background-image: url("../images/date.svg");
+  background-repeat: no-repeat;
+  background-position: right center;
+  padding-right: 20px; /* تعديل حجم الايقونة هنا */
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  background: transparent;
+  bottom: 0;
+  color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: auto;
+}
