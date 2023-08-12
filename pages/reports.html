@@ -508,1193 +508,1341 @@
       </nav>
       <!-- End Navbar  -->
 
-
-          <div class="container-fluid p-4" id="back-client">
+      <div class="container-fluid p-4" id="back-client">
           
-            <div class="content-container bg-white shadow rounded">
-              <div class="content-top d-flex justify-content-start align-items-center py-1">
-                <h4 class="px-4 py-2">Reports</h4>
+        <div class="content-container">
+          <div class="content-top d-flex justify-content-start align-items-center py-1">
+            <h4 class="px-4 py-2">Reports</h4>
+          </div>
+          <div class="content-body p-4">
+            <form>
+              <div class="form-row">
+                <div class="col-md-2 col-12">
+                  <div>
+                   <label>From</label>
+                  </div>
+                  <div class="select-input bg-secondary">
+                    
+                      <div class="input-group date datepicker" data-provide="datepicker">
+                        <input type="text" class="form-control date-input bg-secondary" placeholder="Select date"
+                          >
+                        <div class="input-group-addon">
+                          <span class="glyphicon glyphicon-th"></span>
+                        </div>
+                      </div>
+                      
+                    <img class="input-svg" src="../images/date.svg">
+                  </div>                   
+                </div>
+                <div class="col-md-2 col-12 padding-top-small-10">
+                  <div>
+                   <label>Until</label>
+                  </div>
+                  <div class="select-input bg-secondary">
+                    
+                      <div class="input-group date datepicker" data-provide="datepicker">
+                        <input type="text" class="form-control date-input bg-secondary" placeholder="Select date"
+                          >
+                        <div class="input-group-addon">
+                          <span class="glyphicon glyphicon-th"></span>
+                        </div>
+                      </div>
+                      
+                    <img class="input-svg" src="../images/date.svg">
+                  </div> 
+                </div>
+                <div class="col-md-2 col-12">
+                  <div>
+                    <label>Building</label>
+                  </div>
+                  <div class="select-input select-input-responsive">
+                    <select name="buliding" class="basicInput">
+                      <option>Seelct Building </option>
+                      <option>Building 1</option>
+                      <option>Building 2</option>
+                      <option>Building 3</option>
+                    </select>
+                    <img class="input-svg" src="../images/business.svg">
+
+                  </div>
+                </div>
+                <div class="col-md-3 col-12 padding-top-small-10">
+                  <div>
+                    <label>Choose report</label>
+                  </div>
+                  <div class="select-input select-input-responsive">
+                    <select name="choose_report" class="basicInput choose_report">
+                      <option value="room_revenue_report">Room Revenue Report</option>
+                      <option value="contract_revenue_report">Contract Revenue Report </option>
+                      <option value="rented_sqm_report">Rented SQM Report </option>
+                      <option value="property_kpi_report">Property KPI Report</option>
+                    </select>
+                    <img class="input-svg" src="../images/icon-color.svg">
+                  </div>
+                </div>
+                <div class="col-md-2 col-6 padding-top-small-10 d-flex align-items-end">
+                  <button class="btn btn-primary h-40 get_report">Search</button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="reports">
+            <div class="report-1 room_revenue_report">
+              <div class="content-top d-flex justify-content-between align-items-center py-1 border-top-1">
+                 <div>
+                    <h4 class="px-4 py-4">Total Rented SQM Period : 2023-01-31</h4>
+                 </div>
+               <div>
+                  <div class="document-btns px-4 py-4">
+                    <button><img src="../img/icons/pdf.svg" alt="pdf" class="file-download"></button>
+                    <button><img src="../img/icons/excel.svg" alt="pdf" class="file-download"></button>
+                    <button class="btn-print"><img src="../images/print.svg" alt="pdf" class="file-download"></button>
+                  </div>
+               </div>
               </div>
               <div class="content-body p-4">
-                <form>
-                  <div class="form-row">
-                    <div class="col-md-2 col-12">
-                      <div>
-                       <label>From</label>
-                      </div>
-                      <div class="select-input bg-secondary">
-                        <input type="date" class="form-control date-input bg-secondary border-0 px-0" placeholder="Select date">
-                      </div>                   
-                    </div>
-                    <div class="col-md-2 col-12 padding-top-small-10">
-                      <div>
-                       <label>Until</label>
-                      </div>
-                      <div class="select-input bg-secondary">
-                        <select class=" selectpicker" multiple aria-label="size 3 select example" data-live-search="true">
-                          <option>Seelct Until </option>
-                          <option>Until 1</option>
-                          <option>Until 2</option>
-                          <option>Until 3</option>
-                        </select>                          
-                      </div> 
-                    </div>
-                    <div class="col-md-2 col-12">
-                      <div>
-                        <label>Building</label>
-                      </div>
-                      <div class="select-input select-input-responsive">
-                        <select class=" w-100 selectpicker" multiple aria-label="size 3 select example" data-live-search="true">
-                          <option>Building</option>
-                          <option>2</option>
-                          <option>3</option>
-                          <option>4</option>
-                          <option>5</option>
-                        </select>
-                        <img class="input-svg" width="12" src="../images/img-droplist.svg"> 
-                      </div>
-                    </div>
-                    <div class="col-md-3 col-12 padding-top-small-10">
-                      <div>
-                        <label>Choose report</label>
-                      </div>
-                      <div class="select-input select-input-responsive">
-                        <select name="choose_report" class=" w-100 selectpicker" multiple aria-label="size 3 select example" data-live-search="true">
-                          <option value="room_revenue_report">Room Revenue Report</option>
-                          <option value="contract_revenue_report">Contract Revenue Report </option>
-                          <option value="rented_sqm_report">Rented SQM Report </option>
-                          <option value="property_kpi_report">Property KPI Report</option>
-                        </select>
-                        <img class="input-svg" src="../images/icon-color.svg">
-                      </div>
-                    </div>
-                    <div class="col-md-2 col-6 padding-top-small-10 d-flex align-items-end">
-                      <button class="btn btn-primary h-40 get_report">Search</button>
-                    </div>
-                  </div>
-                </form>
+                <div id="chart1"></div>
               </div>
-              <div class="reports">
-                <div class="report-1 room_revenue_report">
-                  <div class="content-top d-flex justify-content-between align-items-center py-1 border-top-1">
-                     <div>
-                        <h4 class="px-4 py-4">Total Rented SQM Period : 2023-01-31</h4>
-                     </div>
-                   <div>
-                      <div class="document-btns px-4 py-4">
-                        <button><img src="../img/icons/pdf.svg" alt="pdf" class="file-download"></button>
-                        <button><img src="../img/icons/excel.svg" alt="pdf" class="file-download"></button>
-                        <button class="btn-print"><img src="../images/print.svg" alt="pdf" class="file-download"></button>
-                      </div>
-                   </div>
-                  </div>
-                  <div class="content-body p-4">
-                    <div id="chart1"></div>
-                  </div>
-                  <div class="content-top d-flex justify-content-start align-items-center py-1 border-top-1">
-                     <div>
-                        <h4 class="px-4 py-4">Total Rented SQM</h4>
-                     </div>
-                  </div>
-                  <div class="content-body p-4">
-                    <table class="table-resp">
-                      <tr class="h-30 report-tr text-center">
-                        <th>Description</th>
-                        <th>Jan</th>
-                        <th>Feb</th>
-                        <th>Mar</th>
-                        <th>Apr</th>
-                        <th>May</th>
-                        <th>June</th>
-                        <th>July</th>
-                        <th>Aug</th>
-                        <th>Sep</th>
-                        <th>Oct</th>
-                        <th>Nov</th>
-                        <th>Dec</th>
-                        <th>Total</th>
-                      </tr>
-                      <tr class="h-30 text-center">
-                        <td class="bg-light-blue">Buliding 1</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td class="bg-light-blue">33311</td>
-                      </tr>
-                      <tr class="h-30 text-center">
-                        <td class="bg-light-blue">Buliding 1</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td class="bg-light-blue">33311</td>
-                      </tr>
-                      <tr class="h-30 text-center">
-                        <td class="bg-light-blue">Buliding 1</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">33311</td>
-                      </tr>
-                    </table>
-                  </div>
-                  <div class="content-top d-flex justify-content-start align-items-center py-1 border-top-1">
-                     <div>
-                        <h4 class="px-4 py-4">Available SQM (Not Rented)</h4>
-                     </div>
-                  </div>
-                  <div class="content-body p-4">
-                    <table class="table-resp">
-                      <tr class="h-30 report-tr text-center">
-                        <th>Description</th>
-                        <th>Jan</th>
-                        <th>Feb</th>
-                        <th>Mar</th>
-                        <th>Apr</th>
-                        <th>May</th>
-                        <th>June</th>
-                        <th>July</th>
-                        <th>Aug</th>
-                        <th>Sep</th>
-                        <th>Oct</th>
-                        <th>Nov</th>
-                        <th>Dec</th>
-                        <th>Total</th>
-                      </tr>
-                      <tr class="h-30 text-center">
-                        <td class="bg-light-blue">Buliding 1</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td class="bg-light-blue">33311</td>
-                      </tr>
-                      <tr class="h-30 text-center">
-                        <td class="bg-light-blue">Buliding 1</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td class="bg-light-blue">33311</td>
-                      </tr>
-                      <tr class="h-30 text-center">
-                        <td class="bg-light-blue">Buliding 1</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">33311</td>
-                      </tr>
-                    </table>
-                  </div>
-                </div>
-                <div class="report-1 contract_revenue_report" style="display: none;">
-                  <div class="content-top d-flex justify-content-between align-items-center py-1 border-top-1">
-                     <div>
-                        <h4 class="px-4 py-4">Total Revenue For Office Rentals Period : 2023-01-31 - 2023-01-31</h4>
-                     </div>
-                   <div>
-                      <div class="document-btns px-4 py-4">
-                        <button><img src="../img/icons/pdf.svg" alt="pdf" class="file-download"></button>
-                        <button><img src="../img/icons/excel.svg" alt="pdf" class="file-download"></button>
-                        <button class="btn-print"><img src="../images/print.svg" alt="pdf" class="file-download"></button>
-                      </div>
-                   </div>
-                  </div>
-                  <div class="content-body p-4">
-                    <div id="chart2"></div>
-                  </div>
-                  <div class="content-top d-flex justify-content-start align-items-center py-1 border-top-1">
-                     <div>
-                        <h4 class="px-4 py-4">Total Revenue Including Discounts</h4>
-                     </div>
-                  </div>
-                  <div class="content-body p-4">
-                    <table class="table-resp">
-                      <tr class="h-30 report-tr text-center">
-                        <th>Description</th>
-                        <th>Jan</th>
-                        <th>Feb</th>
-                        <th>Mar</th>
-                        <th>Apr</th>
-                        <th>May</th>
-                        <th>June</th>
-                        <th>July</th>
-                        <th>Aug</th>
-                        <th>Sep</th>
-                        <th>Oct</th>
-                        <th>Nov</th>
-                        <th>Dec</th>
-                        <th>Total</th>
-                      </tr>
-                      <tr class="h-30 text-center">
-                        <td class="bg-light-blue">Buliding 1</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td class="bg-light-blue">33311</td>
-                      </tr>
-                      <tr class="h-30 text-center">
-                        <td class="bg-light-blue">Buliding 1</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td class="bg-light-blue">33311</td>
-                      </tr>
-                      <tr class="h-30 text-center">
-                        <td class="bg-light-blue">Buliding 1</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">33311</td>
-                      </tr>
-                    </table>
-                  </div>
-                  <div class="content-top d-flex justify-content-start align-items-center py-1 border-top-1">
-                     <div>
-                        <h4 class="px-4 py-4">Monthly Discounts</h4>
-                     </div>
-                  </div>
-                  <div class="content-body p-4">
-                    <table class="table-resp">
-                      <tr class="h-30 report-tr text-center">
-                        <th>Description</th>
-                        <th>Jan</th>
-                        <th>Feb</th>
-                        <th>Mar</th>
-                        <th>Apr</th>
-                        <th>May</th>
-                        <th>June</th>
-                        <th>July</th>
-                        <th>Aug</th>
-                        <th>Sep</th>
-                        <th>Oct</th>
-                        <th>Nov</th>
-                        <th>Dec</th>
-                        <th>Total</th>
-                      </tr>
-                      <tr class="h-30 text-center">
-                        <td class="bg-light-blue">Buliding 1</td>
-                        <td class="font-red">2444</td>
-                        <td class="font-red">2444</td>
-                        <td class="font-red">2444</td>
-                        <td class="font-red">2444</td>
-                        <td class="font-red">2444</td>
-                        <td class="font-red">2444</td>
-                        <td class="font-red">2444</td>
-                        <td class="font-red">2444</td>
-                        <td class="font-red">2444</td>
-                        <td class="font-red">2444</td>
-                        <td class="font-red">2444</td>
-                        <td class="font-red">2444</td>
-                        <td class="bg-light-blue font-red">33311</td>
-                      </tr>
-                      <tr class="h-30 text-center">
-                        <td class="bg-light-blue">Buliding 1</td>
-                        <td class="font-red">2444</td>
-                        <td class="font-red">2444</td>
-                        <td class="font-red">2444</td>
-                        <td class="font-red">2444</td>
-                        <td class="font-red">2444</td>
-                        <td class="font-red">2444</td>
-                        <td class="font-red">2444</td>
-                        <td class="font-red">2444</td>
-                        <td class="font-red">2444</td>
-                        <td class="font-red">2444</td>
-                        <td class="font-red">2444</td>
-                        <td class="font-red">2444</td>
-                        <td class="bg-light-blue font-red">33311</td>
-                      </tr>
-                      <tr class="h-30 text-center">
-                        <td class="bg-light-blue">Buliding 1</td>
-                        <td class="bg-light-blue font-red">2444</td>
-                        <td class="bg-light-blue font-red">2444</td>
-                        <td class="bg-light-blue font-red">2444</td>
-                        <td class="bg-light-blue font-red">2444</td>
-                        <td class="bg-light-blue font-red">2444</td>
-                        <td class="bg-light-blue font-red">2444</td>
-                        <td class="bg-light-blue font-red">2444</td>
-                        <td class="bg-light-blue font-red">2444</td>
-                        <td class="bg-light-blue font-red">2444</td>
-                        <td class="bg-light-blue font-red">2444</td>
-                        <td class="bg-light-blue font-red">2444</td>
-                        <td class="bg-light-blue font-red">2444</td>
-                        <td class="bg-light-blue font-red">33311</td>
-                      </tr>
-                    </table>
-                  </div>
-                </div>
-                <div class="report-1 rented_sqm_report" style="display: none;">
-                  <div class="content-top d-flex justify-content-between align-items-center py-1 border-top-1">
-                     <div>
-                        <h4 class="px-4 py-4">Detailed Monthly Revenue for "Venue1" Period : 2023-01-31 - 2023-01-31</h4>
-                     </div>
-                   <div>
-                      <div class="document-btns px-4 py-4">
-                        <button><img src="../img/icons/pdf.svg" alt="pdf" class="file-download"></button>
-                        <button><img src="../img/icons/excel.svg" alt="pdf" class="file-download"></button>
-                        <button class="btn-print"><img src="../images/print.svg" alt="pdf" class="file-download"></button>
-                      </div>
-                   </div>
-                  </div>
-                  <div class="content-body p-4">
-                    <div id="chart3"></div>
-                  </div>
-                  <div class="content-top d-flex justify-content-start align-items-center py-1 border-top-1">
-                     <div>
-                        <h4 class="px-4 py-4">Rented SQM Report</h4>
-                     </div>
-                  </div>
-                  <div class="content-body p-4">
-                    <table class="table-resp">
-                      <tr class="h-30 report-tr text-center">
-                        <th>Compant Name</th>
-                        <th>Jan</th>
-                        <th>Feb</th>
-                        <th>Mar</th>
-                        <th>Apr</th>
-                        <th>May</th>
-                        <th>June</th>
-                        <th>July</th>
-                        <th>Aug</th>
-                        <th>Sep</th>
-                        <th>Oct</th>
-                        <th>Nov</th>
-                        <th>Dec</th>
-                        <th>Total</th>
-                      </tr>
-                      <tr class="h-30 text-center">
-                        <td class="bg-light-blue">AB</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td class="bg-light-blue">33311</td>
-                      </tr>
-                      <tr class="h-30 text-center">
-                        <td class="bg-light-blue">AC</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td class="bg-light-blue">33311</td>
-                      </tr>
-                      <tr class="h-30 text-center">
-                        <td class="bg-light-blue">AC</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td class="bg-light-blue">33311</td>
-                      </tr>
-                      <tr class="h-30 text-center">
-                        <td class="bg-light-blue">AC</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td class="bg-light-blue">33311</td>
-                      </tr>
-                      <tr class="h-30 text-center">
-                        <td class="bg-light-blue">AC</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td class="bg-light-blue">33311</td>
-                      </tr>
-                      <tr class="h-30 text-center">
-                        <td class="bg-light-blue">AC</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td class="bg-light-blue">33311</td>
-                      </tr>
-                      <tr class="h-30 text-center">
-                        <td class="bg-light-blue">AC</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td class="bg-light-blue">33311</td>
-                      </tr>
-                      <tr class="h-30 text-center">
-                        <td class="bg-light-blue">AC</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td class="bg-light-blue">33311</td>
-                      </tr>
-                      <tr class="h-30 text-center">
-                        <td class="bg-light-blue">AC</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td class="bg-light-blue">33311</td>
-                      </tr>
-                      <tr class="h-30 text-center">
-                        <td class="bg-light-blue">AC</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td class="bg-light-blue">33311</td>
-                      </tr>
-                      <tr class="h-30 text-center">
-                        <td class="bg-light-blue">Total</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">33311</td>
-                      </tr>
-                    </table>
-                  </div>
-                </div>
-                <div class="report-1 property_kpi_report" style="display: none;">
-                  <div class="content-top d-flex justify-content-between align-items-center py-1 border-top-1">
-                     <div>
-                        <h4 class="px-4 py-4">Property KPI Report  Period : 2023-01-31 - 2023-01-31</h4>
-                     </div>
-                   <div>
-                      <div class="document-btns px-4 py-4">
-                        <button><img src="../img/icons/pdf.svg" alt="pdf" class="file-download"></button>
-                        <button><img src="../img/icons/excel.svg" alt="pdf" class="file-download"></button>
-                        <button class="btn-print"><img src="../images/print.svg" alt="pdf" class="file-download"></button>
-                      </div>
-                   </div>
-                  </div>
-                  <div class="content-top d-flex justify-content-start align-items-center py-1 border-top-1">
-                     <div>
-                        <h4 class="px-4 py-4">Total Revenue Including Discounts</h4>
-                     </div>
-                  </div>
-                  <div class="content-body p-4">
-                    <table class="table-resp">
-                      <tr class="h-30 report-tr text-center">
-                        <th>Description</th>
-                        <th>Jan</th>
-                        <th>Feb</th>
-                        <th>Mar</th>
-                        <th>Apr</th>
-                        <th>May</th>
-                        <th>June</th>
-                        <th>July</th>
-                        <th>Aug</th>
-                        <th>Sep</th>
-                        <th>Oct</th>
-                        <th>Nov</th>
-                        <th>Dec</th>
-                        <th>Total</th>
-                      </tr>
-                      <tr class="h-30 text-center">
-                        <td class="bg-light-blue">Buliding 1</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td class="bg-light-blue">33311</td>
-                      </tr>
-                      <tr class="h-30 text-center">
-                        <td class="bg-light-blue">Buliding 1</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td class="bg-light-blue">33311</td>
-                      </tr>
-                      <tr class="h-30 text-center">
-                        <td class="bg-light-blue">Buliding 1</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">33311</td>
-                      </tr>
-                    </table>
-                  </div>
-                  <div class="content-top d-flex justify-content-start align-items-center py-1 border-top-1">
-                     <div>
-                        <h4 class="px-4 py-4">Total Rented SQM</h4>
-                     </div>
-                  </div>
-                  <div class="content-body p-4">
-                    <table class="table-resp">
-                      <tr class="h-30 report-tr text-center">
-                        <th>Description</th>
-                        <th>Jan</th>
-                        <th>Feb</th>
-                        <th>Mar</th>
-                        <th>Apr</th>
-                        <th>May</th>
-                        <th>June</th>
-                        <th>July</th>
-                        <th>Aug</th>
-                        <th>Sep</th>
-                        <th>Oct</th>
-                        <th>Nov</th>
-                        <th>Dec</th>
-                        <th>Total</th>
-                      </tr>
-                      <tr class="h-30 text-center">
-                        <td class="bg-light-blue">Buliding 1</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td class="bg-light-blue">33311</td>
-                      </tr>
-                      <tr class="h-30 text-center">
-                        <td class="bg-light-blue">Buliding 1</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td class="bg-light-blue">33311</td>
-                      </tr>
-                      <tr class="h-30 text-center">
-                        <td class="bg-light-blue">Buliding 1</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">33311</td>
-                      </tr>
-                    </table>
-                  </div>
-                  <div class="content-top d-flex justify-content-start align-items-center py-1 border-top-1">
-                     <div>
-                        <h4 class="px-4 py-4">Available SQM (Not Rented)</h4>
-                     </div>
-                  </div>
-                  <div class="content-body p-4">
-                    <table class="table-resp">
-                      <tr class="h-30 report-tr text-center">
-                        <th>Description</th>
-                        <th>Jan</th>
-                        <th>Feb</th>
-                        <th>Mar</th>
-                        <th>Apr</th>
-                        <th>May</th>
-                        <th>June</th>
-                        <th>July</th>
-                        <th>Aug</th>
-                        <th>Sep</th>
-                        <th>Oct</th>
-                        <th>Nov</th>
-                        <th>Dec</th>
-                        <th>Total</th>
-                      </tr>
-                      <tr class="h-30 text-center">
-                        <td class="bg-light-blue">Buliding 1</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td class="bg-light-blue">33311</td>
-                      </tr>
-                      <tr class="h-30 text-center">
-                        <td class="bg-light-blue">Buliding 1</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td class="bg-light-blue">33311</td>
-                      </tr>
-                      <tr class="h-30 text-center">
-                        <td class="bg-light-blue">Buliding 1</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">33311</td>
-                      </tr>
-                    </table>
-                  </div>
-                  <div class="content-top d-flex justify-content-start align-items-center py-1 border-top-1">
-                     <div>
-                        <h4 class="px-4 py-4">Occupancy</h4>
-                     </div>
-                  </div>
-                  <div class="content-body p-4">
-                    <table class="table-resp">
-                      <tr class="h-30 report-tr text-center">
-                        <th>Description</th>
-                        <th>Jan</th>
-                        <th>Feb</th>
-                        <th>Mar</th>
-                        <th>Apr</th>
-                        <th>May</th>
-                        <th>June</th>
-                        <th>July</th>
-                        <th>Aug</th>
-                        <th>Sep</th>
-                        <th>Oct</th>
-                        <th>Nov</th>
-                        <th>Dec</th>
-                        <th>Total</th>
-                      </tr>
-                      <tr class="h-30 text-center">
-                        <td class="bg-light-blue">Buliding 1</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td class="bg-light-blue">33311</td>
-                      </tr>
-                      <tr class="h-30 text-center">
-                        <td class="bg-light-blue">Buliding 1</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td class="bg-light-blue">33311</td>
-                      </tr>
-                      <tr class="h-30 text-center">
-                        <td class="bg-light-blue">Buliding 1</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">33311</td>
-                      </tr>
-                    </table>
-                  </div>
-                  <div class="content-top d-flex justify-content-start align-items-center py-1 border-top-1">
-                     <div>
-                        <h4 class="px-4 py-4">Average SQM Prices</h4>
-                     </div>
-                  </div>
-                  <div class="content-body p-4">
-                    <table class="table-resp">
-                      <tr class="h-30 report-tr text-center">
-                        <th>Description</th>
-                        <th>Jan</th>
-                        <th>Feb</th>
-                        <th>Mar</th>
-                        <th>Apr</th>
-                        <th>May</th>
-                        <th>June</th>
-                        <th>July</th>
-                        <th>Aug</th>
-                        <th>Sep</th>
-                        <th>Oct</th>
-                        <th>Nov</th>
-                        <th>Dec</th>
-                        <th>Total</th>
-                      </tr>
-                      <tr class="h-30 text-center">
-                        <td class="bg-light-blue">Buliding 1</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td class="bg-light-blue">33311</td>
-                      </tr>
-                      <tr class="h-30 text-center">
-                        <td class="bg-light-blue">Buliding 1</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td>2444</td>
-                        <td class="bg-light-blue">33311</td>
-                      </tr>
-                      <tr class="h-30 text-center">
-                        <td class="bg-light-blue">Buliding 1</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">2444</td>
-                        <td class="bg-light-blue">33311</td>
-                      </tr>
-                    </table>
-                  </div>
-                </div>
+              <div class="content-top d-flex justify-content-start align-items-center py-1 border-top-1">
+                 <div>
+                    <h4 class="px-4 py-4">Total Rented SQM</h4>
+                 </div>
+              </div>
+              <div class="content-body p-4">
+                <table class="table-resp">
+                  <tr class="h-30 report-tr text-center">
+                    <th>Description</th>
+                    <th>Jan</th>
+                    <th>Feb</th>
+                    <th>Mar</th>
+                    <th>Apr</th>
+                    <th>May</th>
+                    <th>June</th>
+                    <th>July</th>
+                    <th>Aug</th>
+                    <th>Sep</th>
+                    <th>Oct</th>
+                    <th>Nov</th>
+                    <th>Dec</th>
+                    <th>Total</th>
+                  </tr>
+                  <tr class="h-30 text-center">
+                    <td class="bg-light-blue">Buliding 1</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td class="bg-light-blue">33311</td>
+                  </tr>
+                  <tr class="h-30 text-center">
+                    <td class="bg-light-blue">Buliding 1</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td class="bg-light-blue">33311</td>
+                  </tr>
+                  <tr class="h-30 text-center">
+                    <td class="bg-light-blue">Buliding 1</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">33311</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="content-top d-flex justify-content-start align-items-center py-1 border-top-1">
+                 <div>
+                    <h4 class="px-4 py-4">Available SQM (Not Rented)</h4>
+                 </div>
+              </div>
+              <div class="content-body p-4">
+                <table class="table-resp">
+                  <tr class="h-30 report-tr text-center">
+                    <th>Description</th>
+                    <th>Jan</th>
+                    <th>Feb</th>
+                    <th>Mar</th>
+                    <th>Apr</th>
+                    <th>May</th>
+                    <th>June</th>
+                    <th>July</th>
+                    <th>Aug</th>
+                    <th>Sep</th>
+                    <th>Oct</th>
+                    <th>Nov</th>
+                    <th>Dec</th>
+                    <th>Total</th>
+                  </tr>
+                  <tr class="h-30 text-center">
+                    <td class="bg-light-blue">Buliding 1</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td class="bg-light-blue">33311</td>
+                  </tr>
+                  <tr class="h-30 text-center">
+                    <td class="bg-light-blue">Buliding 1</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td class="bg-light-blue">33311</td>
+                  </tr>
+                  <tr class="h-30 text-center">
+                    <td class="bg-light-blue">Buliding 1</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">33311</td>
+                  </tr>
+                </table>
               </div>
             </div>
+            <div class="report-1 contract_revenue_report" style="display: none;">
+              <div class="content-top d-flex justify-content-between align-items-center py-1 border-top-1">
+                 <div>
+                    <h4 class="px-4 py-4">Total Revenue For Office Rentals Period : 2023-01-31 - 2023-01-31</h4>
+                 </div>
+               <div>
+                  <div class="document-btns px-4 py-4">
+                    <button><img src="../img/icons/pdf.svg" alt="pdf" class="file-download"></button>
+                    <button><img src="../img/icons/excel.svg" alt="pdf" class="file-download"></button>
+                    <button class="btn-print"><img src="../images/print.svg" alt="pdf" class="file-download"></button>
+                  </div>
+               </div>
+              </div>
+              <div class="content-body p-4">
+                <div id="chart2"></div>
+              </div>
+              <div class="content-top d-flex justify-content-start align-items-center py-1 border-top-1">
+                 <div>
+                    <h4 class="px-4 py-4">Total Revenue Including Discounts</h4>
+                 </div>
+              </div>
+              <div class="content-body p-4">
+                <table class="table-resp">
+                  <tr class="h-30 report-tr text-center">
+                    <th>Description</th>
+                    <th>Jan</th>
+                    <th>Feb</th>
+                    <th>Mar</th>
+                    <th>Apr</th>
+                    <th>May</th>
+                    <th>June</th>
+                    <th>July</th>
+                    <th>Aug</th>
+                    <th>Sep</th>
+                    <th>Oct</th>
+                    <th>Nov</th>
+                    <th>Dec</th>
+                    <th>Total</th>
+                  </tr>
+                  <tr class="h-30 text-center">
+                    <td class="bg-light-blue">Buliding 1</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td class="bg-light-blue">33311</td>
+                  </tr>
+                  <tr class="h-30 text-center">
+                    <td class="bg-light-blue">Buliding 1</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td class="bg-light-blue">33311</td>
+                  </tr>
+                  <tr class="h-30 text-center">
+                    <td class="bg-light-blue">Buliding 1</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">33311</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="content-top d-flex justify-content-start align-items-center py-1 border-top-1">
+                 <div>
+                    <h4 class="px-4 py-4">Monthly Discounts</h4>
+                 </div>
+              </div>
+              <div class="content-body p-4">
+                <table class="table-resp">
+                  <tr class="h-30 report-tr text-center">
+                    <th>Description</th>
+                    <th>Jan</th>
+                    <th>Feb</th>
+                    <th>Mar</th>
+                    <th>Apr</th>
+                    <th>May</th>
+                    <th>June</th>
+                    <th>July</th>
+                    <th>Aug</th>
+                    <th>Sep</th>
+                    <th>Oct</th>
+                    <th>Nov</th>
+                    <th>Dec</th>
+                    <th>Total</th>
+                  </tr>
+                  <tr class="h-30 text-center">
+                    <td class="bg-light-blue">Buliding 1</td>
+                    <td class="font-red">2444</td>
+                    <td class="font-red">2444</td>
+                    <td class="font-red">2444</td>
+                    <td class="font-red">2444</td>
+                    <td class="font-red">2444</td>
+                    <td class="font-red">2444</td>
+                    <td class="font-red">2444</td>
+                    <td class="font-red">2444</td>
+                    <td class="font-red">2444</td>
+                    <td class="font-red">2444</td>
+                    <td class="font-red">2444</td>
+                    <td class="font-red">2444</td>
+                    <td class="bg-light-blue font-red">33311</td>
+                  </tr>
+                  <tr class="h-30 text-center">
+                    <td class="bg-light-blue">Buliding 1</td>
+                    <td class="font-red">2444</td>
+                    <td class="font-red">2444</td>
+                    <td class="font-red">2444</td>
+                    <td class="font-red">2444</td>
+                    <td class="font-red">2444</td>
+                    <td class="font-red">2444</td>
+                    <td class="font-red">2444</td>
+                    <td class="font-red">2444</td>
+                    <td class="font-red">2444</td>
+                    <td class="font-red">2444</td>
+                    <td class="font-red">2444</td>
+                    <td class="font-red">2444</td>
+                    <td class="bg-light-blue font-red">33311</td>
+                  </tr>
+                  <tr class="h-30 text-center">
+                    <td class="bg-light-blue">Buliding 1</td>
+                    <td class="bg-light-blue font-red">2444</td>
+                    <td class="bg-light-blue font-red">2444</td>
+                    <td class="bg-light-blue font-red">2444</td>
+                    <td class="bg-light-blue font-red">2444</td>
+                    <td class="bg-light-blue font-red">2444</td>
+                    <td class="bg-light-blue font-red">2444</td>
+                    <td class="bg-light-blue font-red">2444</td>
+                    <td class="bg-light-blue font-red">2444</td>
+                    <td class="bg-light-blue font-red">2444</td>
+                    <td class="bg-light-blue font-red">2444</td>
+                    <td class="bg-light-blue font-red">2444</td>
+                    <td class="bg-light-blue font-red">2444</td>
+                    <td class="bg-light-blue font-red">33311</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <div class="report-1 rented_sqm_report" style="display: none;">
+              <div class="content-top d-flex justify-content-between align-items-center py-1 border-top-1">
+                 <div>
+                    <h4 class="px-4 py-4">Detailed Monthly Revenue for "Venue1" Period : 2023-01-31 - 2023-01-31</h4>
+                 </div>
+               <div>
+                  <div class="document-btns px-4 py-4">
+                    <button><img src="../img/icons/pdf.svg" alt="pdf" class="file-download"></button>
+                    <button><img src="../img/icons/excel.svg" alt="pdf" class="file-download"></button>
+                    <button class="btn-print"><img src="../images/print.svg" alt="pdf" class="file-download"></button>
+                  </div>
+               </div>
+              </div>
+              <div class="content-body p-4">
+                <div id="chart3"></div>
+              </div>
+              <div class="content-top d-flex justify-content-start align-items-center py-1 border-top-1">
+                 <div>
+                    <h4 class="px-4 py-4">Rented SQM Report</h4>
+                 </div>
+              </div>
+              <div class="content-body p-4">
+                <table class="table-resp">
+                  <tr class="h-30 report-tr text-center">
+                    <th>Compant Name</th>
+                    <th>Jan</th>
+                    <th>Feb</th>
+                    <th>Mar</th>
+                    <th>Apr</th>
+                    <th>May</th>
+                    <th>June</th>
+                    <th>July</th>
+                    <th>Aug</th>
+                    <th>Sep</th>
+                    <th>Oct</th>
+                    <th>Nov</th>
+                    <th>Dec</th>
+                    <th>Total</th>
+                  </tr>
+                  <tr class="h-30 text-center">
+                    <td class="bg-light-blue">AB</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td class="bg-light-blue">33311</td>
+                  </tr>
+                  <tr class="h-30 text-center">
+                    <td class="bg-light-blue">AC</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td class="bg-light-blue">33311</td>
+                  </tr>
+                  <tr class="h-30 text-center">
+                    <td class="bg-light-blue">AC</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td class="bg-light-blue">33311</td>
+                  </tr>
+                  <tr class="h-30 text-center">
+                    <td class="bg-light-blue">AC</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td class="bg-light-blue">33311</td>
+                  </tr>
+                  <tr class="h-30 text-center">
+                    <td class="bg-light-blue">AC</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td class="bg-light-blue">33311</td>
+                  </tr>
+                  <tr class="h-30 text-center">
+                    <td class="bg-light-blue">AC</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td class="bg-light-blue">33311</td>
+                  </tr>
+                  <tr class="h-30 text-center">
+                    <td class="bg-light-blue">AC</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td class="bg-light-blue">33311</td>
+                  </tr>
+                  <tr class="h-30 text-center">
+                    <td class="bg-light-blue">AC</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td class="bg-light-blue">33311</td>
+                  </tr>
+                  <tr class="h-30 text-center">
+                    <td class="bg-light-blue">AC</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td class="bg-light-blue">33311</td>
+                  </tr>
+                  <tr class="h-30 text-center">
+                    <td class="bg-light-blue">AC</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td class="bg-light-blue">33311</td>
+                  </tr>
+                  <tr class="h-30 text-center">
+                    <td class="bg-light-blue">Total</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">33311</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <div class="report-1 property_kpi_report" style="display: none;">
+              <div class="content-top d-flex justify-content-between align-items-center py-1 border-top-1">
+                 <div>
+                    <h4 class="px-4 py-4">Property KPI Report  Period : 2023-01-31 - 2023-01-31</h4>
+                 </div>
+               <div>
+                  <div class="document-btns px-4 py-4">
+                    <button><img src="../img/icons/pdf.svg" alt="pdf" class="file-download"></button>
+                    <button><img src="../img/icons/excel.svg" alt="pdf" class="file-download"></button>
+                    <button class="btn-print"><img src="../images/print.svg" alt="pdf" class="file-download"></button>
+                  </div>
+               </div>
+              </div>
+              <div class="content-top d-flex justify-content-start align-items-center py-1 border-top-1">
+                 <div>
+                    <h4 class="px-4 py-4">Total Revenue Including Discounts</h4>
+                 </div>
+              </div>
+              <div class="content-body p-4">
+                <table class="table-resp">
+                  <tr class="h-30 report-tr text-center">
+                    <th>Description</th>
+                    <th>Jan</th>
+                    <th>Feb</th>
+                    <th>Mar</th>
+                    <th>Apr</th>
+                    <th>May</th>
+                    <th>June</th>
+                    <th>July</th>
+                    <th>Aug</th>
+                    <th>Sep</th>
+                    <th>Oct</th>
+                    <th>Nov</th>
+                    <th>Dec</th>
+                    <th>Total</th>
+                  </tr>
+                  <tr class="h-30 text-center">
+                    <td class="bg-light-blue">Buliding 1</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td class="bg-light-blue">33311</td>
+                  </tr>
+                  <tr class="h-30 text-center">
+                    <td class="bg-light-blue">Buliding 1</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td class="bg-light-blue">33311</td>
+                  </tr>
+                  <tr class="h-30 text-center">
+                    <td class="bg-light-blue">Buliding 1</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">33311</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="content-top d-flex justify-content-start align-items-center py-1 border-top-1">
+                 <div>
+                    <h4 class="px-4 py-4">Total Rented SQM</h4>
+                 </div>
+              </div>
+              <div class="content-body p-4">
+                <table class="table-resp">
+                  <tr class="h-30 report-tr text-center">
+                    <th>Description</th>
+                    <th>Jan</th>
+                    <th>Feb</th>
+                    <th>Mar</th>
+                    <th>Apr</th>
+                    <th>May</th>
+                    <th>June</th>
+                    <th>July</th>
+                    <th>Aug</th>
+                    <th>Sep</th>
+                    <th>Oct</th>
+                    <th>Nov</th>
+                    <th>Dec</th>
+                    <th>Total</th>
+                  </tr>
+                  <tr class="h-30 text-center">
+                    <td class="bg-light-blue">Buliding 1</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td class="bg-light-blue">33311</td>
+                  </tr>
+                  <tr class="h-30 text-center">
+                    <td class="bg-light-blue">Buliding 1</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td class="bg-light-blue">33311</td>
+                  </tr>
+                  <tr class="h-30 text-center">
+                    <td class="bg-light-blue">Buliding 1</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">33311</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="content-top d-flex justify-content-start align-items-center py-1 border-top-1">
+                 <div>
+                    <h4 class="px-4 py-4">Available SQM (Not Rented)</h4>
+                 </div>
+              </div>
+              <div class="content-body p-4">
+                <table class="table-resp">
+                  <tr class="h-30 report-tr text-center">
+                    <th>Description</th>
+                    <th>Jan</th>
+                    <th>Feb</th>
+                    <th>Mar</th>
+                    <th>Apr</th>
+                    <th>May</th>
+                    <th>June</th>
+                    <th>July</th>
+                    <th>Aug</th>
+                    <th>Sep</th>
+                    <th>Oct</th>
+                    <th>Nov</th>
+                    <th>Dec</th>
+                    <th>Total</th>
+                  </tr>
+                  <tr class="h-30 text-center">
+                    <td class="bg-light-blue">Buliding 1</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td class="bg-light-blue">33311</td>
+                  </tr>
+                  <tr class="h-30 text-center">
+                    <td class="bg-light-blue">Buliding 1</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td class="bg-light-blue">33311</td>
+                  </tr>
+                  <tr class="h-30 text-center">
+                    <td class="bg-light-blue">Buliding 1</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">33311</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="content-top d-flex justify-content-start align-items-center py-1 border-top-1">
+                 <div>
+                    <h4 class="px-4 py-4">Occupancy</h4>
+                 </div>
+              </div>
+              <div class="content-body p-4">
+                <table class="table-resp">
+                  <tr class="h-30 report-tr text-center">
+                    <th>Description</th>
+                    <th>Jan</th>
+                    <th>Feb</th>
+                    <th>Mar</th>
+                    <th>Apr</th>
+                    <th>May</th>
+                    <th>June</th>
+                    <th>July</th>
+                    <th>Aug</th>
+                    <th>Sep</th>
+                    <th>Oct</th>
+                    <th>Nov</th>
+                    <th>Dec</th>
+                    <th>Total</th>
+                  </tr>
+                  <tr class="h-30 text-center">
+                    <td class="bg-light-blue">Buliding 1</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td class="bg-light-blue">33311</td>
+                  </tr>
+                  <tr class="h-30 text-center">
+                    <td class="bg-light-blue">Buliding 1</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td class="bg-light-blue">33311</td>
+                  </tr>
+                  <tr class="h-30 text-center">
+                    <td class="bg-light-blue">Buliding 1</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">33311</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="content-top d-flex justify-content-start align-items-center py-1 border-top-1">
+                 <div>
+                    <h4 class="px-4 py-4">Average SQM Prices</h4>
+                 </div>
+              </div>
+              <div class="content-body p-4">
+                <table class="table-resp">
+                  <tr class="h-30 report-tr text-center">
+                    <th>Description</th>
+                    <th>Jan</th>
+                    <th>Feb</th>
+                    <th>Mar</th>
+                    <th>Apr</th>
+                    <th>May</th>
+                    <th>June</th>
+                    <th>July</th>
+                    <th>Aug</th>
+                    <th>Sep</th>
+                    <th>Oct</th>
+                    <th>Nov</th>
+                    <th>Dec</th>
+                    <th>Total</th>
+                  </tr>
+                  <tr class="h-30 text-center">
+                    <td class="bg-light-blue">Buliding 1</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td class="bg-light-blue">33311</td>
+                  </tr>
+                  <tr class="h-30 text-center">
+                    <td class="bg-light-blue">Buliding 1</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td>2444</td>
+                    <td class="bg-light-blue">33311</td>
+                  </tr>
+                  <tr class="h-30 text-center">
+                    <td class="bg-light-blue">Buliding 1</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">2444</td>
+                    <td class="bg-light-blue">33311</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
         </div>
-  </main>
+    </div>
+</main>
 
-  <script>
-    $('.ui.dropdown').dropdown();
+<script>
+$('.ui.dropdown').dropdown();
 </script>
 
-  <!-- global js -->
-  <script src="../JS/global/jquery/jquery-3.4.1.min.js"></script>
-  <script src="../JS/global/jspdf/jspdf.js"></script>
-  <script src="../JS/client/main.js"></script>
-  <script src="../JS/global/bootstrap/bootstrap.bundle.min.js"></script>
-  <script src="../JS/global/bootstrap/bootstrap-select.js"></script>
-  <script src="../JS/global/datePicker/datepicker.js"></script>
-  <script src="../JS/layout.js"></script>
+<!-- global js -->
+<script src="../JS/global/jquery/jquery-3.4.1.min.js"></script>
+<script src="../JS/global/jspdf/jspdf.js"></script>
+<script src="../JS/client/main.js"></script>
+<script src="../JS/global/bootstrap/bootstrap.bundle.min.js"></script>
 
-  <!-- this page -->
-  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-  <script src="../JS/global/datePicker/datepicker.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+<!-- this page -->
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+<script src="../JS/global/datePicker/datepicker.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 
-  <!-- js -->
-  <script type="text/javascript">
-    $(document).ready(function() {
-        $('.basicInput').select2();
-    });
-    $(function () {
-      $('[data-toggle="tooltip"]').tooltip()
-    })
-  </script>
-  <script type="text/javascript">
-    var options = {
-          series: [{
-          name: 'Net Profit',
-          data: [44, 55, 57, 56, 61, 58, 63, 60, 66]
-        }, {
-          name: 'Revenue',
-          data: [76, 85, 101, 98, 87, 105, 91, 114, 94]
-        }, {
-          name: 'Free Cash Flow',
-          data: [35, 41, 36, 26, 45, 48, 52, 53, 41]
-        }],
-          chart: {
-          type: 'bar',
-          height: 350
-        },
-        plotOptions: {
-          bar: {
-            horizontal: false,
-            columnWidth: '55%',
-            endingShape: 'rounded'
-          },
-        },
-        dataLabels: {
-          enabled: false
-        },
-        stroke: {
-          show: true,
-          width: 2,
-          colors: ['transparent']
-        },
-        xaxis: {
-          categories: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
-        },
-        yaxis: {
-          title: {
-            text: '$ (thousands)'
-          }
-        },
-        fill: {
-          opacity: 1
-        },
-        tooltip: {
-          y: {
-            formatter: function (val) {
-              return "$ " + val + " thousands"
-            }
-          }
+<!-- js -->
+<script type="text/javascript">
+$(document).ready(function() {
+    $('.basicInput').select2();
+});
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
+<script type="text/javascript">
+var options = {
+      series: [{
+      name: 'Net Profit',
+      data: [44, 55, 57, 56, 61, 58, 63, 60, 66]
+    }, {
+      name: 'Revenue',
+      data: [76, 85, 101, 98, 87, 105, 91, 114, 94]
+    }, {
+      name: 'Free Cash Flow',
+      data: [35, 41, 36, 26, 45, 48, 52, 53, 41]
+    }],
+      chart: {
+      type: 'bar',
+      height: 350
+    },
+    plotOptions: {
+      bar: {
+        horizontal: false,
+        columnWidth: '55%',
+        endingShape: 'rounded'
+      },
+    },
+    dataLabels: {
+      enabled: false
+    },
+    stroke: {
+      show: true,
+      width: 2,
+      colors: ['transparent']
+    },
+    xaxis: {
+      categories: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
+    },
+    yaxis: {
+      title: {
+        text: '$ (thousands)'
+      }
+    },
+    fill: {
+      opacity: 1
+    },
+    tooltip: {
+      y: {
+        formatter: function (val) {
+          return "$ " + val + " thousands"
         }
-        };
+      }
+    }
+    };
 
-        var chart = new ApexCharts(document.querySelector("#chart1"), options);
-        chart.render();
-  </script>
-  <script type="text/javascript">
-    var options = {
-          series: [{
-          name: 'Net Profit',
-          data: [44, 55, 57, 56, 61, 58, 63, 60, 66]
-        }, {
-          name: 'Revenue',
-          data: [76, 85, 101, 98, 87, 105, 91, 114, 94]
-        }, {
-          name: 'Free Cash Flow',
-          data: [35, 41, 36, 26, 45, 48, 52, 53, 41]
-        }],
-          chart: {
-          type: 'bar',
-          height: 350
-        },
-        plotOptions: {
-          bar: {
-            horizontal: false,
-            columnWidth: '55%',
-            endingShape: 'rounded'
-          },
-        },
-        dataLabels: {
-          enabled: false
-        },
-        stroke: {
-          show: true,
-          width: 2,
-          colors: ['transparent']
-        },
-        xaxis: {
-          categories: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
-        },
-        yaxis: {
-          title: {
-            text: '$ (thousands)'
-          }
-        },
-        fill: {
-          opacity: 1
-        },
-        tooltip: {
-          y: {
-            formatter: function (val) {
-              return "$ " + val + " thousands"
-            }
-          }
+    var chart = new ApexCharts(document.querySelector("#chart1"), options);
+    chart.render();
+</script>
+<script type="text/javascript">
+var options = {
+      series: [{
+      name: 'Net Profit',
+      data: [44, 55, 57, 56, 61, 58, 63, 60, 66]
+    }, {
+      name: 'Revenue',
+      data: [76, 85, 101, 98, 87, 105, 91, 114, 94]
+    }, {
+      name: 'Free Cash Flow',
+      data: [35, 41, 36, 26, 45, 48, 52, 53, 41]
+    }],
+      chart: {
+      type: 'bar',
+      height: 350
+    },
+    plotOptions: {
+      bar: {
+        horizontal: false,
+        columnWidth: '55%',
+        endingShape: 'rounded'
+      },
+    },
+    dataLabels: {
+      enabled: false
+    },
+    stroke: {
+      show: true,
+      width: 2,
+      colors: ['transparent']
+    },
+    xaxis: {
+      categories: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
+    },
+    yaxis: {
+      title: {
+        text: '$ (thousands)'
+      }
+    },
+    fill: {
+      opacity: 1
+    },
+    tooltip: {
+      y: {
+        formatter: function (val) {
+          return "$ " + val + " thousands"
         }
-        };
+      }
+    }
+    };
 
-        var chart = new ApexCharts(document.querySelector("#chart2"), options);
-        chart.render();
-  </script>
-  <script type="text/javascript">
-    var options = {
-          series: [{
-          name: 'Net Profit',
-          data: [44, 55, 57, 56, 61, 58, 63, 60, 66]
-        }],
-          chart: {
-          type: 'bar',
-          height: 350
-        },
-        plotOptions: {
-          bar: {
-            horizontal: false,
-            columnWidth: '25%',
-            endingShape: 'rounded'
-          },
-        },
-        dataLabels: {
-          enabled: false
-        },
-        stroke: {
-          show: true,
-          width: 2,
-          colors: ['transparent']
-        },
-        xaxis: {
-          categories: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
-        },
-        yaxis: {
-          title: {
-            text: '$ (thousands)'
-          }
-        },
-        fill: {
-          opacity: 1
-        },
-        tooltip: {
-          y: {
-            formatter: function (val) {
-              return "$ " + val + " thousands"
-            }
-          }
+    var chart = new ApexCharts(document.querySelector("#chart2"), options);
+    chart.render();
+</script>
+<script type="text/javascript">
+var options = {
+      series: [{
+      name: 'Net Profit',
+      data: [44, 55, 57, 56, 61, 58, 63, 60, 66]
+    }],
+      chart: {
+      type: 'bar',
+      height: 350
+    },
+    plotOptions: {
+      bar: {
+        horizontal: false,
+        columnWidth: '25%',
+        endingShape: 'rounded'
+      },
+    },
+    dataLabels: {
+      enabled: false
+    },
+    stroke: {
+      show: true,
+      width: 2,
+      colors: ['transparent']
+    },
+    xaxis: {
+      categories: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
+    },
+    yaxis: {
+      title: {
+        text: '$ (thousands)'
+      }
+    },
+    fill: {
+      opacity: 1
+    },
+    tooltip: {
+      y: {
+        formatter: function (val) {
+          return "$ " + val + " thousands"
         }
-        };
+      }
+    }
+    };
 
-        var chart = new ApexCharts(document.querySelector("#chart3"), options);
-        chart.render();
-  </script>
-  <script type="text/javascript">
-    $('.get_report').on('click', function(e) {
-      e.preventDefault();
-      let report_value = $('.choose_report').val();
-      $('.report-1').hide();
-      $('.'+report_value).show();
-    });
-  </script>
+    var chart = new ApexCharts(document.querySelector("#chart3"), options);
+    chart.render();
+</script>
+<script type="text/javascript">
+$('.get_report').on('click', function(e) {
+  e.preventDefault();
+  let report_value = $('.choose_report').val();
+  $('.report-1').hide();
+  $('.'+report_value).show();
+});
+</script>
 
+
+
+<!-- navbar -->
+<script type="text/javascript">
+
+var toggleSliderMenu = document.querySelector(".display-client-menu");
+var toggleSliderMenuClientArrow = document.querySelector(".client-sidebar");
+var toggleSliderMenuContractArrow = document.querySelector(".contract-sidebar");
+var toggleSliderMenuInvoicesArrow = document.querySelector(".invoices-sidebar");
+var toggleSliderMenufloordrawingArrow = document.querySelector(".floor-drawing-sidebar");
+
+toggleSliderMenu.addEventListener("click", function () {
+const toggleDisplay = document.querySelector(".toggle-display");
+
+toggleDisplay.classList.toggle("display-toggle-menu");
+toggleSliderMenuClientArrow.classList.toggle("sidebar-arrow-down");
+});
+var toggleSliderMenu = document.querySelector(".display-contact-menu");
+
+toggleSliderMenu.addEventListener("click", function () {
+const toggleDisplay = document.querySelector(".contract-display");
+
+toggleSliderMenuContractArrow.classList.toggle("sidebar-arrow-down");
+toggleDisplay.classList.toggle("display-toggle-menu");
+});
+
+var toggleSliderMenuInvoices = document.querySelector(".display-invoices-menu");
+
+toggleSliderMenuInvoices.addEventListener("click", function () {
+const toggleDisplay2 = document.querySelector(".invoices-display");
+
+toggleSliderMenuInvoicesArrow.classList.toggle("sidebar-arrow-down");
+toggleDisplay2.classList.toggle("display-toggle-menu");
+});
+
+var toggleSliderMenufloordrwing = document.querySelector(".display-floor-drawing-menu");
+
+toggleSliderMenufloordrwing.addEventListener("click", function () {
+const toggleDisplay3 = document.querySelector(".floor-drawing-display");
+
+toggleSliderMenufloordrawingArrow.classList.toggle("sidebar-arrow-down");
+toggleDisplay3.classList.toggle("display-toggle-menu");
+});
+
+
+
+const sidebarLinks = document.querySelectorAll(".sidebar .navbar .nav-link");
+
+sidebarLinks.forEach((ele) => {
+let location = window.location.pathname.split(".")[0].split("/");
+if (ele.childNodes[1].textContent.toLowerCase() === location[1]) {
+ele.classList.add("sidebar-active");
+} else {
+if (
+  ele.childNodes[1].textContent.toLowerCase() === "dashboard" &&
+  location[1] === "index"
+) {
+  ele.classList.add("sidebar-active");
+} 
+// else ele.classList.remove("sidebar-active");
+}
+});
+$(function() {
+"use strict";
+
+
+// search bar toggle
+const searchContainer = document.querySelector(".search-container");
+const navbarSearch = document.querySelector(".navbar-open-search");
+
+
+$(".open-search-bar").click(function () {
+
+searchContainer.classList.replace("d-none", "d-flex");
+navbarSearch.classList.replace("d-flex", "d-none");
+scrollToTop();
+return false;
+});
+
+$(".bi-three-dots-vertical").click(function () {
+
+$(".navbar-icons-container").toggleClass("active");
+return false;
+});
+
+$(".content-container").click(function () {
+
+if (window.innerWidth <= 991) {
+  $(".image-container").removeClass("display-none");
+  $(".sidebar-title").removeClass("display-none");
+  $(".title.d-none").removeClass("display-inline");
+  $(".sidebar .navbar .nav-link i").removeClass("custom-icon");
+  $(".sidebar, .content").removeClass("open");
+  return false;
+}
+});
+
+$(".search-container .cancel-icon").click(function () {
+
+searchContainer.classList.replace("d-flex", "d-none");
+navbarSearch.classList.replace("d-none", "d-flex");
+return false;
+});
+
+// Sidebar Toggler
+let $isSideBar_open = false;
+
+$(".sidebar-toggler").click(function () {
+$isSideBar_open = !$isSideBar_open;
+$(".image-container").toggleClass("display-none");
+if (window.innerWidth > 575.98) {
+  $(".sidebar-title").toggleClass("display-none");
+}
+$(".title.d-inline").toggleClass("display-none");
+$(".title.d-none").toggleClass("display-inline");
+$(".sidebar, .content").toggleClass("open");
+$(".sidebar .navbar .nav-link i").toggleClass("custom-icon");
+
+return false;
+});
+
+if (window.innerWidth <= 575.98) {
+$(".sidebar-title").removeClass("display-none");
+}
+
+// $(".sidebar").hover(function () {
+//   if ($isSideBar_open) {
+//     $(".image-container").toggleClass("display-none");
+//     $(".sidebar-title").toggleClass("display-none");
+//     $(".title.d-inline").toggleClass("display-none");
+//     $(".title.d-none").toggleClass("display-inline");
+//     $(".sidebar, .content").toggleClass("open");
+//     $(".sidebar .navbar .nav-link i").toggleClass("custom-icon");
+//     return false;
+//   }
+// });
+});
+</script>
+<!--  -->
 </body>
 
 </html>
