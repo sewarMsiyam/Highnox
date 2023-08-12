@@ -5748,12 +5748,16 @@
         event.preventDefault();
       }else if (target.is('td:first-child')) {
         event.preventDefault();
-      }else if (target.is('td:first-child input')) {
-        event.preventDefault();
+      }else if  (target.is('td:first-child input[type="checkbox"]')) {
+        const checkbox = target.find('input[type="checkbox"]');
+        checkbox.prop('checked', !checkbox.prop('checked'));
       } else {
         window.location.href = 'Create-userSettings.html';
       }
     });
+
+
+
 
 
     $(document).ready(function () {
