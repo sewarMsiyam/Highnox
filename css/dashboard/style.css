@@ -48,7 +48,7 @@ table {
       padding-right: 0 !important;
 }
 .input-svg {
-  height: 20px;
+  height: 15px;
 }
 .padding-0 {
   padding: 0;
@@ -271,11 +271,15 @@ table {
     background: #e8e8e8;
     height: 40px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     padding: 0.5rem;
     border-radius: 3px;
+    width: 100% !important;
   }
+.bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+  width: 100% !important;
+}
   .second-select-input {
     background: #fff;
     height: 40px;
@@ -868,4 +872,24 @@ input:checked + .slider:before {
 }
 .modal tr {
   height: 44px;
+}
+
+td.ui-sortable {
+  padding: 0.1rem 0.3rem;
+}
+.fs-10{
+  font-size:10px
+}
+
+
+.table td .form-control:disabled,
+.table td .form-control[readonly] {
+  background-color: #fff0 !important;
+  border: none !important;
+  opacity: 1;
+}
+
+.table-responsive {
+  border-radius: 15px;
+  overflow-x: visible;
 }

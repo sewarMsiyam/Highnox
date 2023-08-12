@@ -3,49 +3,32 @@
 
 <head>
   <meta charset="utf-8">
-  <title>settings</title>
+  <title>highnox</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
   <link rel="icon" href="../images/Highnox.png" type="image/x-icon" />
 
-  <link rel="stylesheet" href="../css/semantic.min.css">
+  <link rel="stylesheet" href="../css/semantic.min.css"  >
   <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
   <script src="../JS/semantic.min.js"></script>
   <!-- global style -->
   <link href="../css/global/bootstrap/bootstrap.min.css" rel="stylesheet">
-  <link href="../css/global-style.css" rel="stylesheet">
-  <link href="../css/global/datepicker/datepicker.css" rel="stylesheet" type="text/css" />
   <link href="../css/global/bootstrap/bootstrap-select.css" rel="stylesheet">
+  <link href="../css/global/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- dashboard style -->
   <link href="../css/dashboard/main-dashboard.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="../css/dashboard/style.css">
   <link rel="stylesheet" type="text/css" href="../css/dashboard/screen.css">
-  <link rel="stylesheet" href="../css/dashboard/media.css">
+  <link rel="stylesheet" href="../css/dashboard/media.css" >
 
   <!-- Icon Font Stylesheet cdn -->
   <link rel="stylesheet" href="../css/global/font-awesome/css/all.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-
+  
   <link rel="stylesheet" href="../css/layout.css">
-
-
-  <style>
-    td .form-control {
-      background-color: #fff !important;
-      border: 1px solid #000 !important;
-    }
-
-    .form-control:disabled,
-    .form-control[readonly] {
-      background-color: #fff0 !important;
-      border: none !important;
-      opacity: 1;
-    }
-  </style>
 </head>
-
 <body>
   <main class="layout" data-sidebar-minimize="off">
     <!-- Sidebar Start -->
@@ -71,7 +54,6 @@
               <span class="sidebar-title">Dashboard</span>
             </a>
           </li>
-
           <li class="nav-item">
             <a href="#" class="nav-link display-menu">
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20.002 20">
@@ -94,7 +76,6 @@
               </a>
             </div>
           </li>
-
           <li class="nav-item">
             <a href="#" class="nav-link display-menu">
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 16">
@@ -142,18 +123,27 @@
           </li>
 
           <li class="nav-item">
-            <a href="meeting-rooms.html" class="nav-link">
+            <a href="#" class="nav-link display-menu">
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 19">
                 <path id="Icon_color" data-name="Icon color"
                   d="M16,19H2a2,2,0,0,1-2-2V4A2,2,0,0,1,2,2H3V.5A.5.5,0,0,1,3.5,0h1A.5.5,0,0,1,5,.5V2h8V.5a.5.5,0,0,1,.5-.5h1a.5.5,0,0,1,.5.5V2h1a2,2,0,0,1,2,2V17A2,2,0,0,1,16,19ZM2,6V17H16V6Zm11.5,8h-1a.5.5,0,0,1-.5-.5v-1a.5.5,0,0,1,.5-.5h1a.5.5,0,0,1,.5.5v1A.5.5,0,0,1,13.5,14Zm-4,0h-5a.5.5,0,0,1-.5-.5v-1a.5.5,0,0,1,.5-.5h5a.5.5,0,0,1,.5.5v1A.5.5,0,0,1,9.5,14Zm4-4h-5A.5.5,0,0,1,8,9.5v-1A.5.5,0,0,1,8.5,8h5a.5.5,0,0,1,.5.5v1A.5.5,0,0,1,13.5,10Zm-8,0h-1A.5.5,0,0,1,4,9.5v-1A.5.5,0,0,1,4.5,8h1a.5.5,0,0,1,.5.5v1A.5.5,0,0,1,5.5,10Z"
                   fill="#ece6f5" />
               </svg>
               <div class="d-flex justify-content-between sidebar-title align-items-center w-100 ">
-                <span class="">Meeting rooms</span>
+                <span class="">Meeting rooms</span><i class="fa-solid fa-angle-right sidebar-arrow-down"></i>
               </div>
             </a>
+            <div class="toggle-display">
+              <a href="meeting-rooms.html" class="nav-link">
+                <i class="fa-solid fa-circle"></i>
+                <span class="">booking room</span>
+              </a>
+              <a href="meeting-rooms.html" class="nav-link">
+                <i class="fa-solid fa-circle"></i>
+                <span class="">List Of booking</span>
+              </a>
+            </div>
           </li>
-
           <li class="nav-item">
             <a href="#" class="nav-link display-menu">
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20">
@@ -178,7 +168,7 @@
           </li>
 
           <li class="nav-item">
-            <a href="operations.html" class="nav-link active">
+            <a href="operations.html" class="nav-link">
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 21.996 16">
                 <path id="Icon_color" data-name="Icon color"
                   d="M11,16a8.008,8.008,0,0,1-4-1.072.519.519,0,0,1-.239-.371.5.5,0,0,1,.14-.42l.73-.731a.5.5,0,0,1,.355-.149.5.5,0,0,1,.235.059,5.952,5.952,0,0,0,2.775.69H11A6,6,0,0,0,17,8H14.631a.493.493,0,0,1-.353-.15l-.2-.2a.5.5,0,0,1,0-.711L17.608,3.4a.509.509,0,0,1,.71,0l3.53,3.543a.5.5,0,0,1,0,.711l-.2.2a.49.49,0,0,1-.353.15H19a8,8,0,0,1-8,8ZM4.033,12.749a.5.5,0,0,1-.355-.144L.148,9.061a.5.5,0,0,1,0-.711l.2-.2A.49.49,0,0,1,.7,8H3A8,8,0,0,1,15,1.073a.524.524,0,0,1,.26.371.5.5,0,0,1-.139.42l-.741.741a.507.507,0,0,1-.357.146.512.512,0,0,1-.232-.056,5.847,5.847,0,0,0-2.774-.7H11A6.01,6.01,0,0,0,5,8H7.364a.49.49,0,0,1,.353.15l.2.2a.5.5,0,0,1,0,.711L4.388,12.6A.5.5,0,0,1,4.033,12.749Z"
@@ -260,10 +250,19 @@
               <option value="0">Female</option>
             </select>
             <div class="ui action input rounded-0 p-0" style="width: 200px;">
-              <input type="text" placeholder="Search...">
+              <input type="text" placeholder="Search..." class="searchFunction">
               <button class="ui icon button">
                 <i class="fa-solid fa-magnifying-glass"></i>
               </button>
+              <div class="position-absolute bg-white w-100 p-3 shadow  d-none menue-Search" style="top:100%;">
+                  <div class="ui celled w-100 list w-100">
+                    <div class="item">Search 1</div>
+                    <div class="item">Search 2</div>
+                    <div class="item">Search 3</div>
+                    <div class="item">Search 4 </div>
+                    <div class="item">Search 5 </div>
+                  </div>
+              </div>
             </div>
           </div>
         </div>
@@ -289,11 +288,21 @@
                   <option value="0">Female</option>
                 </select>
                 <div class="ui action input rounded-0 p-0" style="width: 200px;">
-                  <input type="text" placeholder="Search...">
+                  <input type="text" placeholder="Search..." class="searchFunction">
                   <button class="ui icon button">
                     <i class="fa-solid fa-magnifying-glass"></i>
                   </button>
+                  <div class="position-absolute bg-white w-100 p-3 shadow  d-none menue-Search" style="top:100%;">
+                      <div class="ui celled w-100 list w-100">
+                        <div class="item">Search 1</div>
+                        <div class="item">Search 2</div>
+                        <div class="item">Search 3</div>
+                        <div class="item">Search 4 </div>
+                        <div class="item">Search 5 </div>
+                      </div>
+                  </div>
                 </div>
+               
               </div>
             </div>
           </div>
@@ -495,6 +504,7 @@
         </div>
       </nav>
       <!-- End Navbar  -->
+      
       <div class="container-fluid p-4" id="back-client">
         <div class="firstNav row justify-content-between">
           <div class="col-12 padding-0">
@@ -809,7 +819,7 @@
                                             Office
                                           </td>
                                           <td class="style-td">
-                                            <button type="button" class="btn btn-secondary dataTableButtons edite-Role">
+                                            <button type="button" class="btn btn-secondary dataTableButtons edite-row">
                                               <i class="fa fa-pen"></i>
                                             </button>
                                             <div class="tooltip-left btn btn-secondary dataTableButtons">
@@ -893,7 +903,7 @@
                                           </td>
 
                                           <td class="style-td">
-                                            <button type="button" class="btn btn-secondary dataTableButtons edite-Role">
+                                            <button type="button" class="btn btn-secondary dataTableButtons edite-row">
                                               <i class="fa fa-pen"></i>
                                             </button>
                                             <div class="tooltip-left btn btn-secondary dataTableButtons">
@@ -980,7 +990,7 @@
                                           </td>
 
                                           <td class="style-td">
-                                            <button type="button" class="btn btn-secondary dataTableButtons edite-Role">
+                                            <button type="button" class="btn btn-secondary dataTableButtons edite-row">
                                               <i class="fa fa-pen"></i>
                                             </button>
                                             <div class="tooltip-left btn btn-secondary dataTableButtons">
@@ -1065,7 +1075,7 @@
                                           </td>
 
                                           <td class="style-td">
-                                            <button type="button" class="btn btn-secondary dataTableButtons edite-Role">
+                                            <button type="button" class="btn btn-secondary dataTableButtons edite-row">
                                               <i class="fa fa-pen"></i>
                                             </button>
                                             <div class="tooltip-left btn btn-secondary dataTableButtons">
@@ -1177,7 +1187,7 @@
                                           </td>
 
                                           <td class="style-td">
-                                            <button type="button" class="btn btn-secondary dataTableButtons edite-Role">
+                                            <button type="button" class="btn btn-secondary dataTableButtons edite-row">
                                               <i class="fa fa-pen"></i>
                                             </button>
                                             <div class="tooltip-left btn btn-secondary dataTableButtons">
@@ -1266,7 +1276,7 @@
                                           </td>
 
                                           <td class="style-td">
-                                            <button type="button" class="btn btn-secondary dataTableButtons edite-Role">
+                                            <button type="button" class="btn btn-secondary dataTableButtons edite-row">
                                               <i class="fa fa-pen"></i>
                                             </button>
                                             <div class="tooltip-left btn btn-secondary dataTableButtons">
@@ -1359,7 +1369,7 @@
                                           </td>
 
                                           <td class="style-td">
-                                            <button type="button" class="btn btn-secondary dataTableButtons edite-Role">
+                                            <button type="button" class="btn btn-secondary dataTableButtons edite-row">
                                               <i class="fa fa-pen"></i>
                                             </button>
                                             <div class="tooltip-left btn btn-secondary dataTableButtons">
@@ -1450,7 +1460,7 @@
                                           </td>
 
                                           <td class="style-td">
-                                            <button type="button" class="btn btn-secondary dataTableButtons edite-Role">
+                                            <button type="button" class="btn btn-secondary dataTableButtons edite-row">
                                               <i class="fa fa-pen"></i>
                                             </button>
                                             <div class="tooltip-left btn btn-secondary dataTableButtons">
@@ -1535,7 +1545,7 @@
                                           </td>
 
                                           <td class="style-td">
-                                            <button type="button" class="btn btn-secondary dataTableButtons edite-Role">
+                                            <button type="button" class="btn btn-secondary dataTableButtons edite-row">
                                               <i class="fa fa-pen"></i>
                                             </button>
                                             <div class="tooltip-left btn btn-secondary dataTableButtons">
@@ -1622,7 +1632,7 @@
                                           </td>
 
                                           <td class="style-td">
-                                            <button type="button" class="btn btn-secondary dataTableButtons edite-Role">
+                                            <button type="button" class="btn btn-secondary dataTableButtons edite-row">
                                               <i class="fa fa-pen"></i>
                                             </button>
                                             <div class="tooltip-left btn btn-secondary dataTableButtons">
@@ -1708,7 +1718,7 @@
                                           </td>
 
                                           <td class="style-td">
-                                            <button type="button" class="btn btn-secondary dataTableButtons edite-Role">
+                                            <button type="button" class="btn btn-secondary dataTableButtons edite-row">
                                               <i class="fa fa-pen"></i>
                                             </button>
                                             <div class="tooltip-left btn btn-secondary dataTableButtons">
@@ -1820,7 +1830,7 @@
                                           </td>
 
                                           <td class="style-td">
-                                            <button type="button" class="btn btn-secondary dataTableButtons edite-Role">
+                                            <button type="button" class="btn btn-secondary dataTableButtons edite-row">
                                               <i class="fa fa-pen"></i>
                                             </button>
                                             <div class="tooltip-left btn btn-secondary dataTableButtons">
@@ -1905,7 +1915,7 @@
                                           </td>
 
                                           <td class="style-td">
-                                            <button type="button" class="btn btn-secondary dataTableButtons edite-Role">
+                                            <button type="button" class="btn btn-secondary dataTableButtons edite-row">
                                               <i class="fa fa-pen"></i>
                                             </button>
                                             <div class="tooltip-left btn btn-secondary dataTableButtons">
@@ -1993,7 +2003,7 @@
                                           </td>
 
                                           <td class="style-td">
-                                            <button type="button" class="btn btn-secondary dataTableButtons edite-Role">
+                                            <button type="button" class="btn btn-secondary dataTableButtons edite-row">
                                               <i class="fa fa-pen"></i>
                                             </button>
                                             <div class="tooltip-left btn btn-secondary dataTableButtons">
@@ -2085,7 +2095,7 @@
                                           </td>
 
                                           <td class="style-td">
-                                            <button type="button" class="btn btn-secondary dataTableButtons edite-Role">
+                                            <button type="button" class="btn btn-secondary dataTableButtons edite-row">
                                               <i class="fa fa-pen"></i>
                                             </button>
                                             <div class="tooltip-left btn btn-secondary dataTableButtons">
@@ -2172,7 +2182,7 @@
                                           </td>
 
                                           <td class="style-td">
-                                            <button type="button" class="btn btn-secondary dataTableButtons edite-Role">
+                                            <button type="button" class="btn btn-secondary dataTableButtons edite-row">
                                               <i class="fa fa-pen"></i>
                                             </button>
                                             <div class="tooltip-left btn btn-secondary dataTableButtons">
@@ -2261,7 +2271,7 @@
                                           </td>
 
                                           <td class="style-td">
-                                            <button type="button" class="btn btn-secondary dataTableButtons edite-Role">
+                                            <button type="button" class="btn btn-secondary dataTableButtons edite-row">
                                               <i class="fa fa-pen"></i>
                                             </button>
                                             <div class="tooltip-left btn btn-secondary dataTableButtons">
@@ -2347,7 +2357,7 @@
                                           </td>
 
                                           <td class="style-td">
-                                            <button type="button" class="btn btn-secondary dataTableButtons edite-Role">
+                                            <button type="button" class="btn btn-secondary dataTableButtons edite-row">
                                               <i class="fa fa-pen"></i>
                                             </button>
                                             <div class="tooltip-left btn btn-secondary dataTableButtons">
@@ -2438,7 +2448,7 @@
                                           </td>
 
                                           <td class="style-td">
-                                            <button type="button" class="btn btn-secondary dataTableButtons edite-Role">
+                                            <button type="button" class="btn btn-secondary dataTableButtons edite-row">
                                               <i class="fa fa-pen"></i>
                                             </button>
                                             <div class="tooltip-left btn btn-secondary dataTableButtons">
@@ -2523,7 +2533,7 @@
                                           </td>
 
                                           <td class="style-td">
-                                            <button type="button" class="btn btn-secondary dataTableButtons edite-Role">
+                                            <button type="button" class="btn btn-secondary dataTableButtons edite-row">
                                               <i class="fa fa-pen"></i>
                                             </button>
                                             <div class="tooltip-left btn btn-secondary dataTableButtons">
@@ -2635,7 +2645,7 @@
                                           </td>
 
                                           <td class="style-td">
-                                            <button type="button" class="btn btn-secondary dataTableButtons edite-Role">
+                                            <button type="button" class="btn btn-secondary dataTableButtons edite-row">
                                               <i class="fa fa-pen"></i>
                                             </button>
                                             <div class="tooltip-left btn btn-secondary dataTableButtons">
@@ -2745,7 +2755,7 @@
                                           </td>
 
                                           <td class="style-td">
-                                            <button type="button" class="btn btn-secondary dataTableButtons edite-Role">
+                                            <button type="button" class="btn btn-secondary dataTableButtons edite-row">
                                               <i class="fa fa-pen"></i>
                                             </button>
                                             <div class="tooltip-left btn btn-secondary dataTableButtons">
@@ -2857,7 +2867,7 @@
                                           </td>
 
                                           <td class="style-td">
-                                            <button type="button" class="btn btn-secondary dataTableButtons edite-Role">
+                                            <button type="button" class="btn btn-secondary dataTableButtons edite-row">
                                               <i class="fa fa-pen"></i>
                                             </button>
                                             <div class="tooltip-left btn btn-secondary dataTableButtons">
@@ -2949,7 +2959,7 @@
                                           </td>
 
                                           <td class="style-td">
-                                            <button type="button" class="btn btn-secondary dataTableButtons edite-Role">
+                                            <button type="button" class="btn btn-secondary dataTableButtons edite-row">
                                               <i class="fa fa-pen"></i>
                                             </button>
                                             <div class="tooltip-left btn btn-secondary dataTableButtons">
@@ -3035,7 +3045,7 @@
                                           </td>
 
                                           <td class="style-td">
-                                            <button type="button" class="btn btn-secondary dataTableButtons edite-Role">
+                                            <button type="button" class="btn btn-secondary dataTableButtons edite-row">
                                               <i class="fa fa-pen"></i>
                                             </button>
                                             <div class="tooltip-left btn btn-secondary dataTableButtons">
@@ -3122,7 +3132,7 @@
                                           </td>
 
                                           <td class="style-td">
-                                            <button type="button" class="btn btn-secondary dataTableButtons edite-Role">
+                                            <button type="button" class="btn btn-secondary dataTableButtons edite-row">
                                               <i class="fa fa-pen"></i>
                                             </button>
                                             <div class="tooltip-left btn btn-secondary dataTableButtons">
@@ -3209,7 +3219,7 @@
                                           </td>
 
                                           <td class="style-td">
-                                            <button type="button" class="btn btn-secondary dataTableButtons edite-Role">
+                                            <button type="button" class="btn btn-secondary dataTableButtons edite-row">
                                               <i class="fa fa-pen"></i>
                                             </button>
                                             <div class="tooltip-left btn btn-secondary dataTableButtons">
@@ -3297,7 +3307,7 @@
                                           </td>
 
                                           <td class="style-td">
-                                            <button type="button" class="btn btn-secondary dataTableButtons edite-Role">
+                                            <button type="button" class="btn btn-secondary dataTableButtons edite-row">
                                               <i class="fa fa-pen"></i>
                                             </button>
                                             <div class="tooltip-left btn btn-secondary dataTableButtons">
@@ -3388,7 +3398,7 @@
                                           </td>
 
                                           <td class="style-td">
-                                            <button type="button" class="btn btn-secondary dataTableButtons edite-Role">
+                                            <button type="button" class="btn btn-secondary dataTableButtons edite-row">
                                               <i class="fa fa-pen"></i>
                                             </button>
                                             <div class="tooltip-left btn btn-secondary dataTableButtons">
@@ -3474,7 +3484,7 @@
                                           </td>
 
                                           <td class="style-td">
-                                            <button type="button" class="btn btn-secondary dataTableButtons edite-Role">
+                                            <button type="button" class="btn btn-secondary dataTableButtons edite-row">
                                               <i class="fa fa-pen"></i>
                                             </button>
                                             <div class="tooltip-left btn btn-secondary dataTableButtons">
@@ -3561,7 +3571,7 @@
                                           </td>
 
                                           <td class="style-td">
-                                            <button type="button" class="btn btn-secondary dataTableButtons edite-Role">
+                                            <button type="button" class="btn btn-secondary dataTableButtons edite-row">
                                               <i class="fa fa-pen"></i>
                                             </button>
                                             <div class="tooltip-left btn btn-secondary dataTableButtons">
@@ -3647,7 +3657,7 @@
                                           </td>
 
                                           <td class="style-td">
-                                            <button type="button" class="btn btn-secondary dataTableButtons edite-Role">
+                                            <button type="button" class="btn btn-secondary dataTableButtons edite-row">
                                               <i class="fa fa-pen"></i>
                                             </button>
                                             <div class="tooltip-left btn btn-secondary dataTableButtons">
@@ -3752,14 +3762,18 @@
         $(this).closest("tr").remove();
         counterMap[tableClass]--;
       });
-      $(document).on("click", ".edite-row", function () {
-        var inputRoleElement = $(this).closest("tr").find("td .form-control");
-        inputRoleElement.prop("readonly", false);
-        inputRoleElement.focus();
-      });
+      $(document).on("click", ".edite-row", function () { 
+          var editIcon = $(this).find("i");
+          var inputRoleElement = $(this).closest("tr").find("td .form-control");
 
-      $(document).on("blur", "td .form-control", function () {
-        $(this).prop("readonly", true);
+        if (editIcon.hasClass("fa-floppy-disk")) {
+          editIcon.removeClass("fa-floppy-disk").addClass("fa-pen");
+          inputRoleElement.prop("readonly", true);
+        } else {
+          editIcon.removeClass("fa-pen").addClass("fa-floppy-disk");
+          inputRoleElement.prop("readonly", false);
+          inputRoleElement.focus();
+        }
       });
     });
 

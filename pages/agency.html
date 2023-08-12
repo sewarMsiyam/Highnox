@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>room</title>
+  <title>highnox</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
@@ -14,9 +14,8 @@
   <script src="../JS/semantic.min.js"></script>
   <!-- global style -->
   <link href="../css/global/bootstrap/bootstrap.min.css" rel="stylesheet">
-  <link href="../css/global-style.css" rel="stylesheet">
-  <link href="../css/global/datepicker/datepicker.css" rel="stylesheet" type="text/css" />
   <link href="../css/global/bootstrap/bootstrap-select.css" rel="stylesheet">
+  <link href="../css/global/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- dashboard style -->
   <link href="../css/dashboard/main-dashboard.css" rel="stylesheet">
@@ -55,7 +54,6 @@
               <span class="sidebar-title">Dashboard</span>
             </a>
           </li>
-
           <li class="nav-item">
             <a href="#" class="nav-link display-menu">
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20.002 20">
@@ -78,7 +76,6 @@
               </a>
             </div>
           </li>
-
           <li class="nav-item">
             <a href="#" class="nav-link display-menu">
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 16">
@@ -126,18 +123,27 @@
           </li>
 
           <li class="nav-item">
-            <a href="meeting-rooms.html" class="nav-link">
+            <a href="#" class="nav-link display-menu">
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 19">
                 <path id="Icon_color" data-name="Icon color"
                   d="M16,19H2a2,2,0,0,1-2-2V4A2,2,0,0,1,2,2H3V.5A.5.5,0,0,1,3.5,0h1A.5.5,0,0,1,5,.5V2h8V.5a.5.5,0,0,1,.5-.5h1a.5.5,0,0,1,.5.5V2h1a2,2,0,0,1,2,2V17A2,2,0,0,1,16,19ZM2,6V17H16V6Zm11.5,8h-1a.5.5,0,0,1-.5-.5v-1a.5.5,0,0,1,.5-.5h1a.5.5,0,0,1,.5.5v1A.5.5,0,0,1,13.5,14Zm-4,0h-5a.5.5,0,0,1-.5-.5v-1a.5.5,0,0,1,.5-.5h5a.5.5,0,0,1,.5.5v1A.5.5,0,0,1,9.5,14Zm4-4h-5A.5.5,0,0,1,8,9.5v-1A.5.5,0,0,1,8.5,8h5a.5.5,0,0,1,.5.5v1A.5.5,0,0,1,13.5,10Zm-8,0h-1A.5.5,0,0,1,4,9.5v-1A.5.5,0,0,1,4.5,8h1a.5.5,0,0,1,.5.5v1A.5.5,0,0,1,5.5,10Z"
                   fill="#ece6f5" />
               </svg>
               <div class="d-flex justify-content-between sidebar-title align-items-center w-100 ">
-                <span class="">Meeting rooms</span>
+                <span class="">Meeting rooms</span><i class="fa-solid fa-angle-right sidebar-arrow-down"></i>
               </div>
             </a>
+            <div class="toggle-display">
+              <a href="meeting-rooms.html" class="nav-link">
+                <i class="fa-solid fa-circle"></i>
+                <span class="">booking room</span>
+              </a>
+              <a href="meeting-rooms.html" class="nav-link">
+                <i class="fa-solid fa-circle"></i>
+                <span class="">List Of booking</span>
+              </a>
+            </div>
           </li>
-
           <li class="nav-item">
             <a href="#" class="nav-link display-menu">
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20">
@@ -244,10 +250,19 @@
               <option value="0">Female</option>
             </select>
             <div class="ui action input rounded-0 p-0" style="width: 200px;">
-              <input type="text" placeholder="Search...">
+              <input type="text" placeholder="Search..." class="searchFunction">
               <button class="ui icon button">
                 <i class="fa-solid fa-magnifying-glass"></i>
               </button>
+              <div class="position-absolute bg-white w-100 p-3 shadow  d-none menue-Search" style="top:100%;">
+                  <div class="ui celled w-100 list w-100">
+                    <div class="item">Search 1</div>
+                    <div class="item">Search 2</div>
+                    <div class="item">Search 3</div>
+                    <div class="item">Search 4 </div>
+                    <div class="item">Search 5 </div>
+                  </div>
+              </div>
             </div>
           </div>
         </div>
@@ -273,11 +288,21 @@
                   <option value="0">Female</option>
                 </select>
                 <div class="ui action input rounded-0 p-0" style="width: 200px;">
-                  <input type="text" placeholder="Search...">
+                  <input type="text" placeholder="Search..." class="searchFunction">
                   <button class="ui icon button">
                     <i class="fa-solid fa-magnifying-glass"></i>
                   </button>
+                  <div class="position-absolute bg-white w-100 p-3 shadow  d-none menue-Search" style="top:100%;">
+                      <div class="ui celled w-100 list w-100">
+                        <div class="item">Search 1</div>
+                        <div class="item">Search 2</div>
+                        <div class="item">Search 3</div>
+                        <div class="item">Search 4 </div>
+                        <div class="item">Search 5 </div>
+                      </div>
+                  </div>
                 </div>
+               
               </div>
             </div>
           </div>

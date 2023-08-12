@@ -1,9 +1,8 @@
-
+//  sidebar
 const toggleBtn = $('#toggleBtn');
 const layout = $('.layout');
 const sidebar = $('.sidebar');
 let isHovered = false;
-
 sidebar.hover(
   function () {
     if (layout.attr('data-sidebar-minimize') === 'on') {
@@ -17,7 +16,6 @@ sidebar.hover(
     }
   }
 );
-
 toggleBtn.click(function () {
   const currentValue = layout.attr('data-sidebar-minimize');
   if (currentValue === 'on') {
@@ -28,19 +26,17 @@ toggleBtn.click(function () {
   isHovered = false;
 });
 
-$(function () {
-  $('.datepicker').datepicker({
-    uiLibrary: 'bootstrap5',
-    orientation: 'bottom',
-    center: true,
-  });
-});
+// $(function () {
+//   $('.datepicker').datepicker({
+//     uiLibrary: 'bootstrap5',
+//     orientation: 'bottom',
+//     center: true,
+//   });
+// });
 
 
-
-$(document).ready(function () {
+// multiple select
   $('.selectpicker').selectpicker();
-
   $('.selectpicker').on('changed.bs.select', function (e) {
     const selectedItems = $(this).val();
     const selectedCount = selectedItems.length;
@@ -49,12 +45,9 @@ $(document).ready(function () {
       $(this).parent().find('.filter-option-inner-inner').html(`<span style="color: #495057 !important;">${selectedCount} options selected</span>`);
     }
   });
-});
 
 
-
-
-
+// toggle menu in sidebar
 var toggleSliderMenu = document.querySelectorAll(".display-menu");
 const toggleDisplay = document.querySelectorAll(".toggle-display");
 
@@ -71,7 +64,7 @@ resptoggleSide.addEventListener("click", function () {
 });
 
 
-
+// tooltip
 var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
 var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
   return new bootstrap.Tooltip(tooltipTriggerEl)
@@ -96,9 +89,7 @@ var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
       myDocuments.msRequestFullscreen();
     }
   });
-
   let fullScreenButton = document.getElementById("zoom-button");
-
   fullScreenButton.addEventListener("click", function () {
     if (document.fullscreenElement) {
       document.exitFullscreen();
@@ -112,6 +103,42 @@ var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
       document.msExitFullscreen();
     }
   });
+
+
+
+
+
+  $(document).ready(function () {
+    $(".searchFunction").on("focus", function () {
+      $(".menue-Search").removeClass("d-none");
+    }).on("blur", function () {
+      setTimeout(function () {
+        $(".menue-Search").addClass("d-none");
+      }, 200);
+    });
+
+    $(".menue-Search").on("mouseenter", function () {
+      $("#searchFunction").off("blur");
+    }).on("mouseleave", function () {
+      $("#searchFunction").on("blur", function () {
+        setTimeout(function () {
+          $(".menue-Search").addClass("d-none");
+        }, 200);
+      });
+    });
+  });
+
+
+
+// import list
+  const fileInput = document.getElementById('fileInput');
+  fileInput.addEventListener('change', (event) => {
+    const selectedFile = event.target.files[0];
+    if (selectedFile) {
+      console.log('Selected file path:', selectedFile.name); 
+    }
+  });
+
 
 
 
