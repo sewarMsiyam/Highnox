@@ -28,7 +28,13 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
   
   <link rel="stylesheet" href="../css/layout.css">
+  <style>
+    .table-responsive {
+    overflow-x: auto !important;
+    }
+    </style>
 </head>
+
 <body>
   <main class="layout" data-sidebar-minimize="off">
     <!-- Sidebar Start -->
@@ -123,7 +129,7 @@
           </li>
 
           <li class="nav-item">
-            <a href="#" class="nav-link display-menu">
+            <a href="#" class="nav-link active display-menu">
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 19">
                 <path id="Icon_color" data-name="Icon color"
                   d="M16,19H2a2,2,0,0,1-2-2V4A2,2,0,0,1,2,2H3V.5A.5.5,0,0,1,3.5,0h1A.5.5,0,0,1,5,.5V2h8V.5a.5.5,0,0,1,.5-.5h1a.5.5,0,0,1,.5.5V2h1a2,2,0,0,1,2,2V17A2,2,0,0,1,16,19ZM2,6V17H16V6Zm11.5,8h-1a.5.5,0,0,1-.5-.5v-1a.5.5,0,0,1,.5-.5h1a.5.5,0,0,1,.5.5v1A.5.5,0,0,1,13.5,14Zm-4,0h-5a.5.5,0,0,1-.5-.5v-1a.5.5,0,0,1,.5-.5h5a.5.5,0,0,1,.5.5v1A.5.5,0,0,1,9.5,14Zm4-4h-5A.5.5,0,0,1,8,9.5v-1A.5.5,0,0,1,8.5,8h5a.5.5,0,0,1,.5.5v1A.5.5,0,0,1,13.5,10Zm-8,0h-1A.5.5,0,0,1,4,9.5v-1A.5.5,0,0,1,4.5,8h1a.5.5,0,0,1,.5.5v1A.5.5,0,0,1,5.5,10Z"
@@ -133,8 +139,8 @@
                 <span class="">Meeting rooms</span><i class="fa-solid fa-angle-right sidebar-arrow-down"></i>
               </div>
             </a>
-            <div class="toggle-display">
-              <a href="meeting-rooms.html" class="nav-link">
+            <div class="toggle-display display-toggle-menu">
+              <a href="meeting-rooms.html" class="nav-link active">
                 <i class="fa-solid fa-circle"></i>
                 <span class="">booking room</span>
               </a>
@@ -514,9 +520,9 @@
     }
   </style>
         <div class="content-container bg-white">
-          <div class="content-top d-flex justify-content-between align-items-center py-1 align-items-center">
+          <div class="content-top d-flex flex-column flex-lg-row justify-content-between align-items-center py-1 align-items-center">
             <h4 class="px-4 py-2">Meeting Details</h4>
-            <div class="px-4 py-2 d-flex align-items-center">
+            <div class="px-4 py-2 d-flex align-items-center  d-flex flex-column flex-lg-row">
               <label class="mb-0 mx-2">Operation</label>
 
               <div class="input-group align-items-center  mx-2 d-none d-lg-flex">
@@ -643,9 +649,6 @@
               </form>
             </div>
 
-
-
-
             <div class="firstNav row justify-content-between" style="box-shadow:0 3px 6px #00000029">
               <ul class="nav nav-tabs justify-content-between align-items-center">
                 <li class="nav-item list" role="presentation">
@@ -698,13 +701,11 @@
                         <th>2020-01-02 Saturday</th>
                         <th>2020-01-02 Sunday</th>
                       </tr>
-
-
                       <tr class="grid-row">
                         <td> 4300 </td>
                         <td>50</td>
                         <td>4</td>
-                        <td>
+                        <td class="grid-column tasks ui-sortable">
                           <div class="p-1 my-2 splitCardDiv">Revenue. : 5 000 000 SEK</div>
                           <div class="p-1 my-2 splitCardDiv">Preliminary: 1000 000 SEK</div>
                           <div class="p-1 my-2 splitCardDiv">Budget : 4 000 000 SEK</div>
@@ -775,15 +776,133 @@
                         <td class="grid-column tasks ui-sortable"></td>
                       </tr>
 
+                      <tr class="grid-row">
+                        <td> 4300 </td>
+                        <td>50</td>
+                        <td>4</td>
+                        <td class="grid-column tasks ui-sortable"></td>
+                        <td class="grid-column tasks ui-sortable">
+                          <div class="cardDark p-2 rounded  my-2">
+                            <div class="d-flex align-items-center justify-content-around">
+                              <div class="tooltip-bottom p-0 btn btn-secondary dataTableButtons border-0">
+                                <div class="cardIcon">
+                                  <img src="../img/man.png">
+                                </div>
+                                <span class="tooltiptext">Tooltip text</span>
+                              </div>
+                              <p class="m-0 mx-2">Hassan Bussiness</p>
+                              <i class="fa-solid fa-circle-chevron-down h6 m-0" data-bs-toggle="modal"
+                                data-bs-target="#exampleModalCenter"></i>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="grid-column tasks ui-sortable"></td>
+                        <td class="grid-column tasks ui-sortable">
+                          <div class="cardDark p-2 rounded my-2">
+                            <div class="d-flex align-items-center justify-content-around">
+                              <div class="tooltip-bottom p-0 btn btn-secondary dataTableButtons border-0">
+                                <div class="cardIcon">
+                                  <img src="../img/man.png">
+                                </div>
+                                <span class="tooltiptext">Tooltip text</span>
+                              </div>
+                              <p class="m-0 mx-2">Hassan Bussiness</p>
+                              <i class="fa-solid fa-circle-chevron-down h6 m-0" data-bs-toggle="modal"
+                                data-bs-target="#exampleModalCenter"></i>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="grid-column tasks ui-sortable">
+                          <div class="cardDark p-2 rounded my-2">
+                            <div class="d-flex align-items-center justify-content-around">
+                              <div class="tooltip-bottom p-0 btn btn-secondary dataTableButtons border-0">
+                                <div class="cardIcon">
+                                  <img src="../img/man.png">
+                                </div>
+                                <span class="tooltiptext">Tooltip text</span>
+                              </div>
+                              <p class="m-0 mx-2">Hassan Bussiness</p>
+                              <i class="fa-solid fa-circle-chevron-down h6 m-0" data-bs-toggle="modal"
+                                data-bs-target="#exampleModalCenter"></i>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="grid-column tasks ui-sortable"></td>
+                        <td class="grid-column tasks ui-sortable">
+                          <div class="cardLight p-2 rounded my-2">
+                            <div class="d-flex align-items-center justify-content-around">
+                              <div class="tooltip-bottom p-0 btn btn-secondary dataTableButtons border-0">
+                                <div class="cardIcon">
+                                  <img src="../img/man.png">
+                                </div>
+                                <span class="tooltiptext">Tooltip text</span>
+                              </div>
+                              <p class="m-0 mx-2">Hassan Bussiness</p>
+                              <i class="fa-solid fa-circle-chevron-down h6 m-0" data-bs-toggle="modal"
+                                data-bs-target="#exampleModalCenter"></i>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="grid-column tasks ui-sortable"></td>
+                      </tr>
 
-
-
-
-
-
-
-
-
+                      <tr class="grid-row">
+                        <td> 4300 </td>
+                        <td>50</td>
+                        <td>4</td>
+                        <td class="grid-column tasks ui-sortable">
+                          <div class="p-1 my-2 splitCardDiv">Diff : 1 000 000 SEK</div>
+                        </td>
+                        <td class="grid-column tasks ui-sortable">
+                          <div class="cardDark p-2 rounded  my-2">
+                            <div class="d-flex align-items-center justify-content-around">
+                              <div class="tooltip-bottom p-0 btn btn-secondary dataTableButtons border-0">
+                                <div class="cardIcon">
+                                  <img src="../img/man.png">
+                                </div>
+                                <span class="tooltiptext">Tooltip text</span>
+                              </div>
+                              <p class="m-0 mx-2">Hassan Bussiness</p>
+                              <i class="fa-solid fa-circle-chevron-down h6 m-0" data-bs-toggle="modal"
+                                data-bs-target="#exampleModalCenter"></i>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="grid-column tasks ui-sortable"></td>
+                        <td class="grid-column tasks ui-sortable"></td>
+                        <td class="grid-column tasks ui-sortable">
+                          <div class="cardDark p-2 rounded my-2">
+                            <div class="d-flex align-items-center justify-content-around">
+                              <div class="tooltip-bottom p-0 btn btn-secondary dataTableButtons border-0">
+                                <div class="cardIcon">
+                                  <img src="../img/man.png">
+                                </div>
+                                <span class="tooltiptext">Tooltip text</span>
+                              </div>
+                              <p class="m-0 mx-2">Hassan Bussiness</p>
+                              <i class="fa-solid fa-circle-chevron-down h6 m-0" data-bs-toggle="modal"
+                                data-bs-target="#exampleModalCenter"></i>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="grid-column tasks ui-sortable"></td>
+                        <td class="grid-column tasks ui-sortable">
+                          <div class="cardLight p-2 rounded my-2">
+                            <div class="d-flex align-items-center justify-content-around">
+                              <div class="tooltip-bottom p-0 btn btn-secondary dataTableButtons border-0">
+                                <div class="cardIcon">
+                                  <img src="../img/man.png">
+                                </div>
+                                <span class="tooltiptext">Tooltip text</span>
+                              </div>
+                              <p class="m-0 mx-2">Hassan Bussiness</p>
+                              <i class="fa-solid fa-circle-chevron-down h6 m-0" data-bs-toggle="modal"
+                                data-bs-target="#exampleModalCenter"></i>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="grid-column tasks ui-sortable"></td>
+                      </tr>
 
 
                     </tbody>
@@ -808,7 +927,7 @@
 
             <div class="firstNav rounded-0 bg-white shadow border-0">
               <ul class="nav nav-tabs justify-content-between align-items-center">
-                <li class="nav-item list" role="presentation">
+                <li class="nav-item list mr-auto" role="presentation">
                   <button class="nav-link nav-btn active" data-bs-toggle="tab" data-bs-target="#Monthly-income-tab"type="button">
                     Monthly income
                   </button>
@@ -894,13 +1013,12 @@
 
   <!-- global js -->
   <script src="../JS/global/jquery/jquery-3.4.1.min.js"></script>
-  <script src="../JS/global/jspdf/jspdf.js"></script>
-  <script src="../JS/client/main.js"></script>
   <script src="../JS/global/bootstrap/bootstrap.bundle.min.js"></script>
-  <script type="text/javascript" src="../JS/dashboard/dragula.js"></script>
-  <script src="JS/global/datePicker/datepicker.js"></script>
   <script src="../JS/global/bootstrap/bootstrap-select.js"></script>
+  <script src="../JS/global/swiper/swiper-bundle.min.js"></script>
 
+
+  <script src="../JS/layout.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
 
 
@@ -915,19 +1033,11 @@
 
         },
         stop: function (e, ui) {
-
         }
       });
-      /*$(".grid-column").draggable();
-      $(".delete-container").droppable({
-        accept: ".task-item"
-      });*/
     }
   </script>
 
-
-
-  <script src="../JS/layout.js"></script>
 
 
 </body>

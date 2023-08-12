@@ -604,7 +604,7 @@
                                       <label>Offer Start date</label>
                                     </div>
                                     <div class="second-select-input">
-                                      <input type="date" class="form-control date-input bg-secondary border-0 px-0" placeholder="Select date">
+                                      <input type="date" class="form-control date-input border-0 px-0" placeholder="Select date">
                                     </div>
                                   </div>
                                   <div class="col-md-2 col-6">
@@ -612,7 +612,7 @@
                                       <label>Activity close date</label>
                                     </div>
                                     <div class="second-select-input">
-                                      <input type="date" class="form-control date-input bg-secondary border-0 px-0" placeholder="Select date">
+                                      <input type="date" class="form-control date-input border-0 px-0" placeholder="Select date">
                                     </div>
                                   </div>
                                   <div class="col-md-2 col-12 padding-top-small-10">
@@ -886,6 +886,13 @@
                             <!-- end new row -->
                             <div class="container-fluid content-form py-4 mt-4">
                               <form>
+                                <div class="text-right mx-4"> 
+                                  <a href="#" class="btn btn-primary create-bArticle Detailstn add_note ">
+                                  <i class="bi bi-plus-circle-fill"></i>
+                                 Add Note
+                               </a>
+                              </div>
+    
                                 <div class="form-row my-4">
                                   <div class="col-md-10 col-12">
                                     <div>
@@ -908,6 +915,7 @@
                                     </div>
                                   </div>
                                 </div>
+                                <div class="row-note mx-4"></div>
                               </form>
                             </div>
                             <div class="container-fluid py-4 d-flex justify-content-end print-dropdown">
@@ -1200,7 +1208,7 @@
         cols += '<td style="width:7%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
         cols += '<td style="width:14%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
         cols += '<td style="width:7%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
-        cols += '<td style="width:7%;" class="style-td"><button type="button" class="btn btn-secondary dataTableButtons edite-Role"> <i class="fa fa-pen"></i> </button><button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom"><i class="fa fa-trash"></i></button></td>';
+        cols += '<td style="width:7%;" class="style-td"><button type="button" class="btn btn-secondary dataTableButtons edite-save"> <i class="fa-solid fa-floppy-disk"></i> </button><button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom"><i class="fa fa-trash"></i></button></td>';
 
         // cols += '<td><button class="btn btn-danger rounded-0" id ="deleteRow"><i class="fa fa-trash"></i></button</td>';
 
@@ -1213,27 +1221,58 @@
         // Increase counter after each row insertion
         counter++;
     });
+    $(".table-Articler").on("click", ".edite-save", function (event) {
+        var row = $(this).closest("tr");
+        var inputs = row.find("input");
+        var editIcon = row.find(".fa-solid.fa-floppy-disk");
 
+        inputs.each(function () {
+            $(this).prop("readonly", !$(this).prop("readonly"));
+        });
+
+        if (editIcon.length > 0) {
+            editIcon.removeClass("fa-solid fa-floppy-disk").addClass("fa fa-pen");
+        } else {
+            editIcon = row.find(".fa fa-pen");
+            editIcon.removeClass("fa fa-pen").addClass("fa-solid fa-floppy-disk");
+        }
+    });
     // Remove row when delete btn is clicked
-    $(".table-Articler").on("click", "#deleteRow", function (event) {
+    $(".table-Articler").on("click", ".deleteRow", function (event) {
         $(this).closest("tr").remove();
         counter -= 1
     });
 });
-  </script>
-  <script type="text/javascript">
-    $('.create-budget-table-btn').on('click', function(e) {
-      e.preventDefault();
-      $('.budget-table').show();
-      $('.budget-account-manger').hide();
-    });
 
-    $('.create-budget-account-manger').on('click', function(e) {
-      e.preventDefault();
-      $('.budget-account-manger-table').show();
-      $('.budget-active').hide();
+
+$(".add_note").on("click", function (event) {
+      event.preventDefault();
+        var newRow = `
+        <div class="form-row my-4">
+                      <div class="col-md-10 col-12">
+                        <div>
+                          <label>Note</label>
+                        </div>
+                        <div>
+                          <textarea class="form-control" placeholder="Enter your Note" rows="2"></textarea>
+                        </div>
+                      </div>
+                      <div class="col-md-2 col-12">
+                        <div>
+                          <label>Attachment</label>
+                        </div>
+                        <div class="file-container-input">
+                          <button type="button" class="file-button" onclick="openFile(this)">
+                            <span>Attach File</span>
+                            <img src="../img//icons/upload.svg" alt="">
+                          </button>
+                          <input type="file" class="file-input d-none" id="attachment">
+                        </div>
+                      </div>
+                    </div>
+        `;
+        $(".row-note").append(newRow);
     });
-    // budget-active
   </script>
 </body>
 

@@ -1202,20 +1202,17 @@
                                             <td class="style-td">
                                               4
                                             </td>
-                                            <td class="style-td">
-                                              <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom"  data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
-                                                <img src="../images/client-image.svg" class="image-actions" />
-                                              </button>
+                                            <td  class="style-td">
+                                              <button type="button" class="btn btn-secondary dataTableButtons" data-bs-toggle="modal" data-bs-target="#exampleModalCenter" ><img src="../images/client-image.svg" class="image-actions"></button>
                                               <div class="tooltip-left btn btn-secondary dataTableButtons">
                                                 <img src="../images/client-person.svg" class="image-actions" />
                                                 <span class="tooltiptext">Tooltip text</span>
-                                              </div>
+                                              </div>                                    
                                               <button type="button" class="btn btn-secondary dataTableButtons edite-save"><i class="fa fa-pen"></i> </button>
-                                              <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
-                                                <i class="fa fa-trash"></i>
-                                              </button>
+                                              <button type="button" class="btn btn-secondary dataTableButtons deleteRow"><i class="fa fa-trash"></i></button>
                                             </td>
                                           </tr>
+
                                         </tbody>
                                       </table>
                                     </div>
@@ -1323,19 +1320,14 @@
                                             <td class="style-td">
                                               4
                                             </td>
-                                            <td class="style-td">
-                                              <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom"  data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
-                                                <img src="../images/client-image.svg" class="image-actions" />
-                                              </button>
+                                            <td  class="style-td">
+                                              <button type="button" class="btn btn-secondary dataTableButtons" data-bs-toggle="modal" data-bs-target="#exampleModalCenter" ><img src="../images/client-image.svg" class="image-actions"></button>
                                               <div class="tooltip-left btn btn-secondary dataTableButtons">
                                                 <img src="../images/client-person.svg" class="image-actions" />
                                                 <span class="tooltiptext">Tooltip text</span>
-                                              </div>
+                                              </div>                                    
                                               <button type="button" class="btn btn-secondary dataTableButtons edite-save"><i class="fa fa-pen"></i> </button>
-                                              <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
-                                                <i class="fa fa-trash"></i>
-                                              </button>
-                                            </td>
+                                              <button type="button" class="btn btn-secondary dataTableButtons deleteRow"><i class="fa fa-trash"></i></button></td>
                                           </tr>
                                         </tbody>
                                       </table>
@@ -1844,7 +1836,7 @@
         cols += '<td style="width:10%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
         cols += '<td style="width:10%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
         cols += '<td style="width:10%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
-        cols += '<td  class="style-td"><button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" data-bs-toggle="modal" data-bs-target="#exampleModalCenter" data-bs-original-title="" title=""><img src="../images/client-image.svg" class="image-actions"></button><button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom"><img src="../images/client-person.svg" class="image-actions"></button><button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" id="deleteRow" title="" data-bs-original-title="Tooltip on bottom"><i class="fa fa-trash"></i></button></td>';
+        cols += '<td  class="style-td"> <button type="button" class="btn btn-secondary dataTableButtons" data-bs-toggle="modal" data-bs-target="#exampleModalCenter" ><img src="../images/client-image.svg" class="image-actions"></button> <div class="tooltip-left btn btn-secondary dataTableButtons"> <img src="../images/client-person.svg" class="image-actions" /> <span class="tooltiptext">Tooltip text</span> </div> <button type="button" class="btn btn-secondary dataTableButtons edite-save"><i class="fa-solid fa-floppy-disk"></i> </button> <button type="button" class="btn btn-secondary dataTableButtons deleteRow"><i class="fa fa-trash"></i></button></td> </tr>';
 
         // cols += '<td><button class="btn btn-danger rounded-0" id ="deleteRow"><i class="fa fa-trash"></i></button</td>';
 
@@ -1888,7 +1880,7 @@
         cols += '<td style="width:7%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
         cols += '<td style="width:7%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
         cols += '<td style="width:7%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
-        cols += '<td  class="style-td"><button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" data-bs-toggle="modal" data-bs-target="#exampleModalCenter" data-bs-original-title="" title=""><img src="../images/client-image.svg" class="image-actions"></button><button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom"><img src="../images/client-person.svg" class="image-actions"></button><button type="button" class="btn btn-secondary dataTableButtons edite-save"><i class="fa-solid fa-floppy-disk"></i> </button><button type="button" class="btn btn-secondary dataTableButtons deleteRow"><i class="fa fa-trash"></i></button></td>';
+        cols += '<td  class="style-td"> <button type="button" class="btn btn-secondary dataTableButtons" data-bs-toggle="modal" data-bs-target="#exampleModalCenter" ><img src="../images/client-image.svg" class="image-actions"></button> <div class="tooltip-left btn btn-secondary dataTableButtons"> <img src="../images/client-person.svg" class="image-actions" /> <span class="tooltiptext">Tooltip text</span> </div> <button type="button" class="btn btn-secondary dataTableButtons edite-save"><i class="fa-solid fa-floppy-disk"></i> </button> <button type="button" class="btn btn-secondary dataTableButtons deleteRow"><i class="fa fa-trash"></i></button></td> </tr>';
 
         // cols += '<td><button class="btn btn-danger rounded-0" id ="deleteRow"><i class="fa fa-trash"></i></button</td>';
 
@@ -1950,7 +1942,7 @@
         cols += '<td style="width:7%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
         cols += '<td style="width:7%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
         cols += '<td style="width:7%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
-        cols += '<td  class="style-td"><button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" data-bs-toggle="modal" data-bs-target="#exampleModalCenter" data-bs-original-title="" title=""><img src="../images/client-image.svg" class="image-actions"></button><button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom"><img src="../images/client-person.svg" class="image-actions"></button><button type="button" class="btn btn-secondary dataTableButtons edite-save"><i class="fa-solid fa-floppy-disk"></i> </button><button type="button" class="btn btn-secondary dataTableButtons deleteRow"><i class="fa fa-trash"></i></button></td>';
+        cols += '<td  class="style-td"> <button type="button" class="btn btn-secondary dataTableButtons" data-bs-toggle="modal" data-bs-target="#exampleModalCenter" ><img src="../images/client-image.svg" class="image-actions"></button> <div class="tooltip-left btn btn-secondary dataTableButtons"> <img src="../images/client-person.svg" class="image-actions" /> <span class="tooltiptext">Tooltip text</span> </div> <button type="button" class="btn btn-secondary dataTableButtons edite-save"><i class="fa-solid fa-floppy-disk"></i> </button> <button type="button" class="btn btn-secondary dataTableButtons deleteRow"><i class="fa fa-trash"></i></button></td> </tr>';
 
         // cols += '<td><button class="btn btn-danger rounded-0" id ="deleteRow"><i class="fa fa-trash"></i></button</td>';
 
@@ -2122,3 +2114,20 @@
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

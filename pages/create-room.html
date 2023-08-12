@@ -756,6 +756,13 @@
                 </div>
                 <div class="container-fluid content-form bg-light mt-4">
                   <div class="mx-4 py-4 border-radius-20" style="background: #e8e8e8;">
+                    <div class="text-right mx-4"> 
+                      <a href="#" class="btn btn-primary create-bArticle Detailstn add_Internal_not ">
+                      <i class="bi bi-plus-circle-fill"></i>
+                     Add Note
+                   </a>
+                  </div>
+                  <div class=" py-4 border-radius-20" style="background: #e8e8e8;">
                     <div class="form-row px-4">
                       <div class="col-md-10 col-12">
                         <div>
@@ -778,10 +785,18 @@
                         </div>
                       </div>
                     </div>
+                    <div class="row-note-Internal mx-4"></div>
                   </div>
                 </div>
                 <div class="container-fluid content-form bg-light mt-4">
-                  <div class="mx-4 py-4 border-radius-20" style="background: #e8e8e8;">
+                  <div class=" py-4 border-radius-20" style="background: #e8e8e8;">
+                    <div class="mx-4 py-4 border-radius-20" style="background: #e8e8e8;">
+                      <div class="text-right mx-4"> 
+                        <a href="#" class="btn btn-primary create-bArticle Detailstn add_External_not ">
+                        <i class="bi bi-plus-circle-fill"></i>
+                       Add Note
+                     </a>
+                    </div>
                     <div class="form-row px-4">
                       <div class="col-md-10 col-12">
                         <div>
@@ -804,10 +819,18 @@
                         </div>
                       </div>
                     </div>
+                    <div class="row-note-External mx-4"></div>
                   </div>
                 </div>
-                <div class="container-fluid content-form bg-light mt-4">
-                  <div class="mx-4 py-4 border-radius-20" style="background: #e8e8e8;">
+                <div class="container-fluid content-form bg-light px-0 mt-4">
+                  <div class=" py-4 border-radius-20" style="background: #e8e8e8;">
+                    <div class="mx-4 py-4 border-radius-20" style="background: #e8e8e8;">
+                      <div class="text-right mx-4"> 
+                        <a href="#" class="btn btn-primary create-bArticle Detailstn add_Technincal_not ">
+                        <i class="bi bi-plus-circle-fill"></i>
+                       Add Note
+                     </a>
+                    </div>
                     <div class="form-row px-4">
                       <div class="col-md-10 col-12">
                         <div>
@@ -830,17 +853,18 @@
                         </div>
                       </div>
                     </div>
+                    <div class="row-note-Technincal mx-4"></div>
                   </div>
                 </div>
-
-                <div class="container-fluid content-form bg-light budget-table">
-                  <div class="px-4">
+              </div>
+                <div class="container-fluid content-form bg-light budget-table px-0 mt-4">
+                  <div class="px-0">
                     <div class="d-flex justify-content-between">
                       <div class="py-2 d-flex justify-content-start align-items-center flex-column-responsive">
                         <h4 class="py-2">Budget</h4>
                       </div>
                       <div class="d-flex justify-content-start align-items-center">
-                        <a href="#" class="btn btn-primary create-btn add_new_category ">
+                        <a href="#" class="btn btn-primary create-btn add_new_Budget ">
                           <i class="bi bi-plus-circle-fill"></i>
                           Add new category
                        </a>
@@ -848,7 +872,7 @@
                     </div>
                     <div class="table-responsive bg-light mt-4 border-radius-20 shadow">
                           <div class="secondTableContainer">
-                            <table class="table " id="myTable">
+                            <table class="table table-Budget" id="myTable">
                               <thead>
                                 <tr class="tr" >
                                   <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
@@ -924,18 +948,14 @@
                                   <td class="style-td">
                                     4
                                   </td>
-                                  <td class="style-td">
-                                    <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom"  data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
-                                      <img src="../images/client-image.svg" class="image-actions" />
-                                    </button>
+                                  <td  class="style-td">
+                                    <button type="button" class="btn btn-secondary dataTableButtons" data-bs-toggle="modal" data-bs-target="#exampleModalCenter" ><img src="../images/client-image.svg" class="image-actions"></button>
                                     <div class="tooltip-left btn btn-secondary dataTableButtons">
                                       <img src="../images/client-person.svg" class="image-actions" />
                                       <span class="tooltiptext">Tooltip text</span>
-                                    </div>
-                                    <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
-                                      <i class="fa fa-trash"></i>
-                                    </button>
-                                  </td>
+                                    </div>                                    
+                                    <button type="button" class="btn btn-secondary dataTableButtons edite-save"><i class="fa fa-pen"></i> </button>
+                                    <button type="button" class="btn btn-secondary dataTableButtons deleteRow"><i class="fa fa-trash"></i></button></td>
                                 </tr>
                               </tbody>
                             </table>
@@ -1004,7 +1024,7 @@
     // Start counting from the third row
     var counter = 1;
 
-    $(".add_new_category").on("click", function (event) {
+    $(".add_new_Budget").on("click", function (event) {
         event.preventDefault();
 
         var newRow = $('<tr class="tr style-table-my1 tr-active">');
@@ -1018,7 +1038,7 @@
         cols += '<td style="width:10%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
         cols += '<td style="width:10%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
         cols += '<td style="width:10%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
-        cols += '<td  class="style-td"><button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom"  data-bs-toggle="modal" data-bs-target="#exampleModalCenter"> <img src="../images/client-image.svg" class="image-actions" /> </button> <div class="tooltip-left btn btn-secondary dataTableButtons"> <img src="../images/client-person.svg" class="image-actions" /> <span class="tooltiptext">Tooltip text</span> </div> <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom"> <i class="fa fa-trash"></i> </button></td>';
+        cols += '<td  class="style-td"><button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" data-bs-toggle="modal" data-bs-target="#exampleModalCenter" data-bs-original-title="" title=""><img src="../images/client-image.svg" class="image-actions"></button><button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom"><img src="../images/client-person.svg" class="image-actions"></button><button type="button" class="btn btn-secondary dataTableButtons edite-save"><i class="fa-solid fa-floppy-disk"></i> </button><button type="button" class="btn btn-secondary dataTableButtons deleteRow"><i class="fa fa-trash"></i></button></td>';
 
 
         // cols += '<td><button class="btn btn-danger rounded-0" id ="deleteRow"><i class="fa fa-trash"></i></button</td>';
@@ -1027,14 +1047,31 @@
         newRow.append(cols);
 
         // Insert the row inside a table
-        $("table").append(newRow);
+        $(".table-Budget").append(newRow);
 
         // Increase counter after each row insertion
         counter++;
     });
+    
+    $(".table-Budget").on("click", ".edite-save", function (event) {
+        var row = $(this).closest("tr");
+        var inputs = row.find("input");
+        var editIcon = row.find(".fa-solid.fa-floppy-disk");
+
+        inputs.each(function () {
+            $(this).prop("readonly", !$(this).prop("readonly"));
+        });
+
+        if (editIcon.length > 0) {
+            editIcon.removeClass("fa-solid fa-floppy-disk").addClass("fa fa-pen");
+        } else {
+            editIcon = row.find(".fa fa-pen");
+            editIcon.removeClass("fa fa-pen").addClass("fa-solid fa-floppy-disk");
+        }
+    });
 
     // Remove row when delete btn is clicked
-    $("table").on("click", "#deleteRow", function (event) {
+    $(".table-Budget").on("click", ".deleteRow", function (event) {
         $(this).closest("tr").remove();
         counter -= 1
     });
@@ -1053,6 +1090,95 @@
       $('.budget-active').hide();
     });
     // budget-active
+
+
+
+
+    
+    $(".add_Internal_not").on("click", function (event) {
+      event.preventDefault();
+        var newRow = `
+        <div class="form-row my-4">
+                      <div class="col-md-10 col-12">
+                        <div>
+                          <label>Note</label>
+                        </div>
+                        <div>
+                          <textarea class="form-control" placeholder="Enter your Note" rows="2"></textarea>
+                        </div>
+                      </div>
+                      <div class="col-md-2 col-12">
+                        <div>
+                          <label>Attachment</label>
+                        </div>
+                        <div class="file-container-input">
+                          <button type="button" class="file-button" onclick="openFile(this)">
+                            <span>Attach File</span>
+                            <img src="../img//icons/upload.svg" alt="">
+                          </button>
+                          <input type="file" class="file-input d-none" id="attachment">
+                        </div>
+                      </div>
+                    </div>
+        `;
+        $(".row-note-Internal").append(newRow);
+    });
+    $(".add_External_not").on("click", function (event) {
+      event.preventDefault();
+        var newRow = `
+        <div class="form-row my-4">
+                      <div class="col-md-10 col-12">
+                        <div>
+                          <label>Note</label>
+                        </div>
+                        <div>
+                          <textarea class="form-control" placeholder="Enter your Note" rows="2"></textarea>
+                        </div>
+                      </div>
+                      <div class="col-md-2 col-12">
+                        <div>
+                          <label>Attachment</label>
+                        </div>
+                        <div class="file-container-input">
+                          <button type="button" class="file-button" onclick="openFile(this)">
+                            <span>Attach File</span>
+                            <img src="../img//icons/upload.svg" alt="">
+                          </button>
+                          <input type="file" class="file-input d-none" id="attachment">
+                        </div>
+                      </div>
+                    </div>
+        `;
+        $(".row-note-External").append(newRow);
+    });
+    $(".add_Technincal_not").on("click", function (event) {
+      event.preventDefault();
+        var newRow = `
+        <div class="form-row my-4">
+                      <div class="col-md-10 col-12">
+                        <div>
+                          <label>Note</label>
+                        </div>
+                        <div>
+                          <textarea class="form-control" placeholder="Enter your Note" rows="2"></textarea>
+                        </div>
+                      </div>
+                      <div class="col-md-2 col-12">
+                        <div>
+                          <label>Attachment</label>
+                        </div>
+                        <div class="file-container-input">
+                          <button type="button" class="file-button" onclick="openFile(this)">
+                            <span>Attach File</span>
+                            <img src="../img//icons/upload.svg" alt="">
+                          </button>
+                          <input type="file" class="file-input d-none" id="attachment">
+                        </div>
+                      </div>
+                    </div>
+        `;
+        $(".row-note-Technincal").append(newRow);
+    });
   </script>
 </body>
 

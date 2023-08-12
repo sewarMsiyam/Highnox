@@ -77,7 +77,7 @@
             </div>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link display-menu">
+            <a href="#" class="nav-link active display-menu">
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 16">
                 <path id="Icon_color" data-name="Icon color"
                   d="M18,16H2a2,2,0,0,1-2-2V2A2,2,0,0,1,2,0H18a2,2,0,0,1,2,2V14A2,2,0,0,1,18,16ZM2,4V14H18V4Z"
@@ -87,12 +87,12 @@
                 <span class="">Contract</span><i class="fa-solid fa-angle-right sidebar-arrow-down"></i>
               </div>
             </a>
-            <div class="toggle-display">
+            <div class="toggle-display display-toggle-menu">
               <a href="manage-contract.html" class="nav-link">
                 <i class="fa-solid fa-circle"></i>
                 <span class="">Mange contract</span>
               </a>
-              <a href="create-new-contract-1.html" class="nav-link">
+              <a href="create-new-contract-1.html" class="nav-link active">
                 <i class="fa-solid fa-circle"></i>
                 <span class="">Create New contract</span>
               </a>
@@ -548,7 +548,7 @@
             <div class="tab-content" id="myTabContent">
                 <!-- Main dashboard Start -->
                 <div class="tab-pane fade show active" id="Main" role="tabpanel" aria-labelledby="Main-tab">
-                    <div class="d-flex flex-column mb-3 justify-content-evenly p-5">
+                    <div class="d-flex flex-column mb-3 justify-content-evenly p-5 ">
                         <h3 class="investment-container-title">Investment International LTD</h3>
                         <div class="investment-sub-container">
                             <div class="investment-cards-container">
@@ -809,15 +809,28 @@
                                 <div class="row-note"></div>
                               </form>
                             </div>
-                            <div class="container-fluid py-4 d-flex justify-content-end">
-                                  <div class="col-md-4 col-12 text-right">
-                                    <button class="btn btn-primary  cancel-btn" type="submit">
-                                    Cancel
-                                    </button>
-                                      <button class="btn btn-primary submit-btn" type="submit">
-                                      Save
-                                    </button>                        
+                            <div class="container-fluid py-4 d-flex justify-content-end print-dropdown">
+                              <div class="offers-btn d-flex justify-content-center flex-wrap justify-content-md-end" style="gap: 1rem;">
+                                <button class="btn btn-primary  cancel-btn"> Cancel </button>
+                                <button class="btn btn-primary submit-btn">  Save  </button>
+                                
+                                  <div class="ui inline dropdown h-100  cancel-btn text-dark" tabindex="0">
+                                    <div class="text">
+                                      Printout
+                                    </div>
+                                    <i class="dropdown icon"></i>
+                                    <div class="menu w-100" tabindex="-1">
+                                      <div class="item" data-bs-toggle="modal" data-bs-target="#pdfModal">
+                                        Print pdf
+                                      </div>
+                                      <div class="item" data-bs-toggle="modal" data-bs-target="#EmailModal">
+                                        Email
+                                      </div>
+                                    </div>
                                   </div>
+                                <button class="btn btn-primary submit-btn" type="submit" style="margin-left: 10px; border-top-left-radius: none !important;  border-bottom-left-radius: none !important;">Send </button>
+                                <button class="btn btn-primary submit-btn" type="submit"> Create Invoice </button>
+                                </div>
                             </div>
                           </div>
                         </div>
@@ -1034,7 +1047,7 @@
                                                   </th>
                                                   <th onclick="sortTable(9, 'myTable')" class="style-th">
                                                     <div>
-                                                      <span>Delete List</span><span><img src="../images/sort-ic.svg"></span>
+                                                      
                                                     </div>
                                                   </th>
                                                 </tr>
@@ -1069,9 +1082,8 @@
                                                     3
                                                   </td>
                                                   <td class="style-td">
-                                                    <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
-                                                    <i class="fa fa-trash"></i>
-                                                    </button>
+                                                    <button type="button" class="btn btn-secondary dataTableButtons edite-save"><i class="fa fa-pen"></i> </button>
+                                              <button type="button" class="btn btn-secondary dataTableButtons deleteRow"><i class="fa fa-trash"></i></button>
                                                   </td>
                                                 </tr>
                                               </tbody>
@@ -1122,7 +1134,7 @@
                                       
                                       <div class="d-flex justify-content-start align-items-center">
                                         <div class="py-2 mx-4 d-flex justify-content-start align-items-center flex-column-responsive">
-                                          <div class="form-check form-switch col-12-responsive">
+                                          <div class="form-check form-switch col-12-responsive ">
                                             <label class="switch">
                                               <input type="checkbox">
                                               <span class="slider round"></span>
@@ -1179,7 +1191,6 @@
                                                   </th>
                                                   <th onclick="sortTable(7, 'myTable')" class="style-th">
                                                     <div>
-                                                      <span>Delete List</span><span><img src="../images/sort-ic.svg"></span>
                                                     </div>
                                                   </th>
                                                 </tr>
@@ -1208,9 +1219,8 @@
                                                     25-08-2023
                                                   </td>
                                                   <td class="style-td">
-                                                    <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
-                                                    <i class="fa fa-trash"></i>
-                                                    </button>
+                                                    <button type="button" class="btn btn-secondary dataTableButtons edite-save"><i class="fa fa-pen"></i> </button>
+                                                    <button type="button" class="btn btn-secondary dataTableButtons deleteRow"><i class="fa fa-trash"></i></button>
                                                   </td>
                                                 </tr>
                                               </tbody>
@@ -1239,7 +1249,9 @@
                             </div>
                             <!-- end new row -->
 
-
+                            <div class="container-fluid content-form bg-light mt-4 px-0" >
+                            <div class="py-4 border-radius-20" style="background: #e8e8e8;">
+                            
                               <div class="px-4">
                                 <div class="d-flex justify-content-between">
                                   <div class="py-2 d-flex justify-content-start align-items-center flex-column-responsive">
@@ -1294,6 +1306,8 @@
                                                   src="../images/sort-ic.svg" /></span>
                                                 </div>
                                               </th>
+                                              <th onclick="sortTable(5, 'myTable')" class="style-th">
+                                              <div></div></th>
                                             </tr>
                                           </thead>
                                           <tbody>
@@ -1316,12 +1330,17 @@
                                               <td class="style-td">
                                                 stockholm
                                               </td>
+                                              <td class="style-td">
+                                                <button type="button" class="btn btn-secondary dataTableButtons edite-save"><i class="fa fa-pen"></i> </button>
+                                                <button type="button" class="btn btn-secondary dataTableButtons deleteRow"><i class="fa fa-trash"></i></button>
+                                              </td>
                                             </tr>
                                           </tbody>
                                         </table>
                                       </div>
                                     </div>
                               </div>
+                            </div></div>
                           <!-- end add row 2 -->
 
                            <!-- add new row -->
@@ -1365,6 +1384,9 @@
                                                       <span>End Date</span><span><img src="../images/sort-ic.svg"></span>
                                                     </div>
                                                   </th>
+                                                  <th>
+                                                    <div></div>
+                                                  </th>
                                                   
                                                 </tr>
                                               </thead>
@@ -1381,6 +1403,10 @@
                                                   </td>
                                                   <td class="style-td">
                                                     25-08-2023
+                                                  </td>
+                                                  <td class="style-td">
+                                                    <button type="button" class="btn btn-secondary dataTableButtons edite-save"><i class="fa fa-pen"></i> </button>
+                                                    <button type="button" class="btn btn-secondary dataTableButtons deleteRow"><i class="fa fa-trash"></i></button>
                                                   </td>
                                                 </tr>
                                               </tbody>
@@ -1420,15 +1446,28 @@
                                 </div>
                               </form>
                             </div>
-                            <div class="container-fluid py-4 d-flex justify-content-end">
-                                  <div class="col-md-4 col-12 text-right">
-                                    <button class="btn btn-primary  cancel-btn" type="submit">
-                                    Cancel
-                                    </button>
-                                      <button class="btn btn-primary submit-btn" type="submit">
-                                      Save
-                                    </button>                        
+                            <div class="container-fluid py-4 d-flex justify-content-end print-dropdown">
+                              <div class="offers-btn d-flex justify-content-center flex-wrap justify-content-md-end" style="gap: 1rem;">
+                                <button class="btn btn-primary  cancel-btn"> Cancel </button>
+                                <button class="btn btn-primary submit-btn">  Save  </button>
+                                
+                                  <div class="ui inline dropdown h-100  cancel-btn text-dark" tabindex="0">
+                                    <div class="text">
+                                      Printout
+                                    </div>
+                                    <i class="dropdown icon"></i>
+                                    <div class="menu w-100" tabindex="-1">
+                                      <div class="item" data-bs-toggle="modal" data-bs-target="#pdfModal">
+                                        Print pdf
+                                      </div>
+                                      <div class="item" data-bs-toggle="modal" data-bs-target="#EmailModal">
+                                        Email
+                                      </div>
+                                    </div>
                                   </div>
+                                <button class="btn btn-primary submit-btn" type="submit" style="margin-left: 10px; border-top-left-radius: none !important;  border-bottom-left-radius: none !important;">Send </button>
+                                <button class="btn btn-primary submit-btn" type="submit"> Create Invoice </button>
+                                </div>
                             </div>
                           </div>
                         </div>
@@ -1436,6 +1475,7 @@
                     <!-- end rental details -->
                         
                     </div>
+                    
             </div>
           
             <div class="tab-pane fade" id="Offers" role="tabpanel" aria-labelledby="Offers-tab">
@@ -1535,6 +1575,7 @@
                                       <input type="text" class="form-control" placeholder="joe moner">
                                     </div>
                                   </div>
+                                </div>
                                   <div class="form-row my-4">
                                 <div class="col-md-3 col-6">
                                     <div>
@@ -1556,7 +1597,7 @@
                                         </select>
                                       </div>
                                     </div>
-                                    <div class="col-md-4 col-6">
+                                    <div class="col-md-3 col-6">
                                     <div>
                                       <label>Reminder For Termination Control  </label>
                                     </div>
@@ -1577,18 +1618,30 @@
                                       </div>
                                     </div>
                                 </div>
-                                </div>
                               </form>
                             </div>
-                            <div class="container-fluid py-4 d-flex justify-content-end">
-                                  <div class="col-md-4 col-12 text-right">
-                                    <button class="btn btn-primary  cancel-btn" type="submit">
-                                    Cancel
-                                    </button>
-                                      <button class="btn btn-primary submit-btn" type="submit">
-                                      Save
-                                    </button>                        
+                            <div class="container-fluid py-4 d-flex justify-content-end print-dropdown">
+                              <div class="offers-btn d-flex justify-content-center flex-wrap justify-content-md-end" style="gap: 1rem;">
+                                <button class="btn btn-primary  cancel-btn"> Cancel </button>
+                                <button class="btn btn-primary submit-btn">  Save  </button>
+                                
+                                  <div class="ui inline dropdown h-100  cancel-btn text-dark" tabindex="0">
+                                    <div class="text">
+                                      Printout
+                                    </div>
+                                    <i class="dropdown icon"></i>
+                                    <div class="menu w-100" tabindex="-1">
+                                      <div class="item" data-bs-toggle="modal" data-bs-target="#pdfModal">
+                                        Print pdf
+                                      </div>
+                                      <div class="item" data-bs-toggle="modal" data-bs-target="#EmailModal">
+                                        Email
+                                      </div>
+                                    </div>
                                   </div>
+                                <button class="btn btn-primary submit-btn" type="submit" style="margin-left: 10px; border-top-left-radius: none !important;  border-bottom-left-radius: none !important;">Send </button>
+                                <button class="btn btn-primary submit-btn" type="submit"> Create Invoice </button>
+                                </div>
                             </div>
                           </div>
                             
@@ -1771,6 +1824,30 @@
                                   </div>
                                 </div>
                               </form>
+                              
+                            </div>
+                            <div class="container-fluid py-4 d-flex justify-content-end print-dropdown">
+                              <div class="offers-btn d-flex justify-content-center flex-wrap justify-content-md-end" style="gap: 1rem;">
+                                <button class="btn btn-primary  cancel-btn"> Cancel </button>
+                                <button class="btn btn-primary submit-btn">  Save  </button>
+                                
+                                  <div class="ui inline dropdown h-100  cancel-btn text-dark" tabindex="0">
+                                    <div class="text">
+                                      Printout
+                                    </div>
+                                    <i class="dropdown icon"></i>
+                                    <div class="menu w-100" tabindex="-1">
+                                      <div class="item" data-bs-toggle="modal" data-bs-target="#pdfModal">
+                                        Print pdf
+                                      </div>
+                                      <div class="item" data-bs-toggle="modal" data-bs-target="#EmailModal">
+                                        Email
+                                      </div>
+                                    </div>
+                                  </div>
+                                <button class="btn btn-primary submit-btn" type="submit" style="margin-left: 10px; border-top-left-radius: none !important;  border-bottom-left-radius: none !important;">Send </button>
+                                <button class="btn btn-primary submit-btn" type="submit"> Create Invoice </button>
+                                </div>
                             </div>
                           </div>
                         </div>
@@ -1978,8 +2055,8 @@
                                     <div class="d-flex justify-content-between">
                                         <h4 class="d-flex align-items-center m-0">indextion table</h4>
                                       
-                                      <div class="d-flex justify-content-start align-items-center mx-3">
-                                        <div class="form-check form-switch col-12-responsive">
+                                      <div class="d-flex justify-content-start align-items-center ">
+                                        <div class="form-check form-switch col-12-responsive mx-3">
                                           <label class="switch">
                                               <input type="checkbox">
                                               <span class="slider round"></span>
@@ -2021,7 +2098,6 @@
                                                   </th>
                                                   <th onclick="sortTable(4, 'myTable')" class="style-th">
                                                     <div>
-                                                      <span>Delete list</span><span><img src="../images/sort-ic.svg"></span>
                                                     </div>
                                                   </th>
                                                 </tr>
@@ -2046,9 +2122,8 @@
                                                     </div>
                                                   </td>
                                                   <td class="style-td">
-                                                    <button id="deleteRow" type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
-                                                    <i class="fa fa-trash"></i>
-                                                    </button>
+                                                    <button type="button" class="btn btn-secondary dataTableButtons edite-save"><i class="fa fa-pen"></i> </button>
+                                                    <button type="button" class="btn btn-secondary dataTableButtons deleteRow"><i class="fa fa-trash"></i></button>
                                                   </td>
                                                 </tr>
                                               </tbody>
@@ -2086,7 +2161,29 @@
                                 </div>
                               </form>
                             </div>
-                    
+                            <div class="container-fluid py-4 d-flex justify-content-end print-dropdown">
+                              <div class="offers-btn d-flex justify-content-center flex-wrap justify-content-md-end" style="gap: 1rem;">
+                                <button class="btn btn-primary  cancel-btn"> Cancel </button>
+                                <button class="btn btn-primary submit-btn">  Save  </button>
+                                
+                                  <div class="ui inline dropdown h-100  cancel-btn text-dark" tabindex="0">
+                                    <div class="text">
+                                      Printout
+                                    </div>
+                                    <i class="dropdown icon"></i>
+                                    <div class="menu w-100" tabindex="-1">
+                                      <div class="item" data-bs-toggle="modal" data-bs-target="#pdfModal">
+                                        Print pdf
+                                      </div>
+                                      <div class="item" data-bs-toggle="modal" data-bs-target="#EmailModal">
+                                        Email
+                                      </div>
+                                    </div>
+                                  </div>
+                                <button class="btn btn-primary submit-btn" type="submit" style="margin-left: 10px; border-top-left-radius: none !important;  border-bottom-left-radius: none !important;">Send </button>
+                                <button class="btn btn-primary submit-btn" type="submit"> Create Invoice </button>
+                                </div>
+                            </div>
 
 
                           </div>
@@ -2354,7 +2451,10 @@
                                   
                                 </div>
                               </form>
+                            
                             </div>
+                          </div>
+                          <div class="content-body p-4">
                           <!-- end table -->
                           <div class="py-4 border-radius-20" style="background: #e8e8e8;">
                                 <!-- add new row -->
@@ -2417,7 +2517,7 @@
                                                   </th>
                                                   <th onclick="sortTable(8, 'myTable_new7')" class="style-th">
                                                     <div>
-                                                      <span>Delete List</span><span><img src="../images/sort-ic.svg"></span>
+                                                     
                                                     </div>
                                                   </th>
                                                 </tr>
@@ -2449,9 +2549,8 @@
                                                     15
                                                   </td>
                                                   <td class="style-td">
-                                                    <button id="deleteRow" type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
-                                                    <i class="fa fa-trash"></i>
-                                                    </button>
+                                                    <button type="button" class="btn btn-secondary dataTableButtons edite-save"><i class="fa fa-pen"></i> </button>
+                                                    <button type="button" class="btn btn-secondary dataTableButtons deleteRow"><i class="fa fa-trash"></i></button>
                                                   </td>
                                                 </tr>
                                               </tbody>
@@ -2526,7 +2625,6 @@
                                                   </th>
                                                   <th onclick="sortTable(5, 'myTable_new8')" class="style-th">
                                                     <div>
-                                                      <span>Delete List</span><span><img src="../images/sort-ic.svg"></span>
                                                     </div>
                                                   </th>
                                                 </tr>
@@ -2552,9 +2650,8 @@
                                                     15
                                                   </td>
                                                   <td class="style-td">
-                                                    <button id="deleteRow" type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
-                                                    <i class="fa fa-trash"></i>
-                                                    </button>
+                                                    <button type="button" class="btn btn-secondary dataTableButtons edite-save"><i class="fa fa-pen"></i> </button>
+                                                    <button type="button" class="btn btn-secondary dataTableButtons deleteRow"><i class="fa fa-trash"></i></button>
                                                   </td>
                                                 </tr>
                                               </tbody>
@@ -2612,8 +2709,10 @@
                                               </div>
                                             </div>
                                           </div>
-
-                                    <div class="">
+                                        </div>
+                                      </div>
+                                          <div class="py-4 border-radius-20 mt-4" style="background: #e8e8e8;">
+                                    <div class="px-4">
                                         <div class="d-flex justify-content-between">
                                           <div class="py-2 d-flex justify-content-start align-items-center flex-column-responsive">
                                             <h4 class="py-2">Additional Rent Conditions</h4>
@@ -2667,6 +2766,7 @@
                                                           src="../images/sort-ic.svg" /></span>
                                                         </div>
                                                       </th>
+                                                      <th></th>
                                                     </tr>
                                                   </thead>
                                                   <tbody>
@@ -2689,6 +2789,10 @@
                                                       <td class="style-td">
                                                         stockholm
                                                       </td>
+                                                      <td class="style-td">
+                                                    <button type="button" class="btn btn-secondary dataTableButtons edite-save"><i class="fa fa-pen"></i> </button>
+                                                    <button type="button" class="btn btn-secondary dataTableButtons deleteRow"><i class="fa fa-trash"></i></button>
+                                                  </td>
                                                     </tr>
                                                   </tbody>
                                                 </table>
@@ -2698,7 +2802,6 @@
                                     </div>
                                 <!-- end add new row -->
 
-                              </div>
                               <!-- end ddd -->
 
                               <!-- tyr -->
@@ -2786,7 +2889,8 @@
                                 </div>
                               </form>
                             </div>
-                            <div class="container-fluid content-form py-4 mt-4">
+                            <div class="container-fluid py-4 px-0 mt-4">
+                              <div class="content-form p-4">
                                 <h4>Other Contract Attachment</h4>
                               <form>
                                 <div class="form-row my-4 justify-content-between">
@@ -2827,10 +2931,11 @@
                                 </div>
                               </form>
                             </div>
+                          </div>
                               <!-- tyr -->
                           </div>
                           <div class="container-fluid py-4 d-flex justify-content-end print-dropdown">
-                            <form class="offers-btn d-flex justify-content-center flex-wrap justify-content-md-end" style="gap: 1rem;">
+                            <div class="offers-btn d-flex justify-content-center flex-wrap justify-content-md-end" style="gap: 1rem;">
                               <button class="btn btn-primary  cancel-btn"> Cancel </button>
                               <button class="btn btn-primary submit-btn">  Save  </button>
                               
@@ -2850,15 +2955,10 @@
                                 </div>
                               <button class="btn btn-primary submit-btn" type="submit" style="margin-left: 10px; border-top-left-radius: none !important;  border-bottom-left-radius: none !important;">Send </button>
                               <button class="btn btn-primary submit-btn" type="submit"> Create Invoice </button>
-                            </form>
+                              </div>
                           </div>
                         </div>
-                     <!-- invoice table -->
-
-                        <!-- activities table -->
-                        
-                        <!-- end activites table -->
-                      <!-- end invoice table -->
+                      </div>
               </div>
             </div>
 
@@ -3121,33 +3221,9 @@ aria-hidden="true">
     <script src="../JS/layout.js"></script>
     
 
-    <script>
-      $(document).ready(function(){
-        $("#myInput-invoise").on("keyup", function() {
-          var value = $(this).val().toLowerCase();
-          $("#myInvoiseTable tr").filter(function() {
-            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-          });
-      });
-      });
-      $(document).ready(function(){
-        $("#myInput").on("keyup", function() {
-          var value = $(this).val().toLowerCase();
-          $("#myTable tr").filter(function() {
-            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-          });
-      });
-      });
-    </script>
-
-
 <!-- add row 1 -->
 
 <script type="text/javascript">
-
-    $(document).ready(function() {
-        $('.basicInput').select2();
-    });
 
     $(function () {
 
@@ -3172,7 +3248,7 @@ aria-hidden="true">
         cols += '<td style="width:7%;" class="style-td"><select class="form-control rounded-0"><option>select</option><option>1</option><option>2</option></select></td>';
         cols += '<td style="width:7%;" class="style-td"><select class="form-control rounded-0"><option>select</option><option>1</option><option>2</option></select></td>';
         cols += '<td style="width:7%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
-        cols += '<td style="width:10%;" class="style-td"><button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom"><i class="fa fa-trash"></i></button></td>';
+        cols += '<td style="width:10%;" class="style-td"><button type="button" class="btn btn-secondary dataTableButtons edite-save"><i class="fa-solid fa-floppy-disk"></i> </button> <button type="button" class="btn btn-secondary dataTableButtons deleteRow"><i class="fa fa-trash"></i></button></td>';
 
         // cols += '<td><button class="btn btn-danger rounded-0" id ="deleteRow"><i class="fa fa-trash"></i></button</td>';
 
@@ -3187,9 +3263,25 @@ aria-hidden="true">
     });
 
     // Remove row when delete btn is clicked
-    $("#myTable_new1").on("click", "#deleteRow", function (event) {
+    $("#myTable_new1").on("click", ".deleteRow", function (event) {
         $(this).closest("tr").remove();
         counter -= 1
+    });
+    $("#myTable_new1").on("click", ".edite-save", function (event) {
+        var row = $(this).closest("tr");
+        var inputs = row.find("input");
+        var editIcon = row.find(".fa-solid.fa-floppy-disk");
+
+        inputs.each(function () {
+            $(this).prop("readonly", !$(this).prop("readonly"));
+        });
+
+        if (editIcon.length > 0) {
+            editIcon.removeClass("fa-solid fa-floppy-disk").addClass("fa fa-pen");
+        } else {
+            editIcon = row.find(".fa fa-pen");
+            editIcon.removeClass("fa fa-pen").addClass("fa-solid fa-floppy-disk");
+        }
     });
 });
   </script>
@@ -3220,7 +3312,7 @@ aria-hidden="true">
         cols += '<td style="width:10%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
         cols += '<td style="width:10%;" class="style-td"><input class="form-control rounded-0" type="date" name="handle" placeholder="Handle"></td>';
         cols += '<td style="width:10%;" class="style-td"><input class="form-control rounded-0" type="date" name="handle" placeholder="Handle"></td>';
-        cols += '<td style="width:10%;" class="style-td"><button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom"><i class="fa fa-trash"></i></button></td>';
+        cols += '<td style="width:10%;" class="style-td"><button type="button" class="btn btn-secondary dataTableButtons edite-save"><i class="fa-solid fa-floppy-disk"></i> </button> <button type="button" class="btn btn-secondary dataTableButtons deleteRow"><i class="fa fa-trash"></i></button></td>';
 
 
         // cols += '<td><button class="btn btn-danger rounded-0" id ="deleteRow"><i class="fa fa-trash"></i></button</td>';
@@ -3236,9 +3328,25 @@ aria-hidden="true">
     });
 
     // Remove row when delete btn is clicked
-    $("#myTable_new2").on("click", "#deleteRow", function (event) {
+    $("#myTable_new2").on("click", ".deleteRow", function (event) {
         $(this).closest("tr").remove();
         counter -= 1
+    });
+    $("#myTable_new2").on("click", ".edite-save", function (event) {
+        var row = $(this).closest("tr");
+        var inputs = row.find("input");
+        var editIcon = row.find(".fa-solid.fa-floppy-disk");
+
+        inputs.each(function () {
+            $(this).prop("readonly", !$(this).prop("readonly"));
+        });
+
+        if (editIcon.length > 0) {
+            editIcon.removeClass("fa-solid fa-floppy-disk").addClass("fa fa-pen");
+        } else {
+            editIcon = row.find(".fa fa-pen");
+            editIcon.removeClass("fa fa-pen").addClass("fa-solid fa-floppy-disk");
+        }
     });
 });
   </script>
@@ -3267,7 +3375,8 @@ aria-hidden="true">
         cols += '<td style="width:10%;" class="style-td"><input class="form-control rounded-0" type="text" name="lastname" placeholder="Last name"></td>';
         cols += '<td style="width:7%;" class="style-td"><select class="form-control rounded-0"><option>select</option><option>1</option><option>2</option></select></td>';
         cols += '<td style="width:7%;" class="style-td"><select class="form-control rounded-0"><option>select</option><option>1</option><option>2</option></select></td>';
-        cols += '<td style="width:7%;" class="style-td"><select class="form-control rounded-0"><option>select</option><option>1</option><option>2</option></select></td>';
+        cols += '<td style="width:10%;" class="style-td"><input class="form-control rounded-0" type="text" name="lastname" placeholder="Last name"></td>';
+        cols += '<td style="width:10%;" class="style-td"><button type="button" class="btn btn-secondary dataTableButtons edite-save"><i class="fa-solid fa-floppy-disk"></i> </button> <button type="button" class="btn btn-secondary dataTableButtons deleteRow"><i class="fa fa-trash"></i></button></td>';
 
         // cols += '<td><button class="btn btn-danger rounded-0" id ="deleteRow"><i class="fa fa-trash"></i></button</td>';
 
@@ -3282,9 +3391,25 @@ aria-hidden="true">
     });
 
     // Remove row when delete btn is clicked
-    $("#myTable_new3").on("click", "#deleteRow", function (event) {
+    $("#myTable_new3").on("click", ".deleteRow", function (event) {
         $(this).closest("tr").remove();
         counter -= 1
+    });
+    $("#myTable_new3").on("click", ".edite-save", function (event) {
+        var row = $(this).closest("tr");
+        var inputs = row.find("input");
+        var editIcon = row.find(".fa-solid.fa-floppy-disk");
+
+        inputs.each(function () {
+            $(this).prop("readonly", !$(this).prop("readonly"));
+        });
+
+        if (editIcon.length > 0) {
+            editIcon.removeClass("fa-solid fa-floppy-disk").addClass("fa fa-pen");
+        } else {
+            editIcon = row.find(".fa fa-pen");
+            editIcon.removeClass("fa fa-pen").addClass("fa-solid fa-floppy-disk");
+        }
     });
 });
   </script>
@@ -3312,6 +3437,7 @@ aria-hidden="true">
         cols += '<td style="width:13%;" class="style-td"><select class="form-control rounded-0"><option>select</option><option>1</option><option>2</option></select></td>';
         cols += '<td style="width:13%;" class="style-td"><input class="form-control rounded-0" type="date" name="lastname" placeholder="Last name"></td>';
         cols += '<td style="width:13%;" class="style-td"><input class="form-control rounded-0" type="date" name="handle" placeholder="Handle"></td>';
+        cols += '<td style="width:10%;" class="style-td"><button type="button" class="btn btn-secondary dataTableButtons edite-save"><i class="fa-solid fa-floppy-disk"></i> </button> <button type="button" class="btn btn-secondary dataTableButtons deleteRow"><i class="fa fa-trash"></i></button></td>';
 
         // cols += '<td><button class="btn btn-danger rounded-0" id ="deleteRow"><i class="fa fa-trash"></i></button</td>';
 
@@ -3326,9 +3452,25 @@ aria-hidden="true">
     });
 
     // Remove row when delete btn is clicked
-    $("#myTable_new4").on("click", "#deleteRow", function (event) {
+    $("#myTable_new4").on("click", ".deleteRow", function (event) {
         $(this).closest("tr").remove();
         counter -= 1
+    });
+    $("#myTable_new4").on("click", ".edite-save", function (event) {
+        var row = $(this).closest("tr");
+        var inputs = row.find("input");
+        var editIcon = row.find(".fa-solid.fa-floppy-disk");
+
+        inputs.each(function () {
+            $(this).prop("readonly", !$(this).prop("readonly"));
+        });
+
+        if (editIcon.length > 0) {
+            editIcon.removeClass("fa-solid fa-floppy-disk").addClass("fa fa-pen");
+        } else {
+            editIcon = row.find(".fa fa-pen");
+            editIcon.removeClass("fa fa-pen").addClass("fa-solid fa-floppy-disk");
+        }
     });
 });
   </script>
@@ -3354,7 +3496,7 @@ aria-hidden="true">
         cols += '<td style="width:13%;" class="style-td"><input class="form-control rounded-0" type="date" name="lastname" placeholder="Last name"></td>';
       
         cols += '<td style="width:13%;" class="style-td"><div class="form-check form-switch col-12-responsive"><label class="switch"><input type="checkbox"><span class="slider round"></span></label></div></td>';
-        cols += '<td style="width:10%;" class="style-td"><button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom"><i class="fa fa-trash"></i></button></td>';
+        cols += '<td style="width:10%;" class="style-td"><button type="button" class="btn btn-secondary dataTableButtons edite-save"><i class="fa-solid fa-floppy-disk"></i> </button> <button type="button" class="btn btn-secondary dataTableButtons deleteRow"><i class="fa fa-trash"></i></button></td>';
 
         // cols += '<td><button class="btn btn-danger rounded-0" id ="deleteRow"><i class="fa fa-trash"></i></button</td>';
 
@@ -3372,6 +3514,22 @@ aria-hidden="true">
     $("#myTable_new5").on("click", "#deleteRow", function (event) {
         $(this).closest("tr").remove();
         counter -= 1
+    });
+    $("#myTable_new5").on("click", ".edite-save", function (event) {
+        var row = $(this).closest("tr");
+        var inputs = row.find("input");
+        var editIcon = row.find(".fa-solid.fa-floppy-disk");
+
+        inputs.each(function () {
+            $(this).prop("readonly", !$(this).prop("readonly"));
+        });
+
+        if (editIcon.length > 0) {
+            editIcon.removeClass("fa-solid fa-floppy-disk").addClass("fa fa-pen");
+        } else {
+            editIcon = row.find(".fa fa-pen");
+            editIcon.removeClass("fa fa-pen").addClass("fa-solid fa-floppy-disk");
+        }
     });
     });
   </script>
@@ -3468,7 +3626,7 @@ aria-hidden="true">
         cols += '<td style="width:10%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
         cols += '<td style="width:10%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
         cols += '<td style="width:10%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
-        cols += '<td style="width:10%;" class="style-td"><button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom"><i class="fa fa-trash"></i></button></td>';
+        cols += '<td style="width:10%;" class="style-td"><button type="button" class="btn btn-secondary dataTableButtons edite-save"><i class="fa-solid fa-floppy-disk"></i> </button> <button type="button" class="btn btn-secondary dataTableButtons deleteRow"><i class="fa fa-trash"></i></button></td>';
 
 
         // cols += '<td><button class="btn btn-danger rounded-0" id ="deleteRow"><i class="fa fa-trash"></i></button</td>';
@@ -3484,9 +3642,25 @@ aria-hidden="true">
     });
 
     // Remove row when delete btn is clicked
-    $("#myTable_new7").on("click", "#deleteRow", function (event) {
+    $("#myTable_new7").on("click", ".deleteRow", function (event) {
         $(this).closest("tr").remove();
         counter -= 1
+    });
+    $("#myTable_new7").on("click", ".edite-save", function (event) {
+        var row = $(this).closest("tr");
+        var inputs = row.find("input");
+        var editIcon = row.find(".fa-solid.fa-floppy-disk");
+
+        inputs.each(function () {
+            $(this).prop("readonly", !$(this).prop("readonly"));
+        });
+
+        if (editIcon.length > 0) {
+            editIcon.removeClass("fa-solid fa-floppy-disk").addClass("fa fa-pen");
+        } else {
+            editIcon = row.find(".fa fa-pen");
+            editIcon.removeClass("fa fa-pen").addClass("fa-solid fa-floppy-disk");
+        }
     });
 });
   </script>
@@ -3517,7 +3691,7 @@ aria-hidden="true">
         cols += '<td style="width:10%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
         cols += '<td style="width:10%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
         cols += '<td style="width:10%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
-        cols += '<td style="width:10%;" class="style-td"><button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom"><i class="fa fa-trash"></i></button></td>';
+        cols += '<td style="width:10%;" class="style-td"><button type="button" class="btn btn-secondary dataTableButtons edite-save"><i class="fa-solid fa-floppy-disk"></i> </button> <button type="button" class="btn btn-secondary dataTableButtons deleteRow"><i class="fa fa-trash"></i></button></td>';
 
 
         // cols += '<td><button class="btn btn-danger rounded-0" id ="deleteRow"><i class="fa fa-trash"></i></button</td>';
@@ -3533,9 +3707,25 @@ aria-hidden="true">
     });
 
     // Remove row when delete btn is clicked
-    $("#myTable_new8").on("click", "#deleteRow", function (event) {
+    $("#myTable_new8").on("click", ".deleteRow", function (event) {
         $(this).closest("tr").remove();
         counter -= 1
+    });
+    $("#myTable_new8").on("click", ".edite-save", function (event) {
+        var row = $(this).closest("tr");
+        var inputs = row.find("input");
+        var editIcon = row.find(".fa-solid.fa-floppy-disk");
+
+        inputs.each(function () {
+            $(this).prop("readonly", !$(this).prop("readonly"));
+        });
+
+        if (editIcon.length > 0) {
+            editIcon.removeClass("fa-solid fa-floppy-disk").addClass("fa fa-pen");
+        } else {
+            editIcon = row.find(".fa fa-pen");
+            editIcon.removeClass("fa fa-pen").addClass("fa-solid fa-floppy-disk");
+        }
     });
 });
   </script>
@@ -3566,6 +3756,7 @@ aria-hidden="true">
         cols += '<td style="width:7%;" class="style-td"><select class="form-control rounded-0"><option>select</option><option>1</option><option>2</option></select></td>';
         cols += '<td style="width:7%;" class="style-td"><select class="form-control rounded-0"><option>select</option><option>1</option><option>2</option></select></td>';
         cols += '<td style="width:7%;" class="style-td"><select class="form-control rounded-0"><option>select</option><option>1</option><option>2</option></select></td>';
+        cols += '<td style="width:10%;" class="style-td"><button type="button" class="btn btn-secondary dataTableButtons edite-save"><i class="fa-solid fa-floppy-disk"></i> </button> <button type="button" class="btn btn-secondary dataTableButtons deleteRow"><i class="fa fa-trash"></i></button></td>';
 
         // cols += '<td><button class="btn btn-danger rounded-0" id ="deleteRow"><i class="fa fa-trash"></i></button</td>';
 
@@ -3580,9 +3771,25 @@ aria-hidden="true">
     });
 
     // Remove row when delete btn is clicked
-    $("#myTable_new9").on("click", "#deleteRow", function (event) {
+    $("#myTable_new9").on("click", ".deleteRow", function (event) {
         $(this).closest("tr").remove();
         counter -= 1
+    });
+    $("#myTable_new9").on("click", ".edite-save", function (event) {
+        var row = $(this).closest("tr");
+        var inputs = row.find("input");
+        var editIcon = row.find(".fa-solid.fa-floppy-disk");
+
+        inputs.each(function () {
+            $(this).prop("readonly", !$(this).prop("readonly"));
+        });
+
+        if (editIcon.length > 0) {
+            editIcon.removeClass("fa-solid fa-floppy-disk").addClass("fa fa-pen");
+        } else {
+            editIcon = row.find(".fa fa-pen");
+            editIcon.removeClass("fa fa-pen").addClass("fa-solid fa-floppy-disk");
+        }
     });
 });
 

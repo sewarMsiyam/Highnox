@@ -16,7 +16,7 @@
   <link href="../css/global/bootstrap/bootstrap.min.css" rel="stylesheet">
   <link href="../css/global/bootstrap/bootstrap-select.css" rel="stylesheet">
   <link href="../css/global/swiper/swiper-bundle.min.css" rel="stylesheet">
-
+ 
   <!-- dashboard style -->
   <link href="../css/dashboard/main-dashboard.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="../css/dashboard/style.css">
@@ -612,6 +612,13 @@
                 </div>
                 <div class="container-fluid content-form bg-light mt-4">
                   <div class="mx-4 py-4 border-radius-20" style="background: #e8e8e8;">
+                    <div class="text-right mx-4"> 
+                      <a href="#" class="btn btn-primary create-bArticle Detailstn add_note ">
+                      <i class="bi bi-plus-circle-fill"></i>
+                     Add Note
+                   </a>
+                  </div>
+                  <div class="mx-4 py-4 border-radius-20" style="background: #e8e8e8;">
                     <div class="form-row px-4">
                       <div class="col-md-10 col-12">
                         <div>
@@ -634,17 +641,18 @@
                         </div>
                       </div>
                     </div>
+                    <div class="row-note mx-4"></div>
                   </div>
                 </div>
 
-                <div class="container-fluid content-form bg-light budget-table">
-                  <div class="px-4">
+                <div class="container-fluid content-form bg-light budget-table mt-4">
+                  <div class="px-3">
                     <div class="d-flex justify-content-between">
                       <div class="py-2 d-flex justify-content-start align-items-center flex-column-responsive">
                         <h4 class="py-2">Add Comission By Buildings</h4>
                       </div>
                       <div class="d-flex justify-content-start align-items-center">
-                        <a href="#" class="btn btn-primary create-btn add_new_category ">
+                        <a href="#" class="btn btn-primary create-btn add_new_Buildings ">
                           <i class="bi bi-plus-circle-fill"></i>
                           Add new Comission
                        </a>
@@ -652,7 +660,7 @@
                     </div>
                     <div class="table-responsive bg-light mt-4 border-radius-20 shadow">
                           <div class="secondTableContainer">
-                            <table id="myTable" class="table">
+                            <table id="myTable" class="table table_Buildings">
                               <thead>
                                 <tr class="tr" >
                                   <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
@@ -715,9 +723,6 @@
                                     Sithm University
                                   </td>
                                   <td class="style-td">
-                                    Sithm University
-                                  </td>
-                                  <td class="style-td">
                                     12-3-2020
                                   </td>
                                   <td class="style-td">
@@ -728,6 +733,7 @@
                                       <img src="../images/client-person.svg" class="image-actions" />
                                       <span class="tooltiptext">Tooltip text</span>
                                     </div>
+                                    <button type="button" class="btn btn-secondary dataTableButtons edite-save"><i class="fa fa-pen"></i> </button>
                                     <button type="button" class="btn btn-secondary dataTableButtons" >
                                       <i class="fa fa-trash"></i>
                                     </button>
@@ -772,7 +778,7 @@
     // Start counting from the third row
     var counter = 1;
 
-    $(".add_new_category").on("click", function (event) {
+    $(".add_new_Buildings").on("click", function (event) {
         event.preventDefault();
 
         var newRow = $('<tr class="tr trtabler tr-active">');
@@ -783,10 +789,9 @@
         cols += '<td style="width:13%;" class="style-td"><input class="form-control rounded-0" type="text" name="firstname" placeholder="First name"></td>';
         cols += '<td style="width:13%;" class="style-td"><input class="form-control rounded-0" type="text" name="lastname" placeholder="Last name"></td>';
         cols += '<td style="width:13%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
-        cols += '<td style="width:13%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
-        cols += '<td style="width:13%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
-        cols += '<td style="width:13%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
-        cols += '<td  class="style-td"><div class="tooltip-left btn btn-secondary dataTableButtons"> <img src="../images/client-person.svg" class="image-actions" /> <span class="tooltiptext">Tooltip text</span> </div> <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom"> <i class="fa fa-trash"></i> </button></td>';
+        cols += '<td style="width:13%;" class="style-td"><input class="form-control rounded-0" type="date" name="handle" placeholder="Handle"></td>';
+        cols += '<td style="width:13%;" class="style-td"><input class="form-control rounded-0" type="date" name="handle" placeholder="Handle"></td>';
+        cols += '<td  class="style-td"> <div class="tooltip-left btn btn-secondary dataTableButtons"> <img src="../images/client-person.svg" class="image-actions" /> <span class="tooltiptext">Tooltip text</span> </div> <button type="button" class="btn btn-secondary dataTableButtons edite-save"><i class="fa-solid fa-floppy-disk"></i> </button> <button type="button" class="btn btn-secondary dataTableButtons deleteRow"><i class="fa fa-trash"></i></button></td> </tr>';
 
         // cols += '<td><button class="btn btn-danger rounded-0" id ="deleteRow"><i class="fa fa-trash"></i></button</td>';
 
@@ -794,20 +799,69 @@
         newRow.append(cols);
 
         // Insert the row inside a table
-        $("table").append(newRow);
+        $(".table_Buildings").append(newRow);
 
         // Increase counter after each row insertion
         counter++;
     });
 
     // Remove row when delete btn is clicked
-    $("table").on("click", "#deleteRow", function (event) {
+    $(".table_Buildings").on("click", ".deleteRow", function (event) {
         $(this).closest("tr").remove();
         counter -= 1
+    });
+    $(".table_Buildings").on("click", ".edite-save", function (event) {
+        var row = $(this).closest("tr");
+        var inputs = row.find("input");
+        var editIcon = row.find(".fa-solid.fa-floppy-disk");
+
+        inputs.each(function () {
+            $(this).prop("readonly", !$(this).prop("readonly"));
+        });
+
+        if (editIcon.length > 0) {
+            editIcon.removeClass("fa-solid fa-floppy-disk").addClass("fa fa-pen");
+        } else {
+            editIcon = row.find(".fa fa-pen");
+            editIcon.removeClass("fa fa-pen").addClass("fa-solid fa-floppy-disk");
+        }
     });
 });
   </script>
   <script type="text/javascript">
+
+    
+
+$(".add_note").on("click", function (event) {
+      event.preventDefault();
+        var newRow = `
+        <div class="form-row my-4">
+                      <div class="col-md-10 col-12">
+                        <div>
+                          <label>Note</label>
+                        </div>
+                        <div>
+                          <textarea class="form-control" placeholder="Enter your Note" rows="2"></textarea>
+                        </div>
+                      </div>
+                      <div class="col-md-2 col-12">
+                        <div>
+                          <label>Attachment</label>
+                        </div>
+                        <div class="file-container-input">
+                          <button type="button" class="file-button" onclick="openFile(this)">
+                            <span>Attach File</span>
+                            <img src="../img//icons/upload.svg" alt="">
+                          </button>
+                          <input type="file" class="file-input d-none" id="attachment">
+                        </div>
+                      </div>
+                    </div>
+        `;
+        $(".row-note").append(newRow);
+    });
+
+
     $('.create-budget-table-btn').on('click', function(e) {
       e.preventDefault();
       $('.budget-table').show();

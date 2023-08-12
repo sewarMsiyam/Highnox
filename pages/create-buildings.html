@@ -721,6 +721,12 @@
                 </div>
                 <div class="container-fluid content-form bg-light mt-4">
                   <div class="mx-4 py-4 border-radius-20" style="background: #e8e8e8;">
+                    <div class="text-right mx-4"> 
+                      <a href="#" class="btn btn-primary create-bArticle Detailstn add_note ">
+                      <i class="bi bi-plus-circle-fill"></i>
+                     Add Note
+                   </a>
+                  </div>
                     <div class="form-row px-4">
                       <div class="col-md-10 col-12">
                         <div>
@@ -743,6 +749,7 @@
                         </div>
                       </div>
                     </div>
+                    <div class="row-note mx-4"></div>
                   </div>
                 </div>
 
@@ -753,7 +760,7 @@
                         <h4 class="py-2">Add Floors</h4>
                       </div>
                       <div class="d-flex justify-content-start align-items-center">
-                        <a href="#" class="btn btn-primary create-btn add_new_category ">
+                        <a href="#" class="btn btn-primary create-btn add_new_floor ">
                           <i class="bi bi-plus-circle-fill"></i>
                           Add new Floor
                        </a>
@@ -761,7 +768,7 @@
                     </div>
                     <div class="table-responsive bg-light mt-4 border-radius-20 shadow">
                       <div class="secondTableContainer">
-                        <table class="table " id="myTable">
+                        <table class="table table-floor" id="myTable">
                           <thead>
                               <thead>
                                 <tr class="tr" >
@@ -839,11 +846,12 @@
                                     4
                                   </td>
                                   <td class="style-td">
+                                    <button type="button" class="btn btn-secondary dataTableButtons edite-save"><i class="fa fa-pen"></i> </button>
                                     <div class="tooltip-left btn btn-secondary dataTableButtons">
                                       <img src="../images/client-person.svg" class="image-actions" />
                                       <span class="tooltiptext">Tooltip text</span>
                                     </div>
-                                    <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
+                                    <button type="button" class="btn btn-secondary dataTableButtons" >
                                       <i class="fa fa-trash"></i>
                                     </button>
                                   </td>
@@ -888,7 +896,7 @@
     // Start counting from the third row
     var counter = 1;
 
-    $(".add_new_category").on("click", function (event) {
+    $(".add_new_floor").on("click", function (event) {
         event.preventDefault();
 
         var newRow = $('<tr class="tr trtabler tr-active">');
@@ -902,7 +910,7 @@
         cols += '<td style="width:13%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
         cols += '<td style="width:13%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
         cols += '<td style="width:13%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
-        cols += '<td  class="style-td"><div class="tooltip-left btn btn-secondary dataTableButtons"> <img src="../images/client-person.svg" class="image-actions" /> <span class="tooltiptext">Tooltip text</span> </div> <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom"> <i class="fa fa-trash"></i> </button></td>';
+        cols += '<td class="style-td"> <button type="button" class="btn btn-secondary dataTableButtons edite-save"><i class="fa-solid fa-floppy-disk"></i> </button> <div class="tooltip-left btn btn-secondary dataTableButtons"> <img src="../images/client-person.svg" class="image-actions" /> <span class="tooltiptext">Tooltip text</span> </div> <button type="button" class="btn btn-secondary dataTableButtons" > <i class="fa fa-trash"></i> </button> </td>';
 
         // cols += '<td><button class="btn btn-danger rounded-0" id ="deleteRow"><i class="fa fa-trash"></i></button</td>';
 
@@ -910,32 +918,70 @@
         newRow.append(cols);
 
         // Insert the row inside a table
-        $("table").append(newRow);
+        $(".table-floor").append(newRow);
 
         // Increase counter after each row insertion
         counter++;
     });
 
+    $(".table-floor").on("click", ".edite-save", function (event) {
+        var row = $(this).closest("tr");
+        var inputs = row.find("input");
+        var editIcon = row.find(".fa-solid.fa-floppy-disk");
+
+        inputs.each(function () {
+            $(this).prop("readonly", !$(this).prop("readonly"));
+        });
+
+        if (editIcon.length > 0) {
+            editIcon.removeClass("fa-solid fa-floppy-disk").addClass("fa fa-pen");
+        } else {
+            editIcon = row.find(".fa fa-pen");
+            editIcon.removeClass("fa fa-pen").addClass("fa-solid fa-floppy-disk");
+        }
+    });
+
     // Remove row when delete btn is clicked
-    $("table").on("click", "#deleteRow", function (event) {
+    $(".table-floor").on("click", ".deleteRow", function (event) {
         $(this).closest("tr").remove();
         counter -= 1
     });
 });
   </script>
   <script type="text/javascript">
-    $('.create-budget-table-btn').on('click', function(e) {
-      e.preventDefault();
-      $('.budget-table').show();
-      $('.budget-account-manger').hide();
+
+    
+
+
+$(".add_note").on("click", function (event) {
+      event.preventDefault();
+        var newRow = `
+        <div class="form-row my-4">
+                      <div class="col-md-10 col-12">
+                        <div>
+                          <label>Note</label>
+                        </div>
+                        <div>
+                          <textarea class="form-control" placeholder="Enter your Note" rows="2"></textarea>
+                        </div>
+                      </div>
+                      <div class="col-md-2 col-12">
+                        <div>
+                          <label>Attachment</label>
+                        </div>
+                        <div class="file-container-input">
+                          <button type="button" class="file-button" onclick="openFile(this)">
+                            <span>Attach File</span>
+                            <img src="../img//icons/upload.svg" alt="">
+                          </button>
+                          <input type="file" class="file-input d-none" id="attachment">
+                        </div>
+                      </div>
+                    </div>
+        `;
+        $(".row-note").append(newRow);
     });
 
-    $('.create-budget-account-manger').on('click', function(e) {
-      e.preventDefault();
-      $('.budget-account-manger-table').show();
-      $('.budget-active').hide();
-    });
-    // budget-active
   </script>
 </body>
 

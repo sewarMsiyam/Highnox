@@ -702,6 +702,12 @@
 
                         <div class="container-fluid content-form bg-light mt-4">
                           <div class="mx-4 py-4 border-radius-20" style="background: #e8e8e8;">
+                            <div class="text-right mx-4"> 
+                              <a href="#" class="btn btn-primary create-bArticle Detailstn add_note ">
+                              <i class="bi bi-plus-circle-fill"></i>
+                             Add Note
+                           </a>
+                          </div>
                             <div class="form-row px-4">
                               <div class="col-md-10 col-12">
                                 <div>
@@ -724,6 +730,7 @@
                                 </div>
                               </div>
                             </div>
+                            <div class="row-note mx-4"></div>
                           </div>
                         </div>
 
@@ -1036,158 +1043,36 @@
   <script src="../JS/layout.js"></script>
 
 
-  <!-- modal -->
-  <script type="text/javascript">
-    $('.group-article').on('change', function() {
-      $('.add-articles-table').show();
-    });
-
-    $('.add_new_selling_price').on('click', function(e) {
-      e.preventDefault();
-
-      $('#exampleModal').modal('show');
-    });
-
-    $('.add_new_cost_price').on('click', function(e) {
-      e.preventDefault();
-
-      $('#exampleModal2').modal('show');
-    });
-  </script>
-
-  <!-- end modal -->
 <script type="text/javascript">
-    $(function () {
 
-    // Start counting from the third row
-    var counter = 1;
-
-    $(".add_new_category").on("click", function (event) {
-        event.preventDefault();
-
-        var newRow = $('<tr class="tr style-table-my1 tr-active">');
-        var cols = '';
-
-        // Table columns
-        cols += '<td class="style-td"><input type="checkbox" class="" id="customCheck1"></td>';
-        cols += '<td style="width:10%;" class="style-td"><input class="form-control rounded-0" type="text" name="firstname" placeholder="First name"></td>';
-        cols += '<td style="width:10%;" class="style-td"><input class="form-control rounded-0" type="text" name="lastname" placeholder="Last name"></td>';
-        cols += '<td style="width:4%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
-        cols += '<td style="width:10%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
-        cols += '<td style="width:4%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
-        cols += '<td style="width:4%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
-        cols += '<td style="width:4%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
-        cols += '<td style="width:10%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
-        cols += '<td style="width:10%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
-        cols += '<td style="width:10%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
-        cols += '<td  class="style-td"><button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" data-bs-toggle="modal" data-bs-target="#exampleModalCenter" data-bs-original-title="" title=""><img src="../images/client-image.svg" class="image-actions"></button><button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom"><img src="../images/client-person.svg" class="image-actions"></button><button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" id="deleteRow" title="" data-bs-original-title="Tooltip on bottom"><i class="fa fa-trash"></i></button></td>';
-
-        // cols += '<td><button class="btn btn-danger rounded-0" id ="deleteRow"><i class="fa fa-trash"></i></button</td>';
-
-        // Insert the columns inside a row
-        newRow.append(cols);
-
-        // Insert the row inside a table
-        $("table").append(newRow);
-
-        // Increase counter after each row insertion
-        counter++;
+$(".add_note").on("click", function (event) {
+      event.preventDefault();
+        var newRow = `
+        <div class="form-row my-4">
+                      <div class="col-md-10 col-12">
+                        <div>
+                          <label>Note</label>
+                        </div>
+                        <div>
+                          <textarea class="form-control" placeholder="Enter your Note" rows="2"></textarea>
+                        </div>
+                      </div>
+                      <div class="col-md-2 col-12">
+                        <div>
+                          <label>Attachment</label>
+                        </div>
+                        <div class="file-container-input">
+                          <button type="button" class="file-button" onclick="openFile(this)">
+                            <span>Attach File</span>
+                            <img src="../img//icons/upload.svg" alt="">
+                          </button>
+                          <input type="file" class="file-input d-none" id="attachment">
+                        </div>
+                      </div>
+                    </div>
+        `;
+        $(".row-note").append(newRow);
     });
-
-    // Remove row when delete btn is clicked
-    $("table").on("click", "#deleteRow", function (event) {
-        $(this).closest("tr").remove();
-        counter -= 1
-    });
-});
-  </script>
-
-  <script type="text/javascript">
-    $(function () {
-
-    // Start counting from the third row
-    var counter = 1;
-
-    $(".add_new_category2").on("click", function (event) {
-        event.preventDefault();
-
-        var newRow = $('<tr class="tr style-table-my1 tr-active">');
-        var cols = '';
-
-        // Table columns
-        cols += '<td class="style-td"><input type="checkbox" class="" id="customCheck1"></td>';
-        cols += '<td style="width:10%;" class="style-td"><input class="form-control rounded-0" type="text" name="firstname" placeholder="First name"></td>';
-        cols += '<td style="width:10%;" class="style-td"><input class="form-control rounded-0" type="text" name="lastname" placeholder="Last name"></td>';
-        cols += '<td style="width:10%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
-        cols += '<td style="width:10%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
-        cols += '<td style="width:10%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
-        cols += '<td style="width:10%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
-        cols += '<td style="width:10%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
-        cols += '<td style="width:10%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
-        cols += '<td  class="style-td"><button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" data-bs-toggle="modal" data-bs-target="#exampleModalCenter" data-bs-original-title="" title=""><img src="../images/client-image.svg" class="image-actions"></button><button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom"><img src="../images/client-person.svg" class="image-actions"></button><button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" id="deleteRow" title="" data-bs-original-title="Tooltip on bottom"><i class="fa fa-trash"></i></button></td>';
-
-        // cols += '<td><button class="btn btn-danger rounded-0" id ="deleteRow"><i class="fa fa-trash"></i></button</td>';
-
-        // Insert the columns inside a row
-        newRow.append(cols);
-
-        // Insert the row inside a table
-        $(".table2").append(newRow);
-
-        // Increase counter after each row insertion
-        counter++;
-    });
-
-    // Remove row when delete btn is clicked
-    $(".table2").on("click", "#deleteRow", function (event) {
-        $(this).closest("tr").remove();
-        counter -= 1
-    });
-});
-  </script>
-
-   <script type="text/javascript">
-    $(function () {
-
-    // Start counting from the third row
-    var counter = 1;
-
-    $(".add_new_category3").on("click", function (event) {
-        event.preventDefault();
-
-        var newRow = $('<tr class="tr style-table-my1 tr-active">');
-        var cols = '';
-
-        // Table columns
-        cols += '<td class="style-td"><input type="checkbox" class="" id="customCheck1"></td>';
-        cols += '<td style="width:10%;" class="style-td"><input class="form-control rounded-0" type="text" name="firstname" placeholder="First name"></td>';
-        cols += '<td style="width:10%;" class="style-td"><input class="form-control rounded-0" type="text" name="lastname" placeholder="Last name"></td>';
-        cols += '<td style="width:10%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
-        cols += '<td style="width:10%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
-        cols += '<td style="width:10%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
-        cols += '<td style="width:10%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
-        cols += '<td style="width:10%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
-        cols += '<td style="width:10%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
-        cols += '<td  class="style-td"><button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" data-bs-toggle="modal" data-bs-target="#exampleModalCenter" data-bs-original-title="" title=""><img src="../images/client-image.svg" class="image-actions"></button><button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom"><img src="../images/client-person.svg" class="image-actions"></button><button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" id="deleteRow" title="" data-bs-original-title="Tooltip on bottom"><i class="fa fa-trash"></i></button></td>';
-
-        // cols += '<td><button class="btn btn-danger rounded-0" id ="deleteRow"><i class="fa fa-trash"></i></button</td>';
-
-        // Insert the columns inside a row
-        newRow.append(cols);
-
-        // Insert the row inside a table
-        $(".table3").append(newRow);
-
-        // Increase counter after each row insertion
-        counter++;
-    });
-
-    // Remove row when delete btn is clicked
-    $(".table3").on("click", "#deleteRow", function (event) {
-        $(this).closest("tr").remove();
-        counter -= 1
-    });
-});
   </script>
 
 

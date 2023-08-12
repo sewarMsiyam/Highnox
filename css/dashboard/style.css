@@ -228,9 +228,11 @@ table {
   .cardIcon img {
         height: 17px;
   }
-  .navStatus {
+  /* .navStatus {
         width: 35%;
-  }
+    display: flex;
+    justify-content: flex-end !important;
+  } */
   .search-form {
     background: #e8e8e8;
     align-items: center;

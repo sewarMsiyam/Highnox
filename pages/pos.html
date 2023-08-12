@@ -194,7 +194,7 @@
           </li>
 
           <li class="nav-item">
-            <a href="pos.html" class="nav-link">
+            <a href="pos.html" class="nav-link active">
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 16">
                 <path id="Icon_color" data-name="Icon color"
                   d="M19,16H1a1,1,0,0,1-1-1V1A1,1,0,0,1,1,0H19a1,1,0,0,1,1,1V15A1,1,0,0,1,19,16ZM6,2A4.005,4.005,0,0,1,2,6v4a4.006,4.006,0,0,1,4,4h8a4.005,4.005,0,0,1,4-4V6a4.005,4.005,0,0,1-4-4Zm4,9a3,3,0,1,1,3-3A3,3,0,0,1,10,11Z"
@@ -572,12 +572,14 @@
                                 <label>Language</label>
                               </div>
                               <div class="second-select-input">
-                                <select name="year" class="form-control basicInput bg-light">
-                                  <option>Select Language</option>
-                                  <option>Language 1</option>
-                                  <option>Language 2</option>
-                                  <option>Language 3</option>
+                                <select class=" w-100 selectpicker" multiple aria-label="size 3 select example" data-live-search="true">
+                                  <option>Language</option>
+                                  <option>2</option>
+                                  <option>3</option>
+                                  <option>4</option>
+                                  <option>5</option>
                                 </select>
+                                <img class="input-svg" width="12" src="../images/img-droplist.svg">  
                               </div>
                             </div>
                             <div class="col-md-3 col-12">
@@ -653,7 +655,7 @@
                       <div class="card-header bg-transparent border-0"><h4>Choosed Articles</h4></div>
                       <div class="card-body">
                         <div class="px-4 px-responsive-none bg-light border-radius-20 table-responsive">
-                          <table id="myTable">
+                          <table id="myTable" class="table">
                             <thead>
                               <tr class="tr" >
                                 <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
