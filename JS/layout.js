@@ -1,90 +1,82 @@
 //  sidebar
-const toggleBtn = $('#toggleBtn');
-const layout = $('.layout');
-const sidebar = $('.sidebar');
-let isHovered = false;
-sidebar.hover(
-  function () {
-    if (layout.attr('data-sidebar-minimize') === 'on') {
-      layout.attr('data-sidebar-minimize', 'off');
-      isHovered = true;
-    }
-  },
-  function () {
-    if (layout.attr('data-sidebar-minimize') === 'off' && isHovered) {
-      layout.attr('data-sidebar-minimize', 'on');
-    }
-  }
-);
-toggleBtn.click(function () {
-  const currentValue = layout.attr('data-sidebar-minimize');
-  if (currentValue === 'on') {
-    layout.attr('data-sidebar-minimize', 'off');
-  } else {
-    layout.attr('data-sidebar-minimize', 'on');
-  }
-  isHovered = false;
-});
-
-// $(function () {
-//   $('.datepicker').datepicker({
-//     uiLibrary: 'bootstrap5',
-//     orientation: 'bottom',
-//     center: true,
-//   });
+// const toggleBtn = $('#toggleBtn');
+// const layout = $('.layout');
+// const sidebar = $('.sidebar');
+// let isHovered = false;
+// sidebar.hover(
+//   function () {
+//     if (layout.attr('data-sidebar-minimize') === 'on') {
+//       layout.attr('data-sidebar-minimize', 'off');
+//       isHovered = true;
+//     }
+//   },
+//   function () {
+//     if (layout.attr('data-sidebar-minimize') === 'off' && isHovered) {
+//       layout.attr('data-sidebar-minimize', 'on');
+//     }
+//   }
+// );
+// toggleBtn.click(function () {
+//   const currentValue = layout.attr('data-sidebar-minimize');
+//   if (currentValue === 'on') {
+//     layout.attr('data-sidebar-minimize', 'off');
+//   } else {
+//     layout.attr('data-sidebar-minimize', 'on');
+//   }
+//   isHovered = false;
 // });
 
+  const layout = $('.layout');
+  const sidebar = $('.sidebar');
+  const defaultState = 'off'; 
 
-// multiple select
-  // $('.selectpicker').selectpicker();
-  // $('.selectpicker').on('changed.bs.select', function (e) {
-  //   const selectedItems = $(this).val();
-  //   const selectedCount = selectedItems.length;
-
-  
-  //   if (selectedCount >= 3) {
-  //     $(this).parent().find('.filter-option-inner-inner').html(`<span style="color: #495057 !important;">${selectedCount} options selected</span>`);
-  //   }
-  // });
-
-
-
-  $(document).ready(function () {
-    let clickedOnInput = false;
-    let isSelectOpen = false;
-  
-    $('.selectpicker').selectpicker();
-  
-    $('.selectpicker').on('changed.bs.select', function (e) {
-      if (!clickedOnInput) {
-        const selectedItems = $(this).val();
-        const selectedCount = selectedItems.length;
-        if (selectedCount >= 3) {
-          $(this).parent().find('.filter-option-inner-inner').html(`<span style="color: #495057 !important;">${selectedCount} options selected</span>`);
-        }
+  const savedState = localStorage.getItem('sidebarState');
+  if (savedState !== null) {
+    layout.attr('data-sidebar-minimize', savedState);
+  } else {
+    layout.attr('data-sidebar-minimize', defaultState);
+  }
+  const toggleBtn = $('#toggleBtn');
+  let isHovered = false;
+  sidebar.hover(
+    function () {
+      if (layout.attr('data-sidebar-minimize') === 'on') {
+        layout.attr('data-sidebar-minimize', 'off');
+        isHovered = true;
       }
-    });
-  
-    $('.selectpicker').on('show.bs.select', function () {
-      isSelectOpen = true;
-    });
-  
-    $('.selectpicker').on('hide.bs.select', function () {
-      isSelectOpen = false;
-      clickedOnInput = false;
-    });
-  
-    $('.form-control').on('focus', function () {
-      clickedOnInput = true;
-    });
-  
-    $('.form-control').on('blur', function () {
-      if (!isSelectOpen) {
-        clickedOnInput = false;
+    },
+    function () {
+      if (layout.attr('data-sidebar-minimize') === 'off' && isHovered) {
+        layout.attr('data-sidebar-minimize', 'on');
       }
-    });
+    }
+  );
+  toggleBtn.click(function () {
+    const currentValue = layout.attr('data-sidebar-minimize');
+    if (currentValue === 'on') {
+      layout.attr('data-sidebar-minimize', 'off');
+    } else {
+      layout.attr('data-sidebar-minimize', 'on');
+    }
+    isHovered = false;
+    const newState = layout.attr('data-sidebar-minimize');
+    localStorage.setItem('sidebarState', newState);
   });
+
+
+
+//multiple select
+  $('.selectpicker').selectpicker();
+  $('.selectpicker').on('changed.bs.select', function (e) {
+    const selectedItems = $(this).val();
+    const selectedCount = selectedItems.length;
+
   
+    if (selectedCount >= 3) {
+      $(this).parent().find('.filter-option-inner-inner').html(`<span style="color: #495057 !important;">${selectedCount} options selected</span>`);
+    }
+  });
+
   
 
 
@@ -147,26 +139,17 @@ var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
   });
 
 
-
-
-
   $(document).ready(function () {
-    $(".searchFunction").on("focus", function () {
-      $(".menue-Search").removeClass("d-none");
-    }).on("blur", function () {
-      setTimeout(function () {
+    $(".searchFunction").on("input", function () {
+      if ($(this).val() !== "") {
+        $(".menue-Search").removeClass("d-none");
+      } else {
         $(".menue-Search").addClass("d-none");
-      }, 200);
+      }
     });
-
-    $(".menue-Search").on("mouseenter", function () {
-      $("#searchFunction").off("blur");
-    }).on("mouseleave", function () {
-      $("#searchFunction").on("blur", function () {
-        setTimeout(function () {
-          $(".menue-Search").addClass("d-none");
-        }, 200);
-      });
+    
+    $(".menue-Search").on("focusout", function () {
+      $(this).addClass("d-none");
     });
   });
 

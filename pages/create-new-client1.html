@@ -1227,8 +1227,7 @@
                                                     </div>
                                                 </th>
                                                 <th onclick="sortTable(5, 'myTable')" class="style-th">
-                                                </th>
-                                                <th onclick="sortTable(5, 'myTable')" class="style-th">
+                                                    <div style=" width: 70px; "></div>
                                                 </th>
                                             </tr>
                                         </thead>
@@ -1254,8 +1253,6 @@
                                                 </td>
                                                 <td  class="style-td p-1">                                  
                                                     <button type="button" class="btn btn-secondary dataTableButtons edite-save"><i class="fa fa-pen"></i> </button>
-                                                </td>
-                                                <td  class="style-td p-1">                                  
                                                     <button type="button" class="btn btn-secondary dataTableButtons deleteRow"><i class="fa fa-trash"></i></button>
                                                 </td>
                                             </tr>
@@ -1831,7 +1828,12 @@
                             <!-- end new row -->
                             <div class="container-fluid content-form py-4 mt-4">
                                 <form>
-                                    
+                                    <div class="text-right"> 
+                                        <a href="#" class="btn btn-primary create-bArticle Detailstn add_note_Signage ">
+                                        <i class="bi bi-plus-circle-fill"></i>
+                                       Add Note
+                                     </a>
+                                    </div>
                                     <div class="form-row my-4">
                                         <div class="col-12">
                                             <div>
@@ -1843,6 +1845,7 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="row-note-Signage"></div>
                                 </form>
                             </div>
                             <div class="container-fluid py-4 d-flex justify-content-end">
@@ -5462,6 +5465,7 @@
                         </div>
 
                         <!-- add row 2 -->
+                        <div class="content-body p-4">
                         <div class="px-4">
                             <div class="d-flex justify-content-between">
                                 <div
@@ -5518,8 +5522,7 @@
                                                     </div>
                                                 </th>
                                                 <th onclick="sortTable(5, 'myTable')" class="style-th">
-                                                </th>
-                                                <th onclick="sortTable(5, 'myTable')" class="style-th">
+                                                    <div style=" width: 70px; "></div>
                                                 </th>
                                             </tr>
                                         </thead>
@@ -5546,8 +5549,6 @@
                                                 </th>
                                                 <td  class="style-td p-1">                                  
                                                     <button type="button" class="btn btn-secondary dataTableButtons edite-save"><i class="fa fa-pen"></i> </button>
-                                                </td>
-                                                <td  class="style-td p-1">                                  
                                                     <button type="button" class="btn btn-secondary dataTableButtons deleteRow"><i class="fa fa-trash"></i></button>
                                                 </td>
                                             </tr>
@@ -5587,6 +5588,7 @@
 
 
                         </div>
+                    </div>
                         <!-- end add row 2 -->
 
 
@@ -5646,11 +5648,11 @@
                             <h4 class="px-4 my-0 py-2">Billing Summary for ongoing items</h4>
                         </div>
                         <div class="content-body p-4">
-                            <div class="form-row align-items-center my-4">
+                            <div class="form-row align-items-center my-4 col-11">
                                     <div class="mx-2">
                                         <label>date</label>
                                     </div>
-                                    <div class="second-select-input">
+                                    <div class="second-select-input col-12 col-lg-4">
                                         <input type="date" class="form-control date-input  border-0 px-0" placeholder="Select date">
                                     </div>
                             </div>
@@ -6961,8 +6963,7 @@ $(".add_new_row").on("click", function (event) {
     cols += '<td style="width:16%;" class="style-td p-1"><select class="form-control border-0"> <option>select</option> <option>manageer 1</option> <option>manageer 2</option> <option>manageer 3</option> </select></td>';
     cols += '<td style="width:16%;" class="style-td p-1"><div class="d-flex align-items-center"> <select class="selectpicker" multiple aria-label="size 3 select example" data-live-search="true"> <option> 1</option> <option> 2</option> <option> 3</option> </select> <img class="input-svg" width="12" src="../images/img-droplist.svg"> </div></td>';
     cols += '<td style="width:16%;" class="style-td p-1"><div class="d-flex align-items-center"> <select class="selectpicker" multiple aria-label="size 3 select example" data-live-search="true"> <option> 1</option> <option> 2</option> <option> 3</option> </select> <img class="input-svg" width="12" src="../images/img-droplist.svg"> </div></td>';
-    cols += '<td class="style-td p-1 p-1"><button type="button" class="btn btn-secondary dataTableButtons edite-save"><i class="fa-solid fa-floppy-disk"></i> </button></td>';
-    cols += '<td class="style-td p-1 p-1"><button type="button" class="btn btn-secondary dataTableButtons deleteRow"><i class="fa fa-trash"></i></button> </td>';
+    cols += '<td class="style-td p-1 p-1"><button type="button" class="btn btn-secondary dataTableButtons edite-save"><i class="fa-solid fa-floppy-disk"></i> </button> <button type="button" class="btn btn-secondary dataTableButtons deleteRow"><i class="fa fa-trash"></i></button></td>';
 
     // Insert the columns inside a row
     newRow.append(cols);
@@ -7018,14 +7019,13 @@ $(".add_new_row2").on("click", function (event) {
     var cols = '';
 
     // Table columns
-    cols += '<td style="width:16%;" class="style-td p-1"><input class="form-control rounded-0" type="date" name="firstname" placeholder="First name"></td>';
-    cols += '<td style="width:16%;" class="style-td p-1"><input class="form-control rounded-0" type="date" name="firstname" placeholder="First name"></td>';
-    cols += '<td style="width:16%;" class="style-td p-1"><input class="form-control rounded-0" type="text" name="lastname" placeholder="Credits"></td>';
+    cols += '<td style="width:16%;" class="style-td p-1"><input class="form-control rounded-0" type="date" ></td>';
+    cols += '<td style="width:16%;" class="style-td p-1"><input class="form-control rounded-0" type="date"  ></td>';
+    cols += '<td style="width:16%;" class="style-td p-1"><input class="form-control rounded-0" type="text"  placeholder="Credits"></td>';
     cols += '<td style="width:16%;" class="style-td p-1"><select class="form-control border-0"> <option>select</option> <option>manageer 1</option> <option>manageer 2</option> <option>manageer 3</option> </select></td>';
     cols += '<td style="width:16%;" class="style-td p-1"><select class="form-control border-0"> <option>select</option> <option>manageer 1</option> <option>manageer 2</option> <option>manageer 3</option> </select></td>';
     cols += '<td style="width:16%;" class="style-td p-1"><select class="form-control border-0"> <option>select</option> <option>manageer 1</option> <option>manageer 2</option> <option>manageer 3</option> </select></td>';
-    cols += '<td  class="style-td p-1"> <button type="button" class="btn btn-secondary dataTableButtons edite-save"><i class="fa-solid fa-floppy-disk"></i> </button></td>';
-    cols += '<td  class="style-td p-1"> <button type="button" class="btn btn-secondary dataTableButtons deleteRow"><i class="fa fa-trash"></i></button> </td>';
+    cols += '<td  class="style-td p-1"> <button type="button" class="btn btn-secondary dataTableButtons edite-save"><i class="fa-solid fa-floppy-disk"></i> </button> <button type="button" class="btn btn-secondary dataTableButtons deleteRow"><i class="fa fa-trash"></i></button></td>';
 
     
     // cols += '<td><button class="btn btn-danger rounded-0" id ="deleteRow"><i class="fa fa-trash"></i></button</td>';
@@ -7234,6 +7234,25 @@ $("#myTable4").on("click", ".edite-save", function (event) {
 
 
 
+    $(document).ready(function () {
+    $(".add_note_Signage").on("click", function (event) {
+      event.preventDefault();
+        var newRow = `
+        <div class="form-row my-4">
+                      <div class=" col-12">
+                        <div>
+                          <label>Note</label>
+                        </div>
+                        <div>
+                          <textarea class="form-control" placeholder="Enter your Note" rows="2"></textarea>
+                        </div>
+                      </div>
+                    </div>
+        `;
+        $(".row-note-Signage").append(newRow);
+    });
+
+});
 
 
 

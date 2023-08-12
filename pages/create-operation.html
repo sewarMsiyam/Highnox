@@ -518,19 +518,11 @@
                       </form>
                    
                   </div>
-                  <div class="col col-md-1 col-12">
-                 
-                     <a class="btn btn-primary create-btn" href="../pages/create-new-client.html">
-                        <i class="bi bi-plus-circle-fill"></i>
-                        Create
-                    </a>
-                 
-                  </div>
                 </div>
               </div>
             </div>
             <div class="content-container shadow bg-white py-3">
-              <div class="content-top py-1">
+              <!-- <div class="content-top py-1">
                   <div class="px-4 py-2 d-flex justify-content-start align-items-center flex-column-responsive">
                     <div class="form-check form-switch col-12-responsive">
                     <label class="switch">
@@ -554,7 +546,7 @@
                     <label class="form-check-label" for="flexSwitchCheckChecked">Active for Orders</label>
                   </div>
                 </div>
-              </div>
+              </div> -->
               <div class="content-body">
                 <div class="container-fluid content-form py-2 bg-light border-bottom-1 border-radius-0">
                   <form class="px-4 py-1">
@@ -571,6 +563,7 @@
                             <option value="8">example</option>
                             <option value="9">example</option>
                           </select>
+                          <img class="input-svg" width="12" src="../images/img-droplist.svg">
                         </div>
                       </div>
                       <div class="col-12 col-md-6 col-lg-2 mb-3">
@@ -599,7 +592,7 @@
                             <option>Activity 1</option>
                             <option>Activity 2</option>
                           </select>
-                          <img class="input-svg" src="../images/icon-color.svg">
+                          <img class="input-svg" width="12" src="../images/img-droplist.svg">
                         </div>                   
                       </div>
                       <div class="col-12 col-md-6 col-lg-2 mb-3">
@@ -612,7 +605,7 @@
                             <option>Activity 1</option>
                             <option>Activity 2</option>
                           </select>
-                          <img class="input-svg" src="../images/icon-color.svg">
+                          <img class="input-svg" width="12" src="../images/img-droplist.svg">
                         </div>                   
                       </div>
                       <div class="col-12 col-md-6 col-lg-2 mb-3">
@@ -625,7 +618,7 @@
                             <option>Activity 1</option>
                             <option>Activity 2</option>
                           </select>
-                          <img class="input-svg" src="../images/icon-color.svg">
+                          <img class="input-svg" width="12" src="../images/img-droplist.svg">
                         </div>                   
                       </div>
                       <div class="col-12 col-md-6 col-lg-2 mb-3">
@@ -638,7 +631,7 @@
                             <option>Activity 1</option>
                             <option>Activity 2</option>
                           </select>
-                          <img class="input-svg" src="../images/icon-color.svg">
+                          <img class="input-svg" width="12" src="../images/img-droplist.svg">
                         </div>                   
                       </div>
                     </div>
@@ -652,8 +645,8 @@
                         <div>
                          <label>Describe the activity</label>
                         </div>
-                        <div class="select-input">
-                          <input type="text" name="" class="input-text" placeholder="Describe the activity …. ">
+                        <div>
+                          <textarea class="form-control "  placeholder="Describe the activity …. " rows="2"></textarea>
                         </div>                   
                       </div>
                     </div>
@@ -708,33 +701,14 @@
                     </div>
                   </form>
                 </div>
-                <div class="container-fluid content-form bg-light mb-4">
-                  <form class="mx-4 ">
-                    <div class="card mb-3 bg-gray border-radius-10">
-                      <div class="card-header bg-transparent">Note</div>
-                      <div class="card-body">
-                        <div class="px-4 px-responsive-none bg-light border-radius-20 table-responsive">
-                          <table class="table margin-bottom-0">
-                            <tr class="tr style-table-my1 tr-active h-auto">
-                              <td class="font-size-14  style-td">Fri  Sep  24  2021  </td>
-                              <td class="font-size-14  style-td">16 : 26 : 51</td>
-                              <td class="font-size-14  style-td">Sam Hansson</td>
-                              <td class="font-size-14  style-td">Had a meeting with customer xxxxxx </td>
-                            </tr>
-                            <tr class="tr style-table-my1 tr-active h-auto">
-                              <td class="font-size-14  style-td">Fri  Sep  24  2021  </td>
-                              <td class="font-size-14  style-td">16 : 26 : 51</td>
-                              <td class="font-size-14  style-td">Sam Hansson</td>
-                              <td class="font-size-14  style-td">Had a meeting with customer xxxxxx </td>
-                            </tr>
-                          </table>
-                        </div>
-                      </div>
-                    </div>
-                  </form>
-                </div>
                 <div class="container-fluid content-form bg-light ">
                   <form class="mx-4 py-4" style="background: #e8e8e8;">
+                    <div class="text-right mx-4"> 
+                      <a href="#" class="btn btn-primary create-bArticle Detailstn add_note ">
+                      <i class="bi bi-plus-circle-fill"></i>
+                     Add Note
+                   </a>
+                  </div>
                     <div class="form-row px-4">
                       <div class="col-md-10 col-12">
                         <div>
@@ -757,6 +731,7 @@
                         </div>
                       </div>
                     </div>
+                    <div class="row-note mx-4"></div>
                   </form>
                 </div>
                 <div class="container-fluid content-form bg-light border-bottom-1 mb-4">
@@ -852,8 +827,15 @@
                                 <label>Unit</label>
                               </div>
                               <div class="second-select-input">
-                                <input type="text" class="form-control" placeholder="Hours">
-                              </div>
+                                <select class=" w-100 selectpicker" multiple aria-label="size 3 select example" data-live-search="true">
+                                  <option>Unit</option>
+                                  <option>Unit</option>
+                                  <option>3</option>
+                                  <option>4</option>
+                                  <option>5</option>
+                                </select>
+                                <img class="input-svg" width="12" src="../images/img-droplist.svg">  
+                              </div>    
                             </div>
                             <div class="col-md-2 col-12">
                               <div>
@@ -883,48 +865,317 @@
                         </div>
                       </div>
                     </div>
+                    <div class="container-fluid py-4 d-flex justify-content-end print-dropdown"  style=" gap: 5px; ">
+                      <form class="offers-btn d-flex justify-content-center flex-wrap justify-content-md-end">
+                        <button class="btn btn-primary  cancel-btn"> Cancel </button>
+                        <button class="btn btn-primary submit-btn">  Save  </button>
+                        
+                          <div class="ui inline dropdown h-100  cancel-btn text-dark" tabindex="0">
+                            <div class="text">
+                              Printout
+                            </div>
+                            <i class="dropdown icon"></i>
+                            <div class="menu w-100" tabindex="-1">
+                              <div class="item" data-bs-toggle="modal" data-bs-target="#pdfModal">
+                                Print pdf
+                              </div>
+                              <div class="item" data-bs-toggle="modal" data-bs-target="#EmailModal">
+                                Email
+                              </div>
+                              <div class="item">
+                                active
+                              </div>
+                              <div class="item">
+                                not active
+                              </div>
+                            </div>
+                          </div>
+                        <button class="btn btn-primary submit-btn" type="submit" style="margin-left: 10px; border-top-left-radius: none !important;  border-bottom-left-radius: none !important;">Send </button>
+                        <button class="btn btn-primary submit-btn" type="submit"> Create Invoice </button>
+                      </form>
+                    </div>
                   </form>
-                </div>
-                <div class="container-fluid py-4 d-flex justify-content-end">
-                  <div class="col-md-4 col-12 text-right">
-                    <a href="operations.html" class="btn btn-primary  cancel-btn" type="submit">
-                    Cancel
-                    </a>
-                      <button class="btn btn-primary submit-btn" type="submit">
-                      Save
-                    </button>                        
-                  </div>
                 </div>
               </div>
             </div>
         </div>
   </main>
 
+
+
+
+
+
+
+
+
+
+
+
+
+  
+<!-- email   modal -->
+<div class="modal fade" id="EmailModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+aria-hidden="true">
+<div class="modal-dialog modal-lg  modal-dialog-centered" role="document">
+    <div class="modal-content">
+        <div class="modal-header d-flex justify-content-end  border-0">
+            <button type="button" class="close-btn" data-bs-dismiss="modal" aria-label="Close">
+                <i class="bi bi-x modal-close-icon"></i>
+            </button>
+        </div>
+        <div class="d-flex flex-column descripton-area-container px-4 py-1 mb-3" style="width: 100%;">
+            <div class="text-select">
+                Sender Email
+            </div>
+            <div class="container-inner" style="background-color: #F3F2F2;">
+                <input class="form-control input" type="text" placeholder="Enter Name"
+                    style="background-color: #F3F2F2;" />
+            </div>
+        </div>
+        <div class="d-flex flex-column descripton-area-container px-4 py-1 mb-3" style="width: 100%;">
+            <div class="text-select">
+                Reciver Email
+            </div>
+            <div class="container-inner" style="background-color: #F3F2F2;">
+                <input class="form-control input" type="text" placeholder="Enter Name"
+                    style="background-color: #F3F2F2;" />
+            </div>
+        </div>
+        <div class="d-flex flex-row  px-4 py-1 mb-3" style="gap:25px">
+            <div class="d-flex flex-column descripton-area-container" style="width: 100%;">
+                <div class="text-select">
+                    CC
+                </div>
+                <div class="container-inner" style="background-color: #F3F2F2;">
+                    <input class="form-control input" type="text" placeholder="Enter Name"
+                        style="background-color: #F3F2F2;" />
+                </div>
+            </div>
+
+        </div>
+        <div class="d-flex flex-row  px-4 py-1 mb-3" style="gap:25px">
+            <div class="d-flex flex-column descripton-area-container" style="width: 100%;">
+                <div class="text-select">
+                    BC
+                </div>
+
+                <div class="container-inner" style="background-color: #F3F2F2;">
+                    <input class="form-control input" type="text" placeholder="Enter Name"
+                        style="background-color: #F3F2F2;" />
+                </div>
+            </div>
+
+        </div>
+        <div class="d-flex flex-row  px-4 py-1 mb-3" style="gap:25px">
+            <div class="d-flex flex-column descripton-area-container" style="width: 100%;">
+                <div class="text-select">
+                    Subject
+                </div>
+                <div class="container-inner" style="background-color: #F3F2F2;">
+                    <input class="form-control input" type="text" placeholder="Enter Name"
+                        style="background-color: #F3F2F2;" />
+                </div>
+            </div>
+
+        </div>
+
+        <div class="file-container-input px-4 py-1 mb-3" style="width: 100%;">
+          <div class="text-select">  Message  </div>
+          <textarea class="form-control" id="editor" style="background-color: #F3F2F2;"></textarea>    
+        </div>
+        <div class="d-flex justify-content-center align-items-center m-3 flex-wrap" style="gap:15px">
+            <div class="d-flex p-3   justify-content-between" id="download-contract-word"
+                style="width:45%;background-color: #F3F2F2;">
+                <div class="d-flex" style="gap:10px">
+                    <img src="../img/icons/word.svg" />
+                    <div class="d-flex flex-column">
+                        <span>Research.rar</span>
+                        <span>5.778 gbs</span>
+                    </div>
+                </div>
+                <img src="../img/icons/download-solid.svg" />
+            </div>
+            <div class="d-flex p-3 justify-content-between" id="download-contract-excel"
+                style="width:45%;background-color: #F3F2F2;">
+                <div class="d-flex" style="gap:10px">
+                    <img src="../img/icons/excel.svg" />
+                    <div class="d-flex flex-column">
+                        <span>Research.rar</span>
+                        <span>5.778 gbs</span>
+                    </div>
+                </div>
+                <img src="../img/icons/download-solid.svg" />
+            </div>
+        </div>
+        <div class="modal-footer d-flex justify-content-center">
+            <button type="button" class="btn"
+                style="background-color: #E1E1E1; color: #364153; border-radius:5px; width:100px"
+                data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn"
+                style="background-color: #364153; color: white; border-radius:5px; width:100px"
+                data-bs-dismiss="modal">Save</button>
+        </div>
+    </div>
+</div>
+</div>
+<!-- End email modal -->
+
+
+<!-- pdf  modal -->
+<div class="modal fade" id="pdfModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+aria-hidden="true">
+<div class="modal-dialog modal-lg  modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="d-flex justify-content-between align-items-center">
+        <h3 class="logo pl-2 pl-lg-5">Highnox</h3>
+        <div class="d-flex justify-content-between  align-items-center">
+          <h3 class="pr-2 pr-lg-5">Quotation</h3>
+          <i class="bi bi-x modal-close-icon display-5 text-secondary" data-bs-dismiss="modal"></i>
+        </div>
+      </div>
+      <div class="bg-primary d-flex justify-content-between  align-items-center w-100 py-3 px-lg-5 px-3 ">
+        <p class="m-0">Invoice # 52148</p>
+        <p class="m-0">Date 01 / 02 / 2020</p>
+      </div>
+      <div class="px-2 px-lg-5 py-4">
+        <h4>Invoice to : Dwyane Clark</h4>
+        <p class="w-25 mx-5">24 dummy street area . location .lorem ipsum. 570xx59x</p>
+      </div>
+
+
+      <table class="table table-bordered">
+        <thead class="bg-primary">
+          <tr>
+            <td class="col-1">SL.</td>
+            <td>Item Description</td>
+            <td>Price</td>
+            <td>QTY</td>
+            <td>Total</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="content-form rounded-0">1</td>
+            <td>Lorem Ipsum Dolor</td>
+            <td>50.00$</td>
+            <td>1</td>
+            <td>50.00$</td>
+          </tr>
+          <tr>
+            <td class="content-form rounded-0">2</td>
+            <td>pellerum id neoejreu iuso</td>
+            <td>50.00$</td>
+            <td>1</td>
+            <td>50.00$</td>
+          </tr>
+          <tr>
+            <td class="content-form rounded-0">3</td>
+            <td>Lorem Ipsum Dolor</td>
+            <td>50.00$</td>
+            <td>1</td>
+            <td>50.00$</td>
+          </tr>
+          <tr>
+            <td class="content-form rounded-0">4</td>
+            <td>pellerum id neoejreu iuso</td>
+            <td>50.00$</td>
+            <td>1</td>
+            <td>50.00$</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="row py-4 px-2 px-lg-5">
+        <div class="col-12 col-lg-8">
+          <h4>Payment Info :</h4>
+          <p>Account # : 12556555</p>
+          <p>Account Name : 12556555</p>
+          <p>Bank Details : Add your bank details</p>
+          <br>
+          <h4>Term & Conditions</h4>
+          <p>Lorem Ipsum Dolor<p>
+        </div>
+        <div class="col-12 col-lg-4">
+          <div class="bg-primary shadow d-flex  mb-3">
+            <div class="w-100 py-3 border text-center">
+              <p>Sub Total</p>
+            </div>
+            <div class="w-100 py-3 border text-center">
+              <p>2000 SEK</p>
+            </div>
+          </div>
+          <div class="bg-primary shadow d-flex  mb-3">
+            <div class="w-100 py-3 border text-center">
+              <p>Tax</p>
+            </div>
+            <div class="w-100 py-3 border text-center">
+              <p>0.00%</p>
+            </div>
+          </div>
+          <div class="bg-primary shadow d-flex  mb-3">
+            <div class="w-100 py-3 border text-center">
+              <p>Total</p>
+            </div>
+            <div class="w-100 py-3 border text-center">
+              <p>2000 SEK</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-primary w-100 py-1 px-lg-5 px-3 ">
+        Thank you for your Business
+      </div>
+        
+    </div>
+</div>
+</div>
+<!-- End pdf modal -->
+
   <script>
     $('.ui.dropdown').dropdown();
-</script>
+  </script>
 
   <!-- global js -->
   <script src="../JS/global/jquery/jquery-3.4.1.min.js"></script>
-  <script src="../JS/global/jspdf/jspdf.js"></script>
   <script src="../JS/client/main.js"></script>
   <script src="../JS/global/bootstrap/bootstrap.bundle.min.js"></script>
   <script src="../JS/global/bootstrap/bootstrap-select.js"></script>
   <script src="../JS/global/datePicker/datepicker.js"></script>
   <script src="../JS/layout.js"></script>
 
-
   <!-- this page -->
   <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-  <!-- js -->
   <script type="text/javascript">
-    $(document).ready(function() {
-        $('.basicInput').select2();
-    });
-    $(function () {
-      $('[data-toggle="tooltip"]').tooltip()
-    })
-  </script>
+    $(".add_note").on("click", function (event) {
+          event.preventDefault();
+            var newRow = `
+            <div class="form-row my-4">
+                          <div class="col-md-10 col-12">
+                            <div>
+                              <label>Note</label>
+                            </div>
+                            <div>
+                              <textarea class="form-control" placeholder="Enter your Note" rows="2"></textarea>
+                            </div>
+                          </div>
+                          <div class="col-md-2 col-12">
+                            <div>
+                              <label>Attachment</label>
+                            </div>
+                            <div class="file-container-input">
+                              <button type="button" class="file-button" onclick="openFile(this)">
+                                <span>Attach File</span>
+                                <img src="../img//icons/upload.svg" alt="">
+                              </button>
+                              <input type="file" class="file-input d-none" id="attachment">
+                            </div>
+                          </div>
+                        </div>
+            `;
+            $(".row-note").append(newRow);
+        });
+      </script>
 </body>
 
 </html>

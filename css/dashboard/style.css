@@ -471,6 +471,9 @@ ul {
   background: #F2F2F2;
   border-radius: 4px;
 }
+.content-form h2 {
+  font-size: 1.5rem;
+}
 /* end content attributes */
 /*invoices*/
 .greenBg {
@@ -891,10 +894,10 @@ td.ui-sortable {
   opacity: 1;
 }
 
-.table-responsive {
+/* .table-responsive {
   border-radius: 15px;
   overflow-x: visible;
-}
+} */
 
 
 .table .form-control{
@@ -906,3 +909,12 @@ td.ui-sortable {
 .table-bordered td, .table-bordered th {
   vertical-align: middle !important;
 }
+
+.filter-option-inner-inner{
+  font-size: 11px;
+  vertical-align: middle !important;
+}
+
+/* .ui.action.input:not([class*="left action"])>.button:last-child, .ui.action.input:not([class*="left action"])>.buttons:last-child>.button, .ui.action.input:not([class*="left action"])>.dropdown:last-child {
+  border-radius: 0 0.28571429rem 0.28571429rem 0 !important;
+} */

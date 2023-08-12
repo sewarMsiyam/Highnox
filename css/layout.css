@@ -280,10 +280,11 @@ a{
 .serch-nav  .ui.button{
   height: 35px; 
   border-left: 1px solid #fff0;
-  border-radius:0;
+  border-radius: 0 0.28571429rem 0.28571429rem 0 !important;
   background: var(--primary);
     color: var(--light);
 }
+
 .select-input select.form-control{
   background: #fff0;
   border: none;
@@ -325,6 +326,26 @@ input[type="date"] {
 }
 
 input[type="date"]::-webkit-calendar-picker-indicator {
+  background: transparent;
+  bottom: 0;
+  color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: auto;
+}
+input[type="time"] {
+  display: inline-block;
+  position: relative;
+  background-image: url("../images/time.svg");
+  background-repeat: no-repeat;
+  background-position: 97% 6px;
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator {
   background: transparent;
   bottom: 0;
   color: transparent;
