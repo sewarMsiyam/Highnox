@@ -920,20 +920,26 @@
                             </div>
                             <div class="container-fluid py-4 d-flex justify-content-end print-dropdown">
                               <form class="offers-btn d-flex justify-content-center flex-wrap justify-content-md-end" style="gap: 1rem;">
-                                <button class="btn btn-primary  cancel-btn" > Cancel </button>
+                                <button class="btn btn-primary  cancel-btn"> Cancel </button>
                                 <button class="btn btn-primary submit-btn">  Save  </button>
                                 
-                                  <div class="ui inline dropdown h-100  cancel-btn text-dark">
+                                  <div class="ui inline dropdown h-100  cancel-btn text-dark" tabindex="0">
                                     <div class="text">
                                       Printout
                                     </div>
                                     <i class="dropdown icon"></i>
-                                    <div class="menu w-100">
+                                    <div class="menu w-100" tabindex="-1">
                                       <div class="item" data-bs-toggle="modal" data-bs-target="#pdfModal">
                                         Print pdf
                                       </div>
                                       <div class="item" data-bs-toggle="modal" data-bs-target="#EmailModal">
                                         Email
+                                      </div>
+                                      <div class="item">
+                                        active
+                                      </div>
+                                      <div class="item">
+                                        not active
                                       </div>
                                     </div>
                                   </div>
