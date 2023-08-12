@@ -1244,35 +1244,34 @@
     });
 });
 
-
 $(".add_note").on("click", function (event) {
-      event.preventDefault();
-        var newRow = `
-        <div class="form-row my-4">
-                      <div class="col-md-10 col-12">
-                        <div>
-                          <label>Note</label>
-                        </div>
-                        <div>
-                          <textarea class="form-control" placeholder="Enter your Note" rows="2"></textarea>
-                        </div>
-                      </div>
-                      <div class="col-md-2 col-12">
-                        <div>
-                          <label>Attachment</label>
-                        </div>
-                        <div class="file-container-input">
-                          <button type="button" class="file-button" onclick="openFile(this)">
-                            <span>Attach File</span>
-                            <img src="../img//icons/upload.svg" alt="">
-                          </button>
-                          <input type="file" class="file-input d-none" id="attachment">
-                        </div>
-                      </div>
-                    </div>
-        `;
-        $(".row-note").append(newRow);
-    });
+event.preventDefault();
+var newRow = `
+<div class="form-row my-4">
+    <div class="col-md-10 col-12">
+        <div>
+            <label>Note</label>
+        </div>
+        <div>
+            <textarea class="form-control" placeholder="Enter your Note" rows="2"></textarea>
+        </div>
+    </div>
+    <div class="col-md-2 col-12">
+        <div>
+            <label>Attachment</label>
+        </div>
+        <div class="file-container-input">
+            <button type="button" class="file-button" onclick="openFile(this)">
+                <span>Attach File</span>
+                <img src="../img//icons/upload.svg" alt="">
+            </button>
+            <input type="file" class="file-input d-none" id="attachment">
+        </div>
+    </div>
+</div>
+`;
+$(".row-note").append(newRow);
+});
   </script>
 </body>
 

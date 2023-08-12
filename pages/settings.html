@@ -5746,6 +5746,10 @@
         event.preventDefault();
       }else if (target.is('td.model-btns')) {
         event.preventDefault();
+      }else if (target.is('td:first-child')) {
+        event.preventDefault();
+      }else if (target.is('td:first-child input')) {
+        event.preventDefault();
       } else {
         window.location.href = 'Create-userSettings.html';
       }

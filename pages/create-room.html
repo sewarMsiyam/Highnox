@@ -1020,10 +1020,7 @@
 
   <script type="text/javascript">
     $(function () {
-
-    // Start counting from the third row
     var counter = 1;
-
     $(".add_new_Budget").on("click", function (event) {
         event.preventDefault();
 
@@ -1045,8 +1042,7 @@
 
         // Insert the columns inside a row
         newRow.append(cols);
-
-        // Insert the row inside a table
+        $('.selectpicker').selectpicker('refresh');
         $(".table-Budget").append(newRow);
 
         // Increase counter after each row insertion
