@@ -154,15 +154,17 @@ var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
   });
 
 
-
 // import list
-  const fileInput = document.getElementById('fileInput');
-  fileInput.addEventListener('change', (event) => {
-    const selectedFile = event.target.files[0];
-    if (selectedFile) {
-      console.log('Selected file path:', selectedFile.name); 
-    }
-  });
+const fileInput = document.getElementById('fileInput');
+fileInput.addEventListener('change', (event) => {
+  const selectedFile = event.target.files[0];
+  if (selectedFile) {
+    const sewarDiv = document.getElementById('namefile');
+    sewarDiv.textContent = selectedFile.name;
+    console.log('Selected file path:', selectedFile.name); 
+  }
+});
+
 
 
 

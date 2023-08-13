@@ -516,7 +516,7 @@
                 <div class=" tab-pane fade show active" id="clients" role="tabpanel" aria-labelledby="clients-tab">
                   <div class="container-fluid px-4 pb-4" id="back-client">
                     <div class="firstNav row justify-content-between">
-                      <div class="col-md-4 col-12 padding-0">
+                      <div class="col-md-3 col-12 padding-0">
                         <ul class="nav nav-tabs  align-items-center nav-f-s">
                         <li class="nav-item list" role="presentation">
                           <button class="nav-link nav-btn active all" id="all-tab" data-bs-toggle="tab" data-bs-target="#all"
@@ -542,33 +542,32 @@
                       </ul>
                       </div>
 
-                      <div class="col-md-7 col-12 justify-content-between align-items-center navStatus">
-                        <div class="row">
+                      <div class="col-md-8 col-12 justify-content-between align-items-center navStatus">
+                        <div class="row justify-content-end">
                           <div class="col col-md-2 document-btns col-12">                      
                             <button><img src="../img/icons/pdf.svg" alt="pdf" class="file-download"></button>
                             <button><img src="../img/icons/excel.svg" alt="pdf" class="file-download"></button>
                            
                           </div>
-                          <div class="col col-md-6 col-12">
+                          <div class="col col-md-5 col-12">
                        
-                              <form class="d-flex input-form search-form">
-                            <img src="../img/icons/search-icon.svg" />
-                            <input class="form-control me-2 search-placeholder" type="search" placeholder="Search"
-                              aria-label="Search" />
-                          </form>
-                           
+                            <form class="d-flex input-form search-form">
+                              <img src="../img/icons/search-icon.svg"  />
+                              <input class="form-control me-2 search-placeholder" type="search" placeholder="Search"
+                                aria-label="Search" />
+                            </form>
+                            
                           </div>
-                          <div class="col col-md-4 col-12 d-flex">
+                          <div class="col col-md-4 col-12">
                             <input id="fileInput" type="file" class="d-none"/>
-                            <label for="fileInput" class="btn btn-primary text-white mx-1">
+                            <label for="fileInput" id="namefile" class="btn btn-primary text-white m-1">
                               <i class="fa-solid fa-arrow-up-from-bracket pr-1"></i>
                               import list
                             </label>
-                             <a class="btn btn-primary create-btn" href="create-room.html">
+                             <a class="btn btn-primary create-btn m-1" href="create-room.html">
                                 <i class="bi bi-plus-circle-fill"></i>
                                 Create
                             </a>
-                         
                           </div>
                         </div>
                       </div>
@@ -714,7 +713,7 @@
                                   </th>
                                   <th onclick="sortTable(14, 'myTable')" class="style-th">
                                     <div>
-                                     
+                                      <span>Action</span>
                                     </div>
                                   </th>
                                 </tr>
