@@ -23,6 +23,16 @@
 .border-radius-2 {
   border-radius: 2px !important;
 }
+.dropdown-menu .user-details .image-container > div:nth-child(2) {
+  width: 100%;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+  margin-top: 10px;
+}
 /* .datepicker {
   width: 220px !important;
 }
