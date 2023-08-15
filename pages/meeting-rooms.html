@@ -1019,22 +1019,74 @@
 
 
   <script src="../JS/layout.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script> -->
 
-
+  <script type="text/javascript" src="../JS/dashboard/dragula.js"></script>
   <!-- js -->
   <script>
-    $(document).ready(TaskListInitialize);
-    function TaskListInitialize() {
-      $(".grid-column").sortable({
-        connectWith: ".grid-column,.delete-container",
-        receive: function (e, ui) {
 
-        },
-        stop: function (e, ui) {
-        }
-      });
+const options = {
+  draggable: "td", 
+  delay: 100, 
+};
+
+const tables = document.querySelectorAll("table");
+tables.forEach(table => {
+  new Draggable(table, options);
+});
+
+tables.forEach(table => {
+  table.addEventListener("drag:stop", (event) => {
+    const draggedItem = event.detail.source;
+    const targetCell = document.elementFromPoint(event.clientX, event.clientY);
+
+    // اختبار الهدف إذا كان td أو لا
+    if (targetCell.tagName.toLowerCase() === "td") {
+      // نقل العنصر إلى الخلية المستهدفة
+      targetCell.appendChild(draggedItem);
     }
+  });
+});
+
+
+  //  dragula([
+  //   ...document.querySelectorAll("td")
+  // ], {
+  //   removeOnSpill: false
+  // })
+  // .on("drag", function (el) {
+  //   el.className.replace("ex-moved", "");
+  // })
+  // .on("drop", function (el, target, source) {
+  //   el.className += " ex-moved";
+  //   alert("Item dropped into destination table: " + target.parentElement.id);
+  // })
+  // .on("over", function (el, container) {
+  //   container.className += " ex-over";
+  // })
+  // .on("out", function (el, container) {
+  //   container.className.replace(" ex-over", "");
+  // });
+
+
+
+
+
+
+//   $(document).ready(TaskListInitialize);
+// function TaskListInitialize() {
+//     $(".grid-column").sortable({
+//         connectWith: ".grid-column, .delete-container",
+//         receive: function (e, ui) {
+//             alert("alert item.");
+//         },
+//         stop: function (e, ui) {
+//             // Additional code for when sorting is complete
+//         }
+//     });
+//   }
+
+
   </script>
 
 

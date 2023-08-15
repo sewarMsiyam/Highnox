@@ -66,20 +66,62 @@
 
 
 //multiple select
-  $('.selectpicker').selectpicker();
-  $('.selectpicker').on('changed.bs.select', function (e) {
-    const selectedItems = $(this).val();
-    const selectedCount = selectedItems.length;
+  // $('.selectpicker').selectpicker();
+  // $('.selectpicker').on('changed.bs.select', function (e) {
+  //   const selectedItems = $(this).val();
+  //   const selectedCount = selectedItems.length;
+  //   if (selectedCount >= 3) {
+  //     $(this).parent().find('.filter-option-inner-inner').html(`<span style="color: #495057 !important;">${selectedCount} options selected</span>`);
+  //   }  
+  // });
 
+  $(document).ready(function() {
+    let isDropdownOpen = false;
   
-    if (selectedCount >= 3) {
-      $(this).parent().find('.filter-option-inner-inner').html(`<span style="color: #495057 !important;">${selectedCount} options selected</span>`);
-    }
+    $('.selectpicker').selectpicker();
+  
+    $('.selectpicker').on('changed.bs.select', function (e) {
+      const selectedItems = $(this).val();
+      const selectedCount = selectedItems.length;
+      if (selectedCount >= 3) {
+        $(this).parent().find('.filter-option-inner-inner').html(`<span style="color: #495057 !important;">${selectedCount} options selected</span>`);
+      }
+    });
+    
+    $('.selectpicker').on('show.bs.select', function () {
+      isDropdownOpen=true;
+      console.log("show");
+    });
+
+    $('.selectpicker').on('shown.bs.select', function (e) {
+      console.log("shown");
+      isDropdownOpen=true;
+      if(isDropdownOpen){
+        $('input').on('click', function (e) {
+          e.preventDefault();
+          $('.selectpicker').selectpicker('toggle');
+          isDropdownOpen=false;
+        });
+      }else{
+        $('.selectpicker').selectpicker('toggle');
+        isDropdownOpen=false;
+
+      }
+      e.preventDefault();
+    });
+
+
+    $('.selectpicker').on('hide.bs.select', function () {
+      console.log("hide");
+      isDropdownOpen=false;
+    });
+
+    $('.selectpicker').on('hidden.bs.select', function () {
+      console.log("hidden");
+      isDropdownOpen=false;
+    });
+  
   });
-
-  
-
-
 
 // toggle menu in sidebar
 var toggleSliderMenu = document.querySelectorAll(".display-menu");
