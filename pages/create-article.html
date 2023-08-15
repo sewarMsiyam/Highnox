@@ -792,7 +792,7 @@
                                 <h4 class="py-2">Add Articles</h4>
                               </div>
                               <div class="d-flex justify-content-start align-items-center">
-                                <a href="#" class="btn btn-primary create-btn add_new_category ">
+                                <a href="#" class="btn btn-primary create-btn add_new_category1 ">
                                   <i class="bi bi-plus-circle-fill"></i>
                                   Add new Article
                                </a>
@@ -800,7 +800,7 @@
                             </div>
                             <div class="table-responsive bg-light mt-4 border-radius-20 shadow">
                               <div class="secondTableContainer">
-                                <table class="table " id="myTable">
+                                <table class="table table1" id="myTable">
                                       <thead>
                                         <tr class="tr" >
                                           <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
@@ -870,7 +870,7 @@
                                             </div>
                                           </th>
                                           <th onclick="sortTable(11, 'myTable')" class="style-th">
-                                            <div>
+                                            <div style="width: 151px;">
                                               <span>Action</span><span><img
                                               src="../images/sort-ic.svg" class="sotTble" /></span>
                                             </div>
@@ -1166,7 +1166,7 @@
                                               </div>
                                             </th>
                                             <th onclick="sortTable(9, 'myTable')" class="style-th">
-                                              <div>
+                                              <div style="width: 151px;">
                                                 <span>Action</span><span><img
                                                 src="../images/sort-ic.svg" class="sotTble" /></span>
                                               </div>
@@ -1221,7 +1221,7 @@
                                <div class="d-flex justify-content-end mt-4">
                                   <a href="#" class="btn btn-primary create-btn add_new_category3 ">
                                     <i class="bi bi-plus-circle-fill"></i>
-                                    Add new Article
+                                    Add new Article  
                                  </a>
                               </div>
                               <div class="table-responsive bg-light mt-4 border-radius-20 shadow">
@@ -1284,7 +1284,7 @@
                                               </div>
                                             </th>
                                             <th onclick="sortTable(9, 'myTable')" class="style-th">
-                                              <div>
+                                              <div style="width: 151px;">
                                                 <span>Action</span><span><img
                                                 src="../images/sort-ic.svg" class="sotTble" /></span>
                                               </div>
@@ -1815,47 +1815,65 @@
 <script type="text/javascript">
     $(function () {
 
-    // Start counting from the third row
-    var counter = 1;
+// Start counting from the third row
+var counter = 1;
 
-    $(".add_new_category").on("click", function (event) {
-        event.preventDefault();
+$(".add_new_category1").on("click", function (event) {
+    event.preventDefault();
 
-        var newRow = $('<tr class="tr style-table-my1 tr-active">');
-        var cols = '';
+    var newRow = $('<tr class="tr style-table-my1 tr-active">');
+    var cols = '';
 
-        // Table columns
-        cols += '<td class="style-td"><input type="checkbox" class="" id="customCheck1"></td>';
-        cols += '<td style="width:10%;" class="style-td"><input class="form-control rounded-0" type="text" name="firstname" placeholder="First name"></td>';
-        cols += '<td style="width:10%;" class="style-td"><input class="form-control rounded-0" type="text" name="lastname" placeholder="Last name"></td>';
-        cols += '<td style="width:4%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
-        cols += '<td style="width:10%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
-        cols += '<td style="width:4%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
-        cols += '<td style="width:4%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
-        cols += '<td style="width:4%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
-        cols += '<td style="width:10%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
-        cols += '<td style="width:10%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
-        cols += '<td style="width:10%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
-        cols += '<td  class="style-td"> <button type="button" class="btn btn-secondary dataTableButtons" data-bs-toggle="modal" data-bs-target="#exampleModalCenter" ><img src="../images/client-image.svg" class="image-actions"></button> <div class="tooltip-left btn btn-secondary dataTableButtons"> <img src="../images/client-person.svg" class="image-actions" /> <span class="tooltiptext">Tooltip text</span> </div> <button type="button" class="btn btn-secondary dataTableButtons edite-save"><i class="fa-solid fa-floppy-disk"></i> </button> <button type="button" class="btn btn-secondary dataTableButtons deleteRow"><i class="fa fa-trash"></i></button></td> </tr>';
+    // Table columns
+    cols += '<td class="style-td"><input type="checkbox" class="" id="customCheck1"></td>';
+    cols += '<td class="style-td"><input class="form-control rounded-0" type="date" name="firstname" placeholder="First name" style="height:33px; padding:0;"></td>';
+    cols += '<td class="style-td"><input class="form-control rounded-0" type="date" name="lastname" placeholder="Last name" style="height:33px; padding:0;"></td>';
+    cols += '<td class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
+    cols += '<td class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
+    cols += '<td class="style-td"><select  class="form-control border-0"> <option>unit 1</option> <option>unit 2</option> <option>unit 3</option> </select></td>';
+    cols += '<td class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
+    cols += '<td class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
+    cols += '<td class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
+    cols += '<td class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
+    cols += '<td class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
+    cols += '<td  class="style-td"> <button type="button" class="btn btn-secondary dataTableButtons" data-bs-toggle="modal" data-bs-target="#exampleModalCenter" ><img src="../images/client-image.svg" class="image-actions"></button> <div class="tooltip-left btn btn-secondary dataTableButtons"> <img src="../images/client-person.svg" class="image-actions" /> <span class="tooltiptext">Tooltip text</span> </div> <button type="button" class="btn btn-secondary dataTableButtons edite-save"><i class="fa-solid fa-floppy-disk"></i> </button> <button type="button" class="btn btn-secondary dataTableButtons deleteRow"><i class="fa fa-trash"></i></button></td> </tr>';
 
-        // cols += '<td><button class="btn btn-danger rounded-0" id ="deleteRow"><i class="fa fa-trash"></i></button</td>';
+    // cols += '<td><button class="btn btn-danger rounded-0" id ="deleteRow"><i class="fa fa-trash"></i></button</td>';
 
-        // Insert the columns inside a row
-        newRow.append(cols);
+    // Insert the columns inside a row
+    newRow.append(cols);
 
-        // Insert the row inside a table
-        $("table").append(newRow);
+    // Insert the row inside a table
+    $(".table1").append(newRow);
 
-        // Increase counter after each row insertion
-        counter++;
-    });
-
-    // Remove row when delete btn is clicked
-    $("table").on("click", "#deleteRow", function (event) {
-        $(this).closest("tr").remove();
-        counter -= 1
-    });
+    // Increase counter after each row insertion
+    counter++;
 });
+
+
+// Remove row when delete btn is clicked
+$(".table1").on("click", ".deleteRow", function (event) {
+    $(this).closest("tr").remove();
+    counter -= 1
+});
+$(".table1").on("click", ".edite-save", function (event) {
+    var row = $(this).closest("tr");
+    var inputs = row.find("input");
+    var editIcon = row.find(".fa-solid.fa-floppy-disk");
+
+    inputs.each(function () {
+        $(this).prop("readonly", !$(this).prop("readonly"));
+    });
+
+    if (editIcon.length > 0) {
+        editIcon.removeClass("fa-solid fa-floppy-disk").addClass("fa fa-pen");
+    } else {
+        editIcon = row.find(".fa fa-pen");
+        editIcon.removeClass("fa fa-pen").addClass("fa-solid fa-floppy-disk");
+    }
+});
+});
+
   </script>
 
   <script type="text/javascript">
@@ -1872,15 +1890,15 @@
 
         // Table columns
         cols += '<td class="style-td"><input type="checkbox" class="" id="customCheck1"></td>';
-        cols += '<td style="width:7%;" class="style-td"><input class="form-control rounded-0" type="date" name="firstname" placeholder="First name" style="height:33px; padding:0;"></td>';
-        cols += '<td style="width:7%;" class="style-td"><input class="form-control rounded-0" type="date" name="lastname" placeholder="Last name" style="height:33px; padding:0;"></td>';
-        cols += '<td style="width:7%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
-        cols += '<td style="width:7%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
-        cols += '<td style="width:7%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
-        cols += '<td style="width:7%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
-        cols += '<td style="width:7%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
-        cols += '<td style="width:7%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
-        cols += '<td  class="style-td"> <button type="button" class="btn btn-secondary dataTableButtons" data-bs-toggle="modal" data-bs-target="#exampleModalCenter" ><img src="../images/client-image.svg" class="image-actions"></button> <div class="tooltip-left btn btn-secondary dataTableButtons"> <img src="../images/client-person.svg" class="image-actions" /> <span class="tooltiptext">Tooltip text</span> </div> <button type="button" class="btn btn-secondary dataTableButtons edite-save"><i class="fa-solid fa-floppy-disk"></i> </button> <button type="button" class="btn btn-secondary dataTableButtons deleteRow"><i class="fa fa-trash"></i></button></td> </tr>';
+        cols += '<td class="style-td"><input class="form-control rounded-0" type="date" name="firstname" placeholder="First name" style="height:33px; padding:0;"></td>';
+        cols += '<td class="style-td"><input class="form-control rounded-0" type="date" name="lastname" placeholder="Last name" style="height:33px; padding:0;"></td>';
+        cols += '<td class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
+        cols += '<td class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
+        cols += '<td class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
+        cols += '<td class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
+        cols += '<td class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
+        cols += '<td class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
+        cols += '<td class="style-td"> <button type="button" class="btn btn-secondary dataTableButtons" data-bs-toggle="modal" data-bs-target="#exampleModalCenter" ><img src="../images/client-image.svg" class="image-actions"></button> <div class="tooltip-left btn btn-secondary dataTableButtons"> <img src="../images/client-person.svg" class="image-actions" /> <span class="tooltiptext">Tooltip text</span> </div> <button type="button" class="btn btn-secondary dataTableButtons edite-save"><i class="fa-solid fa-floppy-disk"></i> </button> <button type="button" class="btn btn-secondary dataTableButtons deleteRow"><i class="fa fa-trash"></i></button></td> </tr>';
 
         // cols += '<td><button class="btn btn-danger rounded-0" id ="deleteRow"><i class="fa fa-trash"></i></button</td>';
 
@@ -1934,14 +1952,14 @@
 
         // Table columns
         cols += '<td class="style-td"><input type="checkbox" class="" id="customCheck1"></td>';
-        cols += '<td style="width:7%;" class="style-td"><input class="form-control rounded-0" type="date" name="firstname" placeholder="First name" style="height:33px; padding:0;"></td>';
-        cols += '<td style="width:7%;" class="style-td"><input class="form-control rounded-0" type="date" name="lastname" placeholder="Last name" style="height:33px; padding:0;"></td>';
-        cols += '<td style="width:7%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
-        cols += '<td style="width:7%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
-        cols += '<td style="width:7%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
-        cols += '<td style="width:7%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
-        cols += '<td style="width:7%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
-        cols += '<td style="width:7%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
+        cols += '<td class="style-td"><input class="form-control rounded-0" type="date" name="firstname" placeholder="First name" style="height:33px; padding:0;"></td>';
+        cols += '<td class="style-td"><input class="form-control rounded-0" type="date" name="lastname" placeholder="Last name" style="height:33px; padding:0;"></td>';
+        cols += '<td class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
+        cols += '<td class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
+        cols += '<td class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
+        cols += '<td class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
+        cols += '<td class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
+        cols += '<td class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
         cols += '<td  class="style-td"> <button type="button" class="btn btn-secondary dataTableButtons" data-bs-toggle="modal" data-bs-target="#exampleModalCenter" ><img src="../images/client-image.svg" class="image-actions"></button> <div class="tooltip-left btn btn-secondary dataTableButtons"> <img src="../images/client-person.svg" class="image-actions" /> <span class="tooltiptext">Tooltip text</span> </div> <button type="button" class="btn btn-secondary dataTableButtons edite-save"><i class="fa-solid fa-floppy-disk"></i> </button> <button type="button" class="btn btn-secondary dataTableButtons deleteRow"><i class="fa fa-trash"></i></button></td> </tr>';
 
         // cols += '<td><button class="btn btn-danger rounded-0" id ="deleteRow"><i class="fa fa-trash"></i></button</td>';
@@ -1980,12 +1998,6 @@
         counter -= 1
     });
 });
-
-
-
-
-
-
 
 
 

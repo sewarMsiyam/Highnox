@@ -5302,35 +5302,31 @@
 
   <script src="JS/dashboard/textEditor/textEditor.js"></script> -->
 
-
-
-
     <script src="JS/layout.js"></script>
 
-<!-- 
 
-
-    <script>
-        $(document).ready(function () {
-            $("#myInput").on("keyup", function () {
-                var value = $(this).val().toLowerCase();
-                $("#myTable tr").filter(function () {
-                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-                });
-            });
-        });
-        $(document).ready(function () {
-            $("#myInput2").on("keyup", function () {
-                var value = $(this).val().toLowerCase();
-                $("#myTable1 tr").filter(function () {
-                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-                });
-            });
-        });
-    </script> -->
 
 
     <script type="text/javascript">
+        const copyIcons = document.querySelectorAll(".copy-icon");
+        copyIcons.forEach((icon) => {
+        icon.addEventListener("click", function () {
+            backOffer("back-offer", "add-offer");
+        });
+        });
+        const copyActivityIcons = document.querySelectorAll(".copy-activity-icon");
+        copyIcons.forEach((icon) => {
+        icon.addEventListener("click", function () {
+            backActivity("back-activity", "add-activity");
+        });
+        });
+        const close_btns = document.querySelectorAll(".close-ic");
+
+        close_btns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+            btn.parentElement.closest(".task").style.display = "none";
+        });
+        });
 
         $('.tr-offers ').on('click', function (event) {
             const target = $(event.target);
@@ -5408,10 +5404,7 @@
     //   }
     // });
 
-
     </script>
-
-
 
 </body>
 

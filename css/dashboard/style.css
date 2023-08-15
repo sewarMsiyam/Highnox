@@ -920,9 +920,10 @@ td.ui-sortable {
   vertical-align: middle !important;
 }
 
-.table .filter-option-inner-inner{
+.table .filter-option-inner-inner {
   font-size: 11px;
   vertical-align: middle !important;
+  text-align: center;
 }
 
 /* .ui.action.input:not([class*="left action"])>.button:last-child, .ui.action.input:not([class*="left action"])>.buttons:last-child>.button, .ui.action.input:not([class*="left action"])>.dropdown:last-child {

@@ -554,26 +554,26 @@
                             </div>
 
                             <div class="col-md-7 col-12 justify-content-between align-items-center navStatus">
-                                <div class="row">
-                                    <div class="col col-md-2 document-btns col-12">
+                                <div class="row justify-content-end">
+                                    <div class=" document-btns mx-2">
                                         <button><img src="../img/icons/pdf.svg" alt="pdf"
                                                 class="file-download"></button>
                                         <button><img src="../img/icons/excel.svg" alt="pdf"
                                                 class="file-download"></button>
                                     </div>
-                                    <div class="col col-md-6 col-12">
+                                    <div class="mx-2 ">
                                         <form class="d-flex input-form search-form">
                                             <img src="../img/icons/search-icon.svg" />
                                             <input class="form-control me-2 search-placeholder" type="search"
                                                 placeholder="Search" aria-label="Search" />
                                         </form>
                                     </div>
-                                    <div class="col col-md-4 col-12 d-flex ">
-                                        <!-- <input id="fileInput" type="file" class="d-none"/>
-                            <label for="fileInput" class="btn btn-primary text-white mx-1">
-                              <i class="fa-solid fa-arrow-up-from-bracket pr-1"></i>
-                              import list
-                            </label> -->
+                                    <div class="  d-flex ">
+                                        <input id="fileInput" type="file" class="d-none"/>
+                                        <label for="fileInput" id="namefile" class="btn btn-primary text-white m-1">
+                                        <i class="fa-solid fa-arrow-up-from-bracket pr-1"></i>
+                                        import list
+                                        </label>
                                         <a class="btn btn-primary create-btn mx-1" href="Create-userSettings.html">
                                             <i class="bi bi-plus-circle-fill"></i>
                                             Create user
@@ -8229,6 +8229,7 @@
                     newRow.append(cols);
                     container.find(".table").find("tbody").append(newRow);
                     counterMap[tableClass]++;
+                    alert(counterMap[tableClass]); // alert
                     inputs.val("");
                 } else {
                     container.find(".value-danger").removeClass("d-none");
@@ -8244,11 +8245,11 @@
                 var editIcon = $(this).find("i");
                 var inputRoleElement = $(this).closest("tr").find("td .form-control");
 
-                if (editIcon.hasClass("fa-floppy-disk")) {
-                    editIcon.removeClass("fa-floppy-disk").addClass("fa-pen");
+                if (editIcon.hasClass("fa-check")) {
+                    editIcon.removeClass("fa-check").addClass("fa-pen");
                     inputRoleElement.prop("readonly", true);
                 } else {
-                    editIcon.removeClass("fa-pen").addClass("fa-floppy-disk");
+                    editIcon.removeClass("fa-pen").addClass("fa-check");
                     inputRoleElement.prop("readonly", false);
                     inputRoleElement.focus();
                 }

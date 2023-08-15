@@ -357,3 +357,50 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   top: 0;
   width: auto;
 }
+
+input[type="month"] {
+  display: inline-block;
+  position: relative;
+  background-image: url("../images/date.svg");
+  background-repeat: no-repeat;
+  background-position: 97% 6px;
+}
+
+input[type="month"]::-webkit-calendar-picker-indicator {
+  background: transparent;
+  bottom: 0;
+  color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: auto;
+}
+
+input[type="Week"] {
+  display: inline-block;
+  position: relative;
+  background-image: url("../images/date.svg");
+  background-repeat: no-repeat;
+  background-position: 97% 6px;
+}
+
+input[type="Week"]::-webkit-calendar-picker-indicator {
+  background: transparent;
+  bottom: 0;
+  color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: auto;
+}
+
+
+.image-container .navbar-span{
+  font-size: 1.5rem !important;
+}

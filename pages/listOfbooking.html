@@ -620,7 +620,7 @@
               </div>
 
               <div class="col-md-5 col-12 justify-content-between align-items-center navStatus">
-                <div class="row">
+                <div class="row justify-content-end">
                   <div class="col col-md-2 document-btns col-12">
               
                     <button><img src="../img/icons/pdf.svg" alt="pdf" class="file-download"></button>
@@ -1066,25 +1066,6 @@
   <script src="../JS/layout.js"></script>
 
   
-  <script type="text/javascript">
-    $('.trtabler').on('click', function (event) {
-      const target = $(event.target);
-
-      if (target.is('td:last-child')) {
-        event.preventDefault();
-      } else if (target.is('td:last-child button')) {
-        event.preventDefault();
-      } else if (target.is('td:last-child button img')) {
-        event.preventDefault();
-      } else if (target.is('td:last-child .tooltip-left')) {
-        event.preventDefault();
-      } else if (target.is('td:last-child div img')) {
-        event.preventDefault();
-      } else {
-        window.location.href = 'create-debit.html';
-      }
-    });
-  </script>
 </body>
 
 </html>
