@@ -1162,11 +1162,11 @@ $(".myTable_new").on("click", function (event) {
     var newRow = $('<tr class="tr style-table-my1 tr-active">');
     var cols = '';
     // Table columns
-    cols += '<td style="width:2%;" class="style-td"><span><input type="checkbox" class="" ></span></td>';
-    cols += '<td class="style-td"><input class="form-control rounded-0" type="date"></td>';
+    cols += '<td style="width:2%;" class="style-td"><span><input type="checkbox" ></span></td>';
+    cols += '<td class="style-td p-1"><div class="d-flex align-items-center position-relative form-control styleinTable rounded-0"> <input type="text" class="form-control fs-10 rounded-0 datepicker" placeholder="Select date"> <img class="dateTable-svg" width="12" src="../images/date.svg"> </div></td>';
     cols += '<td class="style-td"><select class="form-control rounded-0"> <option>Reminder 1</option> <option>Reminder 2</option> <option>Reminder 3</option> </select></td>';
     cols += '<td class="style-td"><select class="form-control rounded-0"> <option>Reminder 1</option> <option>Reminder 2</option> <option>Reminder 3</option> </select></td>';
-    cols += '<td class="style-td"><div class="d-flex align-items-center form-control rounded-0" style=" min-width: 170px; "> <select class="w-100 selectpicker" multiple aria-label="size 3 select example" data-live-search="true"> <option>Select Floor</option> <option>Floor 1</option> <option>Floor 2 </option> </select> <img class="input-svg" width="8" src="../images/img-droplist.svg"> </div></td>';
+    cols += '<td class="style-td"><div class="d-flex align-items-center form-control styleinTable rounded-0" style=" min-width: 170px; "> <select class="w-100 selectpicker" multiple aria-label="size 3 select example" data-live-search="true"> <option>Select Floor</option> <option>Floor 1</option> <option>Floor 2 </option> </select> <img class="input-svg" width="8" src="../images/img-droplist.svg"> </div></td>';
     cols += '<td class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
     cols += '<td class="style-td"><select class="form-control rounded-0"> <option>unit 1</option> <option>unit 2</option> <option>unit 3</option> </select></td>';
     cols += '<td class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
@@ -1179,6 +1179,7 @@ $(".myTable_new").on("click", function (event) {
     // Insert the row inside a table
     $("#myTable").append(newRow);
     $('.selectpicker').selectpicker('refresh');
+    $(".datepicker").datepicker('refresh');
 
     // Increase counter after each row insertion
     counter++;
@@ -1189,19 +1190,18 @@ $("#myTable").on("click", ".deleteRow", function (event) {
     counter -= 1
 });
 $("#myTable").on("click", ".edite-save", function (event) {
-        var row = $(this).closest("tr");
+  var row = $(this).closest("tr");
         var inputs = row.find("input");
         var select = row.find("select");
         var div = row.find("div");
         var pickers = row.find(".selectpicker");
         var checkboxes = row.find("input[type='checkbox']");
 
-
         var editIcon = $(this).find("i");
         inputs.each(function () {
-            if ($(this).attr("type") !== "checkbox") {
-        $(this).prop("disabled", !$(this).prop("disabled"));
-    }
+          if ($(this).attr("type") !== "checkbox") {
+            $(this).prop("disabled", !$(this).prop("disabled"));
+          }
         });
         select.each(function () {
             $(this).prop("disabled", !$(this).prop("disabled"));
@@ -1209,11 +1209,14 @@ $("#myTable").on("click", ".edite-save", function (event) {
         pickers.each(function () {
           var isDisabled = $(this).prop("disabled");
             $(this).toggleClass("disabled");
-            $(this).selectpicker("refresh"); 
+            $(this).selectpicker("refresh");  
         });
-        div.each(function () {
-          $(this).removeClass("form-control");
-        });
+
+        if(editIcon.hasClass("fa-check")){
+          row.find(".styleinTable").removeClass("form-control");
+        }else if(editIcon.hasClass("fa-pen")){
+            row.find(".styleinTable").addClass("form-control");
+        }
 
         if (editIcon.hasClass("fa-check")) {
           editIcon.removeClass("fa-check").addClass("fa-pen");
@@ -1221,6 +1224,8 @@ $("#myTable").on("click", ".edite-save", function (event) {
           editIcon.removeClass("fa-pen").addClass("fa-check");
         }
 });
+
+
 });
 
 

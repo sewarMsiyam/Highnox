@@ -1300,128 +1300,191 @@
 
 
    // --------------------------------------------------
-            var counter = 1;
-        $(".add_new_Education").on("click", function (event) {
-            event.preventDefault();
 
-            var newRow = $('<tr class="tr style-table-my1 tr-active">');
-            var cols = '';
+var counter = 1;
+$(".add_new_Education").on("click", function (event) {
+    event.preventDefault();
 
-            cols += '<td class="style-td"><input type="checkbox" class="" id="customCheck1"></td>';
-            cols += '<td class="style-td"><input class="form-control rounded-0" type="text" name="Eduction" placeholder="Eduction"></td>';
-            cols += '<td class="style-td"><input class="form-control rounded-0" type="text" name="lastname" placeholder="School Name"></td>';
-            cols += '<td class="style-td"><input class="form-control rounded-0" type="date" name="handle" placeholder="From"></td>';
-            cols += '<td class="style-td"><input class="form-control rounded-0" type="date" name="handle" placeholder="to"></td>';
-            cols += '<td class="style-td"><button type="button" class="btn btn-secondary dataTableButtons edite-save"><i class="fa-solid fa-floppy-disk"></i> </button> <button type="button" class="btn btn-secondary dataTableButtons" data-bs-toggle="modal" data-bs-target="#exampleModalCenter"> <img src="../images/client-image.svg" class="image-actions"> </button> <div class="tooltip-left btn btn-secondary dataTableButtons"> <img src="../images/client-person.svg" class="image-actions"> <span class="tooltiptext">Tooltip text</span> </div> <button type="button" class="btn btn-secondary dataTableButtons deleteRow"><i class="fa fa-trash"></i></button> </td>';
-            newRow.append(cols);
+    var newRow = $('<tr class="tr style-table-my1 tr-active">');
+    var cols = '';
 
-            $(".table-Education").append(newRow);
-            counter++;
-        });
-        $(".table-Education").on("click", ".edite-save", function (event) {
-            var row = $(this).closest("tr");
-            var inputs = row.find("input");
-            var editIcon = row.find(".fa-solid.fa-floppy-disk");
+    cols += '<td class="style-td"><input type="checkbox"></td>';
+    cols += '<td class="style-td"><input class="form-control rounded-0" type="text" name="Eduction" placeholder="Eduction"></td>';
+    cols += '<td class="style-td"><input class="form-control rounded-0" type="text" name="lastname" placeholder="School Name"></td>';
+    cols += '<td class="style-td p-1"><div class="d-flex align-items-center position-relative form-control styleinTable rounded-0"> <input type="text" class="form-control fs-10 rounded-0 datepicker" placeholder="Select date"> <img class="dateTable-svg" width="12" src="../images/date.svg"> </div></td>';
+    cols += '<td class="style-td p-1"><div class="d-flex align-items-center position-relative form-control styleinTable rounded-0"> <input type="text" class="form-control fs-10 rounded-0 datepicker" placeholder="Select date"> <img class="dateTable-svg" width="12" src="../images/date.svg"> </div></td>';
+    cols += '<td  class="style-td p-1"><button type="button" class="btn btn-secondary dataTableButtons edite-save"><i class="fa-solid fa-check"></i> </button> <button type="button" class="btn btn-secondary dataTableButtons" data-bs-toggle="modal" data-bs-target="#exampleModalCenter"><img src="../images/client-image.svg" class="image-actions"></button> <div class="tooltip-left btn btn-secondary dataTableButtons"> <img src="../images/client-person.svg" class="image-actions" /> <span class="tooltiptext">Tooltip text</span> </div> <button type="button" class="btn btn-secondary dataTableButtons deleteRow"><i class="fa fa-trash"></i></button></td> </tr>';
+    newRow.append(cols);
 
-            inputs.each(function () {
-                $(this).prop("readonly", !$(this).prop("readonly"));
-            });
+    $(".table-Education").append(newRow);
+    $(".datepicker").datepicker('refresh');
 
-            if (editIcon.length > 0) {
-                editIcon.removeClass("fa-solid fa-floppy-disk").addClass("fa fa-pen");
-            } else {
-                editIcon = row.find(".fa fa-pen");
-                editIcon.removeClass("fa fa-pen").addClass("fa-solid fa-floppy-disk");
-            }
-        });
+    counter++;
+});
+$(".table-Education").on("click", ".edite-save", function (event) {
+    var row = $(this).closest("tr");
+var inputs = row.find("input");
+var select = row.find("select");
+var div = row.find("div");
+var pickers = row.find(".selectpicker");
+var checkboxes = row.find("input[type='checkbox']");
 
-        $(".table-Education").on("click", ".deleteRow", function (event) {
-            $(this).closest("tr").remove();
-            counter -= 1
-        });
+var editIcon = $(this).find("i");
+inputs.each(function () {
+  if ($(this).attr("type") !== "checkbox") {
+    $(this).prop("disabled", !$(this).prop("disabled"));
+  }
+});
+select.each(function () {
+    $(this).prop("disabled", !$(this).prop("disabled"));
+});
+pickers.each(function () {
+  var isDisabled = $(this).prop("disabled");
+    $(this).toggleClass("disabled");
+    $(this).selectpicker("refresh");  
+});
 
+if(editIcon.hasClass("fa-check")){
+  row.find(".styleinTable").removeClass("form-control");
+}else if(editIcon.hasClass("fa-pen")){
+    row.find(".styleinTable").addClass("form-control");
+}
 
+if (editIcon.hasClass("fa-check")) {
+  editIcon.removeClass("fa-check").addClass("fa-pen");
+} else {
+  editIcon.removeClass("fa-pen").addClass("fa-check");
+}
+});
 
-        var counter1 = 1;
-        $(".add_new_Employer").on("click", function (event) {
-            event.preventDefault();
-
-            var newRow = $('<tr class="tr style-table-my1 tr-active">');
-            var cols = '';
-            cols += '<td class="style-td"><input type="checkbox" class="" id="customCheck1"></td>';
-            cols += '<td class="style-td"><input class="form-control rounded-0" type="text" name="Eduction" placeholder="Eduction"></td>';
-            cols += '<td class="style-td"><input class="form-control rounded-0" type="text" name="lastname" placeholder="School Name"></td>';
-            cols += '<td class="style-td"><input class="form-control rounded-0" type="date" name="handle" placeholder="From"></td>';
-            cols += '<td class="style-td"><input class="form-control rounded-0" type="date" name="handle" placeholder="to"></td>';
-            cols += '<td class="style-td"> <button type="button" class="btn btn-secondary dataTableButtons edite-save"><i class="fa-solid fa-floppy-disk"></i> </button> <button type="button" class="btn btn-secondary dataTableButtons" data-bs-toggle="modal" data-bs-target="#exampleModalCenter"> <img src="../images/client-image.svg" class="image-actions"> </button> <div class="tooltip-left btn btn-secondary dataTableButtons"> <img src="../images/client-person.svg" class="image-actions"> <span class="tooltiptext">Tooltip text</span> </div> <button type="button" class="btn btn-secondary dataTableButtons deleteRow"><i class="fa fa-trash"></i></button></td>';
-            newRow.append(cols);
-
-            $(".table-Employer").append(newRow);
-            counter++;
-        });
-        $(".table-Employer").on("click", ".edite-save", function (event) {
-            var row = $(this).closest("tr");
-            var inputs = row.find("input");
-            var editIcon = row.find(".fa-solid.fa-floppy-disk");
-
-            inputs.each(function () {
-                $(this).prop("readonly", !$(this).prop("readonly"));
-            });
-
-            if (editIcon.length > 0) {
-                editIcon.removeClass("fa-solid fa-floppy-disk").addClass("fa fa-pen");
-            } else {
-                editIcon = row.find(".fa fa-pen");
-                editIcon.removeClass("fa fa-pen").addClass("fa-solid fa-floppy-disk");
-            }
-        });
-
-        $(".table-Employer").on("click", ".deleteRow", function (event) {
-            $(this).closest("tr").remove();
-            counter -= 1
-        });
+$(".table-Education").on("click", ".deleteRow", function (event) {
+    $(this).closest("tr").remove();
+    counter -= 1
+});
 
 
 
-        var counter2 = 1;
-        $(".add_new_Competence ").on("click", function (event) {
-            event.preventDefault();
+var counter1 = 1;
+$(".add_new_Employer").on("click", function (event) {
+    event.preventDefault();
 
-            var newRow = $('<tr class="tr style-table-my1 tr-active">');
-            var cols = '';
+    var newRow = $('<tr class="tr style-table-my1 tr-active">');
+    var cols = '';
+    cols += '<td class="style-td"><input type="checkbox"></td>';
+    cols += '<td class="style-td"><input class="form-control rounded-0" type="text" name="Eduction" placeholder="Eduction"></td>';
+    cols += '<td class="style-td"><input class="form-control rounded-0" type="text" name="lastname" placeholder="School Name"></td>';
+    cols += '<td class="style-td p-1"><div class="d-flex align-items-center position-relative form-control styleinTable rounded-0"> <input type="text" class="form-control fs-10 rounded-0 datepicker" placeholder="Select date"> <img class="dateTable-svg" width="12" src="../images/date.svg"> </div></td>';
+    cols += '<td class="style-td p-1"><div class="d-flex align-items-center position-relative form-control styleinTable rounded-0"> <input type="text" class="form-control fs-10 rounded-0 datepicker" placeholder="Select date"> <img class="dateTable-svg" width="12" src="../images/date.svg"> </div></td>';
+    cols += '<td  class="style-td p-1"><button type="button" class="btn btn-secondary dataTableButtons edite-save"><i class="fa-solid fa-check"></i> </button> <button type="button" class="btn btn-secondary dataTableButtons" data-bs-toggle="modal" data-bs-target="#exampleModalCenter"><img src="../images/client-image.svg" class="image-actions"></button> <div class="tooltip-left btn btn-secondary dataTableButtons"> <img src="../images/client-person.svg" class="image-actions" /> <span class="tooltiptext">Tooltip text</span> </div> <button type="button" class="btn btn-secondary dataTableButtons deleteRow"><i class="fa fa-trash"></i></button></td> </tr>';
+    newRow.append(cols);
 
-            cols += '<td class="style-td"><input type="checkbox" class="" id="customCheck1"></td>';
-            cols += '<td class="style-td"><input class="form-control rounded-0" type="text" name="Eduction" placeholder="Eduction"></td>';
-            cols += '<td class="style-td"><input class="form-control rounded-0" type="text" name="lastname" placeholder="School Name"></td>';
-            cols += '<td class="style-td"><input class="form-control rounded-0" type="date" name="handle" placeholder="From"></td>';
-            cols += '<td class="style-td"><input class="form-control rounded-0" type="date" name="handle" placeholder="to"></td>';
-            cols += '<td class="style-td"> <button type="button" class="btn btn-secondary dataTableButtons edite-save"><i class="fa-solid fa-floppy-disk"></i> </button> <button type="button" class="btn btn-secondary dataTableButtons" data-bs-toggle="modal" data-bs-target="#exampleModalCenter"> <img src="../images/client-image.svg" class="image-actions"> </button> <div class="tooltip-left btn btn-secondary dataTableButtons"> <img src="../images/client-person.svg" class="image-actions"> <span class="tooltiptext">Tooltip text</span> </div> <button type="button" class="btn btn-secondary dataTableButtons deleteRow"><i class="fa fa-trash"></i></button></td>';
-            newRow.append(cols);
+    $(".table-Employer").append(newRow);
+    $(".datepicker").datepicker('refresh');
 
-            $(".table-Competence").append(newRow);
-            counter++;
-        });
-        $(".table-Competence").on("click", ".edite-save", function (event) {
-            var row = $(this).closest("tr");
-            var inputs = row.find("input");
-            var editIcon = row.find(".fa-solid.fa-floppy-disk");
+    counter++;
+});
+$(".table-Employer").on("click", ".edite-save", function (event) {
+    var row = $(this).closest("tr");
+var inputs = row.find("input");
+var select = row.find("select");
+var div = row.find("div");
+var pickers = row.find(".selectpicker");
+var checkboxes = row.find("input[type='checkbox']");
 
-            inputs.each(function () {
-                $(this).prop("readonly", !$(this).prop("readonly"));
-            });
+var editIcon = $(this).find("i");
+inputs.each(function () {
+  if ($(this).attr("type") !== "checkbox") {
+    $(this).prop("disabled", !$(this).prop("disabled"));
+  }
+});
+select.each(function () {
+    $(this).prop("disabled", !$(this).prop("disabled"));
+});
+pickers.each(function () {
+  var isDisabled = $(this).prop("disabled");
+    $(this).toggleClass("disabled");
+    $(this).selectpicker("refresh");  
+});
 
-            if (editIcon.length > 0) {
-                editIcon.removeClass("fa-solid fa-floppy-disk").addClass("fa fa-pen");
-            } else {
-                editIcon = row.find(".fa fa-pen");
-                editIcon.removeClass("fa fa-pen").addClass("fa-solid fa-floppy-disk");
-            }
-        });
+if(editIcon.hasClass("fa-check")){
+  row.find(".styleinTable").removeClass("form-control");
+}else if(editIcon.hasClass("fa-pen")){
+    row.find(".styleinTable").addClass("form-control");
+}
+if (editIcon.hasClass("fa-check")) {
+  editIcon.removeClass("fa-check").addClass("fa-pen");
+} else {
+  editIcon.removeClass("fa-pen").addClass("fa-check");
+}
+});
 
-        $(".table-Competence").on("click", ".deleteRow", function (event) {
-            $(this).closest("tr").remove();
-            counter -= 1
-        });
+$(".table-Employer").on("click", ".deleteRow", function (event) {
+    $(this).closest("tr").remove();
+    counter -= 1
+});
+
+
+
+var counter2 = 1;
+$(".add_new_Competence ").on("click", function (event) {
+    event.preventDefault();
+
+    var newRow = $('<tr class="tr style-table-my1 tr-active">');
+    var cols = '';
+
+    cols += '<td class="style-td"><input type="checkbox"></td>';
+    cols += '<td class="style-td"><input class="form-control rounded-0" type="text" name="Eduction" placeholder="Eduction"></td>';
+    cols += '<td class="style-td"><input class="form-control rounded-0" type="text" name="lastname" placeholder="School Name"></td>';
+    cols += '<td class="style-td p-1"><div class="d-flex align-items-center position-relative form-control styleinTable rounded-0"> <input type="text" class="form-control fs-10 rounded-0 datepicker" placeholder="Select date"> <img class="dateTable-svg" width="12" src="../images/date.svg"> </div></td>';
+    cols += '<td class="style-td p-1"><div class="d-flex align-items-center position-relative form-control styleinTable rounded-0"> <input type="text" class="form-control fs-10 rounded-0 datepicker" placeholder="Select date"> <img class="dateTable-svg" width="12" src="../images/date.svg"> </div></td>';
+    cols += '<td  class="style-td p-1"><button type="button" class="btn btn-secondary dataTableButtons edite-save"><i class="fa-solid fa-check"></i> </button> <button type="button" class="btn btn-secondary dataTableButtons" data-bs-toggle="modal" data-bs-target="#exampleModalCenter"><img src="../images/client-image.svg" class="image-actions"></button> <div class="tooltip-left btn btn-secondary dataTableButtons"> <img src="../images/client-person.svg" class="image-actions" /> <span class="tooltiptext">Tooltip text</span> </div> <button type="button" class="btn btn-secondary dataTableButtons deleteRow"><i class="fa fa-trash"></i></button></td> </tr>';
+    newRow.append(cols);
+
+    $(".table-Competence").append(newRow);
+    $(".datepicker").datepicker('refresh');
+
+    counter++;
+});
+$(".table-Competence").on("click", ".edite-save", function (event) {
+    var row = $(this).closest("tr");
+var inputs = row.find("input");
+var select = row.find("select");
+var div = row.find("div");
+var pickers = row.find(".selectpicker");
+var checkboxes = row.find("input[type='checkbox']");
+
+var editIcon = $(this).find("i");
+inputs.each(function () {
+  if ($(this).attr("type") !== "checkbox") {
+    $(this).prop("disabled", !$(this).prop("disabled"));
+  }
+});
+select.each(function () {
+    $(this).prop("disabled", !$(this).prop("disabled"));
+});
+pickers.each(function () {
+  var isDisabled = $(this).prop("disabled");
+    $(this).toggleClass("disabled");
+    $(this).selectpicker("refresh");  
+});
+
+if(editIcon.hasClass("fa-check")){
+  row.find(".styleinTable").removeClass("form-control");
+}else if(editIcon.hasClass("fa-pen")){
+    row.find(".styleinTable").addClass("form-control");
+}
+
+if (editIcon.hasClass("fa-check")) {
+  editIcon.removeClass("fa-check").addClass("fa-pen");
+} else {
+  editIcon.removeClass("fa-pen").addClass("fa-check");
+}
+});
+
+$(".table-Competence").on("click", ".deleteRow", function (event) {
+    $(this).closest("tr").remove();
+    counter -= 1
+});
 
   </script>
 </body>

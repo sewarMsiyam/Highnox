@@ -1219,16 +1219,34 @@ $(function () {
         counter++;
     });
     $(".table-Articler").on("click", ".edite-save", function(event) {
-        var row = $(this).closest("tr");
+      var row = $(this).closest("tr");
         var inputs = row.find("input");
         var select = row.find("select");
+        var div = row.find("div");
+        var pickers = row.find(".selectpicker");
+        var checkboxes = row.find("input[type='checkbox']");
+
         var editIcon = $(this).find("i");
         inputs.each(function () {
+          if ($(this).attr("type") !== "checkbox") {
             $(this).prop("disabled", !$(this).prop("disabled"));
+          }
         });
         select.each(function () {
             $(this).prop("disabled", !$(this).prop("disabled"));
         });
+        pickers.each(function () {
+          var isDisabled = $(this).prop("disabled");
+            $(this).toggleClass("disabled");
+            $(this).selectpicker("refresh");  
+        });
+
+        if(editIcon.hasClass("fa-check")){
+          row.find(".styleinTable").removeClass("form-control");
+        }else if(editIcon.hasClass("fa-pen")){
+            row.find(".styleinTable").addClass("form-control");
+        }
+
         if (editIcon.hasClass("fa-check")) {
           editIcon.removeClass("fa-check").addClass("fa-pen");
         } else {

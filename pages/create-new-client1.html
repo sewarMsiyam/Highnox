@@ -1279,8 +1279,8 @@
                                                                             class="sotTble" /></span>
                                                                 </div>
                                                             </th>
-                                                            <th onclick="sortTable(5, 'myTable')" class="style-th">
-                                                                <div style=" width: 70px; "></div>
+                                                            <th class="style-th">
+                                                                <div style=" width: 70px;margin:auto; ">Action </div>
                                                             </th>
                                                         </tr>
                                                     </thead>
@@ -2437,11 +2437,11 @@
                                                                                 class="sotTble"></span>
                                                                     </div>
                                                                 </th>
-                                                                <th onclick="sortTable(6, 'myTable')" class="style-th">
-                                                                    <div> </div>
+                                                                <th class="style-th">
+                                                                    <div style=" width: 70px;margin:auto; "> Action </div>
                                                                 </th>
                                                             </tr>
-                                                        </thead>
+                                                        </thead> 
                                                         <tbody>
                                                             <tr class="tr style-table-my1 tr-active">
                                                                 <td class="style-td p-1">
@@ -4493,7 +4493,7 @@
                                                                     class="sotTble" /></span>
                                                         </div>
                                                     </th>
-                                                    <th onclick="sortTable(15, 'myTable')" class="style-th">
+                                                    <th class="style-th">
                                                         <span>Action</span>
                                                     </th>
                                                 </tr>
@@ -6271,8 +6271,8 @@
                                                                             class="sotTble" /></span>
                                                                 </div>
                                                             </th>
-                                                            <th onclick="sortTable(5, 'myTable')" class="style-th">
-                                                                <div style=" width: 70px; ">
+                                                            <th class="style-th">
+                                                                <div style=" width: 70px;margin:auto; ">
                                                                     <span>Action</span>
                                                                 </div>
                                                             </th>
@@ -6515,8 +6515,8 @@
                                                                                 class="sotTble"></span>
                                                                     </div>
                                                                 </th>
-                                                                <th onclick="sortTable(11, 'myTable')" class="style-th"
-                                                                    style=" width: 105px; ">
+                                                                <th class="style-th"
+                                                                    style=" width: 100px; ">
                                                                     <div>
                                                                         <span>Action</span>
                                                                     </div>
@@ -9494,12 +9494,12 @@
                 var cols = '';
 
                 // Table columns
-                cols += '<td style="width:16%;" class="style-td p-1"><div class="d-flex align-items-center"> <select class="selectpicker" multiple aria-label="size 3 select example" data-live-search="true"> <option> 1</option> <option> 2</option> <option> 3</option> </select> <img class="input-svg" width="12" src="../images/img-droplist.svg"> </div></td>';
-                cols += '<td style="width:16%;" class="style-td p-1"><input class="form-control rounded-0" type="date" name="firstname" placeholder="First name"></td>';
-                cols += '<td style="width:16%;" class="style-td p-1"><input class="form-control rounded-0" type="date" name="firstname" placeholder="First name"></td>';
-                cols += '<td style="width:16%;" class="style-td p-1"><input class="form-control rounded-0" type="text" name="lastname" placeholder="Credits"></td>';
-                cols += '<td style="width:16%;" class="style-td p-1"><select class="form-control border-0"> <option>select</option> <option>manageer 1</option> <option>manageer 2</option> <option>manageer 3</option> </select></td>';
-                cols += '<td style="width:16%;" class="style-td p-1"><div class="d-flex align-items-center"> <select class="selectpicker" multiple aria-label="size 3 select example" data-live-search="true"> <option> 1</option> <option> 2</option> <option> 3</option> </select> <img class="input-svg" width="12" src="../images/img-droplist.svg"> </div></td>';
+                cols += '<td class="style-td"><div class="d-flex align-items-center form-control styleinTable rounded-0" style=" min-width: 170px; "> <select class="w-100 selectpicker" multiple aria-label="size 3 select example" data-live-search="true"> <option>Select Floor</option> <option>Floor 1</option> <option>Floor 2 </option> </select> <img class="input-svg" width="8" src="../images/img-droplist.svg"> </div></td>';
+                cols += '<td class="style-td p-1"><div class="d-flex align-items-center position-relative form-control styleinTable rounded-0"> <input type="text" class="form-control fs-10 rounded-0 datepicker" placeholder="Select date"> <img class="dateTable-svg" width="12" src="../images/date.svg"> </div></td>';
+                cols += '<td class="style-td p-1"><div class="d-flex align-items-center position-relative form-control styleinTable rounded-0"> <input type="text" class="form-control fs-10 rounded-0 datepicker" placeholder="Select date"> <img class="dateTable-svg" width="12" src="../images/date.svg"> </div></td>';
+                cols += '<td class="style-td p-1"><input class="form-control rounded-0" type="text" name="lastname" placeholder="Credits"></td>';
+                cols += '<td class="style-td p-1"><select class="form-control rounded-0"> <option>select</option> <option>manageer 1</option> <option>manageer 2</option> <option>manageer 3</option> </select></td>';
+                cols += '<td class="style-td"><div class="d-flex align-items-center form-control styleinTable rounded-0" style=" min-width: 170px; "> <select class="w-100 selectpicker" multiple aria-label="size 3 select example" data-live-search="true"> <option>Select Floor</option> <option>Floor 1</option> <option>Floor 2 </option> </select> <img class="input-svg" width="8" src="../images/img-droplist.svg"> </div></td>';
                 cols += '<td class="style-td p-1 p-1"><button type="button" class="btn btn-secondary dataTableButtons edite-save"><i class="fa-solid fa-check"></i> </button> <button type="button" class="btn btn-secondary dataTableButtons deleteRow"><i class="fa fa-trash"></i></button></td>';
 
                 // Insert the columns inside a row
@@ -9507,26 +9507,47 @@
 
                 // Insert the row inside a table
                 $(".table_Booking").append(newRow);
-                $('.selectpicker').selectpicker('refresh');
+                $('.selectpicker').selectpicker('refresh');    
+                $(".datepicker").datepicker('refresh');
+
 
                 // Increase counter after each row insertion
                 counter++;
             });
             $(".table_Booking").on("click", ".edite-save", function (event) {
                 var row = $(this).closest("tr");
-                var inputs = row.find("input");
-                var editIcon = row.find(".fa-solid.fa-check");
+        var inputs = row.find("input");
+        var select = row.find("select");
+        var div = row.find("div");
+        var pickers = row.find(".selectpicker");
+        var checkboxes = row.find("input[type='checkbox']");
 
-                inputs.each(function () {
-                    $(this).prop("readonly", !$(this).prop("readonly"));
-                });
+        var editIcon = $(this).find("i");
+        inputs.each(function () {
+          if ($(this).attr("type") !== "checkbox") {
+            $(this).prop("disabled", !$(this).prop("disabled"));
+          }
+        });
+        select.each(function () {
+            $(this).prop("disabled", !$(this).prop("disabled"));
+        });
+        pickers.each(function () {
+          var isDisabled = $(this).prop("disabled");
+            $(this).toggleClass("disabled");
+            $(this).selectpicker("refresh");  
+        });
 
-                if (editIcon.length > 0) {
-                    editIcon.removeClass("fa-solid fa-check").addClass("fa fa-pen");
-                } else {
-                    editIcon = row.find(".fa fa-pen");
-                    editIcon.removeClass("fa fa-pen").addClass("fa-solid fa-check");
-                }
+        if(editIcon.hasClass("fa-check")){
+          row.find(".styleinTable").removeClass("form-control");
+        }else if(editIcon.hasClass("fa-pen")){
+            row.find(".styleinTable").addClass("form-control");
+        }
+
+        if (editIcon.hasClass("fa-check")) {
+          editIcon.removeClass("fa-check").addClass("fa-pen");
+        } else {
+          editIcon.removeClass("fa-pen").addClass("fa-check");
+        }
             });
 
             // Remove row when delete btn is clicked
@@ -9552,13 +9573,13 @@
                 var cols = '';
 
                 // Table columns
-                cols += '<td style="width:16%;" class="style-td p-1"><input class="form-control rounded-0" type="date" ></td>';
-                cols += '<td style="width:16%;" class="style-td p-1"><input class="form-control rounded-0" type="date"  ></td>';
-                cols += '<td style="width:16%;" class="style-td p-1"><input class="form-control rounded-0" type="text"  placeholder="Credits"></td>';
-                cols += '<td style="width:16%;" class="style-td p-1"><select class="form-control border-0"> <option>select</option> <option>manageer 1</option> <option>manageer 2</option> <option>manageer 3</option> </select></td>';
-                cols += '<td style="width:16%;" class="style-td p-1"><select class="form-control border-0"> <option>select</option> <option>manageer 1</option> <option>manageer 2</option> <option>manageer 3</option> </select></td>';
-                cols += '<td style="width:16%;" class="style-td p-1"><select class="form-control border-0"> <option>select</option> <option>manageer 1</option> <option>manageer 2</option> <option>manageer 3</option> </select></td>';
-                cols += '<td  class="style-td p-1"> <button type="button" class="btn btn-secondary dataTableButtons edite-save"><i class="fa-solid fa-check"></i> </button> <button type="button" class="btn btn-secondary dataTableButtons deleteRow"><i class="fa fa-trash"></i></button></td>';
+                cols += '<td class="style-td p-1"><div class="d-flex align-items-center position-relative form-control styleinTable rounded-0"> <input type="text" class="form-control fs-10 rounded-0 datepicker" placeholder="Select date"> <img class="dateTable-svg" width="12" src="../images/date.svg"> </div></td>';
+                cols += '<td class="style-td p-1"><div class="d-flex align-items-center position-relative form-control styleinTable rounded-0"> <input type="text" class="form-control fs-10 rounded-0 datepicker" placeholder="Select date"> <img class="dateTable-svg" width="12" src="../images/date.svg"> </div></td>';
+                cols += '<td class="style-td p-1"><input class="form-control rounded-0" type="text"  placeholder="Credits"></td>';
+                cols += '<td class="style-td p-1"><select class="form-control rounded-0"> <option>select</option> <option>manageer 1</option> <option>manageer 2</option> <option>manageer 3</option> </select></td>';
+                cols += '<td class="style-td p-1"><select class="form-control rounded-0"> <option>select</option> <option>manageer 1</option> <option>manageer 2</option> <option>manageer 3</option> </select></td>';
+                cols += '<td class="style-td p-1"><select class="form-control rounded-0"> <option>select</option> <option>manageer 1</option> <option>manageer 2</option> <option>manageer 3</option> </select></td>';
+                cols += '<td class="style-td p-1"> <button type="button" class="btn btn-secondary dataTableButtons edite-save"><i class="fa-solid fa-check"></i> </button> <button type="button" class="btn btn-secondary dataTableButtons deleteRow"><i class="fa fa-trash"></i></button></td>';
 
 
                 // cols += '<td><button class="btn btn-danger rounded-0" id ="deleteRow"><i class="fa fa-trash"></i></button</td>';
@@ -9568,7 +9589,7 @@
 
                 // Insert the row inside a table
                 $("#myTable2").append(newRow);
-
+                $(".datepicker").datepicker('refresh');
 
                 // Increase counter after each row insertion
                 counter++;
@@ -9582,20 +9603,39 @@
 
             $("#myTable2").on("click", ".edite-save", function (event) {
                 var row = $(this).closest("tr");
-                var inputs = row.find("input");
-                var editIcon = row.find(".fa-solid.fa-check");
+        var inputs = row.find("input");
+        var select = row.find("select");
+        var div = row.find("div");
+        var pickers = row.find(".selectpicker");
+        var checkboxes = row.find("input[type='checkbox']");
 
-                inputs.each(function () {
-                    $(this).prop("readonly", !$(this).prop("readonly"));
-                });
+        var editIcon = $(this).find("i");
+        inputs.each(function () {
+          if ($(this).attr("type") !== "checkbox") {
+            $(this).prop("disabled", !$(this).prop("disabled"));
+          }
+        });
+        select.each(function () {
+            $(this).prop("disabled", !$(this).prop("disabled"));
+        });
+        pickers.each(function () {
+          var isDisabled = $(this).prop("disabled");
+            $(this).toggleClass("disabled");
+            $(this).selectpicker("refresh");  
+        });
 
-                if (editIcon.length > 0) {
-                    editIcon.removeClass("fa-solid fa-check").addClass("fa fa-pen");
-                } else {
-                    editIcon = row.find(".fa fa-pen");
-                    editIcon.removeClass("fa fa-pen").addClass("fa-solid fa-check");
-                }
-            });
+        if(editIcon.hasClass("fa-check")){
+          row.find(".styleinTable").removeClass("form-control");
+        }else if(editIcon.hasClass("fa-pen")){
+            row.find(".styleinTable").addClass("form-control");
+        }
+
+        if (editIcon.hasClass("fa-check")) {
+          editIcon.removeClass("fa-check").addClass("fa-pen");
+        } else {
+          editIcon.removeClass("fa-pen").addClass("fa-check");
+        }
+});
         });
     </script>
     <!-- end add row 2 -->
@@ -9614,13 +9654,13 @@
                 var cols = '';
 
                 // Table columns
-                cols += '<td style="width:13%;" class="style-td p-1"><input class="form-control rounded-0" type="date"  ></td>';
-                cols += '<td style="width:13%;" class="style-td p-1"><input class="form-control rounded-0" type="date"></td>';
-                cols += '<td style="width:10%;" class="style-td p-1"><div class="d-flex align-items-center"> <select class="selectpicker" multiple aria-label="size 3 select example" data-live-search="true"> <option> 1</option> <option> 2</option> <option> 3</option> </select> <img class="input-svg" width="12" src="../images/img-droplist.svg"> </div></td>';
-                cols += '<td style="width:10%;" class="style-td p-1"><div class="d-flex align-items-center"> <select class="selectpicker" multiple aria-label="size 3 select example" data-live-search="true"> <option> 1</option> <option> 2</option> <option> 3</option> </select> <img class="input-svg" width="12" src="../images/img-droplist.svg"> </div></td>';
-                cols += '<td style="width:10%;" class="style-td p-1"><div class="d-flex align-items-center"> <select class="selectpicker" multiple aria-label="size 3 select example" data-live-search="true"> <option> 1</option> <option> 2</option> <option> 3</option> </select> <img class="input-svg" width="12" src="../images/img-droplist.svg"> </div></td>';
-                cols += '<td style="width:10%;" class="style-td p-1"><div class="file-container-input"><button type="button" class="file-button" onclick="openFile(this)"><span>Attach File</span><img src="../img//icons/upload.svg" alt=""></button><input type="file" class="file-input d-none" id="attachment"></div></td>';
-                cols += '<td style="width:10%;" class="style-td p-1"><button type="button" class="btn btn-secondary dataTableButtons edite-save"><i class="fa-solid fa-check"></i> </button> <button type="button" class="btn btn-secondary dataTableButtons deleteRow"><i class="fa fa-trash"></i></button></td>';
+                cols += '<td class="style-td p-1"><div class="d-flex align-items-center position-relative form-control styleinTable rounded-0"> <input type="text" class="form-control fs-10 rounded-0 datepicker" placeholder="Select date"> <img class="dateTable-svg" width="12" src="../images/date.svg"> </div></td>';
+                cols += '<td class="style-td p-1"><div class="d-flex align-items-center position-relative form-control styleinTable rounded-0"> <input type="text" class="form-control fs-10 rounded-0 datepicker" placeholder="Select date"> <img class="dateTable-svg" width="12" src="../images/date.svg"> </div></td>';
+                cols += '<td class="style-td"><div class="d-flex align-items-center form-control styleinTable rounded-0" style=" min-width: 170px; "> <select class="w-100 selectpicker" multiple aria-label="size 3 select example" data-live-search="true"> <option>Select Floor</option> <option>Floor 1</option> <option>Floor 2 </option> </select> <img class="input-svg" width="8" src="../images/img-droplist.svg"> </div></td>';
+                cols += '<td class="style-td"><div class="d-flex align-items-center form-control styleinTable rounded-0" style=" min-width: 170px; "> <select class="w-100 selectpicker" multiple aria-label="size 3 select example" data-live-search="true"> <option>Select Floor</option> <option>Floor 1</option> <option>Floor 2 </option> </select> <img class="input-svg" width="8" src="../images/img-droplist.svg"> </div></td>';
+                cols += '<td class="style-td"><div class="d-flex align-items-center form-control styleinTable rounded-0" style=" min-width: 170px; "> <select class="w-100 selectpicker" multiple aria-label="size 3 select example" data-live-search="true"> <option>Select Floor</option> <option>Floor 1</option> <option>Floor 2 </option> </select> <img class="input-svg" width="8" src="../images/img-droplist.svg"> </div></td>';
+                cols += '<td class="style-td p-1"><div class="file-container-input"><button type="button" class="file-button" onclick="openFile(this)"><span>Attach File</span><img src="../img//icons/upload.svg" alt=""></button><input type="file" class="file-input d-none" id="attachment"></div></td>';
+                cols += '<td class="style-td p-1"><button type="button" class="btn btn-secondary dataTableButtons edite-save"><i class="fa-solid fa-check"></i> </button> <button type="button" class="btn btn-secondary dataTableButtons deleteRow"><i class="fa fa-trash"></i></button></td>';
 
                 // cols += '<td><button class="btn btn-danger rounded-0" id ="deleteRow"><i class="fa fa-trash"></i></button</td>';
 
@@ -9630,27 +9670,47 @@
                 // Insert the row inside a table
                 $("#myTable3").append(newRow);
                 $('.selectpicker').selectpicker('refresh');
+                $(".datepicker").datepicker('refresh');
                 // Increase counter after each row insertion
                 counter++;
             });
             $("#myTable3").on("click", ".edite-save", function (event) {
                 var row = $(this).closest("tr");
-                var inputs = row.find("input");
-                var editIcon = row.find(".fa-solid.fa-check");
+        var inputs = row.find("input");
+        var select = row.find("select");
+        var div = row.find("div");
+        var pickers = row.find(".selectpicker");
+        var checkboxes = row.find("input[type='checkbox']");
 
-                inputs.each(function () {
-                    $(this).prop("readonly", !$(this).prop("readonly"));
-                });
+        var editIcon = $(this).find("i");
+        inputs.each(function () {
+          if ($(this).attr("type") !== "checkbox") {
+            $(this).prop("disabled", !$(this).prop("disabled"));
+          }
+        });
+        select.each(function () {
+            $(this).prop("disabled", !$(this).prop("disabled"));
+        });
+        pickers.each(function () {
+          var isDisabled = $(this).prop("disabled");
+            $(this).toggleClass("disabled");
+            $(this).selectpicker("refresh");  
+        });
 
-                if (editIcon.length > 0) {
-                    editIcon.removeClass("fa-solid fa-check").addClass("fa fa-pen");
-                } else {
-                    editIcon = row.find(".fa fa-pen");
-                    editIcon.removeClass("fa fa-pen").addClass("fa-solid fa-check");
-                }
+        if(editIcon.hasClass("fa-check")){
+          row.find(".styleinTable").removeClass("form-control");
+        }else if(editIcon.hasClass("fa-pen")){
+            row.find(".styleinTable").addClass("form-control");
+        }
+
+        if (editIcon.hasClass("fa-check")) {
+          editIcon.removeClass("fa-check").addClass("fa-pen");
+        } else {
+          editIcon.removeClass("fa-pen").addClass("fa-check");
+        }
             });
             // Remove row when delete btn is clicked
-            $("#myTable3").on("click", "#deleteRow", function (event) {
+            $("#myTable3").on("click", ".deleteRow", function (event) {
                 $(this).closest("tr").remove();
                 counter -= 1
             });
@@ -9672,17 +9732,17 @@
                 var cols = '';
 
                 // Table columns
-                cols += '<td style="width:3%;" class="style-td p-1"><input class="form-control rounded-0" type="date" name="firstname" placeholder="First name"></td>';
-                cols += '<td class="style-td p-1"><select class="form-control border-0"> <option>select</option> <option>manageer 1</option> <option>manageer 2</option> <option>manageer 3</option> </select></td>';
-                cols += '<td class="style-td p-1"><select class="form-control border-0"> <option>select</option> <option>manageer 1</option> <option>manageer 2</option> <option>manageer 3</option> </select></td>';
-                cols += '<td class="style-td p-1"><select class="form-control border-0"> <option>select</option> <option>manageer 1</option> <option>manageer 2</option> <option>manageer 3</option> </select></td>';
+                cols += '<td class="style-td p-1"><div class="d-flex align-items-center position-relative form-control styleinTable rounded-0"> <input type="text" class="form-control fs-10 rounded-0 datepicker" placeholder="Select date"> <img class="dateTable-svg" width="12" src="../images/date.svg"> </div></td>';
+                cols += '<td class="style-td p-1"><select class="form-control rounded-0"> <option>select</option> <option>manageer 1</option> <option>manageer 2</option> <option>manageer 3</option> </select></td>';
+                cols += '<td class="style-td p-1"><select class="form-control rounded-0"> <option>select</option> <option>manageer 1</option> <option>manageer 2</option> <option>manageer 3</option> </select></td>';
+                cols += '<td class="style-td p-1"><select class="form-control rounded-0"> <option>select</option> <option>manageer 1</option> <option>manageer 2</option> <option>manageer 3</option> </select></td>';
                 cols += '<td class="style-td p-1"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
                 cols += '<td class="style-td p-1"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
-                cols += '<td class="style-td p-1"><select class="form-control border-0"> <option>select</option> <option>manageer 1</option> <option>manageer 2</option> <option>manageer 3</option> </select></td>';
+                cols += '<td class="style-td p-1"><select class="form-control rounded-0"> <option>select</option> <option>manageer 1</option> <option>manageer 2</option> <option>manageer 3</option> </select></td>';
                 cols += '<td class="style-td p-1"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
                 cols += '<td class="style-td p-1"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
                 cols += '<td class="style-td p-1"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
-                cols += '<td class="style-td p-1"><select class="form-control border-0"> <option>select</option> <option>manageer 1</option> <option>manageer 2</option> <option>manageer 3</option> </select></td>';
+                cols += '<td class="style-td p-1"><select class="form-control rounded-0"> <option>select</option> <option>manageer 1</option> <option>manageer 2</option> <option>manageer 3</option> </select></td>';
                 cols += '<td class="style-td p-1"><button type="button" class="btn btn-secondary dataTableButtons edite-save"><i class="fa-solid fa-check"></i> </button> <button type="button" class="btn btn-secondary dataTableButtons deleteRow"><i class="fa fa-trash"></i></button></td>';
 
                 // Insert the columns inside a row
@@ -9690,6 +9750,7 @@
 
                 // Insert the row inside a table
                 $("#myTable4").append(newRow);
+                $(".datepicker").datepicker('refresh');
 
                 // Increase counter after each row insertion
                 counter++;
@@ -9703,19 +9764,38 @@
         });
         $("#myTable4").on("click", ".edite-save", function (event) {
             var row = $(this).closest("tr");
-            var inputs = row.find("input");
-            var editIcon = row.find(".fa-solid.fa-check");
+        var inputs = row.find("input");
+        var select = row.find("select");
+        var div = row.find("div");
+        var pickers = row.find(".selectpicker");
+        var checkboxes = row.find("input[type='checkbox']");
 
-            inputs.each(function () {
-                $(this).prop("readonly", !$(this).prop("readonly"));
-            });
+        var editIcon = $(this).find("i");
+        inputs.each(function () {
+          if ($(this).attr("type") !== "checkbox") {
+            $(this).prop("disabled", !$(this).prop("disabled"));
+          }
+        });
+        select.each(function () {
+            $(this).prop("disabled", !$(this).prop("disabled"));
+        });
+        pickers.each(function () {
+          var isDisabled = $(this).prop("disabled");
+            $(this).toggleClass("disabled");
+            $(this).selectpicker("refresh");  
+        });
 
-            if (editIcon.length > 0) {
-                editIcon.removeClass("fa-solid fa-check").addClass("fa fa-pen");
-            } else {
-                editIcon = row.find(".fa fa-pen");
-                editIcon.removeClass("fa fa-pen").addClass("fa-solid fa-check");
-            }
+        if(editIcon.hasClass("fa-check")){
+          row.find(".styleinTable").removeClass("form-control");
+        }else if(editIcon.hasClass("fa-pen")){
+            row.find(".styleinTable").addClass("form-control");
+        }
+
+        if (editIcon.hasClass("fa-check")) {
+          editIcon.removeClass("fa-check").addClass("fa-pen");
+        } else {
+          editIcon.removeClass("fa-pen").addClass("fa-check");
+        }
         });
 
 

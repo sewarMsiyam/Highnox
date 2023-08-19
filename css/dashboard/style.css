@@ -317,7 +317,7 @@ table {
 
   .table .second-select-input {
     background: #fff;
-    height: calc(2.2rem + 0px);
+    height: calc(2.25rem + 2px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -325,7 +325,10 @@ table {
     border-radius: 0;
     box-shadow: none;
   }
-
+  .table .second-select-input input, .table .third-select-input input {
+    border-top: 1px solid #E1E1E1;
+    border-bottom: 1px solid #E1E1E1;
+  }
   .third-select-input input {
     background: transparent;
   }
@@ -870,7 +873,7 @@ input:checked + .slider:before {
     border: 1px solid rgba(34, 36, 38, 0.35)
   } 
   .modal input:focus-within {
-    border: 1px solid rgb(150, 200, 218) !important
+    border: none !important
   } 
   .modal input::placeholder {
     color: rgba(191,191,191,.87);
@@ -914,7 +917,7 @@ td.ui-sortable {
   font-weight: 400;
   color: #212529;
   font-size: 11px;
-  height: calc(2.2rem + 0px);
+  height: calc(2.25rem + 2px);
 }
 .table td .form-control:disabled,
 .table td select:disabled,
@@ -923,23 +926,34 @@ td.ui-sortable {
   border: none !important;
   opacity: 1;
 }
-
+.table td .second-select-input .form-control:disabled {
+  background-color: #fff0 !important;
+  border: none !important;
+  opacity: 1;
+}
+.table td .datepicker{
+  border-left: 0; 
+  border-right: 0; 
+}
 /* .table-responsive {
   border-radius: 15px;
   overflow-x: visible;
 } */
-
+.table td .dateTable-svg{
+  position: absolute;
+  right: 3px;
+}
 
 .table-bordered td, .table-bordered th {
   vertical-align: middle !important;
 }
 
-.table .filter-option-inner-inner {
+
+.styleinTable .filter-option-inner-inner{
+  text-align: center;
+  font-weight: 400;
+  color: #212529;
   font-size: 11px;
-    vertical-align: middle !important;
-    text-align: center;
-    color: #212529 !important;
-    opacity: 1;
 }
 
 /* .ui.action.input:not([class*="left action"])>.button:last-child, .ui.action.input:not([class*="left action"])>.buttons:last-child>.button, .ui.action.input:not([class*="left action"])>.dropdown:last-child {
