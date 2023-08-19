@@ -287,89 +287,112 @@ $(document).ready(function() {
 
 
 
-var fileInputWord = $('.file-word-input');
-var downloadContainerWord = $('#import-contract-word');
-downloadContainerWord.on('click', function() {
-  fileInputWord.trigger('click');
-});
-fileInputWord.on('change', function() {
-    var allowedExtensionsWord = /(\.docx|\.doc)$/i;
-    if (allowedExtensionsWord.exec(fileInputWord[0].files[0].name)) {
-        $('#name_file_word').text(fileInputWord[0].files[0].name);
-        var fileSizeBytes = fileInputWord[0].files[0].size;
-        var fileSizeGB = (fileSizeBytes / (1024 * 1024 * 1024)).toFixed(3);
-        $('#gbs_file_word').text(fileSizeGB + ' gbs');
+// var fileInputWord = $('.file-word-input');
+// var downloadContainerWord = $('#import-contract-word');
+// downloadContainerWord.on('click', function() {
+//   fileInputWord.trigger('click');
+// });
+// fileInputWord.on('change', function() {
+//     var allowedExtensionsWord = /(\.docx|\.doc)$/i;
+//     if (allowedExtensionsWord.exec(fileInputWord[0].files[0].name)) {
+//         $('#name_file_word').text(fileInputWord[0].files[0].name);
+//         var fileSizeBytes = fileInputWord[0].files[0].size;
+//         var fileSizeGB = (fileSizeBytes / (1024 * 1024 * 1024)).toFixed(3);
+//         $('#gbs_file_word').text(fileSizeGB + ' gbs');
 
-        // تحديث عنوان الملف المرفوع
-        var uploadedFileName = fileInputWord[0].files[0].name;
-        updateDownloadLink(uploadedFileName);
-        const downloadPdfActivityBtnWord = document.getElementById("download-contract-word");
-          downloadPdfActivityBtnWord.addEventListener("click", () => {
-              downloadWordFile();
-          });
-          function updateDownloadLink(uploadedFileName) {
-              var downloadLink = $('#download-contract-word');
-              downloadLink.attr('data-file-name', uploadedFileName);
-          }
-          function downloadWordFile() {
-              var downloadLink = $('#download-contract-word');
-              var uploadedFileName = downloadLink.attr('data-file-name');
-              var fileUrl =  uploadedFileName;
-              var link = document.createElement('a');
-              link.href = fileUrl;
-              link.download = uploadedFileName;
-              link.click();
-          }
-    } else {
-        alert('Please select a valid Word document file.');
-        fileInputWord.val('');
-        $('#name_file_word').text('select file word');
-        $('#gbs_file_word').text('0 gbs');
-    }
-});
+//         // تحديث عنوان الملف المرفوع
+//         var uploadedFileName = fileInputWord[0].files[0].name;
+//         updateDownloadLink(uploadedFileName);
+//         const downloadPdfActivityBtnWord = document.getElementById("download-contract-word");
+//           downloadPdfActivityBtnWord.addEventListener("click", () => {
+//               downloadWordFile();
+//           });
+//           function updateDownloadLink(uploadedFileName) {
+//               var downloadLink = $('#download-contract-word');
+//               downloadLink.attr('data-file-name', uploadedFileName);
+//           }
+//           function downloadWordFile() {
+//               var downloadLink = $('#download-contract-word');
+//               var uploadedFileName = downloadLink.attr('data-file-name');
+//               var fileUrl =  uploadedFileName;
+//               var link = document.createElement('a');
+//               link.href = fileUrl;
+//               link.download = uploadedFileName;
+//               link.click();
+//           }
+//     } else {
+//         alert('Please select a valid Word document file.');
+//         fileInputWord.val('');
+//         $('#name_file_word').text('select file word');
+//         $('#gbs_file_word').text('0 gbs');
+//     }
+// });
 
-var fileInputExcel = $('.file-excel-input');
-var downloadContainerExcel = $('#import-contract-excel');
-downloadContainerExcel.on('click', function() {
-  fileInputExcel.trigger('click');
-});
-fileInputExcel.on('change', function() {
-    var allowedExtensionsExcel = /(\.xlsx|\.xls)$/i;
-    if (allowedExtensionsExcel.exec(fileInputExcel[0].files[0].name)) {
-        $('#name_file_excel').text(fileInputExcel[0].files[0].name);
-        var fileSizeBytes = fileInputExcel[0].files[0].size;
-        var fileSizeGB = (fileSizeBytes / (1024 * 1024 * 1024)).toFixed(3);
-        $('#gbs_file_excel').text(fileSizeGB + ' gbs');
+// var fileInputExcel = $('.file-excel-input');
+// var downloadContainerExcel = $('#import-contract-excel');
+// downloadContainerExcel.on('click', function() {
+//   fileInputExcel.trigger('click');
+// });
+// fileInputExcel.on('change', function() {
+//     var allowedExtensionsExcel = /(\.xlsx|\.xls)$/i;
+//     if (allowedExtensionsExcel.exec(fileInputExcel[0].files[0].name)) {
+//         $('#name_file_excel').text(fileInputExcel[0].files[0].name);
+//         var fileSizeBytes = fileInputExcel[0].files[0].size;
+//         var fileSizeGB = (fileSizeBytes / (1024 * 1024 * 1024)).toFixed(3);
+//         $('#gbs_file_excel').text(fileSizeGB + ' gbs');
 
-        // تحديث عنوان الملف المرفوع
-        var uploadedFileName = fileInputExcel[0].files[0].name;
-        updateDownloadLink(uploadedFileName);
-        const downloadPdfActivityBtnExcel = document.getElementById("download-contract-excel");
-          downloadPdfActivityBtnExcel.addEventListener("click", () => {
-              downloadExcelFile();
-          });
-          function updateDownloadLink(uploadedFileName) {
-              var downloadLink = $('#download-contract-excel');
-              downloadLink.attr('data-file-name', uploadedFileName);
-              downloadButton.on('click', function() {
-                var fileUrl = 'path/to/your/uploaded/files/' + uploadedFileName;
-                window.open(fileUrl, '_blank'); // فتح في تاب جديدة
-            });
-          }
-          function downloadExcelFile() {
-              var downloadLink = $('#download-contract-excel');
-              var uploadedFileName = downloadLink.attr('data-file-name');
-              var fileUrl =  uploadedFileName;
-              var link = document.createElement('a');
-              link.href = fileUrl;
-              link.download = uploadedFileName;
-              link.click();
+//         // تحديث عنوان الملف المرفوع
+//         var uploadedFileName = fileInputExcel[0].files[0].name;
+//         updateDownloadLink(uploadedFileName);
+//         const downloadPdfActivityBtnExcel = document.getElementById("download-contract-excel");
+//           downloadPdfActivityBtnExcel.addEventListener("click", () => {
+//               downloadExcelFile();
+//           });
+//           function updateDownloadLink(uploadedFileName) {
+//               var downloadLink = $('#download-contract-excel');
+//               downloadLink.attr('data-file-name', uploadedFileName);
+//               downloadButton.on('click', function() {
+//                 var fileUrl = 'path/to/your/uploaded/files/' + uploadedFileName;
+//                 window.open(fileUrl, '_blank'); // فتح في تاب جديدة
+//             });
+//           }
+//           function downloadExcelFile() {
+//               var downloadLink = $('#download-contract-excel');
+//               var uploadedFileName = downloadLink.attr('data-file-name');
+//               var fileUrl =  uploadedFileName;
+//               var link = document.createElement('a');
+//               link.href = fileUrl;
+//               link.download = uploadedFileName;
+//               link.click();
               
-          }
-    } else {
-        alert('Please select a valid excel document file.');
-        fileInputExcel.val('');
-        $('#name_file_excel').text('select file excel');
-        $('#gbs_file_excel').text('0 gbs');
-    }
+//           }
+//     } else {
+//         alert('Please select a valid excel document file.');
+//         fileInputExcel.val('');
+//         $('#name_file_excel').text('select file excel');
+//         $('#gbs_file_excel').text('0 gbs');
+//     }
+// });
+
+
+
+
+
+
+
+
+
+
+
+
+FilePond.registerPlugin(
+  FilePondPluginFileEncode,
+  FilePondPluginFileValidateSize,
+  FilePondPluginImageExifOrientation,
+  FilePondPluginImagePreview
+);
+
+var fileponds = document.querySelectorAll('.filepond');
+fileponds.forEach(function(filepond) {
+  FilePond.create(filepond);
 });

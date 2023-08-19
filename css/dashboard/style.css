@@ -854,7 +854,7 @@ input:checked + .slider:before {
   font-family: "MontserratSemiBold";
   color: #364153;
 }
-.modal input {
+.modal .input {
   border: 0px !important;
   height: 40px;
   border-radius: 5px;
@@ -865,22 +865,20 @@ input:checked + .slider:before {
   font-family: 'MontserratRegular' !important;
   outline: none;
   }
-  .modal input{
+  .modal .input{
     /* height: 40px; */
     border: 1px solid #e8e8e8;
   }
-  .modal input:hover {
+  .modal .input:hover {
     border: 1px solid rgba(34, 36, 38, 0.35)
   } 
-  .modal input:focus-within {
+  .modal .input:focus-within {
     border: none !important
   } 
-  .modal input::placeholder {
+  .modal .input::placeholder {
     color: rgba(191,191,191,.87);
     font-size: 12px !important;
   }
-
-
 
 
 .modal .logo{
@@ -1006,3 +1004,18 @@ td.ui-sortable {
   padding: 0 3px;
 }
 
+
+
+
+
+
+
+
+
+
+.filepond--drop-label {
+    background: #fff;
+}
+.filepond--root .filepond--credits {
+  color: #fff0;
+}
