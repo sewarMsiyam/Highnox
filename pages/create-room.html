@@ -12,6 +12,9 @@
   <link rel="stylesheet" href="../css/semantic.min.css"  >
   <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
   <script src="../JS/semantic.min.js"></script>
+
+  <link href="../css/global/datepicker/datepicker.css" rel="stylesheet">
+
   <!-- global style -->
   <link href="../css/global/bootstrap/bootstrap.min.css" rel="stylesheet">
   <link href="../css/global/bootstrap/bootstrap-select.css" rel="stylesheet">
@@ -638,7 +641,8 @@
                          <label>Start date</label>
                         </div>
                         <div class="select-input bg-secondary">
-                          <input type="date" class="form-control date-input bg-secondary border-0 px-0" placeholder="Select date">
+                          <input type="text" class="form-control datepicker date-input bg-secondary border-0 px-0" placeholder="Select date">
+                          <img class="input-svg" width="12" src="../images/date.svg">
                         </div>                   
                       </div>
                       <div class="col-md-2 col-12">
@@ -646,8 +650,9 @@
                          <label>End date</label>
                         </div>
                         <div class="select-input bg-secondary">
-                          <input type="date" class="form-control date-input bg-secondary border-0 px-0" placeholder="Select date">
-                        </div>                   
+                          <input type="text" class="form-control datepicker date-input bg-secondary border-0 px-0" placeholder="Select date">
+                          <img class="input-svg" width="12" src="../images/date.svg">
+                        </div>                 
                       </div>
                       <div class="col-md-2 col-12 d-flex align-items-end pb-2">
                         <div class="form-check form-switch col-12-responsive">
@@ -1013,6 +1018,8 @@
   <script src="../JS/client/main.js"></script>
   <script src="../JS/global/bootstrap/bootstrap.bundle.min.js"></script>
   <script src="../JS/global/bootstrap/bootstrap-select.js"></script>
+  <script src="../JS/global/datePicker/datepicker.js"></script>
+
   <script src="../JS/layout.js"></script>
 
 
@@ -1175,6 +1182,8 @@
         `;
         $(".row-note-Technincal").append(newRow);
     });
+
+
   </script>
 </body>
 

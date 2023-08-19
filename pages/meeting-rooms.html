@@ -13,6 +13,7 @@
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="../JS/semantic.min.js"></script>
     <!-- global style -->
+    <link href="../css/global/datepicker/datepicker.css" rel="stylesheet">
     <link href="../css/global/bootstrap/bootstrap.min.css" rel="stylesheet">
     <link href="../css/global/bootstrap/bootstrap-select.css" rel="stylesheet">
     <link href="../css/global/swiper/swiper-bundle.min.css" rel="stylesheet">
@@ -560,8 +561,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <input type="date" class="form-control date-input mx-2 " placeholder="Select date">
-
+                            <div class="select-input bg-white border">
+                                <input type="text" class="form-control datepicker date-input border-0 px-0" placeholder="Select date">
+                                <img class="input-svg" width="12" src="../images/date.svg">
+                              </div> 
                             <a href="#" class="btn rounded-4 mx-2">
                                 confirem
                             </a>
@@ -659,8 +662,8 @@
                                             <label>Choose Date</label>
                                         </div>
                                         <div class="select-input bg-white">
-                                            <input type="date" class="form-control date-input border-0 px-0"
-                                                placeholder="Select date">
+                                            <input type="text" class="form-control datepicker date-input border-0 px-0" placeholder="Select date">
+                                            <img class="input-svg" width="12" src="../images/date.svg">
                                         </div>
                                     </div>
                                     <div class="col-12 col-md-4 col-xl-2">
@@ -4076,8 +4079,7 @@
     <script src="../JS/global/bootstrap/bootstrap.bundle.min.js"></script>
     <script src="../JS/global/bootstrap/bootstrap-select.js"></script>
     <script src="../JS/global/swiper/swiper-bundle.min.js"></script>
-
-
+    <script src="../JS/global/datePicker/datepicker.js"></script>
     <script src="../JS/layout.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
 

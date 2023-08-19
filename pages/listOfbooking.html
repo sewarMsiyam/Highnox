@@ -13,6 +13,7 @@
   <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
   <script src="../JS/semantic.min.js"></script>
   <!-- global style -->
+  <link href="../css/global/datepicker/datepicker.css" rel="stylesheet">
   <link href="../css/global/bootstrap/bootstrap.min.css" rel="stylesheet">
   <link href="../css/global/bootstrap/bootstrap-select.css" rel="stylesheet">
   <link href="../css/global/swiper/swiper-bundle.min.css" rel="stylesheet">
@@ -548,16 +549,16 @@
                        <label>From</label>
                       </div>
                       <div class="select-input bg-secondary">
-                        <input type="date" class="form-control date-input bg-secondary border-0 px-0" placeholder="Select date">
-                      </div>                   
+                        <input type="text" class="form-control datepicker date-input bg-secondary border-0 px-0" placeholder="Select date">
+                        <img class="input-svg" width="12" src="../images/date.svg">                      </div>                   
                     </div>
                     <div class="d-flex flex-column container-box">
                       <div>
                        <label>Until</label>
                       </div>
                       <div class="select-input bg-secondary">
-                        <input type="date" class="form-control date-input bg-secondary border-0 px-0" placeholder="Select date">
-                      </div> 
+                        <input type="text" class="form-control datepicker date-input bg-secondary border-0 px-0" placeholder="Select date">
+                        <img class="input-svg" width="12" src="../images/date.svg">                      </div> 
                     </div>
                     <div class="d-flex flex-column container-box">
                       <div>
@@ -575,71 +576,73 @@
                   </div>
                 </form>
             </div>
-
             <div class="firstNav row justify-content-between">
-              <div class="col-md-6 col-12 padding-0">
-                <ul class="nav nav-tabs justify-content-between align-items-center nav-f-s">
-                <li class="nav-item list" role="presentation">
-                  <button class="nav-link nav-btn active all" id="all-tab" data-bs-toggle="tab" data-bs-target="#all"
-                    type="button" role="tab" aria-controls="all-tab" aria-selected="false">
-                    All
-                  </button>
-                </li>
-                <li class="nav-item list" role="presentation">
-                  <button class="nav-link nav-btn all" id="active-tab" data-bs-toggle="tab"
-                    data-bs-target="#paid-section-tab" type="button" role="tab" aria-controls="active-tab"
-                    aria-selected="false">
-                    Paid
-                  </button>
-                </li>
+              <div class="col-md-5 col-12 padding-0">
+                  <ul class="nav nav-tabs justify-content-between align-items-center nav-f-s">
+                      <li class="nav-item list" role="presentation">
+                          <button class="nav-link nav-btn active all" id="all-tab" data-bs-toggle="tab"
+                              data-bs-target="#all" type="button" role="tab" aria-controls="all-tab"
+                              aria-selected="false">
+                              All
+                          </button>
+                      </li>
+                      <li class="nav-item list" role="presentation">
+                          <button class="nav-link nav-btn all" id="active-tab" data-bs-toggle="tab"
+                              data-bs-target="#paid-section-tab" type="button" role="tab"
+                              aria-controls="active-tab" aria-selected="false">
+                              Paid
+                          </button>
+                      </li>
 
-                <li class="nav-item list" role="presentation">
-                  <button class="nav-link nav-btn all" id="not-active" data-bs-toggle="tab"
-                    data-bs-target="#not-invoiced-section-tab" type="button" role="tab" aria-controls="not-active"
-                    aria-selected="false">
-                    Not invoiced
-                  </button>
-                </li>
+                      <li class="nav-item list" role="presentation">
+                          <button class="nav-link nav-btn all" id="not-active" data-bs-toggle="tab"
+                              data-bs-target="#not-invoiced-section-tab" type="button" role="tab"
+                              aria-controls="not-active" aria-selected="false">
+                              Not invoiced
+                          </button>
+                      </li>
 
-                <li class="nav-item list" role="presentation">
-                  <button class="nav-link nav-btn all" id="not-active" data-bs-toggle="tab"
-                    data-bs-target="#not-cancelled-section-tab" type="button" role="tab" aria-controls="not-active"
-                    aria-selected="false">
-                    Cancelled
-                  </button>
-                </li>
+                      <li class="nav-item list" role="presentation">
+                          <button class="nav-link nav-btn all" id="not-active" data-bs-toggle="tab"
+                              data-bs-target="#not-cancelled-section-tab" type="button" role="tab"
+                              aria-controls="not-active" aria-selected="false">
+                              Cancelled
+                          </button>
+                      </li>
 
-                <li class="nav-item list" role="presentation">
-                  <button class="nav-link nav-btn all" id="not-active" data-bs-toggle="tab"
-                    data-bs-target="#invoiced-section-tab" type="button" role="tab" aria-controls="not-active"
-                    aria-selected="false">
-                    invoiced
-                  </button>
-                </li>
-              </ul>
+                      <li class="nav-item list" role="presentation">
+                          <button class="nav-link nav-btn all" id="not-active" data-bs-toggle="tab"
+                              data-bs-target="#invoiced-section-tab" type="button" role="tab"
+                              aria-controls="not-active" aria-selected="false">
+                              invoiced
+                          </button>
+                      </li>
+                  </ul>
               </div>
 
-              <div class="col-md-5 col-12 justify-content-between align-items-center navStatus">
-                <div class="row justify-content-end">
-                  <div class="col col-md-2 document-btns col-12">
-              
-                    <button><img src="../img/icons/pdf.svg" alt="pdf" class="file-download"></button>
-                    <button><img src="../img/icons/excel.svg" alt="pdf" class="file-download"></button>
-                   
+              <div class="col-md-6 col-12 justify-content-between align-items-center navStatus">
+                  <div class="row justify-content-end">
+                      <div class="document-btns">
+                          <button><img src="../img/icons/pdf.svg" alt="pdf" class="file-download"></button>
+                          <button><img src="../img/icons/excel.svg" alt="pdf" class="file-download"></button>
+                      </div>
+                      <div class="mx-2">
+                          <form class="d-flex input-form search-form">
+                              <img src="../img/icons/search-icon.svg" />
+                              <input class="form-control me-2 search-placeholder" type="search"
+                                  placeholder="Search" aria-label="Search" />
+                          </form>
+                      </div>
+                      <div class="d-flex ">
+                          <a class="btn btn-primary create-btn" href="#">
+                              <i class="bi bi-plus-circle-fill"></i>
+                              Create
+                          </a>
+                      </div>
                   </div>
-                  <div class="col col-md-7 col-12">
-               
-                      <form class="d-flex input-form search-form">
-                    <img src="../img/icons/search-icon.svg" />
-                    <input class="form-control me-2 search-placeholder" type="search" placeholder="Search"
-                      aria-label="Search" />
-                  </form>
-                   
-                  </div>
-                  
-                </div>
               </div>
-            </div>
+          </div>
+
 
             <div class="tab-content" id="myTabContent2">
               <div class="tab-pane fade show active " id="all" role="tabpanel1" aria-labelledby="all-tab" >
@@ -651,96 +654,92 @@
                         <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
                         <th onclick="sortTable(0, 'myTable')" class="style-th">
                           <div>
-                            <span>ID</span><span><img
+                            <span>Booking ID</span><span><img
                             src="../images/sort-ic.svg" class="sotTble" /></span>
                           </div>
                         </th>
                         <th onclick="sortTable(1, 'myTable')" class="style-th">
                           <div>
-                            <span>Building</span><span><img
+                            <span>Type of booking</span><span><img
                             src="../images/sort-ic.svg" class="sotTble" /></span>
                           </div>
                         </th>
                         <th onclick="sortTable(2, 'myTable')" class="style-th">
                           <div>
-                            <span>Type of Debts</span><span><img
+                            <span>Client name</span><span><img
                             src="../images/sort-ic.svg" class="sotTble" /></span>
                           </div>
                         </th>
                         <th onclick="sortTable(3, 'myTable')" class="style-th">
                           <div>
-                            <span>Customer Id</span><span><img
+                            <span>Contact person</span><span><img
                             src="../images/sort-ic.svg" class="sotTble" /></span>
                           </div>
                         </th>
                         <th onclick="sortTable(4, 'myTable')" class="style-th">
                           <div>
-                            <span>Customer Name</span><span><img
+                            <span>Startdate</span><span><img
                             src="../images/sort-ic.svg" class="sotTble" /></span>
                           </div>
                         </th>
                         <th onclick="sortTable(5, 'myTable')" class="style-th">
                           <div>
-                            <span>Article</span><span><img
+                            <span>End date</span><span><img
                             src="../images/sort-ic.svg" class="sotTble" /></span>
                           </div>
                         </th>
                         <th onclick="sortTable(6, 'myTable')" class="style-th">
                           <div>
-                            <span>Debt Date</span><span><img
+                            <span>QTY of days</span><span><img
                             src="../images/sort-ic.svg" class="sotTble" /></span>
                           </div>
                         </th>
                         <th onclick="sortTable(7, 'myTable')" class="style-th">
                           <div>
-                            <span>Delivery Date</span><span><img
+                            <span>Building</span><span><img
                             src="../images/sort-ic.svg" class="sotTble" /></span>
                           </div>
                         </th>
                         <th onclick="sortTable(8, 'myTable')" class="style-th">
                           <div>
-                            <span>QTY Days</span><span><img
+                            <span>Floor</span><span><img
                             src="../images/sort-ic.svg" class="sotTble" /></span>
                           </div>
                         </th>
                         <th onclick="sortTable(9, 'myTable')" class="style-th">
                           <div>
-                            <span>Amount Excel VAT</span><span><img
+                            <span>Room</span><span><img
                             src="../images/sort-ic.svg" class="sotTble" /></span>
                           </div>
                         </th>
                         <th onclick="sortTable(10, 'myTable')" class="style-th">
                           <div>
-                            <span>VAT SEK</span><span><img
+                            <span>Booking amount</span><span><img
                             src="../images/sort-ic.svg" class="sotTble" /></span>
                           </div>
                         </th>
                         <th onclick="sortTable(11, 'myTable')" class="style-th">
                           <div>
-                            <span>Total Incl VAT</span><span><img
+                            <span>Notes</span><span><img
                             src="../images/sort-ic.svg" class="sotTble" /></span>
                           </div>
                         </th>
                         <th onclick="sortTable(12, 'myTable')" class="style-th">
                           <div>
-                            <span>VAT</span><span><img
+                            <span>Project leader</span><span><img
                             src="../images/sort-ic.svg" class="sotTble" /></span>
                           </div>
                         </th>
                         <th onclick="sortTable(13, 'myTable')" class="style-th">
                           <div>
-                            <span>Notes</span><span><img
+                            <span>Account Manager</span><span><img
                             src="../images/sort-ic.svg" class="sotTble" /></span>
                           </div>
                         </th>
-                        <th onclick="sortTable(14, 'myTable')" class="style-th">
-                          <div>
-                            <span>Invoices</span><span><img
-                            src="../images/sort-ic.svg" class="sotTble" /></span>
+                        <th class="style-th">
+                          <div class=" width-140">
+                            <span>Action</span>
                           </div>
-                        </th>
-                        <th onclick="sortTable(15, 'myTable')" class="style-th width-140">
-                          <span>Action</span>
                         </th>
                       </tr>
                     </thead>
@@ -789,9 +788,6 @@
                           Ordered in the reception by carl
                         </td>
                         <td class="style-td">
-                          250
-                        </td>
-                        <td class="style-td">
                           <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom"  data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
                             <img src="../images/client-image.svg" class="image-actions" />
                           </button>
@@ -806,22 +802,19 @@
                       </tr>
                       <tr class="tr trtabler tr-active grayBg">
                         <td class="style-td">
-                          356913
+                          1
                         </td>
                         <td class="style-td">
-                          Dubai
+                          booking 1
                         </td>
                         <td class="style-td">
-                          Debts
+                          Client 1
                         </td>
                         <td class="style-td">
-                          356912
+                          Contact  1
                         </td>
                         <td class="style-td">
                           Highnox business
-                        </td>
-                        <td class="style-td">
-                          Copies colors
                         </td>
                         <td class="style-td">
                           20-12-2021
@@ -833,22 +826,22 @@
                           1
                         </td>
                         <td class="style-td">
-                          1000
+                          Building1 
+                        </td>
+                        <td class="style-td">
+                          3
                         </td>
                         <td class="style-td">
                           250
-                        </td>
-                        <td class="style-td">
-                          250
-                        </td>
-                        <td class="style-td">
-                          25%
                         </td>
                         <td class="style-td">
                           Ordered in the reception by carl
                         </td>
                         <td class="style-td">
-                          250
+                          leader 1
+                        </td>
+                        <td class="style-td">
+                          Manager 1
                         </td>
                         <td class="style-td">
                           <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom"  data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
@@ -865,22 +858,19 @@
                       </tr>
                       <tr class="tr trtabler tr-active yellowBg">
                         <td class="style-td">
-                          356912
+                          2
                         </td>
                         <td class="style-td">
-                          Dubai
+                          booking 2
                         </td>
                         <td class="style-td">
-                          Debts
+                          Client 2
                         </td>
                         <td class="style-td">
-                          356912
+                          Contact  2
                         </td>
                         <td class="style-td">
                           Highnox business
-                        </td>
-                        <td class="style-td">
-                          Copies colors
                         </td>
                         <td class="style-td">
                           20-12-2021
@@ -892,22 +882,22 @@
                           1
                         </td>
                         <td class="style-td">
-                          1000
+                          Building2
+                        </td>
+                        <td class="style-td">
+                          3
                         </td>
                         <td class="style-td">
                           250
-                        </td>
-                        <td class="style-td">
-                          250
-                        </td>
-                        <td class="style-td">
-                          25%
                         </td>
                         <td class="style-td">
                           Ordered in the reception by carl
                         </td>
                         <td class="style-td">
-                          250
+                          leader 2
+                        </td>
+                        <td class="style-td">
+                          Manager 2
                         </td>
                         <td class="style-td">
                           <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom"  data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
@@ -924,22 +914,19 @@
                       </tr>
                       <tr class="tr trtabler tr-active">
                         <td class="style-td">
-                          356912
+                          3
                         </td>
                         <td class="style-td">
-                          Dubai
+                          booking 3
                         </td>
                         <td class="style-td">
-                          Debts
+                          Client 3
                         </td>
                         <td class="style-td">
-                          356912
+                          Contact  3
                         </td>
                         <td class="style-td">
                           Highnox business
-                        </td>
-                        <td class="style-td">
-                          Copies colors
                         </td>
                         <td class="style-td">
                           20-12-2021
@@ -951,22 +938,22 @@
                           1
                         </td>
                         <td class="style-td">
-                          1000
+                          Building3 
+                        </td>
+                        <td class="style-td">
+                          3
                         </td>
                         <td class="style-td">
                           250
-                        </td>
-                        <td class="style-td">
-                          250
-                        </td>
-                        <td class="style-td">
-                          25%
                         </td>
                         <td class="style-td">
                           Ordered in the reception by carl
                         </td>
                         <td class="style-td">
-                          250
+                          leader 3
+                        </td>
+                        <td class="style-td">
+                          Manager 3
                         </td>
                         <td class="style-td">
                           <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom"  data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
@@ -1002,26 +989,1374 @@
               </div>
 
               <div class="tab-pane fade table-tab-pane" id="paid-section-tab" role="tabpanel1" aria-labelledby="active-tab">
-                <div class="table-responsive">
-                  .
+                <div class="table-responsive bg-light">
+                  <div class="secondTableContainer">
+                    <table id="myTable" class="table">
+                    <thead>
+                      <tr class="tr" >
+                        <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
+                        <th onclick="sortTable(0, 'myTable')" class="style-th">
+                          <div>
+                            <span>Booking ID</span><span><img
+                            src="../images/sort-ic.svg" class="sotTble" /></span>
+                          </div>
+                        </th>
+                        <th onclick="sortTable(1, 'myTable')" class="style-th">
+                          <div>
+                            <span>Type of booking</span><span><img
+                            src="../images/sort-ic.svg" class="sotTble" /></span>
+                          </div>
+                        </th>
+                        <th onclick="sortTable(2, 'myTable')" class="style-th">
+                          <div>
+                            <span>Client name</span><span><img
+                            src="../images/sort-ic.svg" class="sotTble" /></span>
+                          </div>
+                        </th>
+                        <th onclick="sortTable(3, 'myTable')" class="style-th">
+                          <div>
+                            <span>Contact person</span><span><img
+                            src="../images/sort-ic.svg" class="sotTble" /></span>
+                          </div>
+                        </th>
+                        <th onclick="sortTable(4, 'myTable')" class="style-th">
+                          <div>
+                            <span>Startdate</span><span><img
+                            src="../images/sort-ic.svg" class="sotTble" /></span>
+                          </div>
+                        </th>
+                        <th onclick="sortTable(5, 'myTable')" class="style-th">
+                          <div>
+                            <span>End date</span><span><img
+                            src="../images/sort-ic.svg" class="sotTble" /></span>
+                          </div>
+                        </th>
+                        <th onclick="sortTable(6, 'myTable')" class="style-th">
+                          <div>
+                            <span>QTY of days</span><span><img
+                            src="../images/sort-ic.svg" class="sotTble" /></span>
+                          </div>
+                        </th>
+                        <th onclick="sortTable(7, 'myTable')" class="style-th">
+                          <div>
+                            <span>Building</span><span><img
+                            src="../images/sort-ic.svg" class="sotTble" /></span>
+                          </div>
+                        </th>
+                        <th onclick="sortTable(8, 'myTable')" class="style-th">
+                          <div>
+                            <span>Floor</span><span><img
+                            src="../images/sort-ic.svg" class="sotTble" /></span>
+                          </div>
+                        </th>
+                        <th onclick="sortTable(9, 'myTable')" class="style-th">
+                          <div>
+                            <span>Room</span><span><img
+                            src="../images/sort-ic.svg" class="sotTble" /></span>
+                          </div>
+                        </th>
+                        <th onclick="sortTable(10, 'myTable')" class="style-th">
+                          <div>
+                            <span>Booking amount</span><span><img
+                            src="../images/sort-ic.svg" class="sotTble" /></span>
+                          </div>
+                        </th>
+                        <th onclick="sortTable(11, 'myTable')" class="style-th">
+                          <div>
+                            <span>Notes</span><span><img
+                            src="../images/sort-ic.svg" class="sotTble" /></span>
+                          </div>
+                        </th>
+                        <th onclick="sortTable(12, 'myTable')" class="style-th">
+                          <div>
+                            <span>Project leader</span><span><img
+                            src="../images/sort-ic.svg" class="sotTble" /></span>
+                          </div>
+                        </th>
+                        <th onclick="sortTable(13, 'myTable')" class="style-th">
+                          <div>
+                            <span>Account Manager</span><span><img
+                            src="../images/sort-ic.svg" class="sotTble" /></span>
+                          </div>
+                        </th>
+                        <th class="style-th">
+                          <div class=" width-140">
+                            <span>Action</span>
+                          </div>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="tr trtabler tr-active greenBg">
+                        <td class="style-td">
+                          356912
+                        </td>
+                        <td class="style-td">
+                          Dubai
+                        </td>
+                        <td class="style-td">
+                          Debts
+                        </td>
+                        <td class="style-td">
+                          356912
+                        </td>
+                        <td class="style-td">
+                          Highnox business
+                        </td>
+                        <td class="style-td">
+                          Copies colors
+                        </td>
+                        <td class="style-td">
+                          20-12-2021
+                        </td>
+                        <td class="style-td">
+                          20-12-2021
+                        </td>
+                        <td class="style-td">
+                          1
+                        </td>
+                        <td class="style-td">
+                          1000
+                        </td>
+                        <td class="style-td">
+                          250
+                        </td>
+                        <td class="style-td">
+                          250
+                        </td>
+                        <td class="style-td">
+                          25%
+                        </td>
+                        <td class="style-td">
+                          Ordered in the reception by carl
+                        </td>
+                        <td class="style-td">
+                          <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom"  data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
+                            <img src="../images/client-image.svg" class="image-actions" />
+                          </button>
+                          <div class="tooltip-left btn btn-secondary dataTableButtons">
+                            <img src="../images/client-person.svg" class="image-actions" />
+                            <span class="tooltiptext">Tooltip text</span>
+                          </div>
+                          <a href="create-debit.html" class="btn btn-secondary dataTableButtons" >
+                            <img src="../images/client-icon-copy.svg" class="image-actions" />
+                          </a>
+                        </td>
+                      </tr>
+                      <tr class="tr trtabler tr-active grayBg">
+                        <td class="style-td">
+                          1
+                        </td>
+                        <td class="style-td">
+                          booking 1
+                        </td>
+                        <td class="style-td">
+                          Client 1
+                        </td>
+                        <td class="style-td">
+                          Contact  1
+                        </td>
+                        <td class="style-td">
+                          Highnox business
+                        </td>
+                        <td class="style-td">
+                          20-12-2021
+                        </td>
+                        <td class="style-td">
+                          20-12-2021
+                        </td>
+                        <td class="style-td">
+                          1
+                        </td>
+                        <td class="style-td">
+                          Building1 
+                        </td>
+                        <td class="style-td">
+                          3
+                        </td>
+                        <td class="style-td">
+                          250
+                        </td>
+                        <td class="style-td">
+                          Ordered in the reception by carl
+                        </td>
+                        <td class="style-td">
+                          leader 1
+                        </td>
+                        <td class="style-td">
+                          Manager 1
+                        </td>
+                        <td class="style-td">
+                          <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom"  data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
+                            <img src="../images/client-image.svg" class="image-actions" />
+                          </button>
+                          <div class="tooltip-left btn btn-secondary dataTableButtons">
+                            <img src="../images/client-person.svg" class="image-actions" />
+                            <span class="tooltiptext">Tooltip text</span>
+                          </div>
+                          <a href="create-debit.html" class="btn btn-secondary dataTableButtons" >
+                            <img src="../images/client-icon-copy.svg" class="image-actions" />
+                          </a>
+                        </td>
+                      </tr>
+                      <tr class="tr trtabler tr-active yellowBg">
+                        <td class="style-td">
+                          2
+                        </td>
+                        <td class="style-td">
+                          booking 2
+                        </td>
+                        <td class="style-td">
+                          Client 2
+                        </td>
+                        <td class="style-td">
+                          Contact  2
+                        </td>
+                        <td class="style-td">
+                          Highnox business
+                        </td>
+                        <td class="style-td">
+                          20-12-2021
+                        </td>
+                        <td class="style-td">
+                          20-12-2021
+                        </td>
+                        <td class="style-td">
+                          1
+                        </td>
+                        <td class="style-td">
+                          Building2
+                        </td>
+                        <td class="style-td">
+                          3
+                        </td>
+                        <td class="style-td">
+                          250
+                        </td>
+                        <td class="style-td">
+                          Ordered in the reception by carl
+                        </td>
+                        <td class="style-td">
+                          leader 2
+                        </td>
+                        <td class="style-td">
+                          Manager 2
+                        </td>
+                        <td class="style-td">
+                          <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom"  data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
+                            <img src="../images/client-image.svg" class="image-actions" />
+                          </button>
+                          <div class="tooltip-left btn btn-secondary dataTableButtons">
+                            <img src="../images/client-person.svg" class="image-actions" />
+                            <span class="tooltiptext">Tooltip text</span>
+                          </div>
+                          <a href="create-debit.html" class="btn btn-secondary dataTableButtons" >
+                            <img src="../images/client-icon-copy.svg" class="image-actions" />
+                          </a>
+                        </td>
+                      </tr>
+                      <tr class="tr trtabler tr-active">
+                        <td class="style-td">
+                          3
+                        </td>
+                        <td class="style-td">
+                          booking 3
+                        </td>
+                        <td class="style-td">
+                          Client 3
+                        </td>
+                        <td class="style-td">
+                          Contact  3
+                        </td>
+                        <td class="style-td">
+                          Highnox business
+                        </td>
+                        <td class="style-td">
+                          20-12-2021
+                        </td>
+                        <td class="style-td">
+                          20-12-2021
+                        </td>
+                        <td class="style-td">
+                          1
+                        </td>
+                        <td class="style-td">
+                          Building3 
+                        </td>
+                        <td class="style-td">
+                          3
+                        </td>
+                        <td class="style-td">
+                          250
+                        </td>
+                        <td class="style-td">
+                          Ordered in the reception by carl
+                        </td>
+                        <td class="style-td">
+                          leader 3
+                        </td>
+                        <td class="style-td">
+                          Manager 3
+                        </td>
+                        <td class="style-td">
+                          <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom"  data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
+                            <img src="../images/client-image.svg" class="image-actions" />
+                          </button>
+                          <div class="tooltip-left btn btn-secondary dataTableButtons">
+                            <img src="../images/client-person.svg" class="image-actions" />
+                            <span class="tooltiptext">Tooltip text</span>
+                          </div>
+                          <a href="create-debit.html" class="btn btn-secondary dataTableButtons" >
+                            <img src="../images/client-icon-copy.svg" class="image-actions" />
+                          </a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  </div>
+                </div>
+                <div class="d-flex flex-column-reverse flex-lg-row align-items-center justify-content-end my-4">
+                  <div class="pagination-container my-1">
+                    <ul class="pagination d-flex">
+                      <li class="prev-icon"><i class="fas fa-angle-left"></i></li>
+                      <div class="numbers">
+                        <li class="active"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                      </div>
+                      <li><a href="#" class="next-link">next</a></li>
+                      <li class="next-icon"><i class="fas fa-angle-right"></i></li>
+                    </ul>
+                  </div>  
                 </div>
               </div>
 
               <div class="tab-pane fade table-tab-pane" id="not-invoiced-section-tab" role="tabpanel1" aria-labelledby="not-active">
-                <div class="table-responsive">
-                  .
+                <div class="table-responsive bg-light">
+                  <div class="secondTableContainer">
+                    <table id="myTable" class="table">
+                    <thead>
+                      <tr class="tr" >
+                        <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
+                        <th onclick="sortTable(0, 'myTable')" class="style-th">
+                          <div>
+                            <span>Booking ID</span><span><img
+                            src="../images/sort-ic.svg" class="sotTble" /></span>
+                          </div>
+                        </th>
+                        <th onclick="sortTable(1, 'myTable')" class="style-th">
+                          <div>
+                            <span>Type of booking</span><span><img
+                            src="../images/sort-ic.svg" class="sotTble" /></span>
+                          </div>
+                        </th>
+                        <th onclick="sortTable(2, 'myTable')" class="style-th">
+                          <div>
+                            <span>Client name</span><span><img
+                            src="../images/sort-ic.svg" class="sotTble" /></span>
+                          </div>
+                        </th>
+                        <th onclick="sortTable(3, 'myTable')" class="style-th">
+                          <div>
+                            <span>Contact person</span><span><img
+                            src="../images/sort-ic.svg" class="sotTble" /></span>
+                          </div>
+                        </th>
+                        <th onclick="sortTable(4, 'myTable')" class="style-th">
+                          <div>
+                            <span>Startdate</span><span><img
+                            src="../images/sort-ic.svg" class="sotTble" /></span>
+                          </div>
+                        </th>
+                        <th onclick="sortTable(5, 'myTable')" class="style-th">
+                          <div>
+                            <span>End date</span><span><img
+                            src="../images/sort-ic.svg" class="sotTble" /></span>
+                          </div>
+                        </th>
+                        <th onclick="sortTable(6, 'myTable')" class="style-th">
+                          <div>
+                            <span>QTY of days</span><span><img
+                            src="../images/sort-ic.svg" class="sotTble" /></span>
+                          </div>
+                        </th>
+                        <th onclick="sortTable(7, 'myTable')" class="style-th">
+                          <div>
+                            <span>Building</span><span><img
+                            src="../images/sort-ic.svg" class="sotTble" /></span>
+                          </div>
+                        </th>
+                        <th onclick="sortTable(8, 'myTable')" class="style-th">
+                          <div>
+                            <span>Floor</span><span><img
+                            src="../images/sort-ic.svg" class="sotTble" /></span>
+                          </div>
+                        </th>
+                        <th onclick="sortTable(9, 'myTable')" class="style-th">
+                          <div>
+                            <span>Room</span><span><img
+                            src="../images/sort-ic.svg" class="sotTble" /></span>
+                          </div>
+                        </th>
+                        <th onclick="sortTable(10, 'myTable')" class="style-th">
+                          <div>
+                            <span>Booking amount</span><span><img
+                            src="../images/sort-ic.svg" class="sotTble" /></span>
+                          </div>
+                        </th>
+                        <th onclick="sortTable(11, 'myTable')" class="style-th">
+                          <div>
+                            <span>Notes</span><span><img
+                            src="../images/sort-ic.svg" class="sotTble" /></span>
+                          </div>
+                        </th>
+                        <th onclick="sortTable(12, 'myTable')" class="style-th">
+                          <div>
+                            <span>Project leader</span><span><img
+                            src="../images/sort-ic.svg" class="sotTble" /></span>
+                          </div>
+                        </th>
+                        <th onclick="sortTable(13, 'myTable')" class="style-th">
+                          <div>
+                            <span>Account Manager</span><span><img
+                            src="../images/sort-ic.svg" class="sotTble" /></span>
+                          </div>
+                        </th>
+                        <th class="style-th">
+                          <div class=" width-140">
+                            <span>Action</span>
+                          </div>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="tr trtabler tr-active greenBg">
+                        <td class="style-td">
+                          356912
+                        </td>
+                        <td class="style-td">
+                          Dubai
+                        </td>
+                        <td class="style-td">
+                          Debts
+                        </td>
+                        <td class="style-td">
+                          356912
+                        </td>
+                        <td class="style-td">
+                          Highnox business
+                        </td>
+                        <td class="style-td">
+                          Copies colors
+                        </td>
+                        <td class="style-td">
+                          20-12-2021
+                        </td>
+                        <td class="style-td">
+                          20-12-2021
+                        </td>
+                        <td class="style-td">
+                          1
+                        </td>
+                        <td class="style-td">
+                          1000
+                        </td>
+                        <td class="style-td">
+                          250
+                        </td>
+                        <td class="style-td">
+                          250
+                        </td>
+                        <td class="style-td">
+                          25%
+                        </td>
+                        <td class="style-td">
+                          Ordered in the reception by carl
+                        </td>
+                        <td class="style-td">
+                          <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom"  data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
+                            <img src="../images/client-image.svg" class="image-actions" />
+                          </button>
+                          <div class="tooltip-left btn btn-secondary dataTableButtons">
+                            <img src="../images/client-person.svg" class="image-actions" />
+                            <span class="tooltiptext">Tooltip text</span>
+                          </div>
+                          <a href="create-debit.html" class="btn btn-secondary dataTableButtons" >
+                            <img src="../images/client-icon-copy.svg" class="image-actions" />
+                          </a>
+                        </td>
+                      </tr>
+                      <tr class="tr trtabler tr-active grayBg">
+                        <td class="style-td">
+                          1
+                        </td>
+                        <td class="style-td">
+                          booking 1
+                        </td>
+                        <td class="style-td">
+                          Client 1
+                        </td>
+                        <td class="style-td">
+                          Contact  1
+                        </td>
+                        <td class="style-td">
+                          Highnox business
+                        </td>
+                        <td class="style-td">
+                          20-12-2021
+                        </td>
+                        <td class="style-td">
+                          20-12-2021
+                        </td>
+                        <td class="style-td">
+                          1
+                        </td>
+                        <td class="style-td">
+                          Building1 
+                        </td>
+                        <td class="style-td">
+                          3
+                        </td>
+                        <td class="style-td">
+                          250
+                        </td>
+                        <td class="style-td">
+                          Ordered in the reception by carl
+                        </td>
+                        <td class="style-td">
+                          leader 1
+                        </td>
+                        <td class="style-td">
+                          Manager 1
+                        </td>
+                        <td class="style-td">
+                          <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom"  data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
+                            <img src="../images/client-image.svg" class="image-actions" />
+                          </button>
+                          <div class="tooltip-left btn btn-secondary dataTableButtons">
+                            <img src="../images/client-person.svg" class="image-actions" />
+                            <span class="tooltiptext">Tooltip text</span>
+                          </div>
+                          <a href="create-debit.html" class="btn btn-secondary dataTableButtons" >
+                            <img src="../images/client-icon-copy.svg" class="image-actions" />
+                          </a>
+                        </td>
+                      </tr>
+                      <tr class="tr trtabler tr-active yellowBg">
+                        <td class="style-td">
+                          2
+                        </td>
+                        <td class="style-td">
+                          booking 2
+                        </td>
+                        <td class="style-td">
+                          Client 2
+                        </td>
+                        <td class="style-td">
+                          Contact  2
+                        </td>
+                        <td class="style-td">
+                          Highnox business
+                        </td>
+                        <td class="style-td">
+                          20-12-2021
+                        </td>
+                        <td class="style-td">
+                          20-12-2021
+                        </td>
+                        <td class="style-td">
+                          1
+                        </td>
+                        <td class="style-td">
+                          Building2
+                        </td>
+                        <td class="style-td">
+                          3
+                        </td>
+                        <td class="style-td">
+                          250
+                        </td>
+                        <td class="style-td">
+                          Ordered in the reception by carl
+                        </td>
+                        <td class="style-td">
+                          leader 2
+                        </td>
+                        <td class="style-td">
+                          Manager 2
+                        </td>
+                        <td class="style-td">
+                          <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom"  data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
+                            <img src="../images/client-image.svg" class="image-actions" />
+                          </button>
+                          <div class="tooltip-left btn btn-secondary dataTableButtons">
+                            <img src="../images/client-person.svg" class="image-actions" />
+                            <span class="tooltiptext">Tooltip text</span>
+                          </div>
+                          <a href="create-debit.html" class="btn btn-secondary dataTableButtons" >
+                            <img src="../images/client-icon-copy.svg" class="image-actions" />
+                          </a>
+                        </td>
+                      </tr>
+                      <tr class="tr trtabler tr-active">
+                        <td class="style-td">
+                          3
+                        </td>
+                        <td class="style-td">
+                          booking 3
+                        </td>
+                        <td class="style-td">
+                          Client 3
+                        </td>
+                        <td class="style-td">
+                          Contact  3
+                        </td>
+                        <td class="style-td">
+                          Highnox business
+                        </td>
+                        <td class="style-td">
+                          20-12-2021
+                        </td>
+                        <td class="style-td">
+                          20-12-2021
+                        </td>
+                        <td class="style-td">
+                          1
+                        </td>
+                        <td class="style-td">
+                          Building3 
+                        </td>
+                        <td class="style-td">
+                          3
+                        </td>
+                        <td class="style-td">
+                          250
+                        </td>
+                        <td class="style-td">
+                          Ordered in the reception by carl
+                        </td>
+                        <td class="style-td">
+                          leader 3
+                        </td>
+                        <td class="style-td">
+                          Manager 3
+                        </td>
+                        <td class="style-td">
+                          <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom"  data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
+                            <img src="../images/client-image.svg" class="image-actions" />
+                          </button>
+                          <div class="tooltip-left btn btn-secondary dataTableButtons">
+                            <img src="../images/client-person.svg" class="image-actions" />
+                            <span class="tooltiptext">Tooltip text</span>
+                          </div>
+                          <a href="create-debit.html" class="btn btn-secondary dataTableButtons" >
+                            <img src="../images/client-icon-copy.svg" class="image-actions" />
+                          </a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  </div>
+                </div>
+                <div class="d-flex flex-column-reverse flex-lg-row align-items-center justify-content-end my-4">
+                  <div class="pagination-container my-1">
+                    <ul class="pagination d-flex">
+                      <li class="prev-icon"><i class="fas fa-angle-left"></i></li>
+                      <div class="numbers">
+                        <li class="active"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                      </div>
+                      <li><a href="#" class="next-link">next</a></li>
+                      <li class="next-icon"><i class="fas fa-angle-right"></i></li>
+                    </ul>
+                  </div>  
                 </div>
               </div>
 
               <div class="tab-pane fade table-tab-pane" id="not-cancelled-section-tab" role="tabpanel1" aria-labelledby="not-active">
-                <div class="table-responsive">
-                  .
+                <div class="table-responsive bg-light">
+                  <div class="secondTableContainer">
+                    <table id="myTable" class="table">
+                    <thead>
+                      <tr class="tr" >
+                        <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
+                        <th onclick="sortTable(0, 'myTable')" class="style-th">
+                          <div>
+                            <span>Booking ID</span><span><img
+                            src="../images/sort-ic.svg" class="sotTble" /></span>
+                          </div>
+                        </th>
+                        <th onclick="sortTable(1, 'myTable')" class="style-th">
+                          <div>
+                            <span>Type of booking</span><span><img
+                            src="../images/sort-ic.svg" class="sotTble" /></span>
+                          </div>
+                        </th>
+                        <th onclick="sortTable(2, 'myTable')" class="style-th">
+                          <div>
+                            <span>Client name</span><span><img
+                            src="../images/sort-ic.svg" class="sotTble" /></span>
+                          </div>
+                        </th>
+                        <th onclick="sortTable(3, 'myTable')" class="style-th">
+                          <div>
+                            <span>Contact person</span><span><img
+                            src="../images/sort-ic.svg" class="sotTble" /></span>
+                          </div>
+                        </th>
+                        <th onclick="sortTable(4, 'myTable')" class="style-th">
+                          <div>
+                            <span>Startdate</span><span><img
+                            src="../images/sort-ic.svg" class="sotTble" /></span>
+                          </div>
+                        </th>
+                        <th onclick="sortTable(5, 'myTable')" class="style-th">
+                          <div>
+                            <span>End date</span><span><img
+                            src="../images/sort-ic.svg" class="sotTble" /></span>
+                          </div>
+                        </th>
+                        <th onclick="sortTable(6, 'myTable')" class="style-th">
+                          <div>
+                            <span>QTY of days</span><span><img
+                            src="../images/sort-ic.svg" class="sotTble" /></span>
+                          </div>
+                        </th>
+                        <th onclick="sortTable(7, 'myTable')" class="style-th">
+                          <div>
+                            <span>Building</span><span><img
+                            src="../images/sort-ic.svg" class="sotTble" /></span>
+                          </div>
+                        </th>
+                        <th onclick="sortTable(8, 'myTable')" class="style-th">
+                          <div>
+                            <span>Floor</span><span><img
+                            src="../images/sort-ic.svg" class="sotTble" /></span>
+                          </div>
+                        </th>
+                        <th onclick="sortTable(9, 'myTable')" class="style-th">
+                          <div>
+                            <span>Room</span><span><img
+                            src="../images/sort-ic.svg" class="sotTble" /></span>
+                          </div>
+                        </th>
+                        <th onclick="sortTable(10, 'myTable')" class="style-th">
+                          <div>
+                            <span>Booking amount</span><span><img
+                            src="../images/sort-ic.svg" class="sotTble" /></span>
+                          </div>
+                        </th>
+                        <th onclick="sortTable(11, 'myTable')" class="style-th">
+                          <div>
+                            <span>Notes</span><span><img
+                            src="../images/sort-ic.svg" class="sotTble" /></span>
+                          </div>
+                        </th>
+                        <th onclick="sortTable(12, 'myTable')" class="style-th">
+                          <div>
+                            <span>Project leader</span><span><img
+                            src="../images/sort-ic.svg" class="sotTble" /></span>
+                          </div>
+                        </th>
+                        <th onclick="sortTable(13, 'myTable')" class="style-th">
+                          <div>
+                            <span>Account Manager</span><span><img
+                            src="../images/sort-ic.svg" class="sotTble" /></span>
+                          </div>
+                        </th>
+                        <th class="style-th">
+                          <div class=" width-140">
+                            <span>Action</span>
+                          </div>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="tr trtabler tr-active greenBg">
+                        <td class="style-td">
+                          356912
+                        </td>
+                        <td class="style-td">
+                          Dubai
+                        </td>
+                        <td class="style-td">
+                          Debts
+                        </td>
+                        <td class="style-td">
+                          356912
+                        </td>
+                        <td class="style-td">
+                          Highnox business
+                        </td>
+                        <td class="style-td">
+                          Copies colors
+                        </td>
+                        <td class="style-td">
+                          20-12-2021
+                        </td>
+                        <td class="style-td">
+                          20-12-2021
+                        </td>
+                        <td class="style-td">
+                          1
+                        </td>
+                        <td class="style-td">
+                          1000
+                        </td>
+                        <td class="style-td">
+                          250
+                        </td>
+                        <td class="style-td">
+                          250
+                        </td>
+                        <td class="style-td">
+                          25%
+                        </td>
+                        <td class="style-td">
+                          Ordered in the reception by carl
+                        </td>
+                        <td class="style-td">
+                          <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom"  data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
+                            <img src="../images/client-image.svg" class="image-actions" />
+                          </button>
+                          <div class="tooltip-left btn btn-secondary dataTableButtons">
+                            <img src="../images/client-person.svg" class="image-actions" />
+                            <span class="tooltiptext">Tooltip text</span>
+                          </div>
+                          <a href="create-debit.html" class="btn btn-secondary dataTableButtons" >
+                            <img src="../images/client-icon-copy.svg" class="image-actions" />
+                          </a>
+                        </td>
+                      </tr>
+                      <tr class="tr trtabler tr-active grayBg">
+                        <td class="style-td">
+                          1
+                        </td>
+                        <td class="style-td">
+                          booking 1
+                        </td>
+                        <td class="style-td">
+                          Client 1
+                        </td>
+                        <td class="style-td">
+                          Contact  1
+                        </td>
+                        <td class="style-td">
+                          Highnox business
+                        </td>
+                        <td class="style-td">
+                          20-12-2021
+                        </td>
+                        <td class="style-td">
+                          20-12-2021
+                        </td>
+                        <td class="style-td">
+                          1
+                        </td>
+                        <td class="style-td">
+                          Building1 
+                        </td>
+                        <td class="style-td">
+                          3
+                        </td>
+                        <td class="style-td">
+                          250
+                        </td>
+                        <td class="style-td">
+                          Ordered in the reception by carl
+                        </td>
+                        <td class="style-td">
+                          leader 1
+                        </td>
+                        <td class="style-td">
+                          Manager 1
+                        </td>
+                        <td class="style-td">
+                          <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom"  data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
+                            <img src="../images/client-image.svg" class="image-actions" />
+                          </button>
+                          <div class="tooltip-left btn btn-secondary dataTableButtons">
+                            <img src="../images/client-person.svg" class="image-actions" />
+                            <span class="tooltiptext">Tooltip text</span>
+                          </div>
+                          <a href="create-debit.html" class="btn btn-secondary dataTableButtons" >
+                            <img src="../images/client-icon-copy.svg" class="image-actions" />
+                          </a>
+                        </td>
+                      </tr>
+                      <tr class="tr trtabler tr-active yellowBg">
+                        <td class="style-td">
+                          2
+                        </td>
+                        <td class="style-td">
+                          booking 2
+                        </td>
+                        <td class="style-td">
+                          Client 2
+                        </td>
+                        <td class="style-td">
+                          Contact  2
+                        </td>
+                        <td class="style-td">
+                          Highnox business
+                        </td>
+                        <td class="style-td">
+                          20-12-2021
+                        </td>
+                        <td class="style-td">
+                          20-12-2021
+                        </td>
+                        <td class="style-td">
+                          1
+                        </td>
+                        <td class="style-td">
+                          Building2
+                        </td>
+                        <td class="style-td">
+                          3
+                        </td>
+                        <td class="style-td">
+                          250
+                        </td>
+                        <td class="style-td">
+                          Ordered in the reception by carl
+                        </td>
+                        <td class="style-td">
+                          leader 2
+                        </td>
+                        <td class="style-td">
+                          Manager 2
+                        </td>
+                        <td class="style-td">
+                          <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom"  data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
+                            <img src="../images/client-image.svg" class="image-actions" />
+                          </button>
+                          <div class="tooltip-left btn btn-secondary dataTableButtons">
+                            <img src="../images/client-person.svg" class="image-actions" />
+                            <span class="tooltiptext">Tooltip text</span>
+                          </div>
+                          <a href="create-debit.html" class="btn btn-secondary dataTableButtons" >
+                            <img src="../images/client-icon-copy.svg" class="image-actions" />
+                          </a>
+                        </td>
+                      </tr>
+                      <tr class="tr trtabler tr-active">
+                        <td class="style-td">
+                          3
+                        </td>
+                        <td class="style-td">
+                          booking 3
+                        </td>
+                        <td class="style-td">
+                          Client 3
+                        </td>
+                        <td class="style-td">
+                          Contact  3
+                        </td>
+                        <td class="style-td">
+                          Highnox business
+                        </td>
+                        <td class="style-td">
+                          20-12-2021
+                        </td>
+                        <td class="style-td">
+                          20-12-2021
+                        </td>
+                        <td class="style-td">
+                          1
+                        </td>
+                        <td class="style-td">
+                          Building3 
+                        </td>
+                        <td class="style-td">
+                          3
+                        </td>
+                        <td class="style-td">
+                          250
+                        </td>
+                        <td class="style-td">
+                          Ordered in the reception by carl
+                        </td>
+                        <td class="style-td">
+                          leader 3
+                        </td>
+                        <td class="style-td">
+                          Manager 3
+                        </td>
+                        <td class="style-td">
+                          <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom"  data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
+                            <img src="../images/client-image.svg" class="image-actions" />
+                          </button>
+                          <div class="tooltip-left btn btn-secondary dataTableButtons">
+                            <img src="../images/client-person.svg" class="image-actions" />
+                            <span class="tooltiptext">Tooltip text</span>
+                          </div>
+                          <a href="create-debit.html" class="btn btn-secondary dataTableButtons" >
+                            <img src="../images/client-icon-copy.svg" class="image-actions" />
+                          </a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  </div>
+                </div>
+                <div class="d-flex flex-column-reverse flex-lg-row align-items-center justify-content-end my-4">
+                  <div class="pagination-container my-1">
+                    <ul class="pagination d-flex">
+                      <li class="prev-icon"><i class="fas fa-angle-left"></i></li>
+                      <div class="numbers">
+                        <li class="active"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                      </div>
+                      <li><a href="#" class="next-link">next</a></li>
+                      <li class="next-icon"><i class="fas fa-angle-right"></i></li>
+                    </ul>
+                  </div>  
                 </div>
               </div>
 
               <div class="tab-pane fade table-tab-pane" id="invoiced-section-tab" role="tabpanel1" aria-labelledby="not-active">
-                <div class="table-responsive">
-                  .
+                <div class="table-responsive bg-light">
+                  <div class="secondTableContainer">
+                    <table id="myTable" class="table">
+                    <thead>
+                      <tr class="tr" >
+                        <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
+                        <th onclick="sortTable(0, 'myTable')" class="style-th">
+                          <div>
+                            <span>Booking ID</span><span><img
+                            src="../images/sort-ic.svg" class="sotTble" /></span>
+                          </div>
+                        </th>
+                        <th onclick="sortTable(1, 'myTable')" class="style-th">
+                          <div>
+                            <span>Type of booking</span><span><img
+                            src="../images/sort-ic.svg" class="sotTble" /></span>
+                          </div>
+                        </th>
+                        <th onclick="sortTable(2, 'myTable')" class="style-th">
+                          <div>
+                            <span>Client name</span><span><img
+                            src="../images/sort-ic.svg" class="sotTble" /></span>
+                          </div>
+                        </th>
+                        <th onclick="sortTable(3, 'myTable')" class="style-th">
+                          <div>
+                            <span>Contact person</span><span><img
+                            src="../images/sort-ic.svg" class="sotTble" /></span>
+                          </div>
+                        </th>
+                        <th onclick="sortTable(4, 'myTable')" class="style-th">
+                          <div>
+                            <span>Startdate</span><span><img
+                            src="../images/sort-ic.svg" class="sotTble" /></span>
+                          </div>
+                        </th>
+                        <th onclick="sortTable(5, 'myTable')" class="style-th">
+                          <div>
+                            <span>End date</span><span><img
+                            src="../images/sort-ic.svg" class="sotTble" /></span>
+                          </div>
+                        </th>
+                        <th onclick="sortTable(6, 'myTable')" class="style-th">
+                          <div>
+                            <span>QTY of days</span><span><img
+                            src="../images/sort-ic.svg" class="sotTble" /></span>
+                          </div>
+                        </th>
+                        <th onclick="sortTable(7, 'myTable')" class="style-th">
+                          <div>
+                            <span>Building</span><span><img
+                            src="../images/sort-ic.svg" class="sotTble" /></span>
+                          </div>
+                        </th>
+                        <th onclick="sortTable(8, 'myTable')" class="style-th">
+                          <div>
+                            <span>Floor</span><span><img
+                            src="../images/sort-ic.svg" class="sotTble" /></span>
+                          </div>
+                        </th>
+                        <th onclick="sortTable(9, 'myTable')" class="style-th">
+                          <div>
+                            <span>Room</span><span><img
+                            src="../images/sort-ic.svg" class="sotTble" /></span>
+                          </div>
+                        </th>
+                        <th onclick="sortTable(10, 'myTable')" class="style-th">
+                          <div>
+                            <span>Booking amount</span><span><img
+                            src="../images/sort-ic.svg" class="sotTble" /></span>
+                          </div>
+                        </th>
+                        <th onclick="sortTable(11, 'myTable')" class="style-th">
+                          <div>
+                            <span>Notes</span><span><img
+                            src="../images/sort-ic.svg" class="sotTble" /></span>
+                          </div>
+                        </th>
+                        <th onclick="sortTable(12, 'myTable')" class="style-th">
+                          <div>
+                            <span>Project leader</span><span><img
+                            src="../images/sort-ic.svg" class="sotTble" /></span>
+                          </div>
+                        </th>
+                        <th onclick="sortTable(13, 'myTable')" class="style-th">
+                          <div>
+                            <span>Account Manager</span><span><img
+                            src="../images/sort-ic.svg" class="sotTble" /></span>
+                          </div>
+                        </th>
+                        <th class="style-th">
+                          <div class=" width-140">
+                            <span>Action</span>
+                          </div>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="tr trtabler tr-active greenBg">
+                        <td class="style-td">
+                          356912
+                        </td>
+                        <td class="style-td">
+                          Dubai
+                        </td>
+                        <td class="style-td">
+                          Debts
+                        </td>
+                        <td class="style-td">
+                          356912
+                        </td>
+                        <td class="style-td">
+                          Highnox business
+                        </td>
+                        <td class="style-td">
+                          Copies colors
+                        </td>
+                        <td class="style-td">
+                          20-12-2021
+                        </td>
+                        <td class="style-td">
+                          20-12-2021
+                        </td>
+                        <td class="style-td">
+                          1
+                        </td>
+                        <td class="style-td">
+                          1000
+                        </td>
+                        <td class="style-td">
+                          250
+                        </td>
+                        <td class="style-td">
+                          250
+                        </td>
+                        <td class="style-td">
+                          25%
+                        </td>
+                        <td class="style-td">
+                          Ordered in the reception by carl
+                        </td>
+                        <td class="style-td">
+                          <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom"  data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
+                            <img src="../images/client-image.svg" class="image-actions" />
+                          </button>
+                          <div class="tooltip-left btn btn-secondary dataTableButtons">
+                            <img src="../images/client-person.svg" class="image-actions" />
+                            <span class="tooltiptext">Tooltip text</span>
+                          </div>
+                          <a href="create-debit.html" class="btn btn-secondary dataTableButtons" >
+                            <img src="../images/client-icon-copy.svg" class="image-actions" />
+                          </a>
+                        </td>
+                      </tr>
+                      <tr class="tr trtabler tr-active grayBg">
+                        <td class="style-td">
+                          1
+                        </td>
+                        <td class="style-td">
+                          booking 1
+                        </td>
+                        <td class="style-td">
+                          Client 1
+                        </td>
+                        <td class="style-td">
+                          Contact  1
+                        </td>
+                        <td class="style-td">
+                          Highnox business
+                        </td>
+                        <td class="style-td">
+                          20-12-2021
+                        </td>
+                        <td class="style-td">
+                          20-12-2021
+                        </td>
+                        <td class="style-td">
+                          1
+                        </td>
+                        <td class="style-td">
+                          Building1 
+                        </td>
+                        <td class="style-td">
+                          3
+                        </td>
+                        <td class="style-td">
+                          250
+                        </td>
+                        <td class="style-td">
+                          Ordered in the reception by carl
+                        </td>
+                        <td class="style-td">
+                          leader 1
+                        </td>
+                        <td class="style-td">
+                          Manager 1
+                        </td>
+                        <td class="style-td">
+                          <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom"  data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
+                            <img src="../images/client-image.svg" class="image-actions" />
+                          </button>
+                          <div class="tooltip-left btn btn-secondary dataTableButtons">
+                            <img src="../images/client-person.svg" class="image-actions" />
+                            <span class="tooltiptext">Tooltip text</span>
+                          </div>
+                          <a href="create-debit.html" class="btn btn-secondary dataTableButtons" >
+                            <img src="../images/client-icon-copy.svg" class="image-actions" />
+                          </a>
+                        </td>
+                      </tr>
+                      <tr class="tr trtabler tr-active yellowBg">
+                        <td class="style-td">
+                          2
+                        </td>
+                        <td class="style-td">
+                          booking 2
+                        </td>
+                        <td class="style-td">
+                          Client 2
+                        </td>
+                        <td class="style-td">
+                          Contact  2
+                        </td>
+                        <td class="style-td">
+                          Highnox business
+                        </td>
+                        <td class="style-td">
+                          20-12-2021
+                        </td>
+                        <td class="style-td">
+                          20-12-2021
+                        </td>
+                        <td class="style-td">
+                          1
+                        </td>
+                        <td class="style-td">
+                          Building2
+                        </td>
+                        <td class="style-td">
+                          3
+                        </td>
+                        <td class="style-td">
+                          250
+                        </td>
+                        <td class="style-td">
+                          Ordered in the reception by carl
+                        </td>
+                        <td class="style-td">
+                          leader 2
+                        </td>
+                        <td class="style-td">
+                          Manager 2
+                        </td>
+                        <td class="style-td">
+                          <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom"  data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
+                            <img src="../images/client-image.svg" class="image-actions" />
+                          </button>
+                          <div class="tooltip-left btn btn-secondary dataTableButtons">
+                            <img src="../images/client-person.svg" class="image-actions" />
+                            <span class="tooltiptext">Tooltip text</span>
+                          </div>
+                          <a href="create-debit.html" class="btn btn-secondary dataTableButtons" >
+                            <img src="../images/client-icon-copy.svg" class="image-actions" />
+                          </a>
+                        </td>
+                      </tr>
+                      <tr class="tr trtabler tr-active">
+                        <td class="style-td">
+                          3
+                        </td>
+                        <td class="style-td">
+                          booking 3
+                        </td>
+                        <td class="style-td">
+                          Client 3
+                        </td>
+                        <td class="style-td">
+                          Contact  3
+                        </td>
+                        <td class="style-td">
+                          Highnox business
+                        </td>
+                        <td class="style-td">
+                          20-12-2021
+                        </td>
+                        <td class="style-td">
+                          20-12-2021
+                        </td>
+                        <td class="style-td">
+                          1
+                        </td>
+                        <td class="style-td">
+                          Building3 
+                        </td>
+                        <td class="style-td">
+                          3
+                        </td>
+                        <td class="style-td">
+                          250
+                        </td>
+                        <td class="style-td">
+                          Ordered in the reception by carl
+                        </td>
+                        <td class="style-td">
+                          leader 3
+                        </td>
+                        <td class="style-td">
+                          Manager 3
+                        </td>
+                        <td class="style-td">
+                          <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom"  data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
+                            <img src="../images/client-image.svg" class="image-actions" />
+                          </button>
+                          <div class="tooltip-left btn btn-secondary dataTableButtons">
+                            <img src="../images/client-person.svg" class="image-actions" />
+                            <span class="tooltiptext">Tooltip text</span>
+                          </div>
+                          <a href="create-debit.html" class="btn btn-secondary dataTableButtons" >
+                            <img src="../images/client-icon-copy.svg" class="image-actions" />
+                          </a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  </div>
+                </div>
+                <div class="d-flex flex-column-reverse flex-lg-row align-items-center justify-content-end my-4">
+                  <div class="pagination-container my-1">
+                    <ul class="pagination d-flex">
+                      <li class="prev-icon"><i class="fas fa-angle-left"></i></li>
+                      <div class="numbers">
+                        <li class="active"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                      </div>
+                      <li><a href="#" class="next-link">next</a></li>
+                      <li class="next-icon"><i class="fas fa-angle-right"></i></li>
+                    </ul>
+                  </div>  
                 </div>
               </div>
           </div>

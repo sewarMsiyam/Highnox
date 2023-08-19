@@ -52,7 +52,7 @@ justify-content: space-between;
   cursor: pointer;
 }
  .to-do-img {
-  width: 30px;
+  width: 60px !important;
   height: 30px;
   background-color: #ECE6F5;
   border-radius: 15px;
@@ -311,3 +311,23 @@ input.call-picker {
   -moz-opacity: 0.8;
   filter:alpha(opacity=8);
 }
+
+
+#add_user .dropdown-toggle .filter-option-inner .filter-option-inner-inner {
+  font-size: 27px !important;
+  line-height: 13px !important;
+  width: 77px;
+  
+}
+/* 
+#add_user .dropdown-toggle .filter-option-inner .filter-option-inner-inner {
+  font-size: 27px !important;
+  line-height: 13px !important;
+  color: white;
+  background-color: #00B4C1 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 6px;
+  border-radius: 50%;
+} */

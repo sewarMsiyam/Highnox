@@ -13,6 +13,7 @@
   <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
   <script src="../JS/semantic.min.js"></script>
   <!-- global style -->
+  <link href="../css/global/datepicker/datepicker.css" rel="stylesheet">
   <link href="../css/global/bootstrap/bootstrap.min.css" rel="stylesheet">
   <link href="../css/global/bootstrap/bootstrap-select.css" rel="stylesheet">
   <link href="../css/global/swiper/swiper-bundle.min.css" rel="stylesheet">
@@ -604,15 +605,16 @@
                                       <label>Offer Start date</label>
                                     </div>
                                     <div class="second-select-input">
-                                      <input type="date" class="form-control date-input border-0 px-0" placeholder="Select date">
-                                    </div>
+                                      <input type="text" class="form-control datepicker date-input border-0 px-0" placeholder="Select date">
+                                      <img class="input-svg" width="12" src="../images/date.svg">                                    </div>
                                   </div>
                                   <div class="col-md-2 col-6">
                                     <div>
                                       <label>Activity close date</label>
                                     </div>
                                     <div class="second-select-input">
-                                      <input type="date" class="form-control date-input border-0 px-0" placeholder="Select date">
+                                      <input type="text" class="form-control datepicker date-input border-0 px-0" placeholder="Select date">
+                                      <img class="input-svg" width="12" src="../images/date.svg">
                                     </div>
                                   </div>
                                   <div class="col-md-2 col-12 padding-top-small-10">
@@ -787,9 +789,9 @@
                                                       <span>Total Incl VAT</span><span><img src="../images/sort-ic.svg" class="sotTble"></span>
                                                     </div>
                                                   </th>
-                                                  <th onclick="sortTable(8, 'myTable')" class="style-th">
+                                                  <th onclick="sortTable(8, 'myTable')" class="style-th" style=" width: 100px;">
                                                     <div>
-                                                      <span>Action</span><span><img src="../images/sort-ic.svg" class="sotTble"></span>
+                                                      <span>Action</span><span>
                                                     </div>
                                                   </th>
                                                 </tr>
@@ -824,7 +826,7 @@
                                                     <button type="button" class="btn btn-secondary dataTableButtons edite-Role">
                                                       <i class="fa fa-pen"></i>
                                                     </button>
-                                                    <button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
+                                                    <button type="button" class="btn btn-secondary dataTableButtons">
                                                     <i class="fa fa-trash"></i>
                                                     </button>
                                                   </td>
@@ -1023,27 +1025,28 @@
               <textarea class="form-control" id="editor" style="background-color: #F3F2F2;"></textarea>    
             </div>
             <div class="d-flex justify-content-center align-items-center m-3 flex-wrap" style="gap:15px">
-                <div class="d-flex p-3   justify-content-between" id="download-contract-word"
-                    style="width:45%;background-color: #F3F2F2;">
+                <input class="file-word-input" type="file" style="display: none;" />
+                <div class="d-flex p-3 justify-content-between" id="import-contract-word" style="width:45%;background-color: #F3F2F2;">
                     <div class="d-flex" style="gap:10px">
                         <img src="../img/icons/word.svg" />
                         <div class="d-flex flex-column">
-                            <span>Research.rar</span>
-                            <span>5.778 gbs</span>
+                            <span id="name_file_word">select file word</span>
+                            <span id="gbs_file_word">0 gbs</span>
                         </div>
                     </div>
-                    <img src="../img/icons/download-solid.svg" />
+                    <img src="../img/icons/download-solid.svg" id="download-contract-word" />
                 </div>
-                <div class="d-flex p-3 justify-content-between" id="download-contract-excel"
+                <input class="file-excel-input" type="file" style="display: none;" />
+                <div class="d-flex p-3 justify-content-between" id="import-contract-excel"
                     style="width:45%;background-color: #F3F2F2;">
                     <div class="d-flex" style="gap:10px">
                         <img src="../img/icons/excel.svg" />
                         <div class="d-flex flex-column">
-                            <span>Research.rar</span>
-                            <span>5.778 gbs</span>
+                            <span id="name_file_excel">select file word</span>
+                            <span id="gbs_file_excel">0 gbs</span>
                         </div>
                     </div>
-                    <img src="../img/icons/download-solid.svg" />
+                    <img src="../img/icons/download-solid.svg"  id="download-contract-excel" />
                 </div>
             </div>
             <div class="modal-footer d-flex justify-content-center">
@@ -1058,6 +1061,7 @@
     </div>
 </div>
 <!-- End email modal -->
+
 
 
 <!-- pdf  modal -->
@@ -1194,53 +1198,41 @@
 
 
   <script type="text/javascript">
-    $(function () {
-
-    // Start counting from the third row
+$(function () {
     var counter = 1;
-
     $(".add_new_row").on("click", function (event) {
         event.preventDefault();
-
         var newRow = $('<tr class="tr style-table-my1 tr-active">');
         var cols = '';
-
         // Table columns
-        cols += '<td style="width:10%;" class="style-td"><input class="form-control rounded-0" type="text" name="firstname" placeholder="First name"></td>';
-        cols += '<td style="width:7%;" class="style-td"><input class="form-control rounded-0" type="text" name="lastname" placeholder="Last name"></td>';
-        cols += '<td style="width:7%;" class="style-td"><select class="form-control border-0"> <option>Select </option> <option>Unit 1</option> <option>Unit 2</option> <option>Unit 3</option> </select></td>';
-        cols += '<td style="width:7%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
-        cols += '<td style="width:7%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
-        cols += '<td style="width:7%;" class="style-td"><select class="form-control border-0"> <option>Select </option> <option>VAT 1</option> <option>VAT 2</option> <option>VAT 3</option> </select></td>';
-        cols += '<td style="width:14%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
-        cols += '<td style="width:7%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
-        cols += '<td style="width:7%;" class="style-td"><button type="button" class="btn btn-secondary dataTableButtons edite-save"> <i class="fa-solid fa-floppy-disk"></i> </button><button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" title="" data-bs-original-title="Tooltip on bottom"><i class="fa fa-trash"></i></button></td>';
-
-        // cols += '<td><button class="btn btn-danger rounded-0" id ="deleteRow"><i class="fa fa-trash"></i></button</td>';
-
-        // Insert the columns inside a row
+        cols += '<td class="style-td"><input class="form-control rounded-0" type="text" name="firstname" placeholder="First name"></td>';
+        cols += '<td class="style-td"><input class="form-control rounded-0" type="text" name="lastname" placeholder="Last name"></td>';
+        cols += '<td class="style-td"><select class="form-control rounded-0"> <option>Select </option> <option>Unit 1</option> <option>Unit 2</option> <option>Unit 3</option> </select></td>';
+        cols += '<td class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
+        cols += '<td class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
+        cols += '<td class="style-td"><select class="form-control rounded-0"> <option>Select </option> <option>VAT 1</option> <option>VAT 2</option> <option>VAT 3</option> </select></td>';
+        cols += '<td class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
+        cols += '<td class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
+        cols += '<td style=" width: 100px;" class="style-td"> <button type="button" class="btn btn-secondary dataTableButtons edite-save"> <i class="fa-solid fa-check"></i> </button> <button type="button" class="btn btn-secondary dataTableButtons deleteRow"> <i class="fa fa-trash"></i> </button> </td>';
         newRow.append(cols);
-
-        // Insert the row inside a table
         $(".table-Articler").append(newRow);
-
-        // Increase counter after each row insertion
         counter++;
     });
-    $(".table-Articler").on("click", ".edite-save", function (event) {
+    $(".table-Articler").on("click", ".edite-save", function(event) {
         var row = $(this).closest("tr");
         var inputs = row.find("input");
-        var editIcon = row.find(".fa-solid.fa-floppy-disk");
-
+        var select = row.find("select");
+        var editIcon = $(this).find("i");
         inputs.each(function () {
-            $(this).prop("readonly", !$(this).prop("readonly"));
+            $(this).prop("disabled", !$(this).prop("disabled"));
         });
-
-        if (editIcon.length > 0) {
-            editIcon.removeClass("fa-solid fa-floppy-disk").addClass("fa fa-pen");
+        select.each(function () {
+            $(this).prop("disabled", !$(this).prop("disabled"));
+        });
+        if (editIcon.hasClass("fa-check")) {
+          editIcon.removeClass("fa-check").addClass("fa-pen");
         } else {
-            editIcon = row.find(".fa fa-pen");
-            editIcon.removeClass("fa fa-pen").addClass("fa-solid fa-floppy-disk");
+          editIcon.removeClass("fa-pen").addClass("fa-check");
         }
     });
     // Remove row when delete btn is clicked
@@ -1278,6 +1270,12 @@ var newRow = `
 `;
 $(".row-note").append(newRow);
 });
+
+
+
+
+
+
   </script>
 </body>
 

@@ -13,6 +13,7 @@
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="../JS/semantic.min.js"></script>
     <!-- global style -->
+    <link href="../css/global/datepicker/datepicker.css" rel="stylesheet">
     <link href="../css/global/bootstrap/bootstrap.min.css" rel="stylesheet">
     <link href="../css/global/bootstrap/bootstrap-select.css" rel="stylesheet">
     <link href="../css/global/swiper/swiper-bundle.min.css" rel="stylesheet">
@@ -962,8 +963,8 @@
                                                     <label>Start Date</label>
                                                 </div>
                                                 <div class="second-select-input">
-                                                    <input type="date" class="form-control date-input border-0 px-0"
-                                                        placeholder="Select date">
+                                                        <input type="text" class="form-control datepicker date-input border-0 px-0" placeholder="Select date">
+                                                        <img class="input-svg" width="12" src="../images/date.svg">
                                                 </div>
                                             </div>
                                             <div class="col-md-2 col-6">
@@ -971,8 +972,8 @@
                                                     <label>End Date</label>
                                                 </div>
                                                 <div class="second-select-input">
-                                                    <input type="date" class="form-control date-input border-0 px-0"
-                                                        placeholder="Select date">
+                                                    <input type="text" class="form-control datepicker date-input border-0 px-0" placeholder="Select date">
+                                                    <img class="input-svg" width="12" src="../images/date.svg">
                                                 </div>
                                             </div>
                                             <div class="col-md-2 col-6">
@@ -980,8 +981,8 @@
                                                     <label>Move in Date</label>
                                                 </div>
                                                 <div class="second-select-input">
-                                                    <input type="date" class="form-control date-input border-0 px-0"
-                                                        placeholder="Select date">
+                                                    <input type="text" class="form-control datepicker date-input border-0 px-0" placeholder="Select date">
+                                                        <img class="input-svg" width="12" src="../images/date.svg">
                                                 </div>
                                             </div>
                                             <div class="col-md-2 col-12 d-flex align-items-end pb-2">
@@ -1076,13 +1077,19 @@
                                                                 </th>
                                                                 <th onclick="sortTable(4, 'myTable')" class="style-th">
                                                                     <div>
-                                                                        <span>Unit</span><span><img
+                                                                        <span>QTY</span><span><img
                                                                                 src="../images/sort-ic.svg" class="sotTble"></span>
                                                                     </div>
                                                                 </th>
                                                                 <th onclick="sortTable(5, 'myTable')" class="style-th">
                                                                     <div>
                                                                         <span>Unit price</span><span><img
+                                                                                src="../images/sort-ic.svg" class="sotTble"></span>
+                                                                    </div>
+                                                                </th>
+                                                                <th onclick="sortTable(5, 'myTable')" class="style-th">
+                                                                    <div>
+                                                                        <span>Total</span><span><img
                                                                                 src="../images/sort-ic.svg" class="sotTble"></span>
                                                                     </div>
                                                                 </th>
@@ -1127,6 +1134,9 @@
                                                                 </td>
                                                                 <td class="style-td">
                                                                     2
+                                                                </td>
+                                                                <td class="style-td">
+                                                                    3
                                                                 </td>
                                                                 <td class="style-td">
                                                                     3
@@ -1649,8 +1659,8 @@
                                                     <label>Start Date</label>
                                                 </div>
                                                 <div class="second-select-input">
-                                                    <input type="date" class="form-control date-input border-0 px-0"
-                                                        placeholder="Select date">
+                                                    <input type="text" class="form-control datepicker date-input border-0 px-0" placeholder="Select date">
+                                                        <img class="input-svg" width="12" src="../images/date.svg">
                                                 </div>
                                             </div>
                                             <div class="col-md-2 col-6">
@@ -1658,8 +1668,8 @@
                                                     <label>Termination Start Date</label>
                                                 </div>
                                                 <div class="second-select-input">
-                                                    <input type="date" class="form-control date-input border-0 px-0"
-                                                        placeholder="Select date">
+                                                    <input type="text" class="form-control datepicker date-input border-0 px-0" placeholder="Select date">
+                                                        <img class="input-svg" width="12" src="../images/date.svg">
                                                 </div>
                                             </div>
                                             <div class="col-md-2 col-6">
@@ -1667,8 +1677,8 @@
                                                     <label>Contracts End Date</label>
                                                 </div>
                                                 <div class="second-select-input">
-                                                    <input type="date" class="form-control date-input border-0 px-0"
-                                                        placeholder="Select date">
+                                                    <input type="text" class="form-control datepicker date-input border-0 px-0" placeholder="Select date">
+                                                        <img class="input-svg" width="12" src="../images/date.svg">
                                                 </div>
                                             </div>
                                             <div class="col-md-3 col-6">
@@ -1676,8 +1686,8 @@
                                                     <label>Reminder About Termination </label>
                                                 </div>
                                                 <div class="second-select-input">
-                                                    <input type="date" class="form-control date-input border-0 px-0"
-                                                        placeholder="Select date">
+                                                    <input type="text" class="form-control datepicker date-input border-0 px-0" placeholder="Select date">
+                                                    <img class="input-svg" width="12" src="../images/date.svg">
                                                 </div>
                                             </div>
                                         </div>
@@ -1700,8 +1710,8 @@
                                                     <label>Reminder For Termination Control </label>
                                                 </div>
                                                 <div class="second-select-input">
-                                                    <input type="date" class="form-control date-input border-0 px-0"
-                                                        placeholder="Select date">
+                                                    <input type="text" class="form-control datepicker date-input border-0 px-0" placeholder="Select date">
+                                                        <img class="input-svg" width="12" src="../images/date.svg">
                                                 </div>
                                             </div>
                                             <div class="col-md-2 col-6">
@@ -2157,8 +2167,8 @@
                                                     <label>Due Date Day</label>
                                                 </div>
                                                 <div class="second-select-input">
-                                                    <input type="date" class="form-control date-input border-0 px-0"
-                                                        placeholder="Select date">
+                                                    <input type="text" class="form-control datepicker date-input border-0 px-0" placeholder="Select date">
+                                                    <img class="input-svg" width="12" src="../images/date.svg">
                                                 </div>
                                             </div>
 
@@ -2564,8 +2574,8 @@
                                                     <label>Start Date</label>
                                                 </div>
                                                 <div class="second-select-input">
-                                                    <input type="date" class="form-control date-input border-0 px-0"
-                                                        placeholder="Select date">
+                                                    <input type="text" class="form-control datepicker date-input border-0 px-0" placeholder="Select date">
+                                                        <img class="input-svg" width="12" src="../images/date.svg">
                                                 </div>
                                             </div>
                                             <div class="col-md-2 col-6">
@@ -2573,8 +2583,8 @@
                                                     <label>End Date</label>
                                                 </div>
                                                 <div class="second-select-input">
-                                                    <input type="date" class="form-control date-input border-0 px-0"
-                                                        placeholder="Select date">
+                                                    <input type="text" class="form-control datepicker date-input border-0 px-0" placeholder="Select date">
+                                                        <img class="input-svg" width="12" src="../images/date.svg">
                                                 </div>
                                             </div>
                                             <div class="col-md-2 col-12 d-flex align-items-end pb-2">
@@ -3463,7 +3473,8 @@
                 cols += '<td style="width:7%;" class="style-td"><select class="form-control rounded-0"><option>select</option><option>building1</option><option>building2</option></select></td>';
                 cols += '<td style="width:7%;" class="style-td"><select class="form-control rounded-0"><option>select</option><option>floor1</option><option>floor2</option></select></td>';
                 cols += '<td style="width:7%;" class="style-td"><select class="form-control rounded-0"><option>select</option><option>rooms1</option><option>rooms2</option></select></td>';
-                cols += '<td style="width:7%;" class="style-td"><select class="form-control rounded-0"><option>select</option><option>sqm1</option><option>sqm2</option></select></td>';
+                cols += '<td style="width:7%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
+                cols += '<td style="width:7%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
                 cols += '<td style="width:7%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
                 cols += '<td style="width:7%;" class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
                 cols += '<td style="width:7%;" class="style-td"><select class="form-control rounded-0"><option>select</option><option>1</option><option>2</option></select></td>';

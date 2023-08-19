@@ -13,6 +13,7 @@
   <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
   <script src="../JS/semantic.min.js"></script>
   <!-- global style -->
+  <link href="../css/global/datepicker/datepicker.css" rel="stylesheet">
   <link href="../css/global/bootstrap/bootstrap.min.css" rel="stylesheet">
   <link href="../css/global/bootstrap/bootstrap-select.css" rel="stylesheet">
   <link href="../css/global/swiper/swiper-bundle.min.css" rel="stylesheet">
@@ -543,7 +544,8 @@
                          <label>date</label>
                         </div>
                         <div class="second-select-input">
-                          <input type="date" class="form-control date-input border-0 px-0" placeholder="Select date">
+                          <input type="text" class="form-control datepicker date-input border-0 px-0" placeholder="Select date">
+                          <img class="input-svg" width="12" src="../images/date.svg">
                         </div>                   
                       </div>
                       <div class="col-md-2 col-6">
@@ -873,7 +875,7 @@ $(function () {
         var newRow = $('<tr class="tr style-table-my1 tr-active">');
         var cols = '';
         cols += '<td class="style-td p-1"> <input type="checkbox" class="" id="customCheck1"> </td>';
-        cols += '<td class="style-td p-1"><input class="form-control fs-10 rounded-0" type="date"></td>';
+        cols += '<td class="style-td p-1"><div class="second-select-input form-control shadow-none"> <input type="text" class="form-control fs-10 rounded-0 datepicker" placeholder="Select date"> <img class="input-svg" width="12" src="../images/date.svg"> </div></td>';
         cols += '<td class="style-td p-1"><input class="form-control fs-10 rounded-0" type="text" placeholder="text"></td>';
         cols += '<td class="style-td p-1"><input class="form-control fs-10 rounded-0" type="text" placeholder="text"></td>';
         cols += '<td class="style-td p-1"><input class="form-control fs-10 rounded-0" type="text" placeholder="text"></td>';
@@ -884,6 +886,7 @@ $(function () {
         cols += '<td class="style-td p-1"><input class="form-control fs-10 rounded-0" type="text" placeholder="text"></td>';
         cols += '<td class="style-td p-1"><input class="form-control fs-10 rounded-0" type="text" placeholder="text"></td>';
         cols += '<td class="style-td p-1"><input class="form-control fs-10 rounded-0" type="text" placeholder="text"></td>';
+
         cols += '<td class="style-td p-1"><button type="button" class="btn btn-secondary dataTableButtons" data-bs-toggle="modal" data-bs-target="#notModal"><i class="fa-solid fa-note-sticky"></i></button></td>';
         cols += '<td class="style-td p-1"><button type="button" class="btn btn-secondary dataTableButtons edite-save"><i class="fa-solid fa-floppy-disk"></i> </button></td>';
         cols += '<td class="style-td p-1"><div class="tooltip-left btn btn-secondary dataTableButtons"> <img src="../images/client-person.svg" class="image-actions"> <span class="tooltiptext">Tooltip text</span> </div></td>';
@@ -892,6 +895,7 @@ $(function () {
         newRow.append(cols);
         $(".table-debts").append(newRow);
         counter++;
+        $(".datepicker").datepicker();
     });
     $(".table-debts").on("click", ".edite-save", function (event) {
         var row = $(this).closest("tr");

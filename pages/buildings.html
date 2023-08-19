@@ -13,6 +13,7 @@
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="../JS/semantic.min.js"></script>
     <!-- global style -->
+    <link href="../css/global/datepicker/datepicker.css" rel="stylesheet">
     <link href="../css/global/bootstrap/bootstrap.min.css" rel="stylesheet">
     <link href="../css/global/bootstrap/bootstrap-select.css" rel="stylesheet">
     <link href="../css/global/swiper/swiper-bundle.min.css" rel="stylesheet">
@@ -592,7 +593,7 @@
                         </div>
 
                         <div class="tab-content" id="myTabContent2">
-                            <div class="tab-pane fade show active " id="all" role="tabpanel1" aria-labelledby="all-tab">
+                            <div class="tab-pane table-tab-pane fade show active " id="all" role="tabpanel1" aria-labelledby="all-tab">
                                 <form>
                                     <div class="form-row">
                                         <div class="col-md-2 col-6">
@@ -677,9 +678,9 @@
                                             <thead>
                                                 <tr class="tr">
                                                     <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
-                                                    <th onclick="sortTable(0, 'myTable')" class="style-th">
+                                                    <th class="style-th">
                                                         <div>
-                                                            <input type="checkbox" class="" id="customCheck1">
+                                                            <input type="checkbox" class="selectAll">
                                                         </div>
                                                     </th>
                                                     <th onclick="sortTable(1, 'myTable')" class="style-th">
@@ -773,8 +774,8 @@
                                                                     class="sotTble" /></span>
                                                         </div>
                                                     </th>
-                                                    <th onclick="sortTable(15, 'myTable')" class="style-th width-140">
-                                                        <div>
+                                                    <th class="style-th">
+                                                        <div class=" width-140">
                                                             <span>Action</span>
                                                         </div>
                                                     </th>
@@ -783,7 +784,7 @@
                                             <tbody>
                                                 <tr class="tr trtabler tr-active">
                                                     <td class="style-td">
-                                                        <input type="checkbox" class="" id="customCheck1">
+                                                        <input type="checkbox" />
                                                     </td>
                                                     <td class="style-td">
                                                         1
@@ -850,8 +851,24 @@
                                         </table>
                                     </div>
                                 </div>
-                                <div
-                                    class="d-flex flex-column-reverse flex-lg-row align-items-center justify-content-end my-4">
+                                <div class="action-container mt-3 d-none">
+                                    <button class="btn btn-danger delete-selected">حذف محدد <span class="selected-count d-none">0 محددة</span></button>
+                                </div>
+                                <div class="d-flex flex-column-reverse flex-lg-row align-items-center justify-content-between my-3 w-100">
+                                    <div class="d-flex align-items-center justify-content-center justify-content-md-start">
+                                        <div class="dataTables_length" id="datatable_example_1_length">
+                                            <label class="m-0">
+                                                <select id="datatable_length_select" class="form-control p-1 ">
+                                                    <option value="10">10</option>
+                                                    <option value="25">25</option>
+                                                    <option value="50">50</option>
+                                                    <option value="100">100</option>
+                                                </select>
+                                            </label>
+                                        </div>
+                                        <div class="dataTables_info px-2" id="datatable_example_1_info" role="status" aria-live="polite">Showing 1 to 25 of 350 records</div>
+                                    </div>
+
                                     <div class="pagination-container my-1">
                                         <ul class="pagination d-flex">
                                             <li class="prev-icon"><i class="fas fa-angle-left"></i></li>
@@ -954,9 +971,9 @@
                                             <thead>
                                                 <tr class="tr">
                                                     <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
-                                                    <th onclick="sortTable(0, 'myTable')" class="style-th">
+                                                    <th class="style-th">
                                                         <div>
-                                                            <input type="checkbox" class="" id="customCheck1">
+                                                            <input type="checkbox" class="selectAll">
                                                         </div>
                                                     </th>
                                                     <th onclick="sortTable(1, 'myTable')" class="style-th">
@@ -1050,8 +1067,8 @@
                                                                     class="sotTble" /></span>
                                                         </div>
                                                     </th>
-                                                    <th onclick="sortTable(15, 'myTable')" class="style-th width-140">
-                                                        <div>
+                                                    <th class="style-th">
+                                                        <div class=" width-140">
                                                             <span>Action</span>
                                                         </div>
                                                     </th>
@@ -1060,7 +1077,7 @@
                                             <tbody>
                                                 <tr class="tr trtabler tr-active">
                                                     <td class="style-td">
-                                                        <input type="checkbox" class="" id="customCheck1">
+                                                        <input type="checkbox" />
                                                     </td>
                                                     <td class="style-td">
                                                         1
@@ -1127,8 +1144,24 @@
                                         </table>
                                     </div>
                                 </div>
-                                <div
-                                    class="d-flex flex-column-reverse flex-lg-row align-items-center justify-content-end my-4">
+                                <div class="action-container mt-3 d-none">
+                                    <button class="btn btn-danger delete-selected">حذف محدد <span class="selected-count d-none">0 محددة</span></button>
+                                </div>
+                                <div class="d-flex flex-column-reverse flex-lg-row align-items-center justify-content-between my-3 w-100">
+                                    <div class="d-flex align-items-center justify-content-center justify-content-md-start">
+                                        <div class="dataTables_length" id="datatable_example_1_length">
+                                            <label class="m-0">
+                                                <select id="datatable_length_select" class="form-control p-1 ">
+                                                    <option value="10">10</option>
+                                                    <option value="25">25</option>
+                                                    <option value="50">50</option>
+                                                    <option value="100">100</option>
+                                                </select>
+                                            </label>
+                                        </div>
+                                        <div class="dataTables_info px-2" id="datatable_example_1_info" role="status" aria-live="polite">Showing 1 to 25 of 350 records</div>
+                                    </div>
+
                                     <div class="pagination-container my-1">
                                         <ul class="pagination d-flex">
                                             <li class="prev-icon"><i class="fas fa-angle-left"></i></li>
@@ -1231,9 +1264,9 @@
                                             <thead>
                                                 <tr class="tr">
                                                     <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
-                                                    <th onclick="sortTable(0, 'myTable')" class="style-th">
+                                                    <th class="style-th">
                                                         <div>
-                                                            <input type="checkbox" class="" id="customCheck1">
+                                                            <input type="checkbox" class="selectAll">
                                                         </div>
                                                     </th>
                                                     <th onclick="sortTable(1, 'myTable')" class="style-th">
@@ -1327,8 +1360,8 @@
                                                                     class="sotTble" /></span>
                                                         </div>
                                                     </th>
-                                                    <th onclick="sortTable(15, 'myTable')" class="style-th width-140">
-                                                        <div>
+                                                    <th class="style-th">
+                                                        <div class="width-140">
                                                             <span>Action</span>
                                                         </div>
                                                     </th>
@@ -1337,7 +1370,7 @@
                                             <tbody>
                                                 <tr class="tr trtabler tr-active">
                                                     <td class="style-td">
-                                                        <input type="checkbox" class="" id="customCheck1">
+                                                        <input type="checkbox" />
                                                     </td>
                                                     <td class="style-td">
                                                         1
@@ -1404,8 +1437,24 @@
                                         </table>
                                     </div>
                                 </div>
-                                <div
-                                    class="d-flex flex-column-reverse flex-lg-row align-items-center justify-content-end my-4">
+                                <div class="action-container mt-3 d-none">
+                                    <button class="btn btn-danger delete-selected">حذف محدد <span class="selected-count d-none">0 محددة</span></button>
+                                </div>
+                                <div class="d-flex flex-column-reverse flex-lg-row align-items-center justify-content-between my-3 w-100">
+                                    <div class="d-flex align-items-center justify-content-center justify-content-md-start">
+                                        <div class="dataTables_length" id="datatable_example_1_length">
+                                            <label class="m-0">
+                                                <select id="datatable_length_select" class="form-control p-1 ">
+                                                    <option value="10">10</option>
+                                                    <option value="25">25</option>
+                                                    <option value="50">50</option>
+                                                    <option value="100">100</option>
+                                                </select>
+                                            </label>
+                                        </div>
+                                        <div class="dataTables_info px-2" id="datatable_example_1_info" role="status" aria-live="polite">Showing 1 to 25 of 350 records</div>
+                                    </div>
+
                                     <div class="pagination-container my-1">
                                         <ul class="pagination d-flex">
                                             <li class="prev-icon"><i class="fas fa-angle-left"></i></li>
@@ -1460,6 +1509,7 @@
     <script src="../JS/client/main.js"></script>
     <script src="../JS/global/bootstrap/bootstrap.bundle.min.js"></script>
     <script src="../JS/global/bootstrap/bootstrap-select.js"></script>
+    <script src="../JS/global/datePicker/datepicker.js"></script>
     <script src="../JS/layout.js"></script>
 
 

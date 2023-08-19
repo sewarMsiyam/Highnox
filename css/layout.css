@@ -55,8 +55,9 @@ table td {
 a{
   text-decoration: none !important;
 }
-.datepicker {
-  width: 220px !important;
+
+.datepicker-dropdown{
+  padding: 5px;
 }
 
 /*** Layout ***/
@@ -322,7 +323,7 @@ input[type="date"] {
   position: relative;
   background-image: url("../images/date.svg");
   background-repeat: no-repeat;
-  background-position: 97% 6px;
+  background-position: 97% center;
 }
 
 input[type="date"]::-webkit-calendar-picker-indicator {
@@ -399,8 +400,127 @@ input[type="Week"]::-webkit-calendar-picker-indicator {
   top: 0;
   width: auto;
 }
-
-
 .image-container .navbar-span{
   font-size: 1.5rem !important;
 }
+.btn-danger {
+  background: #f1416c !important;
+  color: #fff;
+}
+
+
+
+
+/*tol tip*/
+  /* information */
+  .wrapper  {
+    position: relative;
+
+  }
+  .tooltip-wrapper{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--light);
+    width: 40px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .wrapper  .tooltip {
+    background: #364153;
+    position: absolute;
+    top: 50px;
+    left: -75px;
+    color: #fff;
+    display: block;
+    margin-bottom: 15px;
+    opacity: 0;
+    padding: 20px;
+    border-radius: 10px;
+    pointer-events: none;
+    position: absolute;
+    width: 200px;
+    -webkit-transform: translateY(10px);
+    -moz-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    -o-transform: translateY(10px);
+    transform: translateY(10px);
+    -webkit-transition: all .25s ease-out;
+    -moz-transition: all .25s ease-out;
+    -ms-transition: all .25s ease-out;
+    -o-transition: all .25s ease-out;
+    transition: all .25s ease-out;
+    box-shadow: 0px 3px 6px #364153;
+    /* transform: rotate(180deg); */
+    z-index: 19999;
+  }
+  
+  
+  
+  /* CSS Triangles - see Trevor's post */
+  /* .wrapper  .tooltip:after {
+    border-left: solid transparent 7px;
+    border-right: solid transparent 7px;
+    border-top: solid transparent 7px;
+    border-bottom: solid #364153 7px;
+    top: -13px;
+    content: " ";
+    height: 0;
+    left: 22px !important;
+    margin-left: -13px;
+    position: absolute;
+    width: 0;
+  }
+  .wrapper  .position-absolute:after {
+    border-left: solid transparent 7px;
+    border-right: solid transparent 7px;
+    border-top: solid transparent 7px;
+    border-bottom: solid #364153 7px;
+    top: -13px;
+    content: " ";
+    height: 0;
+    left: 100px !important;
+    margin-left: -13px;
+    position: absolute;
+    width: 0;
+  }
+  
+  .wrapper :hover .tooltip {
+    opacity: 1;
+    pointer-events: auto;
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    -o-transform: translateY(0px);
+    transform: translateY(0px);
+  } */
+  
+  /* IE can just show/hide with no transition */
+  .lte8 .wrapper  .tooltip {
+    display: none;
+  }
+  
+  .lte8 .wrapper :hover .tooltip {
+    display: block;
+  }
+  .tooltip .info-text {
+    font-size: 7px;
+    font-family: "MontserratRegular";
+  }
+  
+  .business-name {
+    font-size: 13px;
+    font-family: "MontserratMedium";
+  }
+  .business-sales{
+    font-size: 10px;
+    font-family: "MontserratMedium";
+  }
+  .business-date{
+    font-size: 8px;
+    font-family: "MontserratRegular";
+    width: 100%;
+    text-align: right;
+  }
+

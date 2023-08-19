@@ -377,12 +377,11 @@ a:hover {
   display: flex !important;
 } */
 
-.dropdown-menu {
+nav .dropdown-menu {
   border-radius: 15px;
   background-color: var(--light);
   right: 0;
   left: auto;
-  /* overflow: hidden; */
   width: auto !important;
   box-shadow: 0 3px 6px #00000029;
 }
@@ -801,17 +800,21 @@ tbody tr:hover {
   top: -5px;
   right: 110%;
   padding: 10px;
+  font-size: 10px;
+  font-family: "MontserratMedium";
+  width: 220px;
+  max-width: max-content;
+  white-space: normal;
 }
 
 .tooltip-left .tooltiptext::after {
   content: "";
-  position: absolute;
-  top: 50%;
-  left: 100%;
-  margin-top: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: transparent transparent transparent black;
+    position: absolute;
+    top: 30%;
+    left: 100%;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent black;
 }
 .tooltip-left:hover .tooltiptext {
   visibility: visible;

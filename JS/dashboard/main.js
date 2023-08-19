@@ -14,33 +14,33 @@
 // });
 
 
-// const downloadPdfActivityBtnWord = document.getElementById("download-contract-word");
-// downloadPdfActivityBtnWord.addEventListener("click", () => {
-//   downloadWordFile();
-// });
+const downloadPdfActivityBtnWord = document.getElementById("download-contract-word");
+downloadPdfActivityBtnWord.addEventListener("click", () => {
+  downloadWordFile();
+});
 
-// function downloadWordFile() {
-//   var fileUrl = 'path/to/your/file.docx';
-//   var link = document.createElement('a');
-//   link.href = fileUrl;
-//   link.download = 'filename.docx';
-//   link.click();
-// }
+function downloadWordFile() {
+  var fileUrl = 'path/to/your/file.docx';
+  var link = document.createElement('a');
+  link.href = fileUrl;
+  link.download = 'filename.docx';
+  link.click();
+}
 
 
 
-// const downloadActivityBtnExcel = document.getElementById("download-contract-excel");
-// downloadActivityBtnExcel.addEventListener("click", () => {
-//   downloadFile();
-// });
+const downloadActivityBtnExcel = document.getElementById("download-contract-excel");
+downloadActivityBtnExcel.addEventListener("click", () => {
+  downloadFile();
+});
 
-// function downloadFile() {
-//   var fileUrl = 'path/to/your/file.xlsx';
-//   var link = document.createElement('a');
-//   link.href = fileUrl;
-//   link.download = 'filename.xlsx';
-//   link.click();
-// }
+function downloadFile() {
+  var fileUrl = 'path/to/your/file.xlsx';
+  var link = document.createElement('a');
+  link.href = fileUrl;
+  link.download = 'filename.xlsx';
+  link.click();
+}
 
 
 // var toggleSliderMenuContractArrow = document.querySelector(".contract-sidebar");
@@ -309,50 +309,6 @@ function openFile(btn) {
     // put the value in the btn content
     btn.textContent = file.name;
   });
-}
-function sortTable(n, table_id) {
-  var table,
-    rows,
-    switching,
-    i,
-    x,
-    y,
-    shouldSwitch,
-    dir,
-    switchcount = 0;
-  table = document.getElementById(table_id);
-  switching = true;
-  dir = "asc";
-  while (switching) {
-    switching = false;
-    rows = table.rows;
-    for (i = 1; i < rows.length - 1; i++) {
-      shouldSwitch = false;
-      x = rows[i].getElementsByTagName("TD")[n];
-      y = rows[i + 1].getElementsByTagName("TD")[n];
-      if (dir == "asc") {
-        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-          shouldSwitch = true;
-          break;
-        }
-      } else if (dir == "desc") {
-        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
-          shouldSwitch = true;
-          break;
-        }
-      }
-    }
-    if (shouldSwitch) {
-      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-      switching = true;
-      switchcount++;
-    } else {
-      if (switchcount == 0 && dir == "asc") {
-        dir = "desc";
-        switching = true;
-      }
-    }
-  }
 }
 
 // const copyIcons = document.querySelectorAll(".copy-icon");

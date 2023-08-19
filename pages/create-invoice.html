@@ -13,6 +13,7 @@
   <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
   <script src="../JS/semantic.min.js"></script>
   <!-- global style -->
+  <link href="../css/global/datepicker/datepicker.css" rel="stylesheet">
   <link href="../css/global/bootstrap/bootstrap.min.css" rel="stylesheet">
   <link href="../css/global/bootstrap/bootstrap-select.css" rel="stylesheet">
   <link href="../css/global/swiper/swiper-bundle.min.css" rel="stylesheet">
@@ -535,7 +536,7 @@
               <div class="content-top d-flex justify-content-start align-items-center py-1">
                 <h4 class="px-4 py-2">Invoices</h4>
               </div>
-              <div class="content-body p-4">
+              <div class="content-body table-tab-pane p-4">
                 <div class="container-fluid content-form py-4">
                   <form>
                     <div class="form-row my-4">
@@ -552,7 +553,8 @@
                          <label>Invoice date</label>
                         </div>
                         <div class="second-select-input">
-                          <input type="date" class="form-control date-input border-0 px-0" placeholder="Select date">
+                          <input type="text" class="form-control datepicker date-input border-0 px-0" placeholder="Select date">
+                          <img class="input-svg" width="12" src="../images/date.svg">
                         </div>                   
                       </div>
                       <div class="col-md-2 col-6">
@@ -560,8 +562,8 @@
                          <label>Due date</label>
                         </div>
                         <div class="second-select-input">
-                          <input type="date" class="form-control date-input border-0 px-0" placeholder="Select date">
-                        </div>                   
+                          <input type="text" class="form-control datepicker date-input border-0 px-0" placeholder="Select date">
+                          <img class="input-svg" width="12" src="../images/date.svg">                        </div>                   
                       </div>
                       <div class="col-md-2 col-6">
                         <div>
@@ -695,9 +697,9 @@
                       <thead>
                         <tr class="tr" >
                           <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
-                          <th onclick="sortTable(0, 'myTable')" class="style-th">
+                          <th class="style-th">
                             <div>
-                              <input type="checkbox" class="" id="customCheck1">
+                              <input type="checkbox" class="selectAll">
                             </div>
                           </th>
                           <th onclick="sortTable(1, 'myTable')" class="style-th">
@@ -749,7 +751,13 @@
                             </div>
                           </th>
                           <th onclick="sortTable(7, 'myTable')" class="style-th">
-                            <div style=" width: 76px; ">
+                            <div>
+                              <span>Total</span><span><img
+                              src="../images/sort-ic.svg" class="sotTble" /></span>
+                            </div>
+                          </th>
+                          <th onclick="sortTable(7, 'myTable')" class="style-th">
+                            <div style=" width: 80px; margin:auto; ">
                               <span>Action</span>
                             </div>
                           </th>
@@ -758,7 +766,7 @@
                       <tbody>
                         <tr class="tr style-table-my1 tr-active">
                           <td class="style-td">
-                              <input type="checkbox" class="" id="customCheck1">
+                              <input type="checkbox" class="" >
                           </td>
                           <td class="style-td">
                             12-02-2020
@@ -784,6 +792,9 @@
                           <td class="style-td">
                             200
                           </td>
+                          <td class="style-td">
+                            400
+                          </td>
                           <td  class="style-td"> 
                             <button type="button" class="btn btn-secondary dataTableButtons edite-save"><i class="fa fa-pen"></i> </button> 
                             <button type="button" class="btn btn-secondary dataTableButtons deleteRow"><i class="fa fa-trash"></i></button>
@@ -791,7 +802,7 @@
                         </tr>
                         <tr class="tr style-table-my1 tr-active">
                           <td class="style-td">
-                              <input type="checkbox" class="" id="customCheck1">
+                              <input type="checkbox" class="" >
                           </td>
                           <td class="style-td">
                             12-02-2020
@@ -817,7 +828,10 @@
                           <td class="style-td">
                             250
                           </td>
-                          <td  class="style-td"> 
+                          <td class="style-td">
+                            450
+                          </td>
+                          <td class="style-td"> 
                             <button type="button" class="btn btn-secondary dataTableButtons edite-save"><i class="fa fa-pen"></i> </button> 
                             <button type="button" class="btn btn-secondary dataTableButtons deleteRow"><i class="fa fa-trash"></i></button>
                           </td>
@@ -826,14 +840,23 @@
                     </table>
                   </div>
                 </div>
-                <div class="firstNav total-div row justify-content-between">
-                  <div class="col-md-12 col-12 justify-content-between align-items-center navStatus">
-                    <div class="d-flex justify-content-between">
-                      <span>Total Excel VAT</span>
-                      <span>1500</span>
+
+                <div class="d-flex flex-column flex-lg-row align-items-center"> 
+                  <div class="action-container d-none">
+                    <button class="btn btn-danger delete-selected">حذف محدد <span class="selected-count d-none">0 محددة</span></button>
+                  </div>
+                  <div class="firstNav total-div row justify-content-between">
+                    <div class="col-md-12 col-12 justify-content-between align-items-center navStatus">
+                      <div class="d-flex justify-content-between">
+                        <span>Total Excel VAT</span>
+                        <span>1500</span>
+                      </div>
                     </div>
                   </div>
                 </div>
+               
+
+
                 <div class="container-fluid content-form py-4">
                   <form>
                     <div class="form-row my-4">
@@ -876,6 +899,12 @@
                           </div>
                           <div class="item" data-bs-toggle="modal" data-bs-target="#EmailModal">
                             Email
+                          </div>
+                          <div class="item">
+                            active
+                          </div>
+                          <div class="item">
+                            not active
                           </div>
                         </div>
                       </div>
@@ -960,27 +989,28 @@
               <textarea class="form-control" id="editor" style="background-color: #F3F2F2;"></textarea>    
             </div>
             <div class="d-flex justify-content-center align-items-center m-3 flex-wrap" style="gap:15px">
-                <div class="d-flex p-3   justify-content-between" id="download-contract-word"
-                    style="width:45%;background-color: #F3F2F2;">
+                <input class="file-word-input" type="file" style="display: none;" />
+                <div class="d-flex p-3 justify-content-between" id="import-contract-word" style="width:45%;background-color: #F3F2F2;">
                     <div class="d-flex" style="gap:10px">
                         <img src="../img/icons/word.svg" />
                         <div class="d-flex flex-column">
-                            <span>Research.rar</span>
-                            <span>5.778 gbs</span>
+                            <span id="name_file_word">select file word</span>
+                            <span id="gbs_file_word">0 gbs</span>
                         </div>
                     </div>
-                    <img src="../img/icons/download-solid.svg" />
+                    <img src="../img/icons/download-solid.svg" id="download-contract-word" />
                 </div>
-                <div class="d-flex p-3 justify-content-between" id="download-contract-excel"
+                <input class="file-excel-input" type="file" style="display: none;" />
+                <div class="d-flex p-3 justify-content-between" id="import-contract-excel"
                     style="width:45%;background-color: #F3F2F2;">
                     <div class="d-flex" style="gap:10px">
                         <img src="../img/icons/excel.svg" />
                         <div class="d-flex flex-column">
-                            <span>Research.rar</span>
-                            <span>5.778 gbs</span>
+                            <span id="name_file_excel">select file word</span>
+                            <span id="gbs_file_excel">0 gbs</span>
                         </div>
                     </div>
-                    <img src="../img/icons/download-solid.svg" />
+                    <img src="../img/icons/download-solid.svg"  id="download-contract-excel" />
                 </div>
             </div>
             <div class="modal-footer d-flex justify-content-center">
@@ -1132,17 +1162,17 @@ $(".myTable_new").on("click", function (event) {
     var newRow = $('<tr class="tr style-table-my1 tr-active">');
     var cols = '';
     // Table columns
-    cols += '<td style="width:2%;" class="style-td"><input type="checkbox" class="" id="customCheck1"></td>';
+    cols += '<td style="width:2%;" class="style-td"><span><input type="checkbox" class="" ></span></td>';
     cols += '<td class="style-td"><input class="form-control rounded-0" type="date"></td>';
-    cols += '<td class="style-td"><select  class="form-control border-0"> <option>Reminder 1</option> <option>Reminder 2</option> <option>Reminder 3</option> </select></td>';
-    cols += '<td class="style-td"><select  class="form-control border-0"> <option>Reminder 1</option> <option>Reminder 2</option> <option>Reminder 3</option> </select></td>';
-    cols += '<td class="style-td"><div class="d-flex align-items-center"> <select class=" w-100 selectpicker" multiple aria-label="size 3 select example" data-live-search="true"> <option>Select Floor</option> <option>Floor 1</option> <option>Floor 2 </option> </select> <img class="input-svg" width="8" src="../images/img-droplist.svg"> </div></td>';
+    cols += '<td class="style-td"><select class="form-control rounded-0"> <option>Reminder 1</option> <option>Reminder 2</option> <option>Reminder 3</option> </select></td>';
+    cols += '<td class="style-td"><select class="form-control rounded-0"> <option>Reminder 1</option> <option>Reminder 2</option> <option>Reminder 3</option> </select></td>';
+    cols += '<td class="style-td"><div class="d-flex align-items-center form-control rounded-0" style=" min-width: 170px; "> <select class="w-100 selectpicker" multiple aria-label="size 3 select example" data-live-search="true"> <option>Select Floor</option> <option>Floor 1</option> <option>Floor 2 </option> </select> <img class="input-svg" width="8" src="../images/img-droplist.svg"> </div></td>';
     cols += '<td class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
-    cols += '<td class="style-td"><select  class="form-control border-0"> <option>unit 1</option> <option>unit 2</option> <option>unit 3</option> </select></td>';
+    cols += '<td class="style-td"><select class="form-control rounded-0"> <option>unit 1</option> <option>unit 2</option> <option>unit 3</option> </select></td>';
     cols += '<td class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
     cols += '<td class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
-    cols += '<td class="style-td"><button type="button" class="btn btn-secondary dataTableButtons edite-save"><i class="fa-solid fa-floppy-disk"></i> </button> <button type="button" class="btn btn-secondary dataTableButtons deleteRow"><i class="fa fa-trash"></i></button></td> </tr>';
-    // cols += '<td><button class="btn btn-danger rounded-0" id ="deleteRow"><i class="fa fa-trash"></i></button</td>';
+    cols += '<td class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
+    cols += '<td style=" width: 100px;" class="style-td"> <button type="button" class="btn btn-secondary dataTableButtons edite-save"> <i class="fa-solid fa-check"></i> </button> <button type="button" class="btn btn-secondary dataTableButtons deleteRow"> <i class="fa fa-trash"></i> </button> </td>';
 
     // Insert the columns insides a row
     newRow.append(cols);
@@ -1153,33 +1183,197 @@ $(".myTable_new").on("click", function (event) {
     // Increase counter after each row insertion
     counter++;
 });
-$('.selectpicker').selectpicker();
-
-
-
 // Remove row when delete btn is clicked
 $("#myTable").on("click", ".deleteRow", function (event) {
-
     $(this).closest("tr").remove();
     counter -= 1
 });
 $("#myTable").on("click", ".edite-save", function (event) {
-    var row = $(this).closest("tr");
-    var inputs = row.find("input");
-    var editIcon = row.find(".fa-solid.fa-floppy-disk");
+        var row = $(this).closest("tr");
+        var inputs = row.find("input");
+        var select = row.find("select");
+        var div = row.find("div");
+        var pickers = row.find(".selectpicker");
+        var checkboxes = row.find("input[type='checkbox']");
 
-    inputs.each(function () {
-        $(this).prop("readonly", !$(this).prop("readonly"));
-    });
 
-    if (editIcon.length > 0) {
-        editIcon.removeClass("fa-solid fa-floppy-disk").addClass("fa fa-pen");
+        var editIcon = $(this).find("i");
+        inputs.each(function () {
+            if ($(this).attr("type") !== "checkbox") {
+        $(this).prop("disabled", !$(this).prop("disabled"));
+    }
+        });
+        select.each(function () {
+            $(this).prop("disabled", !$(this).prop("disabled"));
+        });
+        pickers.each(function () {
+          var isDisabled = $(this).prop("disabled");
+            $(this).toggleClass("disabled");
+            $(this).selectpicker("refresh"); 
+        });
+        div.each(function () {
+          $(this).removeClass("form-control");
+        });
+
+        if (editIcon.hasClass("fa-check")) {
+          editIcon.removeClass("fa-check").addClass("fa-pen");
+        } else {
+          editIcon.removeClass("fa-pen").addClass("fa-check");
+        }
+});
+});
+
+
+
+
+
+
+// checkbox selectAll
+$(document).ready(function() {
+  $('.selectAll').on('change', function() {
+    var $table = $(this).closest('table');
+    var $checkboxes = $table.find('tbody input[type="checkbox"]');
+    $checkboxes.prop('checked', $(this).is(':checked'));
+    updateActionVisibility($table);
+    updateSelectedCount($table);
+    updateSelectAll($table);
+  });
+
+  $('.delete-selected').on('click', function() {
+    var $table = $(this).closest('.table');
+    var $checkboxes = $table.find('tbody input[type="checkbox"]:checked');
+    if ($checkboxes.length > 0) {
+      $checkboxes.closest('tr').remove();
+      updateActionVisibility($table);
+      updateSelectedCount($table);
+      updateSelectAll($table);
     } else {
-        editIcon = row.find(".fa fa-pen");
-        editIcon.removeClass("fa fa-pen").addClass("fa-solid fa-floppy-disk");
+      alert('لم يتم تحديد أي صفوف للحذف.');
+    }
+  });
+
+  $('table input[type="checkbox"]').on('change', function() {
+    var $table = $(this).closest('.table');
+    updateActionVisibility($table);
+    updateSelectedCount($table);
+    updateSelectAll($table);
+  });
+
+  function updateActionVisibility($table) {
+    var $actionContainer = $table.closest('.table-tab-pane').find('.action-container');
+    var $deleteButton = $actionContainer.find('.delete-selected');
+    var $selectedCheckboxes = $table.find('tbody input[type="checkbox"]:checked');
+    $actionContainer.toggleClass('d-none', $selectedCheckboxes.length === 0);
+    $deleteButton.prop('disabled', $selectedCheckboxes.length === 0);
+  }
+
+  function updateSelectedCount($table) {
+    var $actionContainer = $table.closest('.table-tab-pane').find('.action-container');
+    var $selectedCount = $actionContainer.find('.selected-count');
+    var $selectedCheckboxes = $table.find('tbody input[type="checkbox"]:checked');
+    $selectedCount.text($selectedCheckboxes.length);
+    $selectedCount.toggleClass('d-none', $selectedCheckboxes.length === 0);
+  }
+
+  function updateSelectAll($table) {
+    var $selectAll = $table.find('.selectAll');
+    var $checkboxes = $table.find('tbody input[type="checkbox"]');
+    $selectAll.prop('checked', $checkboxes.length === $checkboxes.filter(':checked').length);
+  }
+});
+
+
+
+
+
+// checkbox selectAll
+var fileInputWord = $('.file-word-input');
+var downloadContainerWord = $('#import-contract-word');
+downloadContainerWord.on('click', function() {
+  fileInputWord.trigger('click');
+});
+fileInputWord.on('change', function() {
+    var allowedExtensionsWord = /(\.docx|\.doc)$/i;
+    if (allowedExtensionsWord.exec(fileInputWord[0].files[0].name)) {
+        $('#name_file_word').text(fileInputWord[0].files[0].name);
+        var fileSizeBytes = fileInputWord[0].files[0].size;
+        var fileSizeGB = (fileSizeBytes / (1024 * 1024 * 1024)).toFixed(3);
+        $('#gbs_file_word').text(fileSizeGB + ' gbs');
+
+        // تحديث عنوان الملف المرفوع
+        var uploadedFileName = fileInputWord[0].files[0].name;
+        updateDownloadLink(uploadedFileName);
+        const downloadPdfActivityBtnWord = document.getElementById("download-contract-word");
+          downloadPdfActivityBtnWord.addEventListener("click", () => {
+              downloadWordFile();
+          });
+          function updateDownloadLink(uploadedFileName) {
+              var downloadLink = $('#download-contract-word');
+              downloadLink.attr('data-file-name', uploadedFileName);
+          }
+          function downloadWordFile() {
+              var downloadLink = $('#download-contract-word');
+              var uploadedFileName = downloadLink.attr('data-file-name');
+              var fileUrl =  uploadedFileName;
+              var link = document.createElement('a');
+              link.href = fileUrl;
+              link.download = uploadedFileName;
+              link.click();
+          }
+    } else {
+        alert('Please select a valid Word document file.');
+        fileInputWord.val('');
+        $('#name_file_word').text('select file word');
+        $('#gbs_file_word').text('0 gbs');
     }
 });
+
+var fileInputExcel = $('.file-excel-input');
+var downloadContainerExcel = $('#import-contract-excel');
+downloadContainerExcel.on('click', function() {
+  fileInputExcel.trigger('click');
 });
+fileInputExcel.on('change', function() {
+    var allowedExtensionsExcel = /(\.xlsx|\.xls)$/i;
+    if (allowedExtensionsExcel.exec(fileInputExcel[0].files[0].name)) {
+        $('#name_file_excel').text(fileInputExcel[0].files[0].name);
+        var fileSizeBytes = fileInputExcel[0].files[0].size;
+        var fileSizeGB = (fileSizeBytes / (1024 * 1024 * 1024)).toFixed(3);
+        $('#gbs_file_excel').text(fileSizeGB + ' gbs');
+
+        // تحديث عنوان الملف المرفوع
+        var uploadedFileName = fileInputExcel[0].files[0].name;
+        updateDownloadLink(uploadedFileName);
+        const downloadPdfActivityBtnExcel = document.getElementById("download-contract-excel");
+          downloadPdfActivityBtnExcel.addEventListener("click", () => {
+              downloadExcelFile();
+          });
+          function updateDownloadLink(uploadedFileName) {
+              var downloadLink = $('#download-contract-excel');
+              downloadLink.attr('data-file-name', uploadedFileName);
+              downloadButton.on('click', function() {
+                var fileUrl = 'path/to/your/uploaded/files/' + uploadedFileName;
+                window.open(fileUrl, '_blank'); // فتح في تاب جديدة
+            });
+          }
+          function downloadExcelFile() {
+              var downloadLink = $('#download-contract-excel');
+              var uploadedFileName = downloadLink.attr('data-file-name');
+              var fileUrl =  uploadedFileName;
+              var link = document.createElement('a');
+              link.href = fileUrl;
+              link.download = uploadedFileName;
+              link.click();
+              
+          }
+    } else {
+        alert('Please select a valid excel document file.');
+        fileInputExcel.val('');
+        $('#name_file_excel').text('select file excel');
+        $('#gbs_file_excel').text('0 gbs');
+    }
+});
+
 </script>
 </body>
 

@@ -13,6 +13,7 @@
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="../JS/semantic.min.js"></script>
     <!-- global style -->
+    <link href="../css/global/datepicker/datepicker.css" rel="stylesheet">
     <link href="../css/global/bootstrap/bootstrap.min.css" rel="stylesheet">
     <link href="../css/global/bootstrap/bootstrap-select.css" rel="stylesheet">
     <link href="../css/global/swiper/swiper-bundle.min.css" rel="stylesheet">
@@ -792,11 +793,8 @@
                                                     <div class="d-flex justify-content-start align-items-center ">
                                                         <div class="d-flex justify-content-start align-items-center ">
                                                             <div class=" mx-3">
-                                                                <input class="form-control border-0 bg-white input-row "
-                                                                    placeholder="25% " />
-                                                                <small
-                                                                    class="form-text position-absolute text-danger d-none value-danger">add
-                                                                    VAT </small>
+                                                                <input class="form-control bg-white input-row "
+                                                                    placeholder="add VAT " />
                                                             </div>
                                                             <a href="#"
                                                                 class="btn btn-primary create-btn add_new_row  border-radius-2 height-auto">
@@ -812,11 +810,10 @@
                                                             <thead>
                                                                 <tr class="tr">
                                                                     <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
-                                                                    <th onclick="sortTable(0, 'myTable')"
+                                                                    <th
                                                                         class="style-th">
                                                                         <div>
-                                                                            <input type="checkbox" class=""
-                                                                                id="customCheck1">
+                                                                            <input type="checkbox" class="selectAll">
                                                                         </div>
                                                                     </th>
                                                                     <th onclick="sortTable(1, 'myTable')"
@@ -850,8 +847,7 @@
                                                             <tbody>
                                                                 <tr class="tr style-table-my1 tr-active">
                                                                     <td class="style-td">
-                                                                        <input type="checkbox" class=""
-                                                                            id="customCheck1">
+                                                                        <input type="checkbox">
                                                                     </td>
                                                                     <td class="style-td">
                                                                         123546
@@ -873,8 +869,7 @@
                                                                         </div>
                                                                         <button type="button"
                                                                             class="btn btn-secondary dataTableButtons"
-                                                                            data-toggle="tooltip"
-                                                                            data-placement="bottom">
+                                                                            >
                                                                             <i class="fa fa-trash"></i>
                                                                         </button>
                                                                     </td>
@@ -897,11 +892,8 @@
                                                     </div>
                                                     <div class="d-flex justify-content-start align-items-center ">
                                                         <div class=" mx-3">
-                                                            <input class="form-control border-0 bg-white input-row "
-                                                                placeholder="One off " />
-                                                            <small
-                                                                class="form-text position-absolute text-danger d-none value-danger">add
-                                                                Debts </small>
+                                                            <input class="form-control bg-white input-row "
+                                                                placeholder="add Debts" />
                                                         </div>
                                                         <a href="#"
                                                             class="btn btn-primary create-btn add_new_row  border-radius-2 height-auto">
@@ -916,11 +908,10 @@
                                                             <thead>
                                                                 <tr class="tr">
                                                                     <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
-                                                                    <th onclick="sortTable(0, 'myTable')"
+                                                                    <th
                                                                         class="style-th">
                                                                         <div>
-                                                                            <input type="checkbox" class=""
-                                                                                id="customCheck1">
+                                                                            <input type="checkbox" class="selectAll">
                                                                         </div>
                                                                     </th>
                                                                     <th onclick="sortTable(1, 'myTable')"
@@ -954,8 +945,7 @@
                                                             <tbody>
                                                                 <tr class="tr style-table-my1 tr-active">
                                                                     <td class="style-td">
-                                                                        <input type="checkbox" class=""
-                                                                            id="customCheck1">
+                                                                        <input type="checkbox">
                                                                     </td>
                                                                     <td class="style-td">
                                                                         123546
@@ -978,8 +968,7 @@
                                                                         </div>
                                                                         <button type="button"
                                                                             class="btn btn-secondary dataTableButtons"
-                                                                            data-toggle="tooltip"
-                                                                            data-placement="bottom">
+                                                                            >
                                                                             <i class="fa fa-trash"></i>
                                                                         </button>
                                                                     </td>
@@ -1004,11 +993,8 @@
                                                     </div>
                                                     <div class="d-flex justify-content-start align-items-center ">
                                                         <div class=" mx-3">
-                                                            <input class="form-control border-0 bg-white input-row "
-                                                                placeholder="Credit Card " />
-                                                            <small
-                                                                class="form-text position-absolute text-danger d-none value-danger">add
-                                                                Card </small>
+                                                            <input class="form-control bg-white input-row "
+                                                                placeholder="add Card " />
                                                         </div>
                                                         <a href="#"
                                                             class="btn btn-primary create-btn add_new_row  border-radius-2 height-auto">
@@ -1023,11 +1009,10 @@
                                                             <thead>
                                                                 <tr class="tr">
                                                                     <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
-                                                                    <th onclick="sortTable(0, 'myTable')"
+                                                                    <th
                                                                         class="style-th">
                                                                         <div>
-                                                                            <input type="checkbox" class=""
-                                                                                id="customCheck1">
+                                                                            <input type="checkbox" class="selectAll">
                                                                         </div>
                                                                     </th>
                                                                     <th onclick="sortTable(1, 'myTable')"
@@ -1061,8 +1046,7 @@
                                                             <tbody>
                                                                 <tr class="tr style-table-my1 tr-active">
                                                                     <td class="style-td">
-                                                                        <input type="checkbox" class=""
-                                                                            id="customCheck1">
+                                                                        <input type="checkbox">
                                                                     </td>
                                                                     <td class="style-td">
                                                                         123546
@@ -1085,8 +1069,7 @@
                                                                         </div>
                                                                         <button type="button"
                                                                             class="btn btn-secondary dataTableButtons"
-                                                                            data-toggle="tooltip"
-                                                                            data-placement="bottom">
+                                                                            >
                                                                             <i class="fa fa-trash"></i>
                                                                         </button>
                                                                     </td>
@@ -1109,11 +1092,8 @@
                                                     </div>
                                                     <div class="d-flex justify-content-start align-items-center ">
                                                         <div class=" mx-3">
-                                                            <input class="form-control border-0 bg-white input-row "
-                                                                placeholder="Invoice Type" />
-                                                            <small
-                                                                class="form-text position-absolute text-danger d-none value-danger">add
-                                                                Invoice </small>
+                                                            <input class="form-control bg-white input-row "
+                                                                placeholder="add Invoice" />
                                                         </div>
                                                         <a href="#"
                                                             class="btn btn-primary create-btn add_new_row  border-radius-2 height-auto">
@@ -1128,11 +1108,10 @@
                                                             <thead>
                                                                 <tr class="tr">
                                                                     <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
-                                                                    <th onclick="sortTable(0, 'myTable')"
+                                                                    <th
                                                                         class="style-th">
                                                                         <div>
-                                                                            <input type="checkbox" class=""
-                                                                                id="customCheck1">
+                                                                            <input type="checkbox" class="selectAll">
                                                                         </div>
                                                                     </th>
                                                                     <th onclick="sortTable(1, 'myTable')"
@@ -1165,8 +1144,7 @@
                                                             <tbody>
                                                                 <tr class="tr style-table-my1 tr-active">
                                                                     <td class="style-td">
-                                                                        <input type="checkbox" class=""
-                                                                            id="customCheck1">
+                                                                        <input type="checkbox">
                                                                     </td>
                                                                     <td class="style-td">
                                                                         123546
@@ -1188,8 +1166,7 @@
                                                                         </div>
                                                                         <button type="button"
                                                                             class="btn btn-secondary dataTableButtons"
-                                                                            data-toggle="tooltip"
-                                                                            data-placement="bottom">
+                                                                            >
                                                                             <i class="fa fa-trash"></i>
                                                                         </button>
                                                                     </td>
@@ -1215,20 +1192,17 @@
 
                                                     <div class="d-flex justify-content-start align-items-center ">
                                                         <div class=" ">
-                                                            <input class="form-control border-0 bg-white input-row "
+                                                            <input class="form-control bg-white input-row "
                                                                 placeholder="QTY" />
-                                                            <small
-                                                                class="form-text position-absolute text-danger d-none value-danger">Payment
-                                                                Conditions </small>
                                                         </div>
                                                         <select
-                                                            class="form-control border-0 bg-white input-row mx-1 px-1 "
+                                                            class="form-control bg-white input-row mx-1 px-1 "
                                                             placeholder="Unit " style=" width: 80px; ">
                                                             <option>Days1</option>
                                                             <option>Days 2</option>
                                                             <option>Days 2</option>
                                                         </select>
-                                                        <input class="form-control border-0 bg-white input-row mx-1"
+                                                        <input class="form-control bg-white input-row mx-1"
                                                             placeholder="30 day unit" />
                                                         <a href="#"
                                                             class="btn btn-primary create-btn add_new_row  border-radius-2 height-auto">
@@ -1243,14 +1217,13 @@
                                                             <thead>
                                                                 <tr class="tr">
                                                                     <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
-                                                                    <th onclick="sortTable(0, 'myTable')"
+                                                                    <th
                                                                         class="style-th">
                                                                         <div>
-                                                                            <input type="checkbox" class=""
-                                                                                id="customCheck1">
+                                                                            <input type="checkbox" class="selectAll">
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(0, 'myTable')"
+                                                                    <th
                                                                         class="style-th">
                                                                         <div>
                                                                             <span> ID</span><span><img
@@ -1295,8 +1268,7 @@
                                                             <tbody>
                                                                 <tr class="tr style-table-my1 tr-active">
                                                                     <td class="style-td">
-                                                                        <input type="checkbox" class=""
-                                                                            id="customCheck1">
+                                                                        <input type="checkbox">
                                                                     </td>
                                                                     <td class="style-td">
                                                                         123546
@@ -1325,8 +1297,7 @@
                                                                         </div>
                                                                         <button type="button"
                                                                             class="btn btn-secondary dataTableButtons"
-                                                                            data-toggle="tooltip"
-                                                                            data-placement="bottom">
+                                                                            >
                                                                             <i class="fa fa-trash"></i>
                                                                         </button>
                                                                     </td>
@@ -1350,7 +1321,7 @@
                                                     </div>
                                                     <div class="d-flex justify-content-start align-items-center ">
                                                         <div class=" mx-3">
-                                                            <select class="form-control border-0 bg-white input-row "
+                                                            <select class="form-control bg-white input-row "
                                                                 placeholder="Currency ">
                                                                 <option>Currency 1</option>
                                                                 <option>Currency 2</option>
@@ -1372,11 +1343,10 @@
                                                             <thead>
                                                                 <tr class="tr">
                                                                     <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
-                                                                    <th onclick="sortTable(0, 'myTable')"
+                                                                    <th
                                                                         class="style-th">
                                                                         <div>
-                                                                            <input type="checkbox" class=""
-                                                                                id="customCheck1">
+                                                                            <input type="checkbox" class="selectAll">
                                                                         </div>
                                                                     </th>
                                                                     <th onclick="sortTable(1, 'myTable')"
@@ -1410,8 +1380,7 @@
                                                             <tbody>
                                                                 <tr class="tr style-table-my1 tr-active">
                                                                     <td class="style-td">
-                                                                        <input type="checkbox" class=""
-                                                                            id="customCheck1">
+                                                                        <input type="checkbox">
                                                                     </td>
                                                                     <td class="style-td">
                                                                         123546
@@ -1434,8 +1403,7 @@
                                                                         </div>
                                                                         <button type="button"
                                                                             class="btn btn-secondary dataTableButtons"
-                                                                            data-toggle="tooltip"
-                                                                            data-placement="bottom">
+                                                                            >
                                                                             <i class="fa fa-trash"></i>
                                                                         </button>
                                                                     </td>
@@ -1461,7 +1429,7 @@
                                                     </div>
                                                     <div class="d-flex justify-content-start align-items-center ">
                                                         <div class=" mx-3">
-                                                            <select class="form-control border-0 bg-white input-row "
+                                                            <select class="form-control bg-white input-row "
                                                                 placeholder="mounthly ">
                                                                 <option>Invoicing Period 1</option>
                                                                 <option>Invoicing Period 2</option>
@@ -1484,11 +1452,10 @@
                                                             <thead>
                                                                 <tr class="tr">
                                                                     <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
-                                                                    <th onclick="sortTable(0, 'myTable')"
+                                                                    <th
                                                                         class="style-th">
                                                                         <div>
-                                                                            <input type="checkbox" class=""
-                                                                                id="customCheck1">
+                                                                            <input type="checkbox" class="selectAll">
                                                                         </div>
                                                                     </th>
                                                                     <th onclick="sortTable(1, 'myTable')"
@@ -1522,8 +1489,7 @@
                                                             <tbody>
                                                                 <tr class="tr style-table-my1 tr-active">
                                                                     <td class="style-td">
-                                                                        <input type="checkbox" class=""
-                                                                            id="customCheck1">
+                                                                        <input type="checkbox">
                                                                     </td>
                                                                     <td class="style-td">
                                                                         123546
@@ -1546,8 +1512,7 @@
                                                                         </div>
                                                                         <button type="button"
                                                                             class="btn btn-secondary dataTableButtons"
-                                                                            data-toggle="tooltip"
-                                                                            data-placement="bottom">
+                                                                            >
                                                                             <i class="fa fa-trash"></i>
                                                                         </button>
                                                                     </td>
@@ -1577,7 +1542,7 @@
                                                     </div>
                                                     <div class="d-flex justify-content-start align-items-center ">
                                                         <div class=" mx-3">
-                                                            <input class="form-control border-0 bg-white input-row "
+                                                            <input class="form-control bg-white input-row "
                                                                 placeholder="VAT" />
                                                             <small
                                                                 class="form-text position-absolute text-danger d-none value-danger">VAT</small>
@@ -1595,11 +1560,10 @@
                                                             <thead>
                                                                 <tr class="tr">
                                                                     <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
-                                                                    <th onclick="sortTable(0, 'myTable')"
+                                                                    <th
                                                                         class="style-th">
                                                                         <div>
-                                                                            <input type="checkbox" class=""
-                                                                                id="customCheck1">
+                                                                            <input type="checkbox" class="selectAll">
                                                                         </div>
                                                                     </th>
                                                                     <th onclick="sortTable(1, 'myTable')"
@@ -1633,8 +1597,7 @@
                                                             <tbody>
                                                                 <tr class="tr style-table-my1 tr-active">
                                                                     <td class="style-td">
-                                                                        <input type="checkbox" class=""
-                                                                            id="customCheck1">
+                                                                        <input type="checkbox">
                                                                     </td>
                                                                     <td class="style-td">
                                                                         123546
@@ -1657,8 +1620,7 @@
                                                                         </div>
                                                                         <button type="button"
                                                                             class="btn btn-secondary dataTableButtons"
-                                                                            data-toggle="tooltip"
-                                                                            data-placement="bottom">
+                                                                            >
                                                                             <i class="fa fa-trash"></i>
                                                                         </button>
                                                                     </td>
@@ -1682,7 +1644,7 @@
                                                     </div>
                                                     <div class="d-flex justify-content-start align-items-center ">
                                                         <div class=" mx-3">
-                                                            <input class="form-control border-0 bg-white input-row "
+                                                            <input class="form-control bg-white input-row "
                                                                 placeholder="Debts" />
                                                             <small
                                                                 class="form-text position-absolute text-danger d-none value-danger">Debts</small>
@@ -1700,11 +1662,10 @@
                                                             <thead>
                                                                 <tr class="tr">
                                                                     <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
-                                                                    <th onclick="sortTable(0, 'myTable')"
+                                                                    <th
                                                                         class="style-th">
                                                                         <div>
-                                                                            <input type="checkbox" class=""
-                                                                                id="customCheck1">
+                                                                            <input type="checkbox" class="selectAll">
                                                                         </div>
                                                                     </th>
                                                                     <th onclick="sortTable(1, 'myTable')"
@@ -1738,8 +1699,7 @@
                                                             <tbody>
                                                                 <tr class="tr style-table-my1 tr-active">
                                                                     <td class="style-td">
-                                                                        <input type="checkbox" class=""
-                                                                            id="customCheck1">
+                                                                        <input type="checkbox">
                                                                     </td>
                                                                     <td class="style-td">
                                                                         123546
@@ -1762,8 +1722,7 @@
                                                                         </div>
                                                                         <button type="button"
                                                                             class="btn btn-secondary dataTableButtons"
-                                                                            data-toggle="tooltip"
-                                                                            data-placement="bottom">
+                                                                            >
                                                                             <i class="fa fa-trash"></i>
                                                                         </button>
                                                                     </td>
@@ -1789,7 +1748,7 @@
                                                     </div>
                                                     <div class="d-flex justify-content-start align-items-center ">
                                                         <div class=" mx-3">
-                                                            <input class="form-control border-0 bg-white input-row "
+                                                            <input class="form-control bg-white input-row "
                                                                 placeholder="Payments" />
                                                             <small
                                                                 class="form-text position-absolute text-danger d-none value-danger">Payments</small>
@@ -1807,11 +1766,10 @@
                                                             <thead>
                                                                 <tr class="tr">
                                                                     <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
-                                                                    <th onclick="sortTable(0, 'myTable')"
+                                                                    <th
                                                                         class="style-th">
                                                                         <div>
-                                                                            <input type="checkbox" class=""
-                                                                                id="customCheck1">
+                                                                            <input type="checkbox" class="selectAll">
                                                                         </div>
                                                                     </th>
                                                                     <th onclick="sortTable(1, 'myTable')"
@@ -1845,8 +1803,7 @@
                                                             <tbody>
                                                                 <tr class="tr style-table-my1 tr-active">
                                                                     <td class="style-td">
-                                                                        <input type="checkbox" class=""
-                                                                            id="customCheck1">
+                                                                        <input type="checkbox">
                                                                     </td>
                                                                     <td class="style-td">
                                                                         123546
@@ -1869,8 +1826,7 @@
                                                                         </div>
                                                                         <button type="button"
                                                                             class="btn btn-secondary dataTableButtons"
-                                                                            data-toggle="tooltip"
-                                                                            data-placement="bottom">
+                                                                            >
                                                                             <i class="fa fa-trash"></i>
                                                                         </button>
                                                                     </td>
@@ -1894,7 +1850,7 @@
                                                     </div>
                                                     <div class="d-flex justify-content-start align-items-center ">
                                                         <div class=" mx-3">
-                                                            <input class="form-control border-0 bg-white input-row "
+                                                            <input class="form-control bg-white input-row "
                                                                 placeholder="Invoice Type" />
                                                             <small
                                                                 class="form-text position-absolute text-danger d-none value-danger">Invoice
@@ -1913,11 +1869,10 @@
                                                             <thead>
                                                                 <tr class="tr">
                                                                     <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
-                                                                    <th onclick="sortTable(0, 'myTable')"
+                                                                    <th
                                                                         class="style-th">
                                                                         <div>
-                                                                            <input type="checkbox" class=""
-                                                                                id="customCheck1">
+                                                                            <input type="checkbox" class="selectAll">
                                                                         </div>
                                                                     </th>
                                                                     <th onclick="sortTable(1, 'myTable')"
@@ -1951,8 +1906,7 @@
                                                             <tbody>
                                                                 <tr class="tr style-table-my1 tr-active">
                                                                     <td class="style-td">
-                                                                        <input type="checkbox" class=""
-                                                                            id="customCheck1">
+                                                                        <input type="checkbox">
                                                                     </td>
                                                                     <td class="style-td">
                                                                         123546
@@ -1975,8 +1929,7 @@
                                                                         </div>
                                                                         <button type="button"
                                                                             class="btn btn-secondary dataTableButtons"
-                                                                            data-toggle="tooltip"
-                                                                            data-placement="bottom">
+                                                                            >
                                                                             <i class="fa fa-trash"></i>
                                                                         </button>
                                                                     </td>
@@ -2003,20 +1956,20 @@
 
                                                     <div class="d-flex justify-content-start align-items-center ">
                                                         <div class=" ">
-                                                            <input class="form-control border-0 bg-white input-row "
+                                                            <input class="form-control bg-white input-row "
                                                                 placeholder="QTY" />
                                                             <small
                                                                 class="form-text position-absolute text-danger d-none value-danger">Payment
                                                                 Conditions </small>
                                                         </div>
                                                         <select
-                                                            class="form-control border-0 bg-white input-row mx-1 px-1 "
+                                                            class="form-control bg-white input-row mx-1 px-1 "
                                                             placeholder="Unit " style=" width: 80px; ">
                                                             <option>Days1</option>
                                                             <option>Days 2</option>
                                                             <option>Days 2</option>
                                                         </select>
-                                                        <input class="form-control border-0 bg-white input-row mx-1"
+                                                        <input class="form-control bg-white input-row mx-1"
                                                             placeholder="30 day unit" />
                                                         <a href="#"
                                                             class="btn btn-primary create-btn add_new_row  border-radius-2 height-auto">
@@ -2031,14 +1984,13 @@
                                                             <thead>
                                                                 <tr class="tr">
                                                                     <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
-                                                                    <th onclick="sortTable(0, 'myTable')"
+                                                                    <th
                                                                         class="style-th">
                                                                         <div>
-                                                                            <input type="checkbox" class=""
-                                                                                id="customCheck1">
+                                                                            <input type="checkbox" class="selectAll">
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(0, 'myTable')"
+                                                                    <th
                                                                         class="style-th">
                                                                         <div>
                                                                             <span> ID</span><span><img
@@ -2083,8 +2035,7 @@
                                                             <tbody>
                                                                 <tr class="tr style-table-my1 tr-active">
                                                                     <td class="style-td">
-                                                                        <input type="checkbox" class=""
-                                                                            id="customCheck1">
+                                                                        <input type="checkbox">
                                                                     </td>
                                                                     <td class="style-td">
                                                                         123546
@@ -2113,8 +2064,7 @@
                                                                         </div>
                                                                         <button type="button"
                                                                             class="btn btn-secondary dataTableButtons"
-                                                                            data-toggle="tooltip"
-                                                                            data-placement="bottom">
+                                                                            >
                                                                             <i class="fa fa-trash"></i>
                                                                         </button>
                                                                     </td>
@@ -2138,7 +2088,7 @@
                                                     </div>
                                                     <div class="d-flex justify-content-start align-items-center ">
                                                         <div class=" mx-3">
-                                                            <input class="form-control border-0 bg-white input-row "
+                                                            <input class="form-control bg-white input-row "
                                                                 placeholder="Currency" />
                                                             <small
                                                                 class="form-text position-absolute text-danger d-none value-danger">Currency</small>
@@ -2156,11 +2106,10 @@
                                                             <thead>
                                                                 <tr class="tr">
                                                                     <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
-                                                                    <th onclick="sortTable(0, 'myTable')"
+                                                                    <th
                                                                         class="style-th">
                                                                         <div>
-                                                                            <input type="checkbox" class=""
-                                                                                id="customCheck1">
+                                                                            <input type="checkbox" class="selectAll">
                                                                         </div>
                                                                     </th>
                                                                     <th onclick="sortTable(1, 'myTable')"
@@ -2194,8 +2143,7 @@
                                                             <tbody>
                                                                 <tr class="tr style-table-my1 tr-active">
                                                                     <td class="style-td">
-                                                                        <input type="checkbox" class=""
-                                                                            id="customCheck1">
+                                                                        <input type="checkbox">
                                                                     </td>
                                                                     <td class="style-td">
                                                                         123546
@@ -2218,8 +2166,7 @@
                                                                         </div>
                                                                         <button type="button"
                                                                             class="btn btn-secondary dataTableButtons"
-                                                                            data-toggle="tooltip"
-                                                                            data-placement="bottom">
+                                                                            >
                                                                             <i class="fa fa-trash"></i>
                                                                         </button>
                                                                     </td>
@@ -2245,7 +2192,7 @@
                                                     </div>
                                                     <div class="d-flex justify-content-start align-items-center ">
                                                         <div class=" mx-3">
-                                                            <input class="form-control border-0 bg-white input-row "
+                                                            <input class="form-control bg-white input-row "
                                                                 placeholder="Invoicing Period" />
                                                             <small
                                                                 class="form-text position-absolute text-danger d-none value-danger">add
@@ -2264,11 +2211,10 @@
                                                             <thead>
                                                                 <tr class="tr">
                                                                     <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
-                                                                    <th onclick="sortTable(0, 'myTable')"
+                                                                    <th
                                                                         class="style-th">
                                                                         <div>
-                                                                            <input type="checkbox" class=""
-                                                                                id="customCheck1">
+                                                                            <input type="checkbox" class="selectAll">
                                                                         </div>
                                                                     </th>
                                                                     <th onclick="sortTable(1, 'myTable')"
@@ -2302,8 +2248,7 @@
                                                             <tbody>
                                                                 <tr class="tr style-table-my1 tr-active">
                                                                     <td class="style-td">
-                                                                        <input type="checkbox" class=""
-                                                                            id="customCheck1">
+                                                                        <input type="checkbox">
                                                                     </td>
                                                                     <td class="style-td">
                                                                         123546
@@ -2326,8 +2271,7 @@
                                                                         </div>
                                                                         <button type="button"
                                                                             class="btn btn-secondary dataTableButtons"
-                                                                            data-toggle="tooltip"
-                                                                            data-placement="bottom">
+                                                                            >
                                                                             <i class="fa fa-trash"></i>
                                                                         </button>
                                                                     </td>
@@ -2357,7 +2301,7 @@
                                                     </div>
                                                     <div class="d-flex justify-content-start align-items-center ">
                                                         <div class=" mx-3">
-                                                            <input class="form-control border-0 bg-white input-row "
+                                                            <input class="form-control bg-white input-row "
                                                                 placeholder="Unit Price" />
                                                             <small
                                                                 class="form-text position-absolute text-danger d-none value-danger">Unit
@@ -2376,11 +2320,10 @@
                                                             <thead>
                                                                 <tr class="tr">
                                                                     <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
-                                                                    <th onclick="sortTable(0, 'myTable')"
+                                                                    <th
                                                                         class="style-th">
                                                                         <div>
-                                                                            <input type="checkbox" class=""
-                                                                                id="customCheck1">
+                                                                            <input type="checkbox" class="selectAll">
                                                                         </div>
                                                                     </th>
                                                                     <th onclick="sortTable(1, 'myTable')"
@@ -2414,8 +2357,7 @@
                                                             <tbody>
                                                                 <tr class="tr style-table-my1 tr-active">
                                                                     <td class="style-td">
-                                                                        <input type="checkbox" class=""
-                                                                            id="customCheck1">
+                                                                        <input type="checkbox">
                                                                     </td>
                                                                     <td class="style-td">
                                                                         123546
@@ -2438,8 +2380,7 @@
                                                                         </div>
                                                                         <button type="button"
                                                                             class="btn btn-secondary dataTableButtons"
-                                                                            data-toggle="tooltip"
-                                                                            data-placement="bottom">
+                                                                            >
                                                                             <i class="fa fa-trash"></i>
                                                                         </button>
                                                                     </td>
@@ -2463,7 +2404,7 @@
                                                     </div>
                                                     <div class="d-flex justify-content-start align-items-center ">
                                                         <div class=" mx-3">
-                                                            <input class="form-control border-0 bg-white input-row "
+                                                            <input class="form-control bg-white input-row "
                                                                 placeholder="Article Type" />
                                                             <small
                                                                 class="form-text position-absolute text-danger d-none value-danger">Article
@@ -2482,11 +2423,10 @@
                                                             <thead>
                                                                 <tr class="tr">
                                                                     <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
-                                                                    <th onclick="sortTable(0, 'myTable')"
+                                                                    <th
                                                                         class="style-th">
                                                                         <div>
-                                                                            <input type="checkbox" class=""
-                                                                                id="customCheck1">
+                                                                            <input type="checkbox" class="selectAll">
                                                                         </div>
                                                                     </th>
                                                                     <th onclick="sortTable(1, 'myTable')"
@@ -2520,8 +2460,7 @@
                                                             <tbody>
                                                                 <tr class="tr style-table-my1 tr-active">
                                                                     <td class="style-td">
-                                                                        <input type="checkbox" class=""
-                                                                            id="customCheck1">
+                                                                        <input type="checkbox">
                                                                     </td>
                                                                     <td class="style-td">
                                                                         123546
@@ -2544,8 +2483,7 @@
                                                                         </div>
                                                                         <button type="button"
                                                                             class="btn btn-secondary dataTableButtons"
-                                                                            data-toggle="tooltip"
-                                                                            data-placement="bottom">
+                                                                            >
                                                                             <i class="fa fa-trash"></i>
                                                                         </button>
                                                                     </td>
@@ -2572,7 +2510,7 @@
                                                     </div>
                                                     <div class="d-flex justify-content-start align-items-center ">
                                                         <div class=" mx-3">
-                                                            <input class="form-control border-0 bg-white input-row "
+                                                            <input class="form-control bg-white input-row "
                                                                 placeholder="Room Type" />
                                                             <small
                                                                 class="form-text position-absolute text-danger d-none value-danger">Room
@@ -2591,11 +2529,10 @@
                                                             <thead>
                                                                 <tr class="tr">
                                                                     <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
-                                                                    <th onclick="sortTable(0, 'myTable')"
+                                                                    <th
                                                                         class="style-th">
                                                                         <div>
-                                                                            <input type="checkbox" class=""
-                                                                                id="customCheck1">
+                                                                            <input type="checkbox" class="selectAll">
                                                                         </div>
                                                                     </th>
                                                                     <th onclick="sortTable(1, 'myTable')"
@@ -2629,8 +2566,7 @@
                                                             <tbody>
                                                                 <tr class="tr style-table-my1 tr-active">
                                                                     <td class="style-td">
-                                                                        <input type="checkbox" class=""
-                                                                            id="customCheck1">
+                                                                        <input type="checkbox">
                                                                     </td>
                                                                     <td class="style-td">
                                                                         123546
@@ -2653,8 +2589,7 @@
                                                                         </div>
                                                                         <button type="button"
                                                                             class="btn btn-secondary dataTableButtons"
-                                                                            data-toggle="tooltip"
-                                                                            data-placement="bottom">
+                                                                            >
                                                                             <i class="fa fa-trash"></i>
                                                                         </button>
                                                                     </td>
@@ -2678,7 +2613,7 @@
                                                     </div>
                                                     <div class="d-flex justify-content-start align-items-center ">
                                                         <div class=" mx-3">
-                                                            <input class="form-control border-0 bg-white input-row "
+                                                            <input class="form-control bg-white input-row "
                                                                 placeholder="Meeting Type" />
                                                             <small
                                                                 class="form-text position-absolute text-danger d-none value-danger">Meeting
@@ -2697,11 +2632,10 @@
                                                             <thead>
                                                                 <tr class="tr">
                                                                     <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
-                                                                    <th onclick="sortTable(0, 'myTable')"
+                                                                    <th
                                                                         class="style-th">
                                                                         <div>
-                                                                            <input type="checkbox" class=""
-                                                                                id="customCheck1">
+                                                                            <input type="checkbox" class="selectAll">
                                                                         </div>
                                                                     </th>
                                                                     <th onclick="sortTable(1, 'myTable')"
@@ -2735,8 +2669,7 @@
                                                             <tbody>
                                                                 <tr class="tr style-table-my1 tr-active">
                                                                     <td class="style-td">
-                                                                        <input type="checkbox" class=""
-                                                                            id="customCheck1">
+                                                                        <input type="checkbox">
                                                                     </td>
                                                                     <td class="style-td">
                                                                         123546
@@ -2759,8 +2692,7 @@
                                                                         </div>
                                                                         <button type="button"
                                                                             class="btn btn-secondary dataTableButtons"
-                                                                            data-toggle="tooltip"
-                                                                            data-placement="bottom">
+                                                                            >
                                                                             <i class="fa fa-trash"></i>
                                                                         </button>
                                                                     </td>
@@ -2790,7 +2722,7 @@
                                                     </div>
                                                     <div class="d-flex justify-content-start align-items-center ">
                                                         <div class=" mx-3">
-                                                            <input class="form-control border-0 bg-white input-row "
+                                                            <input class="form-control bg-white input-row "
                                                                 placeholder="Index" />
                                                             <small
                                                                 class="form-text position-absolute text-danger d-none value-danger">Index</small>
@@ -2808,11 +2740,10 @@
                                                             <thead>
                                                                 <tr class="tr">
                                                                     <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
-                                                                    <th onclick="sortTable(0, 'myTable')"
+                                                                    <th
                                                                         class="style-th">
                                                                         <div>
-                                                                            <input type="checkbox" class=""
-                                                                                id="customCheck1">
+                                                                            <input type="checkbox" class="selectAll">
                                                                         </div>
                                                                     </th>
                                                                     <th onclick="sortTable(1, 'myTable')"
@@ -2846,8 +2777,7 @@
                                                             <tbody>
                                                                 <tr class="tr style-table-my1 tr-active">
                                                                     <td class="style-td">
-                                                                        <input type="checkbox" class=""
-                                                                            id="customCheck1">
+                                                                        <input type="checkbox">
                                                                     </td>
                                                                     <td class="style-td">
                                                                         123546
@@ -2870,8 +2800,7 @@
                                                                         </div>
                                                                         <button type="button"
                                                                             class="btn btn-secondary dataTableButtons"
-                                                                            data-toggle="tooltip"
-                                                                            data-placement="bottom">
+                                                                            >
                                                                             <i class="fa fa-trash"></i>
                                                                         </button>
                                                                     </td>
@@ -2895,7 +2824,7 @@
                                                     </div>
                                                     <div class="d-flex justify-content-start align-items-center ">
                                                         <div class=" mx-3">
-                                                            <input class="form-control border-0 bg-white input-row "
+                                                            <input class="form-control bg-white input-row "
                                                                 placeholder="Contract" />
                                                             <small
                                                                 class="form-text position-absolute text-danger d-none value-danger">Type
@@ -2915,11 +2844,10 @@
                                                             <thead>
                                                                 <tr class="tr">
                                                                     <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
-                                                                    <th onclick="sortTable(0, 'myTable')"
+                                                                    <th
                                                                         class="style-th">
                                                                         <div>
-                                                                            <input type="checkbox" class=""
-                                                                                id="customCheck1">
+                                                                            <input type="checkbox" class="selectAll">
                                                                         </div>
                                                                     </th>
                                                                     <th onclick="sortTable(1, 'myTable')"
@@ -2953,8 +2881,7 @@
                                                             <tbody>
                                                                 <tr class="tr style-table-my1 tr-active">
                                                                     <td class="style-td">
-                                                                        <input type="checkbox" class=""
-                                                                            id="customCheck1">
+                                                                        <input type="checkbox">
                                                                     </td>
                                                                     <td class="style-td">
                                                                         123546
@@ -2977,8 +2904,7 @@
                                                                         </div>
                                                                         <button type="button"
                                                                             class="btn btn-secondary dataTableButtons"
-                                                                            data-toggle="tooltip"
-                                                                            data-placement="bottom">
+                                                                            >
                                                                             <i class="fa fa-trash"></i>
                                                                         </button>
                                                                     </td>
@@ -3005,20 +2931,20 @@
                                                     </div>
                                                     <div class="d-flex justify-content-start align-items-center ">
                                                         <div class=" ">
-                                                            <input class="form-control border-0 bg-white input-row "
+                                                            <input class="form-control bg-white input-row "
                                                                 placeholder="QTY" />
                                                             <small
                                                                 class="form-text position-absolute text-danger d-none value-danger">Termination
                                                                 Conditions Supplier </small>
                                                         </div>
                                                         <select
-                                                            class="form-control border-0 bg-white input-row mx-1 px-1 "
+                                                            class="form-control bg-white input-row mx-1 px-1 "
                                                             placeholder="Unit " style=" width: 80px; ">
                                                             <option>Days1</option>
                                                             <option>Days 2</option>
                                                             <option>Days 2</option>
                                                         </select>
-                                                        <input class="form-control border-0 bg-white input-row mx-1"
+                                                        <input class="form-control bg-white input-row mx-1"
                                                             placeholder="30 day unit" />
                                                         <a href="#"
                                                             class="btn btn-primary create-btn add_new_row  border-radius-2 height-auto">
@@ -3033,11 +2959,10 @@
                                                             <thead>
                                                                 <tr class="tr">
                                                                     <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
-                                                                    <th onclick="sortTable(0, 'myTable')"
+                                                                    <th
                                                                         class="style-th">
                                                                         <div>
-                                                                            <input type="checkbox" class=""
-                                                                                id="customCheck1">
+                                                                            <input type="checkbox" class="selectAll">
                                                                         </div>
                                                                     </th>
                                                                     <th onclick="sortTable(1, 'myTable')"
@@ -3085,8 +3010,7 @@
                                                             <tbody>
                                                                 <tr class="tr style-table-my1 tr-active">
                                                                     <td class="style-td">
-                                                                        <input type="checkbox" class=""
-                                                                            id="customCheck1">
+                                                                        <input type="checkbox">
                                                                     </td>
                                                                     <td class="style-td">
                                                                         123546
@@ -3115,8 +3039,7 @@
                                                                         </div>
                                                                         <button type="button"
                                                                             class="btn btn-secondary dataTableButtons"
-                                                                            data-toggle="tooltip"
-                                                                            data-placement="bottom">
+                                                                            >
                                                                             <i class="fa fa-trash"></i>
                                                                         </button>
                                                                     </td>
@@ -3140,20 +3063,20 @@
                                                     </div>
                                                     <div class="d-flex justify-content-start align-items-center ">
                                                         <div class=" mx-3">
-                                                            <input class="form-control border-0 bg-white input-row "
+                                                            <input class="form-control bg-white input-row "
                                                                 placeholder="QTY" />
                                                             <small
                                                                 class="form-text position-absolute text-danger d-none value-danger">Termination
                                                                 Meeting Type </small>
                                                         </div>
                                                         <select
-                                                            class="form-control border-0 bg-white input-row mx-1 px-1 "
+                                                            class="form-control bg-white input-row mx-1 px-1 "
                                                             placeholder="Unit " style=" width: 80px; ">
                                                             <option>Days1</option>
                                                             <option>Days 2</option>
                                                             <option>Days 2</option>
                                                         </select>
-                                                        <input class="form-control border-0 bg-white input-row mx-1"
+                                                        <input class="form-control bg-white input-row mx-1"
                                                             placeholder="30 day unit" />
                                                         <a href="#"
                                                             class="btn btn-primary create-btn add_new_row  border-radius-2 height-auto">
@@ -3168,11 +3091,10 @@
                                                             <thead>
                                                                 <tr class="tr">
                                                                     <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
-                                                                    <th onclick="sortTable(0, 'myTable')"
+                                                                    <th
                                                                         class="style-th">
                                                                         <div>
-                                                                            <input type="checkbox" class=""
-                                                                                id="customCheck1">
+                                                                            <input type="checkbox" class="selectAll">
                                                                         </div>
                                                                     </th>
                                                                     <th onclick="sortTable(1, 'myTable')"
@@ -3220,8 +3142,7 @@
                                                             <tbody>
                                                                 <tr class="tr style-table-my1 tr-active">
                                                                     <td class="style-td">
-                                                                        <input type="checkbox" class=""
-                                                                            id="customCheck1">
+                                                                        <input type="checkbox">
                                                                     </td>
                                                                     <td class="style-td">
                                                                         123546
@@ -3250,8 +3171,7 @@
                                                                         </div>
                                                                         <button type="button"
                                                                             class="btn btn-secondary dataTableButtons"
-                                                                            data-toggle="tooltip"
-                                                                            data-placement="bottom">
+                                                                            >
                                                                             <i class="fa fa-trash"></i>
                                                                         </button>
                                                                     </td>
@@ -3277,20 +3197,20 @@
                                                     </div>
                                                     <div class="d-flex justify-content-start align-items-center ">
                                                         <div class=" mx-3">
-                                                            <input class="form-control border-0 bg-white input-row "
+                                                            <input class="form-control bg-white input-row "
                                                                 placeholder="QTY" />
                                                             <small
                                                                 class="form-text position-absolute text-danger d-none value-danger">Termination
                                                                 Conditions </small>
                                                         </div>
                                                         <select
-                                                            class="form-control border-0 bg-white input-row mx-1 px-1 "
+                                                            class="form-control bg-white input-row mx-1 px-1 "
                                                             placeholder="Unit " style=" width: 80px; ">
                                                             <option>Days1</option>
                                                             <option>Days 2</option>
                                                             <option>Days 2</option>
                                                         </select>
-                                                        <input class="form-control border-0 bg-white input-row mx-1"
+                                                        <input class="form-control bg-white input-row mx-1"
                                                             placeholder="30 day unit" />
                                                         <a href="#"
                                                             class="btn btn-primary create-btn add_new_row  border-radius-2 height-auto">
@@ -3305,11 +3225,10 @@
                                                             <thead>
                                                                 <tr class="tr">
                                                                     <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
-                                                                    <th onclick="sortTable(0, 'myTable')"
+                                                                    <th
                                                                         class="style-th">
                                                                         <div>
-                                                                            <input type="checkbox" class=""
-                                                                                id="customCheck1">
+                                                                            <input type="checkbox" class="selectAll">
                                                                         </div>
                                                                     </th>
                                                                     <th onclick="sortTable(1, 'myTable')"
@@ -3357,8 +3276,7 @@
                                                             <tbody>
                                                                 <tr class="tr style-table-my1 tr-active">
                                                                     <td class="style-td">
-                                                                        <input type="checkbox" class=""
-                                                                            id="customCheck1">
+                                                                        <input type="checkbox">
                                                                     </td>
                                                                     <td class="style-td">
                                                                         123546
@@ -3387,8 +3305,7 @@
                                                                         </div>
                                                                         <button type="button"
                                                                             class="btn btn-secondary dataTableButtons"
-                                                                            data-toggle="tooltip"
-                                                                            data-placement="bottom">
+                                                                            >
                                                                             <i class="fa fa-trash"></i>
                                                                         </button>
                                                                     </td>
@@ -3418,7 +3335,7 @@
                                                     </div>
                                                     <div class="d-flex justify-content-start align-items-center ">
                                                         <div class=" mx-3">
-                                                            <input class="form-control border-0 bg-white input-row "
+                                                            <input class="form-control bg-white input-row "
                                                                 placeholder="customer category " />
                                                             <small
                                                                 class="form-text position-absolute text-danger d-none value-danger">Add
@@ -3438,11 +3355,10 @@
                                                             <thead>
                                                                 <tr class="tr">
                                                                     <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
-                                                                    <th onclick="sortTable(0, 'myTable')"
+                                                                    <th
                                                                         class="style-th">
                                                                         <div>
-                                                                            <input type="checkbox" class=""
-                                                                                id="customCheck1">
+                                                                            <input type="checkbox" class="selectAll">
                                                                         </div>
                                                                     </th>
                                                                     <th onclick="sortTable(1, 'myTable')"
@@ -3476,8 +3392,7 @@
                                                             <tbody>
                                                                 <tr class="tr style-table-my1 tr-active">
                                                                     <td class="style-td">
-                                                                        <input type="checkbox" class=""
-                                                                            id="customCheck1">
+                                                                        <input type="checkbox">
                                                                     </td>
                                                                     <td class="style-td">
                                                                         123546
@@ -3500,8 +3415,7 @@
                                                                         </div>
                                                                         <button type="button"
                                                                             class="btn btn-secondary dataTableButtons"
-                                                                            data-toggle="tooltip"
-                                                                            data-placement="bottom">
+                                                                            >
                                                                             <i class="fa fa-trash"></i>
                                                                         </button>
                                                                     </td>
@@ -3525,7 +3439,7 @@
                                                     </div>
                                                     <div class="d-flex justify-content-start align-items-center ">
                                                         <div class=" mx-3">
-                                                            <input class="form-control border-0 bg-white input-row "
+                                                            <input class="form-control bg-white input-row "
                                                                 placeholder=" new groups " />
                                                             <small
                                                                 class="form-text position-absolute text-danger d-none value-danger">Add
@@ -3545,11 +3459,10 @@
                                                             <thead>
                                                                 <tr class="tr">
                                                                     <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
-                                                                    <th onclick="sortTable(0, 'myTable')"
+                                                                    <th
                                                                         class="style-th">
                                                                         <div>
-                                                                            <input type="checkbox" class=""
-                                                                                id="customCheck1">
+                                                                            <input type="checkbox" class="selectAll">
                                                                         </div>
                                                                     </th>
                                                                     <th onclick="sortTable(1, 'myTable')"
@@ -3583,8 +3496,7 @@
                                                             <tbody>
                                                                 <tr class="tr style-table-my1 tr-active">
                                                                     <td class="style-td">
-                                                                        <input type="checkbox" class=""
-                                                                            id="customCheck1">
+                                                                        <input type="checkbox">
                                                                     </td>
                                                                     <td class="style-td">
                                                                         123546
@@ -3607,8 +3519,7 @@
                                                                         </div>
                                                                         <button type="button"
                                                                             class="btn btn-secondary dataTableButtons"
-                                                                            data-toggle="tooltip"
-                                                                            data-placement="bottom">
+                                                                            >
                                                                             <i class="fa fa-trash"></i>
                                                                         </button>
                                                                     </td>
@@ -3634,7 +3545,7 @@
                                                     </div>
                                                     <div class="d-flex justify-content-start align-items-center ">
                                                         <div class=" mx-3">
-                                                            <input class="form-control border-0 bg-white input-row "
+                                                            <input class="form-control bg-white input-row "
                                                                 placeholder="Status " />
                                                             <small
                                                                 class="form-text position-absolute text-danger d-none value-danger">add
@@ -3653,11 +3564,10 @@
                                                             <thead>
                                                                 <tr class="tr">
                                                                     <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
-                                                                    <th onclick="sortTable(0, 'myTable')"
+                                                                    <th
                                                                         class="style-th">
                                                                         <div>
-                                                                            <input type="checkbox" class=""
-                                                                                id="customCheck1">
+                                                                            <input type="checkbox" class="selectAll">
                                                                         </div>
                                                                     </th>
                                                                     <th onclick="sortTable(1, 'myTable')"
@@ -3691,8 +3601,7 @@
                                                             <tbody>
                                                                 <tr class="tr style-table-my1 tr-active">
                                                                     <td class="style-td">
-                                                                        <input type="checkbox" class=""
-                                                                            id="customCheck1">
+                                                                        <input type="checkbox">
                                                                     </td>
                                                                     <td class="style-td">
                                                                         123546
@@ -3715,8 +3624,7 @@
                                                                         </div>
                                                                         <button type="button"
                                                                             class="btn btn-secondary dataTableButtons"
-                                                                            data-toggle="tooltip"
-                                                                            data-placement="bottom">
+                                                                            >
                                                                             <i class="fa fa-trash"></i>
                                                                         </button>
                                                                     </td>
@@ -3740,7 +3648,7 @@
                                                     </div>
                                                     <div class="d-flex justify-content-start align-items-center ">
                                                         <div class=" mx-3">
-                                                            <input class="form-control border-0 bg-white input-row "
+                                                            <input class="form-control bg-white input-row "
                                                                 placeholder="Compaigns " />
                                                             <small
                                                                 class="form-text position-absolute text-danger d-none value-danger">Compaigns
@@ -3759,11 +3667,10 @@
                                                             <thead>
                                                                 <tr class="tr">
                                                                     <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
-                                                                    <th onclick="sortTable(0, 'myTable')"
+                                                                    <th
                                                                         class="style-th">
                                                                         <div>
-                                                                            <input type="checkbox" class=""
-                                                                                id="customCheck1">
+                                                                            <input type="checkbox" class="selectAll">
                                                                         </div>
                                                                     </th>
                                                                     <th onclick="sortTable(1, 'myTable')"
@@ -3797,8 +3704,7 @@
                                                             <tbody>
                                                                 <tr class="tr style-table-my1 tr-active">
                                                                     <td class="style-td">
-                                                                        <input type="checkbox" class=""
-                                                                            id="customCheck1">
+                                                                        <input type="checkbox">
                                                                     </td>
                                                                     <td class="style-td">
                                                                         123546
@@ -3821,8 +3727,7 @@
                                                                         </div>
                                                                         <button type="button"
                                                                             class="btn btn-secondary dataTableButtons"
-                                                                            data-toggle="tooltip"
-                                                                            data-placement="bottom">
+                                                                            >
                                                                             <i class="fa fa-trash"></i>
                                                                         </button>
                                                                     </td>
@@ -3848,7 +3753,7 @@
                                                     </div>
                                                     <div class="d-flex justify-content-start align-items-center ">
                                                         <div class=" mx-3">
-                                                            <input class="form-control border-0 bg-white input-row "
+                                                            <input class="form-control bg-white input-row "
                                                                 placeholder="Type of Activities " />
                                                             <small
                                                                 class="form-text position-absolute text-danger d-none value-danger">add
@@ -3867,11 +3772,10 @@
                                                             <thead>
                                                                 <tr class="tr">
                                                                     <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
-                                                                    <th onclick="sortTable(0, 'myTable')"
+                                                                    <th
                                                                         class="style-th">
                                                                         <div>
-                                                                            <input type="checkbox" class=""
-                                                                                id="customCheck1">
+                                                                            <input type="checkbox" class="selectAll">
                                                                         </div>
                                                                     </th>
                                                                     <th onclick="sortTable(1, 'myTable')"
@@ -3905,8 +3809,7 @@
                                                             <tbody>
                                                                 <tr class="tr style-table-my1 tr-active">
                                                                     <td class="style-td">
-                                                                        <input type="checkbox" class=""
-                                                                            id="customCheck1">
+                                                                        <input type="checkbox">
                                                                     </td>
                                                                     <td class="style-td">
                                                                         123546
@@ -3929,8 +3832,7 @@
                                                                         </div>
                                                                         <button type="button"
                                                                             class="btn btn-secondary dataTableButtons"
-                                                                            data-toggle="tooltip"
-                                                                            data-placement="bottom">
+                                                                            >
                                                                             <i class="fa fa-trash"></i>
                                                                         </button>
                                                                     </td>
@@ -3960,7 +3862,7 @@
                                                     </div>
                                                     <div class="d-flex justify-content-start align-items-center ">
                                                         <div class=" mx-3">
-                                                            <input class="form-control border-0 bg-white input-row "
+                                                            <input class="form-control bg-white input-row "
                                                                 placeholder="CITIES " />
                                                             <small
                                                                 class="form-text position-absolute text-danger d-none value-danger">add
@@ -3979,11 +3881,10 @@
                                                             <thead>
                                                                 <tr class="tr">
                                                                     <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
-                                                                    <th onclick="sortTable(0, 'myTable')"
+                                                                    <th
                                                                         class="style-th">
                                                                         <div>
-                                                                            <input type="checkbox" class=""
-                                                                                id="customCheck1">
+                                                                            <input type="checkbox" class="selectAll">
                                                                         </div>
                                                                     </th>
                                                                     <th onclick="sortTable(1, 'myTable')"
@@ -4017,8 +3918,7 @@
                                                             <tbody>
                                                                 <tr class="tr style-table-my1 tr-active">
                                                                     <td class="style-td">
-                                                                        <input type="checkbox" class=""
-                                                                            id="customCheck1">
+                                                                        <input type="checkbox">
                                                                     </td>
                                                                     <td class="style-td">
                                                                         123546
@@ -4041,8 +3941,7 @@
                                                                         </div>
                                                                         <button type="button"
                                                                             class="btn btn-secondary dataTableButtons"
-                                                                            data-toggle="tooltip"
-                                                                            data-placement="bottom">
+                                                                            >
                                                                             <i class="fa fa-trash"></i>
                                                                         </button>
                                                                     </td>
@@ -4066,7 +3965,7 @@
                                                     </div>
                                                     <div class="d-flex justify-content-start align-items-center ">
                                                         <div class=" mx-3">
-                                                            <input class="form-control border-0 bg-white input-row "
+                                                            <input class="form-control bg-white input-row "
                                                                 placeholder="Language " />
                                                             <small
                                                                 class="form-text position-absolute text-danger d-none value-danger">add
@@ -4085,11 +3984,10 @@
                                                             <thead>
                                                                 <tr class="tr">
                                                                     <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
-                                                                    <th onclick="sortTable(0, 'myTable')"
+                                                                    <th
                                                                         class="style-th">
                                                                         <div>
-                                                                            <input type="checkbox" class=""
-                                                                                id="customCheck1">
+                                                                            <input type="checkbox" class="selectAll">
                                                                         </div>
                                                                     </th>
                                                                     <th onclick="sortTable(1, 'myTable')"
@@ -4123,8 +4021,7 @@
                                                             <tbody>
                                                                 <tr class="tr style-table-my1 tr-active">
                                                                     <td class="style-td">
-                                                                        <input type="checkbox" class=""
-                                                                            id="customCheck1">
+                                                                        <input type="checkbox">
                                                                     </td>
                                                                     <td class="style-td">
                                                                         123546
@@ -4147,8 +4044,7 @@
                                                                         </div>
                                                                         <button type="button"
                                                                             class="btn btn-secondary dataTableButtons"
-                                                                            data-toggle="tooltip"
-                                                                            data-placement="bottom">
+                                                                            >
                                                                             <i class="fa fa-trash"></i>
                                                                         </button>
                                                                     </td>
@@ -4174,7 +4070,7 @@
                                                     </div>
                                                     <div class="d-flex justify-content-start align-items-center ">
                                                         <div class=" mx-3">
-                                                            <input class="form-control border-0 bg-white input-row "
+                                                            <input class="form-control bg-white input-row "
                                                                 placeholder="Budget " />
                                                             <small
                                                                 class="form-text position-absolute text-danger d-none value-danger">add
@@ -4193,11 +4089,10 @@
                                                             <thead>
                                                                 <tr class="tr">
                                                                     <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
-                                                                    <th onclick="sortTable(0, 'myTable')"
+                                                                    <th
                                                                         class="style-th">
                                                                         <div>
-                                                                            <input type="checkbox" class=""
-                                                                                id="customCheck1">
+                                                                            <input type="checkbox" class="selectAll">
                                                                         </div>
                                                                     </th>
                                                                     <th onclick="sortTable(1, 'myTable')"
@@ -4231,8 +4126,7 @@
                                                             <tbody>
                                                                 <tr class="tr style-table-my1 tr-active">
                                                                     <td class="style-td">
-                                                                        <input type="checkbox" class=""
-                                                                            id="customCheck1">
+                                                                        <input type="checkbox">
                                                                     </td>
                                                                     <td class="style-td">
                                                                         123546
@@ -4255,8 +4149,7 @@
                                                                         </div>
                                                                         <button type="button"
                                                                             class="btn btn-secondary dataTableButtons"
-                                                                            data-toggle="tooltip"
-                                                                            data-placement="bottom">
+                                                                            >
                                                                             <i class="fa fa-trash"></i>
                                                                         </button>
                                                                     </td>
@@ -4280,7 +4173,7 @@
                                                     </div>
                                                     <div class="d-flex justify-content-start align-items-center ">
                                                         <div class=" mx-3">
-                                                            <input class="form-control border-0 bg-white input-row "
+                                                            <input class="form-control bg-white input-row "
                                                                 placeholder="Priorities " />
                                                             <small
                                                                 class="form-text position-absolute text-danger d-none value-danger">add
@@ -4299,11 +4192,10 @@
                                                             <thead>
                                                                 <tr class="tr">
                                                                     <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
-                                                                    <th onclick="sortTable(0, 'myTable')"
+                                                                    <th
                                                                         class="style-th">
                                                                         <div>
-                                                                            <input type="checkbox" class=""
-                                                                                id="customCheck1">
+                                                                            <input type="checkbox" class="selectAll">
                                                                         </div>
                                                                     </th>
                                                                     <th onclick="sortTable(1, 'myTable')"
@@ -4337,8 +4229,7 @@
                                                             <tbody>
                                                                 <tr class="tr style-table-my1 tr-active">
                                                                     <td class="style-td">
-                                                                        <input type="checkbox" class=""
-                                                                            id="customCheck1">
+                                                                        <input type="checkbox">
                                                                     </td>
                                                                     <td class="style-td">
                                                                         123546
@@ -4360,9 +4251,7 @@
                                                                                 text</span>
                                                                         </div>
                                                                         <button type="button"
-                                                                            class="btn btn-secondary dataTableButtons"
-                                                                            data-toggle="tooltip"
-                                                                            data-placement="bottom">
+                                                                            class="btn btn-secondary dataTableButtons">
                                                                             <i class="fa fa-trash"></i>
                                                                         </button>
                                                                     </td>
@@ -4404,6 +4293,7 @@
     <script src="../JS/global/jquery/jquery-3.4.1.min.js"></script>
     <script src="../JS/global/bootstrap/bootstrap.bundle.min.js"></script>
     <script src="../JS/global/bootstrap/bootstrap-select.js"></script>
+    <script src="../JS/global/datePicker/datepicker.js"></script>
     <script src="../JS/layout.js"></script>
 
 
@@ -4426,26 +4316,26 @@
                 });
 
                 if (allInputsFilled) {
-                    container.find(".value-danger").addClass("d-none");
+                    inputs.removeClass("border border-danger")
                     var tableClass = container.attr("class").split(" ")[1];
                     if (!counterMap[tableClass]) {
                         counterMap[tableClass] = 1;
                     }
                     var newRow = $('<tr class="tr style-table-my1 tr-active">');
                     var cols = '';
-                    cols += `<td class="style-td"><input type="checkbox" class="" id="customCheck1"></td>`;
+                    cols += `<td class="style-td"><input type="checkbox"></td>`;
                     cols += `<td class="style-td">${counterMap[tableClass] + 1}</td>`;
                     inputs.each(function () {
                         cols += `<td class="style-td"><input class="form-control text-center border-0 bg-white" readonly  value="${$(this).val()}" /></td>`;
                     });
-                    cols += `<td  style="width:30%;" class="style-td"><button type="button" class="btn btn-secondary dataTableButtons edite-row"> <i class="fa fa-pen"></i> </button><div class="tooltip-left btn btn-secondary dataTableButtons"> <img src="../images/client-person.svg" class="image-actions" /> <span class="tooltiptext">Tooltip text</span> </div><button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" id="deleteRow" title="" data-bs-original-title="Tooltip on bottom"><i class="fa fa-trash"></i></button></td>`;
+                    cols += `<td class="style-td"><button type="button" class="btn btn-secondary dataTableButtons edite-row"> <i class="fa fa-pen"></i> </button> <div class="tooltip-left btn btn-secondary dataTableButtons"> <img src="../images/client-person.svg" class="image-actions" /> <span class="tooltiptext">Tooltip text</span> </div> <button type="button" class="btn btn-secondary dataTableButtons" id="deleteRow"><i class="fa fa-trash"></i></button> </td>`;
                     newRow.append(cols);
                     container.find(".table").find("tbody").append(newRow);
                     counterMap[tableClass]++
                     alert(counterMap[tableClass]); // alert
                     inputs.val("");
                 } else {
-                    container.find(".value-danger").removeClass("d-none");
+                    inputs.addClass("border border-danger")
                 }
             });
             $(".table").on("click", "#deleteRow", function (event) {
