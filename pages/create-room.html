@@ -32,6 +32,14 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
   
   <link rel="stylesheet" href="../css/layout.css">
+
+  <style>
+    .delete-icon {
+    cursor: pointer;
+    margin-left: 5px;
+    color: red;
+}
+</style>
 </head>
 <body>
   <main class="layout" data-sidebar-minimize="off">
@@ -788,8 +796,14 @@
                             <label>Attachment</label>
                           </div>
                           <div class="file-container-input">
-                            <input type="file" class="filepond" name="filepond" multiple/>
-                          </div>
+                            <button type="button" class="file-button" id="fileSelect">
+                              <span>Attach File</span>
+                              <img src="../img//icons/upload.svg" alt="">
+                            </button>
+                            <input type="file" class="file-input d-none" id="uploadInput" type="file" multiple>
+                            <ul id="imgbox">
+                            </ul>
+                          </div>  
                         </div>
                       </div>
                     </div>
@@ -1090,7 +1104,7 @@
   </script>
 
   <!-- global js -->
-  <!-- <script src="../JS/global/jquery/jquery-3.4.1.min.js"></script>
+  <script src="../JS/global/jquery/jquery-3.4.1.min.js"></script>
   <script src="../JS/client/main.js"></script>
   <script src="../JS/global/bootstrap/bootstrap.bundle.min.js"></script>
   <script src="../JS/global/bootstrap/bootstrap-select.js"></script>
@@ -1098,33 +1112,7 @@
   <script src="../JS/global/swiper/swiper-bundle.min.js"></script>
   <script src="../JS/global/filepond/filepond.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
-  <script src="../JS/layout.js"></script> -->
-
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script src="https://unpkg.com/filepond@4.24.0/dist/filepond.min.js"></script>
-<script src="https://unpkg.com/filepond-plugin-file-encode@4.24.0/dist/filepond-plugin-file-encode.min.js"></script>
-<script src="https://unpkg.com/filepond-plugin-file-validate-size@4.24.0/dist/filepond-plugin-file-validate-size.min.js"></script>
-<script src="https://unpkg.com/filepond-plugin-image-exif-orientation@4.24.0/dist/filepond-plugin-image-exif-orientation.min.js"></script>
-<script src="https://unpkg.com/filepond-plugin-image-preview@4.24.0/dist/filepond-plugin-image-preview.min.js"></script>
-
-<script>
-$(document).ready(function() {
-  var fileponds = document.querySelectorAll('.filepond');
-  fileponds.forEach(function(filepond) {
-    FilePond.create(filepond, {
-      labelIdle: 'Click to attach files <img src="../img//icons/upload.svg" class="mx-2" alt="">',
-      onaddfile: function(error, file) {
-        if (!error) {
-          $(file._element).on('click', function() {
-            window.open(file.getFile().source, '_blank');
-          });
-        }
-      }
-    });
-  });
-});
-</script>
-
+  <script src="../JS/layout.js"></script>
 
   <script type="text/javascript">
 
@@ -1201,6 +1189,54 @@ $(document).ready(function() {
         counter -= 1
     });
 });
+
+
+var selectedFiles = []; // تخزين الملفات المحددة هنا
+
+function updateSize() {
+    let nBytes = 0,
+        oFiles = this.files,
+        nFiles = oFiles.length;
+    
+    // إضافة الملفات الجديدة إلى القائمة
+    for (let nFileId = 0; nFileId < nFiles; nFileId++) {
+        selectedFiles.push(oFiles[nFileId]);
+    }
+
+    // عرض الملفات المحددة
+    const list = document.getElementById("imgbox");
+    list.innerHTML = "";
+    for (let nFileId = 0; nFileId < selectedFiles.length; nFileId++) {
+        const li = document.createElement("li");
+        list.appendChild(li);
+
+        const info = document.createElement("a");
+        info.href = "fileselect.html"; // تعيين القيمة "#" للخاصية href
+        info.innerHTML = selectedFiles[nFileId].name + ": " + selectedFiles[nFileId].size + " bytes";
+        li.appendChild(info);
+
+        // إنشاء أيقونة "x" لحذف الملف
+        const deleteIcon = document.createElement("span");
+        deleteIcon.className = "delete-icon";
+        deleteIcon.textContent = "x";
+        li.appendChild(deleteIcon);
+
+        // تعيين الحدث عند الضغط على أيقونة الحذف
+        deleteIcon.addEventListener("click", function() {
+            selectedFiles.splice(nFileId, 1); // حذف الملف من القائمة
+            li.remove(); // حذف العنصر من واجهة المستخدم
+        });
+    }
+}
+
+document.getElementById("uploadInput").addEventListener("change", updateSize, false);
+document.getElementById("fileSelect").addEventListener("click", function (e) {
+    e.preventDefault();
+    if (document.getElementById("uploadInput")) {
+        document.getElementById("uploadInput").click();
+    }
+}, false);
+
   </script>
 
 </body>
