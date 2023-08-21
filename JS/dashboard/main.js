@@ -365,12 +365,12 @@ function openFile(btn) {
   // const searchContainer = document.querySelector(".search-container");
   // const navbarSearch = document.querySelector(".navbar-open-search");
 
-  function scrollToTop() {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth", // You can change this to 'auto' for instant scrolling
-    });
-  }
+  // function scrollToTop() {
+  //   window.scrollTo({
+  //     top: 0,
+  //     behavior: "smooth", // You can change this to 'auto' for instant scrolling
+  //   });
+  // }
   // $(".open-search-bar").click(function () {
   //   searchContainer.classList.replace("d-none", "d-flex");
   //   navbarSearch.classList.replace("d-flex", "d-none");
@@ -378,10 +378,6 @@ function openFile(btn) {
   //   return false;
   // });
 
-  // $(".bi-three-dots-vertical").click(function () {
-  //   $(".navbar-icons-container").toggleClass("active");
-  //   return false;
-  // });
 
   // $(".content-container").click(function () {
   //   if (window.innerWidth <= 991) {

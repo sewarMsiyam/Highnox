@@ -852,7 +852,7 @@
                                     </div>
                                 </div>
                                 <div class="action-container mt-3 d-none">
-                                    <button class="btn btn-danger delete-selected">حذف محدد <span class="selected-count d-none">0 محددة</span></button>
+                                    <button class="btn btn-danger delete-selected">Delete <span class="selected-count d-none">0 محددة</span></button>
                                 </div>
                                 <div class="d-flex flex-column-reverse flex-lg-row align-items-center justify-content-between my-3 w-100">
                                     <div class="d-flex align-items-center justify-content-center justify-content-md-start">
@@ -967,7 +967,7 @@
                                 </form>
                                 <div class="table-responsive bg-light mt-4 border-radius-20 shadow">
                                     <div class="secondTableContainer">
-                                        <table class="table" id="myTable">
+                                        <table class="table" id="myTableActive">
                                             <thead>
                                                 <tr class="tr">
                                                     <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
@@ -976,91 +976,91 @@
                                                             <input type="checkbox" class="selectAll">
                                                         </div>
                                                     </th>
-                                                    <th onclick="sortTable(1, 'myTable')" class="style-th">
+                                                    <th onclick="sortTable(1, 'myTableActive')" class="style-th">
                                                         <div>
                                                             <span>Id</span><span><img src="../images/sort-ic.svg"
                                                                     class="sotTble" /></span>
                                                         </div>
                                                     </th>
-                                                    <th onclick="sortTable(2, 'myTable')" class="style-th">
+                                                    <th onclick="sortTable(2, 'myTableActive')" class="style-th">
                                                         <div>
                                                             <span>City</span><span><img src="../images/sort-ic.svg"
                                                                     class="sotTble" /></span>
                                                         </div>
                                                     </th>
-                                                    <th onclick="sortTable(3, 'myTable')" class="style-th">
+                                                    <th onclick="sortTable(3, 'myTableActive')" class="style-th">
                                                         <div>
                                                             <span>Active</span><span><img src="../images/sort-ic.svg"
                                                                     class="sotTble" /></span>
                                                         </div>
                                                     </th>
-                                                    <th onclick="sortTable(4, 'myTable')" class="style-th">
+                                                    <th onclick="sortTable(4, 'myTableActive')" class="style-th">
                                                         <div>
                                                             <span>Building Name</span><span><img
                                                                     src="../images/sort-ic.svg"
                                                                     class="sotTble" /></span>
                                                         </div>
                                                     </th>
-                                                    <th onclick="sortTable(5, 'myTable')" class="style-th">
+                                                    <th onclick="sortTable(5, 'myTableActive')" class="style-th">
                                                         <div>
                                                             <span>Country</span><span><img src="../images/sort-ic.svg"
                                                                     class="sotTble" /></span>
                                                         </div>
                                                     </th>
-                                                    <th onclick="sortTable(6, 'myTable')" class="style-th">
+                                                    <th onclick="sortTable(6, 'myTableActive')" class="style-th">
                                                         <div>
                                                             <span>Address</span><span><img src="../images/sort-ic.svg"
                                                                     class="sotTble" /></span>
                                                         </div>
                                                     </th>
-                                                    <th onclick="sortTable(7, 'myTable')" class="style-th">
+                                                    <th onclick="sortTable(7, 'myTableActive')" class="style-th">
                                                         <div>
                                                             <span>Building Referance nr</span><span><img
                                                                     src="../images/sort-ic.svg"
                                                                     class="sotTble" /></span>
                                                         </div>
                                                     </th>
-                                                    <th onclick="sortTable(8, 'myTable')" class="style-th">
+                                                    <th onclick="sortTable(8, 'myTableActive')" class="style-th">
                                                         <div>
                                                             <span>Supplier</span><span><img src="../images/sort-ic.svg"
                                                                     class="sotTble" /></span>
                                                         </div>
                                                     </th>
-                                                    <th onclick="sortTable(9, 'myTable')" class="style-th">
+                                                    <th onclick="sortTable(9, 'myTableActive')" class="style-th">
                                                         <div>
                                                             <span>Total SQM</span><span><img src="../images/sort-ic.svg"
                                                                     class="sotTble" /></span>
                                                         </div>
                                                     </th>
-                                                    <th onclick="sortTable(10, 'myTable')" class="style-th">
+                                                    <th onclick="sortTable(10, 'myTableActive')" class="style-th">
                                                         <div>
                                                             <span>Rentable SQM</span><span><img
                                                                     src="../images/sort-ic.svg"
                                                                     class="sotTble" /></span>
                                                         </div>
                                                     </th>
-                                                    <th onclick="sortTable(11, 'myTable')" class="style-th">
+                                                    <th onclick="sortTable(11, 'myTableActive')" class="style-th">
                                                         <div>
                                                             <span>Other Area SQM</span><span><img
                                                                     src="../images/sort-ic.svg"
                                                                     class="sotTble" /></span>
                                                         </div>
                                                     </th>
-                                                    <th onclick="sortTable(12, 'myTable')" class="style-th">
+                                                    <th onclick="sortTable(12, 'myTableActive')" class="style-th">
                                                         <div>
                                                             <span>Termination Period</span><span><img
                                                                     src="../images/sort-ic.svg"
                                                                     class="sotTble" /></span>
                                                         </div>
                                                     </th>
-                                                    <th onclick="sortTable(13, 'myTable')" class="style-th">
+                                                    <th onclick="sortTable(13, 'myTableActive')" class="style-th">
                                                         <div>
                                                             <span>Building Caretaker</span><span><img
                                                                     src="../images/sort-ic.svg"
                                                                     class="sotTble" /></span>
                                                         </div>
                                                     </th>
-                                                    <th onclick="sortTable(14, 'myTable')" class="style-th">
+                                                    <th onclick="sortTable(14, 'myTableActive')" class="style-th">
                                                         <div>
                                                             <span>Tel nr Caretaker</span><span><img
                                                                     src="../images/sort-ic.svg"
@@ -1145,7 +1145,7 @@
                                     </div>
                                 </div>
                                 <div class="action-container mt-3 d-none">
-                                    <button class="btn btn-danger delete-selected">حذف محدد <span class="selected-count d-none">0 محددة</span></button>
+                                    <button class="btn btn-danger delete-selected">Delete <span class="selected-count d-none">0 محددة</span></button>
                                 </div>
                                 <div class="d-flex flex-column-reverse flex-lg-row align-items-center justify-content-between my-3 w-100">
                                     <div class="d-flex align-items-center justify-content-center justify-content-md-start">
@@ -1260,7 +1260,7 @@
                                 </form>
                                 <div class="table-responsive bg-light mt-4 border-radius-20 shadow">
                                     <div class="secondTableContainer">
-                                        <table class="table" id="myTable">
+                                        <table class="table" id="myTableNo">
                                             <thead>
                                                 <tr class="tr">
                                                     <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
@@ -1269,91 +1269,91 @@
                                                             <input type="checkbox" class="selectAll">
                                                         </div>
                                                     </th>
-                                                    <th onclick="sortTable(1, 'myTable')" class="style-th">
+                                                    <th onclick="sortTable(1, 'myTableNo')" class="style-th">
                                                         <div>
                                                             <span>Id</span><span><img src="../images/sort-ic.svg"
                                                                     class="sotTble" /></span>
                                                         </div>
                                                     </th>
-                                                    <th onclick="sortTable(2, 'myTable')" class="style-th">
+                                                    <th onclick="sortTable(2, 'myTableNo')" class="style-th">
                                                         <div>
                                                             <span>City</span><span><img src="../images/sort-ic.svg"
                                                                     class="sotTble" /></span>
                                                         </div>
                                                     </th>
-                                                    <th onclick="sortTable(3, 'myTable')" class="style-th">
+                                                    <th onclick="sortTable(3, 'myTableNo')" class="style-th">
                                                         <div>
                                                             <span>Active</span><span><img src="../images/sort-ic.svg"
                                                                     class="sotTble" /></span>
                                                         </div>
                                                     </th>
-                                                    <th onclick="sortTable(4, 'myTable')" class="style-th">
+                                                    <th onclick="sortTable(4, 'myTableNo')" class="style-th">
                                                         <div>
                                                             <span>Building Name</span><span><img
                                                                     src="../images/sort-ic.svg"
                                                                     class="sotTble" /></span>
                                                         </div>
                                                     </th>
-                                                    <th onclick="sortTable(5, 'myTable')" class="style-th">
+                                                    <th onclick="sortTable(5, 'myTableNo')" class="style-th">
                                                         <div>
                                                             <span>Country</span><span><img src="../images/sort-ic.svg"
                                                                     class="sotTble" /></span>
                                                         </div>
                                                     </th>
-                                                    <th onclick="sortTable(6, 'myTable')" class="style-th">
+                                                    <th onclick="sortTable(6, 'myTableNo')" class="style-th">
                                                         <div>
                                                             <span>Address</span><span><img src="../images/sort-ic.svg"
                                                                     class="sotTble" /></span>
                                                         </div>
                                                     </th>
-                                                    <th onclick="sortTable(7, 'myTable')" class="style-th">
+                                                    <th onclick="sortTable(7, 'myTableNo')" class="style-th">
                                                         <div>
                                                             <span>Building Referance nr</span><span><img
                                                                     src="../images/sort-ic.svg"
                                                                     class="sotTble" /></span>
                                                         </div>
                                                     </th>
-                                                    <th onclick="sortTable(8, 'myTable')" class="style-th">
+                                                    <th onclick="sortTable(8, 'myTableNo')" class="style-th">
                                                         <div>
                                                             <span>Supplier</span><span><img src="../images/sort-ic.svg"
                                                                     class="sotTble" /></span>
                                                         </div>
                                                     </th>
-                                                    <th onclick="sortTable(9, 'myTable')" class="style-th">
+                                                    <th onclick="sortTable(9, 'myTableNo')" class="style-th">
                                                         <div>
                                                             <span>Total SQM</span><span><img src="../images/sort-ic.svg"
                                                                     class="sotTble" /></span>
                                                         </div>
                                                     </th>
-                                                    <th onclick="sortTable(10, 'myTable')" class="style-th">
+                                                    <th onclick="sortTable(10, 'myTableNo')" class="style-th">
                                                         <div>
                                                             <span>Rentable SQM</span><span><img
                                                                     src="../images/sort-ic.svg"
                                                                     class="sotTble" /></span>
                                                         </div>
                                                     </th>
-                                                    <th onclick="sortTable(11, 'myTable')" class="style-th">
+                                                    <th onclick="sortTable(11, 'myTableNo')" class="style-th">
                                                         <div>
                                                             <span>Other Area SQM</span><span><img
                                                                     src="../images/sort-ic.svg"
                                                                     class="sotTble" /></span>
                                                         </div>
                                                     </th>
-                                                    <th onclick="sortTable(12, 'myTable')" class="style-th">
+                                                    <th onclick="sortTable(12, 'myTableNo')" class="style-th">
                                                         <div>
                                                             <span>Termination Period</span><span><img
                                                                     src="../images/sort-ic.svg"
                                                                     class="sotTble" /></span>
                                                         </div>
                                                     </th>
-                                                    <th onclick="sortTable(13, 'myTable')" class="style-th">
+                                                    <th onclick="sortTable(13, 'myTableNo')" class="style-th">
                                                         <div>
                                                             <span>Building Caretaker</span><span><img
                                                                     src="../images/sort-ic.svg"
                                                                     class="sotTble" /></span>
                                                         </div>
                                                     </th>
-                                                    <th onclick="sortTable(14, 'myTable')" class="style-th">
+                                                    <th onclick="sortTable(14, 'myTableNo')" class="style-th">
                                                         <div>
                                                             <span>Tel nr Caretaker</span><span><img
                                                                     src="../images/sort-ic.svg"
@@ -1438,7 +1438,7 @@
                                     </div>
                                 </div>
                                 <div class="action-container mt-3 d-none">
-                                    <button class="btn btn-danger delete-selected">حذف محدد <span class="selected-count d-none">0 محددة</span></button>
+                                    <button class="btn btn-danger delete-selected">Delete <span class="selected-count d-none">0 محددة</span></button>
                                 </div>
                                 <div class="d-flex flex-column-reverse flex-lg-row align-items-center justify-content-between my-3 w-100">
                                     <div class="d-flex align-items-center justify-content-center justify-content-md-start">

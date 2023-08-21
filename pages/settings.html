@@ -2,36 +2,37 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <title>highnox</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
-    <link rel="icon" href="../images/Highnox.png" type="image/x-icon" />
+  <meta charset="utf-8">
+  <title>highnox</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+  <link rel="icon" href="../images/Highnox.png" type="image/x-icon" />
 
-    <link rel="stylesheet" href="../css/semantic.min.css">
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <script src="../JS/semantic.min.js"></script>
-    <!-- global style -->
-    
-    <link href="../css/global/datepicker/datepicker.css" rel="stylesheet">
-    <link href="../css/global/bootstrap/bootstrap.min.css" rel="stylesheet">
-    <link href="../css/global/bootstrap/bootstrap-select.css" rel="stylesheet">
-    <link href="../css/global/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/semantic.min.css"  >
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="../JS/semantic.min.js"></script>
 
-    <!-- dashboard style -->
-    <link href="../css/dashboard/main-dashboard.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="../css/dashboard/style.css">
-    <link rel="stylesheet" type="text/css" href="../css/dashboard/screen.css">
-    <link rel="stylesheet" href="../css/dashboard/media.css">
+  <link href="../css/global/datepicker/datepicker.css" rel="stylesheet">
 
-    <!-- Icon Font Stylesheet cdn -->
-    <link rel="stylesheet" href="../css/global/font-awesome/css/all.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- global style -->
+  <link href="../css/global/bootstrap/bootstrap.min.css" rel="stylesheet">
+  <link href="../css/global/bootstrap/bootstrap-select.css" rel="stylesheet">
+  <link href="../css/global/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="../css/global/filepond/filepond.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="../css/layout.css">
+  <!-- dashboard style -->
+  <link href="../css/dashboard/main-dashboard.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../css/dashboard/style.css">
+  <link rel="stylesheet" type="text/css" href="../css/dashboard/screen.css">
+  <link rel="stylesheet" href="../css/dashboard/media.css" >
+
+  <!-- Icon Font Stylesheet cdn -->
+  <link rel="stylesheet" href="../css/global/font-awesome/css/all.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../css/layout.css">
 </head>
-
 <body>
     <main class="layout" data-sidebar-minimize="off">
         <!-- Sidebar Start -->
@@ -679,7 +680,7 @@
                                         aria-labelledby="all-tab">
                                         <div class="table-responsive bg-light mt-4 border-radius-20 shadow">
                                             <div class="secondTableContainer">
-                                                <table id="myTable" class="table">
+                                                <table id="myTableAll" class="table">
                                                     <thead>
                                                         <tr class="tr">
                                                             <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
@@ -688,70 +689,70 @@
                                                                     <input type="checkbox" class="selectAll">
                                                                 </div>
                                                             </th>
-                                                            <th onclick="sortTable(1, 'myTable')" class="style-th">
+                                                            <th onclick="sortTable(1, 'myTableAll')" class="style-th">
                                                                 <div>
                                                                     <span>Id</span><span><img
                                                                             src="../images/sort-ic.svg"
                                                                             class="sotTble" /></span>
                                                                 </div>
                                                             </th>
-                                                            <th onclick="sortTable(2, 'myTable')" class="style-th">
+                                                            <th onclick="sortTable(2, 'myTableAll')" class="style-th">
                                                                 <div>
                                                                     <span>Name</span><span><img
                                                                             src="../images/sort-ic.svg"
                                                                             class="sotTble" /></span>
                                                                 </div>
                                                             </th>
-                                                            <th onclick="sortTable(3, 'myTable')" class="style-th">
+                                                            <th onclick="sortTable(3, 'myTableAll')" class="style-th">
                                                                 <div>
                                                                     <span>Last Activity</span><span><img
                                                                             src="../images/sort-ic.svg"
                                                                             class="sotTble" /></span>
                                                                 </div>
                                                             </th>
-                                                            <th onclick="sortTable(4, 'myTable')" class="style-th">
+                                                            <th onclick="sortTable(4, 'myTableAll')" class="style-th">
                                                                 <div>
                                                                     <span>Tel nr</span><span><img
                                                                             src="../images/sort-ic.svg"
                                                                             class="sotTble" /></span>
                                                                 </div>
                                                             </th>
-                                                            <th onclick="sortTable(5, 'myTable')" class="style-th">
+                                                            <th onclick="sortTable(5, 'myTableAll')" class="style-th">
                                                                 <div>
                                                                     <span>Email Address</span><span><img
                                                                             src="../images/sort-ic.svg"
                                                                             class="sotTble" /></span>
                                                                 </div>
                                                             </th>
-                                                            <th onclick="sortTable(6, 'myTable')" class="style-th">
+                                                            <th onclick="sortTable(6, 'myTableAll')" class="style-th">
                                                                 <div>
                                                                     <span>Role</span><span><img
                                                                             src="../images/sort-ic.svg"
                                                                             class="sotTble" /></span>
                                                                 </div>
                                                             </th>
-                                                            <th onclick="sortTable(7, 'myTable')" class="style-th">
+                                                            <th onclick="sortTable(7, 'myTableAll')" class="style-th">
                                                                 <div>
                                                                     <span>Modules</span><span><img
                                                                             src="../images/sort-ic.svg"
                                                                             class="sotTble" /></span>
                                                                 </div>
                                                             </th>
-                                                            <th onclick="sortTable(8, 'myTable')" class="style-th">
+                                                            <th onclick="sortTable(8, 'myTableAll')" class="style-th">
                                                                 <div>
                                                                     <span>Start Date</span><span><img
                                                                             src="../images/sort-ic.svg"
                                                                             class="sotTble" /></span>
                                                                 </div>
                                                             </th>
-                                                            <th onclick="sortTable(9, 'myTable')" class="style-th">
+                                                            <th onclick="sortTable(9, 'myTableAll')" class="style-th">
                                                                 <div>
                                                                     <span>End Date</span><span><img
                                                                             src="../images/sort-ic.svg"
                                                                             class="sotTble" /></span>
                                                                 </div>
                                                             </th>
-                                                            <th onclick="sortTable(10, 'myTable')" class="style-th">
+                                                            <th onclick="sortTable(10, 'myTableAll')" class="style-th">
                                                                 <div>
                                                                     <span>Super Admin</span><span><img
                                                                             src="../images/sort-ic.svg"
@@ -759,7 +760,7 @@
                                                                 </div>
                                                             </th>
                                                             <th 
-                                                                class="style-th  width-140 mx-auto">
+                                                                class="style-th width-140 mx-auto">
                                                                 <div>
                                                                     Action
                                                                 </div>
@@ -1096,7 +1097,7 @@
                                             </div>
                                         </div>
                                         <div class="action-container mt-3 d-none">
-                                            <button class="btn btn-danger delete-selected">حذف محدد <span class="selected-count d-none">0 محددة</span></button>
+                                            <button class="btn btn-danger delete-selected">Delete <span class="selected-count d-none">0 محددة</span></button>
                                         </div>
                                         <div class="d-flex flex-column-reverse flex-lg-row align-items-center justify-content-between my-3 w-100">
                                             <div class="d-flex align-items-center justify-content-center justify-content-md-start">
@@ -1133,7 +1134,7 @@
                                         aria-labelledby="active-tab">
                                         <div class="table-responsive bg-light mt-4 border-radius-20 shadow">
                                             <div class="secondTableContainer">
-                                                <table id="myTable" class="table">
+                                                <table id="myTableActive" class="table">
                                                     <thead>
                                                         <tr class="tr">
                                                             <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
@@ -1142,70 +1143,70 @@
                                                                     <input type="checkbox" class="selectAll">
                                                                 </div>
                                                             </th>
-                                                            <th onclick="sortTable(1, 'myTable')" class="style-th">
+                                                            <th onclick="sortTable(1, 'myTableActive')" class="style-th">
                                                                 <div>
                                                                     <span>Id</span><span><img
                                                                             src="../images/sort-ic.svg"
                                                                             class="sotTble" /></span>
                                                                 </div>
                                                             </th>
-                                                            <th onclick="sortTable(2, 'myTable')" class="style-th">
+                                                            <th onclick="sortTable(2, 'myTableActive')" class="style-th">
                                                                 <div>
                                                                     <span>Name</span><span><img
                                                                             src="../images/sort-ic.svg"
                                                                             class="sotTble" /></span>
                                                                 </div>
                                                             </th>
-                                                            <th onclick="sortTable(3, 'myTable')" class="style-th">
+                                                            <th onclick="sortTable(3, 'myTableActive')" class="style-th">
                                                                 <div>
                                                                     <span>Last Activity</span><span><img
                                                                             src="../images/sort-ic.svg"
                                                                             class="sotTble" /></span>
                                                                 </div>
                                                             </th>
-                                                            <th onclick="sortTable(4, 'myTable')" class="style-th">
+                                                            <th onclick="sortTable(4, 'myTableActive')" class="style-th">
                                                                 <div>
                                                                     <span>Tel nr</span><span><img
                                                                             src="../images/sort-ic.svg"
                                                                             class="sotTble" /></span>
                                                                 </div>
                                                             </th>
-                                                            <th onclick="sortTable(5, 'myTable')" class="style-th">
+                                                            <th onclick="sortTable(5, 'myTableActive')" class="style-th">
                                                                 <div>
                                                                     <span>Email Address</span><span><img
                                                                             src="../images/sort-ic.svg"
                                                                             class="sotTble" /></span>
                                                                 </div>
                                                             </th>
-                                                            <th onclick="sortTable(6, 'myTable')" class="style-th">
+                                                            <th onclick="sortTable(6, 'myTableActive')" class="style-th">
                                                                 <div>
                                                                     <span>Role</span><span><img
                                                                             src="../images/sort-ic.svg"
                                                                             class="sotTble" /></span>
                                                                 </div>
                                                             </th>
-                                                            <th onclick="sortTable(7, 'myTable')" class="style-th">
+                                                            <th onclick="sortTable(7, 'myTableActive')" class="style-th">
                                                                 <div>
                                                                     <span>Modules</span><span><img
                                                                             src="../images/sort-ic.svg"
                                                                             class="sotTble" /></span>
                                                                 </div>
                                                             </th>
-                                                            <th onclick="sortTable(8, 'myTable')" class="style-th">
+                                                            <th onclick="sortTable(8, 'myTableActive')" class="style-th">
                                                                 <div>
                                                                     <span>Start Date</span><span><img
                                                                             src="../images/sort-ic.svg"
                                                                             class="sotTble" /></span>
                                                                 </div>
                                                             </th>
-                                                            <th onclick="sortTable(9, 'myTable')" class="style-th">
+                                                            <th onclick="sortTable(9, 'myTableActive')" class="style-th">
                                                                 <div>
                                                                     <span>End Date</span><span><img
                                                                             src="../images/sort-ic.svg"
                                                                             class="sotTble" /></span>
                                                                 </div>
                                                             </th>
-                                                            <th onclick="sortTable(10, 'myTable')" class="style-th">
+                                                            <th onclick="sortTable(10, 'myTableActive')" class="style-th">
                                                                 <div>
                                                                     <span>Super Admin</span><span><img
                                                                             src="../images/sort-ic.svg"
@@ -1226,7 +1227,7 @@
                                                                 <input type="checkbox">
                                                             </td>
                                                             <td class="style-td">
-                                                                1
+                                                                5
                                                             </td>
                                                             <td class="style-td">
                                                                 saf
@@ -1469,7 +1470,7 @@
                                                                 <input type="checkbox">
                                                             </td>
                                                             <td class="style-td">
-                                                                1
+                                                                4
                                                             </td>
                                                             <td class="style-td">
                                                                 saf
@@ -1550,7 +1551,7 @@
                                             </div>
                                         </div>
                                         <div class="action-container mt-3 d-none">
-                                            <button class="btn btn-danger delete-selected">حذف محدد <span class="selected-count d-none">0 محددة</span></button>
+                                            <button class="btn btn-danger delete-selected">Delete <span class="selected-count d-none">0 محددة</span></button>
                                         </div>
                                         <div class="d-flex flex-column-reverse flex-lg-row align-items-center justify-content-between my-3 w-100">
                                             <div class="d-flex align-items-center justify-content-center justify-content-md-start">
@@ -1587,7 +1588,7 @@
                                         aria-labelledby="not-active">
                                         <div class="table-responsive bg-light mt-4 border-radius-20 shadow">
                                             <div class="secondTableContainer">
-                                                <table id="myTable" class="table">
+                                                <table id="myTableNo" class="table">
                                                     <thead>
                                                         <tr class="tr">
                                                             <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
@@ -1596,70 +1597,70 @@
                                                                     <input type="checkbox" class="selectAll">
                                                                 </div>
                                                             </th>
-                                                            <th onclick="sortTable(1, 'myTable')" class="style-th">
+                                                            <th onclick="sortTable(1, 'myTableNo')" class="style-th">
                                                                 <div>
                                                                     <span>Id</span><span><img
                                                                             src="../images/sort-ic.svg"
                                                                             class="sotTble" /></span>
                                                                 </div>
                                                             </th>
-                                                            <th onclick="sortTable(2, 'myTable')" class="style-th">
+                                                            <th onclick="sortTable(2, 'myTableNo')" class="style-th">
                                                                 <div>
                                                                     <span>Name</span><span><img
                                                                             src="../images/sort-ic.svg"
                                                                             class="sotTble" /></span>
                                                                 </div>
                                                             </th>
-                                                            <th onclick="sortTable(3, 'myTable')" class="style-th">
+                                                            <th onclick="sortTable(3, 'myTableNo')" class="style-th">
                                                                 <div>
                                                                     <span>Last Activity</span><span><img
                                                                             src="../images/sort-ic.svg"
                                                                             class="sotTble" /></span>
                                                                 </div>
                                                             </th>
-                                                            <th onclick="sortTable(4, 'myTable')" class="style-th">
+                                                            <th onclick="sortTable(4, 'myTableNo')" class="style-th">
                                                                 <div>
                                                                     <span>Tel nr</span><span><img
                                                                             src="../images/sort-ic.svg"
                                                                             class="sotTble" /></span>
                                                                 </div>
                                                             </th>
-                                                            <th onclick="sortTable(5, 'myTable')" class="style-th">
+                                                            <th onclick="sortTable(5, 'myTableNo')" class="style-th">
                                                                 <div>
                                                                     <span>Email Address</span><span><img
                                                                             src="../images/sort-ic.svg"
                                                                             class="sotTble" /></span>
                                                                 </div>
                                                             </th>
-                                                            <th onclick="sortTable(6, 'myTable')" class="style-th">
+                                                            <th onclick="sortTable(6, 'myTableNo')" class="style-th">
                                                                 <div>
                                                                     <span>Role</span><span><img
                                                                             src="../images/sort-ic.svg"
                                                                             class="sotTble" /></span>
                                                                 </div>
                                                             </th>
-                                                            <th onclick="sortTable(7, 'myTable')" class="style-th">
+                                                            <th onclick="sortTable(7, 'myTableNo')" class="style-th">
                                                                 <div>
                                                                     <span>Modules</span><span><img
                                                                             src="../images/sort-ic.svg"
                                                                             class="sotTble" /></span>
                                                                 </div>
                                                             </th>
-                                                            <th onclick="sortTable(8, 'myTable')" class="style-th">
+                                                            <th onclick="sortTable(8, 'myTableNo')" class="style-th">
                                                                 <div>
                                                                     <span>Start Date</span><span><img
                                                                             src="../images/sort-ic.svg"
                                                                             class="sotTble" /></span>
                                                                 </div>
                                                             </th>
-                                                            <th onclick="sortTable(9, 'myTable')" class="style-th">
+                                                            <th onclick="sortTable(9, 'myTableNo')" class="style-th">
                                                                 <div>
                                                                     <span>End Date</span><span><img
                                                                             src="../images/sort-ic.svg"
                                                                             class="sotTble" /></span>
                                                                 </div>
                                                             </th>
-                                                            <th onclick="sortTable(10, 'myTable')" class="style-th">
+                                                            <th onclick="sortTable(10, 'myTableNo')" class="style-th">
                                                                 <div>
                                                                     <span>Super Admin</span><span><img
                                                                             src="../images/sort-ic.svg"
@@ -1761,7 +1762,7 @@
                                                                 <input type="checkbox">
                                                             </td>
                                                             <td class="style-td">
-                                                                1
+                                                                2
                                                             </td>
                                                             <td class="style-td">
                                                                 saf
@@ -2004,7 +2005,7 @@
                                             </div>
                                         </div>
                                         <div class="action-container mt-3 d-none">
-                                            <button class="btn btn-danger delete-selected">حذف محدد <span class="selected-count d-none">0 محددة</span></button>
+                                            <button class="btn btn-danger delete-selected">Delete <span class="selected-count d-none">0 محددة</span></button>
                                         </div>
                                         <div class="d-flex flex-column-reverse flex-lg-row align-items-center justify-content-between my-3 w-100">
                                             <div class="d-flex align-items-center justify-content-center justify-content-md-start">
@@ -2053,23 +2054,22 @@
                                                             <h4 class="py-2">Roles</h4>
                                                         </div>
                                                         <div class="d-flex justify-content-start align-items-center ">
-                                                            <div class=" mx-3">
-                                                                <input class="form-control border-0 bg-white input-row "
-                                                                    placeholder="Roles " />
-                                                                <small
-                                                                    class="form-text position-absolute text-danger d-none value-danger">add
-                                                                    Roles </small>
+                                                            <div class="d-flex justify-content-start align-items-center ">
+                                                                <div class=" mx-3">
+                                                                    <input class="form-control bg-white input-row "
+                                                                        placeholder="add Roles " />
+                                                                </div>
+                                                                <a href="#"
+                                                                    class="btn btn-primary create-btn add_new_row  border-radius-2 height-auto">
+                                                                    <i class="bi bi-plus-circle-fill"></i>
+                                                                    Add new Roles
+                                                                </a>
                                                             </div>
-                                                            <a href="#"
-                                                                class="btn btn-primary create-btn add_new_row  border-radius-2 height-auto">
-                                                                <i class="bi bi-plus-circle-fill"></i>
-                                                                Add Roles
-                                                            </a>
                                                         </div>
                                                     </div>
                                                     <div class="table-responsive bg-light mt-4 border-radius-20">
                                                         <div class="secondTableContainer">
-                                                            <table id="myTable" class="table">
+                                                            <table id="myTableRoles" class="table">
                                                                 <thead>
                                                                     <tr class="tr">
                                                                         <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
@@ -2078,7 +2078,7 @@
                                                                                 <input type="checkbox" class="selectAll">
                                                                             </div>
                                                                         </th>
-                                                                        <th onclick="sortTable(1, 'myTable')"
+                                                                        <th onclick="sortTable(1, 'myTableRoles')"
                                                                             class="style-th">
                                                                             <div>
                                                                                 <span>Role ID</span><span><img
@@ -2086,7 +2086,7 @@
                                                                                         class="sotTble" /></span>
                                                                             </div>
                                                                         </th>
-                                                                        <th onclick="sortTable(2, 'myTable')"
+                                                                        <th onclick="sortTable(2, 'myTableRoles')"
                                                                             class="style-th">
                                                                             <div>
                                                                                 <span>City Name</span><span><img
@@ -2139,7 +2139,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="action-container mt-3 d-none">
-                                                        <button class="btn btn-danger delete-selected">حذف محدد <span class="selected-count d-none">0 محددة</span></button>
+                                                        <button class="btn btn-danger delete-selected">Delete <span class="selected-count d-none">0 محددة</span></button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -2154,23 +2154,22 @@
                                                             <h4 class="py-2">Department</h4>
                                                         </div>
                                                         <div class="d-flex justify-content-start align-items-center ">
-                                                            <div class=" mx-3">
-                                                                <input class="form-control border-0 bg-white input-row "
-                                                                    placeholder="Department " />
-                                                                <small
-                                                                    class="form-text position-absolute text-danger d-none value-danger">add
-                                                                    Department </small>
+                                                            <div class="d-flex justify-content-start align-items-center ">
+                                                                <div class=" mx-3">
+                                                                    <input class="form-control bg-white input-row "
+                                                                        placeholder="add Department " />
+                                                                </div>
+                                                                <a href="#"
+                                                                    class="btn btn-primary create-btn add_new_row  border-radius-2 height-auto">
+                                                                    <i class="bi bi-plus-circle-fill"></i>
+                                                                    Add Department
+                                                                </a>
                                                             </div>
-                                                            <a href="#"
-                                                                class="btn btn-primary create-btn add_new_row  border-radius-2 height-auto">
-                                                                <i class="bi bi-plus-circle-fill"></i>
-                                                                Add Department
-                                                            </a>
                                                         </div>
                                                     </div>
                                                     <div class="table-responsive bg-light mt-4 border-radius-20">
                                                         <div class="secondTableContainer">
-                                                            <table id="myTable" class="table">
+                                                            <table id="myTableDepartment" class="table">
                                                                 <thead>
                                                                     <tr class="tr">
                                                                         <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
@@ -2179,7 +2178,7 @@
                                                                                 <input type="checkbox" class="selectAll">
                                                                             </div>
                                                                         </th>
-                                                                        <th onclick="sortTable(1, 'myTable')"
+                                                                        <th onclick="sortTable(1, 'myTableDepartment')"
                                                                             class="style-th">
                                                                             <div>
                                                                                 <span>Depart ID</span><span><img
@@ -2187,7 +2186,7 @@
                                                                                         class="sotTble" /></span>
                                                                             </div>
                                                                         </th>
-                                                                        <th onclick="sortTable(2, 'myTable')"
+                                                                        <th onclick="sortTable(2, 'myTableDepartment')"
                                                                             class="style-th">
                                                                             <div>
                                                                                 <span>Language Name</span><span><img
@@ -2241,7 +2240,7 @@
                                                     </div>
                                                     
 <div class="action-container mt-3 d-none">
-    <button class="btn btn-danger delete-selected">حذف محدد <span class="selected-count d-none">0 محددة</span></button>
+    <button class="btn btn-danger delete-selected">Delete <span class="selected-count d-none">0 محددة</span></button>
 </div>
                                                 </div>
                                             </div>
@@ -2264,16 +2263,33 @@
         aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
-                <div class="modal-header d-flex justify-content-end ">
+                <div class="modal-header d-flex justify-content-end  border-0 ">
                     <button type="button" class="close-btn" data-bs-dismiss="modal" aria-label="Close">
                         <i class="bi bi-x modal-close-icon"></i>
                     </button>
                 </div>
-                <div class="modal-body d-flex justify-content-center align-items-center">
-                    <div class="container-img">
-                        <img src="../images/icon-modal.svg" class="img-fluid" />
+                <div class="swiper mySwiper py-5">
+                    <div class="swiper-wrapper align-items-center">
+                        <div class="swiper-slide">
+                            <div class="container-img">
+                                <img src="../images/icon-modal.svg" class="img-fluid" />
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="container-img">
+                                <img src="https://via.placeholder.com/250x250/F00" class="img-fluid" />
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <iframe src="../img/book.pdf" width="100%" height="500px"></iframe>
+                        </div>
+                        <div class="swiper-slide">Slide 4</div>
                     </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
                 </div>
+
                 <div class="modal-footer d-flex justify-content-center">
                     <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
                 </div>
@@ -8222,29 +8238,21 @@
 
 
 
-    <script>
-        $('.ui.dropdown').dropdown();
-    </script>
+<script>
+    $('.ui.dropdown').dropdown();
+  </script>
 
-    <!-- global js -->
-    <script src="../JS/global/jquery/jquery-3.4.1.min.js"></script>
-    <script src="../JS/client/main.js"></script>
-    <script src="../JS/global/bootstrap/bootstrap.bundle.min.js"></script>
-    <script src="../JS/global/bootstrap/bootstrap-select.js"></script>
-    <script src="../JS/global/datePicker/datepicker.js"></script>
-    <script src="../JS/layout.js"></script>
+  <!-- global js -->
+  <script src="../JS/global/jquery/jquery-3.4.1.min.js"></script>
+  <script src="../JS/client/main.js"></script>
+  <script src="../JS/global/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="../JS/global/bootstrap/bootstrap-select.js"></script>
+  <script src="../JS/global/datePicker/datepicker.js"></script>
+  <script src="../JS/global/swiper/swiper-bundle.min.js"></script>
+  <script src="../JS/global/filepond/filepond.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+  <script src="../JS/layout.js"></script>
 
-
-
-    <script type="text/javascript">
-
-        $('.openSettingsModal').on('click', function (e) {
-            e.preventDefault();
-
-            $('#exampleModal').modal('show');
-        });
-
-    </script>
 
     <script type="text/javascript">
         $(function () {
@@ -8264,7 +8272,7 @@
                 });
 
                 if (allInputsFilled) {
-                    container.find(".value-danger").addClass("d-none");
+                    inputs.removeClass("border border-danger")
                     var tableClass = container.attr("class").split(" ")[1];
                     if (!counterMap[tableClass]) {
                         counterMap[tableClass] = 1;
@@ -8276,14 +8284,14 @@
                     inputs.each(function () {
                         cols += `<td class="style-td"><input class="form-control text-center border-0 bg-white" readonly  value="${$(this).val()}" /></td>`;
                     });
-                    cols += `<td  style="width:30%;" class="style-td"><button type="button" class="btn btn-secondary dataTableButtons edite-row"> <i class="fa fa-pen"></i> </button><div class="tooltip-left btn btn-secondary dataTableButtons"> <img src="../images/client-person.svg" class="image-actions" /> <span class="tooltiptext">Tooltip text</span> </div><button type="button" class="btn btn-secondary dataTableButtons" data-toggle="tooltip" data-placement="bottom" id="deleteRow" title="" data-bs-original-title="Tooltip on bottom"><i class="fa fa-trash"></i></button></td>`;
+                    cols += `<td class="style-td"><button type="button" class="btn btn-secondary dataTableButtons edite-row"> <i class="fa fa-pen"></i> </button> <div class="tooltip-left btn btn-secondary dataTableButtons"> <img src="../images/client-person.svg" class="image-actions" /> <span class="tooltiptext">Tooltip text</span> </div> <button type="button" class="btn btn-secondary dataTableButtons" id="deleteRow"><i class="fa fa-trash"></i></button> </td>`;
                     newRow.append(cols);
                     container.find(".table").find("tbody").append(newRow);
-                    counterMap[tableClass]++;
+                    counterMap[tableClass]++
                     alert(counterMap[tableClass]); // alert
                     inputs.val("");
                 } else {
-                    container.find(".value-danger").removeClass("d-none");
+                    inputs.addClass("border border-danger")
                 }
             });
             $(".table").on("click", "#deleteRow", function (event) {
@@ -8306,6 +8314,7 @@
                 }
             });
         });
+
 
 
 
@@ -8344,8 +8353,12 @@
 
 
 
+        $('.openSettingsModal').on('click', function (e) {
+            e.preventDefault();
+            $('#exampleModal').modal('show');
+        });
 
-
+        // checked in model 
         $(document).ready(function () {
             $(".group-all").click(function () {
                 var isChecked = $(this).prop("checked");
@@ -8361,6 +8374,17 @@
 
 
 
+        
+//import list
+const fileInput = document.getElementById('fileInput');
+fileInput.addEventListener('change', (event) => {
+  const selectedFile = event.target.files[0];
+  if (selectedFile) {
+    const namefile = document.getElementById('namefile');
+    namefile.textContent = selectedFile.name;
+    console.log('Selected file path:', selectedFile.name); 
+  }
+});
 
     </script>
 

@@ -1019,3 +1019,7 @@ td.ui-sortable {
 .filepond--root .filepond--credits {
   color: #fff0;
 }
+
+#EmailModal .filepond--drop-label {
+  background: #F3F2F2;
+}

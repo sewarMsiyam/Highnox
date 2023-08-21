@@ -12,11 +12,14 @@
   <link rel="stylesheet" href="../css/semantic.min.css"  >
   <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
   <script src="../JS/semantic.min.js"></script>
-  <!-- global style -->
+
   <link href="../css/global/datepicker/datepicker.css" rel="stylesheet">
+
+  <!-- global style -->
   <link href="../css/global/bootstrap/bootstrap.min.css" rel="stylesheet">
   <link href="../css/global/bootstrap/bootstrap-select.css" rel="stylesheet">
   <link href="../css/global/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="../css/global/filepond/filepond.min.css" rel="stylesheet">
 
   <!-- dashboard style -->
   <link href="../css/dashboard/main-dashboard.css" rel="stylesheet">
@@ -579,7 +582,8 @@
                                  <label>Start date</label>
                                 </div>
                                 <div class="select-input bg-secondary">
-                                  <input type="date" class="form-control date-input bg-secondary border-0 px-0" placeholder="Select date">
+                                  <input type="text" class="form-control datepicker date-input bg-secondary border-0 px-0" placeholder="Select date">
+                                  <img class="input-svg" width="12" src="../images/date.svg">
                               </div>                 
                               </div>
                               <div class="col-md-2 col-12 mb-2">
@@ -587,7 +591,8 @@
                                  <label>End date</label>
                                 </div>
                                 <div class="select-input bg-secondary">
-                                  <input type="date" class="form-control date-input bg-secondary border-0 px-0" placeholder="Select date">
+                                  <input type="text" class="form-control datepicker date-input bg-secondary border-0 px-0" placeholder="Select date">
+                                  <img class="input-svg" width="12" src="../images/date.svg">
                               </div>                  
                               </div>
                               <div class="col-md-2 col-12 mb-2 d-flex align-items-end pb-2">
@@ -744,37 +749,39 @@
 
                         <div class="container-fluid content-form bg-light mt-4">
                           <div class="mx-4 py-4 border-radius-20" style="background: #e8e8e8;">
-                            <div class="text-right mx-4"> 
-                              <a href="#" class="btn btn-primary create-bArticle Detailstn add_note ">
-                              <i class="bi bi-plus-circle-fill"></i>
-                             Add Note
-                           </a>
-                          </div>
-                            <div class="form-row px-4">
-                              <div class="col-md-10 col-12">
-                                <div>
-                                  <label>Internal Notes</label>
+                            <div class=" py-4 border-radius-20" style="background: #e8e8e8;">
+                              <div class="note form-row px-4">
+                                <div class="col-md-9 col-12">
+                                  <div class="bg-white border rounded p-3">
+                                    <div class="d-flex justify-content-between">
+                                      <div>
+                                        <label>Internal Notes</label>
+                                      </div>
+                                      <div class="text-right mx-4"> 
+                                        <button class="open-modal btn btn-primary">
+                                        <i class="bi bi-plus-circle-fill"></i>
+                                      Add Note
+                                      </button>
+                                    </div>
+                                    </div>
+                                    <hr>
+                                    <div class="displayValues">
+                                      <p><span class="text-danger pl-1">2023-01-10</span> <span class="text-danger px-1"> day </span> <span class="text-danger px-1">13:24</span> <span class="text-danger px-1">sewar siyam</span> <span class="px-1">text text text text text text text text text</span>  </p>
+                                    </div>
+                                  </div>
                                 </div>
-                                <div>
-                                  <textarea class="form-control" placeholder="Enter your Note" rows="2"></textarea>
-                                </div>
-                              </div>
-                              <div class="col-md-2 col-12 mb-2 mb-2">
-                                <div>
-                                  <label>Attachment</label>
-                                </div>
-                                <div class="file-container-input">
-                                  <button type="button" class="file-button" onclick="openFile(this)">
-                                    <span>Attach File</span>
-                                    <img src="../img//icons/upload.svg" alt="">
-                                  </button>
-                                  <input type="file" class="file-input d-none" id="attachment">
+                                <div class="col-md-3 col-12">
+                                  <div>
+                                    <label>Attachment</label>
+                                  </div>
+                                  <div class="file-container-input">
+                                    <input type="file" class="filepond" name="filepond" multiple/>
+                                  </div>
                                 </div>
                               </div>
                             </div>
-                            <div class="row-note mx-4"></div>
-                          </div>
                         </div>
+                      </div>
 
                         <div class="container-fluid py-4 d-flex justify-content-end">
                           <div class="col-md-4 col-12 text-right">
@@ -1072,11 +1079,48 @@
     <!-- end modals -->
 
 
+    
 
-  <script>
-
-    $('.ui.dropdown').dropdown();
-  </script>
+  
+    <!-- modals Add not -->
+    <div class="modal note fade" id="AddnotModal" tabindex="-1" role="dialog" aria-labelledby="notModalTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header d-flex justify-content-end  border-0 ">
+            <button type="button" class="close-btn" data-bs-dismiss="modal" aria-label="Close">
+              <i class="bi bi-x modal-close-icon"></i>
+            </button>
+          </div>     
+          <div class="mx-4 mb-4 mt-0">
+            <div class="mb-2">
+              <label>Name</label>
+              <input type="text" class="form-control border bg-whtie Name_not" placeholder="Name"> 
+            </div>
+            <div class="mb-2">
+              <label>Date</label>
+              <div class="d-flex align-items-center position-relative form-control">
+                <input type="text" class="form-control p-0 datepicker border-0 w-100 Date_not" placeholder="Select date"> 
+                <img class="dateTable-svg" width="12" src="../images/date.svg"> 
+              </div>
+            </div>
+            <div class="mb-2">
+              <label>Time</label>
+              <input type="time" class="form-control border bg-whtie Time_not" placeholder="Select date"> 
+            </div>
+            <div>
+              <label>Note</label>
+              <textarea class="form-control text_not" placeholder="Enter your Note" rows="4"></textarea>
+            </div>
+          </div>     
+          
+          <div class="modal-footer d-flex justify-content-center">
+            <button type="button" class="btn btn-primary"  data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary save_not">save</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!-- end modals Add not-->
 
 <script>
   $('.ui.dropdown').dropdown();
@@ -1088,66 +1132,12 @@
 <script src="../JS/global/bootstrap/bootstrap.bundle.min.js"></script>
 <script src="../JS/global/bootstrap/bootstrap-select.js"></script>
 <script src="../JS/global/datePicker/datepicker.js"></script>
+<script src="../JS/global/swiper/swiper-bundle.min.js"></script>
+<script src="../JS/global/filepond/filepond.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
 <script src="../JS/layout.js"></script>
 
 
-
-
-<!-- modal -->
-<script type="text/javascript">
-  $('.group-article').on('change', function() {
-    $('.add-articles-table').show();
-  });
-
-  $('.add_new_selling_price').on('click', function(e) {
-    e.preventDefault();
-
-    $('#exampleModal').modal('show');
-  });
-
-  $('.add_new_cost_price').on('click', function(e) {
-    e.preventDefault();
-
-    $('#exampleModal2').modal('show');
-  });
-</script>
-
-<!-- end modal -->
- <script type="text/javascript">
-
-$(document).ready(function () {
-    $(".add_note").on("click", function (event) {
-      event.preventDefault();
-        var newRow = `
-        <div class="form-row my-4">
-                      <div class="col-md-10 col-12">
-                        <div>
-                          <label>Note</label>
-                        </div>
-                        <div>
-                          <textarea class="form-control" placeholder="Enter your Note" rows="2"></textarea>
-                        </div>
-                      </div>
-                      <div class="col-md-2 col-12 mb-2">
-                        <div>
-                          <label>Attachment</label>
-                        </div>
-                        <div class="file-container-input">
-                          <button type="button" class="file-button" onclick="openFile(this)">
-                            <span>Attach File</span>
-                            <img src="../img//icons/upload.svg" alt="">
-                          </button>
-                          <input type="file" class="file-input d-none" id="attachment">
-                        </div>
-                      </div>
-                    </div>
-        `;
-        $(".row-note").append(newRow);
-    });
-
-});
-
-</script>
 </body>
 
 </html>

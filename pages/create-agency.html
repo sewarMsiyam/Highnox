@@ -12,12 +12,15 @@
   <link rel="stylesheet" href="../css/semantic.min.css"  >
   <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
   <script src="../JS/semantic.min.js"></script>
-  <!-- global style -->
+
   <link href="../css/global/datepicker/datepicker.css" rel="stylesheet">
+
+  <!-- global style -->
   <link href="../css/global/bootstrap/bootstrap.min.css" rel="stylesheet">
   <link href="../css/global/bootstrap/bootstrap-select.css" rel="stylesheet">
   <link href="../css/global/swiper/swiper-bundle.min.css" rel="stylesheet">
- 
+  <link href="../css/global/filepond/filepond.min.css" rel="stylesheet">
+
   <!-- dashboard style -->
   <link href="../css/dashboard/main-dashboard.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="../css/dashboard/style.css">
@@ -613,37 +616,37 @@
                 </div>
                 <div class="container-fluid content-form bg-light mt-4">
                   <div class="mx-4 py-4 border-radius-20" style="background: #e8e8e8;">
-                    <div class="text-right mx-4"> 
-                      <a href="#" class="btn btn-primary create-bArticle Detailstn add_note ">
-                      <i class="bi bi-plus-circle-fill"></i>
-                     Add Note
-                   </a>
-                  </div>
-                  <div class="mx-4 py-4 border-radius-20" style="background: #e8e8e8;">
-                    <div class="form-row px-4">
-                      <div class="col-md-10 col-12">
-                        <div>
-                          <label>Internal Notes</label>
+                    <div class=" py-4 border-radius-20" style="background: #e8e8e8;">
+                      <div class="note form-row px-4">
+                        <div class="col-md-9 col-12">
+                          <div class="bg-white border rounded p-3">
+                            <div class="d-flex justify-content-between">
+                              <div>
+                                <label>Internal Notes</label>
+                              </div>
+                              <div class="text-right mx-4"> 
+                                <button class="open-modal btn btn-primary">
+                                <i class="bi bi-plus-circle-fill"></i>
+                              Add Note
+                              </button>
+                            </div>
+                            </div>
+                            <hr>
+                            <div class="displayValues">
+                              <p><span class="text-danger pl-1">2023-01-10</span> <span class="text-danger px-1"> day </span> <span class="text-danger px-1">13:24</span> <span class="text-danger px-1">sewar siyam</span> <span class="px-1">text text text text text text text text text</span>  </p>
+                            </div>
+                          </div>
                         </div>
-                        <div>
-                          <textarea class="form-control" placeholder="Enter your Note" rows="2"></textarea>
-                        </div>
-                      </div>
-                      <div class="col-md-2 col-12">
-                        <div>
-                          <label>Attachment</label>
-                        </div>
-                        <div class="file-container-input">
-                          <button type="button" class="file-button" onclick="openFile(this)">
-                            <span>Attach File</span>
-                            <img src="../img//icons/upload.svg" alt="">
-                          </button>
-                          <input type="file" class="file-input d-none" id="attachment">
+                        <div class="col-md-3 col-12">
+                          <div>
+                            <label>Attachment</label>
+                          </div>
+                          <div class="file-container-input">
+                            <input type="file" class="filepond" name="filepond" multiple/>
+                          </div>
                         </div>
                       </div>
                     </div>
-                    <div class="row-note mx-4"></div>
-                  </div>
                 </div>
 
                 <div class="container-fluid content-form bg-light table-tab-pane budget-table mt-4">
@@ -744,7 +747,7 @@
                         </div>
                   </div>
                   <div class="action-container mt-3 d-none">
-                    <button class="btn btn-danger delete-selected">حذف محدد <span class="selected-count d-none">0 محددة</span></button>
+                    <button class="btn btn-danger delete-selected">Delete <span class="selected-count d-none">0 محددة</span></button>
                 </div>
                 </div>
                 <div class="container-fluid py-4 d-flex justify-content-end">
@@ -773,7 +776,11 @@
   <script src="../JS/global/bootstrap/bootstrap.bundle.min.js"></script>
   <script src="../JS/global/bootstrap/bootstrap-select.js"></script>
   <script src="../JS/global/datePicker/datepicker.js"></script>
+  <script src="../JS/global/swiper/swiper-bundle.min.js"></script>
+  <script src="../JS/global/filepond/filepond.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
   <script src="../JS/layout.js"></script>
+
   <script type="text/javascript">
     $(function () {
 
@@ -850,53 +857,7 @@
     });
 });
   </script>
-  <script type="text/javascript">
 
-    
-
-$(".add_note").on("click", function (event) {
-      event.preventDefault();
-        var newRow = `
-        <div class="form-row my-4">
-                      <div class="col-md-10 col-12">
-                        <div>
-                          <label>Note</label>
-                        </div>
-                        <div>
-                          <textarea class="form-control" placeholder="Enter your Note" rows="2"></textarea>
-                        </div>
-                      </div>
-                      <div class="col-md-2 col-12">
-                        <div>
-                          <label>Attachment</label>
-                        </div>
-                        <div class="file-container-input">
-                          <button type="button" class="file-button" onclick="openFile(this)">
-                            <span>Attach File</span>
-                            <img src="../img//icons/upload.svg" alt="">
-                          </button>
-                          <input type="file" class="file-input d-none" id="attachment">
-                        </div>
-                      </div>
-                    </div>
-        `;
-        $(".row-note").append(newRow);
-    });
-
-
-    $('.create-budget-table-btn').on('click', function(e) {
-      e.preventDefault();
-      $('.budget-table').show();
-      $('.budget-account-manger').hide();
-    });
-
-    $('.create-budget-account-manger').on('click', function(e) {
-      e.preventDefault();
-      $('.budget-account-manger-table').show();
-      $('.budget-active').hide();
-    });
-    // budget-active
-  </script>
 </body>
 
 </html>

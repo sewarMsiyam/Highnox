@@ -1,3 +1,4 @@
+
 //  sidebar
 // const toggleBtn = $('#toggleBtn');
 // const layout = $('.layout');
@@ -63,9 +64,15 @@
     localStorage.setItem('sidebarState', newState);
   });
 
+  //nav
+  $(".bi-three-dots-vertical").click(function () {
+    $(".navbar-icons-container").toggleClass("active");
+    return false;
+  });
+
+
 
 //date 
- // $(".datepicker").datepicker();
   $(".datepicker").datepicker();
 
 
@@ -152,26 +159,6 @@ var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
       $(this).addClass("d-none");
     });
   });
-
-
-// import list
-// const fileInput = document.getElementById('fileInput');
-// fileInput.addEventListener('change', (event) => {
-//   const selectedFile = event.target.files[0];
-//   if (selectedFile) {
-//     const sewarDiv = document.getElementById('namefile');
-//     sewarDiv.textContent = selectedFile.name;
-//     console.log('Selected file path:', selectedFile.name); 
-//   }
-// });
-
-
-
-
-
-
-
-
 
 
 
@@ -380,19 +367,65 @@ $(document).ready(function() {
 
 
 
-
-
-
-
-
+$(document).ready(function() {
 FilePond.registerPlugin(
   FilePondPluginFileEncode,
   FilePondPluginFileValidateSize,
   FilePondPluginImageExifOrientation,
   FilePondPluginImagePreview
 );
-
 var fileponds = document.querySelectorAll('.filepond');
 fileponds.forEach(function(filepond) {
   FilePond.create(filepond);
 });
+FilePond.setOptions({
+  labelIdle: 'Click to attach files <img src="../img//icons/upload.svg" class="mx-2" alt="">'
+});
+
+
+});
+
+
+
+
+$(document).ready(function() {
+  var currentNote;
+
+  $(".open-modal").on("click", function() {
+    currentNote = $(this).closest(".note");
+    $("#AddnotModal").modal("show");
+  });
+
+  $(".save_not").on("click", function() {
+    var modal = $("#AddnotModal");
+    var name = modal.find(".Name_not").val();
+    var date = modal.find(".Date_not").val();
+    var time = modal.find(".Time_not").val();
+    var note = modal.find(".text_not").val();
+    var dayName = moment(date).format("dddd");  // استخراج اسم اليوم من التاريخ
+
+    var html = '<hr>'+ ' <p class="d-flex"><span class="text-danger pl-1">' + date + '</span> <span class="text-danger px-1">' + dayName + '</span> <span class="text-danger px-1">' + time + '</span> <span class="text-danger px-1" style="white-space: nowrap;">' + name + '</span> <span class="px-1">' + note + '</span></p>' ;
+
+    currentNote.find(".displayValues").append(html);
+    modal.modal("hide");
+
+    // Clear input fields
+    modal.find(".Name_not").val("");
+    modal.find(".Date_not").val("");
+    modal.find(".Time_not").val("");
+    modal.find(".text_not").val("");
+  });
+
+  // تصفية المدخلات بعد إغلاق الموديل
+  $("#AddnotModal").on("hidden.bs.modal", function() {
+    var modal = $(this);
+    modal.find(".Name_not").val("");
+    modal.find(".Date_not").val("");
+    modal.find(".Time_not").val("");
+    modal.find(".text_not").val("");
+  });
+});
+
+
+
+
