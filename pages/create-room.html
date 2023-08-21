@@ -1212,6 +1212,7 @@ function updateSize() {
 
         const info = document.createElement("a");
         info.href = "fileselect.html"; // تعيين القيمة "#" للخاصية href
+        info.target = "_blank"; 
         info.innerHTML = selectedFiles[nFileId].name + ": " + selectedFiles[nFileId].size + " bytes";
         li.appendChild(info);
 
