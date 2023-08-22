@@ -1026,14 +1026,14 @@ td.ui-sortable {
 
 
 
-.imgbox li{
+.imgbox li {
   background: #fff;
   padding: 10px;
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid #cfc1c138;
+  align-items: center;
 }
-
 .delete-icon {
   cursor: pointer;
   color: red;
@@ -1044,4 +1044,27 @@ td.ui-sortable {
   align-items: center;
   justify-content: center;
   height: 25px;
+}
+
+.file-image{
+  width: 20px;
+  margin-right: 7px;
+}
+
+.imgbox li .openModelAttachment{
+  white-space: nowrap;
+  width: 87%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.imgbox li .fa-x{
+  width: 24px;
+  background: #e7b8b8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 24px;
+  color: #d92e2e;
+  border-radius: 50%;
+  font-size: 12px;
 }

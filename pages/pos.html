@@ -428,27 +428,27 @@
             </div>
           </div>
           <!--notification drop down ends-->
-          <!--dashboard drop down starts-->
-          <div class="nav-item dropdown nav-link-position">
-            <a href="#" class="nav-link" data-bs-toggle="dropdown">
-              <i class="bi bi-grid"></i>
-            </a>
-            <div class="dropdown-down dropdown-menu dropdown-menu-end bg-light border-0 m-0 p-0">
-              <div class="triangle" style="border-color: transparent transparent #2f3b4e; right: 10px; top: -8px;">
-              </div>
-              <div class="settings dashboard">
-                <p style="border-top-right-radius: 10px; border-top-left-radius: 10px;">Dashboard</p>
-                <div>
-                  <a href="#" class="dropdown-item"><i class="bi bi-grid"></i>Space Management</a>
-                  <a href="#" class="dropdown-item"><i class="bi bi-grid"></i>Conference Management</a>
-                  <a href="#" class="dropdown-item"><i class="bi bi-grid"></i>Tickets</a>
-                  <a href="#" class="dropdown-item"><i class="bi bi-grid"></i>CRM</a>
-                  <a href="#" class="dropdown-item"><i class="bi bi-grid"></i>Mass Email</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- dashboard drop down end -->
+                   <!--dashboard drop down starts-->
+                   <div class="nav-item dropdown nav-link-position">
+                    <a href="#" class="nav-link text-dark font-weight-bold" data-bs-toggle="dropdown">
+                      <span class="bi bi-grid text-dark font-weight-bold"></span> Space Management <span class="fa-solid fa-caret-down"></span>
+                    </a>
+                    <div class="dropdown-down dropdown-menu dropdown-menu-end bg-light border-0 m-0 p-0">
+                      <div class="triangle" style="border-color: transparent transparent #2f3b4e; right: 10px; top: -8px;">
+                      </div>
+                      <div class="settings dashboard">
+                        <p style="border-top-right-radius: 10px; border-top-left-radius: 10px;">Dashboard</p>
+                        <div>
+                          <a href="#" class="dropdown-item"><i class="bi bi-grid"></i>Space Management</a>
+                          <a href="#" class="dropdown-item"><i class="bi bi-grid"></i>Conference Management</a>
+                          <a href="#" class="dropdown-item"><i class="bi bi-grid"></i>Tickets</a>
+                          <a href="#" class="dropdown-item"><i class="bi bi-grid"></i>CRM</a>
+                          <a href="#" class="dropdown-item"><i class="bi bi-grid"></i>Mass Email</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- dashboard drop down end -->
           <!-- settings drop down start -->
           <div class="nav-item dropdown nav-link-position gear-container">
             <a href="#" class="nav-link" data-bs-toggle="dropdown">
@@ -667,19 +667,23 @@
                           </div>
                       </div>
                     </div>
-                    <div class="col">
+                    <div class="col table-tab-pane ">
                       <div class="card mb-3 bg-gray border-radius-10">
-                      <div class="card-header bg-transparent border-0"><h4>Choosed Articles</h4></div>
+                        <div class="card-header bg-transparent border-0 d-lg-flex align-items-center justify-content-between" ><h4>Choosed Articles</h4>
+                          <a href="#" class="btn btn-primary create-btn add_new_row ">
+                            <i class="bi bi-plus-circle-fill"></i>
+                            Add Articles
+                         </a></div>
+
                       <div class="card-body">
                         <div class="px-4 px-responsive-none bg-light border-radius-20 table-responsive">
-                          <table id="myTable" class="table">
+                          <table id="myTable" class="table ">
                             <thead>
                               <tr class="tr" >
                                 <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
                                 <th onclick="sortTable(0, 'myTable')" class="style-th">
                                   <div>
-                                    <input type="checkbox" class="" id="customCheck1">
-                                  </div>
+                                    <input type="checkbox" class="selectAll">                                  </div>
                                 </th>
                                 <th onclick="sortTable(1, 'myTable')" class="style-th">
                                   <div>
@@ -701,8 +705,7 @@
                                 </th>
                                 <th onclick="sortTable(7, 'myTable')" class="style-th">
                                   <div>
-                                    <span>Action</span><span><img
-                                    src="../images/sort-ic.svg" class="sotTble" /></span>
+                                    <span>Action</span>
                                   </div>
                                 </th>
                               </tr>
@@ -710,7 +713,7 @@
                             <tbody>
                               <tr class="tr style-table-my1 tr-active">
                                 <td class="style-td">
-                                    <input type="checkbox" class="" id="customCheck1">
+                                  <input type="checkbox">
                                 </td>
                                 <td class="style-td">
                                   Coffee
@@ -722,7 +725,12 @@
                                   30
                                 </td>
                                 <td class="style-td">
-                                  <span class="second-delete-btn pos-delete"><img src="../images/delete-icon.svg"></span>
+                                  <button type="button" class="btn btn-secondary dataTableButtons edite-save">
+                                    <i class="fa-solid fa-pen"></i>
+                                </button>
+                                  <button type="button" class="btn btn-secondary dataTableButtons">
+                                    <i class="fa fa-trash"></i>
+                                </button>
                                 </td>
                               </tr>
                                <tr class="tr style-table-my1 tr-active">
@@ -739,7 +747,12 @@
                                     30
                                   </td>
                                   <td class="style-td">
-                                    <span class="second-delete-btn pos-delete"><img src="../images/delete-icon.svg"></span>
+                                    <button type="button" class="btn btn-secondary dataTableButtons edite-save">
+                                      <i class="fa-solid fa-pen"></i>
+                                  </button>
+                                    <button type="button" class="btn btn-secondary dataTableButtons">
+                                      <i class="fa fa-trash"></i>
+                                    </button>
                                   </td>
                                 </tr>
                             </tbody>
@@ -776,6 +789,9 @@
                               </div>
                             </div>
                           </div>
+                          <div class="action-container my-3 d-none">
+                            <button class="btn btn-danger delete-selected">حذف محدد <span class="selected-count d-none">0 محددة</span></button>
+                        </div>
                         </div>
                       </div>
                     </div>
@@ -893,10 +909,10 @@
                   <div class="container-fluid py-4 d-flex justify-content-end">
                     <div class="col-md-4 col-12 text-right">
                       <a class="btn btn-primary  cancel-btn" href="">
-                      prev
+                        <i class="fa-solid fa-arrow-left"></i>
                       </a>
                         <a class="btn btn-primary submit-btn" href="">
-                        next
+                          <i class="fa-solid fa-arrow-right"></i>
                         </a>                        
                     </div>
                   </div>
@@ -939,6 +955,66 @@ $(document).ready(function () {
   });
 });
 
+
+
+$(function () {
+    var counter = 1;
+    $(".add_new_row").on("click", function (event) {
+        event.preventDefault();
+        var newRow = $('<tr class="tr style-table-my1 tr-active">');
+        var cols = '';
+        // Table columns
+        
+        cols += '<td class="style-td"> <input type="checkbox"></td>';
+        cols += '<td class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
+        cols += '<td class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
+        cols += '<td class="style-td"><input class="form-control rounded-0" type="text" name="handle" placeholder="Handle"></td>';
+        cols += '<td style=" width: 100px;" class="style-td"> <button type="button" class="btn btn-secondary dataTableButtons edite-save"> <i class="fa-solid fa-check"></i> </button> <button type="button" class="btn btn-secondary dataTableButtons deleteRow"> <i class="fa fa-trash"></i> </button> </td>';
+        newRow.append(cols);
+        $("#myTable").append(newRow);
+        counter++;
+    });
+    $("#myTable").on("click", ".edite-save", function(event) {
+      var row = $(this).closest("tr");
+        var inputs = row.find("input");
+        var select = row.find("select");
+        var div = row.find("div");
+        var pickers = row.find(".selectpicker");
+        var checkboxes = row.find("input[type='checkbox']");
+
+        var editIcon = $(this).find("i");
+        inputs.each(function () {
+          if ($(this).attr("type") !== "checkbox") {
+            $(this).prop("disabled", !$(this).prop("disabled"));
+          }
+        });
+        select.each(function () {
+            $(this).prop("disabled", !$(this).prop("disabled"));
+        });
+        pickers.each(function () {
+          var isDisabled = $(this).prop("disabled");
+            $(this).toggleClass("disabled");
+            $(this).selectpicker("refresh");  
+        });
+
+        if(editIcon.hasClass("fa-check")){
+          row.find(".styleinTable").removeClass("form-control");
+        }else if(editIcon.hasClass("fa-pen")){
+            row.find(".styleinTable").addClass("form-control");
+        }
+
+        if (editIcon.hasClass("fa-check")) {
+          editIcon.removeClass("fa-check").addClass("fa-pen");
+        } else {
+          editIcon.removeClass("fa-pen").addClass("fa-check");
+        }
+    });
+    // Remove row when delete btn is clicked
+    $("#myTable").on("click", ".deleteRow", function (event) {
+        $(this).closest("tr").remove();
+        counter -= 1
+    });
+});
   </script>
 
 

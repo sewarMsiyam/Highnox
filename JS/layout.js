@@ -429,3 +429,134 @@ $(document).ready(function() {
 
 
 
+
+
+$(document).ready(function() {
+  $(".file-container-input").each(function() {
+    var selectedFiles = [];
+    var container = $(this);
+
+    function updateSize() {
+      let nBytes = 0,
+          oFiles = this.files,
+          nFiles = oFiles.length;
+
+      for (let nFileId = 0; nFileId < nFiles; nFileId++) {
+          selectedFiles.push(oFiles[nFileId]);
+      }
+
+      const list = container.find(".imgbox");
+      list.empty();
+
+      for (let nFileId = 0; nFileId < selectedFiles.length; nFileId++) {
+          const li = $("<li></li>");
+          list.append(li);
+
+          const link = $("<a></a>").addClass("openModelAttachment");
+          link.text(selectedFiles[nFileId].name);
+          
+          // تحقق من امتداد الملف وإضافة صورة وفقًا لنوع الملف
+          const fileExtension = selectedFiles[nFileId].name.split('.').pop();
+          let imageSrc = "";
+
+          
+          switch (fileExtension) {
+            case "docx":
+            case "doc":
+              imageSrc = "../images/word.png"; 
+              break;
+            case "pdf":
+              imageSrc = "../images/pdf.png"; 
+              break;
+            case "xlsx":
+            case "xls":
+              imageSrc = "../images/excel.png";
+              break;
+            case "zip":
+            case "rar":
+              imageSrc = "../images/rar.png";
+              break;
+            case "jpg":
+            case "jpeg":
+            case "png":
+            case "gif":
+            case "bmp":
+              imageSrc = "../images/image.png";
+              break;
+              case "mp4":
+              case "avi":
+              case "mov":
+                imageSrc = "../images/video.png";;
+                break;
+            default:
+              imageSrc = "../images/files.png";
+              break;
+          }
+
+          if (imageSrc) {
+            const fileImage = $("<img>").addClass("file-image").attr("src", imageSrc);
+            link.prepend(fileImage);
+          }
+
+          li.append(link);
+
+          const deleteIcon = $("<i></i>").addClass("fa-solid fa-x");
+          li.append(deleteIcon);
+          deleteIcon.on("click", function() {
+              li.fadeOut(400, function() {
+                  selectedFiles.splice(nFileId, 1);
+                  li.remove();
+              });
+          });
+      }
+    }
+
+    $(document).on("click", ".openModelAttachment", function() {
+      const fileName = $(this).text();
+      const fileExtension = fileName.split('.').pop();
+    
+      if (fileExtension === "jpg" || fileExtension === "jpeg" || fileExtension === "png" || fileExtension === "gif" || fileExtension === "bmp") {
+        const selectedFile = selectedFiles.find(file => file.name === fileName);
+        if (selectedFile) {
+          const img = document.createElement("img");
+          img.src = URL.createObjectURL(selectedFile);
+          img.className = 'img-fluid';
+          $("#modelfilename").html(img);
+        }
+      }else {
+        const selectedFile = selectedFiles.find(file => file.name === fileName);
+        if (selectedFile) {
+          const fileUrl = URL.createObjectURL(selectedFile);
+          const iframe = document.createElement("iframe");
+          iframe.src = `https://docs.google.com/gview?url=${encodeURIComponent(fileUrl)}&embedded=true`;
+          iframe.className = 'img-fluid';
+          iframe.style.width = '100%';
+          iframe.style.height = '500px'; // ضبط الارتفاع حسب الاحتياج
+          $("#modelfilename").html(iframe);
+        }
+      }
+      
+      $("#AttachmentCenter").modal("show");
+      console.log(fileName);
+    });
+    
+    // $(document).on("click", ".openModelAttachment", function() {
+    //   const fileName = $(this).text();
+    //   const filePath = "fileselect.html";
+    //   window.open(filePath, "_blank");
+    // });
+    
+
+
+    container.find(".uploadInput").on("change", updateSize);
+    container.find(".fileSelect").on("click", function (e) {
+      e.preventDefault();
+      container.find(".uploadInput").click();
+    });
+  });
+});
+
+
+
+
+

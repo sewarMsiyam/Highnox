@@ -423,27 +423,27 @@
             </div>
           </div>
           <!--notification drop down ends-->
-          <!--dashboard drop down starts-->
-          <div class="nav-item dropdown nav-link-position">
-            <a href="#" class="nav-link" data-bs-toggle="dropdown">
-              <i class="bi bi-grid"></i>
-            </a>
-            <div class="dropdown-down dropdown-menu dropdown-menu-end bg-light border-0 m-0 p-0">
-              <div class="triangle" style="border-color: transparent transparent #2f3b4e; right: 10px; top: -8px;">
-              </div>
-              <div class="settings dashboard">
-                <p style="border-top-right-radius: 10px; border-top-left-radius: 10px;">Dashboard</p>
-                <div>
-                  <a href="#" class="dropdown-item"><i class="bi bi-grid"></i>Space Management</a>
-                  <a href="#" class="dropdown-item"><i class="bi bi-grid"></i>Conference Management</a>
-                  <a href="#" class="dropdown-item"><i class="bi bi-grid"></i>Tickets</a>
-                  <a href="#" class="dropdown-item"><i class="bi bi-grid"></i>CRM</a>
-                  <a href="#" class="dropdown-item"><i class="bi bi-grid"></i>Mass Email</a>
-                </div>
+        <!--dashboard drop down starts-->
+        <div class="nav-item dropdown nav-link-position">
+          <a href="#" class="nav-link text-dark font-weight-bold" data-bs-toggle="dropdown">
+            <span class="bi bi-grid text-dark font-weight-bold"></span> Space Management <span class="fa-solid fa-caret-down"></span>
+          </a>
+          <div class="dropdown-down dropdown-menu dropdown-menu-end bg-light border-0 m-0 p-0">
+            <div class="triangle" style="border-color: transparent transparent #2f3b4e; right: 10px; top: -8px;">
+            </div>
+            <div class="settings dashboard">
+              <p style="border-top-right-radius: 10px; border-top-left-radius: 10px;">Dashboard</p>
+              <div>
+                <a href="#" class="dropdown-item"><i class="bi bi-grid"></i>Space Management</a>
+                <a href="#" class="dropdown-item"><i class="bi bi-grid"></i>Conference Management</a>
+                <a href="#" class="dropdown-item"><i class="bi bi-grid"></i>Tickets</a>
+                <a href="#" class="dropdown-item"><i class="bi bi-grid"></i>CRM</a>
+                <a href="#" class="dropdown-item"><i class="bi bi-grid"></i>Mass Email</a>
               </div>
             </div>
           </div>
-          <!-- dashboard drop down end -->
+        </div>
+        <!-- dashboard drop down end -->
           <!-- settings drop down start -->
           <div class="nav-item dropdown nav-link-position gear-container">
             <a href="#" class="nav-link" data-bs-toggle="dropdown">
@@ -856,32 +856,52 @@
                 </div>
                
 
-
-                <div class="container-fluid content-form py-4">
-                  <form>
-                    <div class="form-row my-4">
-                      <div class="col-md-10 col-12">
-                        <div>
-                          <label>Note</label>
+                <div class="container-fluid content-form bg-light mt-4">
+                  <div class="mx-4 py-4 border-radius-20" style="background: #e8e8e8;">
+                    <div class=" py-4 border-radius-20" style="background: #e8e8e8;">
+                      <div class="note form-row px-4">
+                        <div class="col-md-9 col-12">
+                          <div class="bg-white border rounded p-3">
+                            <div class="d-flex justify-content-between">
+                              <div>
+                                <label>Internal Notes</label>
+                              </div>
+                              <div class="text-right mx-4">
+                                <button class="open-modal btn btn-primary">
+                                  <i class="bi bi-plus-circle-fill"></i>
+                                  Add Note
+                                </button>
+                              </div>
+                            </div>
+                            <hr>
+                            <div class="displayValues">
+                              <p><span class="text-danger pl-1">2023-01-10</span> <span
+                                  class="text-danger px-1"> day </span> <span
+                                  class="text-danger px-1">13:24</span> <span
+                                  class="text-danger px-1">sewar siyam</span> <span
+                                  class="px-1">text text text text text text text text
+                                  text</span> </p>
+                            </div>
+                          </div>
                         </div>
-                        <div>
-                          <textarea class="form-control" placeholder="Enter your Note" rows="2"></textarea>
-                        </div>
-                      </div>
-                      <div class="col-md-2 col-12">
-                        <div>
-                          <label>Attachment</label>
-                        </div>
-                        <div class="file-container-input">
-                          <button type="button" class="file-button" onclick="openFile(this)">
-                            <span>Attach File</span>
-                            <img src="../img//icons/upload.svg" alt="">
-                          </button>
-                          <input type="file" class="file-input d-none" id="attachment">
+                        <div class="col-md-3 col-12 ">
+                          <div>
+                            <label>Attachment</label>
+                          </div>
+                          <div class="file-container-input">
+                            <button type="button" class="file-button fileSelect">
+                              <span>Attach File</span>
+                              <img src="../img//icons/upload.svg" alt="">
+                            </button>
+                            <input type="file" class="file-input d-none uploadInput" type="file"
+                              multiple>
+                            <ul class="imgbox">
+                            </ul>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </form>
+                  </div>
                 </div>
                 <div class="container-fluid py-4 d-flex justify-content-end print-dropdown">
                   <form class="offers-btn d-flex justify-content-center flex-wrap justify-content-md-end" style="gap: 1rem;">
