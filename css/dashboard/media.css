@@ -244,12 +244,12 @@
     }
     
     @media screen and (max-width: 993px) {
-      .note-container-input{
+      /* .note-container-input{
         width: 55% !important;
       }
       .file-container-input{
         width: 40%;
-      }
+      } */
       .offer-section{
         gap: 0.9rem !important;
       }

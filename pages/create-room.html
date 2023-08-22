@@ -791,20 +791,37 @@
                             </div>
                           </div>
                         </div>
+                        <div class="col-md-3 col-12 ">
+                          <div>
+                            <label>Attachment</label>
+                          </div>
+                          <div class="file-container-input">
+                            <button type="button" class="file-button fileSelect">
+                              <span>Attach File</span>
+                              <img src="../img//icons/upload.svg" alt="">
+                            </button>
+                            <input type="file" class="file-input d-none uploadInput" type="file" multiple>
+                            <ul class="imgbox">
+                            </ul>
+                          </div>  
+                        </div>
+
                         <div class="col-md-3 col-12">
                           <div>
                             <label>Attachment</label>
                           </div>
                           <div class="file-container-input">
-                            <button type="button" class="file-button" id="fileSelect">
+                            <button type="button" class="file-button fileSelect">
                               <span>Attach File</span>
                               <img src="../img//icons/upload.svg" alt="">
                             </button>
-                            <input type="file" class="file-input d-none" id="uploadInput" type="file" multiple>
-                            <ul id="imgbox">
+                            <input type="file" class="file-input d-none uploadInput" type="file" multiple>
+                            <ul class="imgbox">
                             </ul>
                           </div>  
                         </div>
+
+
                       </div>
                     </div>
                 </div>
@@ -1089,6 +1106,7 @@
               <img src="../images/icon-modal.svg" class="img-fluid"/>
             </div>
           </div>
+ 
           <div class="modal-footer d-flex justify-content-center">
             <button type="button" class="btn btn-primary"
               data-bs-dismiss="modal">Close</button>
@@ -1097,6 +1115,28 @@
       </div>
     </div>
   <!-- end modals -->
+
+   <!-- modals -->
+   <div class="modal fade" id="AttachmentCenter" tabindex="-1" role="dialog" aria-labelledby="AttachmentTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header d-flex justify-content-end ">
+          <button type="button" class="close-btn" data-bs-dismiss="modal" aria-label="Close">
+            <i class="bi bi-x modal-close-icon"></i>
+          </button>
+        </div>
+        <div class="modal-body d-flex justify-content-center align-items-center">
+            <iframe src="google.com" id="Attachment" title="Attachment"></iframe>
+        </div>
+        <div class="modal-footer d-flex justify-content-center">
+          <button type="button" class="btn btn-primary"
+            data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+    </div>
+<!-- end modals -->
+
 
 
   <script>
@@ -1189,54 +1229,100 @@
         counter -= 1
     });
 });
+$(document).ready(function() {
+  $(".file-container-input").each(function() {
+    var selectedFiles = [];
+    var container = $(this);
 
+    function updateSize() {
+      let nBytes = 0,
+          oFiles = this.files,
+          nFiles = oFiles.length;
 
-var selectedFiles = []; // تخزين الملفات المحددة هنا
+      for (let nFileId = 0; nFileId < nFiles; nFileId++) {
+          selectedFiles.push(oFiles[nFileId]);
+      }
 
-function updateSize() {
-    let nBytes = 0,
-        oFiles = this.files,
-        nFiles = oFiles.length;
-    
-    // إضافة الملفات الجديدة إلى القائمة
-    for (let nFileId = 0; nFileId < nFiles; nFileId++) {
-        selectedFiles.push(oFiles[nFileId]);
+      const list = container.find(".imgbox");
+      list.empty();
+
+      for (let nFileId = 0; nFileId < selectedFiles.length; nFileId++) {
+          const li = $("<li></li>");
+          list.append(li);
+
+          const link = $("<a></a>").addClass("openModelAttachment");
+          link.text(selectedFiles[nFileId].name);
+          
+          // تحقق من امتداد الملف وإضافة أيقونة وفقًا لنوع الملف
+          const fileExtension = selectedFiles[nFileId].name.split('.').pop();
+          let iconClass = "";
+
+          switch (fileExtension) {
+            case "docx":
+            case "doc":
+              iconClass = "fas fa-file-word pr-2";
+              break;
+            case "pdf":
+              iconClass = "fas fa-file-pdf pr-2";
+              break;
+            case "xlsx":
+            case "xls":
+              iconClass = "fas fa-file-excel pr-2";
+              break;
+            case "zip":
+            case "rar":
+              iconClass = "fas fa-file-archive pr-2";
+              break;
+            case "jpg":
+            case "jpeg":
+            case "png":
+            case "gif":
+            case "bmp":
+              iconClass = "fas fa-file-image pr-2";
+              break;
+            default:
+              iconClass = "fas fa-file pr-2";
+              break;
+          }
+
+          if (iconClass) {
+            const fileIcon = $("<i></i>").addClass(iconClass);
+            link.prepend(fileIcon);
+          }
+
+          li.append(link);
+
+          const deleteIcon = $("<span></span>").addClass("delete-icon").text("x");
+          li.append(deleteIcon);
+          deleteIcon.on("click", function() {
+              li.fadeOut(400, function() {
+                  selectedFiles.splice(nFileId, 1);
+                  li.remove();
+              });
+          });
+      }
     }
 
-    // عرض الملفات المحددة
-    const list = document.getElementById("imgbox");
-    list.innerHTML = "";
-    for (let nFileId = 0; nFileId < selectedFiles.length; nFileId++) {
-        const li = document.createElement("li");
-        list.appendChild(li);
+    $(document).on("click", ".openModelAttachment", function() {
+      const fileName = $(this).text();
+      $("#AttachmentCenter").modal("show");
+      console.log(fileName);
+    });
 
-        const info = document.createElement("a");
-        info.href = "fileselect.html"; // تعيين القيمة "#" للخاصية href
-        info.target = "_blank"; 
-        info.innerHTML = selectedFiles[nFileId].name + ": " + selectedFiles[nFileId].size + " bytes";
-        li.appendChild(info);
+    container.find(".uploadInput").on("change", updateSize);
+    container.find(".fileSelect").on("click", function (e) {
+      e.preventDefault();
+      container.find(".uploadInput").click();
+    });
+  });
+});
 
-        // إنشاء أيقونة "x" لحذف الملف
-        const deleteIcon = document.createElement("span");
-        deleteIcon.className = "delete-icon";
-        deleteIcon.textContent = "x";
-        li.appendChild(deleteIcon);
 
-        // تعيين الحدث عند الضغط على أيقونة الحذف
-        deleteIcon.addEventListener("click", function() {
-            selectedFiles.splice(nFileId, 1); // حذف الملف من القائمة
-            li.remove(); // حذف العنصر من واجهة المستخدم
-        });
-    }
-}
 
-document.getElementById("uploadInput").addEventListener("change", updateSize, false);
-document.getElementById("fileSelect").addEventListener("click", function (e) {
-    e.preventDefault();
-    if (document.getElementById("uploadInput")) {
-        document.getElementById("uploadInput").click();
-    }
-}, false);
+
+
+
+
 
   </script>
 

@@ -1023,3 +1023,25 @@ td.ui-sortable {
 #EmailModal .filepond--drop-label {
   background: #F3F2F2;
 }
+
+
+
+.imgbox li{
+  background: #fff;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #cfc1c138;
+}
+
+.delete-icon {
+  cursor: pointer;
+  color: red;
+  background: #ff00002b;
+  border-radius: 50%;
+  width: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 25px;
+}
