@@ -72,6 +72,7 @@
 
 
 
+
 //date 
   $(".datepicker").datepicker();
 
@@ -159,6 +160,35 @@ var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
       $(this).addClass("d-none");
     });
   });
+
+
+          
+        //import list
+        // const fileInput = document.getElementById('fileInput');
+        // fileInput.addEventListener('change', (event) => {
+        // const selectedFile = event.target.files[0];
+        // if (selectedFile) {
+        //     const namefile = document.getElementById('namefile');
+        //     namefile.textContent = selectedFile.name;
+        //     console.log('Selected file path:', selectedFile.name); 
+        // }
+        // });
+
+//import list
+const fileInput = document.getElementById('fileInput');
+if (fileInput) {
+    fileInput.addEventListener('change', (event) => {
+        const selectedFile = event.target.files[0];
+        if (selectedFile) {
+            const namefile = document.getElementById('namefile');
+            if (namefile) {
+                namefile.textContent = selectedFile.name;
+                console.log('Selected file path:', selectedFile.name); 
+            }
+        }
+    });
+}
+
 
 
 
@@ -367,23 +397,23 @@ $(document).ready(function() {
 
 
 
-$(document).ready(function() {
-FilePond.registerPlugin(
-  FilePondPluginFileEncode,
-  FilePondPluginFileValidateSize,
-  FilePondPluginImageExifOrientation,
-  FilePondPluginImagePreview
-);
-var fileponds = document.querySelectorAll('.filepond');
-fileponds.forEach(function(filepond) {
-  FilePond.create(filepond);
-});
-FilePond.setOptions({
-  labelIdle: 'Click to attach files <img src="../img//icons/upload.svg" class="mx-2" alt="">'
-});
+// $(document).ready(function() {
+// FilePond.registerPlugin(
+//   FilePondPluginFileEncode,
+//   FilePondPluginFileValidateSize,
+//   FilePondPluginImageExifOrientation,
+//   FilePondPluginImagePreview
+// );
+// var fileponds = document.querySelectorAll('.filepond');
+// fileponds.forEach(function(filepond) {
+//   FilePond.create(filepond);
+// });
+// FilePond.setOptions({
+//   labelIdle: 'Click to attach files <img src="../img//icons/upload.svg" class="mx-2" alt="">'
+// });
 
 
-});
+// });
 
 
 

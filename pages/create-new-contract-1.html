@@ -815,39 +815,52 @@
                                         </div>
                                     </form>
                                 </div>
-                                <div class="container-fluid content-form py-4">
-                                    <form>
-                                        <div class="text-right">
-                                            <a href="#" class="btn btn-primary create-bArticle Detailstn add_note ">
-                                                <i class="bi bi-plus-circle-fill"></i>
-                                                Add Note
-                                            </a>
-                                        </div>
-                                        <div class="form-row my-4">
-                                            <div class="col-md-10 col-12">
-                                                <div>
-                                                    <label>Note</label>
+                                <div class="content-form bg-light py-4">
+                                    <div class=" py-4 border-radius-20" style="background: #e8e8e8;">
+                                        <div class=" py-4 border-radius-20" style="background: #e8e8e8;">
+                                            <div class="note form-row px-4">
+                                                <div class="col-md-9 col-12">
+                                                    <div class="bg-white border rounded p-3">
+                                                        <div class="d-flex justify-content-between">
+                                                            <div>
+                                                                <label>Internal Notes</label>
+                                                            </div>
+                                                            <div class="text-right mx-4">
+                                                                <button class="open-modal btn btn-primary">
+                                                                    <i class="bi bi-plus-circle-fill"></i>
+                                                                    Add Note
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                        <hr>
+                                                        <div class="displayValues">
+                                                            <p><span class="text-danger pl-1">2023-01-10</span> <span
+                                                                    class="text-danger px-1"> day </span> <span
+                                                                    class="text-danger px-1">13:24</span> <span
+                                                                    class="text-danger px-1">sewar siyam</span> <span
+                                                                    class="px-1">text text text text text text text text
+                                                                    text</span> </p>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <div>
-                                                    <textarea class="form-control" placeholder="Enter your Note"
-                                                        rows="2"></textarea>
+                                                <div class="col-md-3 col-12 ">
+                                                    <div>
+                                                        <label>Attachment</label>
+                                                    </div>
+                                                    <div class="file-container-input">
+                                                        <button type="button" class="file-button fileSelect">
+                                                            <span>Attach File</span>
+                                                            <img src="../img//icons/upload.svg" alt="">
+                                                        </button>
+                                                        <input type="file" class="file-input d-none uploadInput" type="file"
+                                                            multiple>
+                                                        <ul class="imgbox">
+                                                        </ul>
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <div class="col-md-2 col-12">
-                                                <div>
-                                                    <label>Attachment</label>
-                                                </div>
-                                                <div class="file-container-input">
-                                                    <button type="button" class="file-button" onclick="openFile(this)">
-                                                        <span>Attach File</span>
-                                                        <img src="../img//icons/upload.svg" alt="">
-                                                    </button>
-                                                    <input type="file" class="file-input d-none" id="attachment">
-                                                </div>
-                                            </div>
                                         </div>
-                                        <div class="row-note"></div>
-                                    </form>
+                                    </div>
                                 </div>
                                 <div class="container-fluid py-4 d-flex justify-content-end print-dropdown">
                                     <div class="offers-btn d-flex justify-content-center flex-wrap justify-content-md-end"
@@ -857,18 +870,24 @@
 
                                         <div class="ui inline dropdown h-100  cancel-btn text-dark" tabindex="0">
                                             <div class="text">
-                                                Printout
+                                              Printout
                                             </div>
                                             <i class="dropdown icon"></i>
                                             <div class="menu w-100" tabindex="-1">
-                                                <div class="item" data-bs-toggle="modal" data-bs-target="#pdfModal">
-                                                    Print pdf
-                                                </div>
-                                                <div class="item" data-bs-toggle="modal" data-bs-target="#EmailModal">
-                                                    Email
-                                                </div>
+                                              <div class="item" data-bs-toggle="modal" data-bs-target="#pdfModal">
+                                                Print pdf
+                                              </div>
+                                              <div class="item" data-bs-toggle="modal" data-bs-target="#EmailModal">
+                                                Email
+                                              </div>
+                                              <div class="item">
+                                                active
+                                              </div>
+                                              <div class="item">
+                                                not active
+                                              </div>
                                             </div>
-                                        </div>
+                                          </div>
                                         <button class="btn btn-primary submit-btn" type="submit"
                                             style="margin-left: 10px; border-top-left-radius: none !important;  border-bottom-left-radius: none !important;">Send
                                         </button>
@@ -1049,61 +1068,61 @@
                                                         <thead>
                                                             <tr class="tr">
                                                                 <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
-                                                                <th onclick="sortTable(0, 'myTable')" class="style-th">
+                                                                <th onclick="sortTable(0, 'myTable_new1')" class="style-th">
                                                                     <div>
                                                                         <span>Building</span><span><img
                                                                                 src="../images/sort-ic.svg" class="sotTble"></span>
                                                                     </div>
                                                                 </th>
-                                                                <th onclick="sortTable(1, 'myTable')" class="style-th">
+                                                                <th onclick="sortTable(1, 'myTable_new1')" class="style-th">
                                                                     <div>
                                                                         <span>Floor</span><span><img
                                                                                 src="../images/sort-ic.svg" class="sotTble"></span>
                                                                     </div>
                                                                 </th>
-                                                                <th onclick="sortTable(2, 'myTable')" class="style-th">
+                                                                <th onclick="sortTable(2, 'myTable_new1')" class="style-th">
                                                                     <div>
                                                                         <span>Rooms</span><span><img
                                                                                 src="../images/sort-ic.svg" class="sotTble"></span>
                                                                     </div>
                                                                 </th>
-                                                                <th onclick="sortTable(3, 'myTable')" class="style-th">
+                                                                <th onclick="sortTable(3, 'myTable_new1')" class="style-th">
                                                                     <div>
                                                                         <span>SQM</span><span><img
                                                                                 src="../images/sort-ic.svg" class="sotTble"></span>
                                                                     </div>
                                                                 </th>
-                                                                <th onclick="sortTable(4, 'myTable')" class="style-th">
+                                                                <th onclick="sortTable(4, 'myTable_new1')" class="style-th">
                                                                     <div>
                                                                         <span>QTY</span><span><img
                                                                                 src="../images/sort-ic.svg" class="sotTble"></span>
                                                                     </div>
                                                                 </th>
-                                                                <th onclick="sortTable(5, 'myTable')" class="style-th">
+                                                                <th onclick="sortTable(5, 'myTable_new1')" class="style-th">
                                                                     <div>
                                                                         <span>Unit price</span><span><img
                                                                                 src="../images/sort-ic.svg" class="sotTble"></span>
                                                                     </div>
                                                                 </th>
-                                                                <th onclick="sortTable(5, 'myTable')" class="style-th">
+                                                                <th onclick="sortTable(5, 'myTable_new1')" class="style-th">
                                                                     <div>
                                                                         <span>Total</span><span><img
                                                                                 src="../images/sort-ic.svg" class="sotTble"></span>
                                                                     </div>
                                                                 </th>
-                                                                <th onclick="sortTable(6, 'myTable')" class="style-th">
+                                                                <th onclick="sortTable(6, 'myTable_new1')" class="style-th">
                                                                     <div>
                                                                         <span>VAT</span><span><img
                                                                                 src="../images/sort-ic.svg" class="sotTble"></span>
                                                                     </div>
                                                                 </th>
-                                                                <th onclick="sortTable(7, 'myTable')" class="style-th">
+                                                                <th onclick="sortTable(7, 'myTable_new1')" class="style-th">
                                                                     <div>
                                                                         <span>Furnitured</span><span><img
                                                                                 src="../images/sort-ic.svg" class="sotTble"></span>
                                                                     </div>
                                                                 </th>
-                                                                <th onclick="sortTable(8, 'myTable')" class="style-th">
+                                                                <th onclick="sortTable(8, 'myTable_new1')" class="style-th">
                                                                     <div>
                                                                         <span>Membership</span><span><img
                                                                                 src="../images/sort-ic.svg" class="sotTble"></span>
@@ -1228,43 +1247,43 @@
                                                         <thead>
                                                             <tr class="tr">
                                                                 <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
-                                                                <th onclick="sortTable(0, 'myTable')" class="style-th">
+                                                                <th onclick="sortTable(0, 'myTable_new2')" class="style-th">
                                                                     <div>
                                                                         <span>Building</span><span><img
                                                                                 src="../images/sort-ic.svg" class="sotTble"></span>
                                                                     </div>
                                                                 </th>
-                                                                <th onclick="sortTable(1, 'myTable')" class="style-th">
+                                                                <th onclick="sortTable(1, 'myTable_new2')" class="style-th">
                                                                     <div>
                                                                         <span>Floor</span><span><img
                                                                                 src="../images/sort-ic.svg" class="sotTble"></span>
                                                                     </div>
                                                                 </th>
-                                                                <th onclick="sortTable(2, 'myTable')" class="style-th">
+                                                                <th onclick="sortTable(2, 'myTable_new2')" class="style-th">
                                                                     <div>
                                                                         <span>Rooms</span><span><img
                                                                                 src="../images/sort-ic.svg" class="sotTble"></span>
                                                                     </div>
                                                                 </th>
-                                                                <th onclick="sortTable(3, 'myTable')" class="style-th">
+                                                                <th onclick="sortTable(3, 'myTable_new2')" class="style-th">
                                                                     <div>
                                                                         <span>Discount</span><span><img
                                                                                 src="../images/sort-ic.svg" class="sotTble"></span>
                                                                     </div>
                                                                 </th>
-                                                                <th onclick="sortTable(4, 'myTable')" class="style-th">
+                                                                <th onclick="sortTable(4, 'myTable_new2')" class="style-th">
                                                                     <div>
                                                                         <span>Discount Amount</span><span><img
                                                                                 src="../images/sort-ic.svg" class="sotTble"></span>
                                                                     </div>
                                                                 </th>
-                                                                <th onclick="sortTable(5, 'myTable')" class="style-th">
+                                                                <th onclick="sortTable(5, 'myTable_new2')" class="style-th">
                                                                     <div>
                                                                         <span>Start Date</span><span><img
                                                                                 src="../images/sort-ic.svg" class="sotTble"></span>
                                                                     </div>
                                                                 </th>
-                                                                <th onclick="sortTable(6, 'myTable')" class="style-th">
+                                                                <th onclick="sortTable(6, 'myTable_new2')" class="style-th">
                                                                     <div>
                                                                         <span>End Date</span><span><img
                                                                                 src="../images/sort-ic.svg" class="sotTble"></span>
@@ -1356,37 +1375,37 @@
                                                         <thead>
                                                             <tr class="tr">
                                                                 <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
-                                                                <th onclick="sortTable(0, 'myTable')" class="style-th">
+                                                                <th onclick="sortTable(0, 'myTable_new3')" class="style-th">
                                                                     <div>
                                                                         <span>Start date</span><span><img
                                                                                 src="../images/sort-ic.svg" class="sotTble" /></span>
                                                                     </div>
                                                                 </th>
-                                                                <th onclick="sortTable(1, 'myTable')" class="style-th">
+                                                                <th onclick="sortTable(1, 'myTable_new3')" class="style-th">
                                                                     <div>
                                                                         <span>End date</span><span><img
                                                                                 src="../images/sort-ic.svg" class="sotTble" /></span>
                                                                     </div>
                                                                 </th>
-                                                                <th onclick="sortTable(2, 'myTable')" class="style-th">
+                                                                <th onclick="sortTable(2, 'myTable_new3')" class="style-th">
                                                                     <div>
                                                                         <span>Credits</span><span><img
                                                                                 src="../images/sort-ic.svg" class="sotTble" /></span>
                                                                     </div>
                                                                 </th>
-                                                                <th onclick="sortTable(3, 'myTable')" class="style-th">
+                                                                <th onclick="sortTable(3, 'myTable_new3')" class="style-th">
                                                                     <div>
                                                                         <span>Type of credit</span><span><img
                                                                                 src="../images/sort-ic.svg" class="sotTble" /></span>
                                                                     </div>
                                                                 </th>
-                                                                <th onclick="sortTable(4, 'myTable')" class="style-th">
+                                                                <th onclick="sortTable(4, 'myTable_new3')" class="style-th">
                                                                     <div>
                                                                         <span>Valid for</span><span><img
                                                                                 src="../images/sort-ic.svg" class="sotTble" /></span>
                                                                     </div>
                                                                 </th>
-                                                                <th onclick="sortTable(5, 'myTable')" class="style-th">
+                                                                <th onclick="sortTable(5, 'myTable_new3')" class="style-th">
                                                                     <div>
                                                                         <span>Building/Venue</span><span><img
                                                                                 src="../images/sort-ic.svg" class="sotTble" /></span>
@@ -1456,25 +1475,25 @@
                                                         <thead>
                                                             <tr class="tr">
                                                                 <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
-                                                                <th onclick="sortTable(0, 'myTable')" class="style-th">
+                                                                <th onclick="sortTable(0, 'myTable_new4')" class="style-th">
                                                                     <div>
                                                                         <span>Floor</span><span><img
                                                                                 src="../images/sort-ic.svg" class="sotTble"></span>
                                                                     </div>
                                                                 </th>
-                                                                <th onclick="sortTable(1, 'myTable')" class="style-th">
+                                                                <th onclick="sortTable(1, 'myTable_new4')" class="style-th">
                                                                     <div>
                                                                         <span>Provision</span><span><img
                                                                                 src="../images/sort-ic.svg" class="sotTble"></span>
                                                                     </div>
                                                                 </th>
-                                                                <th onclick="sortTable(2, 'myTable')" class="style-th">
+                                                                <th onclick="sortTable(2, 'myTable_new4')" class="style-th">
                                                                     <div>
                                                                         <span>Start Date</span><span><img
                                                                                 src="../images/sort-ic.svg" class="sotTble"></span>
                                                                     </div>
                                                                 </th>
-                                                                <th onclick="sortTable(3, 'myTable')" class="style-th">
+                                                                <th onclick="sortTable(3, 'myTable_new4')" class="style-th">
                                                                     <div>
                                                                         <span>End Date</span><span><img
                                                                                 src="../images/sort-ic.svg" class="sotTble"></span>
@@ -1520,32 +1539,52 @@
                                 <!-- end new row -->
 
 
-                                <div class="container-fluid content-form py-4 mt-4">
-                                    <form>
-                                        <div class="form-row my-4">
-                                            <div class="col-md-10 col-12">
-                                                <div>
-                                                    <label>Note</label>
+                                <div class="content-form bg-light py-4">
+                                    <div class=" py-4 border-radius-20" style="background: #e8e8e8;">
+                                        <div class=" py-4 border-radius-20" style="background: #e8e8e8;">
+                                            <div class="note form-row px-4">
+                                                <div class="col-md-9 col-12">
+                                                    <div class="bg-white border rounded p-3">
+                                                        <div class="d-flex justify-content-between">
+                                                            <div>
+                                                                <label>Internal Notes</label>
+                                                            </div>
+                                                            <div class="text-right mx-4">
+                                                                <button class="open-modal btn btn-primary">
+                                                                    <i class="bi bi-plus-circle-fill"></i>
+                                                                    Add Note
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                        <hr>
+                                                        <div class="displayValues">
+                                                            <p><span class="text-danger pl-1">2023-01-10</span> <span
+                                                                    class="text-danger px-1"> day </span> <span
+                                                                    class="text-danger px-1">13:24</span> <span
+                                                                    class="text-danger px-1">sewar siyam</span> <span
+                                                                    class="px-1">text text text text text text text text
+                                                                    text</span> </p>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <div>
-                                                    <textarea class="form-control" placeholder="Enter your Note"
-                                                        rows="2"></textarea>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-2 col-12">
-                                                <div>
-                                                    <label>Attachment</label>
-                                                </div>
-                                                <div class="file-container-input">
-                                                    <button type="button" class="file-button" onclick="openFile(this)">
-                                                        <span>Attach File</span>
-                                                        <img src="../img//icons/upload.svg" alt="">
-                                                    </button>
-                                                    <input type="file" class="file-input d-none" id="attachment">
+                                                <div class="col-md-3 col-12 ">
+                                                    <div>
+                                                        <label>Attachment</label>
+                                                    </div>
+                                                    <div class="file-container-input">
+                                                        <button type="button" class="file-button fileSelect">
+                                                            <span>Attach File</span>
+                                                            <img src="../img//icons/upload.svg" alt="">
+                                                        </button>
+                                                        <input type="file" class="file-input d-none uploadInput" type="file"
+                                                            multiple>
+                                                        <ul class="imgbox">
+                                                        </ul>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </form>
+                                    </div>
                                 </div>
                                 <div class="container-fluid py-4 d-flex justify-content-end print-dropdown">
                                     <div class="offers-btn d-flex justify-content-center flex-wrap justify-content-md-end"
@@ -1555,18 +1594,24 @@
 
                                         <div class="ui inline dropdown h-100  cancel-btn text-dark" tabindex="0">
                                             <div class="text">
-                                                Printout
+                                              Printout
                                             </div>
                                             <i class="dropdown icon"></i>
                                             <div class="menu w-100" tabindex="-1">
-                                                <div class="item" data-bs-toggle="modal" data-bs-target="#pdfModal">
-                                                    Print pdf
-                                                </div>
-                                                <div class="item" data-bs-toggle="modal" data-bs-target="#EmailModal">
-                                                    Email
-                                                </div>
+                                              <div class="item" data-bs-toggle="modal" data-bs-target="#pdfModal">
+                                                Print pdf
+                                              </div>
+                                              <div class="item" data-bs-toggle="modal" data-bs-target="#EmailModal">
+                                                Email
+                                              </div>
+                                              <div class="item">
+                                                active
+                                              </div>
+                                              <div class="item">
+                                                not active
+                                              </div>
                                             </div>
-                                        </div>
+                                          </div>
                                         <button class="btn btn-primary submit-btn" type="submit"
                                             style="margin-left: 10px; border-top-left-radius: none !important;  border-bottom-left-radius: none !important;">Send
                                         </button>
@@ -1746,21 +1791,26 @@
                                         style="gap: 1rem;">
                                         <button class="btn btn-primary  cancel-btn"> Cancel </button>
                                         <button class="btn btn-primary submit-btn"> Save </button>
-
                                         <div class="ui inline dropdown h-100  cancel-btn text-dark" tabindex="0">
                                             <div class="text">
-                                                Printout
+                                              Printout
                                             </div>
                                             <i class="dropdown icon"></i>
                                             <div class="menu w-100" tabindex="-1">
-                                                <div class="item" data-bs-toggle="modal" data-bs-target="#pdfModal">
-                                                    Print pdf
-                                                </div>
-                                                <div class="item" data-bs-toggle="modal" data-bs-target="#EmailModal">
-                                                    Email
-                                                </div>
+                                              <div class="item" data-bs-toggle="modal" data-bs-target="#pdfModal">
+                                                Print pdf
+                                              </div>
+                                              <div class="item" data-bs-toggle="modal" data-bs-target="#EmailModal">
+                                                Email
+                                              </div>
+                                              <div class="item">
+                                                active
+                                              </div>
+                                              <div class="item">
+                                                not active
+                                              </div>
                                             </div>
-                                        </div>
+                                          </div>
                                         <button class="btn btn-primary submit-btn" type="submit"
                                             style="margin-left: 10px; border-top-left-radius: none !important;  border-bottom-left-radius: none !important;">Send
                                         </button>
@@ -1929,19 +1979,22 @@
                                     <h4>Other Contract Attachment</h4>
                                     <form>
                                         <div class="form-row my-4 justify-content-between">
-                                            <div class="col-md-3 col-12 d-flex justify-content-between">
-                                                <div class="d-flex align-items-center">
-                                                    <label class="m-0">Attachment</label>
+                                            <div class="col-12">
+                                                <div>
+                                                    <label>Attachment</label>
                                                 </div>
-                                                <div class="d-flex align-items-center">
-                                                    <button type="button" class="file-button" onclick="openFile(this)">
+                                                <div class="file-container-input w-100">
+                                                    <button type="button" class="file-button fileSelect">
                                                         <span>Attach File</span>
                                                         <img src="../img//icons/upload.svg" alt="">
                                                     </button>
-                                                    <input type="file" class="file-input d-none" id="attachment">
+                                                    <input type="file" class="file-input d-none uploadInput" type="file"
+                                                        multiple>
+                                                    <ul class="imgbox">
+                                                    </ul>
                                                 </div>
                                             </div>
-                                            <div class="col-md-8 col-12 d-flex justify-content-end">
+                                            <!-- <div class="col-md-8 col-12 d-flex justify-content-end">
                                                 <div class="d-flex p-3 bg-white mr-3 justify-content-between mt-3"
                                                     id="download-contract-word" style="width: 240px">
                                                     <div class="d-flex" style="gap: 10px">
@@ -1964,7 +2017,7 @@
                                                     </div>
                                                     <img src="../img/icons/download-solid.svg">
                                                 </div>
-                                            </div>
+                                            </div> -->
                                         </div>
                                     </form>
 
@@ -1974,21 +2027,26 @@
                                         style="gap: 1rem;">
                                         <button class="btn btn-primary  cancel-btn"> Cancel </button>
                                         <button class="btn btn-primary submit-btn"> Save </button>
-
                                         <div class="ui inline dropdown h-100  cancel-btn text-dark" tabindex="0">
                                             <div class="text">
-                                                Printout
+                                              Printout
                                             </div>
                                             <i class="dropdown icon"></i>
                                             <div class="menu w-100" tabindex="-1">
-                                                <div class="item" data-bs-toggle="modal" data-bs-target="#pdfModal">
-                                                    Print pdf
-                                                </div>
-                                                <div class="item" data-bs-toggle="modal" data-bs-target="#EmailModal">
-                                                    Email
-                                                </div>
+                                              <div class="item" data-bs-toggle="modal" data-bs-target="#pdfModal">
+                                                Print pdf
+                                              </div>
+                                              <div class="item" data-bs-toggle="modal" data-bs-target="#EmailModal">
+                                                Email
+                                              </div>
+                                              <div class="item">
+                                                active
+                                              </div>
+                                              <div class="item">
+                                                not active
+                                              </div>
                                             </div>
-                                        </div>
+                                          </div>
                                         <button class="btn btn-primary submit-btn" type="submit"
                                             style="margin-left: 10px; border-top-left-radius: none !important;  border-bottom-left-radius: none !important;">Send
                                         </button>
@@ -2227,25 +2285,25 @@
                                                         <thead>
                                                             <tr class="tr">
                                                                 <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
-                                                                <th onclick="sortTable(0, 'myTable')" class="style-th">
+                                                                <th onclick="sortTable(0, 'myTable_new5')" class="style-th">
                                                                     <div>
                                                                         <span>Inflation percentage</span><span><img
                                                                                 src="../images/sort-ic.svg" class="sotTble"></span>
                                                                     </div>
                                                                 </th>
-                                                                <th onclick="sortTable(1, 'myTable')" class="style-th">
+                                                                <th onclick="sortTable(1, 'myTable_new5')" class="style-th">
                                                                     <div>
                                                                         <span>Start date for Index</span><span><img
                                                                                 src="../images/sort-ic.svg" class="sotTble"></span>
                                                                     </div>
                                                                 </th>
-                                                                <th onclick="sortTable(2, 'myTable')" class="style-th">
+                                                                <th onclick="sortTable(2, 'myTable_new5')" class="style-th">
                                                                     <div>
                                                                         <span>End date for Index</span><span><img
                                                                                 src="../images/sort-ic.svg" class="sotTble"></span>
                                                                     </div>
                                                                 </th>
-                                                                <th onclick="sortTable(3, 'myTable')" class="style-th">
+                                                                <th onclick="sortTable(3, 'myTable_new5')" class="style-th">
                                                                     <div>
                                                                         <span>Continues</span><span><img
                                                                                 src="../images/sort-ic.svg" class="sotTble"></span>
@@ -2294,53 +2352,78 @@
                                     </div>
                                 </div>
                                 <!-- end new row -->
-                                <div class="container-fluid content-form py-4 my-4">
-                                    <form>
-                                        <div class="form-row my-4">
-                                            <div class="col-md-10 col-12">
-                                                <div>
-                                                    <label>Note</label>
+                                <div class="content-form bg-light py-4">
+                                    <div class=" py-4 border-radius-20" style="background: #e8e8e8;">
+                                        <div class=" py-4 border-radius-20" style="background: #e8e8e8;">
+                                            <div class="note form-row px-4">
+                                                <div class="col-md-9 col-12">
+                                                    <div class="bg-white border rounded p-3">
+                                                        <div class="d-flex justify-content-between">
+                                                            <div>
+                                                                <label>Internal Notes</label>
+                                                            </div>
+                                                            <div class="text-right mx-4">
+                                                                <button class="open-modal btn btn-primary">
+                                                                    <i class="bi bi-plus-circle-fill"></i>
+                                                                    Add Note
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                        <hr>
+                                                        <div class="displayValues">
+                                                            <p><span class="text-danger pl-1">2023-01-10</span> <span
+                                                                    class="text-danger px-1"> day </span> <span
+                                                                    class="text-danger px-1">13:24</span> <span
+                                                                    class="text-danger px-1">sewar siyam</span> <span
+                                                                    class="px-1">text text text text text text text text
+                                                                    text</span> </p>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <div>
-                                                    <textarea class="form-control" placeholder="Enter your Note"
-                                                        rows="2"></textarea>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-2 col-12">
-                                                <div>
-                                                    <label>Attachment</label>
-                                                </div>
-                                                <div class="file-container-input">
-                                                    <button type="button" class="file-button" onclick="openFile(this)">
-                                                        <span>Attach File</span>
-                                                        <img src="../img//icons/upload.svg" alt="">
-                                                    </button>
-                                                    <input type="file" class="file-input d-none" id="attachment">
+                                                <div class="col-md-3 col-12 ">
+                                                    <div>
+                                                        <label>Attachment</label>
+                                                    </div>
+                                                    <div class="file-container-input">
+                                                        <button type="button" class="file-button fileSelect">
+                                                            <span>Attach File</span>
+                                                            <img src="../img//icons/upload.svg" alt="">
+                                                        </button>
+                                                        <input type="file" class="file-input d-none uploadInput" type="file"
+                                                            multiple>
+                                                        <ul class="imgbox">
+                                                        </ul>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </form>
+                                    </div>
                                 </div>
                                 <div class="container-fluid py-4 d-flex justify-content-end print-dropdown">
                                     <div class="offers-btn d-flex justify-content-center flex-wrap justify-content-md-end"
                                         style="gap: 1rem;">
                                         <button class="btn btn-primary  cancel-btn"> Cancel </button>
                                         <button class="btn btn-primary submit-btn"> Save </button>
-
                                         <div class="ui inline dropdown h-100  cancel-btn text-dark" tabindex="0">
                                             <div class="text">
-                                                Printout
+                                              Printout
                                             </div>
                                             <i class="dropdown icon"></i>
                                             <div class="menu w-100" tabindex="-1">
-                                                <div class="item" data-bs-toggle="modal" data-bs-target="#pdfModal">
-                                                    Print pdf
-                                                </div>
-                                                <div class="item" data-bs-toggle="modal" data-bs-target="#EmailModal">
-                                                    Email
-                                                </div>
+                                              <div class="item" data-bs-toggle="modal" data-bs-target="#pdfModal">
+                                                Print pdf
+                                              </div>
+                                              <div class="item" data-bs-toggle="modal" data-bs-target="#EmailModal">
+                                                Email
+                                              </div>
+                                              <div class="item">
+                                                active
+                                              </div>
+                                              <div class="item">
+                                                not active
+                                              </div>
                                             </div>
-                                        </div>
+                                          </div>
                                         <button class="btn btn-primary submit-btn" type="submit"
                                             style="margin-left: 10px; border-top-left-radius: none !important;  border-bottom-left-radius: none !important;">Send
                                         </button>
@@ -2893,6 +2976,7 @@
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="py-4 border-radius-20 mt-4" style="background: #e8e8e8;">
                                     <div class="px-4">
                                         <div class="d-flex justify-content-between">
@@ -2913,37 +2997,37 @@
                                                     <thead>
                                                         <tr class="tr">
                                                             <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
-                                                            <th onclick="sortTable(0, 'myTable9')" class="style-th">
+                                                            <th onclick="sortTable(0, 'myTable_new9')" class="style-th">
                                                               <div>
                                                                   <span>Building/Venue</span><span><img
                                                                           src="../images/sort-ic.svg" class="sotTble" /></span>
                                                               </div>
                                                           </th>
-                                                            <th onclick="sortTable(1, 'myTable9')" class="style-th">
+                                                            <th onclick="sortTable(1, 'myTable_new9')" class="style-th">
                                                                 <div>
                                                                     <span>Start date</span><span><img
                                                                             src="../images/sort-ic.svg" class="sotTble" /></span>
                                                                 </div>
                                                             </th>
-                                                            <th onclick="sortTable(2, 'myTable9')" class="style-th">
+                                                            <th onclick="sortTable(2, 'myTable_new9')" class="style-th">
                                                                 <div>
                                                                     <span>End date</span><span><img
                                                                             src="../images/sort-ic.svg" class="sotTble" /></span>
                                                                 </div>
                                                             </th>
-                                                            <th onclick="sortTable(3, 'myTable9')" class="style-th">
+                                                            <th onclick="sortTable(3, 'myTable_new9')" class="style-th">
                                                                 <div>
                                                                     <span>Credits</span><span><img
                                                                             src="../images/sort-ic.svg" class="sotTble" /></span>
                                                                 </div>
                                                             </th>
-                                                            <th onclick="sortTable(4, 'myTable9')" class="style-th">
+                                                            <th onclick="sortTable(4, 'myTable_new9')" class="style-th">
                                                                 <div>
                                                                     <span>Type of credit</span><span><img
                                                                             src="../images/sort-ic.svg" class="sotTble" /></span>
                                                                 </div>
                                                             </th>
-                                                            <th onclick="sortTable(5, 'myTable9')" class="style-th">
+                                                            <th onclick="sortTable(5, 'myTable_new9')" class="style-th">
                                                                 <div>
                                                                     <span>Valid for</span><span><img
                                                                             src="../images/sort-ic.svg" class="sotTble" /></span>
@@ -3100,20 +3184,22 @@
                                         <h4>Other Contract Attachment</h4>
                                         <form>
                                             <div class="form-row my-4 justify-content-between">
-                                                <div class="col-md-3 col-12 d-flex justify-content-between">
-                                                    <div class="d-flex align-items-center">
-                                                        <label class="m-0">Attachment</label>
+                                                <div class="col-12">
+                                                    <div>
+                                                        <label>Attachment</label>
                                                     </div>
-                                                    <div class="d-flex align-items-center">
-                                                        <button type="button" class="file-button"
-                                                            onclick="openFile(this)">
+                                                    <div class="file-container-input w-100">
+                                                        <button type="button" class="file-button fileSelect">
                                                             <span>Attach File</span>
                                                             <img src="../img//icons/upload.svg" alt="">
                                                         </button>
-                                                        <input type="file" class="file-input d-none" id="attachment">
+                                                        <input type="file" class="file-input d-none uploadInput" type="file"
+                                                            multiple>
+                                                        <ul class="imgbox">
+                                                        </ul>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-8 col-12 d-flex justify-content-end">
+                                                <!-- <div class="col-md-8 col-12 d-flex justify-content-end">
                                                     <div class="d-flex p-3 bg-white mr-3 justify-content-between mt-3"
                                                         id="download-contract-word" style="width: 240px">
                                                         <div class="d-flex" style="gap: 10px">
@@ -3136,7 +3222,7 @@
                                                         </div>
                                                         <img src="../img/icons/download-solid.svg">
                                                     </div>
-                                                </div>
+                                                </div> -->
                                             </div>
                                         </form>
                                     </div>
@@ -3148,21 +3234,26 @@
                                     style="gap: 1rem;">
                                     <button class="btn btn-primary  cancel-btn"> Cancel </button>
                                     <button class="btn btn-primary submit-btn"> Save </button>
-
                                     <div class="ui inline dropdown h-100  cancel-btn text-dark" tabindex="0">
                                         <div class="text">
-                                            Printout
+                                          Printout
                                         </div>
                                         <i class="dropdown icon"></i>
                                         <div class="menu w-100" tabindex="-1">
-                                            <div class="item" data-bs-toggle="modal" data-bs-target="#pdfModal">
-                                                Print pdf
-                                            </div>
-                                            <div class="item" data-bs-toggle="modal" data-bs-target="#EmailModal">
-                                                Email
-                                            </div>
+                                          <div class="item" data-bs-toggle="modal" data-bs-target="#pdfModal">
+                                            Print pdf
+                                          </div>
+                                          <div class="item" data-bs-toggle="modal" data-bs-target="#EmailModal">
+                                            Email
+                                          </div>
+                                          <div class="item">
+                                            active
+                                          </div>
+                                          <div class="item">
+                                            not active
+                                          </div>
                                         </div>
-                                    </div>
+                                      </div>
                                     <button class="btn btn-primary submit-btn" type="submit"
                                         style="margin-left: 10px; border-top-left-radius: none !important;  border-bottom-left-radius: none !important;">Send
                                     </button>
@@ -3173,6 +3264,17 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </main>
+
+
+
+
+
+
+
+
+
 
             <!-- Modal -->
             <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
@@ -3199,241 +3301,265 @@
                 </div>
             </div>
 
-            <!-- email   modal -->
-            <div class="modal fade" id="EmailModal" tabindex="-1" role="dialog"
-                aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                <div class="modal-dialog modal-lg  modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header d-flex justify-content-end  border-0">
-                            <button type="button" class="close-btn" data-bs-dismiss="modal" aria-label="Close">
-                                <i class="bi bi-x modal-close-icon"></i>
-                            </button>
-                        </div>
-                        <div class="d-flex flex-column descripton-area-container px-4 py-1 mb-3" style="width: 100%;">
-                            <div class="text-select">
-                                Sender Email
-                            </div>
-                            <div class="container-inner" style="background-color: #F3F2F2;">
-                                <input class="form-control input" type="text" placeholder="Enter Name"
-                                    style="background-color: #F3F2F2;" />
-                            </div>
-                        </div>
-                        <div class="d-flex flex-column descripton-area-container px-4 py-1 mb-3" style="width: 100%;">
-                            <div class="text-select">
-                                Reciver Email
-                            </div>
-                            <div class="container-inner" style="background-color: #F3F2F2;">
-                                <input class="form-control input" type="text" placeholder="Enter Name"
-                                    style="background-color: #F3F2F2;" />
-                            </div>
-                        </div>
-                        <div class="d-flex flex-row  px-4 py-1 mb-3" style="gap:25px">
-                            <div class="d-flex flex-column descripton-area-container" style="width: 100%;">
-                                <div class="text-select">
-                                    CC
-                                </div>
-                                <div class="container-inner" style="background-color: #F3F2F2;">
-                                    <input class="form-control input" type="text" placeholder="Enter Name"
-                                        style="background-color: #F3F2F2;" />
-                                </div>
-                            </div>
 
-                        </div>
-                        <div class="d-flex flex-row  px-4 py-1 mb-3" style="gap:25px">
-                            <div class="d-flex flex-column descripton-area-container" style="width: 100%;">
-                                <div class="text-select">
-                                    BC
-                                </div>
+	<!-- email   modal -->
+	<div class="modal fade" id="EmailModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+		aria-hidden="true">
+		<div class="modal-dialog modal-lg  modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header d-flex justify-content-end  border-0">
+					<button type="button" class="close-btn" data-bs-dismiss="modal" aria-label="Close">
+						<i class="bi bi-x modal-close-icon"></i>
+					</button>
+				</div>
+				<div class="d-flex flex-column descripton-area-container px-4 py-1 mb-3" style="width: 100%;">
+					<div class="text-select">
+						Sender Email
+					</div>
+					<div class="container-inner" style="background-color: #F3F2F2;">
+						<input class="form-control input" type="text" placeholder="Enter Name"
+							style="background-color: #F3F2F2;" />
+					</div>
+				</div>
+				<div class="d-flex flex-column descripton-area-container px-4 py-1 mb-3" style="width: 100%;">
+					<div class="text-select">
+						Reciver Email
+					</div>
+					<div class="container-inner" style="background-color: #F3F2F2;">
+						<input class="form-control input" type="text" placeholder="Enter Name"
+							style="background-color: #F3F2F2;" />
+					</div>
+				</div>
+				<div class="d-flex flex-row  px-4 py-1 mb-3" style="gap:25px">
+					<div class="d-flex flex-column descripton-area-container" style="width: 100%;">
+						<div class="text-select">
+							CC
+						</div>
+						<div class="container-inner" style="background-color: #F3F2F2;">
+							<input class="form-control input" type="text" placeholder="Enter Name"
+								style="background-color: #F3F2F2;" />
+						</div>
+					</div>
 
-                                <div class="container-inner" style="background-color: #F3F2F2;">
-                                    <input class="form-control input" type="text" placeholder="Enter Name"
-                                        style="background-color: #F3F2F2;" />
-                                </div>
-                            </div>
+				</div>
+				<div class="d-flex flex-row  px-4 py-1 mb-3" style="gap:25px">
+					<div class="d-flex flex-column descripton-area-container" style="width: 100%;">
+						<div class="text-select">
+							BC
+						</div>
 
-                        </div>
-                        <div class="d-flex flex-row  px-4 py-1 mb-3" style="gap:25px">
-                            <div class="d-flex flex-column descripton-area-container" style="width: 100%;">
-                                <div class="text-select">
-                                    Subject
-                                </div>
-                                <div class="container-inner" style="background-color: #F3F2F2;">
-                                    <input class="form-control input" type="text" placeholder="Enter Name"
-                                        style="background-color: #F3F2F2;" />
-                                </div>
-                            </div>
+						<div class="container-inner" style="background-color: #F3F2F2;">
+							<input class="form-control input" type="text" placeholder="Enter Name"
+								style="background-color: #F3F2F2;" />
+						</div>
+					</div>
 
-                        </div>
+				</div>
+				<div class="d-flex flex-row  px-4 py-1 mb-3" style="gap:25px">
+					<div class="d-flex flex-column descripton-area-container" style="width: 100%;">
+						<div class="text-select">
+							Subject
+						</div>
+						<div class="container-inner" style="background-color: #F3F2F2;">
+							<input class="form-control input" type="text" placeholder="Enter Name"
+								style="background-color: #F3F2F2;" />
+						</div>
+					</div>
+				</div>
+				<div class="file-container-input px-4 py-1 mb-3" style="width: 100%;">
+					<div class="text-select"> Message </div>
+					<textarea class="form-control" id="editor" style="background-color: #F3F2F2;"></textarea>
+				</div>
+				<div class="d-flex justify-content-center align-items-center m-3 flex-wrap" style="gap:15px">
+					<div class="file-container-input w-75 ">
+						<button type="button" class="file-button fileSelect">
+							<span>Attach File</span>
+							<img src="../img//icons/upload.svg" alt="">
+						</button>
+						<input type="file" class="file-input d-none uploadInput" type="file" multiple>
+						<ul class="imgbox">
+						</ul>
+					</div>
+				</div>
+				<div class="modal-footer d-flex justify-content-center">
+					<button type="button" class="btn"
+						style="background-color: #E1E1E1; color: #364153; border-radius:5px; width:100px"
+						data-bs-dismiss="modal">Close</button>
+					<button type="button" class="btn"
+						style="background-color: #364153; color: white; border-radius:5px; width:100px"
+						data-bs-dismiss="modal">Save</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End email modal -->
 
-                        <div class="file-container-input px-4 py-1 mb-3" style="width: 100%;">
-                            <div class="text-select"> Message </div>
-                            <textarea class="form-control" id="editor" style="background-color: #F3F2F2;"></textarea>
-                        </div>
-                        <div class="d-flex justify-content-center align-items-center m-3 flex-wrap" style="gap:15px">
-                            <div class="d-flex p-3   justify-content-between" id="download-contract-word"
-                                style="width:45%;background-color: #F3F2F2;">
-                                <div class="d-flex" style="gap:10px">
-                                    <img src="../img/icons/word.svg" />
-                                    <div class="d-flex flex-column">
-                                        <span>Research.rar</span>
-                                        <span>5.778 gbs</span>
-                                    </div>
-                                </div>
-                                <img src="../img/icons/download-solid.svg" />
-                            </div>
-                            <div class="d-flex p-3 justify-content-between" id="download-contract-excel"
-                                style="width:45%;background-color: #F3F2F2;">
-                                <div class="d-flex" style="gap:10px">
-                                    <img src="../img/icons/excel.svg" />
-                                    <div class="d-flex flex-column">
-                                        <span>Research.rar</span>
-                                        <span>5.778 gbs</span>
-                                    </div>
-                                </div>
-                                <img src="../img/icons/download-solid.svg" />
-                            </div>
-                        </div>
-                        <div class="modal-footer d-flex justify-content-center">
-                            <button type="button" class="btn"
-                                style="background-color: #E1E1E1; color: #364153; border-radius:5px; width:100px"
-                                data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn"
-                                style="background-color: #364153; color: white; border-radius:5px; width:100px"
-                                data-bs-dismiss="modal">Save</button>
-                        </div>
+<!-- pdf  modal -->
+<div class="modal fade" id="pdfModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+aria-hidden="true">
+<div class="modal-dialog modal-lg  modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="d-flex justify-content-between align-items-center">
+        <h3 class="logo pl-2 pl-lg-5">Highnox</h3>
+        <div class="d-flex justify-content-between  align-items-center">
+          <h3 class="pr-2 pr-lg-5">Quotation</h3>
+          <i class="bi bi-x modal-close-icon display-5 text-secondary" data-bs-dismiss="modal"></i>
+        </div>
+      </div>
+      <div class="bg-primary d-flex justify-content-between  align-items-center w-100 py-3 px-lg-5 px-3 ">
+        <p class="m-0">Invoice # 52148</p>
+        <p class="m-0">Date 01 / 02 / 2020</p>
+      </div>
+      <div class="px-2 px-lg-5 py-4">
+        <h4>Invoice to : Dwyane Clark</h4>
+        <p class="w-25 mx-5">24 dummy street area . location .lorem ipsum. 570xx59x</p>
+      </div>
+
+
+      <table class="table table-bordered">
+        <thead class="bg-primary">
+          <tr>
+            <td class="col-1">SL.</td>
+            <td>Item Description</td>
+            <td>Price</td>
+            <td>QTY</td>
+            <td>Total</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="content-form rounded-0">1</td>
+            <td>Lorem Ipsum Dolor</td>
+            <td>50.00$</td>
+            <td>1</td>
+            <td>50.00$</td>
+          </tr>
+          <tr>
+            <td class="content-form rounded-0">2</td>
+            <td>pellerum id neoejreu iuso</td>
+            <td>50.00$</td>
+            <td>1</td>
+            <td>50.00$</td>
+          </tr>
+          <tr>
+            <td class="content-form rounded-0">3</td>
+            <td>Lorem Ipsum Dolor</td>
+            <td>50.00$</td>
+            <td>1</td>
+            <td>50.00$</td>
+          </tr>
+          <tr>
+            <td class="content-form rounded-0">4</td>
+            <td>pellerum id neoejreu iuso</td>
+            <td>50.00$</td>
+            <td>1</td>
+            <td>50.00$</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="row py-4 px-2 px-lg-5">
+        <div class="col-12 col-lg-8">
+          <h4>Payment Info :</h4>
+          <p>Account # : 12556555</p>
+          <p>Account Name : 12556555</p>
+          <p>Bank Details : Add your bank details</p>
+          <br>
+          <h4>Term & Conditions</h4>
+          <p>Lorem Ipsum Dolor<p>
+        </div>
+        <div class="col-12 col-lg-4">
+          <div class="bg-primary shadow d-flex  mb-3">
+            <div class="w-100 py-3 border text-center">
+              <p>Sub Total</p>
+            </div>
+            <div class="w-100 py-3 border text-center">
+              <p>2000 SEK</p>
+            </div>
+          </div>
+          <div class="bg-primary shadow d-flex  mb-3">
+            <div class="w-100 py-3 border text-center">
+              <p>Tax</p>
+            </div>
+            <div class="w-100 py-3 border text-center">
+              <p>0.00%</p>
+            </div>
+          </div>
+          <div class="bg-primary shadow d-flex  mb-3">
+            <div class="w-100 py-3 border text-center">
+              <p>Total</p>
+            </div>
+            <div class="w-100 py-3 border text-center">
+              <p>2000 SEK</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-primary w-100 py-1 px-lg-5 px-3 ">
+        Thank you for your Business
+      </div>
+        
+    </div>
+</div>
+</div>
+<!-- End pdf modal -->
+
+    	<!-- modals Add not -->
+	<div class="modal note fade" id="AddnotModal" tabindex="-1" role="dialog" aria-labelledby="notModalTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header d-flex justify-content-end  border-0 ">
+                <button type="button" class="close-btn" data-bs-dismiss="modal" aria-label="Close">
+                    <i class="bi bi-x modal-close-icon"></i>
+                </button>
+            </div>
+            <div class="mx-4 mb-4 mt-0">
+                <div class="mb-2">
+                    <label>Name</label>
+                    <input type="text" class="form-control border bg-whtie Name_not" placeholder="Name">
+                </div>
+                <div class="mb-2">
+                    <label>Date</label>
+                    <div class="d-flex align-items-center position-relative form-control">
+                        <input type="text" class="form-control p-0 datepicker border-0 w-100 Date_not"
+                            placeholder="Select date">
+                        <img class="dateTable-svg" width="12" src="../images/date.svg">
                     </div>
                 </div>
-            </div>
-            <!-- End email modal -->
-
-
-            <!-- pdf  modal -->
-            <div class="modal fade" id="pdfModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-                aria-hidden="true">
-                <div class="modal-dialog modal-lg  modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <h3 class="logo pl-2 pl-lg-5">Highnox</h3>
-                            <div class="d-flex justify-content-between  align-items-center">
-                                <h3 class="pr-2 pr-lg-5">Quotation</h3>
-                                <i class="bi bi-x modal-close-icon display-5 text-secondary"
-                                    data-bs-dismiss="modal"></i>
-                            </div>
-                        </div>
-                        <div
-                            class="bg-primary d-flex justify-content-between  align-items-center w-100 py-3 px-lg-5 px-3 ">
-                            <p class="m-0">Invoice # 52148</p>
-                            <p class="m-0">Date 01 / 02 / 2020</p>
-                        </div>
-                        <div class="px-2 px-lg-5 py-4">
-                            <h4>Invoice to : Dwyane Clark</h4>
-                            <p class="w-25 mx-5">24 dummy street area . location .lorem ipsum. 570xx59x</p>
-                        </div>
-
-
-                        <table class="table table-bordered">
-                            <thead class="bg-primary">
-                                <tr>
-                                    <td class="col-1">SL.</td>
-                                    <td>Item Description</td>
-                                    <td>Price</td>
-                                    <td>QTY</td>
-                                    <td>Total</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="content-form rounded-0">1</td>
-                                    <td>Lorem Ipsum Dolor</td>
-                                    <td>50.00$</td>
-                                    <td>1</td>
-                                    <td>50.00$</td>
-                                </tr>
-                                <tr>
-                                    <td class="content-form rounded-0">2</td>
-                                    <td>pellerum id neoejreu iuso</td>
-                                    <td>50.00$</td>
-                                    <td>1</td>
-                                    <td>50.00$</td>
-                                </tr>
-                                <tr>
-                                    <td class="content-form rounded-0">3</td>
-                                    <td>Lorem Ipsum Dolor</td>
-                                    <td>50.00$</td>
-                                    <td>1</td>
-                                    <td>50.00$</td>
-                                </tr>
-                                <tr>
-                                    <td class="content-form rounded-0">4</td>
-                                    <td>pellerum id neoejreu iuso</td>
-                                    <td>50.00$</td>
-                                    <td>1</td>
-                                    <td>50.00$</td>
-                                </tr>
-                            </tbody>
-                        </table>
-
-                        <div class="row py-4 px-2 px-lg-5">
-                            <div class="col-12 col-lg-8">
-                                <h4>Payment Info :</h4>
-                                <p>Account # : 12556555</p>
-                                <p>Account Name : 12556555</p>
-                                <p>Bank Details : Add your bank details</p>
-                                <br>
-                                <h4>Term & Conditions</h4>
-                                <p>Lorem Ipsum Dolor
-                                <p>
-                            </div>
-                            <div class="col-12 col-lg-4">
-                                <div class="bg-primary shadow d-flex  mb-3">
-                                    <div class="w-100 py-3 border text-center">
-                                        <p>Sub Total</p>
-                                    </div>
-                                    <div class="w-100 py-3 border text-center">
-                                        <p>2000 SEK</p>
-                                    </div>
-                                </div>
-                                <div class="bg-primary shadow d-flex  mb-3">
-                                    <div class="w-100 py-3 border text-center">
-                                        <p>Tax</p>
-                                    </div>
-                                    <div class="w-100 py-3 border text-center">
-                                        <p>0.00%</p>
-                                    </div>
-                                </div>
-                                <div class="bg-primary shadow d-flex  mb-3">
-                                    <div class="w-100 py-3 border text-center">
-                                        <p>Total</p>
-                                    </div>
-                                    <div class="w-100 py-3 border text-center">
-                                        <p>2000 SEK</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="bg-primary w-100 py-1 px-lg-5 px-3 ">
-                            Thank you for your Business
-                        </div>
-
-                    </div>
+                <div class="mb-2">
+                    <label>Time</label>
+                    <input type="time" class="form-control border bg-whtie Time_not" placeholder="Select date">
+                </div>
+                <div>
+                    <label>Note</label>
+                    <textarea class="form-control text_not" placeholder="Enter your Note" rows="4"></textarea>
                 </div>
             </div>
-            <!-- End pdf modal -->
 
+            <div class="modal-footer d-flex justify-content-center">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary save_not">save</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end modals Add not-->
 
-    </main>
 
     <script>
         $('.ui.dropdown').dropdown();
     </script>
 
-    <!-- global js -->
-    <script src="../JS/global/jquery/jquery-3.4.1.min.js"></script>
-    <script src="../JS/client/main.js"></script>
-    <script src="../JS/global/bootstrap/bootstrap.bundle.min.js"></script>
-    <script src="../JS/global/bootstrap/bootstrap-select.js"></script>
-    <script src="../JS/global/datePicker/datepicker.js"></script>
-    <script src="../JS/layout.js"></script>
+	<!-- global js -->
+	<script src="../JS/global/jquery/jquery-3.4.1.min.js"></script>
+	<script src="../JS/client/main.js"></script>
+	<script src="../JS/global/bootstrap/bootstrap.bundle.min.js"></script>
+	<script src="../JS/global/bootstrap/bootstrap-select.js"></script>
+	<script src="../JS/global/datePicker/datepicker.js"></script>
+	<script src="../JS/global/swiper/swiper-bundle.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+	<script src="../JS/layout.js"></script>
 
 
     <!-- add row 1 -->
@@ -4166,66 +4292,6 @@
           editIcon.removeClass("fa-pen").addClass("fa-check");
         }
             });
-        });
-
-
-
-
-
-
-
-
-
-
-
-        $(document).ready(function () {
-            $(".add_note").on("click", function (event) {
-                event.preventDefault();
-                var newRow = `
-        <div class="form-row my-4">
-                      <div class="col-md-10 col-12">
-                        <div>
-                          <label>Note</label>
-                        </div>
-                        <div>
-                          <textarea class="form-control" placeholder="Enter your Note" rows="2"></textarea>
-                        </div>
-                      </div>
-                      <div class="col-md-2 col-12">
-                        <div>
-                          <label>Attachment</label>
-                        </div>
-                        <div class="file-container-input">
-                          <button type="button" class="file-button" onclick="openFile(this)">
-                            <span>Attach File</span>
-                            <img src="../img//icons/upload.svg" alt="">
-                          </button>
-                          <input type="file" class="file-input d-none" id="attachment">
-                        </div>
-                      </div>
-                    </div> `;
-                $(".row-note").append(newRow);
-            });
-
-        });
-
-        $(document).ready(function () {
-            $(".add_noteDiscount").on("click", function (event) {
-                event.preventDefault();
-                var newRow = `
-        <div class="form-row my-4">
-                      <div class="col-12">
-                        <div>
-                          <label>Note</label>
-                        </div>
-                        <div>
-                          <textarea class="form-control" placeholder="Enter your Note" rows="2"></textarea>
-                        </div>
-                      </div>
-                    </div> `;
-                $(".row-noteDiscount").append(newRow);
-            });
-
         });
 
 

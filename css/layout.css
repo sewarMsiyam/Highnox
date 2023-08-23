@@ -91,10 +91,12 @@ a{
 }
 [data-sidebar-minimize="off"] .content {
   width: calc(100% - var(--width-sidebar));
+  height: calc(100% - 65px);
   transition: width .3s ease;
 }
 [data-sidebar-minimize="on"] .content {
   width: calc(100% - var(--width-sidebar-minimize));
+  height: calc(100% - 65px);
   transition: width .3s ease;
 }
 

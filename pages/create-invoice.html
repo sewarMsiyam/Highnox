@@ -856,8 +856,8 @@
                 </div>
                
 
-                <div class="container-fluid content-form bg-light mt-4">
-                  <div class="mx-4 py-4 border-radius-20" style="background: #e8e8e8;">
+                <div class="container-fluid content-form bg-light px-0 mt-4">
+                  <div class="border-radius-20" style="background: #e8e8e8;">
                     <div class=" py-4 border-radius-20" style="background: #e8e8e8;">
                       <div class="note form-row px-4">
                         <div class="col-md-9 col-12">
@@ -938,114 +938,99 @@
   </main>
 
 
-<!-- email   modal -->
-<div class="modal fade" id="EmailModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-    aria-hidden="true">
-    <div class="modal-dialog modal-lg  modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header d-flex justify-content-end  border-0">
-                <button type="button" class="close-btn" data-bs-dismiss="modal" aria-label="Close">
-                    <i class="bi bi-x modal-close-icon"></i>
-                </button>
-            </div>
-            <div class="d-flex flex-column descripton-area-container px-4 py-1 mb-3" style="width: 100%;">
-                <div class="text-select">
-                    Sender Email
-                </div>
-                <div class="container-inner" style="background-color: #F3F2F2;">
-                    <input class="form-control input" type="text" placeholder="Enter Name"
-                        style="background-color: #F3F2F2;" />
-                </div>
-            </div>
-            <div class="d-flex flex-column descripton-area-container px-4 py-1 mb-3" style="width: 100%;">
-                <div class="text-select">
-                    Reciver Email
-                </div>
-                <div class="container-inner" style="background-color: #F3F2F2;">
-                    <input class="form-control input" type="text" placeholder="Enter Name"
-                        style="background-color: #F3F2F2;" />
-                </div>
-            </div>
-            <div class="d-flex flex-row  px-4 py-1 mb-3" style="gap:25px">
-                <div class="d-flex flex-column descripton-area-container" style="width: 100%;">
-                    <div class="text-select">
-                        CC
-                    </div>
-                    <div class="container-inner" style="background-color: #F3F2F2;">
-                        <input class="form-control input" type="text" placeholder="Enter Name"
-                            style="background-color: #F3F2F2;" />
-                    </div>
-                </div>
 
-            </div>
-            <div class="d-flex flex-row  px-4 py-1 mb-3" style="gap:25px">
-                <div class="d-flex flex-column descripton-area-container" style="width: 100%;">
-                    <div class="text-select">
-                        BC
-                    </div>
 
-                    <div class="container-inner" style="background-color: #F3F2F2;">
-                        <input class="form-control input" type="text" placeholder="Enter Name"
-                            style="background-color: #F3F2F2;" />
-                    </div>
-                </div>
+	<!-- email   modal -->
+	<div class="modal fade" id="EmailModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+		aria-hidden="true">
+		<div class="modal-dialog modal-lg  modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header d-flex justify-content-end  border-0">
+					<button type="button" class="close-btn" data-bs-dismiss="modal" aria-label="Close">
+						<i class="bi bi-x modal-close-icon"></i>
+					</button>
+				</div>
+				<div class="d-flex flex-column descripton-area-container px-4 py-1 mb-3" style="width: 100%;">
+					<div class="text-select">
+						Sender Email
+					</div>
+					<div class="container-inner" style="background-color: #F3F2F2;">
+						<input class="form-control input" type="text" placeholder="Enter Name"
+							style="background-color: #F3F2F2;" />
+					</div>
+				</div>
+				<div class="d-flex flex-column descripton-area-container px-4 py-1 mb-3" style="width: 100%;">
+					<div class="text-select">
+						Reciver Email
+					</div>
+					<div class="container-inner" style="background-color: #F3F2F2;">
+						<input class="form-control input" type="text" placeholder="Enter Name"
+							style="background-color: #F3F2F2;" />
+					</div>
+				</div>
+				<div class="d-flex flex-row  px-4 py-1 mb-3" style="gap:25px">
+					<div class="d-flex flex-column descripton-area-container" style="width: 100%;">
+						<div class="text-select">
+							CC
+						</div>
+						<div class="container-inner" style="background-color: #F3F2F2;">
+							<input class="form-control input" type="text" placeholder="Enter Name"
+								style="background-color: #F3F2F2;" />
+						</div>
+					</div>
 
-            </div>
-            <div class="d-flex flex-row  px-4 py-1 mb-3" style="gap:25px">
-                <div class="d-flex flex-column descripton-area-container" style="width: 100%;">
-                    <div class="text-select">
-                        Subject
-                    </div>
-                    <div class="container-inner" style="background-color: #F3F2F2;">
-                        <input class="form-control input" type="text" placeholder="Enter Name"
-                            style="background-color: #F3F2F2;" />
-                    </div>
-                </div>
+				</div>
+				<div class="d-flex flex-row  px-4 py-1 mb-3" style="gap:25px">
+					<div class="d-flex flex-column descripton-area-container" style="width: 100%;">
+						<div class="text-select">
+							BC
+						</div>
 
-            </div>
+						<div class="container-inner" style="background-color: #F3F2F2;">
+							<input class="form-control input" type="text" placeholder="Enter Name"
+								style="background-color: #F3F2F2;" />
+						</div>
+					</div>
 
-            <div class="file-container-input px-4 py-1 mb-3" style="width: 100%;">
-              <div class="text-select">  Message  </div>
-              <textarea class="form-control" id="editor" style="background-color: #F3F2F2;"></textarea>    
-            </div>
-            <div class="d-flex justify-content-center align-items-center m-3 flex-wrap" style="gap:15px">
-                <input class="file-word-input" type="file" style="display: none;" />
-                <div class="d-flex p-3 justify-content-between" id="import-contract-word" style="width:45%;background-color: #F3F2F2;">
-                    <div class="d-flex" style="gap:10px">
-                        <img src="../img/icons/word.svg" />
-                        <div class="d-flex flex-column">
-                            <span id="name_file_word">select file word</span>
-                            <span id="gbs_file_word">0 gbs</span>
-                        </div>
-                    </div>
-                    <img src="../img/icons/download-solid.svg" id="download-contract-word" />
-                </div>
-                <input class="file-excel-input" type="file" style="display: none;" />
-                <div class="d-flex p-3 justify-content-between" id="import-contract-excel"
-                    style="width:45%;background-color: #F3F2F2;">
-                    <div class="d-flex" style="gap:10px">
-                        <img src="../img/icons/excel.svg" />
-                        <div class="d-flex flex-column">
-                            <span id="name_file_excel">select file word</span>
-                            <span id="gbs_file_excel">0 gbs</span>
-                        </div>
-                    </div>
-                    <img src="../img/icons/download-solid.svg"  id="download-contract-excel" />
-                </div>
-            </div>
-            <div class="modal-footer d-flex justify-content-center">
-                <button type="button" class="btn"
-                    style="background-color: #E1E1E1; color: #364153; border-radius:5px; width:100px"
-                    data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn"
-                    style="background-color: #364153; color: white; border-radius:5px; width:100px"
-                    data-bs-dismiss="modal">Save</button>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- End email modal -->
-
+				</div>
+				<div class="d-flex flex-row  px-4 py-1 mb-3" style="gap:25px">
+					<div class="d-flex flex-column descripton-area-container" style="width: 100%;">
+						<div class="text-select">
+							Subject
+						</div>
+						<div class="container-inner" style="background-color: #F3F2F2;">
+							<input class="form-control input" type="text" placeholder="Enter Name"
+								style="background-color: #F3F2F2;" />
+						</div>
+					</div>
+				</div>
+				<div class="file-container-input px-4 py-1 mb-3" style="width: 100%;">
+					<div class="text-select"> Message </div>
+					<textarea class="form-control" id="editor" style="background-color: #F3F2F2;"></textarea>
+				</div>
+				<div class="d-flex justify-content-center align-items-center m-3 flex-wrap" style="gap:15px">
+					<div class="file-container-input w-75 ">
+						<button type="button" class="file-button fileSelect">
+							<span>Attach File</span>
+							<img src="../img//icons/upload.svg" alt="">
+						</button>
+						<input type="file" class="file-input d-none uploadInput" type="file" multiple>
+						<ul class="imgbox">
+						</ul>
+					</div>
+				</div>
+				<div class="modal-footer d-flex justify-content-center">
+					<button type="button" class="btn"
+						style="background-color: #E1E1E1; color: #364153; border-radius:5px; width:100px"
+						data-bs-dismiss="modal">Close</button>
+					<button type="button" class="btn"
+						style="background-color: #364153; color: white; border-radius:5px; width:100px"
+						data-bs-dismiss="modal">Save</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End email modal -->
 
 <!-- pdf  modal -->
 <div class="modal fade" id="pdfModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
@@ -1157,18 +1142,63 @@
 </div>
 <!-- End pdf modal -->
 
+
+
+	<!-- modals Add not -->
+	<div class="modal note fade" id="AddnotModal" tabindex="-1" role="dialog" aria-labelledby="notModalTitle"
+		aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header d-flex justify-content-end  border-0 ">
+					<button type="button" class="close-btn" data-bs-dismiss="modal" aria-label="Close">
+						<i class="bi bi-x modal-close-icon"></i>
+					</button>
+				</div>
+				<div class="mx-4 mb-4 mt-0">
+					<div class="mb-2">
+						<label>Name</label>
+						<input type="text" class="form-control border bg-whtie Name_not" placeholder="Name">
+					</div>
+					<div class="mb-2">
+						<label>Date</label>
+						<div class="d-flex align-items-center position-relative form-control">
+							<input type="text" class="form-control p-0 datepicker border-0 w-100 Date_not"
+								placeholder="Select date">
+							<img class="dateTable-svg" width="12" src="../images/date.svg">
+						</div>
+					</div>
+					<div class="mb-2">
+						<label>Time</label>
+						<input type="time" class="form-control border bg-whtie Time_not" placeholder="Select date">
+					</div>
+					<div>
+						<label>Note</label>
+						<textarea class="form-control text_not" placeholder="Enter your Note" rows="4"></textarea>
+					</div>
+				</div>
+
+				<div class="modal-footer d-flex justify-content-center">
+					<button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary save_not">save</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end modals Add not-->
+
   <script>
     $('.ui.dropdown').dropdown();
   </script>
 
-  <!-- global js -->
-  <script src="../JS/global/jquery/jquery-3.4.1.min.js"></script>
-  <script src="../JS/client/main.js"></script>
-  <script src="../JS/global/bootstrap/bootstrap.bundle.min.js"></script>
-  <script src="../JS/global/bootstrap/bootstrap-select.js"></script>
-  <script src="../JS/global/datePicker/datepicker.js"></script>
-  <script src="../JS/layout.js"></script>
-
+	<!-- global js -->
+	<script src="../JS/global/jquery/jquery-3.4.1.min.js"></script>
+	<script src="../JS/client/main.js"></script>
+	<script src="../JS/global/bootstrap/bootstrap.bundle.min.js"></script>
+	<script src="../JS/global/bootstrap/bootstrap-select.js"></script>
+	<script src="../JS/global/datePicker/datepicker.js"></script>
+	<script src="../JS/global/swiper/swiper-bundle.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+	<script src="../JS/layout.js"></script>
   
 <script type="text/javascript">
 
@@ -1248,156 +1278,6 @@ $("#myTable").on("click", ".edite-save", function (event) {
 
 });
 
-
-
-
-
-
-// checkbox selectAll
-$(document).ready(function() {
-  $('.selectAll').on('change', function() {
-    var $table = $(this).closest('table');
-    var $checkboxes = $table.find('tbody input[type="checkbox"]');
-    $checkboxes.prop('checked', $(this).is(':checked'));
-    updateActionVisibility($table);
-    updateSelectedCount($table);
-    updateSelectAll($table);
-  });
-
-  $('.delete-selected').on('click', function() {
-    var $table = $(this).closest('.table');
-    var $checkboxes = $table.find('tbody input[type="checkbox"]:checked');
-    if ($checkboxes.length > 0) {
-      $checkboxes.closest('tr').remove();
-      updateActionVisibility($table);
-      updateSelectedCount($table);
-      updateSelectAll($table);
-    } else {
-      alert('لم يتم تحديد أي صفوف للحذف.');
-    }
-  });
-
-  $('table input[type="checkbox"]').on('change', function() {
-    var $table = $(this).closest('.table');
-    updateActionVisibility($table);
-    updateSelectedCount($table);
-    updateSelectAll($table);
-  });
-
-  function updateActionVisibility($table) {
-    var $actionContainer = $table.closest('.table-tab-pane').find('.action-container');
-    var $deleteButton = $actionContainer.find('.delete-selected');
-    var $selectedCheckboxes = $table.find('tbody input[type="checkbox"]:checked');
-    $actionContainer.toggleClass('d-none', $selectedCheckboxes.length === 0);
-    $deleteButton.prop('disabled', $selectedCheckboxes.length === 0);
-  }
-
-  function updateSelectedCount($table) {
-    var $actionContainer = $table.closest('.table-tab-pane').find('.action-container');
-    var $selectedCount = $actionContainer.find('.selected-count');
-    var $selectedCheckboxes = $table.find('tbody input[type="checkbox"]:checked');
-    $selectedCount.text($selectedCheckboxes.length);
-    $selectedCount.toggleClass('d-none', $selectedCheckboxes.length === 0);
-  }
-
-  function updateSelectAll($table) {
-    var $selectAll = $table.find('.selectAll');
-    var $checkboxes = $table.find('tbody input[type="checkbox"]');
-    $selectAll.prop('checked', $checkboxes.length === $checkboxes.filter(':checked').length);
-  }
-});
-
-
-
-
-
-// checkbox selectAll
-var fileInputWord = $('.file-word-input');
-var downloadContainerWord = $('#import-contract-word');
-downloadContainerWord.on('click', function() {
-  fileInputWord.trigger('click');
-});
-fileInputWord.on('change', function() {
-    var allowedExtensionsWord = /(\.docx|\.doc)$/i;
-    if (allowedExtensionsWord.exec(fileInputWord[0].files[0].name)) {
-        $('#name_file_word').text(fileInputWord[0].files[0].name);
-        var fileSizeBytes = fileInputWord[0].files[0].size;
-        var fileSizeGB = (fileSizeBytes / (1024 * 1024 * 1024)).toFixed(3);
-        $('#gbs_file_word').text(fileSizeGB + ' gbs');
-
-        // تحديث عنوان الملف المرفوع
-        var uploadedFileName = fileInputWord[0].files[0].name;
-        updateDownloadLink(uploadedFileName);
-        const downloadPdfActivityBtnWord = document.getElementById("download-contract-word");
-          downloadPdfActivityBtnWord.addEventListener("click", () => {
-              downloadWordFile();
-          });
-          function updateDownloadLink(uploadedFileName) {
-              var downloadLink = $('#download-contract-word');
-              downloadLink.attr('data-file-name', uploadedFileName);
-          }
-          function downloadWordFile() {
-              var downloadLink = $('#download-contract-word');
-              var uploadedFileName = downloadLink.attr('data-file-name');
-              var fileUrl =  uploadedFileName;
-              var link = document.createElement('a');
-              link.href = fileUrl;
-              link.download = uploadedFileName;
-              link.click();
-          }
-    } else {
-        alert('Please select a valid Word document file.');
-        fileInputWord.val('');
-        $('#name_file_word').text('select file word');
-        $('#gbs_file_word').text('0 gbs');
-    }
-});
-
-var fileInputExcel = $('.file-excel-input');
-var downloadContainerExcel = $('#import-contract-excel');
-downloadContainerExcel.on('click', function() {
-  fileInputExcel.trigger('click');
-});
-fileInputExcel.on('change', function() {
-    var allowedExtensionsExcel = /(\.xlsx|\.xls)$/i;
-    if (allowedExtensionsExcel.exec(fileInputExcel[0].files[0].name)) {
-        $('#name_file_excel').text(fileInputExcel[0].files[0].name);
-        var fileSizeBytes = fileInputExcel[0].files[0].size;
-        var fileSizeGB = (fileSizeBytes / (1024 * 1024 * 1024)).toFixed(3);
-        $('#gbs_file_excel').text(fileSizeGB + ' gbs');
-
-        // تحديث عنوان الملف المرفوع
-        var uploadedFileName = fileInputExcel[0].files[0].name;
-        updateDownloadLink(uploadedFileName);
-        const downloadPdfActivityBtnExcel = document.getElementById("download-contract-excel");
-          downloadPdfActivityBtnExcel.addEventListener("click", () => {
-              downloadExcelFile();
-          });
-          function updateDownloadLink(uploadedFileName) {
-              var downloadLink = $('#download-contract-excel');
-              downloadLink.attr('data-file-name', uploadedFileName);
-              downloadButton.on('click', function() {
-                var fileUrl = 'path/to/your/uploaded/files/' + uploadedFileName;
-                window.open(fileUrl, '_blank'); // فتح في تاب جديدة
-            });
-          }
-          function downloadExcelFile() {
-              var downloadLink = $('#download-contract-excel');
-              var uploadedFileName = downloadLink.attr('data-file-name');
-              var fileUrl =  uploadedFileName;
-              var link = document.createElement('a');
-              link.href = fileUrl;
-              link.download = uploadedFileName;
-              link.click();
-              
-          }
-    } else {
-        alert('Please select a valid excel document file.');
-        fileInputExcel.val('');
-        $('#name_file_excel').text('select file excel');
-        $('#gbs_file_excel').text('0 gbs');
-    }
-});
 
 </script>
 </body>

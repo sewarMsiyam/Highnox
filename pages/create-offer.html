@@ -954,114 +954,97 @@
                     </div>
   </main>
   
-<!-- email   modal -->
-<div class="modal fade" id="EmailModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-    aria-hidden="true">
-    <div class="modal-dialog modal-lg  modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header d-flex justify-content-end  border-0">
-                <button type="button" class="close-btn" data-bs-dismiss="modal" aria-label="Close">
-                    <i class="bi bi-x modal-close-icon"></i>
-                </button>
-            </div>
-            <div class="d-flex flex-column descripton-area-container px-4 py-1 mb-3" style="width: 100%;">
-                <div class="text-select">
-                    Sender Email
-                </div>
-                <div class="container-inner" style="background-color: #F3F2F2;">
-                    <input class="form-control input" type="text" placeholder="Enter Name"
-                        style="background-color: #F3F2F2;" />
-                </div>
-            </div>
-            <div class="d-flex flex-column descripton-area-container px-4 py-1 mb-3" style="width: 100%;">
-                <div class="text-select">
-                    Reciver Email
-                </div>
-                <div class="container-inner" style="background-color: #F3F2F2;">
-                    <input class="form-control input" type="text" placeholder="Enter Name"
-                        style="background-color: #F3F2F2;" />
-                </div>
-            </div>
-            <div class="d-flex flex-row  px-4 py-1 mb-3" style="gap:25px">
-                <div class="d-flex flex-column descripton-area-container" style="width: 100%;">
-                    <div class="text-select">
-                        CC
-                    </div>
-                    <div class="container-inner" style="background-color: #F3F2F2;">
-                        <input class="form-control input" type="text" placeholder="Enter Name"
-                            style="background-color: #F3F2F2;" />
-                    </div>
-                </div>
+	<!-- email   modal -->
+	<div class="modal fade" id="EmailModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+		aria-hidden="true">
+		<div class="modal-dialog modal-lg  modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header d-flex justify-content-end  border-0">
+					<button type="button" class="close-btn" data-bs-dismiss="modal" aria-label="Close">
+						<i class="bi bi-x modal-close-icon"></i>
+					</button>
+				</div>
+				<div class="d-flex flex-column descripton-area-container px-4 py-1 mb-3" style="width: 100%;">
+					<div class="text-select">
+						Sender Email
+					</div>
+					<div class="container-inner" style="background-color: #F3F2F2;">
+						<input class="form-control input" type="text" placeholder="Enter Name"
+							style="background-color: #F3F2F2;" />
+					</div>
+				</div>
+				<div class="d-flex flex-column descripton-area-container px-4 py-1 mb-3" style="width: 100%;">
+					<div class="text-select">
+						Reciver Email
+					</div>
+					<div class="container-inner" style="background-color: #F3F2F2;">
+						<input class="form-control input" type="text" placeholder="Enter Name"
+							style="background-color: #F3F2F2;" />
+					</div>
+				</div>
+				<div class="d-flex flex-row  px-4 py-1 mb-3" style="gap:25px">
+					<div class="d-flex flex-column descripton-area-container" style="width: 100%;">
+						<div class="text-select">
+							CC
+						</div>
+						<div class="container-inner" style="background-color: #F3F2F2;">
+							<input class="form-control input" type="text" placeholder="Enter Name"
+								style="background-color: #F3F2F2;" />
+						</div>
+					</div>
 
-            </div>
-            <div class="d-flex flex-row  px-4 py-1 mb-3" style="gap:25px">
-                <div class="d-flex flex-column descripton-area-container" style="width: 100%;">
-                    <div class="text-select">
-                        BC
-                    </div>
+				</div>
+				<div class="d-flex flex-row  px-4 py-1 mb-3" style="gap:25px">
+					<div class="d-flex flex-column descripton-area-container" style="width: 100%;">
+						<div class="text-select">
+							BC
+						</div>
 
-                    <div class="container-inner" style="background-color: #F3F2F2;">
-                        <input class="form-control input" type="text" placeholder="Enter Name"
-                            style="background-color: #F3F2F2;" />
-                    </div>
-                </div>
+						<div class="container-inner" style="background-color: #F3F2F2;">
+							<input class="form-control input" type="text" placeholder="Enter Name"
+								style="background-color: #F3F2F2;" />
+						</div>
+					</div>
 
-            </div>
-            <div class="d-flex flex-row  px-4 py-1 mb-3" style="gap:25px">
-                <div class="d-flex flex-column descripton-area-container" style="width: 100%;">
-                    <div class="text-select">
-                        Subject
-                    </div>
-                    <div class="container-inner" style="background-color: #F3F2F2;">
-                        <input class="form-control input" type="text" placeholder="Enter Name"
-                            style="background-color: #F3F2F2;" />
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="file-container-input px-4 py-1 mb-3" style="width: 100%;">
-              <div class="text-select">  Message  </div>
-              <textarea class="form-control" id="editor" style="background-color: #F3F2F2;"></textarea>    
-            </div>
-            <div class="d-flex justify-content-center align-items-center m-3 flex-wrap" style="gap:15px">
-                <input class="file-word-input" type="file" style="display: none;" />
-                <div class="d-flex p-3 justify-content-between" id="import-contract-word" style="width:45%;background-color: #F3F2F2;">
-                    <div class="d-flex" style="gap:10px">
-                        <img src="../img/icons/word.svg" />
-                        <div class="d-flex flex-column">
-                            <span id="name_file_word">select file word</span>
-                            <span id="gbs_file_word">0 gbs</span>
-                        </div>
-                    </div>
-                    <img src="../img/icons/download-solid.svg" id="download-contract-word" />
-                </div>
-                <input class="file-excel-input" type="file" style="display: none;" />
-                <div class="d-flex p-3 justify-content-between" id="import-contract-excel"
-                    style="width:45%;background-color: #F3F2F2;">
-                    <div class="d-flex" style="gap:10px">
-                        <img src="../img/icons/excel.svg" />
-                        <div class="d-flex flex-column">
-                            <span id="name_file_excel">select file word</span>
-                            <span id="gbs_file_excel">0 gbs</span>
-                        </div>
-                    </div>
-                    <img src="../img/icons/download-solid.svg"  id="download-contract-excel" />
-                </div>
-            </div>
-            <div class="modal-footer d-flex justify-content-center">
-                <button type="button" class="btn"
-                    style="background-color: #E1E1E1; color: #364153; border-radius:5px; width:100px"
-                    data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn"
-                    style="background-color: #364153; color: white; border-radius:5px; width:100px"
-                    data-bs-dismiss="modal">Save</button>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- End email modal -->
-
+				</div>
+				<div class="d-flex flex-row  px-4 py-1 mb-3" style="gap:25px">
+					<div class="d-flex flex-column descripton-area-container" style="width: 100%;">
+						<div class="text-select">
+							Subject
+						</div>
+						<div class="container-inner" style="background-color: #F3F2F2;">
+							<input class="form-control input" type="text" placeholder="Enter Name"
+								style="background-color: #F3F2F2;" />
+						</div>
+					</div>
+				</div>
+				<div class="file-container-input px-4 py-1 mb-3" style="width: 100%;">
+					<div class="text-select"> Message </div>
+					<textarea class="form-control" id="editor" style="background-color: #F3F2F2;"></textarea>
+				</div>
+				<div class="d-flex justify-content-center align-items-center m-3 flex-wrap" style="gap:15px">
+					<div class="file-container-input w-75 ">
+						<button type="button" class="file-button fileSelect">
+							<span>Attach File</span>
+							<img src="../img//icons/upload.svg" alt="">
+						</button>
+						<input type="file" class="file-input d-none uploadInput" type="file" multiple>
+						<ul class="imgbox">
+						</ul>
+					</div>
+				</div>
+				<div class="modal-footer d-flex justify-content-center">
+					<button type="button" class="btn"
+						style="background-color: #E1E1E1; color: #364153; border-radius:5px; width:100px"
+						data-bs-dismiss="modal">Close</button>
+					<button type="button" class="btn"
+						style="background-color: #364153; color: white; border-radius:5px; width:100px"
+						data-bs-dismiss="modal">Save</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End email modal -->
 
 
 <!-- pdf  modal -->

@@ -435,27 +435,30 @@
                         </div>
                     </div>
                     <!--notification drop down ends-->
-                             <!--dashboard drop down starts-->
-          <div class="nav-item dropdown nav-link-position">
-            <a href="#" class="nav-link text-dark font-weight-bold" data-bs-toggle="dropdown">
-              <span class="bi bi-grid text-dark font-weight-bold"></span> Space Management <span class="fa-solid fa-caret-down"></span>
-            </a>
-            <div class="dropdown-down dropdown-menu dropdown-menu-end bg-light border-0 m-0 p-0">
-              <div class="triangle" style="border-color: transparent transparent #2f3b4e; right: 10px; top: -8px;">
-              </div>
-              <div class="settings dashboard">
-                <p style="border-top-right-radius: 10px; border-top-left-radius: 10px;">Dashboard</p>
-                <div>
-                  <a href="#" class="dropdown-item"><i class="bi bi-grid"></i>Space Management</a>
-                  <a href="#" class="dropdown-item"><i class="bi bi-grid"></i>Conference Management</a>
-                  <a href="#" class="dropdown-item"><i class="bi bi-grid"></i>Tickets</a>
-                  <a href="#" class="dropdown-item"><i class="bi bi-grid"></i>CRM</a>
-                  <a href="#" class="dropdown-item"><i class="bi bi-grid"></i>Mass Email</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- dashboard drop down end -->
+                    <!--dashboard drop down starts-->
+                    <div class="nav-item dropdown nav-link-position">
+                        <a href="#" class="nav-link text-dark font-weight-bold" data-bs-toggle="dropdown">
+                            <span class="bi bi-grid text-dark font-weight-bold"></span> Space Management <span
+                                class="fa-solid fa-caret-down"></span>
+                        </a>
+                        <div class="dropdown-down dropdown-menu dropdown-menu-end bg-light border-0 m-0 p-0">
+                            <div class="triangle"
+                                style="border-color: transparent transparent #2f3b4e; right: 10px; top: -8px;">
+                            </div>
+                            <div class="settings dashboard">
+                                <p style="border-top-right-radius: 10px; border-top-left-radius: 10px;">Dashboard</p>
+                                <div>
+                                    <a href="#" class="dropdown-item"><i class="bi bi-grid"></i>Space Management</a>
+                                    <a href="#" class="dropdown-item"><i class="bi bi-grid"></i>Conference
+                                        Management</a>
+                                    <a href="#" class="dropdown-item"><i class="bi bi-grid"></i>Tickets</a>
+                                    <a href="#" class="dropdown-item"><i class="bi bi-grid"></i>CRM</a>
+                                    <a href="#" class="dropdown-item"><i class="bi bi-grid"></i>Mass Email</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- dashboard drop down end -->
                     <!-- settings drop down start -->
                     <div class="nav-item dropdown nav-link-position gear-container">
                         <a href="#" class="nav-link" data-bs-toggle="dropdown">
@@ -532,6 +535,92 @@
 
             <div class="container-fluid" id="back-client">
                 <div class="container-fluid px-4 pb-4" id="back-client">
+
+                    <div class="d-flex flex-column mb-3 justify-content-evenly pt-5 gap">
+                    <div class="topSection">
+                        <form>
+                            <div
+                                class="row d-flex box2-offer justify-content-between align-items-end offers-search-container">
+                                <div class="col-12 col-md-6 col-lg-2">
+                                    <div>
+                                        <label>City</label>
+                                    </div>
+                                    <div class="select-input">
+                                        <select class=" selectpicker" multiple
+                                            aria-label="size 3 select example"
+                                            data-live-search="true">
+                                            <option value="1">Dubai</option>
+                                            <option value="2">London</option>
+                                            <option value="3">NY</option>
+                                            <option value="9">example</option>
+                                        </select>
+                                        <img class="input-svg" src="../images/business.svg">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-lg-2">
+                                    <div>
+                                        <label>Building</label>
+                                    </div>
+                                    <div class="select-input">
+                                        <select class=" selectpicker" multiple
+                                            aria-label="size 3 select example"
+                                            data-live-search="true">
+                                            <option value="1">Debt 1</option>
+                                            <option value="2">Debt 2</option>
+                                            <option value="3">Debt 3</option>
+                                            <option value="5">Debt 4</option>
+                                        </select>
+                                        <img class="input-svg" width="12" src="../images/img-droplist.svg">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-lg-2">
+                                    <div>
+                                        <label>Client Category</label>
+                                    </div>
+                                    <div class="select-input">
+                                        <select class=" selectpicker" multiple
+                                            aria-label="size 3 select example"
+                                            data-live-search="true">
+                                            <option value="1">Debt 1</option>
+                                            <option value="2">Debt 2</option>
+                                            <option value="3">Debt 3</option>
+                                            <option value="5">Debt 4</option>
+                                        </select>
+                                        <img class="input-svg" width="12" src="../images/img-droplist.svg">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-lg-2">
+                                    <div>
+                                        <label>From</label>
+                                    </div>
+                                    <div class="select-input bg-secondary">
+                                        <input type="text"
+                                            class="form-control datepicker date-input bg-secondary border-0 px-0"
+                                            placeholder="Select date">
+                                        <img class="input-svg" width="12" src="../images/date.svg">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-lg-2">
+                                    <div>
+                                        <label>Until</label>
+                                    </div>
+                                    <div class="select-input bg-secondary">
+                                        <input type="text"
+                                            class="form-control datepicker date-input bg-secondary border-0 px-0"
+                                            placeholder="Select date">
+                                        <img class="input-svg" width="12" src="../images/date.svg">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-lg-1">
+                                    <a class="btn btn-primary create-btn text-white px-3" >
+                                        show
+                                    </a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
                     <div class="firstNav row justify-content-between">
                         <div class="col-md-6 col-12 padding-0">
                             <ul class="nav nav-tabs  align-items-center nav-f-s">
@@ -593,65 +682,65 @@
                         <div class="tab-pane fade show active " id="all" role="tabpanel1" aria-labelledby="all-tab">
                             <div class="table-responsive bg-light mt-4 border-radius-20 shadow">
                                 <div class="secondTableContainer">
-                                    <table id="myTable" class="table m-0">
+                                    <table id="myTableallall" class="table m-0">
                                         <thead>
                                             <tr class="tr">
                                                 <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
-                                                <th onclick="sortTable(0, 'myTable')" class="style-th">
+                                                <th onclick="sortTable(0, 'myTableall')" class="style-th">
                                                     <div>
                                                         <span>Id</span><span><img src="../images/sort-ic.svg"
                                                                 class="sotTble" /></span>
                                                     </div>
                                                 </th>
-                                                <th onclick="sortTable(1, 'myTable')" class="style-th">
+                                                <th onclick="sortTable(1, 'myTableall')" class="style-th">
                                                     <div>
                                                         <span>Client Name</span><span><img src="../images/sort-ic.svg"
                                                                 class="sotTble" /></span>
                                                     </div>
                                                 </th>
-                                                <th onclick="sortTable(2, 'myTable')" class="style-th">
+                                                <th onclick="sortTable(2, 'myTableall')" class="style-th">
                                                     <div>
                                                         <span>Main Contact</span><span><img src="../images/sort-ic.svg"
                                                                 class="sotTble" /></span>
                                                     </div>
                                                 </th>
-                                                <th onclick="sortTable(3, 'myTable')" class="style-th">
+                                                <th onclick="sortTable(3, 'myTableall')" class="style-th">
                                                     <div>
                                                         <span>Category</span><span><img src="../images/sort-ic.svg"
                                                                 class="sotTble" /></span>
                                                     </div>
                                                 </th>
-                                                <th onclick="sortTable(4, 'myTable')" class="style-th">
+                                                <th onclick="sortTable(4, 'myTableall')" class="style-th">
                                                     <div>
                                                         <span>Email</span><span><img src="../images/sort-ic.svg"
                                                                 class="sotTble" /></span>
                                                     </div>
                                                 </th>
-                                                <th onclick="sortTable(5, 'myTable')" class="style-th">
+                                                <th onclick="sortTable(5, 'myTableall')" class="style-th">
                                                     <div>
                                                         <span>Mobile</span><span><img src="../images/sort-ic.svg"
                                                                 class="sotTble" /></span>
                                                     </div>
                                                 </th>
-                                                <th onclick="sortTable(6, 'myTable')" class="style-th">
+                                                <th onclick="sortTable(6, 'myTableall')" class="style-th">
                                                     <div>
                                                         <span>Busines Lounge</span><span><img
                                                                 src="../images/sort-ic.svg" class="sotTble" /></span>
                                                     </div>
                                                 </th>
-                                                <th onclick="sortTable(7, 'myTable')" class="style-th">
+                                                <th onclick="sortTable(7, 'myTableall')" class="style-th">
                                                     <div>
                                                         <span>Order Status</span><span><img src="../images/sort-ic.svg"
                                                                 class="sotTble" /></span>
                                                     </div>
                                                 </th>
-                                                <th onclick="sortTable(7, 'myTable')" class="style-th">
+                                                <th onclick="sortTable(7, 'myTableall')" class="style-th">
                                                     <div>
                                                         <span>Status</span><span><img src="../images/sort-ic.svg"
                                                                 class="sotTble" /></span>
                                                     </div>
                                                 </th>
-                                                <th onclick="sortTable(8, 'myTable')" class="style-th">
+                                                <th class="style-th">
                                                     <div class=" width-140 mx-auto">
                                                         <span>Action</span>
                                                     </div>
@@ -876,65 +965,65 @@
                             aria-labelledby="active-tab">
                             <div class="table-responsive bg-light mt-4 border-radius-20 shadow">
                                 <div class="secondTableContainer">
-                                    <table id="myTable" class="table m-0">
+                                    <table id="myTableactive" class="table m-0">
                                         <thead>
                                             <tr class="tr">
                                                 <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
-                                                <th onclick="sortTable(0, 'myTable')" class="style-th">
+                                                <th onclick="sortTable(0, 'myTableactive')" class="style-th">
                                                     <div>
                                                         <span>Id</span><span><img src="../images/sort-ic.svg"
                                                                 class="sotTble" /></span>
                                                     </div>
                                                 </th>
-                                                <th onclick="sortTable(1, 'myTable')" class="style-th">
+                                                <th onclick="sortTable(1, 'myTableactive')" class="style-th">
                                                     <div>
                                                         <span>Client Name</span><span><img src="../images/sort-ic.svg"
                                                                 class="sotTble" /></span>
                                                     </div>
                                                 </th>
-                                                <th onclick="sortTable(2, 'myTable')" class="style-th">
+                                                <th onclick="sortTable(2, 'myTableactive')" class="style-th">
                                                     <div>
                                                         <span>Main Contact</span><span><img src="../images/sort-ic.svg"
                                                                 class="sotTble" /></span>
                                                     </div>
                                                 </th>
-                                                <th onclick="sortTable(3, 'myTable')" class="style-th">
+                                                <th onclick="sortTable(3, 'myTableactive')" class="style-th">
                                                     <div>
                                                         <span>Category</span><span><img src="../images/sort-ic.svg"
                                                                 class="sotTble" /></span>
                                                     </div>
                                                 </th>
-                                                <th onclick="sortTable(4, 'myTable')" class="style-th">
+                                                <th onclick="sortTable(4, 'myTableactive')" class="style-th">
                                                     <div>
                                                         <span>Email</span><span><img src="../images/sort-ic.svg"
                                                                 class="sotTble" /></span>
                                                     </div>
                                                 </th>
-                                                <th onclick="sortTable(5, 'myTable')" class="style-th">
+                                                <th onclick="sortTable(5, 'myTableactive')" class="style-th">
                                                     <div>
                                                         <span>Mobile</span><span><img src="../images/sort-ic.svg"
                                                                 class="sotTble" /></span>
                                                     </div>
                                                 </th>
-                                                <th onclick="sortTable(6, 'myTable')" class="style-th">
+                                                <th onclick="sortTable(6, 'myTableactive')" class="style-th">
                                                     <div>
                                                         <span>Busines Lounge</span><span><img
                                                                 src="../images/sort-ic.svg" class="sotTble" /></span>
                                                     </div>
                                                 </th>
-                                                <th onclick="sortTable(7, 'myTable')" class="style-th">
+                                                <th onclick="sortTable(7, 'myTableactive')" class="style-th">
                                                     <div>
                                                         <span>Order Status</span><span><img src="../images/sort-ic.svg"
                                                                 class="sotTble" /></span>
                                                     </div>
                                                 </th>
-                                                <th onclick="sortTable(7, 'myTable')" class="style-th">
+                                                <th onclick="sortTable(7, 'myTableactive')" class="style-th">
                                                     <div>
                                                         <span>Status</span><span><img src="../images/sort-ic.svg"
                                                                 class="sotTble" /></span>
                                                     </div>
                                                 </th>
-                                                <th onclick="sortTable(8, 'myTable')" class="style-th">
+                                                <th class="style-th">
                                                     <div class=" width-140 mx-auto">
                                                         <span>Action</span>
                                                     </div>
@@ -1159,65 +1248,65 @@
                             aria-labelledby="not-active">
                             <div class="table-responsive bg-light mt-4 border-radius-20 shadow">
                                 <div class="secondTableContainer">
-                                    <table id="myTable" class="table m-0">
+                                    <table id="myTableNO" class="table m-0">
                                         <thead>
                                             <tr class="tr">
                                                 <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
-                                                <th onclick="sortTable(0, 'myTable')" class="style-th">
+                                                <th onclick="sortTable(0, 'myTableNO')" class="style-th">
                                                     <div>
                                                         <span>Id</span><span><img src="../images/sort-ic.svg"
                                                                 class="sotTble" /></span>
                                                     </div>
                                                 </th>
-                                                <th onclick="sortTable(1, 'myTable')" class="style-th">
+                                                <th onclick="sortTable(1, 'myTableNO')" class="style-th">
                                                     <div>
                                                         <span>Client Name</span><span><img src="../images/sort-ic.svg"
                                                                 class="sotTble" /></span>
                                                     </div>
                                                 </th>
-                                                <th onclick="sortTable(2, 'myTable')" class="style-th">
+                                                <th onclick="sortTable(2, 'myTableNO')" class="style-th">
                                                     <div>
                                                         <span>Main Contact</span><span><img src="../images/sort-ic.svg"
                                                                 class="sotTble" /></span>
                                                     </div>
                                                 </th>
-                                                <th onclick="sortTable(3, 'myTable')" class="style-th">
+                                                <th onclick="sortTable(3, 'myTableNO')" class="style-th">
                                                     <div>
                                                         <span>Category</span><span><img src="../images/sort-ic.svg"
                                                                 class="sotTble" /></span>
                                                     </div>
                                                 </th>
-                                                <th onclick="sortTable(4, 'myTable')" class="style-th">
+                                                <th onclick="sortTable(4, 'myTableNO')" class="style-th">
                                                     <div>
                                                         <span>Email</span><span><img src="../images/sort-ic.svg"
                                                                 class="sotTble" /></span>
                                                     </div>
                                                 </th>
-                                                <th onclick="sortTable(5, 'myTable')" class="style-th">
+                                                <th onclick="sortTable(5, 'myTableNO')" class="style-th">
                                                     <div>
                                                         <span>Mobile</span><span><img src="../images/sort-ic.svg"
                                                                 class="sotTble" /></span>
                                                     </div>
                                                 </th>
-                                                <th onclick="sortTable(6, 'myTable')" class="style-th">
+                                                <th onclick="sortTable(6, 'myTableNO')" class="style-th">
                                                     <div>
                                                         <span>Busines Lounge</span><span><img
                                                                 src="../images/sort-ic.svg" class="sotTble" /></span>
                                                     </div>
                                                 </th>
-                                                <th onclick="sortTable(7, 'myTable')" class="style-th">
+                                                <th onclick="sortTable(7, 'myTableNO')" class="style-th">
                                                     <div>
                                                         <span>Order Status</span><span><img src="../images/sort-ic.svg"
                                                                 class="sotTble" /></span>
                                                     </div>
                                                 </th>
-                                                <th onclick="sortTable(7, 'myTable')" class="style-th">
+                                                <th onclick="sortTable(7, 'myTableNO')" class="style-th">
                                                     <div>
                                                         <span>Status</span><span><img src="../images/sort-ic.svg"
                                                                 class="sotTble" /></span>
                                                     </div>
                                                 </th>
-                                                <th onclick="sortTable(8, 'myTable')" class="style-th">
+                                                <th class="style-th">
                                                     <div class=" width-140 mx-auto">
                                                         <span>Action</span>
                                                     </div>
@@ -1440,171 +1529,173 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </main>
 
-
-            <!-- modals -->
-            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
-                aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header d-flex justify-content-end ">
-                            <button type="button" class="close-btn" data-bs-dismiss="modal" aria-label="Close">
-                                <i class="bi bi-x modal-close-icon"></i>
-                            </button>
-                        </div>
-                        <div class="modal-body d-flex justify-content-center align-items-center">
-                            <div class="container-img">
-                                <img src="../images/icon-modal.svg" class="img-fluid" />
-                            </div>
-                        </div>
-                        <div class="modal-footer d-flex justify-content-center">
-                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
-                        </div>
+    <!-- modals -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header d-flex justify-content-end ">
+                    <button type="button" class="close-btn" data-bs-dismiss="modal" aria-label="Close">
+                        <i class="bi bi-x modal-close-icon"></i>
+                    </button>
+                </div>
+                <div class="modal-body d-flex justify-content-center align-items-center">
+                    <div class="container-img">
+                        <img src="../images/icon-modal.svg" class="img-fluid" />
                     </div>
                 </div>
-            </div>
-            <!-- end modals -->
-
-            <!-- email modal -->
-            <div class="modal fade" id="EmailModal" tabindex="-1" role="dialog"
-                aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header d-flex justify-content-end ">
-                            <button type="button" class="close-btn" data-bs-dismiss="modal" aria-label="Close">
-                                <i class="bi bi-x modal-close-icon"></i>
-                            </button>
-                        </div>
-                        <div class="d-flex flex-column descripton-area-container px-4 py-1 mb-3" style="width: 100%;">
-                            <div class="text-select">
-                                Sender Email
-                            </div>
-                            <div class="container-inner" style="background-color: #F3F2F2;">
-                                <input class="form-control input" type="text" placeholder="Enter Name"
-                                    style="background-color: #F3F2F2;" />
-                            </div>
-                        </div>
-                        <div class="d-flex flex-column descripton-area-container px-4 py-1 mb-3" style="width: 100%;">
-                            <div class="text-select">
-                                Reciver Email
-                            </div>
-                            <div class="container-inner" style="background-color: #F3F2F2;">
-                                <input class="form-control input" type="text" placeholder="Enter Name"
-                                    style="background-color: #F3F2F2;" />
-                            </div>
-                        </div>
-                        <div class="d-flex flex-row  px-4 py-1 mb-3" style="gap:25px">
-                            <div class="d-flex flex-column descripton-area-container" style="width: 100%;">
-                                <div class="text-select">
-                                    CC
-                                </div>
-                                <div class="container-inner" style="background-color: #F3F2F2;">
-                                    <input class="form-control input" type="text" placeholder="Enter Name"
-                                        style="background-color: #F3F2F2;" />
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="d-flex flex-row  px-4 py-1 mb-3" style="gap:25px">
-                            <div class="d-flex flex-column descripton-area-container" style="width: 100%;">
-                                <div class="text-select">
-                                    BC
-                                </div>
-
-                                <div class="container-inner" style="background-color: #F3F2F2;">
-                                    <input class="form-control input" type="text" placeholder="Enter Name"
-                                        style="background-color: #F3F2F2;" />
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="d-flex flex-row  px-4 py-1 mb-3" style="gap:25px">
-                            <div class="d-flex flex-column descripton-area-container" style="width: 100%;">
-                                <div class="text-select">
-                                    Subject
-                                </div>
-                                <div class="container-inner" style="background-color: #F3F2F2;">
-                                    <input class="form-control input" type="text" placeholder="Enter Name"
-                                        style="background-color: #F3F2F2;" />
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div class="file-container-input px-4 py-1 mb-3" style="width: 100%;">
-                            <label
-                                style=" font-size: 16px !important; font-family: 'MontserratSemiBold';  color: #364153;">Message</label>
-                            <textarea class="form-control" id="editor" style="background-color: #F3F2F2;"></textarea>
-                        </div>
-                        <div class="d-flex justify-content-center align-items-center m-3 flex-wrap" style="gap:15px">
-                            <div class="d-flex p-3   justify-content-between" id="download-contract-word"
-                                style="width:45%;background-color: #F3F2F2;">
-                                <div class="d-flex" style="gap:10px">
-                                    <img src="../img/icons/word.svg" />
-                                    <div class="d-flex flex-column">
-                                        <span>Research.rar</span>
-                                        <span>5.778 gbs</span>
-                                    </div>
-                                </div>
-                                <img src="../img/icons/download-solid.svg" />
-                            </div>
-                            <div class="d-flex p-3 justify-content-between" id="download-contract-excel"
-                                style="width:45%;background-color: #F3F2F2;">
-                                <div class="d-flex" style="gap:10px">
-                                    <img src="../img/icons/excel.svg" />
-                                    <div class="d-flex flex-column">
-                                        <span>Research.rar</span>
-                                        <span>5.778 gbs</span>
-                                    </div>
-                                </div>
-                                <img src="../img/icons/download-solid.svg" />
-                            </div>
-                        </div>
-                        <div class="modal-footer d-flex justify-content-center">
-                            <button type="button" class="btn"
-                                style="background-color: #E1E1E1; color: #364153; border-radius:5px; width:100px"
-                                data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn"
-                                style="background-color: #364153; color: white; border-radius:5px; width:100px"
-                                data-bs-dismiss="modal">Save</button>
-                        </div>
-                    </div>
+                <div class="modal-footer d-flex justify-content-center">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
-            <!-- End email modal -->
+        </div>
+    </div>
+    <!-- end modals -->
 
-            <script>
-                $('.ui.dropdown').dropdown();
-            </script>
+    <!-- email modal -->
+    <div class="modal fade" id="EmailModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header d-flex justify-content-end ">
+                    <button type="button" class="close-btn" data-bs-dismiss="modal" aria-label="Close">
+                        <i class="bi bi-x modal-close-icon"></i>
+                    </button>
+                </div>
+                <div class="d-flex flex-column descripton-area-container px-4 py-1 mb-3" style="width: 100%;">
+                    <div class="text-select">
+                        Sender Email
+                    </div>
+                    <div class="container-inner" style="background-color: #F3F2F2;">
+                        <input class="form-control input" type="text" placeholder="Enter Name"
+                            style="background-color: #F3F2F2;" />
+                    </div>
+                </div>
+                <div class="d-flex flex-column descripton-area-container px-4 py-1 mb-3" style="width: 100%;">
+                    <div class="text-select">
+                        Reciver Email
+                    </div>
+                    <div class="container-inner" style="background-color: #F3F2F2;">
+                        <input class="form-control input" type="text" placeholder="Enter Name"
+                            style="background-color: #F3F2F2;" />
+                    </div>
+                </div>
+                <div class="d-flex flex-row  px-4 py-1 mb-3" style="gap:25px">
+                    <div class="d-flex flex-column descripton-area-container" style="width: 100%;">
+                        <div class="text-select">
+                            CC
+                        </div>
+                        <div class="container-inner" style="background-color: #F3F2F2;">
+                            <input class="form-control input" type="text" placeholder="Enter Name"
+                                style="background-color: #F3F2F2;" />
+                        </div>
+                    </div>
 
-            <!-- global js -->
-            <script src="../JS/global/jquery/jquery-3.4.1.min.js"></script>
-            <script src="../JS/client/main.js"></script>
-            <script src="../JS/global/bootstrap/bootstrap.bundle.min.js"></script>
-            <script src="../JS/global/bootstrap/bootstrap-select.js"></script>
-            <script src="../JS/global/datePicker/datepicker.js"></script>
-            <script src="../JS/layout.js"></script>
+                </div>
+                <div class="d-flex flex-row  px-4 py-1 mb-3" style="gap:25px">
+                    <div class="d-flex flex-column descripton-area-container" style="width: 100%;">
+                        <div class="text-select">
+                            BC
+                        </div>
+
+                        <div class="container-inner" style="background-color: #F3F2F2;">
+                            <input class="form-control input" type="text" placeholder="Enter Name"
+                                style="background-color: #F3F2F2;" />
+                        </div>
+                    </div>
+
+                </div>
+                <div class="d-flex flex-row  px-4 py-1 mb-3" style="gap:25px">
+                    <div class="d-flex flex-column descripton-area-container" style="width: 100%;">
+                        <div class="text-select">
+                            Subject
+                        </div>
+                        <div class="container-inner" style="background-color: #F3F2F2;">
+                            <input class="form-control input" type="text" placeholder="Enter Name"
+                                style="background-color: #F3F2F2;" />
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="file-container-input px-4 py-1 mb-3" style="width: 100%;">
+                    <label
+                        style=" font-size: 16px !important; font-family: 'MontserratSemiBold';  color: #364153;">Message</label>
+                    <textarea class="form-control" id="editor" style="background-color: #F3F2F2;"></textarea>
+                </div>
+                <div class="d-flex justify-content-center align-items-center m-3 flex-wrap" style="gap:15px">
+                    <div class="d-flex p-3   justify-content-between" id="download-contract-word"
+                        style="width:45%;background-color: #F3F2F2;">
+                        <div class="d-flex" style="gap:10px">
+                            <img src="../img/icons/word.svg" />
+                            <div class="d-flex flex-column">
+                                <span>Research.rar</span>
+                                <span>5.778 gbs</span>
+                            </div>
+                        </div>
+                        <img src="../img/icons/download-solid.svg" />
+                    </div>
+                    <div class="d-flex p-3 justify-content-between" id="download-contract-excel"
+                        style="width:45%;background-color: #F3F2F2;">
+                        <div class="d-flex" style="gap:10px">
+                            <img src="../img/icons/excel.svg" />
+                            <div class="d-flex flex-column">
+                                <span>Research.rar</span>
+                                <span>5.778 gbs</span>
+                            </div>
+                        </div>
+                        <img src="../img/icons/download-solid.svg" />
+                    </div>
+                </div>
+                <div class="modal-footer d-flex justify-content-center">
+                    <button type="button" class="btn"
+                        style="background-color: #E1E1E1; color: #364153; border-radius:5px; width:100px"
+                        data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn"
+                        style="background-color: #364153; color: white; border-radius:5px; width:100px"
+                        data-bs-dismiss="modal">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End email modal -->
 
 
-            <script type="text/javascript">
-                $('.trtabler').on('click', function (event) {
-                    const target = $(event.target);
+    <script>
+        $('.ui.dropdown').dropdown();
+    </script>
 
-                    if (target.is('td:last-child')) {
-                        event.preventDefault();
-                    } else if (target.is('td:last-child button')) {
-                        event.preventDefault();
-                    } else if (target.is('td:last-child button img')) {
-                        event.preventDefault();
-                    } else if (target.is('td:last-child .tooltip-left')) {
-                        event.preventDefault();
-                    } else if (target.is('td:last-child div img')) {
-                        event.preventDefault();
-                    } else {
-                        window.location.href = 'create-new-contract-1.html';
-                    }
-                });
-            </script>
+    <!-- global js -->
+    <script src="../JS/global/jquery/jquery-3.4.1.min.js"></script>
+    <script src="../JS/client/main.js"></script>
+    <script src="../JS/global/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="../JS/global/bootstrap/bootstrap-select.js"></script>
+    <script src="../JS/global/datePicker/datepicker.js"></script>
+    <script src="../JS/layout.js"></script>
+
+
+    <script type="text/javascript">
+        $('.trtabler').on('click', function (event) {
+            const target = $(event.target);
+
+            if (target.is('td:last-child')) {
+                event.preventDefault();
+            } else if (target.is('td:last-child button')) {
+                event.preventDefault();
+            } else if (target.is('td:last-child button img')) {
+                event.preventDefault();
+            } else if (target.is('td:last-child .tooltip-left')) {
+                event.preventDefault();
+            } else if (target.is('td:last-child div img')) {
+                event.preventDefault();
+            } else {
+                window.location.href = 'create-new-contract-1.html';
+            }
+        });
+    </script>
 </body>
 
 </html>

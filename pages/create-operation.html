@@ -2,32 +2,33 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <title>highnox</title>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <meta content="" name="keywords">
-  <meta content="" name="description">
-  <link rel="icon" href="../images/Highnox.png" type="image/x-icon" />
+	<meta charset="utf-8">
+	<title>highnox</title>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<meta content="" name="keywords">
+	<meta content="" name="description">
+	<link rel="icon" href="../images/Highnox.png" type="image/x-icon" />
 
-  <link rel="stylesheet" href="../css/semantic.min.css"  >
-  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-  <script src="../JS/semantic.min.js"></script>
-  <!-- global style -->
-  <link href="../css/global/datepicker/datepicker.css" rel="stylesheet">
-  <link href="../css/global/bootstrap/bootstrap.min.css" rel="stylesheet">
-  <link href="../css/global/bootstrap/bootstrap-select.css" rel="stylesheet">
-  <link href="../css/global/swiper/swiper-bundle.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="../css/semantic.min.css">
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src="../JS/semantic.min.js"></script>
 
-  <!-- dashboard style -->
-  <link href="../css/dashboard/main-dashboard.css" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="../css/dashboard/style.css">
-  <link rel="stylesheet" type="text/css" href="../css/dashboard/screen.css">
-  <link rel="stylesheet" href="../css/dashboard/media.css" >
+	<!-- global style -->
+	<link href="../css/global/bootstrap/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/global/bootstrap/bootstrap-select.css" rel="stylesheet">
+	<link href="../css/global/swiper/swiper-bundle.min.css" rel="stylesheet">
+	<link href="../css/global/datepicker/datepicker.css" rel="stylesheet">
 
-  <!-- Icon Font Stylesheet cdn -->
-  <link rel="stylesheet" href="../css/global/font-awesome/css/all.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-  
+	<!-- dashboard style -->
+	<link href="../css/dashboard/main-dashboard.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../css/dashboard/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/dashboard/screen.css">
+	<link rel="stylesheet" href="../css/dashboard/media.css">
+
+	<!-- Icon Font Stylesheet cdn -->
+	<link rel="stylesheet" href="../css/global/font-awesome/css/all.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
   <link rel="stylesheet" href="../css/layout.css">
 </head>
 <body>
@@ -726,39 +727,54 @@
                     </div>
                   </form>
                 </div>
-                <div class="container-fluid content-form bg-light mb-4 ">
-                  <form class="mx-4 p-4 rounded" style="background: #e8e8e8;">
-                    <div class="text-right mx-4"> 
-                      <a href="#" class="btn btn-primary create-bArticle Detailstn add_note ">
-                      <i class="bi bi-plus-circle-fill"></i>
-                        Add Note
-                      </a>
-                      </div>
-                    <div class="form-row px-4">
-                      <div class="col-md-10 col-12">
-                        <div>
-                          <label>Note</label>
-                        </div>
-                        <div>
-                          <textarea class="form-control" placeholder="Enter your Note" rows="2"></textarea>
-                        </div>
-                      </div>
-                      <div class="col-md-2 col-12">
-                        <div>
-                          <label>Attachment</label>
-                        </div>
-                        <div class="file-container-input">
-                          <button type="button" class="file-button" onclick="openFile(this)">
-                            <span>Attach File</span>
-                            <img src="../img//icons/upload.svg" alt="">
-                          </button>
-                          <input type="file" class="file-input d-none" id="attachment">
+                  <div class="container-fluid content-form bg-light mt-4 mb-4">
+                    <div class="mx-4 py-4 border-radius-20" style="background: #e8e8e8;">
+                      <div class=" py-4 border-radius-20" style="background: #e8e8e8;">
+                        <div class="note form-row px-4">
+                          <div class="col-md-9 col-12">
+                            <div class="bg-white border rounded p-3">
+                              <div class="d-flex justify-content-between">
+                                <div>
+                                  <label>Notes</label>
+                                </div>
+                                <div class="text-right mx-4">
+                                  <button class="open-modal btn btn-primary">
+                                    <i class="bi bi-plus-circle-fill"></i>
+                                    Add Note
+                                  </button>
+                                </div>
+                              </div>
+                              <hr>
+                              <div class="displayValues">
+                                <p><span class="text-danger pl-1">2023-01-10</span> <span
+                                    class="text-danger px-1"> day </span> <span
+                                    class="text-danger px-1">13:24</span> <span
+                                    class="text-danger px-1">sewar siyam</span> <span
+                                    class="px-1">text text text text text text text text
+                                    text</span> </p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-3 col-12 ">
+                            <div>
+                              <label>Attachment</label>
+                            </div>
+                            <div class="file-container-input">
+                              <button type="button" class="file-button fileSelect">
+                                <span>Attach File</span>
+                                <img src="../img//icons/upload.svg" alt="">
+                              </button>
+                              <input type="file" class="file-input d-none uploadInput" type="file"
+                                multiple>
+                              <ul class="imgbox">
+                              </ul>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
-                    <div class="row-note mx-4"></div>
-                  </form>
-                </div>
+                  </div>
+
                 <div class="container-fluid content-form bg-light border-bottom-1 mb-4">
                   <form class="mx-4 p-4" style="background: #e8e8e8;">
                     <div class="form-row m-4">
@@ -813,14 +829,28 @@
                           </div>
                         </div>                   
                       </div>
-                      <div class="col-md-10 col-12 mt-4">
-                        <div>
-                          <label>Note</label>
-                        </div>
-                        <div>
-                          <textarea class="form-control" placeholder="Enter your Note" rows="2"></textarea>
-                        </div>
-                      </div>
+                          <div class="col-10 note bg-white border rounded mt-4 p-3">
+                            <div class="d-flex justify-content-between">
+                              <div>
+                                <label>Notes</label>
+                              </div>
+                              <div class="text-right mx-4">
+                                <button class="open-modal btn btn-primary">
+                                  <i class="bi bi-plus-circle-fill"></i>
+                                  Add Note
+                                </button>
+                              </div>
+                            </div>
+                            <hr>
+                            <div class="displayValues">
+                              <p><span class="text-danger pl-1">2023-01-10</span> <span
+                                  class="text-danger px-1"> day </span> <span
+                                  class="text-danger px-1">13:24</span> <span
+                                  class="text-danger px-1">sewar siyam</span> <span
+                                  class="px-1">text text text text text text text text
+                                  text</span> </p>
+                            </div>
+                          </div>
                     </div>
                   </form>
                 </div>
@@ -945,115 +975,97 @@
 
 
 
+	<!-- email   modal -->
+	<div class="modal fade" id="EmailModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+		aria-hidden="true">
+		<div class="modal-dialog modal-lg  modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header d-flex justify-content-end  border-0">
+					<button type="button" class="close-btn" data-bs-dismiss="modal" aria-label="Close">
+						<i class="bi bi-x modal-close-icon"></i>
+					</button>
+				</div>
+				<div class="d-flex flex-column descripton-area-container px-4 py-1 mb-3" style="width: 100%;">
+					<div class="text-select">
+						Sender Email
+					</div>
+					<div class="container-inner" style="background-color: #F3F2F2;">
+						<input class="form-control input" type="text" placeholder="Enter Name"
+							style="background-color: #F3F2F2;" />
+					</div>
+				</div>
+				<div class="d-flex flex-column descripton-area-container px-4 py-1 mb-3" style="width: 100%;">
+					<div class="text-select">
+						Reciver Email
+					</div>
+					<div class="container-inner" style="background-color: #F3F2F2;">
+						<input class="form-control input" type="text" placeholder="Enter Name"
+							style="background-color: #F3F2F2;" />
+					</div>
+				</div>
+				<div class="d-flex flex-row  px-4 py-1 mb-3" style="gap:25px">
+					<div class="d-flex flex-column descripton-area-container" style="width: 100%;">
+						<div class="text-select">
+							CC
+						</div>
+						<div class="container-inner" style="background-color: #F3F2F2;">
+							<input class="form-control input" type="text" placeholder="Enter Name"
+								style="background-color: #F3F2F2;" />
+						</div>
+					</div>
 
-  
-<!-- email   modal -->
-<div class="modal fade" id="EmailModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-aria-hidden="true">
-<div class="modal-dialog modal-lg  modal-dialog-centered" role="document">
-    <div class="modal-content">
-        <div class="modal-header d-flex justify-content-end  border-0">
-            <button type="button" class="close-btn" data-bs-dismiss="modal" aria-label="Close">
-                <i class="bi bi-x modal-close-icon"></i>
-            </button>
-        </div>
-        <div class="d-flex flex-column descripton-area-container px-4 py-1 mb-3" style="width: 100%;">
-            <div class="text-select">
-                Sender Email
-            </div>
-            <div class="container-inner" style="background-color: #F3F2F2;">
-                <input class="form-control input" type="text" placeholder="Enter Name"
-                    style="background-color: #F3F2F2;" />
-            </div>
-        </div>
-        <div class="d-flex flex-column descripton-area-container px-4 py-1 mb-3" style="width: 100%;">
-            <div class="text-select">
-                Reciver Email
-            </div>
-            <div class="container-inner" style="background-color: #F3F2F2;">
-                <input class="form-control input" type="text" placeholder="Enter Name"
-                    style="background-color: #F3F2F2;" />
-            </div>
-        </div>
-        <div class="d-flex flex-row  px-4 py-1 mb-3" style="gap:25px">
-            <div class="d-flex flex-column descripton-area-container" style="width: 100%;">
-                <div class="text-select">
-                    CC
-                </div>
-                <div class="container-inner" style="background-color: #F3F2F2;">
-                    <input class="form-control input" type="text" placeholder="Enter Name"
-                        style="background-color: #F3F2F2;" />
-                </div>
-            </div>
+				</div>
+				<div class="d-flex flex-row  px-4 py-1 mb-3" style="gap:25px">
+					<div class="d-flex flex-column descripton-area-container" style="width: 100%;">
+						<div class="text-select">
+							BC
+						</div>
 
-        </div>
-        <div class="d-flex flex-row  px-4 py-1 mb-3" style="gap:25px">
-            <div class="d-flex flex-column descripton-area-container" style="width: 100%;">
-                <div class="text-select">
-                    BC
-                </div>
+						<div class="container-inner" style="background-color: #F3F2F2;">
+							<input class="form-control input" type="text" placeholder="Enter Name"
+								style="background-color: #F3F2F2;" />
+						</div>
+					</div>
 
-                <div class="container-inner" style="background-color: #F3F2F2;">
-                    <input class="form-control input" type="text" placeholder="Enter Name"
-                        style="background-color: #F3F2F2;" />
-                </div>
-            </div>
-
-        </div>
-        <div class="d-flex flex-row  px-4 py-1 mb-3" style="gap:25px">
-            <div class="d-flex flex-column descripton-area-container" style="width: 100%;">
-                <div class="text-select">
-                    Subject
-                </div>
-                <div class="container-inner" style="background-color: #F3F2F2;">
-                    <input class="form-control input" type="text" placeholder="Enter Name"
-                        style="background-color: #F3F2F2;" />
-                </div>
-            </div>
-
-        </div>
-
-        <div class="file-container-input px-4 py-1 mb-3" style="width: 100%;">
-          <div class="text-select">  Message  </div>
-          <textarea class="form-control" id="editor" style="background-color: #F3F2F2;"></textarea>    
-        </div>
-        <div class="d-flex justify-content-center align-items-center m-3 flex-wrap" style="gap:15px">
-            <div class="d-flex p-3   justify-content-between" id="download-contract-word"
-                style="width:45%;background-color: #F3F2F2;">
-                <div class="d-flex" style="gap:10px">
-                    <img src="../img/icons/word.svg" />
-                    <div class="d-flex flex-column">
-                        <span>Research.rar</span>
-                        <span>5.778 gbs</span>
-                    </div>
-                </div>
-                <img src="../img/icons/download-solid.svg" />
-            </div>
-            <div class="d-flex p-3 justify-content-between" id="download-contract-excel"
-                style="width:45%;background-color: #F3F2F2;">
-                <div class="d-flex" style="gap:10px">
-                    <img src="../img/icons/excel.svg" />
-                    <div class="d-flex flex-column">
-                        <span>Research.rar</span>
-                        <span>5.778 gbs</span>
-                    </div>
-                </div>
-                <img src="../img/icons/download-solid.svg" />
-            </div>
-        </div>
-        <div class="modal-footer d-flex justify-content-center">
-            <button type="button" class="btn"
-                style="background-color: #E1E1E1; color: #364153; border-radius:5px; width:100px"
-                data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn"
-                style="background-color: #364153; color: white; border-radius:5px; width:100px"
-                data-bs-dismiss="modal">Save</button>
-        </div>
-    </div>
-</div>
-</div>
-<!-- End email modal -->
-
+				</div>
+				<div class="d-flex flex-row  px-4 py-1 mb-3" style="gap:25px">
+					<div class="d-flex flex-column descripton-area-container" style="width: 100%;">
+						<div class="text-select">
+							Subject
+						</div>
+						<div class="container-inner" style="background-color: #F3F2F2;">
+							<input class="form-control input" type="text" placeholder="Enter Name"
+								style="background-color: #F3F2F2;" />
+						</div>
+					</div>
+				</div>
+				<div class="file-container-input px-4 py-1 mb-3" style="width: 100%;">
+					<div class="text-select"> Message </div>
+					<textarea class="form-control" id="editor" style="background-color: #F3F2F2;"></textarea>
+				</div>
+				<div class="d-flex justify-content-center align-items-center m-3 flex-wrap" style="gap:15px">
+					<div class="file-container-input w-75 ">
+						<button type="button" class="file-button fileSelect">
+							<span>Attach File</span>
+							<img src="../img//icons/upload.svg" alt="">
+						</button>
+						<input type="file" class="file-input d-none uploadInput" type="file" multiple>
+						<ul class="imgbox">
+						</ul>
+					</div>
+				</div>
+				<div class="modal-footer d-flex justify-content-center">
+					<button type="button" class="btn"
+						style="background-color: #E1E1E1; color: #364153; border-radius:5px; width:100px"
+						data-bs-dismiss="modal">Close</button>
+					<button type="button" class="btn"
+						style="background-color: #364153; color: white; border-radius:5px; width:100px"
+						data-bs-dismiss="modal">Save</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End email modal -->
 
 <!-- pdf  modal -->
 <div class="modal fade" id="pdfModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
@@ -1165,50 +1177,22 @@ aria-hidden="true">
 </div>
 <!-- End pdf modal -->
 
+
+
   <script>
     $('.ui.dropdown').dropdown();
   </script>
 
-  <!-- global js -->
-  <script src="../JS/global/jquery/jquery-3.4.1.min.js"></script>
-  <script src="../JS/client/main.js"></script>
-  <script src="../JS/global/bootstrap/bootstrap.bundle.min.js"></script>
-  <script src="../JS/global/bootstrap/bootstrap-select.js"></script>
-  <script src="../JS/global/datePicker/datepicker.js"></script>
-  <script src="../JS/layout.js"></script>
+	<!-- global js -->
+	<script src="../JS/global/jquery/jquery-3.4.1.min.js"></script>
+	<script src="../JS/client/main.js"></script>
+	<script src="../JS/global/bootstrap/bootstrap.bundle.min.js"></script>
+	<script src="../JS/global/bootstrap/bootstrap-select.js"></script>
+	<script src="../JS/global/datePicker/datepicker.js"></script>
+	<script src="../JS/global/swiper/swiper-bundle.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+	<script src="../JS/layout.js"></script>
 
-  <!-- this page -->
-  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-  <script type="text/javascript">
-    $(".add_note").on("click", function (event) {
-          event.preventDefault();
-            var newRow = `
-            <div class="form-row my-4">
-                          <div class="col-md-10 col-12">
-                            <div>
-                              <label>Note</label>
-                            </div>
-                            <div>
-                              <textarea class="form-control" placeholder="Enter your Note" rows="2"></textarea>
-                            </div>
-                          </div>
-                          <div class="col-md-2 col-12">
-                            <div>
-                              <label>Attachment</label>
-                            </div>
-                            <div class="file-container-input">
-                              <button type="button" class="file-button" onclick="openFile(this)">
-                                <span>Attach File</span>
-                                <img src="../img//icons/upload.svg" alt="">
-                              </button>
-                              <input type="file" class="file-input d-none" id="attachment">
-                            </div>
-                          </div>
-                        </div>
-            `;
-            $(".row-note").append(newRow);
-        });
-      </script>
 </body>
 
 </html>

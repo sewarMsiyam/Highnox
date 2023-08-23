@@ -456,6 +456,7 @@ ul {
 .cardDark {
   background: #364153;
   color: #fff;
+  width: 150px;
 }
 .cardDark .card-header, .cardLight .card-header, .cardSecondLight .card-header {
   border-bottom-color: #E9E9E9 !important;
@@ -466,22 +467,24 @@ ul {
 .cardLight {
   background: #EEBDBD;
   color: #fff;
+  width: 150px;
 }
 .cardSecondLight {
   background: #EEC3F1;
   color: #fff;
+  width: 150px;
 }
 .splitCard {
   background: transparent;
   border: 0;
 }
 .splitCardDiv {
-  padding: 16px !important;
+  padding: 16px 9px !important;
   background: #EEC3F1;
   border-radius: 5px;
   text-align: center;
   color: #fff;
-  width: 100%;
+  width: 150px;
 }
 
 
@@ -1067,4 +1070,16 @@ td.ui-sortable {
   color: #d92e2e;
   border-radius: 50%;
   font-size: 12px;
+}
+
+.person{
+  background: #ffcccc;
+    border-radius: 50%;
+    color: #000;
+    font-size: 9px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

@@ -830,11 +830,9 @@
                           <span>Note</span><span><img src="../images/sort-ic.svg" class="sotTble"></span>
                         </div>
                       </th>
-                      <th onclick="sortTable(14, 'myTable')" class="style-th">
-                        <span>Action</span>
-                      </td>
-                      <td class="style-td p-1">
-                      </td>
+                      <th  class="style-th">
+                        <div style=" width: 70px; margin:auto;" >Action</div>
+                      </th>
                     </tr>
                   </thead>
                   <tbody>
@@ -889,7 +887,7 @@
                           <i class="fa-solid fa-note-sticky"></i>
                         </button>
                       </td>
-                      <td class="style-td p-1">
+                      <td class="style-td">
                         <button type="button" class="btn btn-secondary dataTableButtons edite-Role"> <i class="fa fa-pen"></i> </button>
                         <button type="button" class="btn btn-secondary dataTableButtons"><i class="fa fa-trash"></i></button>
                       </td>
@@ -940,12 +938,12 @@
                       <td class="style-td">
                         0000
                       </td>
-                      <td class="style-td p-1">
+                      <td class="style-td">
                         <button type="button" class="btn btn-secondary dataTableButtons" data-bs-toggle="modal" data-bs-target="#notModal">
                           <i class="fa-solid fa-note-sticky"></i>
                         </button>
                       </td>
-                      <td class="style-td p-1">
+                      <td class="style-td">
                         <button type="button" class="btn btn-secondary dataTableButtons edite-Role"> <i class="fa fa-pen"></i> </button>
                         <button type="button" class="btn btn-secondary dataTableButtons"><i class="fa fa-trash"></i></button>
                       </td>
@@ -1068,7 +1066,7 @@
                         </div>
                       </th>
                       <th  class="style-th">
-                        <div style=" width: 100px; margin:auto;" >Action</div>
+                        <div style=" width: 70px; margin:auto;" >Action</div>
                       </th>
                     </tr>
                   </thead>
@@ -1118,9 +1116,8 @@
                           <i class="fa-solid fa-note-sticky"></i>
                         </button>
                       </td>
-                      <td class="style-td p-1">
-                        <button type="button" class="btn btn-secondary dataTableButtons edite-Role"> <i class="fa fa-pen"></i> </button>
-
+                      <td class="style-td">
+                        <button type="button" class="btn btn-secondary dataTableButtons edite-Role"><i class="fa fa-pen"></i></button>
                         <button type="button" class="btn btn-secondary dataTableButtons"><i class="fa fa-trash"></i></button>
                       </td>
                     </tr>
@@ -1169,8 +1166,8 @@
                           <i class="fa-solid fa-note-sticky"></i>
                         </button>
                       </td>
-                      <td class="style-td p-1">
-                        <button type="button" class="btn btn-secondary dataTableButtons edite-Role"> <i class="fa fa-pen"></i> </button>
+                      <td class="style-td">
+                        <button type="button" class="btn btn-secondary dataTableButtons edite-Role"><i class="fa fa-pen"></i></button>
                         <button type="button" class="btn btn-secondary dataTableButtons"><i class="fa fa-trash"></i></button>
                       </td>
                     </tr>
@@ -1255,53 +1252,104 @@
                   </div>
                 </div>
               </div>
-
-
-
               <div class="row-container-Reminder"></div>
-
-
-
-
-
-
             </div>
 
-            <div class="mt-4 p-4 ">
-              <h3 class="tit-meetroom">
-                Total Articles
-              </h3>
-              <div class="content-form rounded my-3 shadow">
-                <div class="d-flex justify-content-between align-items-center px-3 pt-3 ">
-                  <p class="mb-0"> Internal Note</p>
-                  <a href="#" class="btn btn-primary create-bArticle Detailstn add_Internal_not">
-                    <i class="bi bi-plus-circle-fill"></i>
-                   Add new Note
-                 </a>
-                </div>
-                <hr>
-                <div class=" p-3 pt-0">
-                  <label>Internal Notes</label>
-                  <textarea class="form-control" placeholder="Enter your Note" rows="2"></textarea>
-                </div>
-                <div class="row-note-Internal"></div>
-              </div>
-              <div class="content-form rounded my-3 shadow">
-                <div class="d-flex justify-content-between align-items-center px-3 pt-3 ">
-                  <p class="mb-0"> External Note</p>
-                  <a href="#" class="btn btn-primary create-bArticle Detailstn add_External_not">
-                    <i class="bi bi-plus-circle-fill"></i>
-                   Add new Note
-                 </a>
-                </div>
-                <hr>
-                <div class=" p-3 pt-0">
-                  <label>Internal Notes</label>
-                  <textarea class="form-control" placeholder="Enter your Note" rows="2"></textarea>
-                </div>
-                <div class="row-note-External"></div>
-              </div>
-            </div>
+
+
+            <div class="mt-4 p-4 "> <h3 class="tit-meetroom"> Total Articles </h3>  </div>
+            <div class="container-fluid content-form bg-light  mt-2">
+								<div class="py-4 border-radius-20" style="background: #e8e8e8;">
+									<div class="note form-row px-4">
+										<div class="col-md-9 col-12">
+											<div class="bg-white border rounded p-3">
+												<div class="d-flex justify-content-between">
+													<div>
+														<label>Internal Notes</label>
+													</div>
+													<div class="text-right mx-4">
+														<button class="open-modal btn btn-primary">
+															<i class="bi bi-plus-circle-fill"></i>
+															Add Note
+														</button>
+													</div>
+												</div>
+												<hr>
+												<div class="displayValues">
+													<p><span class="text-danger pl-1">2023-01-10</span> <span
+															class="text-danger px-1"> day </span> <span
+															class="text-danger px-1">13:24</span> <span
+															class="text-danger px-1">sewar siyam</span> <span
+															class="px-1">text text text text text text text text
+															text</span> </p>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-3 col-12 ">
+											<div>
+												<label>Attachment</label>
+											</div>
+											<div class="file-container-input">
+												<button type="button" class="file-button fileSelect">
+													<span>Attach File</span>
+													<img src="../img//icons/upload.svg" alt="">
+												</button>
+												<input type="file" class="file-input d-none uploadInput" type="file"
+													multiple>
+												<ul class="imgbox">
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						
+              <div class="container-fluid content-form bg-light  my-3">
+								<div class="py-4 border-radius-20" style="background: #e8e8e8;">
+									<div class="note form-row px-4">
+										<div class="col-md-9 col-12">
+											<div class="bg-white border rounded p-3">
+												<div class="d-flex justify-content-between">
+													<div>
+														<label>External Notes</label>
+													</div>
+													<div class="text-right mx-4">
+														<button class="open-modal btn btn-primary">
+															<i class="bi bi-plus-circle-fill"></i>
+															Add Note
+														</button>
+													</div>
+												</div>
+												<hr>
+												<div class="displayValues">
+													<p><span class="text-danger pl-1">2023-01-10</span> <span
+															class="text-danger px-1"> day </span> <span
+															class="text-danger px-1">13:24</span> <span
+															class="text-danger px-1">sewar siyam</span> <span
+															class="px-1">text text text text text text text text
+															text</span> </p>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-3 col-12 ">
+											<div>
+												<label>Attachment</label>
+											</div>
+											<div class="file-container-input">
+												<button type="button" class="file-button fileSelect">
+													<span>Attach File</span>
+													<img src="../img//icons/upload.svg" alt="">
+												</button>
+												<input type="file" class="file-input d-none uploadInput" type="file"
+													multiple>
+												<ul class="imgbox">
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
             <div class="container-fluid d-flex justify-content-end">
               <div class="col-md-4 col-12 text-right">
                 <button class="btn btn-primary  cancel-btn" type="submit">
@@ -1346,17 +1394,63 @@
     </div>
   <!-- end modals -->
 
+
+  
+	<!-- modals Add not -->
+	<div class="modal note fade" id="AddnotModal" tabindex="-1" role="dialog" aria-labelledby="notModalTitle"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header d-flex justify-content-end  border-0 ">
+        <button type="button" class="close-btn" data-bs-dismiss="modal" aria-label="Close">
+          <i class="bi bi-x modal-close-icon"></i>
+        </button>
+      </div>
+      <div class="mx-4 mb-4 mt-0">
+        <div class="mb-2">
+          <label>Name</label>
+          <input type="text" class="form-control border bg-whtie Name_not" placeholder="Name">
+        </div>
+        <div class="mb-2">
+          <label>Date</label>
+          <div class="d-flex align-items-center position-relative form-control">
+            <input type="text" class="form-control p-0 datepicker border-0 w-100 Date_not"
+              placeholder="Select date">
+            <img class="dateTable-svg" width="12" src="../images/date.svg">
+          </div>
+        </div>
+        <div class="mb-2">
+          <label>Time</label>
+          <input type="time" class="form-control border bg-whtie Time_not" placeholder="Select date">
+        </div>
+        <div>
+          <label>Note</label>
+          <textarea class="form-control text_not" placeholder="Enter your Note" rows="4"></textarea>
+        </div>
+      </div>
+
+      <div class="modal-footer d-flex justify-content-center">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary save_not">save</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end modals Add not-->
+
   <script>
     $('.ui.dropdown').dropdown();
   </script>
+	<!-- global js -->
+	<script src="../JS/global/jquery/jquery-3.4.1.min.js"></script>
+	<script src="../JS/client/main.js"></script>
+	<script src="../JS/global/bootstrap/bootstrap.bundle.min.js"></script>
+	<script src="../JS/global/bootstrap/bootstrap-select.js"></script>
+	<script src="../JS/global/datePicker/datepicker.js"></script>
+	<script src="../JS/global/swiper/swiper-bundle.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+	<script src="../JS/layout.js"></script>
 
-  <!-- global js -->
-  <script src="../JS/global/jquery/jquery-3.4.1.min.js"></script>
-  <script src="../JS/global/jspdf/jspdf.js"></script>
-  <script src="../JS/global/bootstrap/bootstrap.bundle.min.js"></script>
-  <script src="../JS/global/bootstrap/bootstrap-select.js"></script>
-  <script src="../JS/global/datePicker/datepicker.js"></script>
-  <script src="../JS/layout.js"></script>
   <script type="text/javascript">
     $(function () {
     var counter = 1;
@@ -1381,7 +1475,7 @@
         cols += '<td class="style-td p-1"><input class="form-control fs-10 rounded-0" type="text" placeholder="text"></td>';
         cols += '<td class="style-td p-1"><select class="form-control rounded-0"> <option>select</option> <option> 1</option> <option> 2</option> <option> 3</option> </select></td>';
         cols += '<td class="style-td p-1"><button type="button" class="btn btn-secondary dataTableButtons" data-bs-toggle="modal" data-bs-target="#notModal"><i class="fa-solid fa-note-sticky"></i></button></td>';
-        cols += '<td style=" width: 100px;" class="style-td"> <button type="button" class="btn btn-secondary dataTableButtons edite-save"> <i class="fa-solid fa-check"></i> </button> <button type="button" class="btn btn-secondary dataTableButtons deleteRow"> <i class="fa fa-trash"></i> </button> </td>';
+        cols += '<td class="style-td"> <button type="button" class="btn btn-secondary dataTableButtons edite-save"> <i class="fa-solid fa-check"></i> </button> <button type="button" class="btn btn-secondary dataTableButtons deleteRow"> <i class="fa fa-trash"></i> </button> </td>';
 
 
         newRow.append(cols);
@@ -1462,7 +1556,7 @@ $(function () {
         cols += '<td class="style-td p-1"><select class="form-control rounded-0"> <option>select</option> <option> 1</option> <option> 2</option> <option> 3</option> </select></td>';
         cols += '<td class="style-td p-1"><select class="form-control rounded-0"> <option>select</option> <option> 1</option> <option> 2</option> <option> 3</option> </select></td>';
         cols += '<td class="style-td p-1"><button type="button" class="btn btn-secondary dataTableButtons" data-bs-toggle="modal" data-bs-target="#notModal"><i class="fa-solid fa-note-sticky"></i></button></td>';
-        cols += '<td style=" width: 100px;" class="style-td"> <button type="button" class="btn btn-secondary dataTableButtons edite-save"> <i class="fa-solid fa-check"></i> </button> <button type="button" class="btn btn-secondary dataTableButtons deleteRow"> <i class="fa fa-trash"></i> </button> </td>';
+        cols += '<td class="style-td"> <button type="button" class="btn btn-secondary dataTableButtons edite-save"> <i class="fa-solid fa-check"></i> </button> <button type="button" class="btn btn-secondary dataTableButtons deleteRow"> <i class="fa fa-trash"></i> </button> </td>';
 
         newRow.append(cols);
         $(".table_ArticleDetails").append(newRow);
@@ -1571,38 +1665,6 @@ $(function () {
     });
 
 });
-
-
-
-
-
-
-
-
-
-
-    
-$(".add_Internal_not").on("click", function (event) {
-      event.preventDefault();
-        var newRow = `
-        <div class=" p-3 pt-0">
-                  <label>Internal Notes</label>
-                  <textarea class="form-control" placeholder="Enter your Note" rows="2"></textarea>
-                </div>
-        `;
-        $(".row-note-Internal").append(newRow);
-    });
-    $(".add_External_not").on("click", function (event) {
-      event.preventDefault();
-        var newRow = `
-        <div class=" p-3 pt-0">
-                  <label>External Notes</label>
-                  <textarea class="form-control" placeholder="Enter your Note" rows="2"></textarea>
-                </div>
-        `;
-        $(".row-note-External").append(newRow);
-    });
-
 
 
 
