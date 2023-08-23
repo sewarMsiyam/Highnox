@@ -19,7 +19,6 @@
   <link href="../css/global/bootstrap/bootstrap.min.css" rel="stylesheet">
   <link href="../css/global/bootstrap/bootstrap-select.css" rel="stylesheet">
   <link href="../css/global/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="../css/global/filepond/filepond.min.css" rel="stylesheet">
 
   <!-- dashboard style -->
   <link href="../css/dashboard/main-dashboard.css" rel="stylesheet">
@@ -749,7 +748,7 @@
                             </div>
                           </div>
                         </div>
-                        <div class="col-md-3 col-12">
+                        <div class="col-md-3 col-12 ">
                           <div>
                             <label>Attachment</label>
                           </div>
@@ -769,7 +768,7 @@
                 </div>
 
                 <div class="container-fluid content-form bg-light budget-table mt-4 table-tab-pane">
-                  <div class="mx-4 p-4 border-radius-20"  style="background: #e8e8e8;">
+                  <div class="p-4 border-radius-20"  style="background: #e8e8e8;">
                     <div class="d-flex justify-content-between">
                       <div class="py-2 d-flex justify-content-start align-items-center flex-column-responsive">
                         <h4 class="py-2">Add Floors</h4>
@@ -894,6 +893,50 @@
         </div>
   </main>
 
+
+  
+
+	<!-- modals Add not -->
+	<div class="modal note fade" id="AddnotModal" tabindex="-1" role="dialog" aria-labelledby="notModalTitle"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header d-flex justify-content-end  border-0 ">
+        <button type="button" class="close-btn" data-bs-dismiss="modal" aria-label="Close">
+          <i class="bi bi-x modal-close-icon"></i>
+        </button>
+      </div>
+      <div class="mx-4 mb-4 mt-0">
+        <div class="mb-2">
+          <label>Name</label>
+          <input type="text" class="form-control border bg-whtie Name_not" placeholder="Name">
+        </div>
+        <div class="mb-2">
+          <label>Date</label>
+          <div class="d-flex align-items-center position-relative form-control">
+            <input type="text" class="form-control p-0 datepicker border-0 w-100 Date_not"
+              placeholder="Select date">
+            <img class="dateTable-svg" width="12" src="../images/date.svg">
+          </div>
+        </div>
+        <div class="mb-2">
+          <label>Time</label>
+          <input type="time" class="form-control border bg-whtie Time_not" placeholder="Select date">
+        </div>
+        <div>
+          <label>Note</label>
+          <textarea class="form-control text_not" placeholder="Enter your Note" rows="4"></textarea>
+        </div>
+      </div>
+
+      <div class="modal-footer d-flex justify-content-center">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary save_not">save</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end modals Add not-->
   <script>
     $('.ui.dropdown').dropdown();
   </script>
@@ -906,7 +949,6 @@
       <script src="../JS/global/bootstrap/bootstrap-select.js"></script>
       <script src="../JS/global/datePicker/datepicker.js"></script>
       <script src="../JS/global/swiper/swiper-bundle.min.js"></script>
-      <script src="../JS/global/filepond/filepond.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
       <script src="../JS/layout.js"></script>
     

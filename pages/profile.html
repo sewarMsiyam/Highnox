@@ -2,33 +2,35 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <title>highnox</title>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <meta content="" name="keywords">
-  <meta content="" name="description">
-  <link rel="icon" href="../images/Highnox.png" type="image/x-icon" />
+	<meta charset="utf-8">
+	<title>highnox</title>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<meta content="" name="keywords">
+	<meta content="" name="description">
+	<link rel="icon" href="../images/Highnox.png" type="image/x-icon" />
 
-  <link rel="stylesheet" href="../css/semantic.min.css"  >
-  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-  <script src="../JS/semantic.min.js"></script>
-  <!-- global style -->
-  <link href="../css/global/datepicker/datepicker.css" rel="stylesheet">
-  <link href="../css/global/bootstrap/bootstrap.min.css" rel="stylesheet">
-  <link href="../css/global/bootstrap/bootstrap-select.css" rel="stylesheet">
-  <link href="../css/global/swiper/swiper-bundle.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="../css/semantic.min.css">
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src="../JS/semantic.min.js"></script>
 
-  <!-- dashboard style -->
-  <link href="../css/dashboard/main-dashboard.css" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="../css/dashboard/style.css">
-  <link rel="stylesheet" type="text/css" href="../css/dashboard/screen.css">
-  <link rel="stylesheet" href="../css/dashboard/media.css" >
+	<!-- global style -->
+	<link href="../css/global/bootstrap/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/global/bootstrap/bootstrap-select.css" rel="stylesheet">
+	<link href="../css/global/swiper/swiper-bundle.min.css" rel="stylesheet">
+	<link href="../css/global/datepicker/datepicker.css" rel="stylesheet">
 
-  <!-- Icon Font Stylesheet cdn -->
-  <link rel="stylesheet" href="../css/global/font-awesome/css/all.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-  
-  <link rel="stylesheet" href="../css/layout.css">
+	<!-- dashboard style -->
+	<link href="../css/dashboard/main-dashboard.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../css/dashboard/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/dashboard/screen.css">
+	<link rel="stylesheet" href="../css/dashboard/media.css">
+
+	<!-- Icon Font Stylesheet cdn -->
+	<link rel="stylesheet" href="../css/global/font-awesome/css/all.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+	<link rel="stylesheet" href="../css/layout.css">
+
 </head>
 <body>
   <main class="layout" data-sidebar-minimize="off">
@@ -920,290 +922,242 @@
 
               <div class="tab-pane fade" id="edu_exp">
               
-                
-
- <div class=" content-form bg-light pb-4 mx-4">
-                                <div
-                                    class="card-header bg-transparent border-0 px-0 mx-4 d-flex  justify-content-between">
-                                    <h4>Education</h4>
-                                    <a href="#"
-                                        class="btn btn-primary create-btn add_new_Education border-radius-2 height-auto">
-                                        <i class="bi bi-plus-circle-fill"></i>
-                                        Add Education
-                                    </a>
-                                </div>
-                                <div class="table-responsive bg-light mt-4 border-radius-20 shadow">
-                                    <div class="secondTableContainer">
-                                        <table id="myTable" class="table table-Education">
-                                            <thead>
-                                                <tr class="tr">
-                                                    <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
-                                                    <th onclick="sortTable(0, 'myTable')" class="style-th">
-                                                        <div>
-                                                            <input type="checkbox" class="" id="customCheck1">
-                                                        </div>
-                                                    </th>
-                                                    <th onclick="sortTable(1, 'myTable')" class="style-th">
-                                                        <div>
-                                                            <span>Eduction</span><span><img src="../images/sort-ic.svg"
-                                                                    class="sotTble"></span>
-                                                        </div>
-                                                    </th>
-                                                    <th onclick="sortTable(2, 'myTable')" class="style-th">
-                                                        <div>
-                                                            <span>School Name</span><span><img
-                                                                    src="../images/sort-ic.svg" class="sotTble"></span>
-                                                        </div>
-                                                    </th>
-                                                    <th onclick="sortTable(3, 'myTable')" class="style-th">
-                                                        <div>
-                                                            <span>From</span><span><img src="../images/sort-ic.svg"
-                                                                    class="sotTble"></span>
-                                                        </div>
-                                                    </th>
-                                                    <th onclick="sortTable(4, 'myTable')" class="style-th">
-                                                        <div>
-                                                            <span>To</span><span><img src="../images/sort-ic.svg"
-                                                                    class="sotTble"></span>
-                                                        </div>
-                                                    </th>
-                                                    <th onclick="sortTable(5, 'myTable')" class="style-th">
-                                                        <div>
-                                                            <span>Action</span><span><img src="../images/sort-ic.svg"
-                                                                    class="sotTble"></span>
-                                                        </div>
-                                                    </th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr class="tr style-table-my1 tr-active">
-                                                    <td class="style-td">
-                                                        <input type="checkbox" class="" id="customCheck1">
-                                                    </td>
-                                                    <td class="style-td">
-                                                        System Design
-                                                    </td>
-                                                    <td class="style-td">
-                                                        Sithm University
-                                                    </td>
-                                                    <td class="style-td">
-                                                        Sithm University
-                                                    </td>
-                                                    <td class="style-td">
-                                                        Sithm University
-                                                    </td>
-                                                    <td class="style-td">
-                                                        <button type="button"
-                                                            class="btn btn-secondary dataTableButtons edite-save"><i
-                                                                class="fa fa fa-pen"></i> </button>
-                                                        <button type="button" class="btn btn-secondary dataTableButtons"
-                                                            data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
-                                                            <img src="../images/client-image.svg" class="image-actions">
-                                                        </button>
-                                                        <div class="tooltip-left btn btn-secondary dataTableButtons">
-                                                            <img src="../images/client-person.svg"
-                                                                class="image-actions">
-                                                            <span class="tooltiptext">Tooltip text</span>
-                                                        </div>
-                                                        <button type="button"
-                                                            class="btn btn-secondary dataTableButtons"><i
-                                                                class="fa fa-trash"></i></button>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class=" content-form bg-light pb-4 mx-4">
-                                <div
-                                    class="card-header bg-transparent border-0 px-0 mx-4 d-flex  justify-content-between">
-                                    <h4>Employer</h4>
-                                    <a href="#"
-                                        class="btn btn-primary create-btn add_new_Employer border-radius-2 height-auto">
-                                        <i class="bi bi-plus-circle-fill"></i>
-                                        Add Employer
-                                    </a>
-                                </div>
-                                <div class="table-responsive bg-light mt-4 border-radius-20 shadow">
-                                    <div class="secondTableContainer">
-                                        <table id="myTable" class="table table-Employer">
-                                            <thead>
-                                                <tr class="tr">
-                                                    <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
-                                                    <th onclick="sortTable(0, 'myTable')" class="style-th">
-                                                        <div>
-                                                            <input type="checkbox" class="" id="customCheck1">
-                                                        </div>
-                                                    </th>
-                                                    <th onclick="sortTable(1, 'myTable')" class="style-th">
-                                                        <div>
-                                                            <span>Eduction</span><span><img src="../images/sort-ic.svg"
-                                                                    class="sotTble"></span>
-                                                        </div>
-                                                    </th>
-                                                    <th onclick="sortTable(2, 'myTable')" class="style-th">
-                                                        <div>
-                                                            <span>School Name</span><span><img
-                                                                    src="../images/sort-ic.svg" class="sotTble"></span>
-                                                        </div>
-                                                    </th>
-                                                    <th onclick="sortTable(3, 'myTable')" class="style-th">
-                                                        <div>
-                                                            <span>From</span><span><img src="../images/sort-ic.svg"
-                                                                    class="sotTble"></span>
-                                                        </div>
-                                                    </th>
-                                                    <th onclick="sortTable(4, 'myTable')" class="style-th">
-                                                        <div>
-                                                            <span>To</span><span><img src="../images/sort-ic.svg"
-                                                                    class="sotTble"></span>
-                                                        </div>
-                                                    </th>
-                                                    <th onclick="sortTable(5, 'myTable')" class="style-th">
-                                                        <div>
-                                                            <span>Action</span><span><img src="../images/sort-ic.svg"
-                                                                    class="sotTble"></span>
-                                                        </div>
-                                                    </th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr class="tr style-table-my1 tr-active">
-                                                    <td class="style-td">
-                                                        <input type="checkbox" class="" id="customCheck1">
-                                                    </td>
-                                                    <td class="style-td">
-                                                        System Design
-                                                    </td>
-                                                    <td class="style-td">
-                                                        Sithm University
-                                                    </td>
-                                                    <td class="style-td">
-                                                        Sithm University
-                                                    </td>
-                                                    <td class="style-td">
-                                                        Sithm University
-                                                    </td>
-                                                    <td class="style-td">
-                                                        <button type="button"
-                                                            class="btn btn-secondary dataTableButtons edite-save"><i
-                                                                class="fa fa fa-pen"></i> </button>
-                                                        <button type="button" class="btn btn-secondary dataTableButtons"
-                                                            data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
-                                                            <img src="../images/client-image.svg" class="image-actions">
-                                                        </button>
-                                                        <div class="tooltip-left btn btn-secondary dataTableButtons">
-                                                            <img src="../images/client-person.svg"
-                                                                class="image-actions">
-                                                            <span class="tooltiptext">Tooltip text</span>
-                                                        </div>
-                                                        <button type="button"
-                                                            class="btn btn-secondary dataTableButtons"><i
-                                                                class="fa fa-trash"></i></button>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class=" content-form bg-light pb-4 mx-4">
-                                <div
-                                    class="card-header bg-transparent border-0 px-0 mx-4 d-flex  justify-content-between">
-                                    <h4>Competence</h4>
-                                    <a href="#"
-                                        class="btn btn-primary create-btn add_new_Competence border-radius-2 height-auto">
-                                        <i class="bi bi-plus-circle-fill"></i>
-                                        Add Competence
-                                    </a>
-                                </div>
-                                <div class="table-responsive bg-light mt-4 border-radius-20 shadow">
-                                    <div class="secondTableContainer">
-                                        <table id="myTable" class="table table-Competence">
-                                            <thead>
-                                                <tr class="tr">
-                                                    <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
-                                                    <th onclick="sortTable(0, 'myTable')" class="style-th">
-                                                        <div>
-                                                            <input type="checkbox" class="" id="customCheck1">
-                                                        </div>
-                                                    </th>
-                                                    <th onclick="sortTable(1, 'myTable')" class="style-th">
-                                                        <div>
-                                                            <span>Eduction</span><span><img src="../images/sort-ic.svg"
-                                                                    class="sotTble"></span>
-                                                        </div>
-                                                    </th>
-                                                    <th onclick="sortTable(2, 'myTable')" class="style-th">
-                                                        <div>
-                                                            <span>School Name</span><span><img
-                                                                    src="../images/sort-ic.svg" class="sotTble"></span>
-                                                        </div>
-                                                    </th>
-                                                    <th onclick="sortTable(3, 'myTable')" class="style-th">
-                                                        <div>
-                                                            <span>From</span><span><img src="../images/sort-ic.svg"
-                                                                    class="sotTble"></span>
-                                                        </div>
-                                                    </th>
-                                                    <th onclick="sortTable(4, 'myTable')" class="style-th">
-                                                        <div>
-                                                            <span>To</span><span><img src="../images/sort-ic.svg"
-                                                                    class="sotTble"></span>
-                                                        </div>
-                                                    </th>
-                                                    <th onclick="sortTable(5, 'myTable')" class="style-th">
-                                                        <div>
-                                                            <span>Action</span><span><img src="../images/sort-ic.svg"
-                                                                    class="sotTble"></span>
-                                                        </div>
-                                                    </th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr class="tr style-table-my1 tr-active">
-                                                    <td class="style-td">
-                                                        <input type="checkbox" class="" id="customCheck1">
-                                                    </td>
-                                                    <td class="style-td">
-                                                        System Design
-                                                    </td>
-                                                    <td class="style-td">
-                                                        Sithm University
-                                                    </td>
-                                                    <td class="style-td">
-                                                        Sithm University
-                                                    </td>
-                                                    <td class="style-td">
-                                                        Sithm University
-                                                    </td>
-                                                    <td class="style-td">
-                                                        <button type="button"
-                                                            class="btn btn-secondary dataTableButtons edite-save"><i
-                                                                class="fa fa fa-pen"></i> </button>
-                                                        <button type="button" class="btn btn-secondary dataTableButtons"
-                                                            data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
-                                                            <img src="../images/client-image.svg" class="image-actions">
-                                                        </button>
-
-                                                        <div class="tooltip-left btn btn-secondary dataTableButtons">
-                                                            <img src="../images/client-person.svg"
-                                                                class="image-actions">
-                                                            <span class="tooltiptext">Tooltip text</span>
-                                                        </div>
-                                                        <button type="button"
-                                                            class="btn btn-secondary dataTableButtons"><i
-                                                                class="fa fa-trash"></i></button>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-
-
+                <div class="table-tab-pane content-form bg-light pb-4 mx-4">
+                  <div
+                      class="card-header bg-transparent border-0 px-0 mx-4 d-flex  justify-content-between">
+                      <h4>Education</h4>
+                      <a href="#"
+                          class="btn btn-primary create-btn add_new_Education border-radius-2 height-auto">
+                          <i class="bi bi-plus-circle-fill"></i>
+                          Add Education
+                      </a>
+                  </div>
+                  <div class="table-responsive bg-light mt-4 border-radius-20 shadow">
+                      <div class="secondTableContainer">
+                          <table id="myTable1" class="table table-Education">
+                              <thead>
+                                  <tr class="tr">
+                                      <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
+                                      <th class="style-th">
+                                          <div>
+                                              <input type="checkbox" class="selectAll">
+                                          </div>
+                                      </th>
+                                      <th onclick="sortTable(1, 'myTable1')" class="style-th">
+                                          <div>
+                                              <span>Eduction</span><span><img src="../images/sort-ic.svg"
+                                                      class="sotTble"></span>
+                                          </div>
+                                      </th>
+                                      <th onclick="sortTable(2, 'myTable1')" class="style-th">
+                                          <div>
+                                              <span>School Name</span><span><img
+                                                      src="../images/sort-ic.svg" class="sotTble"></span>
+                                          </div>
+                                      </th>
+                                      <th onclick="sortTable(3, 'myTable1')" class="style-th">
+                                          <div>
+                                              <span>From</span><span><img src="../images/sort-ic.svg"
+                                                      class="sotTble"></span>
+                                          </div>
+                                      </th>
+                                      <th onclick="sortTable(4, 'myTable1')" class="style-th">
+                                          <div>
+                                              <span>To</span><span><img src="../images/sort-ic.svg"
+                                                      class="sotTble"></span>
+                                          </div>
+                                      </th>
+                                      <th class="style-th">
+                                          <div style=" width: 170px; margin:auto;">
+                                              <span>Action</span>
+                                          </div>
+                                      </th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                                  <tr class="tr style-table-my1 tr-active">
+                                      <td class="style-td">
+                                          <input type="checkbox" class="" id="customCheck1">
+                                      </td>
+                                      <td class="style-td">
+                                          System Design
+                                      </td>
+                                      <td class="style-td">
+                                          Sithm University
+                                      </td>
+                                      <td class="style-td">
+                                          Sithm University
+                                      </td>
+                                      <td class="style-td">
+                                          Sithm University
+                                      </td>
+                                      <td  class="style-td p-1"><button type="button" class="btn btn-secondary dataTableButtons edite-save"><i class="fa-solid fa-pen"></i> </button> <button type="button" class="btn btn-secondary dataTableButtons" data-bs-toggle="modal" data-bs-target="#exampleModalCenter"><img src="../images/client-image.svg" class="image-actions"></button> <div class="tooltip-left btn btn-secondary dataTableButtons"> <img src="../images/client-person.svg" class="image-actions" /> <span class="tooltiptext">Tooltip text</span> </div> <button type="button" class="btn btn-secondary dataTableButtons deleteRow"><i class="fa fa-trash"></i></button></td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                      </div>
+                  </div>
+                  <div class="action-container mt-3 d-none">
+                      <button class="btn btn-danger delete-selected">Delete <span class="selected-count d-none">0 محددة</span></button>
+                  </div>
+              </div>
+              <div class="table-tab-pane content-form bg-light pb-4 mx-4">
+                  <div
+                      class="card-header bg-transparent border-0 px-0 mx-4 d-flex  justify-content-between">
+                      <h4>Employer</h4>
+                      <a href="#"
+                          class="btn btn-primary create-btn add_new_Employer border-radius-2 height-auto">
+                          <i class="bi bi-plus-circle-fill"></i>
+                          Add Employer
+                      </a>
+                  </div>
+                  <div class="table-responsive bg-light mt-4 border-radius-20 shadow">
+                      <div class="secondTableContainer">
+                          <table id="myTable2" class="table table-Employer">
+                              <thead>
+                                  <tr class="tr">
+                                      <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
+                                      <th class="style-th">
+                                          <div>
+                                              <input type="checkbox" class="selectAll">                                                        </div>
+                                      </th>
+                                      <th onclick="sortTable(1, 'myTable2')" class="style-th">
+                                          <div>
+                                              <span>Eduction</span><span><img src="../images/sort-ic.svg"
+                                                      class="sotTble"></span>
+                                          </div>
+                                      </th>
+                                      <th onclick="sortTable(2, 'myTable2')" class="style-th">
+                                          <div>
+                                              <span>School Name</span><span><img
+                                                      src="../images/sort-ic.svg" class="sotTble"></span>
+                                          </div>
+                                      </th>
+                                      <th onclick="sortTable(3, 'myTable2')" class="style-th">
+                                          <div>
+                                              <span>From</span><span><img src="../images/sort-ic.svg"
+                                                      class="sotTble"></span>
+                                          </div>
+                                      </th>
+                                      <th onclick="sortTable(4, 'myTable2')" class="style-th">
+                                          <div>
+                                              <span>To</span><span><img src="../images/sort-ic.svg"
+                                                      class="sotTble"></span>
+                                          </div>
+                                      </th>
+                                      <th class="style-th">
+                                          <div style=" width: 170px; margin:auto;">
+                                              <span>Action</span>
+                                          </div>
+                                      </th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                                  <tr class="tr style-table-my1 tr-active">
+                                      <td class="style-td">
+                                          <input type="checkbox" >
+                                      </td>
+                                      <td class="style-td">
+                                          System Design
+                                      </td>
+                                      <td class="style-td">
+                                          Sithm University
+                                      </td>
+                                      <td class="style-td">
+                                          Sithm University
+                                      </td>
+                                      <td class="style-td">
+                                          Sithm University
+                                      </td>
+                                      <td  class="style-td p-1"><button type="button" class="btn btn-secondary dataTableButtons edite-save"><i class="fa-solid fa-pen"></i> </button> <button type="button" class="btn btn-secondary dataTableButtons" data-bs-toggle="modal" data-bs-target="#exampleModalCenter"><img src="../images/client-image.svg" class="image-actions"></button> <div class="tooltip-left btn btn-secondary dataTableButtons"> <img src="../images/client-person.svg" class="image-actions" /> <span class="tooltiptext">Tooltip text</span> </div> <button type="button" class="btn btn-secondary dataTableButtons deleteRow"><i class="fa fa-trash"></i></button></td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                      </div>
+                  </div>
+                  <div class="action-container mt-3 d-none">
+                      <button class="btn btn-danger delete-selected">Delete <span class="selected-count d-none">0 محددة</span></button>
+                  </div>
+              </div>
+              <div class=" content-form bg-light pb-4 mx-4 table-tab-pane">
+                  <div
+                      class="card-header bg-transparent border-0 px-0 mx-4 d-flex  justify-content-between">
+                      <h4>Competence</h4>
+                      <a href="#"
+                          class="btn btn-primary create-btn add_new_Competence border-radius-2 height-auto">
+                          <i class="bi bi-plus-circle-fill"></i>
+                          Add Competence
+                      </a>
+                  </div>
+                  <div class="table-responsive bg-light mt-4 border-radius-20 shadow">
+                      <div class="secondTableContainer">
+                          <table id="myTable3" class="table table-Competence">
+                              <thead>
+                                  <tr class="tr">
+                                      <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
+                                      <th class="style-th">
+                                          <div>
+                                              <input type="checkbox" class="selectAll">
+                                          </div>
+                                      </th>
+                                      <th onclick="sortTable(1, 'myTable3')" class="style-th">
+                                          <div>
+                                              <span>Eduction</span><span><img src="../images/sort-ic.svg"
+                                                      class="sotTble"></span>
+                                          </div>
+                                      </th>
+                                      <th onclick="sortTable(2, 'myTable3')" class="style-th">
+                                          <div>
+                                              <span>School Name</span><span><img
+                                                      src="../images/sort-ic.svg" class="sotTble"></span>
+                                          </div>
+                                      </th>
+                                      <th onclick="sortTable(3, 'myTable3')" class="style-th">
+                                          <div>
+                                              <span>From</span><span><img src="../images/sort-ic.svg"
+                                                      class="sotTble"></span>
+                                          </div>
+                                      </th>
+                                      <th onclick="sortTable(4, 'myTable3')" class="style-th">
+                                          <div>
+                                              <span>To</span><span><img src="../images/sort-ic.svg"
+                                                      class="sotTble"></span>
+                                          </div>
+                                      </th>
+                                      <th class="style-th">
+                                          <div style=" width: 170px; margin:auto;">
+                                              <span>Action</span>
+                                          </div>
+                                      </th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                                  <tr class="tr style-table-my1 tr-active">
+                                      <td class="style-td">
+                                          <input type="checkbox">
+                                      </td>
+                                      <td class="style-td">
+                                          System Design
+                                      </td>
+                                      <td class="style-td">
+                                          Sithm University
+                                      </td>
+                                      <td class="style-td">
+                                          Sithm University
+                                      </td>
+                                      <td class="style-td">
+                                          Sithm University
+                                      </td>
+                                      <td  class="style-td p-1"><button type="button" class="btn btn-secondary dataTableButtons edite-save"><i class="fa-solid fa-pen"></i> </button> <button type="button" class="btn btn-secondary dataTableButtons" data-bs-toggle="modal" data-bs-target="#exampleModalCenter"><img src="../images/client-image.svg" class="image-actions"></button> <div class="tooltip-left btn btn-secondary dataTableButtons"> <img src="../images/client-person.svg" class="image-actions" /> <span class="tooltiptext">Tooltip text</span> </div> <button type="button" class="btn btn-secondary dataTableButtons deleteRow"><i class="fa fa-trash"></i></button></td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                      </div>
+                  </div>
+                  <div class="action-container mt-3 d-none">
+                      <button class="btn btn-danger delete-selected">Delete <span class="selected-count d-none">0 محددة</span></button>
+                  </div>
+              </div>
 
 
 
@@ -1269,21 +1223,46 @@
       </div>
   </main>
 
+
+      <!-- modals -->
+      <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+      aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+              <div class="modal-header d-flex justify-content-end ">
+                  <button type="button" class="close-btn" data-bs-dismiss="modal" aria-label="Close">
+                      <i class="bi bi-x modal-close-icon"></i>
+                  </button>
+              </div>
+              <div class="modal-body d-flex justify-content-center align-items-center">
+                  <div class="container-img">
+                      <img src="../images/icon-modal.svg" class="img-fluid" />
+                  </div>
+              </div>
+              <div class="modal-footer d-flex justify-content-center">
+                  <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- end modals -->
   <script>
     $('.ui.dropdown').dropdown();
   </script>
 
-  <!-- global js -->
-  <script src="../JS/global/jquery/jquery-3.4.1.min.js"></script>
-  <script src="../JS/global/jspdf/jspdf.js"></script>
-  <script src="../JS/client/main.js"></script>
-  <script src="../JS/global/bootstrap/bootstrap.bundle.min.js"></script>
+
+	<!-- global js -->
+	<script src="../JS/global/jquery/jquery-3.4.1.min.js"></script>
+	<script src="../JS/client/main.js"></script>
+	<script src="../JS/global/bootstrap/bootstrap.bundle.min.js"></script>
+	<script src="../JS/global/bootstrap/bootstrap-select.js"></script>
+	<script src="../JS/global/datePicker/datepicker.js"></script>
+	<script src="../JS/global/swiper/swiper-bundle.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+	<script src="../JS/layout.js"></script>
 
   <!-- this page -->
-  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-  <script src="../JS/global/datePicker/datepicker.js"></script>
-  <script type="text/javascript"
-    src="https://cdn.jsdelivr.net/npm/star-rating-svg@3.5.0/dist/jquery.star-rating-svg.min.js"></script>
+  <script type="text/javascript"  src="https://cdn.jsdelivr.net/npm/star-rating-svg@3.5.0/dist/jquery.star-rating-svg.min.js"></script>
   <!-- js -->
 
   <script src="../JS/layout.js"></script>
@@ -1301,190 +1280,191 @@
 
    // --------------------------------------------------
 
-var counter = 1;
-$(".add_new_Education").on("click", function (event) {
-    event.preventDefault();
+   var counter = 1;
+        $(".add_new_Education").on("click", function (event) {
+            event.preventDefault();
 
-    var newRow = $('<tr class="tr style-table-my1 tr-active">');
-    var cols = '';
+            var newRow = $('<tr class="tr style-table-my1 tr-active">');
+            var cols = '';
 
-    cols += '<td class="style-td"><input type="checkbox"></td>';
-    cols += '<td class="style-td"><input class="form-control rounded-0" type="text" name="Eduction" placeholder="Eduction"></td>';
-    cols += '<td class="style-td"><input class="form-control rounded-0" type="text" name="lastname" placeholder="School Name"></td>';
-    cols += '<td class="style-td p-1"><div class="d-flex align-items-center position-relative form-control styleinTable rounded-0"> <input type="text" class="form-control fs-10 rounded-0 datepicker" placeholder="Select date"> <img class="dateTable-svg" width="12" src="../images/date.svg"> </div></td>';
-    cols += '<td class="style-td p-1"><div class="d-flex align-items-center position-relative form-control styleinTable rounded-0"> <input type="text" class="form-control fs-10 rounded-0 datepicker" placeholder="Select date"> <img class="dateTable-svg" width="12" src="../images/date.svg"> </div></td>';
-    cols += '<td  class="style-td p-1"><button type="button" class="btn btn-secondary dataTableButtons edite-save"><i class="fa-solid fa-check"></i> </button> <button type="button" class="btn btn-secondary dataTableButtons" data-bs-toggle="modal" data-bs-target="#exampleModalCenter"><img src="../images/client-image.svg" class="image-actions"></button> <div class="tooltip-left btn btn-secondary dataTableButtons"> <img src="../images/client-person.svg" class="image-actions" /> <span class="tooltiptext">Tooltip text</span> </div> <button type="button" class="btn btn-secondary dataTableButtons deleteRow"><i class="fa fa-trash"></i></button></td> </tr>';
-    newRow.append(cols);
+            cols += '<td class="style-td"><input type="checkbox"></td>';
+            cols += '<td class="style-td"><input class="form-control rounded-0" type="text" name="Eduction" placeholder="Eduction"></td>';
+            cols += '<td class="style-td"><input class="form-control rounded-0" type="text" name="lastname" placeholder="School Name"></td>';
+            cols += '<td class="style-td p-1"><div class="d-flex align-items-center position-relative form-control styleinTable rounded-0"> <input type="text" class="form-control fs-10 rounded-0 datepicker" placeholder="Select date"> <img class="dateTable-svg" width="12" src="../images/date.svg"> </div></td>';
+            cols += '<td class="style-td p-1"><div class="d-flex align-items-center position-relative form-control styleinTable rounded-0"> <input type="text" class="form-control fs-10 rounded-0 datepicker" placeholder="Select date"> <img class="dateTable-svg" width="12" src="../images/date.svg"> </div></td>';
+            cols += '<td  class="style-td p-1"><button type="button" class="btn btn-secondary dataTableButtons edite-save"><i class="fa-solid fa-check"></i> </button> <button type="button" class="btn btn-secondary dataTableButtons" data-bs-toggle="modal" data-bs-target="#exampleModalCenter"><img src="../images/client-image.svg" class="image-actions"></button> <div class="tooltip-left btn btn-secondary dataTableButtons"> <img src="../images/client-person.svg" class="image-actions" /> <span class="tooltiptext">Tooltip text</span> </div> <button type="button" class="btn btn-secondary dataTableButtons deleteRow"><i class="fa fa-trash"></i></button></td> </tr>';
+            newRow.append(cols);
 
-    $(".table-Education").append(newRow);
-    $(".datepicker").datepicker('refresh');
+            $(".table-Education").append(newRow);
+            $(".datepicker").datepicker('refresh');
 
-    counter++;
-});
-$(".table-Education").on("click", ".edite-save", function (event) {
-    var row = $(this).closest("tr");
-var inputs = row.find("input");
-var select = row.find("select");
-var div = row.find("div");
-var pickers = row.find(".selectpicker");
-var checkboxes = row.find("input[type='checkbox']");
+            counter++;
+        });
+        $(".table-Education").on("click", ".edite-save", function (event) {
+            var row = $(this).closest("tr");
+        var inputs = row.find("input");
+        var select = row.find("select");
+        var div = row.find("div");
+        var pickers = row.find(".selectpicker");
+        var checkboxes = row.find("input[type='checkbox']");
 
-var editIcon = $(this).find("i");
-inputs.each(function () {
-  if ($(this).attr("type") !== "checkbox") {
-    $(this).prop("disabled", !$(this).prop("disabled"));
-  }
-});
-select.each(function () {
-    $(this).prop("disabled", !$(this).prop("disabled"));
-});
-pickers.each(function () {
-  var isDisabled = $(this).prop("disabled");
-    $(this).toggleClass("disabled");
-    $(this).selectpicker("refresh");  
-});
+        var editIcon = $(this).find("i");
+        inputs.each(function () {
+          if ($(this).attr("type") !== "checkbox") {
+            $(this).prop("disabled", !$(this).prop("disabled"));
+          }
+        });
+        select.each(function () {
+            $(this).prop("disabled", !$(this).prop("disabled"));
+        });
+        pickers.each(function () {
+          var isDisabled = $(this).prop("disabled");
+            $(this).toggleClass("disabled");
+            $(this).selectpicker("refresh");  
+        });
 
-if(editIcon.hasClass("fa-check")){
-  row.find(".styleinTable").removeClass("form-control");
-}else if(editIcon.hasClass("fa-pen")){
-    row.find(".styleinTable").addClass("form-control");
-}
+        if(editIcon.hasClass("fa-check")){
+          row.find(".styleinTable").removeClass("form-control");
+        }else if(editIcon.hasClass("fa-pen")){
+            row.find(".styleinTable").addClass("form-control");
+        }
 
-if (editIcon.hasClass("fa-check")) {
-  editIcon.removeClass("fa-check").addClass("fa-pen");
-} else {
-  editIcon.removeClass("fa-pen").addClass("fa-check");
-}
-});
+        if (editIcon.hasClass("fa-check")) {
+          editIcon.removeClass("fa-check").addClass("fa-pen");
+        } else {
+          editIcon.removeClass("fa-pen").addClass("fa-check");
+        }
+        });
 
-$(".table-Education").on("click", ".deleteRow", function (event) {
-    $(this).closest("tr").remove();
-    counter -= 1
-});
-
-
-
-var counter1 = 1;
-$(".add_new_Employer").on("click", function (event) {
-    event.preventDefault();
-
-    var newRow = $('<tr class="tr style-table-my1 tr-active">');
-    var cols = '';
-    cols += '<td class="style-td"><input type="checkbox"></td>';
-    cols += '<td class="style-td"><input class="form-control rounded-0" type="text" name="Eduction" placeholder="Eduction"></td>';
-    cols += '<td class="style-td"><input class="form-control rounded-0" type="text" name="lastname" placeholder="School Name"></td>';
-    cols += '<td class="style-td p-1"><div class="d-flex align-items-center position-relative form-control styleinTable rounded-0"> <input type="text" class="form-control fs-10 rounded-0 datepicker" placeholder="Select date"> <img class="dateTable-svg" width="12" src="../images/date.svg"> </div></td>';
-    cols += '<td class="style-td p-1"><div class="d-flex align-items-center position-relative form-control styleinTable rounded-0"> <input type="text" class="form-control fs-10 rounded-0 datepicker" placeholder="Select date"> <img class="dateTable-svg" width="12" src="../images/date.svg"> </div></td>';
-    cols += '<td  class="style-td p-1"><button type="button" class="btn btn-secondary dataTableButtons edite-save"><i class="fa-solid fa-check"></i> </button> <button type="button" class="btn btn-secondary dataTableButtons" data-bs-toggle="modal" data-bs-target="#exampleModalCenter"><img src="../images/client-image.svg" class="image-actions"></button> <div class="tooltip-left btn btn-secondary dataTableButtons"> <img src="../images/client-person.svg" class="image-actions" /> <span class="tooltiptext">Tooltip text</span> </div> <button type="button" class="btn btn-secondary dataTableButtons deleteRow"><i class="fa fa-trash"></i></button></td> </tr>';
-    newRow.append(cols);
-
-    $(".table-Employer").append(newRow);
-    $(".datepicker").datepicker('refresh');
-
-    counter++;
-});
-$(".table-Employer").on("click", ".edite-save", function (event) {
-    var row = $(this).closest("tr");
-var inputs = row.find("input");
-var select = row.find("select");
-var div = row.find("div");
-var pickers = row.find(".selectpicker");
-var checkboxes = row.find("input[type='checkbox']");
-
-var editIcon = $(this).find("i");
-inputs.each(function () {
-  if ($(this).attr("type") !== "checkbox") {
-    $(this).prop("disabled", !$(this).prop("disabled"));
-  }
-});
-select.each(function () {
-    $(this).prop("disabled", !$(this).prop("disabled"));
-});
-pickers.each(function () {
-  var isDisabled = $(this).prop("disabled");
-    $(this).toggleClass("disabled");
-    $(this).selectpicker("refresh");  
-});
-
-if(editIcon.hasClass("fa-check")){
-  row.find(".styleinTable").removeClass("form-control");
-}else if(editIcon.hasClass("fa-pen")){
-    row.find(".styleinTable").addClass("form-control");
-}
-if (editIcon.hasClass("fa-check")) {
-  editIcon.removeClass("fa-check").addClass("fa-pen");
-} else {
-  editIcon.removeClass("fa-pen").addClass("fa-check");
-}
-});
-
-$(".table-Employer").on("click", ".deleteRow", function (event) {
-    $(this).closest("tr").remove();
-    counter -= 1
-});
+        $(".table-Education").on("click", ".deleteRow", function (event) {
+            $(this).closest("tr").remove();
+            counter -= 1
+        });
 
 
 
-var counter2 = 1;
-$(".add_new_Competence ").on("click", function (event) {
-    event.preventDefault();
+        var counter1 = 1;
+        $(".add_new_Employer").on("click", function (event) {
+            event.preventDefault();
 
-    var newRow = $('<tr class="tr style-table-my1 tr-active">');
-    var cols = '';
+            var newRow = $('<tr class="tr style-table-my1 tr-active">');
+            var cols = '';
+            cols += '<td class="style-td"><input type="checkbox"></td>';
+            cols += '<td class="style-td"><input class="form-control rounded-0" type="text" name="Eduction" placeholder="Eduction"></td>';
+            cols += '<td class="style-td"><input class="form-control rounded-0" type="text" name="lastname" placeholder="School Name"></td>';
+            cols += '<td class="style-td p-1"><div class="d-flex align-items-center position-relative form-control styleinTable rounded-0"> <input type="text" class="form-control fs-10 rounded-0 datepicker" placeholder="Select date"> <img class="dateTable-svg" width="12" src="../images/date.svg"> </div></td>';
+            cols += '<td class="style-td p-1"><div class="d-flex align-items-center position-relative form-control styleinTable rounded-0"> <input type="text" class="form-control fs-10 rounded-0 datepicker" placeholder="Select date"> <img class="dateTable-svg" width="12" src="../images/date.svg"> </div></td>';
+            cols += '<td  class="style-td p-1"><button type="button" class="btn btn-secondary dataTableButtons edite-save"><i class="fa-solid fa-check"></i> </button> <button type="button" class="btn btn-secondary dataTableButtons" data-bs-toggle="modal" data-bs-target="#exampleModalCenter"><img src="../images/client-image.svg" class="image-actions"></button> <div class="tooltip-left btn btn-secondary dataTableButtons"> <img src="../images/client-person.svg" class="image-actions" /> <span class="tooltiptext">Tooltip text</span> </div> <button type="button" class="btn btn-secondary dataTableButtons deleteRow"><i class="fa fa-trash"></i></button></td> </tr>';
+            newRow.append(cols);
 
-    cols += '<td class="style-td"><input type="checkbox"></td>';
-    cols += '<td class="style-td"><input class="form-control rounded-0" type="text" name="Eduction" placeholder="Eduction"></td>';
-    cols += '<td class="style-td"><input class="form-control rounded-0" type="text" name="lastname" placeholder="School Name"></td>';
-    cols += '<td class="style-td p-1"><div class="d-flex align-items-center position-relative form-control styleinTable rounded-0"> <input type="text" class="form-control fs-10 rounded-0 datepicker" placeholder="Select date"> <img class="dateTable-svg" width="12" src="../images/date.svg"> </div></td>';
-    cols += '<td class="style-td p-1"><div class="d-flex align-items-center position-relative form-control styleinTable rounded-0"> <input type="text" class="form-control fs-10 rounded-0 datepicker" placeholder="Select date"> <img class="dateTable-svg" width="12" src="../images/date.svg"> </div></td>';
-    cols += '<td  class="style-td p-1"><button type="button" class="btn btn-secondary dataTableButtons edite-save"><i class="fa-solid fa-check"></i> </button> <button type="button" class="btn btn-secondary dataTableButtons" data-bs-toggle="modal" data-bs-target="#exampleModalCenter"><img src="../images/client-image.svg" class="image-actions"></button> <div class="tooltip-left btn btn-secondary dataTableButtons"> <img src="../images/client-person.svg" class="image-actions" /> <span class="tooltiptext">Tooltip text</span> </div> <button type="button" class="btn btn-secondary dataTableButtons deleteRow"><i class="fa fa-trash"></i></button></td> </tr>';
-    newRow.append(cols);
+            $(".table-Employer").append(newRow);
+            $(".datepicker").datepicker('refresh');
 
-    $(".table-Competence").append(newRow);
-    $(".datepicker").datepicker('refresh');
+            counter++;
+        });
+        $(".table-Employer").on("click", ".edite-save", function (event) {
+            var row = $(this).closest("tr");
+        var inputs = row.find("input");
+        var select = row.find("select");
+        var div = row.find("div");
+        var pickers = row.find(".selectpicker");
+        var checkboxes = row.find("input[type='checkbox']");
 
-    counter++;
-});
-$(".table-Competence").on("click", ".edite-save", function (event) {
-    var row = $(this).closest("tr");
-var inputs = row.find("input");
-var select = row.find("select");
-var div = row.find("div");
-var pickers = row.find(".selectpicker");
-var checkboxes = row.find("input[type='checkbox']");
+        var editIcon = $(this).find("i");
+        inputs.each(function () {
+          if ($(this).attr("type") !== "checkbox") {
+            $(this).prop("disabled", !$(this).prop("disabled"));
+          }
+        });
+        select.each(function () {
+            $(this).prop("disabled", !$(this).prop("disabled"));
+        });
+        pickers.each(function () {
+          var isDisabled = $(this).prop("disabled");
+            $(this).toggleClass("disabled");
+            $(this).selectpicker("refresh");  
+        });
 
-var editIcon = $(this).find("i");
-inputs.each(function () {
-  if ($(this).attr("type") !== "checkbox") {
-    $(this).prop("disabled", !$(this).prop("disabled"));
-  }
-});
-select.each(function () {
-    $(this).prop("disabled", !$(this).prop("disabled"));
-});
-pickers.each(function () {
-  var isDisabled = $(this).prop("disabled");
-    $(this).toggleClass("disabled");
-    $(this).selectpicker("refresh");  
-});
+        if(editIcon.hasClass("fa-check")){
+          row.find(".styleinTable").removeClass("form-control");
+        }else if(editIcon.hasClass("fa-pen")){
+            row.find(".styleinTable").addClass("form-control");
+        }
+        if (editIcon.hasClass("fa-check")) {
+          editIcon.removeClass("fa-check").addClass("fa-pen");
+        } else {
+          editIcon.removeClass("fa-pen").addClass("fa-check");
+        }
+        });
 
-if(editIcon.hasClass("fa-check")){
-  row.find(".styleinTable").removeClass("form-control");
-}else if(editIcon.hasClass("fa-pen")){
-    row.find(".styleinTable").addClass("form-control");
-}
+        $(".table-Employer").on("click", ".deleteRow", function (event) {
+            $(this).closest("tr").remove();
+            counter -= 1
+        });
 
-if (editIcon.hasClass("fa-check")) {
-  editIcon.removeClass("fa-check").addClass("fa-pen");
-} else {
-  editIcon.removeClass("fa-pen").addClass("fa-check");
-}
-});
 
-$(".table-Competence").on("click", ".deleteRow", function (event) {
-    $(this).closest("tr").remove();
-    counter -= 1
-});
+
+        var counter2 = 1;
+        $(".add_new_Competence ").on("click", function (event) {
+            event.preventDefault();
+
+            var newRow = $('<tr class="tr style-table-my1 tr-active">');
+            var cols = '';
+
+            cols += '<td class="style-td"><input type="checkbox"></td>';
+            cols += '<td class="style-td"><input class="form-control rounded-0" type="text" name="Eduction" placeholder="Eduction"></td>';
+            cols += '<td class="style-td"><input class="form-control rounded-0" type="text" name="lastname" placeholder="School Name"></td>';
+            cols += '<td class="style-td p-1"><div class="d-flex align-items-center position-relative form-control styleinTable rounded-0"> <input type="text" class="form-control fs-10 rounded-0 datepicker" placeholder="Select date"> <img class="dateTable-svg" width="12" src="../images/date.svg"> </div></td>';
+            cols += '<td class="style-td p-1"><div class="d-flex align-items-center position-relative form-control styleinTable rounded-0"> <input type="text" class="form-control fs-10 rounded-0 datepicker" placeholder="Select date"> <img class="dateTable-svg" width="12" src="../images/date.svg"> </div></td>';
+            cols += '<td  class="style-td p-1"><button type="button" class="btn btn-secondary dataTableButtons edite-save"><i class="fa-solid fa-check"></i> </button> <button type="button" class="btn btn-secondary dataTableButtons" data-bs-toggle="modal" data-bs-target="#exampleModalCenter"><img src="../images/client-image.svg" class="image-actions"></button> <div class="tooltip-left btn btn-secondary dataTableButtons"> <img src="../images/client-person.svg" class="image-actions" /> <span class="tooltiptext">Tooltip text</span> </div> <button type="button" class="btn btn-secondary dataTableButtons deleteRow"><i class="fa fa-trash"></i></button></td> </tr>';
+            newRow.append(cols);
+
+            $(".table-Competence").append(newRow);
+            $(".datepicker").datepicker('refresh');
+
+            counter++;
+        });
+        $(".table-Competence").on("click", ".edite-save", function (event) {
+            var row = $(this).closest("tr");
+        var inputs = row.find("input");
+        var select = row.find("select");
+        var div = row.find("div");
+        var pickers = row.find(".selectpicker");
+        var checkboxes = row.find("input[type='checkbox']");
+
+        var editIcon = $(this).find("i");
+        inputs.each(function () {
+          if ($(this).attr("type") !== "checkbox") {
+            $(this).prop("disabled", !$(this).prop("disabled"));
+          }
+        });
+        select.each(function () {
+            $(this).prop("disabled", !$(this).prop("disabled"));
+        });
+        pickers.each(function () {
+          var isDisabled = $(this).prop("disabled");
+            $(this).toggleClass("disabled");
+            $(this).selectpicker("refresh");  
+        });
+
+        if(editIcon.hasClass("fa-check")){
+          row.find(".styleinTable").removeClass("form-control");
+        }else if(editIcon.hasClass("fa-pen")){
+            row.find(".styleinTable").addClass("form-control");
+        }
+
+        if (editIcon.hasClass("fa-check")) {
+          editIcon.removeClass("fa-check").addClass("fa-pen");
+        } else {
+          editIcon.removeClass("fa-pen").addClass("fa-check");
+        }
+        });
+
+        $(".table-Competence").on("click", ".deleteRow", function (event) {
+            $(this).closest("tr").remove();
+            counter -= 1
+        });
+
 
   </script>
 </body>

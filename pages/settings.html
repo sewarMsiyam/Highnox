@@ -19,7 +19,6 @@
   <link href="../css/global/bootstrap/bootstrap.min.css" rel="stylesheet">
   <link href="../css/global/bootstrap/bootstrap-select.css" rel="stylesheet">
   <link href="../css/global/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="../css/global/filepond/filepond.min.css" rel="stylesheet">
 
   <!-- dashboard style -->
   <link href="../css/dashboard/main-dashboard.css" rel="stylesheet">
@@ -2054,11 +2053,11 @@
                                                         <div class="d-flex justify-content-start align-items-center ">
                                                             <div class="d-flex justify-content-start align-items-center ">
                                                                 <div class=" mx-3">
-                                                                    <input class="form-control bg-white input-row "
+                                                                    <input class="form-control bg-white input-row-Roles "
                                                                         placeholder="add Roles " />
                                                                 </div>
                                                                 <a href="#"
-                                                                    class="btn btn-primary create-btn add_new_row  border-radius-2 height-auto">
+                                                                    class="btn btn-primary create-btn add_new_row_Roles  border-radius-2 height-auto">
                                                                     <i class="bi bi-plus-circle-fill"></i>
                                                                     Add new Roles
                                                                 </a>
@@ -8247,7 +8246,6 @@
   <script src="../JS/global/bootstrap/bootstrap-select.js"></script>
   <script src="../JS/global/datePicker/datepicker.js"></script>
   <script src="../JS/global/swiper/swiper-bundle.min.js"></script>
-  <script src="../JS/global/filepond/filepond.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
   <script src="../JS/layout.js"></script>
 
@@ -8316,6 +8314,79 @@
 
 
 
+
+
+
+
+        $(function () {
+            var counterMap = {};
+
+            $(".add_new_row_Roles").on("click", function (event) {
+
+                
+                $("#Modalcm").modal("show");
+
+
+                event.preventDefault();
+                var container = $(this).closest(".budget-table");
+                var inputs = container.find(".input-row-Roles");
+                var allInputsFilled = true;
+
+                inputs.each(function () {
+                    if ($(this).val().length === 0) {
+                        allInputsFilled = false;
+                        return false;
+                    }
+                });
+
+                if (allInputsFilled) {
+                    inputs.removeClass("border border-danger")
+                    var tableClass = container.attr("class").split(" ")[1];
+                    if (!counterMap[tableClass]) {
+                        counterMap[tableClass] = 1;
+                    }
+                    var newRow = $('<tr class="tr style-table-my1 tr-active">');
+                    var cols = '';
+                    cols += `<td class="style-td"><input type="checkbox"></td>`;
+                    cols += `<td class="style-td">${counterMap[tableClass] + 1}</td>`;
+                    inputs.each(function () {
+                        cols += `<td class="style-td"><input class="form-control text-center border-0 bg-white" readonly  value="${$(this).val()}" /></td>`;
+                    });
+                    cols += `<td class="style-td"><button type="button" class="btn btn-secondary dataTableButtons edite-row"> <i class="fa fa-pen"></i> </button> <div class="tooltip-left btn btn-secondary dataTableButtons"> <img src="../images/client-person.svg" class="image-actions" /> <span class="tooltiptext">Tooltip text</span> </div> <button type="button" class="btn btn-secondary dataTableButtons" id="deleteRow"><i class="fa fa-trash"></i></button> </td>`;
+                    newRow.append(cols);
+                    container.find(".table").find("tbody").append(newRow);
+                    counterMap[tableClass]++
+                    alert(counterMap[tableClass]); // alert
+                    inputs.val("");
+                } else {
+                    inputs.addClass("border border-danger")
+                }
+            });
+            $(".table").on("click", "#deleteRow", function (event) {
+                var table = $(this).closest(".table");
+                var tableClass = table.attr("class").split(" ")[1];
+                $(this).closest("tr").remove();
+                counterMap[tableClass]--;
+            });
+            $(document).on("click", ".edite-row", function () {
+                var editIcon = $(this).find("i");
+                var inputRoleElement = $(this).closest("tr").find("td .form-control");
+
+                if (editIcon.hasClass("fa-check")) {
+                    editIcon.removeClass("fa-check").addClass("fa-pen");
+                    inputRoleElement.prop("readonly", true);
+                } else {
+                    editIcon.removeClass("fa-pen").addClass("fa-check");
+                    inputRoleElement.prop("readonly", false);
+                    inputRoleElement.focus();
+                }
+            });
+        });
+
+
+
+
+
         $('.trtabler').on('click', function (event) {
             const target = $(event.target);
 
@@ -8370,19 +8441,6 @@
         });
 
 
-
-
-        
-//import list
-const fileInput = document.getElementById('fileInput');
-fileInput.addEventListener('change', (event) => {
-  const selectedFile = event.target.files[0];
-  if (selectedFile) {
-    const namefile = document.getElementById('namefile');
-    namefile.textContent = selectedFile.name;
-    console.log('Selected file path:', selectedFile.name); 
-  }
-});
 
     </script>
 

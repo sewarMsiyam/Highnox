@@ -777,10 +777,10 @@
                                 </div>
                             </div>
 
-                            <div class="tab-pane fade table-tab-pane" id="active-section" role="tabpanel1"
+                            <div class="tab-pane fade " id="active-section" role="tabpanel1"
                                 aria-labelledby="active-tab">
                                 <div class="row">
-                                    <div class="col-12 col-lg-6">
+                                    <div class="col-12 col-lg-6  table-tab-pane">
                                         <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow px-0" style="background:#F2F2F2 !important;">
                                             <div class="px-4">
                                                 <div class="d-flex justify-content-between">
@@ -804,7 +804,7 @@
                                                 </div>
                                                 <div class="table-responsive bg-light mt-4 border-radius-20">
                                                     <div class="secondTableContainer">
-                                                        <table id="myTable" class="table">
+                                                        <table id="myTable1" class="table">
                                                             <thead>
                                                                 <tr class="tr">
                                                                     <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
@@ -814,7 +814,7 @@
                                                                             <input type="checkbox" class="selectAll">
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(1, 'myTable')"
+                                                                    <th onclick="sortTable(1, 'myTable1')"
                                                                         class="style-th">
                                                                         <div>
                                                                             <span>Role
@@ -823,7 +823,7 @@
                                                                                     class="sotTble"></span>
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(2, 'myTable')"
+                                                                    <th onclick="sortTable(2, 'myTable1')"
                                                                         class="style-th">
                                                                         <div>
                                                                             <span>Room Type
@@ -832,12 +832,9 @@
                                                                                     class="sotTble"></span>
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(3, 'myTable')"
-                                                                        class="style-th">
+                                                                    <th class="style-th">
                                                                         <div>
-                                                                            <span>Action</span><span><img
-                                                                                    src="../images/sort-ic.svg"
-                                                                                    class="sotTble"></span>
+                                                                            <span>Action</span>
                                                                         </div>
                                                                     </th>
                                                                 </tr>
@@ -876,10 +873,13 @@
                                                         </table>
                                                     </div>
                                                 </div>
+                                                <div class="action-container mt-3 d-none">
+                                                    <button class="btn btn-danger delete-selected">Delete <span class="selected-count d-none">0 محددة</span></button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-12 col-lg-6">
+                                    <div class="col-12 col-lg-6  table-tab-pane">
                                         <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow px-0"
                                             style="background:#F2F2F2 !important;">
                                             <div class="px-4">
@@ -902,7 +902,7 @@
                                                 </div>
                                                 <div class="table-responsive bg-light mt-4 border-radius-20">
                                                     <div class="secondTableContainer">
-                                                        <table id="myTable" class="table">
+                                                        <table id="myTable2" class="table">
                                                             <thead>
                                                                 <tr class="tr">
                                                                     <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
@@ -912,7 +912,7 @@
                                                                             <input type="checkbox" class="selectAll">
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(1, 'myTable')"
+                                                                    <th onclick="sortTable(1, 'myTable2')"
                                                                         class="style-th">
                                                                         <div>
                                                                             <span>Depart
@@ -921,7 +921,7 @@
                                                                                     class="sotTble"></span>
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(2, 'myTable')"
+                                                                    <th onclick="sortTable(2, 'myTable2')"
                                                                         class="style-th">
                                                                         <div>
                                                                             <span>Debt Type
@@ -930,12 +930,9 @@
                                                                                     class="sotTble"></span>
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(3, 'myTable')"
-                                                                        class="style-th">
+                                                                    <th class="style-th">
                                                                         <div>
-                                                                            <span>Action</span><span><img
-                                                                                    src="../images/sort-ic.svg"
-                                                                                    class="sotTble"></span>
+                                                                            <span>Action</span>
                                                                         </div>
                                                                     </th>
                                                                 </tr>
@@ -975,12 +972,15 @@
                                                         </table>
                                                     </div>
                                                 </div>
+                                                <div class="action-container mt-3 d-none">
+                                                    <button class="btn btn-danger delete-selected">Delete <span class="selected-count d-none">0 محددة</span></button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-12 col-lg-6">
+                                    <div class="col-12 col-lg-6 table-tab-pane">
                                         <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow px-0"
                                             style="background:#F2F2F2 !important;">
                                             <div class="px-4">
@@ -1003,7 +1003,7 @@
                                                 </div>
                                                 <div class="table-responsive bg-light mt-4 border-radius-20">
                                                     <div class="secondTableContainer">
-                                                        <table id="myTable" class="table">
+                                                        <table id="myTable3" class="table">
                                                             <thead>
                                                                 <tr class="tr">
                                                                     <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
@@ -1013,7 +1013,7 @@
                                                                             <input type="checkbox" class="selectAll">
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(1, 'myTable')"
+                                                                    <th onclick="sortTable(1, 'myTable3')"
                                                                         class="style-th">
                                                                         <div>
                                                                             <span>City
@@ -1022,7 +1022,7 @@
                                                                                     class="sotTble"></span>
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(2, 'myTable')"
+                                                                    <th onclick="sortTable(2, 'myTable3')"
                                                                         class="style-th">
                                                                         <div>
                                                                             <span>City
@@ -1031,12 +1031,9 @@
                                                                                     class="sotTble"></span>
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(3, 'myTable')"
-                                                                        class="style-th">
+                                                                    <th class="style-th">
                                                                         <div>
-                                                                            <span>Action</span><span><img
-                                                                                    src="../images/sort-ic.svg"
-                                                                                    class="sotTble"></span>
+                                                                            <span>Action</span>
                                                                         </div>
                                                                     </th>
                                                                 </tr>
@@ -1076,10 +1073,13 @@
                                                         </table>
                                                     </div>
                                                 </div>
+                                                <div class="action-container mt-3 d-none">
+                                                    <button class="btn btn-danger delete-selected">Delete <span class="selected-count d-none">0 محددة</span></button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-12 col-lg-6">
+                                    <div class="col-12 col-lg-6  table-tab-pane">
                                         <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow px-0"
                                             style="background:#F2F2F2 !important;">
                                             <div class="px-4">
@@ -1102,7 +1102,7 @@
                                                 </div>
                                                 <div class="table-responsive bg-light mt-4 border-radius-20">
                                                     <div class="secondTableContainer">
-                                                        <table id="myTable" class="table">
+                                                        <table id="myTable4" class="table">
                                                             <thead>
                                                                 <tr class="tr">
                                                                     <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
@@ -1112,7 +1112,7 @@
                                                                             <input type="checkbox" class="selectAll">
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(1, 'myTable')"
+                                                                    <th onclick="sortTable(1, 'myTable4')"
                                                                         class="style-th">
                                                                         <div>
                                                                             <span>invoice
@@ -1121,7 +1121,7 @@
                                                                                     class="sotTble"></span>
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(2, 'myTable')"
+                                                                    <th onclick="sortTable(2, 'myTable4')"
                                                                         class="style-th">
                                                                         <div>
                                                                             <span>Invoice Type</span><span><img
@@ -1129,12 +1129,9 @@
                                                                                     class="sotTble"></span>
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(3, 'myTable')"
-                                                                        class="style-th">
+                                                                    <th class="style-th">
                                                                         <div>
-                                                                            <span>Action</span><span><img
-                                                                                    src="../images/sort-ic.svg"
-                                                                                    class="sotTble"></span>
+                                                                            <span>Action</span>
                                                                         </div>
                                                                     </th>
                                                                 </tr>
@@ -1173,12 +1170,15 @@
                                                         </table>
                                                     </div>
                                                 </div>
+                                                <div class="action-container mt-3 d-none">
+                                                    <button class="btn btn-danger delete-selected">Delete <span class="selected-count d-none">0 محددة</span></button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-12 col-lg-6">
+                                    <div class="col-12 col-lg-6 table-tab-pane">
                                         <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow px-0"
                                             style="background:#F2F2F2 !important;">
                                             <div class="px-4">
@@ -1211,7 +1211,7 @@
                                                 </div>
                                                 <div class="table-responsive bg-light mt-4 border-radius-20">
                                                     <div class="secondTableContainer">
-                                                        <table id="myTable" class="table">
+                                                        <table id="myTable5" class="table">
                                                             <thead>
                                                                 <tr class="tr">
                                                                     <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
@@ -1229,7 +1229,7 @@
                                                                                     class="sotTble"></span>
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(1, 'myTable')"
+                                                                    <th onclick="sortTable(1, 'myTable5')"
                                                                         class="style-th">
                                                                         <div>
                                                                             <span> QTY</span><span><img
@@ -1237,7 +1237,7 @@
                                                                                     class="sotTble"></span>
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(2, 'myTable')"
+                                                                    <th onclick="sortTable(2, 'myTable5')"
                                                                         class="style-th">
                                                                         <div>
                                                                             <span>Unit</span><span><img
@@ -1245,7 +1245,7 @@
                                                                                     class="sotTble"></span>
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(2, 'myTable')"
+                                                                    <th onclick="sortTable(2, 'myTable5')"
                                                                         class="style-th">
                                                                         <div>
                                                                             <span>Description</span><span><img
@@ -1253,12 +1253,9 @@
                                                                                     class="sotTble"></span>
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(3, 'myTable')"
-                                                                        class="style-th">
+                                                                    <th class="style-th">
                                                                         <div>
-                                                                            <span>Action</span><span><img
-                                                                                    src="../images/sort-ic.svg"
-                                                                                    class="sotTble"></span>
+                                                                            <span>Action</span>
                                                                         </div>
                                                                     </th>
                                                                 </tr>
@@ -1299,16 +1296,18 @@
                                                                             <i class="fa fa-trash"></i>
                                                                         </button>
                                                                     </td>
-
                                                                 </tr>
                                                             </tbody>
                                                         </table>
                                                     </div>
                                                 </div>
+                                                <div class="action-container mt-3 d-none">
+                                                    <button class="btn btn-danger delete-selected">Delete <span class="selected-count d-none">0 محددة</span></button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-12 col-lg-6">
+                                    <div class="col-12 col-lg-6  table-tab-pane">
                                         <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow px-0"
                                             style="background:#F2F2F2 !important;">
                                             <div class="px-4">
@@ -1337,7 +1336,7 @@
                                                 </div>
                                                 <div class="table-responsive bg-light mt-4 border-radius-20">
                                                     <div class="secondTableContainer">
-                                                        <table id="myTable" class="table">
+                                                        <table id="myTable6" class="table">
                                                             <thead>
                                                                 <tr class="tr">
                                                                     <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
@@ -1347,7 +1346,7 @@
                                                                             <input type="checkbox" class="selectAll">
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(1, 'myTable')"
+                                                                    <th onclick="sortTable(1, 'myTable6')"
                                                                         class="style-th">
                                                                         <div>
                                                                             <span>Currency
@@ -1356,7 +1355,7 @@
                                                                                     class="sotTble"></span>
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(2, 'myTable')"
+                                                                    <th onclick="sortTable(2, 'myTable6')"
                                                                         class="style-th">
                                                                         <div>
                                                                             <span>Currency
@@ -1365,12 +1364,9 @@
                                                                                     class="sotTble"></span>
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(3, 'myTable')"
-                                                                        class="style-th">
+                                                                    <th class="style-th">
                                                                         <div>
-                                                                            <span>Action</span><span><img
-                                                                                    src="../images/sort-ic.svg"
-                                                                                    class="sotTble"></span>
+                                                                            <span>Action</span>
                                                                         </div>
                                                                     </th>
                                                                 </tr>
@@ -1411,12 +1407,15 @@
                                                         </table>
                                                     </div>
                                                 </div>
+                                                <div class="action-container mt-3 d-none">
+                                                    <button class="btn btn-danger delete-selected">Delete <span class="selected-count d-none">0 محددة</span></button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-md-6 col-12">
+                                    <div class="col-md-6 col-12 table-tab-pane">
                                         <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow px-0"
                                             style="background:#F2F2F2 !important;">
                                             <div class="px-4">
@@ -1446,7 +1445,7 @@
                                                 </div>
                                                 <div class="table-responsive bg-light mt-4 border-radius-20">
                                                     <div class="secondTableContainer">
-                                                        <table id="myTable" class="table">
+                                                        <table id="myTable7" class="table">
                                                             <thead>
                                                                 <tr class="tr">
                                                                     <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
@@ -1456,7 +1455,7 @@
                                                                             <input type="checkbox" class="selectAll">
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(1, 'myTable')"
+                                                                    <th onclick="sortTable(1, 'myTable7')"
                                                                         class="style-th">
                                                                         <div>
                                                                             <span>City
@@ -1465,7 +1464,7 @@
                                                                                     class="sotTble"></span>
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(2, 'myTable')"
+                                                                    <th onclick="sortTable(2, 'myTable7')"
                                                                         class="style-th">
                                                                         <div>
                                                                             <span>City
@@ -1474,12 +1473,9 @@
                                                                                     class="sotTble"></span>
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(3, 'myTable')"
-                                                                        class="style-th">
+                                                                    <th class="style-th">
                                                                         <div>
-                                                                            <span>Action</span><span><img
-                                                                                    src="../images/sort-ic.svg"
-                                                                                    class="sotTble"></span>
+                                                                            <span>Action</span>
                                                                         </div>
                                                                     </th>
                                                                 </tr>
@@ -1514,11 +1510,13 @@
                                                                             <i class="fa fa-trash"></i>
                                                                         </button>
                                                                     </td>
-
                                                                 </tr>
                                                             </tbody>
                                                         </table>
                                                     </div>
+                                                </div>
+                                                <div class="action-container mt-3 d-none">
+                                                    <button class="btn btn-danger delete-selected">Delete <span class="selected-count d-none">0 محددة</span></button>
                                                 </div>
                                             </div>
                                         </div>
@@ -1526,10 +1524,10 @@
                                 </div>
                             </div>
 
-                            <div class="tab-pane fade table-tab-pane" id="not-active-section" role="tabpanel1"
+                            <div class="tab-pane fade" id="not-active-section" role="tabpanel1"
                                 aria-labelledby="not-active">
                                 <div class="row">
-                                    <div class="col-12 col-lg-6">
+                                    <div class="col-12 col-lg-6 table-tab-pane">
                                         <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow px-0"
                                             style="background:#F2F2F2 !important;">
                                             <div class="px-4">
@@ -1554,7 +1552,7 @@
                                                 </div>
                                                 <div class="table-responsive bg-light mt-4 border-radius-20">
                                                     <div class="secondTableContainer">
-                                                        <table id="myTable" class="table">
+                                                        <table id="myTable8" class="table">
                                                             <thead>
                                                                 <tr class="tr">
                                                                     <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
@@ -1564,7 +1562,7 @@
                                                                             <input type="checkbox" class="selectAll">
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(1, 'myTable')"
+                                                                    <th onclick="sortTable(1, 'myTable8')"
                                                                         class="style-th">
                                                                         <div>
                                                                             <span>Role
@@ -1573,7 +1571,7 @@
                                                                                     class="sotTble"></span>
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(2, 'myTable')"
+                                                                    <th onclick="sortTable(2, 'myTable8')"
                                                                         class="style-th">
                                                                         <div>
                                                                             <span>Room Type
@@ -1582,12 +1580,9 @@
                                                                                     class="sotTble"></span>
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(3, 'myTable')"
-                                                                        class="style-th">
+                                                                    <th class="style-th">
                                                                         <div>
-                                                                            <span>Action</span><span><img
-                                                                                    src="../images/sort-ic.svg"
-                                                                                    class="sotTble"></span>
+                                                                            <span>Action</span>
                                                                         </div>
                                                                     </th>
                                                                 </tr>
@@ -1628,10 +1623,13 @@
                                                         </table>
                                                     </div>
                                                 </div>
+                                                <div class="action-container mt-3 d-none">
+                                                    <button class="btn btn-danger delete-selected">Delete <span class="selected-count d-none">0 محددة</span></button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-12 col-lg-6">
+                                    <div class="col-12 col-lg-6  table-tab-pane">
                                         <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow px-0"
                                             style="background:#F2F2F2 !important;">
                                             <div class="px-4">
@@ -1656,7 +1654,7 @@
                                                 </div>
                                                 <div class="table-responsive bg-light mt-4 border-radius-20">
                                                     <div class="secondTableContainer">
-                                                        <table id="myTable" class="table">
+                                                        <table id="myTable9" class="table">
                                                             <thead>
                                                                 <tr class="tr">
                                                                     <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
@@ -1666,7 +1664,7 @@
                                                                             <input type="checkbox" class="selectAll">
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(1, 'myTable')"
+                                                                    <th onclick="sortTable(1, 'myTable9')"
                                                                         class="style-th">
                                                                         <div>
                                                                             <span>Depart
@@ -1675,7 +1673,7 @@
                                                                                     class="sotTble"></span>
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(2, 'myTable')"
+                                                                    <th onclick="sortTable(2, 'myTable9')"
                                                                         class="style-th">
                                                                         <div>
                                                                             <span>Debt Type
@@ -1684,12 +1682,9 @@
                                                                                     class="sotTble"></span>
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(3, 'myTable')"
-                                                                        class="style-th">
+                                                                    <th class="style-th">
                                                                         <div>
-                                                                            <span>Action</span><span><img
-                                                                                    src="../images/sort-ic.svg"
-                                                                                    class="sotTble"></span>
+                                                                            <span>Action</span>
                                                                         </div>
                                                                     </th>
                                                                 </tr>
@@ -1730,12 +1725,15 @@
                                                         </table>
                                                     </div>
                                                 </div>
+                                                <div class="action-container mt-3 d-none">
+                                                    <button class="btn btn-danger delete-selected">Delete <span class="selected-count d-none">0 محددة</span></button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-12 col-lg-6">
+                                    <div class="col-12 col-lg-6  table-tab-pane">
                                         <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow px-0"
                                             style="background:#F2F2F2 !important;">
                                             <div class="px-4">
@@ -1760,7 +1758,7 @@
                                                 </div>
                                                 <div class="table-responsive bg-light mt-4 border-radius-20">
                                                     <div class="secondTableContainer">
-                                                        <table id="myTable" class="table">
+                                                        <table id="myTable10" class="table">
                                                             <thead>
                                                                 <tr class="tr">
                                                                     <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
@@ -1770,7 +1768,7 @@
                                                                             <input type="checkbox" class="selectAll">
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(1, 'myTable')"
+                                                                    <th onclick="sortTable(1, 'myTable10')"
                                                                         class="style-th">
                                                                         <div>
                                                                             <span>City
@@ -1779,7 +1777,7 @@
                                                                                     class="sotTble"></span>
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(2, 'myTable')"
+                                                                    <th onclick="sortTable(2, 'myTable10')"
                                                                         class="style-th">
                                                                         <div>
                                                                             <span>City
@@ -1788,12 +1786,10 @@
                                                                                     class="sotTble"></span>
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(3, 'myTable')"
+                                                                    <th 
                                                                         class="style-th">
                                                                         <div>
-                                                                            <span>Action</span><span><img
-                                                                                    src="../images/sort-ic.svg"
-                                                                                    class="sotTble"></span>
+                                                                            <span>Action</span>
                                                                         </div>
                                                                     </th>
                                                                 </tr>
@@ -1834,10 +1830,13 @@
                                                         </table>
                                                     </div>
                                                 </div>
+                                                <div class="action-container mt-3 d-none">
+                                                    <button class="btn btn-danger delete-selected">Delete <span class="selected-count d-none">0 محددة</span></button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-12 col-lg-6">
+                                    <div class="col-12 col-lg-6  table-tab-pane">
                                         <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow px-0"
                                             style="background:#F2F2F2 !important;">
                                             <div class="px-4">
@@ -1863,7 +1862,7 @@
                                                 </div>
                                                 <div class="table-responsive bg-light mt-4 border-radius-20">
                                                     <div class="secondTableContainer">
-                                                        <table id="myTable" class="table">
+                                                        <table id="myTable11" class="table">
                                                             <thead>
                                                                 <tr class="tr">
                                                                     <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
@@ -1873,7 +1872,7 @@
                                                                             <input type="checkbox" class="selectAll">
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(1, 'myTable')"
+                                                                    <th onclick="sortTable(1, 'myTable11')"
                                                                         class="style-th">
                                                                         <div>
                                                                             <span>invoice
@@ -1882,7 +1881,7 @@
                                                                                     class="sotTble"></span>
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(2, 'myTable')"
+                                                                    <th onclick="sortTable(2, 'myTable11')"
                                                                         class="style-th">
                                                                         <div>
                                                                             <span>Invoice
@@ -1891,12 +1890,10 @@
                                                                                     class="sotTble"></span>
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(3, 'myTable')"
+                                                                    <th 
                                                                         class="style-th">
                                                                         <div>
-                                                                            <span>Action</span><span><img
-                                                                                    src="../images/sort-ic.svg"
-                                                                                    class="sotTble"></span>
+                                                                            <span>Action</span>
                                                                         </div>
                                                                     </th>
                                                                 </tr>
@@ -1937,12 +1934,15 @@
                                                         </table>
                                                     </div>
                                                 </div>
+                                                <div class="action-container mt-3 d-none">
+                                                    <button class="btn btn-danger delete-selected">Delete <span class="selected-count d-none">0 محددة</span></button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-12 col-lg-6">
+                                    <div class="col-12 col-lg-6  table-tab-pane">
                                         <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow px-0"
                                             style="background:#F2F2F2 !important;">
                                             <div class="px-4">
@@ -1978,7 +1978,7 @@
                                                 </div>
                                                 <div class="table-responsive bg-light mt-4 border-radius-20">
                                                     <div class="secondTableContainer">
-                                                        <table id="myTable" class="table">
+                                                        <table id="myTable12" class="table">
                                                             <thead>
                                                                 <tr class="tr">
                                                                     <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
@@ -1988,7 +1988,7 @@
                                                                             <input type="checkbox" class="selectAll">
                                                                         </div>
                                                                     </th>
-                                                                    <th
+                                                                    <th onclick="sortTable(0, 'myTable12')"
                                                                         class="style-th">
                                                                         <div>
                                                                             <span> ID</span><span><img
@@ -1996,7 +1996,7 @@
                                                                                     class="sotTble"></span>
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(1, 'myTable')"
+                                                                    <th onclick="sortTable(1, 'myTable12')"
                                                                         class="style-th">
                                                                         <div>
                                                                             <span> QTY</span><span><img
@@ -2004,7 +2004,7 @@
                                                                                     class="sotTble"></span>
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(2, 'myTable')"
+                                                                    <th onclick="sortTable(2, 'myTable12')"
                                                                         class="style-th">
                                                                         <div>
                                                                             <span>Unit</span><span><img
@@ -2012,7 +2012,7 @@
                                                                                     class="sotTble"></span>
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(2, 'myTable')"
+                                                                    <th onclick="sortTable(3, 'myTable12')"
                                                                         class="style-th">
                                                                         <div>
                                                                             <span>Description</span><span><img
@@ -2020,12 +2020,10 @@
                                                                                     class="sotTble"></span>
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(3, 'myTable')"
+                                                                    <th
                                                                         class="style-th">
                                                                         <div>
-                                                                            <span>Action</span><span><img
-                                                                                    src="../images/sort-ic.svg"
-                                                                                    class="sotTble"></span>
+                                                                            <span>Action</span>
                                                                         </div>
                                                                     </th>
                                                                 </tr>
@@ -2072,10 +2070,13 @@
                                                         </table>
                                                     </div>
                                                 </div>
+                                                <div class="action-container mt-3 d-none">
+                                                    <button class="btn btn-danger delete-selected">Delete <span class="selected-count d-none">0 محددة</span></button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-12 col-lg-6">
+                                    <div class="col-12 col-lg-6  table-tab-pane">
                                         <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow px-0"
                                             style="background:#F2F2F2 !important;">
                                             <div class="px-4">
@@ -2100,7 +2101,7 @@
                                                 </div>
                                                 <div class="table-responsive bg-light mt-4 border-radius-20">
                                                     <div class="secondTableContainer">
-                                                        <table id="myTable" class="table">
+                                                        <table id="myTable13" class="table">
                                                             <thead>
                                                                 <tr class="tr">
                                                                     <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
@@ -2110,7 +2111,7 @@
                                                                             <input type="checkbox" class="selectAll">
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(1, 'myTable')"
+                                                                    <th onclick="sortTable(1, 'myTable13')"
                                                                         class="style-th">
                                                                         <div>
                                                                             <span>Currency
@@ -2119,7 +2120,7 @@
                                                                                     class="sotTble"></span>
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(2, 'myTable')"
+                                                                    <th onclick="sortTable(2, 'myTable13')"
                                                                         class="style-th">
                                                                         <div>
                                                                             <span>Currency
@@ -2128,12 +2129,10 @@
                                                                                     class="sotTble"></span>
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(3, 'myTable')"
+                                                                    <th
                                                                         class="style-th">
                                                                         <div>
-                                                                            <span>Action</span><span><img
-                                                                                    src="../images/sort-ic.svg"
-                                                                                    class="sotTble"></span>
+                                                                            <span>Action</span>
                                                                         </div>
                                                                     </th>
                                                                 </tr>
@@ -2174,12 +2173,15 @@
                                                         </table>
                                                     </div>
                                                 </div>
+                                                <div class="action-container mt-3 d-none">
+                                                    <button class="btn btn-danger delete-selected">Delete <span class="selected-count d-none">0 محددة</span></button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-md-6 col-12">
+                                    <div class="col-md-6 col-12  table-tab-pane">
                                         <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow px-0"
                                             style="background:#F2F2F2 !important;">
                                             <div class="px-4">
@@ -2205,7 +2207,7 @@
                                                 </div>
                                                 <div class="table-responsive bg-light mt-4 border-radius-20">
                                                     <div class="secondTableContainer">
-                                                        <table id="myTable" class="table">
+                                                        <table id="myTable14" class="table">
                                                             <thead>
                                                                 <tr class="tr">
                                                                     <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
@@ -2215,7 +2217,7 @@
                                                                             <input type="checkbox" class="selectAll">
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(1, 'myTable')"
+                                                                    <th onclick="sortTable(1, 'myTable14')"
                                                                         class="style-th">
                                                                         <div>
                                                                             <span>City
@@ -2224,7 +2226,7 @@
                                                                                     class="sotTble"></span>
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(2, 'myTable')"
+                                                                    <th onclick="sortTable(2, 'myTable14')"
                                                                         class="style-th">
                                                                         <div>
                                                                             <span>City
@@ -2233,12 +2235,10 @@
                                                                                     class="sotTble"></span>
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(3, 'myTable')"
+                                                                    <th
                                                                         class="style-th">
                                                                         <div>
-                                                                            <span>Action</span><span><img
-                                                                                    src="../images/sort-ic.svg"
-                                                                                    class="sotTble"></span>
+                                                                            <span>Action</span>
                                                                         </div>
                                                                     </th>
                                                                 </tr>
@@ -2279,16 +2279,19 @@
                                                         </table>
                                                     </div>
                                                 </div>
+                                                <div class="action-container mt-3 d-none">
+                                                    <button class="btn btn-danger delete-selected">Delete <span class="selected-count d-none">0 محددة</span></button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="tab-pane fade table-tab-pane" id="section4" role="tabpanel1"
+                            <div class="tab-pane fade" id="section4" role="tabpanel1"
                                 aria-labelledby="not-active">
                                 <div class="row">
-                                    <div class="col-12 col-lg-6">
+                                    <div class="col-12 col-lg-6 table-tab-pane">
                                         <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow px-0"
                                             style="background:#F2F2F2 !important;">
                                             <div class="px-4">
@@ -2314,7 +2317,7 @@
                                                 </div>
                                                 <div class="table-responsive bg-light mt-4 border-radius-20">
                                                     <div class="secondTableContainer">
-                                                        <table id="myTable" class="table">
+                                                        <table id="myTable15" class="table">
                                                             <thead>
                                                                 <tr class="tr">
                                                                     <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
@@ -2324,7 +2327,7 @@
                                                                             <input type="checkbox" class="selectAll">
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(1, 'myTable')"
+                                                                    <th onclick="sortTable(1, 'myTable15')"
                                                                         class="style-th">
                                                                         <div>
                                                                             <span>Lang
@@ -2333,7 +2336,7 @@
                                                                                     class="sotTble"></span>
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(2, 'myTable')"
+                                                                    <th onclick="sortTable(2, 'myTable15')"
                                                                         class="style-th">
                                                                         <div>
                                                                             <span>Unit
@@ -2342,12 +2345,10 @@
                                                                                     class="sotTble"></span>
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(3, 'myTable')"
+                                                                    <th
                                                                         class="style-th">
                                                                         <div>
-                                                                            <span>Action</span><span><img
-                                                                                    src="../images/sort-ic.svg"
-                                                                                    class="sotTble"></span>
+                                                                            <span>Action</span>
                                                                         </div>
                                                                     </th>
                                                                 </tr>
@@ -2388,10 +2389,13 @@
                                                         </table>
                                                     </div>
                                                 </div>
+                                                <div class="action-container mt-3 d-none">
+                                                    <button class="btn btn-danger delete-selected">Delete <span class="selected-count d-none">0 محددة</span></button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-12 col-lg-6">
+                                    <div class="col-12 col-lg-6  table-tab-pane">
                                         <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow px-0"
                                             style="background:#F2F2F2 !important;">
                                             <div class="px-4">
@@ -2417,7 +2421,7 @@
                                                 </div>
                                                 <div class="table-responsive bg-light mt-4 border-radius-20">
                                                     <div class="secondTableContainer">
-                                                        <table id="myTable" class="table">
+                                                        <table id="myTable16" class="table">
                                                             <thead>
                                                                 <tr class="tr">
                                                                     <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
@@ -2427,7 +2431,7 @@
                                                                             <input type="checkbox" class="selectAll">
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(1, 'myTable')"
+                                                                    <th onclick="sortTable(1, 'myTable16')"
                                                                         class="style-th">
                                                                         <div>
                                                                             <span>Room
@@ -2436,7 +2440,7 @@
                                                                                     class="sotTble"></span>
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(2, 'myTable')"
+                                                                    <th onclick="sortTable(2, 'myTable16')"
                                                                         class="style-th">
                                                                         <div>
                                                                             <span>Article Type
@@ -2445,12 +2449,10 @@
                                                                                     class="sotTble"></span>
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(3, 'myTable')"
+                                                                    <th 
                                                                         class="style-th">
                                                                         <div>
-                                                                            <span>Action</span><span><img
-                                                                                    src="../images/sort-ic.svg"
-                                                                                    class="sotTble"></span>
+                                                                            <span>Action</span>
                                                                         </div>
                                                                     </th>
                                                                 </tr>
@@ -2492,12 +2494,15 @@
                                                         </table>
                                                     </div>
                                                 </div>
+                                                <div class="action-container mt-3 d-none">
+                                                    <button class="btn btn-danger delete-selected">Delete <span class="selected-count d-none">0 محددة</span></button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-12 col-lg-6">
+                                    <div class="col-12 col-lg-6 table-tab-pane">
                                         <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow px-0"
                                             style="background:#F2F2F2 !important;">
                                             <div class="px-4">
@@ -2523,7 +2528,7 @@
                                                 </div>
                                                 <div class="table-responsive bg-light mt-4 border-radius-20">
                                                     <div class="secondTableContainer">
-                                                        <table id="myTable" class="table">
+                                                        <table id="myTable17" class="table">
                                                             <thead>
                                                                 <tr class="tr">
                                                                     <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
@@ -2533,7 +2538,7 @@
                                                                             <input type="checkbox" class="selectAll">
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(1, 'myTable')"
+                                                                    <th onclick="sortTable(1, 'myTable17')"
                                                                         class="style-th">
                                                                         <div>
                                                                             <span>Room
@@ -2542,7 +2547,7 @@
                                                                                     class="sotTble"></span>
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(2, 'myTable')"
+                                                                    <th onclick="sortTable(2, 'myTable17')"
                                                                         class="style-th">
                                                                         <div>
                                                                             <span>Room Type
@@ -2551,12 +2556,10 @@
                                                                                     class="sotTble"></span>
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(3, 'myTable')"
+                                                                    <th
                                                                         class="style-th">
                                                                         <div>
-                                                                            <span>Action</span><span><img
-                                                                                    src="../images/sort-ic.svg"
-                                                                                    class="sotTble"></span>
+                                                                            <span>Action</span>
                                                                         </div>
                                                                     </th>
                                                                 </tr>
@@ -2597,10 +2600,13 @@
                                                         </table>
                                                     </div>
                                                 </div>
+                                                <div class="action-container mt-3 d-none">
+                                                    <button class="btn btn-danger delete-selected">Delete <span class="selected-count d-none">0 محددة</span></button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-12 col-lg-6">
+                                    <div class="col-12 col-lg-6 table-tab-pane">
                                         <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow px-0"
                                             style="background:#F2F2F2 !important;">
                                             <div class="px-4">
@@ -2626,7 +2632,7 @@
                                                 </div>
                                                 <div class="table-responsive bg-light mt-4 border-radius-20">
                                                     <div class="secondTableContainer">
-                                                        <table id="myTable" class="table">
+                                                        <table id="myTable18" class="table">
                                                             <thead>
                                                                 <tr class="tr">
                                                                     <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
@@ -2636,7 +2642,7 @@
                                                                             <input type="checkbox" class="selectAll">
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(1, 'myTable')"
+                                                                    <th onclick="sortTable(1, 'myTable18')"
                                                                         class="style-th">
                                                                         <div>
                                                                             <span>Room
@@ -2645,7 +2651,7 @@
                                                                                     class="sotTble"></span>
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(2, 'myTable')"
+                                                                    <th onclick="sortTable(2, 'myTable18')"
                                                                         class="style-th">
                                                                         <div>
                                                                             <span>Meeting
@@ -2654,12 +2660,10 @@
                                                                                     class="sotTble"></span>
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(3, 'myTable')"
+                                                                    <th
                                                                         class="style-th">
                                                                         <div>
-                                                                            <span>Action</span><span><img
-                                                                                    src="../images/sort-ic.svg"
-                                                                                    class="sotTble"></span>
+                                                                            <span>Action</span>
                                                                         </div>
                                                                     </th>
                                                                 </tr>
@@ -2700,16 +2704,19 @@
                                                         </table>
                                                     </div>
                                                 </div>
+                                                <div class="action-container mt-3 d-none">
+                                                    <button class="btn btn-danger delete-selected">Delete <span class="selected-count d-none">0 محددة</span></button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="tab-pane fade table-tab-pane" id="section5" role="tabpanel1"
+                            <div class="tab-pane fade" id="section5" role="tabpanel1"
                                 aria-labelledby="not-active">
                                 <div class="row">
-                                    <div class="col-12 col-lg-6">
+                                    <div class="col-12 col-lg-6  table-tab-pane">
                                         <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow px-0"
                                             style="background:#F2F2F2 !important;">
                                             <div class="px-4">
@@ -2734,7 +2741,7 @@
                                                 </div>
                                                 <div class="table-responsive bg-light mt-4 border-radius-20">
                                                     <div class="secondTableContainer">
-                                                        <table id="myTable" class="table">
+                                                        <table id="myTable19" class="table">
                                                             <thead>
                                                                 <tr class="tr">
                                                                     <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
@@ -2744,7 +2751,7 @@
                                                                             <input type="checkbox" class="selectAll">
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(1, 'myTable')"
+                                                                    <th onclick="sortTable(1, 'myTable19')"
                                                                         class="style-th">
                                                                         <div>
                                                                             <span>Room
@@ -2753,7 +2760,7 @@
                                                                                     class="sotTble"></span>
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(2, 'myTable')"
+                                                                    <th onclick="sortTable(2, 'myTable19')"
                                                                         class="style-th">
                                                                         <div>
                                                                             <span>Room Type
@@ -2762,12 +2769,10 @@
                                                                                     class="sotTble"></span>
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(3, 'myTable')"
+                                                                    <th
                                                                         class="style-th">
                                                                         <div>
-                                                                            <span>Action</span><span><img
-                                                                                    src="../images/sort-ic.svg"
-                                                                                    class="sotTble"></span>
+                                                                            <span>Action</span>
                                                                         </div>
                                                                     </th>
                                                                 </tr>
@@ -2797,8 +2802,7 @@
                                                                                 text</span>
                                                                         </div>
                                                                         <button type="button"
-                                                                            class="btn btn-secondary dataTableButtons"
-                                                                            >
+                                                                            class="btn btn-secondary dataTableButtons">
                                                                             <i class="fa fa-trash"></i>
                                                                         </button>
                                                                     </td>
@@ -2808,10 +2812,13 @@
                                                         </table>
                                                     </div>
                                                 </div>
+                                                <div class="action-container mt-3 d-none">
+                                                    <button class="btn btn-danger delete-selected">Delete <span class="selected-count d-none">0 محددة</span></button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-12 col-lg-6">
+                                    <div class="col-12 col-lg-6 table-tab-pane">
                                         <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow px-0"
                                             style="background:#F2F2F2 !important;">
                                             <div class="px-4">
@@ -2838,7 +2845,7 @@
                                                 </div>
                                                 <div class="table-responsive bg-light mt-4 border-radius-20">
                                                     <div class="secondTableContainer">
-                                                        <table id="myTable" class="table">
+                                                        <table id="myTable20" class="table">
                                                             <thead>
                                                                 <tr class="tr">
                                                                     <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
@@ -2848,7 +2855,7 @@
                                                                             <input type="checkbox" class="selectAll">
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(1, 'myTable')"
+                                                                    <th onclick="sortTable(1, 'myTable20')"
                                                                         class="style-th">
                                                                         <div>
                                                                             <span>Room
@@ -2857,7 +2864,7 @@
                                                                                     class="sotTble"></span>
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(2, 'myTable')"
+                                                                    <th onclick="sortTable(2, 'myTable20')"
                                                                         class="style-th">
                                                                         <div>
                                                                             <span>Room Type
@@ -2866,12 +2873,10 @@
                                                                                     class="sotTble"></span>
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(3, 'myTable')"
+                                                                    <th
                                                                         class="style-th">
                                                                         <div>
-                                                                            <span>Action</span><span><img
-                                                                                    src="../images/sort-ic.svg"
-                                                                                    class="sotTble"></span>
+                                                                            <span>Action</span>
                                                                         </div>
                                                                     </th>
                                                                 </tr>
@@ -2912,12 +2917,15 @@
                                                         </table>
                                                     </div>
                                                 </div>
+                                                <div class="action-container mt-3 d-none">
+                                                    <button class="btn btn-danger delete-selected">Delete <span class="selected-count d-none">0 محددة</span></button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-12 col-lg-6">
+                                    <div class="col-12 col-lg-6 table-tab-pane">
                                         <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow px-0"
                                             style="background:#F2F2F2 !important;">
                                             <div class="px-4">
@@ -2953,7 +2961,7 @@
                                                 </div>
                                                 <div class="table-responsive bg-light mt-4 border-radius-20">
                                                     <div class="secondTableContainer">
-                                                        <table id="myTable" class="table">
+                                                        <table id="myTable21" class="table">
                                                             <thead>
                                                                 <tr class="tr">
                                                                     <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
@@ -2963,7 +2971,7 @@
                                                                             <input type="checkbox" class="selectAll">
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(1, 'myTable')"
+                                                                    <th onclick="sortTable(1, 'myTable21')"
                                                                         class="style-th">
                                                                         <div>
                                                                             <span>ID</span><span><img
@@ -2971,7 +2979,7 @@
                                                                                     class="sotTble"></span>
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(2, 'myTable')"
+                                                                    <th onclick="sortTable(2, 'myTable21')"
                                                                         class="style-th">
                                                                         <div>
                                                                             <span>QTY</span><span><img
@@ -2979,7 +2987,7 @@
                                                                                     class="sotTble"></span>
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(3, 'myTable')"
+                                                                    <th onclick="sortTable(3, 'myTable21')"
                                                                         class="style-th">
                                                                         <div>
                                                                             <span>Unit</span><span><img
@@ -2987,7 +2995,7 @@
                                                                                     class="sotTble"></span>
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(4, 'myTable')"
+                                                                    <th onclick="sortTable(4, 'myTable21')"
                                                                         class="style-th">
                                                                         <div>
                                                                             <span>Description</span><span><img
@@ -2995,12 +3003,10 @@
                                                                                     class="sotTble"></span>
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(5, 'myTable')"
+                                                                    <th
                                                                         class="style-th">
                                                                         <div>
-                                                                            <span>Action</span><span><img
-                                                                                    src="../images/sort-ic.svg"
-                                                                                    class="sotTble"></span>
+                                                                            <span>Action</span>
                                                                         </div>
                                                                     </th>
                                                                 </tr>
@@ -3047,10 +3053,13 @@
                                                         </table>
                                                     </div>
                                                 </div>
+                                                <div class="action-container mt-3 d-none">
+                                                    <button class="btn btn-danger delete-selected">Delete <span class="selected-count d-none">0 محددة</span></button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-12 col-lg-6">
+                                    <div class="col-12 col-lg-6 table-tab-pane">
                                         <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow px-0"
                                             style="background:#F2F2F2 !important;">
                                             <div class="px-4">
@@ -3085,7 +3094,7 @@
                                                 </div>
                                                 <div class="table-responsive bg-light mt-4 border-radius-20">
                                                     <div class="secondTableContainer">
-                                                        <table id="myTable" class="table">
+                                                        <table id="myTable22" class="table">
                                                             <thead>
                                                                 <tr class="tr">
                                                                     <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
@@ -3095,7 +3104,7 @@
                                                                             <input type="checkbox" class="selectAll">
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(1, 'myTable')"
+                                                                    <th onclick="sortTable(1, 'myTable22')"
                                                                         class="style-th">
                                                                         <div>
                                                                             <span>ID</span><span><img
@@ -3103,7 +3112,7 @@
                                                                                     class="sotTble"></span>
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(2, 'myTable')"
+                                                                    <th onclick="sortTable(2, 'myTable22')"
                                                                         class="style-th">
                                                                         <div>
                                                                             <span>QTY</span><span><img
@@ -3111,7 +3120,7 @@
                                                                                     class="sotTble"></span>
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(3, 'myTable')"
+                                                                    <th onclick="sortTable(3, 'myTable22')"
                                                                         class="style-th">
                                                                         <div>
                                                                             <span>Unit</span><span><img
@@ -3119,7 +3128,7 @@
                                                                                     class="sotTble"></span>
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(4, 'myTable')"
+                                                                    <th onclick="sortTable(4, 'myTable22')"
                                                                         class="style-th">
                                                                         <div>
                                                                             <span>Description</span><span><img
@@ -3127,12 +3136,10 @@
                                                                                     class="sotTble"></span>
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(5, 'myTable')"
+                                                                    <th
                                                                         class="style-th">
                                                                         <div>
-                                                                            <span>Action</span><span><img
-                                                                                    src="../images/sort-ic.svg"
-                                                                                    class="sotTble"></span>
+                                                                            <span>Action</span>
                                                                         </div>
                                                                     </th>
                                                                 </tr>
@@ -3179,12 +3186,15 @@
                                                         </table>
                                                     </div>
                                                 </div>
+                                                <div class="action-container mt-3 d-none">
+                                                    <button class="btn btn-danger delete-selected">Delete <span class="selected-count d-none">0 محددة</span></button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-md-6 col-12">
+                                    <div class="col-md-6 col-12 table-tab-pane">
                                         <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow px-0"
                                             style="background:#F2F2F2 !important;">
                                             <div class="px-4">
@@ -3219,7 +3229,7 @@
                                                 </div>
                                                 <div class="table-responsive bg-light mt-4 border-radius-20">
                                                     <div class="secondTableContainer">
-                                                        <table id="myTable" class="table">
+                                                        <table id="myTable23" class="table">
                                                             <thead>
                                                                 <tr class="tr">
                                                                     <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
@@ -3229,7 +3239,7 @@
                                                                             <input type="checkbox" class="selectAll">
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(1, 'myTable')"
+                                                                    <th onclick="sortTable(1, 'myTable23')"
                                                                         class="style-th">
                                                                         <div>
                                                                             <span>ID</span><span><img
@@ -3237,7 +3247,7 @@
                                                                                     class="sotTble"></span>
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(2, 'myTable')"
+                                                                    <th onclick="sortTable(2, 'myTable23')"
                                                                         class="style-th">
                                                                         <div>
                                                                             <span>QTY</span><span><img
@@ -3245,7 +3255,7 @@
                                                                                     class="sotTble"></span>
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(3, 'myTable')"
+                                                                    <th onclick="sortTable(3, 'myTable23')"
                                                                         class="style-th">
                                                                         <div>
                                                                             <span>Unit</span><span><img
@@ -3253,7 +3263,7 @@
                                                                                     class="sotTble"></span>
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(4, 'myTable')"
+                                                                    <th onclick="sortTable(4, 'myTable23')"
                                                                         class="style-th">
                                                                         <div>
                                                                             <span>Description</span><span><img
@@ -3261,12 +3271,9 @@
                                                                                     class="sotTble"></span>
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(5, 'myTable')"
-                                                                        class="style-th">
+                                                                    <th class="style-th">
                                                                         <div>
-                                                                            <span>Action</span><span><img
-                                                                                    src="../images/sort-ic.svg"
-                                                                                    class="sotTble"></span>
+                                                                            <span>Action</span>
                                                                         </div>
                                                                     </th>
                                                                 </tr>
@@ -3302,8 +3309,7 @@
                                                                                 text</span>
                                                                         </div>
                                                                         <button type="button"
-                                                                            class="btn btn-secondary dataTableButtons"
-                                                                            >
+                                                                            class="btn btn-secondary dataTableButtons">
                                                                             <i class="fa fa-trash"></i>
                                                                         </button>
                                                                     </td>
@@ -3313,16 +3319,19 @@
                                                         </table>
                                                     </div>
                                                 </div>
+                                                <div class="action-container mt-3 d-none">
+                                                    <button class="btn btn-danger delete-selected">Delete <span class="selected-count d-none">0 محددة</span></button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="tab-pane fade table-tab-pane" id="section6" role="tabpanel1"
+                            <div class="tab-pane fade" id="section6" role="tabpanel1"
                                 aria-labelledby="not-active">
                                 <div class="row">
-                                    <div class="col-12 col-lg-6">
+                                    <div class="col-12 col-lg-6 table-tab-pane">
                                         <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow px-0"
                                             style="background:#F2F2F2 !important;">
                                             <div class="px-4">
@@ -3349,7 +3358,7 @@
                                                 </div>
                                                 <div class="table-responsive bg-light mt-4 border-radius-20">
                                                     <div class="secondTableContainer">
-                                                        <table id="myTable" class="table">
+                                                        <table id="myTable24" class="table">
                                                             <thead>
                                                                 <tr class="tr">
                                                                     <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
@@ -3359,7 +3368,7 @@
                                                                             <input type="checkbox" class="selectAll">
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(1, 'myTable')"
+                                                                    <th onclick="sortTable(1, 'myTable24')"
                                                                         class="style-th">
                                                                         <div>
                                                                             <span>CAT
@@ -3368,7 +3377,7 @@
                                                                                     class="sotTble"></span>
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(2, 'myTable')"
+                                                                    <th onclick="sortTable(2, 'myTable24')"
                                                                         class="style-th">
                                                                         <div>
                                                                             <span>Category
@@ -3377,12 +3386,10 @@
                                                                                     class="sotTble"></span>
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(3, 'myTable')"
+                                                                    <th
                                                                         class="style-th">
                                                                         <div>
-                                                                            <span>Action</span><span><img
-                                                                                    src="../images/sort-ic.svg"
-                                                                                    class="sotTble"></span>
+                                                                            <span>Action</span>
                                                                         </div>
                                                                     </th>
                                                                 </tr>
@@ -3423,10 +3430,13 @@
                                                         </table>
                                                     </div>
                                                 </div>
+                                                <div class="action-container mt-3 d-none">
+                                                    <button class="btn btn-danger delete-selected">Delete <span class="selected-count d-none">0 محددة</span></button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-12 col-lg-6">
+                                    <div class="col-12 col-lg-6 table-tab-pane">
                                         <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow px-0"
                                             style="background:#F2F2F2 !important;">
                                             <div class="px-4">
@@ -3453,7 +3463,7 @@
                                                 </div>
                                                 <div class="table-responsive bg-light mt-4 border-radius-20">
                                                     <div class="secondTableContainer">
-                                                        <table id="myTable" class="table">
+                                                        <table id="myTable25" class="table">
                                                             <thead>
                                                                 <tr class="tr">
                                                                     <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
@@ -3463,7 +3473,7 @@
                                                                             <input type="checkbox" class="selectAll">
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(1, 'myTable')"
+                                                                    <th onclick="sortTable(1, 'myTable25')"
                                                                         class="style-th">
                                                                         <div>
                                                                             <span>Category
@@ -3472,7 +3482,7 @@
                                                                                     class="sotTble"></span>
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(2, 'myTable')"
+                                                                    <th onclick="sortTable(2, 'myTable25')"
                                                                         class="style-th">
                                                                         <div>
                                                                             <span>Group
@@ -3481,12 +3491,10 @@
                                                                                     class="sotTble"></span>
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(3, 'myTable')"
+                                                                    <th
                                                                         class="style-th">
                                                                         <div>
-                                                                            <span>Action</span><span><img
-                                                                                    src="../images/sort-ic.svg"
-                                                                                    class="sotTble"></span>
+                                                                            <span>Action</span>
                                                                         </div>
                                                                     </th>
                                                                 </tr>
@@ -3527,12 +3535,15 @@
                                                         </table>
                                                     </div>
                                                 </div>
+                                                <div class="action-container mt-3 d-none">
+                                                    <button class="btn btn-danger delete-selected">Delete <span class="selected-count d-none">0 محددة</span></button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-12 col-lg-6">
+                                    <div class="col-12 col-lg-6 table-tab-pane">
                                         <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow px-0"
                                             style="background:#F2F2F2 !important;">
                                             <div class="px-4">
@@ -3558,7 +3569,7 @@
                                                 </div>
                                                 <div class="table-responsive bg-light mt-4 border-radius-20">
                                                     <div class="secondTableContainer">
-                                                        <table id="myTable" class="table">
+                                                        <table id="myTable26" class="table">
                                                             <thead>
                                                                 <tr class="tr">
                                                                     <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
@@ -3568,7 +3579,7 @@
                                                                             <input type="checkbox" class="selectAll">
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(1, 'myTable')"
+                                                                    <th onclick="sortTable(1, 'myTable26')"
                                                                         class="style-th">
                                                                         <div>
                                                                             <span>Status
@@ -3577,7 +3588,7 @@
                                                                                     class="sotTble"></span>
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(2, 'myTable')"
+                                                                    <th onclick="sortTable(2, 'myTable26')"
                                                                         class="style-th">
                                                                         <div>
                                                                             <span>Status
@@ -3586,12 +3597,10 @@
                                                                                     class="sotTble"></span>
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(3, 'myTable')"
+                                                                    <th
                                                                         class="style-th">
                                                                         <div>
-                                                                            <span>Action</span><span><img
-                                                                                    src="../images/sort-ic.svg"
-                                                                                    class="sotTble"></span>
+                                                                            <span>Action</span>
                                                                         </div>
                                                                     </th>
                                                                 </tr>
@@ -3632,10 +3641,13 @@
                                                         </table>
                                                     </div>
                                                 </div>
+                                                <div class="action-container mt-3 d-none">
+                                                    <button class="btn btn-danger delete-selected">Delete <span class="selected-count d-none">0 محددة</span></button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-12 col-lg-6">
+                                    <div class="col-12 col-lg-6 table-tab-pane">
                                         <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow px-0"
                                             style="background:#F2F2F2 !important;">
                                             <div class="px-4">
@@ -3661,7 +3673,7 @@
                                                 </div>
                                                 <div class="table-responsive bg-light mt-4 border-radius-20">
                                                     <div class="secondTableContainer">
-                                                        <table id="myTable" class="table">
+                                                        <table id="myTable27" class="table">
                                                             <thead>
                                                                 <tr class="tr">
                                                                     <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
@@ -3671,7 +3683,7 @@
                                                                             <input type="checkbox" class="selectAll">
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(1, 'myTable')"
+                                                                    <th onclick="sortTable(1, 'myTable27')"
                                                                         class="style-th">
                                                                         <div>
                                                                             <span>City
@@ -3680,7 +3692,7 @@
                                                                                     class="sotTble"></span>
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(2, 'myTable')"
+                                                                    <th onclick="sortTable(2, 'myTable27')"
                                                                         class="style-th">
                                                                         <div>
                                                                             <span>City
@@ -3689,12 +3701,10 @@
                                                                                     class="sotTble"></span>
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(3, 'myTable')"
+                                                                    <th
                                                                         class="style-th">
                                                                         <div>
-                                                                            <span>Action</span><span><img
-                                                                                    src="../images/sort-ic.svg"
-                                                                                    class="sotTble"></span>
+                                                                            <span>Action</span>
                                                                         </div>
                                                                     </th>
                                                                 </tr>
@@ -3735,12 +3745,15 @@
                                                         </table>
                                                     </div>
                                                 </div>
+                                                <div class="action-container mt-3 d-none">
+                                                    <button class="btn btn-danger delete-selected">Delete <span class="selected-count d-none">0 محددة</span></button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-md-6 col-12">
+                                    <div class="col-md-6 col-12 table-tab-pane">
                                         <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow px-0"
                                             style="background:#F2F2F2 !important;">
                                             <div class="px-4">
@@ -3766,7 +3779,7 @@
                                                 </div>
                                                 <div class="table-responsive bg-light mt-4 border-radius-20">
                                                     <div class="secondTableContainer">
-                                                        <table id="myTable" class="table">
+                                                        <table id="myTable27" class="table">
                                                             <thead>
                                                                 <tr class="tr">
                                                                     <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
@@ -3776,7 +3789,7 @@
                                                                             <input type="checkbox" class="selectAll">
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(1, 'myTable')"
+                                                                    <th onclick="sortTable(1, 'myTable27')"
                                                                         class="style-th">
                                                                         <div>
                                                                             <span>Activity
@@ -3785,7 +3798,7 @@
                                                                                     class="sotTble"></span>
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(2, 'myTable')"
+                                                                    <th onclick="sortTable(2, 'myTable27')"
                                                                         class="style-th">
                                                                         <div>
                                                                             <span>Activity
@@ -3794,12 +3807,10 @@
                                                                                     class="sotTble"></span>
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(3, 'myTable')"
+                                                                    <th
                                                                         class="style-th">
                                                                         <div>
-                                                                            <span>Action</span><span><img
-                                                                                    src="../images/sort-ic.svg"
-                                                                                    class="sotTble"></span>
+                                                                            <span>Action</span>
                                                                         </div>
                                                                     </th>
                                                                 </tr>
@@ -3840,16 +3851,19 @@
                                                         </table>
                                                     </div>
                                                 </div>
+                                                <div class="action-container mt-3 d-none">
+                                                    <button class="btn btn-danger delete-selected">Delete <span class="selected-count d-none">0 محددة</span></button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="tab-pane fade table-tab-pane" id="section7" role="tabpanel1"
+                            <div class="tab-pane fade" id="section7" role="tabpanel1"
                                 aria-labelledby="not-active">
                                 <div class="row">
-                                    <div class="col-12 col-lg-6">
+                                    <div class="col-12 col-lg-6 table-tab-pane">
                                         <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow px-0"
                                             style="background:#F2F2F2 !important;">
                                             <div class="px-4">
@@ -3875,7 +3889,7 @@
                                                 </div>
                                                 <div class="table-responsive bg-light mt-4 border-radius-20">
                                                     <div class="secondTableContainer">
-                                                        <table id="myTable" class="table">
+                                                        <table id="myTable28" class="table">
                                                             <thead>
                                                                 <tr class="tr">
                                                                     <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
@@ -3885,7 +3899,7 @@
                                                                             <input type="checkbox" class="selectAll">
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(1, 'myTable')"
+                                                                    <th onclick="sortTable(1, 'myTable28')"
                                                                         class="style-th">
                                                                         <div>
                                                                             <span>City
@@ -3894,7 +3908,7 @@
                                                                                     class="sotTble"></span>
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(2, 'myTable')"
+                                                                    <th onclick="sortTable(2, 'myTable28')"
                                                                         class="style-th">
                                                                         <div>
                                                                             <span>City
@@ -3903,12 +3917,10 @@
                                                                                     class="sotTble"></span>
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(3, 'myTable')"
+                                                                    <th
                                                                         class="style-th">
                                                                         <div>
-                                                                            <span>Action</span><span><img
-                                                                                    src="../images/sort-ic.svg"
-                                                                                    class="sotTble"></span>
+                                                                            <span>Action</span>
                                                                         </div>
                                                                     </th>
                                                                 </tr>
@@ -3949,10 +3961,13 @@
                                                         </table>
                                                     </div>
                                                 </div>
+                                                <div class="action-container mt-3 d-none">
+                                                    <button class="btn btn-danger delete-selected">Delete <span class="selected-count d-none">0 محددة</span></button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-12 col-lg-6">
+                                    <div class="col-12 col-lg-6 table-tab-pane">
                                         <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow px-0"
                                             style="background:#F2F2F2 !important;">
                                             <div class="px-4">
@@ -3978,7 +3993,7 @@
                                                 </div>
                                                 <div class="table-responsive bg-light mt-4 border-radius-20">
                                                     <div class="secondTableContainer">
-                                                        <table id="myTable" class="table">
+                                                        <table id="myTable29" class="table">
                                                             <thead>
                                                                 <tr class="tr">
                                                                     <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
@@ -3988,7 +4003,7 @@
                                                                             <input type="checkbox" class="selectAll">
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(1, 'myTable')"
+                                                                    <th onclick="sortTable(1, 'myTable29')"
                                                                         class="style-th">
                                                                         <div>
                                                                             <span>Lang
@@ -3997,7 +4012,7 @@
                                                                                     class="sotTble"></span>
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(2, 'myTable')"
+                                                                    <th onclick="sortTable(2, 'myTable29')"
                                                                         class="style-th">
                                                                         <div>
                                                                             <span>Language
@@ -4006,12 +4021,10 @@
                                                                                     class="sotTble"></span>
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(3, 'myTable')"
+                                                                    <th
                                                                         class="style-th">
                                                                         <div>
-                                                                            <span>Action</span><span><img
-                                                                                    src="../images/sort-ic.svg"
-                                                                                    class="sotTble"></span>
+                                                                            <span>Action</span>
                                                                         </div>
                                                                     </th>
                                                                 </tr>
@@ -4052,12 +4065,15 @@
                                                         </table>
                                                     </div>
                                                 </div>
+                                                <div class="action-container mt-3 d-none">
+                                                    <button class="btn btn-danger delete-selected">Delete <span class="selected-count d-none">0 محددة</span></button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-12 col-lg-6">
+                                    <div class="col-12 col-lg-6 table-tab-pane">
                                         <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow px-0"
                                             style="background:#F2F2F2 !important;">
                                             <div class="px-4">
@@ -4083,7 +4099,7 @@
                                                 </div>
                                                 <div class="table-responsive bg-light mt-4 border-radius-20">
                                                     <div class="secondTableContainer">
-                                                        <table id="myTable" class="table">
+                                                        <table id="myTable30" class="table">
                                                             <thead>
                                                                 <tr class="tr">
                                                                     <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
@@ -4093,7 +4109,7 @@
                                                                             <input type="checkbox" class="selectAll">
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(1, 'myTable')"
+                                                                    <th onclick="sortTable(1, 'myTable30')"
                                                                         class="style-th">
                                                                         <div>
                                                                             <span>Room
@@ -4102,7 +4118,7 @@
                                                                                     class="sotTble"></span>
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(2, 'myTable')"
+                                                                    <th onclick="sortTable(2, 'myTable30')"
                                                                         class="style-th">
                                                                         <div>
                                                                             <span>Room TYPE
@@ -4111,7 +4127,7 @@
                                                                                     class="sotTble"></span>
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(3, 'myTable')"
+                                                                    <th onclick="sortTable(3, 'myTable30')"
                                                                         class="style-th">
                                                                         <div>
                                                                             <span>Action</span><span><img
@@ -4157,10 +4173,13 @@
                                                         </table>
                                                     </div>
                                                 </div>
+                                                <div class="action-container mt-3 d-none">
+                                                    <button class="btn btn-danger delete-selected">Delete <span class="selected-count d-none">0 محددة</span></button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-12 col-lg-6">
+                                    <div class="col-12 col-lg-6 table-tab-pane">
                                         <div class="container-fluid content-form bg-light budget-table border-radius-20 pb-4 my-4 box-shadow px-0"
                                             style="background:#F2F2F2 !important;">
                                             <div class="px-4">
@@ -4186,7 +4205,7 @@
                                                 </div>
                                                 <div class="table-responsive bg-light mt-4 border-radius-20">
                                                     <div class="secondTableContainer">
-                                                        <table id="myTable" class="table">
+                                                        <table id="myTable31" class="table">
                                                             <thead>
                                                                 <tr class="tr">
                                                                     <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
@@ -4196,7 +4215,7 @@
                                                                             <input type="checkbox" class="selectAll">
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(1, 'myTable')"
+                                                                    <th onclick="sortTable(1, 'myTable31')"
                                                                         class="style-th">
                                                                         <div>
                                                                             <span>Priority
@@ -4205,7 +4224,7 @@
                                                                                     class="sotTble"></span>
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(2, 'myTable')"
+                                                                    <th onclick="sortTable(2, 'myTable31')"
                                                                         class="style-th">
                                                                         <div>
                                                                             <span>Priorities
@@ -4214,12 +4233,10 @@
                                                                                     class="sotTble"></span>
                                                                         </div>
                                                                     </th>
-                                                                    <th onclick="sortTable(3, 'myTable')"
+                                                                    <th
                                                                         class="style-th">
                                                                         <div>
-                                                                            <span>Action</span><span><img
-                                                                                    src="../images/sort-ic.svg"
-                                                                                    class="sotTble"></span>
+                                                                            <span>Action</span>
                                                                         </div>
                                                                     </th>
                                                                 </tr>
@@ -4258,6 +4275,9 @@
                                                             </tbody>
                                                         </table>
                                                     </div>
+                                                </div>
+                                                <div class="action-container mt-3 d-none">
+                                                    <button class="btn btn-danger delete-selected">Delete <span class="selected-count d-none">0 محددة</span></button>
                                                 </div>
                                             </div>
                                         </div>
