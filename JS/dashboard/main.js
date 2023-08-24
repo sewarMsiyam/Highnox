@@ -14,33 +14,42 @@
 // });
 
 
-const downloadPdfActivityBtnWord = document.getElementById("download-contract-word");
-downloadPdfActivityBtnWord.addEventListener("click", () => {
-  downloadWordFile();
-});
-
-function downloadWordFile() {
-  var fileUrl = 'path/to/your/file.docx';
-  var link = document.createElement('a');
-  link.href = fileUrl;
-  link.download = 'filename.docx';
-  link.click();
-}
 
 
 
-const downloadActivityBtnExcel = document.getElementById("download-contract-excel");
-downloadActivityBtnExcel.addEventListener("click", () => {
-  downloadFile();
-});
 
-function downloadFile() {
-  var fileUrl = 'path/to/your/file.xlsx';
-  var link = document.createElement('a');
-  link.href = fileUrl;
-  link.download = 'filename.xlsx';
-  link.click();
-}
+// const downloadPdfActivityBtnWord = document.getElementById("download-contract-word");
+// downloadPdfActivityBtnWord.addEventListener("click", () => {
+//   downloadWordFile();
+// });
+
+// function downloadWordFile() {
+//   var fileUrl = 'path/to/your/file.docx';
+//   var link = document.createElement('a');
+//   link.href = fileUrl;
+//   link.download = 'filename.docx';
+//   link.click();
+// }
+
+
+
+// const downloadActivityBtnExcel = document.getElementById("download-contract-excel");
+// downloadActivityBtnExcel.addEventListener("click", () => {
+//   downloadFile();
+// });
+
+// function downloadFile() {
+//   var fileUrl = 'path/to/your/file.xlsx';
+//   var link = document.createElement('a');
+//   link.href = fileUrl;
+//   link.download = 'filename.xlsx';
+//   link.click();
+// }
+
+
+
+
+
 
 
 // var toggleSliderMenuContractArrow = document.querySelector(".contract-sidebar");

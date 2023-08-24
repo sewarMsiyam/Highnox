@@ -108,10 +108,10 @@ table {
     padding: 1rem;
     display: flex;
     gap: 0.7rem;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
     cursor: pointer;
-    height: 40px;
+    height: 50px;
     border-radius: 0.3rem;
     overflow: hidden;
     outline: none !important;
@@ -1082,4 +1082,43 @@ td.ui-sortable {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+
+
+/***** floor maps *********/
+.more_input_gear {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #233450;
+  color: #fff;
+  padding: 10px;
+  border-radius: 10px 0 0 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+.more_input_gear.active i {
+  transform: rotate(180deg);
+}
+.F-list_inputs {
+  background: #fff;
+  padding: 20px 15px;
+  width: 185px;
+  box-shadow: 0px 0 6px 0px #959494;
+  border-radius: 20px;
+}
+.F-iconSide_right {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.slide-content {
+  display: none;
+  position: absolute;
+  right: 44px;
+  top: 50%;
+  transform: translateY(-50%);
 }

@@ -541,40 +541,38 @@ $(document).ready(function() {
       }
     }
 
-    $(document).on("click", ".openModelAttachment", function() {
-      const fileName = $(this).text();
-      const fileExtension = fileName.split('.').pop();
-    
-      if (fileExtension === "jpg" || fileExtension === "jpeg" || fileExtension === "png" || fileExtension === "gif" || fileExtension === "bmp") {
-        const selectedFile = selectedFiles.find(file => file.name === fileName);
-        if (selectedFile) {
-          const img = document.createElement("img");
-          img.src = URL.createObjectURL(selectedFile);
-          img.className = 'img-fluid';
-          $("#modelfilename").html(img);
-        }
-      }else {
-        const selectedFile = selectedFiles.find(file => file.name === fileName);
-        if (selectedFile) {
-          const fileUrl = URL.createObjectURL(selectedFile);
-          const iframe = document.createElement("iframe");
-          iframe.src = `https://docs.google.com/gview?url=${encodeURIComponent(fileUrl)}&embedded=true`;
-          iframe.className = 'img-fluid';
-          iframe.style.width = '100%';
-          iframe.style.height = '500px'; // ضبط الارتفاع حسب الاحتياج
-          $("#modelfilename").html(iframe);
-        }
-      }
-      
-      $("#AttachmentCenter").modal("show");
-      console.log(fileName);
-    });
-    
     // $(document).on("click", ".openModelAttachment", function() {
     //   const fileName = $(this).text();
-    //   const filePath = "fileselect.html";
-    //   window.open(filePath, "_blank");
+    //   const fileExtension = fileName.split('.').pop();
+    //   if (fileExtension === "jpg" || fileExtension === "jpeg" || fileExtension === "png" || fileExtension === "gif" || fileExtension === "bmp") {
+    //     const selectedFile = selectedFiles.find(file => file.name === fileName);
+    //     if (selectedFile) {
+    //       const img = document.createElement("img");
+    //       img.src = URL.createObjectURL(selectedFile);
+    //       img.className = 'img-fluid';
+    //       $("#modelfilename").html(img);
+    //     }
+    //   }else {
+    //     const selectedFile = selectedFiles.find(file => file.name === fileName);
+    //     if (selectedFile) {
+    //       const fileUrl = URL.createObjectURL(selectedFile);
+    //       const iframe = document.createElement("iframe");
+    //       iframe.src = `https://docs.google.com/gview?url=${encodeURIComponent(fileUrl)}&embedded=true`;
+    //       iframe.className = 'img-fluid';
+    //       iframe.style.width = '100%';
+    //       iframe.style.height = '500px';
+    //       $("#modelfilename").html(iframe);
+    //     }
+    //   }
+    //   $("#AttachmentCenter").modal("show");
+    //   console.log(fileName);
     // });
+    
+    $(document).on("click", ".openModelAttachment", function() {
+      const fileName = $(this).text();
+      const filePath = "fileselect.html";
+      window.open(filePath, "_blank");
+    });
     
 
 
