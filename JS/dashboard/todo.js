@@ -167,18 +167,4 @@ var colorList = [ '000000', '993300', '333300', '003300', '003366', '000066', '3
     
 
 
-    $(document).ready(function() {
-      // تحقق من تغيير حالة الـ select وتحديث العلامة "+"
-      $("#mySelect").on("changed.bs.select", function (e, clickedIndex, isSelected, previousValue) {
-          if ($(this).val().length === 0) {
-              $("#selectTrigger").text("+");
-          } else {
-              $("#selectTrigger").text(" ");
-          }
-      });
   
-      // النقر على العلامة "+" يقوم بنقر على الـ select
-      $("#selectTrigger").on("click", function() {
-          $("#mySelect").selectpicker("toggle");
-      });
-  });

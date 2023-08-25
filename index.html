@@ -284,37 +284,42 @@
                 <a class="cancel-icon"><i class="bi bi-x"></i></a>
             </div>
 
-            <nav class="navbar navbar-open-search navbar-expand px-4 py-0 d-flex align-items-center justify-content-between"
-                style="height: 65px; ">
-                <div class="d-flex align-items-center">
-                    <button class="btn" style="background-color: #fff0;" id="toggleBtn"><i
-                            class="sidebar-toggler d-none d-lg-flex fa fa-bars text-dark h4"></i></button>
-                    <i class="sidebar-toggler d-flex d-lg-none fa fa-bars" id="resptoggleSide"></i>
-                    <div class="input-group ml-4 serch-nav d-none d-lg-flex">
-                        <select class="ui dropdown rounded-0">
-                            <option value="">Gender</option>
-                            <option value="1">Male</option>
-                            <option value="0">Female</option>
-                        </select>
-                        <div class="ui action input rounded-0 p-0" style="width: 200px;">
-                            <input type="text" placeholder="Search..." class="searchFunction">
-                            <button class="ui icon button">
-                                <i class="fa-solid fa-magnifying-glass"></i>
-                            </button>
-                            <div class="position-absolute bg-white w-100 p-3 shadow  d-none menue-Search"
-                                style="top:100%;left: 0px !important;">
-                                <div class="ui celled w-100 list w-100">
-                                    <div class="item">Search 1</div>
-                                    <div class="item">Search 2</div>
-                                    <div class="item">Search 3</div>
-                                    <div class="item">Search 4 </div>
-                                    <div class="item">Search 5 </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+			<nav class="navbar navbar-open-search navbar-expand sticky-top px-4 py-0 d-flex align-items-center justify-content-between"
+				style="height: 65px;">
+				<div class="d-flex align-items-center">
+					<button class="btn" style="background-color: #fff0;" id="toggleBtn"><i
+							class="sidebar-toggler d-none d-lg-flex fa fa-bars text-dark h4"></i></button>
+					<i class="sidebar-toggler d-flex d-lg-none fa fa-bars" id="resptoggleSide"></i>
+					<div class="input-group ml-4 serch-nav d-none d-lg-flex">
+						<select class="ui dropdown rounded-0">
+							<option value="">select searching</option>
+							<option value="1">Meeting room</option>
+							<option value="0">list of room </option>
+							<option value="2">operations</option>
+							<option value="3">invoices</option>
+							<option value="4">Contract</option>
+							<option value="5">contacts</option>
+							<option value="6">clients</option>
+						</select>
+						<div class="ui action input rounded-0 p-0" style="width: 200px;">
+							<input type="text" placeholder="Search..." class="searchFunction">
+							<button class="ui icon button">
+								<i class="fa-solid fa-magnifying-glass"></i>
+							</button>
+							<div class="position-absolute bg-white w-100 p-3 shadow  d-none menue-Search"
+								style="top:100%;">
+								<div class="ui celled w-100 list w-100">
+									<div class="item">contract</div>
+									<div class="item">contract</div>
+									<div class="item">offer</div>
+									<div class="item">activity</div>
+									<div class="item"> payment conditions</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+                
                 <a href="index.html" class="d-flex d-lg-none me-4 justify-content-center ">
                     <h3 class="mb-0 logo title">Highnox</h3>
                 </a>
@@ -5152,9 +5157,8 @@
                                 <div class="d-flex"
                                     style="height: 40px; border-radius: 5px; padding: 0 7px; background-color: #F3F2F2; ">
                                     <div class="color-wrapper m-1" style="width: 100%;">
-                                        <input type="text" name="custom_color" placeholder="#000" id="pickcolor"
-                                            class="call-picker d-none">
-                                        <div class="color class='px-2'-holder call-picker"></div>
+                                        <input type="text" name="custom_color" placeholder="#000" id="pickcolor" class="call-picker d-none">
+                                        <div class="color px-2 color-holder call-picker"></div>
                                         <div class="color-picker" id="color-picker" style="display: none"></div>
                                     </div>
                                 </div>
