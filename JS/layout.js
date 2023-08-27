@@ -83,12 +83,12 @@
 
 //multiple select
   $('.selectpicker').selectpicker();
-  $('.selectpicker').on('changed.bs.select', function (e) {
+  $('.selectpicker[multiple]').on('changed.bs.select', function (e) {
     const selectedItems = $(this).val();
     const selectedCount = selectedItems.length;
     if (selectedCount >= 3) {
       $(this).parent().find('.filter-option-inner-inner').html(`<span style="color: #495057 !important;">${selectedCount} options selected</span>`);
-    }  
+    }
   });
 
 

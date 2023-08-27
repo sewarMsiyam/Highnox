@@ -810,13 +810,17 @@
                                   <label>Choose picture</label>
                                 </div>
                                 <div class="file-container-input">
-                                  <button type="button" class="file-button" onclick="openFile(this)">
-                                    <span>Attach File</span>
-                                    <img src="../img//icons/upload.svg" alt="">
+                                  <button type="button" class="file-button d-block h-auto text-center" onclick="openFilepic()">
+                                    <div class="d-flex justify-content-center w-100">
+                                      <span>Attach File</span>
+                                      <img src="../img//icons/upload.svg" alt="" class="px-2">
+                                    </div>
+                                    <div id="imageContainer"></div>
                                   </button>
                                   <input type="file" class="file-input d-none" id="attachment">
                                 </div>
                               </div>
+                           
                               <div class="col-md-3 col-12 d-flex align-items-end mb-2">
                                 <div class="form-check form-switch">
                                   <label class="switch">
@@ -837,13 +841,25 @@
                                     picture</label>
                                 </div>
                               </div>
-                              <div class="col-md-2 col-12 d-flex align-items-end mb-2">
+
+                              
+                              <!-- <div class="col-md-2 col-12 d-flex align-items-end mb-2">
                                 <button class="border-0 cursor-pointer"><span style="padding: 3px 8px;"
                                     class="second-delete-btn "><img class=""
                                       src="../images/delete-icon.svg"></span></button>
-                              </div>
+                              </div> -->
                             </div>
                           </div>
+                        </div>
+                      </div>
+                      <div class="container-fluid py-4 d-flex justify-content-end">
+                        <div class="col-md-4 col-12 text-right">
+                          <button class="btn btn-primary  cancel-btn" type="submit">
+                            Cancel
+                          </button>
+                          <button class="btn btn-primary submit-btn" type="submit">
+                            Save
+                          </button>
                         </div>
                       </div>
                   </form>
@@ -967,6 +983,11 @@
                                                       class="sotTble"></span>
                                           </div>
                                       </th>
+                                      <th onclick="sortTable(4, 'myTable1')" class="style-th">
+                                        <div>
+                                            <span>Attachment</span>
+                                        </div>
+                                    </th>
                                       <th class="style-th">
                                           <div style=" width: 170px; margin:auto;">
                                               <span>Action</span>
@@ -990,6 +1011,9 @@
                                       </td>
                                       <td class="style-td">
                                           Sithm University
+                                      </td>
+                                      <td class="style-td">
+                                        <button type="button" class="btn btn-secondary dataTableButtons" data-bs-toggle="modal" data-bs-target="#AttachmentModalCenter"><i class="fa-solid fa-cloud-arrow-up"></i></button> 
                                       </td>
                                       <td  class="style-td p-1"><button type="button" class="btn btn-secondary dataTableButtons edite-save"><i class="fa-solid fa-pen"></i> </button> <button type="button" class="btn btn-secondary dataTableButtons" data-bs-toggle="modal" data-bs-target="#exampleModalCenter"><img src="../images/client-image.svg" class="image-actions"></button> <div class="tooltip-left btn btn-secondary dataTableButtons"> <img src="../images/client-person.svg" class="image-actions" /> <span class="tooltiptext">Tooltip text</span> </div> <button type="button" class="btn btn-secondary dataTableButtons deleteRow"><i class="fa fa-trash"></i></button></td>
                                   </tr>
@@ -1246,6 +1270,38 @@
       </div>
   </div>
   <!-- end modals -->
+
+
+        <!-- modals -->
+        <div class="modal fade" id="AttachmentModalCenter" tabindex="-1" role="dialog"
+        aria-labelledby="AttachmentModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header d-flex justify-content-end ">
+                    <button type="button" class="close-btn" data-bs-dismiss="modal" aria-label="Close">
+                        <i class="bi bi-x modal-close-icon"></i>
+                    </button>
+                </div>
+                <div class="modal-body d-flex justify-content-center align-items-center">
+                  <div class="d-flex justify-content-center align-items-center m-3 flex-wrap w-100" style="gap:15px">
+                    <div class="file-container-input w-75 ">
+                      <button type="button" class="file-button fileSelect">
+                        <span>Attach File</span>
+                        <img src="../img//icons/upload.svg" alt="">
+                      </button>
+                      <input type="file" class="file-input d-none uploadInput" type="file" multiple>
+                      <ul class="imgbox">
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer d-flex justify-content-center">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end modals -->
   <script>
     $('.ui.dropdown').dropdown();
   </script>
@@ -1292,6 +1348,7 @@
             cols += '<td class="style-td"><input class="form-control rounded-0" type="text" name="lastname" placeholder="School Name"></td>';
             cols += '<td class="style-td p-1"><div class="d-flex align-items-center position-relative form-control styleinTable rounded-0"> <input type="text" class="form-control fs-10 rounded-0 datepicker" placeholder="Select date"> <img class="dateTable-svg" width="12" src="../images/date.svg"> </div></td>';
             cols += '<td class="style-td p-1"><div class="d-flex align-items-center position-relative form-control styleinTable rounded-0"> <input type="text" class="form-control fs-10 rounded-0 datepicker" placeholder="Select date"> <img class="dateTable-svg" width="12" src="../images/date.svg"> </div></td>';
+            cols += '<td class="style-td p-1"> <button type="button" class="btn btn-secondary dataTableButtons" data-bs-toggle="modal" data-bs-target="#AttachmentModalCenter"><i class="fa-solid fa-cloud-arrow-up"></i></button> </td>';
             cols += '<td  class="style-td p-1"><button type="button" class="btn btn-secondary dataTableButtons edite-save"><i class="fa-solid fa-check"></i> </button> <button type="button" class="btn btn-secondary dataTableButtons" data-bs-toggle="modal" data-bs-target="#exampleModalCenter"><img src="../images/client-image.svg" class="image-actions"></button> <div class="tooltip-left btn btn-secondary dataTableButtons"> <img src="../images/client-person.svg" class="image-actions" /> <span class="tooltiptext">Tooltip text</span> </div> <button type="button" class="btn btn-secondary dataTableButtons deleteRow"><i class="fa fa-trash"></i></button></td> </tr>';
             newRow.append(cols);
 
@@ -1464,6 +1521,37 @@
             $(this).closest("tr").remove();
             counter -= 1
         });
+
+
+        function openFilepic() {
+    const fileInput = document.getElementById('attachment');
+    fileInput.click();
+
+    fileInput.addEventListener('change', function () {
+        const imageContainer = document.getElementById('imageContainer');
+        const selectedFile = fileInput.files[0];
+
+        if (selectedFile) {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                const img = document.createElement('img');
+                img.src = e.target.result;
+                img.alt = 'Uploaded Image';
+                img.style.maxWidth = '100%';
+                img.style.height = 'auto';
+                img.style.margin = '7px 0 0 0 ';
+
+                // Remove previous image before appending new one
+                while (imageContainer.firstChild) {
+                    imageContainer.removeChild(imageContainer.firstChild);
+                }
+
+                imageContainer.appendChild(img);
+            };
+            reader.readAsDataURL(selectedFile);
+        }
+    });
+}
 
 
   </script>

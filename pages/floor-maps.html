@@ -511,7 +511,7 @@
 
 								<div class="image-container d-flex align-items-center flex-column w-100 mb-3">
 									<div
-										class="image d-flex justify-content-center align-items-center position-relative rounded-circle">
+										class="image d-flex justify-content-center align-items-center position-relative rounded-circle border p-1">
 										<img class="rounded-circle" src="../img/boss.png" alt="">
 									</div>
 									<div class="ms-4">
@@ -532,11 +532,18 @@
 				</div>
 			</nav>
 
-        <div class="position-relative">
-			<div class="F-iconSide_right">
-				<span class="more_input_gear"><i class="bi bi-arrow-bar-left"></i></span>
-				<div class="slide-content">
-					<div class="d-flex flex-column F-list_inputs">
+
+				<div class="position-relative offcanvasSide">
+					<div class="F-iconSide_right">
+						<button class="btn btn-openOffcanvas" type="button" id="openOffcanvas"><i class="bi bi-arrow-bar-left"></i></button>
+		
+				<div class="offcanvas bg-light" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+					<div class="offcanvas-header mb-3">
+					  <button type="button" class="close" data-dismiss="offcanvas" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					  </button>
+					</div>
+					<div class="offcanvas-body">
 						<div class="mb-1">
 							<label>Room name </label>
 							<input type="text" class="form-control date-input bg-secondary border-0 px-0">
@@ -553,7 +560,7 @@
 							<label>Drawing SQM</label>
 							<input type="text" class="form-control date-input bg-secondary border-0 px-0">
 						</div>
-						<span class="border"></span>
+						<hr>
 						<div class="mb-2">
 							<label>Customer name</label>
 							<input type="text" class="form-control date-input bg-secondary border-0 px-0">
@@ -576,6 +583,8 @@
 						</div>
 					</div>
 				</div>
+				
+
 			</div>
         </div>
 
@@ -742,12 +751,12 @@
 	<script src="../JS/layout.js"></script>
 
 	<script>
-		$(document).ready(function () {
-			$(".more_input_gear").click(function () {
-				$('.bi-arrow-bar-left').toggleClass("bi-arrow-bar-right");
-				$(".slide-content").toggle("slide");
-			});
-		});
+	   document.getElementById('openOffcanvas').addEventListener('click', function() {
+        document.getElementById('offcanvasScrolling').classList.add('active');
+    });
+    document.querySelector('.close').addEventListener('click', function() {
+        document.getElementById('offcanvasScrolling').classList.remove('active');
+    });
 	</script>
 </body>
 

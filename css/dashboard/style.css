@@ -1087,7 +1087,7 @@ td.ui-sortable {
 
 
 /***** floor maps *********/
-.more_input_gear {
+.offcanvasSide .btn-openOffcanvas{
   position: fixed;
   right: 0;
   top: 50%;
@@ -1098,33 +1098,37 @@ td.ui-sortable {
   border-radius: 10px 0 0 10px;
   font-size: 24px;
   cursor: pointer;
-}
-.more_input_gear.active i {
-  transform: rotate(180deg);
-}
-.F-list_inputs {
-  background: #fff;
-  padding: 20px 15px;
-  width: 185px;
-  box-shadow: 0px 0 6px 0px #959494;
-  border-radius: 20px;
-}
-.F-iconSide_right {
+} 
+
+.offcanvas {
+  box-shadow: 0 3px 6px #00000029;
   position: fixed;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
-.slide-content {
-  display: none;
-  position: absolute;
-  right: 44px;
-  top: 50%;
-  transform: translateY(-50%);
+    bottom: 0;
+    z-index: 1045;
+    display: flex;
+    max-width: 100%;
+    color: #000;
+    visibility: visible;
+    background-color: #fff;
+    background-clip: padding-box;
+    outline: 0;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    top: 0;
+    right: 0;
+    height: 100% !important;
+    flex-direction: column;
+    width: 250px;
+    padding: 24px;
+    
+} 
+
+
+.offcanvas.active {
+  transform: translateX(0);
 }
 
-.navbar .serch-nav .ui.action .menue-Search{
-  z-index: 1000;
-  right: 0 !important;
-    left: 0 !important;
+
+.bootstrap-select .dropdown-toggle:focus{
+    outline: none !important;
 }

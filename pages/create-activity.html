@@ -509,7 +509,7 @@
 
 								<div class="image-container d-flex align-items-center flex-column w-100 mb-3">
 									<div
-										class="image d-flex justify-content-center align-items-center position-relative rounded-circle">
+										class="image d-flex justify-content-center align-items-center position-relative rounded-circle border p-1">
 										<img class="rounded-circle" src="../img/boss.png" alt="">
 									</div>
 									<div class="ms-4">
@@ -578,19 +578,27 @@
 				<div class="content-container rounded bg-white shadow mt-4">
 					<div class="content-top d-flex justify-content-start align-items-center py-3">
 						<h4 class="px-4 my-0 py-2">Activity nr 1</h4>
-						<p class="mb-0 mx-2">status</p>
-						<select class="form-control mx-2 w-25">
-							<option>Select Activity</option>
-							<option>Activity 1</option>
-							<option>Activity 2</option>
-							<option>Activity 3</option>
-						</select>
 					</div>
 					<div class="content-body p-4">
 						<div class="container-fluid content-form py-4">
 							<form>
 								<div class="form-row my-4">
-									<div class="col-md-2 col-12 padding-top-small-10">
+									<div class="col-md-2 col-12 padding-top-small-10 mb-3">
+										<div>
+										  <label>status</label>
+										</div>
+										  <div class="second-select-input">
+											<select  class=" selectpicker" data-live-search="true" >
+											  <option>status 0</option>
+											  <option>status 1</option>
+											  <option>status 2</option>
+											  <option>status 3</option>
+											  <option>status 3</option>
+											</select>
+											<img class="input-svg" width="12" src="../images/img-droplist.svg">  
+										  </div>
+									  </div>
+									<div class="col-md-2 col-12 padding-top-small-10 mb-3">
 										<div>
 											<label>Activity Type</label>
 										</div>
@@ -603,7 +611,7 @@
 											</select>
 										</div>
 									</div>
-									<div class="col-md-2 col-12 padding-top-small-10">
+									<div class="col-md-2 col-12 padding-top-small-10 mb-3">
 										<div>
 											<label>Priority</label>
 										</div>
@@ -616,7 +624,7 @@
 											</select>
 										</div>
 									</div>
-									<div class="col-md-2 col-6">
+									<div class="col-md-2 col-6 mb-3">
 										<div>
 											<label>Client</label>
 										</div>
@@ -627,7 +635,7 @@
 													style="color: #616161;"></i></a>
 										</div>
 									</div>
-									<div class="col-md-2 col-12 padding-top-small-10">
+									<div class="col-md-2 col-12 padding-top-small-10 mb-3">
 										<div>
 											<label>Compaign</label>
 										</div>
@@ -642,7 +650,7 @@
 											<img class="input-svg" width="12" src="../images/img-droplist.svg">
 										</div>
 									</div>
-									<div class="col-md-2 col-12 padding-top-small-10">
+									<div class="col-md-2 col-12 padding-top-small-10 mb-3">
 										<div>
 											<label>Contact Person</label>
 										</div>
@@ -657,7 +665,7 @@
 											<img class="input-svg" width="12" src="../images/img-droplist.svg">
 										</div>
 									</div>
-									<div class="col-md-2 col-6">
+									<div class="col-md-2 col-6 mb-3">
 										<div>
 											<label>Activity Start date</label>
 										</div>
@@ -667,9 +675,7 @@
 											<img class="input-svg" width="12" src="../images/date.svg">
 										</div>
 									</div>
-								</div>
-								<div class="form-row my-4">
-									<div class="col-md-2 col-6">
+									<div class="col-md-2 col-6 mb-3">
 										<div>
 											<label>Activity close date</label>
 										</div>
@@ -679,7 +685,7 @@
 											<img class="input-svg" width="12" src="../images/date.svg">
 										</div>
 									</div>
-									<div class="col-md-2 col-12 padding-top-small-10">
+									<div class="col-md-2 col-12 padding-top-small-10 mb-3">
 										<div>
 											<label>Participants</label>
 										</div>
@@ -694,7 +700,7 @@
 											<img class="input-svg" width="12" src="../images/img-droplist.svg">
 										</div>
 									</div>
-									<div class="col-md-2 col-6">
+									<div class="col-md-2 col-6 mb-3">
 										<div>
 											<label>Activity time from</label>
 										</div>
@@ -712,7 +718,7 @@
 												placeholder="Select date">
 										</div>
 									</div>
-									<div class="col-md-3 col-6">
+									<div class="col-md-3 col-6 mb-3">
 										<div>
 											<label>Location </label>
 										</div>
@@ -727,9 +733,7 @@
 											<img class="input-svg" width="12" src="../images/img-droplist.svg">
 										</div>
 									</div>
-								</div>
-								<div class="form-row my-4">
-									<div class="col-md-3 col-12 padding-top-small-10">
+									<div class="col-md-3 col-12 padding-top-small-10 mb-3">
 										<div>
 											<label>language</label>
 										</div>
@@ -744,7 +748,7 @@
 											<img class="input-svg" width="12" src="../images/img-droplist.svg">
 										</div>
 									</div>
-									<div class="col-md-8 col-6">
+									<div class="col-md-8 col-6 mb-3">
 										<div>
 											<label>Description</label>
 										</div>
