@@ -307,7 +307,7 @@
 								<i class="fa-solid fa-magnifying-glass"></i>
 							</button>
 							<div class="position-absolute bg-white w-100 p-3 shadow  d-none menue-Search"
-								style="top:100%;">
+								style="top:100%; left: 0 !important;  z-index: 1;">
 								<div class="ui celled w-100 list w-100">
 									<div class="item">contract</div>
 									<div class="item">contract</div>
@@ -361,15 +361,16 @@
                         </div>
                     </div>
                     <!--end Search in responsive-->
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link" data-bs-toggle="dropdown" id="zoom-button">
+                            <i class="fa-solid fa-expand fullsec"></i>
+                            <i class="fa-solid fa-compress existsec d-none"></i>
+                        </a>
+                    </div>
+                    
                     <!--languages drop down starts-->
                     <div class="nav-item dropdown nav-link-position">
-                        <a href="#" class="nav-link" data-bs-toggle="dropdown" style="width: 32px;
-                height: 32px;
-                display: inline-flex;
-                align-items: center;
-                border-radius: 32px;
-                border: 1px solid gray;
-                justify-content: center;">
+                        <a href="#" class="nav-link" data-bs-toggle="dropdown" style="width: 32px;  height: 32px; display: inline-flex; align-items: center; border-radius: 32px; border: 1px solid gray; justify-content: center;">
                             <!-- <i class="flag"><span class="fi fi-gb"></span></i> -->
                             <img src="img/icons/uk.svg" alt="" class="inner-circle-img ">
                         </a>
@@ -542,13 +543,7 @@
                     <!-- settings drop down end -->
                     <!-- user drop down start -->
                     <div class="nav-item dropdown position-relative nav-link-position">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" style="width: 30px;
-                height: 30px;
-                display: inline-flex;
-                align-items: center;
-                border-radius: 30px;
-                border: 1px solid gray;
-                justify-content: center;">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" style="width: 30px; height: 30px; display: inline-flex; align-items: center; border-radius: 30px; border: 1px solid gray; justify-content: center;">
                             <img src="img/boss.png" alt="" class="inner-circle-img">
                         </a>
                         <div class="dropdown-down dropdown-menu dropdown-menu-end border-0 m-0 p-0" style="top:45px">

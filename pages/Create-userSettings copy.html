@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>highnox</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    <link rel="icon" href="../images/Highnox.png" type="image/x-icon" />
+
+    <link rel="stylesheet" href="../css/semantic.min.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="../JS/semantic.min.js"></script>
+    <!-- global style -->
+    <link href="../css/global/datepicker/datepicker.css" rel="stylesheet">
+    <link href="../css/global/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/global/bootstrap/bootstrap-select.css" rel="stylesheet">
+    <link href="../css/global/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- dashboard style -->
+    <link href="../css/dashboard/main-dashboard.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/dashboard/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/dashboard/screen.css">
+    <link rel="stylesheet" href="../css/dashboard/media.css">
+
+    <!-- Icon Font Stylesheet cdn -->
+    <link rel="stylesheet" href="../css/global/font-awesome/css/all.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/layout.css">
+
+    <style>
+        :root,
+        :root.light {
+            --bg-white: #fff;
+        }
+
+        :root.dark {
+            --bg-white: #1d2a35;
+        }
+
+        /*********** dark icons *******************/
+        .theme-btn {
+            width: 30px;
+            height: 30px;
+            display: inline-flex;
+            align-items: center;
+            border-radius: 30px;
+            border: 1px solid gray;
+            justify-content: center;
+            color: var(--primary);
+            background: initial;
+            outline: none !important;
+        }
+
+        .theme-btn.light {
+            display: none;
+        }
+
+        .dark .theme-btn.dark {
+            display: none;
+        }
+
+        .dark .theme-btn.light {
+            display: block;
+        }
+
+        .bg-white {
+            background-color: var(--bg-white) !important;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="layout" data-sidebar-minimize="off">
+        <!-- Sidebar Start -->
+        <div class="sidebar">
+            <a href="../index.html"
+                class="d-none d-lg-flex w-100 justify-content-center align-items-center logo-sidebar ">
+                <h3 class="title-logo1">Highnox</h3>
+                <h3 class="title-logo2">Hig</h3>
+            </a>
+
+            <div class="w-100 text-center img-boos py-4 d-none d-lg-block">
+                <img src="../img/boss.png" class="rounded-circle border p-1 " width="60" alt="">
+                <p class="mt-2">omr roxico</p>
+            </div>
+            <div class="navbar px-0">
+                <ul class="navbar-nav w-100">
+                    <li class="nav-item">
+                        <a href="../index.html" class="nav-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 18 18">
+                                <path id="Icon_color" data-name="Icon color"
+                                    d="M17,18H11a1,1,0,0,1-1-1V13a1,1,0,0,1,1-1h6a1,1,0,0,1,1,1v4A1,1,0,0,1,17,18ZM7,18H1a1,1,0,0,1-1-1V9A1,1,0,0,1,1,8H7A1,1,0,0,1,8,9v8A1,1,0,0,1,7,18Zm10-8H11a1,1,0,0,1-1-1V1a1,1,0,0,1,1-1h6a1,1,0,0,1,1,1V9A1,1,0,0,1,17,10ZM7,6H1A1,1,0,0,1,0,5V1A1,1,0,0,1,1,0H7A1,1,0,0,1,8,1V5A1,1,0,0,1,7,6Z"
+                                    fill="#ece6f5" />
+                            </svg>
+                            <span class="sidebar-title">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link display-menu">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20.002 20">
+                                <path id="Icon_color" data-name="Icon color"
+                                    d="M19,20H1a1,1,0,0,1-.89-1.45L2,14.76A4.974,4.974,0,0,1,6.469,12h7.062A4.974,4.974,0,0,1,18,14.76l1.89,3.79a.99.99,0,0,1-.041.973A1,1,0,0,1,19,20ZM10,10a5,5,0,1,1,5-5A5.006,5.006,0,0,1,10,10Z"
+                                    transform="translate(0.001)" fill="#ece6f5" />
+                            </svg>
+                            <div class="d-flex justify-content-between sidebar-title align-items-center w-100 ">
+                                <span class="">Client</span><i class="fa-solid fa-angle-right sidebar-arrow-down"></i>
+                            </div>
+                        </a>
+                        <div class="toggle-display">
+                            <a href="manage-client.html" class="nav-link">
+                                <i class="fa-solid fa-circle"></i>
+                                <span class="">Mange Client</span>
+                            </a>
+                            <a href="create-new-client1.html" class="nav-link">
+                                <i class="fa-solid fa-circle"></i>
+                                <span class="">Create New Client</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link display-menu">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 16">
+                                <path id="Icon_color" data-name="Icon color"
+                                    d="M18,16H2a2,2,0,0,1-2-2V2A2,2,0,0,1,2,0H18a2,2,0,0,1,2,2V14A2,2,0,0,1,18,16ZM2,4V14H18V4Z"
+                                    fill="#ece6f5" />
+                            </svg>
+                            <div class="d-flex justify-content-between sidebar-title align-items-center w-100 ">
+                                <span class="">Contract</span><i class="fa-solid fa-angle-right sidebar-arrow-down"></i>
+                            </div>
+                        </a>
+                        <div class="toggle-display">
+                            <a href="manage-contract.html" class="nav-link">
+                                <i class="fa-solid fa-circle"></i>
+                                <span class="">Mange contract</span>
+                            </a>
+                            <a href="create-new-contract-1.html" class="nav-link">
+                                <i class="fa-solid fa-circle"></i>
+                                <span class="">Create New contract</span>
+                            </a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link display-menu">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18.001">
+                                <path id="Icon_color" data-name="Icon color"
+                                    d="M15,18a3,3,0,0,1-2.824-2H10.5a.5.5,0,0,1-.5-.5v-1a.5.5,0,0,1,.5-.5h1.679a3,3,0,0,1,2.817-2H15a3,3,0,0,1,.676,5.922A3.032,3.032,0,0,1,15,18Zm-.007-4a1,1,0,1,0,1,1A1,1,0,0,0,14.994,14ZM7.5,16.03h-2a.5.5,0,0,1-.5-.5v-1a.5.5,0,0,1,.5-.5h2V14a.5.5,0,0,1,.5.53v1A.5.5,0,0,1,7.5,16.03ZM2.816,15.8a.309.309,0,0,1-.11-.025A3.981,3.981,0,0,1,.268,13.33a.248.248,0,0,1,0-.22A.256.256,0,0,1,.478,13H2.006a.471.471,0,0,1,.4.23V13.2a2.626,2.626,0,0,0,.4.41.472.472,0,0,1,.2.39v1.53a.265.265,0,0,1-.08.24A.308.308,0,0,1,2.816,15.8ZM2.009,11H.448a.259.259,0,0,1-.21-.111.249.249,0,0,1,0-.22,3.977,3.977,0,0,1,2.437-2.44.245.245,0,0,1,.08-.014A.283.283,0,0,1,2.9,8.26a.262.262,0,0,1,.111.21V10a.468.468,0,0,1-.211.4,2.546,2.546,0,0,0-.4.4A.47.47,0,0,1,2.009,11Zm10.488-.97h-2V10a.5.5,0,0,1-.5-.47v-1a.5.5,0,0,1,.5-.5h2a.5.5,0,0,1,.5.5v1A.5.5,0,0,1,12.5,10.031Zm-4.995,0h-2a.5.5,0,0,1-.5-.5v-1a.5.5,0,0,1,.5-.5h2V8a.5.5,0,0,1,.5.53v1A.5.5,0,0,1,7.5,10.031ZM15.325,9.8h0V9.77a.258.258,0,0,1-.09.017.249.249,0,0,1-.131-.037.264.264,0,0,1-.11-.211V8a.474.474,0,0,1,.21-.37,2.471,2.471,0,0,0,.4-.4.47.47,0,0,1,.384-.2h1.564a.259.259,0,0,1,.21.111.249.249,0,0,1,0,.22A3.978,3.978,0,0,1,15.325,9.8ZM3,6a2.89,2.89,0,0,1-.509-.043,3,3,0,0,1,0-5.914A2.871,2.871,0,0,1,3,0,3,3,0,0,1,5.823,2H7.5a.5.5,0,0,1,.5.5v1a.5.5,0,0,1-.5.5H5.823A3,3,0,0,1,3,6Zm.006-4a1,1,0,1,0,1,1A1,1,0,0,0,3.006,2ZM17.532,5H15.977a.47.47,0,0,1-.383-.2,2.474,2.474,0,0,0-.419-.41.469.469,0,0,1-.2-.39V2.44a.263.263,0,0,1,.11-.21.244.244,0,0,1,.22,0,3.976,3.976,0,0,1,2.438,2.44.251.251,0,0,1,0,.22A.256.256,0,0,1,17.532,5ZM12.5,4.03h-2V4a.5.5,0,0,1-.5-.47v-1a.5.5,0,0,1,.5-.5h2a.5.5,0,0,1,.5.5v1A.5.5,0,0,1,12.5,4.03Z"
+                                    fill="#ece6f5" />
+                            </svg>
+                            <div class="d-flex justify-content-between sidebar-title align-items-center w-100 ">
+                                <span class="">Floor drawing</span><i
+                                    class="fa-solid fa-angle-right sidebar-arrow-down"></i>
+                            </div>
+                        </a>
+                        <div class="toggle-display">
+                            <a href="listOfRooms.html" class="nav-link">
+                                <i class="fa-solid fa-circle"></i>
+                                <span class="">List Of rooms</span>
+                            </a>
+                            <a href="floor-maps.html" class="nav-link">
+                                <i class="fa-solid fa-circle"></i>
+                                <span class="">Floor Maps</span>
+                            </a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link display-menu">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 19">
+                                <path id="Icon_color" data-name="Icon color"
+                                    d="M16,19H2a2,2,0,0,1-2-2V4A2,2,0,0,1,2,2H3V.5A.5.5,0,0,1,3.5,0h1A.5.5,0,0,1,5,.5V2h8V.5a.5.5,0,0,1,.5-.5h1a.5.5,0,0,1,.5.5V2h1a2,2,0,0,1,2,2V17A2,2,0,0,1,16,19ZM2,6V17H16V6Zm11.5,8h-1a.5.5,0,0,1-.5-.5v-1a.5.5,0,0,1,.5-.5h1a.5.5,0,0,1,.5.5v1A.5.5,0,0,1,13.5,14Zm-4,0h-5a.5.5,0,0,1-.5-.5v-1a.5.5,0,0,1,.5-.5h5a.5.5,0,0,1,.5.5v1A.5.5,0,0,1,9.5,14Zm4-4h-5A.5.5,0,0,1,8,9.5v-1A.5.5,0,0,1,8.5,8h5a.5.5,0,0,1,.5.5v1A.5.5,0,0,1,13.5,10Zm-8,0h-1A.5.5,0,0,1,4,9.5v-1A.5.5,0,0,1,4.5,8h1a.5.5,0,0,1,.5.5v1A.5.5,0,0,1,5.5,10Z"
+                                    fill="#ece6f5" />
+                            </svg>
+                            <div class="d-flex justify-content-between sidebar-title align-items-center w-100 ">
+                                <span class="">Meeting rooms</span><i
+                                    class="fa-solid fa-angle-right sidebar-arrow-down"></i>
+                            </div>
+                        </a>
+                        <div class="toggle-display">
+                            <a href="meeting-rooms.html" class="nav-link">
+                                <i class="fa-solid fa-circle"></i>
+                                <span class="">booking room</span>
+                            </a>
+                            <a href="listOfbooking.html" class="nav-link">
+                                <i class="fa-solid fa-circle"></i>
+                                <span class="">List Of booking</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link display-menu">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20">
+                                <path id="Icon_color" data-name="Icon color"
+                                    d="M10,20A10,10,0,1,1,20,10,10.011,10.011,0,0,1,10,20ZM7.5,11.75a.5.5,0,0,0-.5.5V13a2,2,0,0,0,2,2v.5a.5.5,0,0,0,.5.5h1a.5.5,0,0,0,.5-.5V15a2,2,0,0,0,2-2v-.81a1.992,1.992,0,0,0-.73-1.54L8.84,7.82a.221.221,0,0,1-.09-.19V6.75h2.5v1a.5.5,0,0,0,.5.5h.75a.5.5,0,0,0,.5-.5V7a2,2,0,0,0-2-2V4.5a.5.5,0,0,0-.5-.5h-1a.5.5,0,0,0-.5.5V5A2,2,0,0,0,7,7v.81a1.992,1.992,0,0,0,.73,1.54l3.43,2.83a.221.221,0,0,1,.09.19v.88H8.75v-1a.5.5,0,0,0-.5-.5Z"
+                                    fill="#ece6f5" />
+                            </svg>
+                            <div class="d-flex justify-content-between sidebar-title align-items-center w-100 ">
+                                <span class="">Invoices/Debts</span><i
+                                    class="fa-solid fa-angle-right sidebar-arrow-down"></i>
+                            </div>
+                        </a>
+                        <div class="toggle-display">
+                            <a href="invoices.html" class="nav-link">
+                                <i class="fa-solid fa-circle"></i>
+                                <span class="">Invoices</span>
+                            </a>
+                            <a href="debits.html" class="nav-link">
+                                <i class="fa-solid fa-circle"></i>
+                                <span class="">Debits</span>
+                            </a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="operations.html" class="nav-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 21.996 16">
+                                <path id="Icon_color" data-name="Icon color"
+                                    d="M11,16a8.008,8.008,0,0,1-4-1.072.519.519,0,0,1-.239-.371.5.5,0,0,1,.14-.42l.73-.731a.5.5,0,0,1,.355-.149.5.5,0,0,1,.235.059,5.952,5.952,0,0,0,2.775.69H11A6,6,0,0,0,17,8H14.631a.493.493,0,0,1-.353-.15l-.2-.2a.5.5,0,0,1,0-.711L17.608,3.4a.509.509,0,0,1,.71,0l3.53,3.543a.5.5,0,0,1,0,.711l-.2.2a.49.49,0,0,1-.353.15H19a8,8,0,0,1-8,8ZM4.033,12.749a.5.5,0,0,1-.355-.144L.148,9.061a.5.5,0,0,1,0-.711l.2-.2A.49.49,0,0,1,.7,8H3A8,8,0,0,1,15,1.073a.524.524,0,0,1,.26.371.5.5,0,0,1-.139.42l-.741.741a.507.507,0,0,1-.357.146.512.512,0,0,1-.232-.056,5.847,5.847,0,0,0-2.774-.7H11A6.01,6.01,0,0,0,5,8H7.364a.49.49,0,0,1,.353.15l.2.2a.5.5,0,0,1,0,.711L4.388,12.6A.5.5,0,0,1,4.033,12.749Z"
+                                    fill="#ece6f5" />
+                            </svg>
+                            <div class="d-flex justify-content-between sidebar-title align-items-center w-100 ">
+                                <span class="">Operations</span>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="reports.html" class="nav-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                                <path id="Icon_color" data-name="Icon color"
+                                    d="M11.51,18H6.493a2.977,2.977,0,0,1-2.1-.86L.88,13.63A2.977,2.977,0,0,1,0,11.51v-5A3.017,3.017,0,0,1,.88,4.39L4.37.88A2.977,2.977,0,0,1,6.49,0h5A3.017,3.017,0,0,1,13.61.88l3.51,3.51A3.017,3.017,0,0,1,18,6.51V11.49a2.978,2.978,0,0,1-.86,2.12l-3.51,3.51A2.977,2.977,0,0,1,11.51,18ZM8.5,11.01a.5.5,0,0,0-.5.5v1a.5.5,0,0,0,.5.5h1a.5.5,0,0,0,.5-.5v-1a.5.5,0,0,0-.5-.5Zm-.18-6a.5.5,0,0,0-.5.56l.4,3.22a.25.25,0,0,0,.248.22H9.53a.251.251,0,0,0,.25-.22l.4-3.22a.5.5,0,0,0-.5-.56H8.32Z"
+                                    fill="#ece6f5" />
+                            </svg>
+                            <div class="d-flex justify-content-between sidebar-title align-items-center w-100 ">
+                                <span class="">Reports</span>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="pos.html" class="nav-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 16">
+                                <path id="Icon_color" data-name="Icon color"
+                                    d="M19,16H1a1,1,0,0,1-1-1V1A1,1,0,0,1,1,0H19a1,1,0,0,1,1,1V15A1,1,0,0,1,19,16ZM6,2A4.005,4.005,0,0,1,2,6v4a4.006,4.006,0,0,1,4,4h8a4.005,4.005,0,0,1,4-4V6a4.005,4.005,0,0,1-4-4Zm4,9a3,3,0,1,1,3-3A3,3,0,0,1,10,11Z"
+                                    fill="#ece6f5" />
+                            </svg>
+                            <div class="d-flex justify-content-between sidebar-title align-items-center w-100 ">
+                                <span class="">POS</span>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="login.html" class="nav-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                                <path id="Icon_color" data-name="Icon color"
+                                    d="M7.5,18H2a2,2,0,0,1-2-2V2A2,2,0,0,1,2,0H7.5A.5.5,0,0,1,8,.5v1a.5.5,0,0,1-.5.5H2V16H7.5a.5.5,0,0,1,.5.5v1A.5.5,0,0,1,7.5,18Zm4.785-3a.5.5,0,0,1-.355-.148l-.71-.7a.5.5,0,0,1,0-.71L14.67,10H4.5A.5.5,0,0,1,4,9.5v-1A.5.5,0,0,1,4.5,8H14.67L11.22,4.56a.489.489,0,0,1,0-.7l.71-.71a.5.5,0,0,1,.709,0L17.78,8.28a.768.768,0,0,1,.22.53v.38a.755.755,0,0,1-.22.53L12.64,14.85A.5.5,0,0,1,12.285,15Z"
+                                    fill="#ece6f5" />
+                            </svg>
+                            <div class="d-flex justify-content-between sidebar-title align-items-center w-100 ">
+                                <span class="">LogOut</span>
+                            </div>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        <!-- Sidebar End -->
+
+
+
+        <!-- Content Start -->
+        <div class="content">
+            <!-- Navbar Start -->
+            <div class="w-100 search-container d-none">
+                <input class="w-100 " id="myInput3"
+                    style="height: 65px; padding:0px 4rem; background-color: #f0f0f0f0; border: none; outline: none;"
+                    placeholder="Search for anything">
+                <a class="cancel-icon"><i class="bi bi-x"></i></a>
+            </div>
+
+            <nav class="navbar navbar-open-search navbar-expand sticky-top px-4 py-0 d-flex align-items-center justify-content-between"
+                style="height: 65px;">
+                <div class="d-flex align-items-center">
+                    <button class="btn" style="background-color: #fff0;" id="toggleBtn"><i
+                            class="sidebar-toggler d-none d-lg-flex fa fa-bars text-dark h4"></i></button>
+                    <i class="sidebar-toggler d-flex d-lg-none fa fa-bars" id="resptoggleSide"></i>
+                    <div class="input-group ml-4 serch-nav d-none d-lg-flex">
+                        <select class="ui dropdown rounded-0">
+                            <option value="">Gender</option>
+                            <option value="1">Male</option>
+                            <option value="0">Female</option>
+                        </select>
+                        <div class="ui action input rounded-0 p-0" style="width: 200px;">
+                            <input type="text" placeholder="Search..." class="searchFunction">
+                            <button class="ui icon button">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                            <div class="position-absolute bg-white w-100 p-3 shadow  d-none menue-Search"
+                                style="top:100%;">
+                                <div class="ui celled w-100 list w-100">
+                                    <div class="item">Search 1</div>
+                                    <div class="item">Search 2</div>
+                                    <div class="item">Search 3</div>
+                                    <div class="item">Search 4 </div>
+                                    <div class="item">Search 5 </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="index.html" class="d-flex d-lg-none me-4 justify-content-center ">
+                    <h3 class="mb-0 logo title">Highnox</h3>
+                </a>
+                <i class="bi bi-three-dots-vertical"></i>
+                <div class="navbar-icons-container navbar-nav align-items-center ms-auto p-3 p-lg"
+                    style="gap: 0.7rem; flex-wrap: wrap;">
+
+                    <!--Search in responsive-->
+                    <div class="nav-item dropdown d-lg-none">
+                        <a href="#" class="nav-link" data-bs-toggle="dropdown">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </a>
+                        <div class="dropdown-down dropdown-menu dropdown-menu-start "
+                            style="width: 373px !important;right: -145px !important;float: left;top: 52px;">
+                            <div class="input-group serch-nav p-3">
+                                <select class="ui dropdown rounded-0">
+                                    <option value="">Gender</option>
+                                    <option value="1">Male</option>
+                                    <option value="0">Female</option>
+                                </select>
+                                <div class="ui action input rounded-0 p-0" style="width: 200px;">
+                                    <input type="text" placeholder="Search..." class="searchFunction">
+                                    <button class="ui icon button">
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                    </button>
+                                    <div class="position-absolute bg-white w-100 p-3 shadow  d-none menue-Search"
+                                        style="top:100%;">
+                                        <div class="ui celled w-100 list w-100">
+                                            <div class="item">Search 1</div>
+                                            <div class="item">Search 2</div>
+                                            <div class="item">Search 3</div>
+                                            <div class="item">Search 4 </div>
+                                            <div class="item">Search 5 </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!--end Search in responsive-->
+                    <!--languages drop down starts-->
+                    <div class="nav-item dropdown nav-link-position">
+                        <a href="#" class="nav-link" data-bs-toggle="dropdown" style="width: 32px;
+            height: 32px;
+            display: inline-flex;
+            align-items: center;
+            border-radius: 32px;
+            border: 1px solid gray;
+            justify-content: center;">
+                            <!-- <i class="flag"><span class="fi fi-gb"></span></i> -->
+                            <img src="../img/icons/uk.svg" alt="" class="inner-circle-img">
+                        </a>
+                        <div class="flags dropdown-down dropdown-menu dropdown-menu-end border-0 m-0 p-0">
+                            <div class="triangle" style="top:-7px;right:9px"></div>
+                            <a href="#" class="dropdown-item py-3 border-bottom"><img src="../img/icons/gr.svg"
+                                    alt="">Germany</a>
+                            <a href="#" class="dropdown-item py-3 border-bottom"><img src="../img/icons/rasha.svg"
+                                    alt="">Russia</a>
+                            <a href="#" class="dropdown-item py-3 border-bottom"><img src="../img/icons/em.svg"
+                                    alt="">Emirates</a>
+                        </div>
+                    </div>
+                    <!--languages drop down ends-->
+                    <div class="nav-item dropdown">
+                        <button class="theme-btn light" onclick="setTheme('light')" title="Light mode">
+                            <i class="bi bi-brightness-high-fill"></i>
+                        </button>
+                        <button class="theme-btn dark" onclick="setTheme('dark')" title="Dark mode">
+                            <i class="bi bi-moon-stars-fill"></i>
+                        </button>
+                    </div>
+
+
+
+
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link" data-bs-toggle="dropdown" id="zoom-button">
+                            <i class="fa-solid fa-expand fullsec"></i>
+                            <i class="fa-solid fa-compress existsec d-none"></i>
+                        </a>
+                    </div>
+                    <!--notification drop down starts-->
+                    <div class="nav-item dropdown nav-link-position">
+                        <a href="#" class="nav-link position-relative" data-bs-toggle="dropdown">
+                            <i class="bi bi-bell"></i>
+                            <span class="bg-danger text-white notification-num ">0</span>
+                        </a>
+                        <div class="dropdown-down dropdown-menu dropdown-menu-end bg-light border-0 m-0 p-0">
+                            <div class="triangle"
+                                style="border-color: transparent transparent #2f3b4e; right: 10px; top: -8px;">
+                            </div>
+
+                            <div class="notification">
+                                <p style="border-top-right-radius: 10px; border-top-left-radius: 10px;">7 NEW
+                                    NOTIFICATION <span>Mark
+                                        All Read</span></p>
+                                <div class="">
+                                    <a href="#" class="dropdown-item d-flex align-items-center border-bottom py-3">
+                                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M15.1011 29.605C23.1092 29.605 29.6011 23.1131 29.6011 15.105C29.6011 7.09685 23.1092 0.60498 15.1011 0.60498C7.09295 0.60498 0.601074 7.09685 0.601074 15.105C0.601074 23.1131 7.09295 29.605 15.1011 29.605Z"
+                                                fill="#E6F8FF" />
+                                            <path
+                                                d="M15.1011 20.105C14.1122 20.105 13.1455 19.8117 12.3232 19.2623C11.501 18.7129 10.8601 17.932 10.4817 17.0184C10.1032 16.1048 10.0042 15.0994 10.1972 14.1295C10.3901 13.1596 10.8663 12.2687 11.5655 11.5694C12.2648 10.8702 13.1557 10.394 14.1256 10.2011C15.0955 10.0081 16.1009 10.1071 17.0145 10.4856C17.9281 10.864 18.709 11.5049 19.2584 12.3271C19.8078 13.1494 20.1011 14.1161 20.1011 15.105C20.0995 16.4306 19.5722 17.7014 18.6349 18.6388C17.6975 19.5761 16.4267 20.1034 15.1011 20.105ZM13.3661 14.905C13.3333 14.905 13.3008 14.9118 13.2707 14.9248C13.2406 14.9379 13.2135 14.957 13.1911 14.981L12.9261 15.246C12.9025 15.2692 12.8838 15.2968 12.871 15.3273C12.8583 15.3577 12.8517 15.3904 12.8517 15.4235C12.8517 15.4565 12.8583 15.4892 12.871 15.5197C12.8838 15.5502 12.9025 15.5778 12.9261 15.601L14.1161 16.776C14.1384 16.8 14.1655 16.8192 14.1956 16.8323C14.2257 16.8454 14.2582 16.8522 14.2911 16.8522C14.3239 16.8522 14.3564 16.8454 14.3865 16.8323C14.4166 16.8192 14.4437 16.8 14.4661 16.776L17.2761 13.966C17.3204 13.9195 17.3451 13.8577 17.3451 13.7935C17.3451 13.7292 17.3204 13.6675 17.2761 13.621L17.0111 13.36C16.9642 13.3144 16.9014 13.2889 16.8361 13.2889C16.7707 13.2889 16.7079 13.3144 16.6611 13.36L14.2911 15.73L13.5411 14.985C13.519 14.9603 13.4921 14.9404 13.4619 14.9267C13.4318 14.9129 13.3992 14.9055 13.3661 14.905Z"
+                                                fill="#9598FF" />
+                                        </svg>
+
+                                        <span class="ml-2 d-flex flex-column">
+                                            <span>
+                                                Space Management
+                                                <svg class="ml-2" width="6" height="10" viewBox="0 0 6 10" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M1.11805 9.1978C1.07157 9.24467 1.01627 9.28187 0.95534 9.30725C0.89441 9.33263 0.829057 9.3457 0.763052 9.3457C0.697046 9.3457 0.631693 9.33263 0.570763 9.30725C0.509833 9.28187 0.454533 9.24467 0.408051 9.1978L0.208051 8.9978C0.160098 8.95109 0.122227 8.89505 0.0967722 8.83313C0.0713176 8.77121 0.0588202 8.70474 0.0600514 8.6378L0.0600514 1.4778C0.0590787 1.41073 0.07189 1.34416 0.097692 1.28224C0.123494 1.22031 0.161737 1.16435 0.210052 1.1178L0.410051 0.917804C0.456533 0.87094 0.511833 0.833743 0.572763 0.808358C0.633693 0.782974 0.699045 0.769905 0.765051 0.769905C0.831057 0.769905 0.89641 0.782974 0.95734 0.808358C1.01827 0.833743 1.07357 0.87094 1.12005 0.917804L4.90805 4.7078C4.95588 4.75269 4.994 4.80691 5.02006 4.86711C5.04613 4.92731 5.05957 4.99221 5.05957 5.0578C5.05957 5.1234 5.04613 5.1883 5.02006 5.2485C4.994 5.3087 4.95588 5.36291 4.90805 5.4078L1.11805 9.1978Z"
+                                                        fill="#393A62" />
+                                                </svg>
+                                            </span>
+                                            <span style="color: #AEAEAE; font-size: 10px;">1 hour ago</span>
+                                        </span>
+                                    </a>
+                                    <a href="#" class="dropdown-item d-flex align-items-center border-bottom py-3">
+                                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M15.1011 29.605C23.1092 29.605 29.6011 23.1131 29.6011 15.105C29.6011 7.09685 23.1092 0.60498 15.1011 0.60498C7.09295 0.60498 0.601074 7.09685 0.601074 15.105C0.601074 23.1131 7.09295 29.605 15.1011 29.605Z"
+                                                fill="#FFECE9" />
+                                            <path
+                                                d="M15.0763 21.605H10.8513C10.5133 21.5979 10.1919 21.4571 9.95757 21.2134C9.72325 20.9697 9.59512 20.643 9.60129 20.305V9.90498C9.59512 9.56696 9.72325 9.24029 9.95757 8.9966C10.1919 8.7529 10.5133 8.61207 10.8513 8.60498H18.3513C18.6893 8.61207 19.0107 8.7529 19.245 8.9966C19.4793 9.24029 19.6075 9.56696 19.6013 9.90498V16.899C19.6038 17.4123 19.4066 17.9065 19.0513 18.277L16.4013 21.033C16.2308 21.2133 16.0254 21.3569 15.7976 21.4553C15.5698 21.5536 15.3244 21.6045 15.0763 21.605ZM10.8513 9.90498V20.305H14.6013V17.055C14.5983 16.886 14.6624 16.7228 14.7796 16.6009C14.8967 16.4791 15.0573 16.4087 15.2263 16.405H18.3513V9.90498H10.8513ZM14.9133 15.105H12.4133C12.3289 15.1031 12.2486 15.0679 12.1901 15.007C12.1316 14.946 12.0997 14.8644 12.1013 14.78V14.13C12.1005 14.0881 12.108 14.0464 12.1233 14.0074C12.1386 13.9684 12.1614 13.9328 12.1905 13.9026C12.2195 13.8725 12.2543 13.8483 12.2927 13.8315C12.3311 13.8148 12.3724 13.8058 12.4143 13.805H14.9143C14.9562 13.8058 14.9975 13.8148 15.0359 13.8315C15.0743 13.8483 15.109 13.8725 15.1381 13.9026C15.1672 13.9328 15.19 13.9684 15.2053 14.0074C15.2206 14.0464 15.2281 14.0881 15.2273 14.13V14.781C15.2279 14.8229 15.2204 14.8645 15.2049 14.9034C15.1895 14.9424 15.1666 14.9779 15.1374 15.008C15.1082 15.0381 15.0734 15.0622 15.035 15.0788C14.9965 15.0954 14.9552 15.1043 14.9133 15.105ZM16.7893 12.505H12.4143C12.3298 12.5031 12.2494 12.4679 12.1908 12.407C12.1321 12.3461 12.0999 12.2645 12.1013 12.18V11.53C12.0999 11.4454 12.1321 11.3638 12.1908 11.3029C12.2494 11.242 12.3298 11.2068 12.4143 11.205H16.7893C16.8737 11.2068 16.954 11.2421 17.0125 11.303C17.071 11.3639 17.1029 11.4455 17.1013 11.53V12.18C17.1029 12.2644 17.071 12.346 17.0125 12.407C16.954 12.4679 16.8737 12.5031 16.7893 12.505Z"
+                                                fill="#DBA09E" />
+                                        </svg>
+
+                                        <span class="ml-2 d-flex flex-column">
+                                            <span>Conference Management
+
+                                                <svg class="ml-2" width="6" height="10" viewBox="0 0 6 10" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M1.11805 9.1978C1.07157 9.24467 1.01627 9.28187 0.95534 9.30725C0.89441 9.33263 0.829057 9.3457 0.763052 9.3457C0.697046 9.3457 0.631693 9.33263 0.570763 9.30725C0.509833 9.28187 0.454533 9.24467 0.408051 9.1978L0.208051 8.9978C0.160098 8.95109 0.122227 8.89505 0.0967722 8.83313C0.0713176 8.77121 0.0588202 8.70474 0.0600514 8.6378L0.0600514 1.4778C0.0590787 1.41073 0.07189 1.34416 0.097692 1.28224C0.123494 1.22031 0.161737 1.16435 0.210052 1.1178L0.410051 0.917804C0.456533 0.87094 0.511833 0.833743 0.572763 0.808358C0.633693 0.782974 0.699045 0.769905 0.765051 0.769905C0.831057 0.769905 0.89641 0.782974 0.95734 0.808358C1.01827 0.833743 1.07357 0.87094 1.12005 0.917804L4.90805 4.7078C4.95588 4.75269 4.994 4.80691 5.02006 4.86711C5.04613 4.92731 5.05957 4.99221 5.05957 5.0578C5.05957 5.1234 5.04613 5.1883 5.02006 5.2485C4.994 5.3087 4.95588 5.36291 4.90805 5.4078L1.11805 9.1978Z"
+                                                        fill="#393A62" />
+                                                </svg>
+                                            </span>
+                                            <span style="color: #AEAEAE; font-size: 10px;">1 hour ago</span>
+                                        </span>
+                                    </a>
+                                    <a href="#" class="dropdown-item d-flex align-items-center py-3"><svg width="30"
+                                            height="30" viewBox="0 0 30 30" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M15.1011 29.605C23.1092 29.605 29.6011 23.1131 29.6011 15.105C29.6011 7.09685 23.1092 0.60498 15.1011 0.60498C7.09295 0.60498 0.601074 7.09685 0.601074 15.105C0.601074 23.1131 7.09295 29.605 15.1011 29.605Z"
+                                                fill="#C4FFC4" />
+                                            <path
+                                                d="M16.4119 20.057C16.2068 20.0565 16.0034 20.0186 15.8119 19.945L15.5749 19.857C15.189 19.7068 14.7609 19.7068 14.3749 19.857L14.1379 19.945C13.7358 20.0994 13.2898 20.0941 12.8915 19.9301C12.4932 19.7661 12.1727 19.4558 11.9959 19.063L11.8959 18.831C11.732 18.4499 11.4348 18.1416 11.0599 17.964L10.8279 17.861C10.4348 17.6847 10.1238 17.3648 9.95873 16.9668C9.79365 16.5688 9.78693 16.1228 9.93994 15.72L10.0279 15.482C10.1786 15.0962 10.1786 14.6678 10.0279 14.282L9.93994 14.048C9.78668 13.6452 9.79328 13.199 9.95838 12.801C10.1235 12.4029 10.4346 12.083 10.8279 11.907L11.0599 11.807C11.4292 11.6366 11.7256 11.3402 11.8959 10.971L12.0099 10.736C12.1868 10.3395 12.5097 10.0265 12.9114 9.86208C13.3132 9.69762 13.7629 9.69436 14.1669 9.85296L14.4049 9.93596C14.5962 10.0104 14.7997 10.0483 15.0049 10.048C15.2092 10.0479 15.4116 10.0099 15.6019 9.93596L15.8399 9.85296C16.2422 9.69883 16.6882 9.70443 17.0865 9.86861C17.4848 10.0328 17.8052 10.3431 17.9819 10.736L18.0819 10.968C18.2524 11.3371 18.5488 11.6335 18.9179 11.804L19.1499 11.922C19.5423 12.0993 19.8521 12.4198 20.016 12.8179C20.1799 13.2161 20.1856 13.6618 20.0319 14.064L19.9439 14.301C19.7932 14.6868 19.7932 15.1152 19.9439 15.501L20.0319 15.754C20.1856 16.156 20.1799 16.6016 20.0159 16.9995C19.852 17.3975 19.5422 17.7178 19.1499 17.895L18.9179 17.995C18.537 18.1591 18.2288 18.4563 18.0509 18.831L17.9509 19.063C17.817 19.359 17.6007 19.6102 17.3277 19.7864C17.0548 19.9627 16.7369 20.0566 16.4119 20.057ZM13.1969 14.697C13.163 14.6969 13.1295 14.7038 13.0984 14.7172C13.0672 14.7306 13.0392 14.7503 13.0159 14.775L12.7419 15.049C12.7178 15.0729 12.6987 15.1015 12.6856 15.1329C12.6725 15.1643 12.6658 15.1979 12.6658 15.232C12.6658 15.266 12.6725 15.2997 12.6856 15.3311C12.6987 15.3625 12.7178 15.391 12.7419 15.415L13.9719 16.628C13.9951 16.6526 14.0231 16.6722 14.0541 16.6856C14.0852 16.699 14.1186 16.7059 14.1524 16.7059C14.1863 16.7059 14.2197 16.699 14.2507 16.6856C14.2818 16.6722 14.3098 16.6526 14.3329 16.628L17.2329 13.728C17.2789 13.6801 17.3046 13.6163 17.3046 13.55C17.3046 13.4836 17.2789 13.4198 17.2329 13.372L16.9589 13.098C16.9107 13.0508 16.8459 13.0243 16.7784 13.0243C16.711 13.0243 16.6462 13.0508 16.5979 13.098L14.1519 15.544L13.3779 14.775C13.3548 14.7501 13.3268 14.7304 13.2956 14.717C13.2645 14.7035 13.2309 14.6967 13.1969 14.697Z"
+                                                fill="#409703" />
+                                        </svg>
+                                        <span class="ml-2 d-flex flex-column">
+                                            <span>Tickets
+                                                <svg class="ml-2" width="6" height="10" viewBox="0 0 6 10" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M1.11805 9.1978C1.07157 9.24467 1.01627 9.28187 0.95534 9.30725C0.89441 9.33263 0.829057 9.3457 0.763052 9.3457C0.697046 9.3457 0.631693 9.33263 0.570763 9.30725C0.509833 9.28187 0.454533 9.24467 0.408051 9.1978L0.208051 8.9978C0.160098 8.95109 0.122227 8.89505 0.0967722 8.83313C0.0713176 8.77121 0.0588202 8.70474 0.0600514 8.6378L0.0600514 1.4778C0.0590787 1.41073 0.07189 1.34416 0.097692 1.28224C0.123494 1.22031 0.161737 1.16435 0.210052 1.1178L0.410051 0.917804C0.456533 0.87094 0.511833 0.833743 0.572763 0.808358C0.633693 0.782974 0.699045 0.769905 0.765051 0.769905C0.831057 0.769905 0.89641 0.782974 0.95734 0.808358C1.01827 0.833743 1.07357 0.87094 1.12005 0.917804L4.90805 4.7078C4.95588 4.75269 4.994 4.80691 5.02006 4.86711C5.04613 4.92731 5.05957 4.99221 5.05957 5.0578C5.05957 5.1234 5.04613 5.1883 5.02006 5.2485C4.994 5.3087 4.95588 5.36291 4.90805 5.4078L1.11805 9.1978Z"
+                                                        fill="#393A62" />
+                                                </svg>
+                                            </span>
+                                            <span style="color: #AEAEAE; font-size: 10px;">1 hour ago</span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <a class="dropdown-item view-all">VIEW ALL</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--notification drop down ends-->
+                    <!--dashboard drop down starts-->
+                    <div class="nav-item dropdown nav-link-position">
+                        <a href="#" class="nav-link text-dark font-weight-bold" data-bs-toggle="dropdown">
+                            <span class="bi bi-grid text-dark font-weight-bold"></span> Space Management <span
+                                class="fa-solid fa-caret-down"></span>
+                        </a>
+                        <div class="dropdown-down dropdown-menu dropdown-menu-end bg-light border-0 m-0 p-0">
+                            <div class="triangle"
+                                style="border-color: transparent transparent #2f3b4e; right: 10px; top: -8px;">
+                            </div>
+                            <div class="settings dashboard">
+                                <p style="border-top-right-radius: 10px; border-top-left-radius: 10px;">Dashboard</p>
+                                <div>
+                                    <a href="#" class="dropdown-item"><i class="bi bi-grid"></i>Space Management</a>
+                                    <a href="#" class="dropdown-item"><i class="bi bi-grid"></i>Conference
+                                        Management</a>
+                                    <a href="#" class="dropdown-item"><i class="bi bi-grid"></i>Tickets</a>
+                                    <a href="#" class="dropdown-item"><i class="bi bi-grid"></i>CRM</a>
+                                    <a href="#" class="dropdown-item"><i class="bi bi-grid"></i>Mass Email</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- dashboard drop down end -->
+                    <!-- settings drop down start -->
+                    <div class="nav-item dropdown nav-link-position gear-container">
+                        <a href="#" class="nav-link" data-bs-toggle="dropdown">
+                            <i class="bi bi-gear-fill"></i>
+                        </a>
+                        <div class="dropdown-down dropdown-menu dropdown-menu-end bg-light border-0 m-0 p-0">
+                            <div class="triangle"
+                                style="border-color: transparent transparent #2f3b4e; right: 10px; top: -8px;">
+                            </div>
+                            <div class="settings">
+                                <p style="border-top-right-radius: 10px; border-top-left-radius: 10px;">Settings</p>
+                                <div>
+                                    <a href="settings.html" class="dropdown-item"><i class="bi bi-gear"></i>User
+                                        setting</a>
+                                    <a href="room.html" class="dropdown-item"><i class="bi bi-gear"></i>Rooms</a>
+                                    <a href="articles.html" class="dropdown-item"><i class="bi bi-gear"></i>Articles</a>
+                                    <a href="inventory-list.html" class="dropdown-item"><i
+                                            class="bi bi-gear"></i>Inventory list</a>
+                                    <a href="agency.html" class="dropdown-item"><i class="bi bi-gear"></i>Booking
+                                        agencies</a>
+                                    <a href="suppliers.html" class="dropdown-item"><i
+                                            class="bi bi-gear"></i>Suppliers</a>
+                                    <a href="budget.html" class="dropdown-item"><i class="bi bi-gear"></i>Budget</a>
+                                    <a href="buildings.html" class="dropdown-item"><i
+                                            class="bi bi-gear"></i>Buildings</a>
+                                    <a href="other-settings.html" class="dropdown-item"><i class="bi bi-gear"></i>Other
+                                        settings</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- settings drop down end -->
+                    <!-- user drop down start -->
+                    <div class="nav-item dropdown position-relative nav-link-position">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" style="width: 30px;
+            height: 30px;
+            display: inline-flex;
+            align-items: center;
+            border-radius: 30px;
+            border: 1px solid gray;
+            justify-content: center;">
+                            <img src="../img/boss.png" alt="" class="inner-circle-img">
+                        </a>
+                        <div class="dropdown-down dropdown-menu dropdown-menu-end border-0 m-0 p-0" style="top:45px">
+                            <div class="user-details d-flex justify-content-center align-items-center flex-column"
+                                style="border-top-right-radius: 10px; border-top-left-radius: 10px;">
+                                <div class="triangle"
+                                    style="border-color: transparent transparent #2f3b4e; right: 10px; top: -8px;">
+                                </div>
+
+                                <div class="image-container d-flex align-items-center flex-column w-100 mb-3">
+                                    <div
+                                        class="image d-flex justify-content-center align-items-center position-relative rounded-circle border p-1">
+                                        <img class="rounded-circle" src="../img/boss.png" alt="">
+                                    </div>
+                                    <div class="ms-4">
+                                        <h3 class="navbar-span text-center">Sarah Joe</h3>
+                                        <span class="text-center">Premium member</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="profile.html" class="dropdown-item link"><i class="bi bi-person-fill"></i>My
+                                Profile</a>
+                            <a href="#" class="dropdown-item link"><i class="bi bi-pencil-fill"></i>Edit Profile</a>
+                            <a href="#" class="dropdown-item link"><i class="bi bi-clock-history"></i>Activity Logs</a>
+                            <a href="#" class="dropdown-item link"><i class="bi bi-gear-fill"></i>Account Settings</a>
+                            <a href="#" class="dropdown-item link"><i class="bi bi-box-arrow-in-right"></i>Log Out</a>
+                        </div>
+                    </div>
+                    <!-- user drop down end -->
+                </div>
+            </nav>
+            <!-- End Navbar  -->
+
+
+            <div class="container-fluid p-4" id="back-client">
+                <div class="content-container rounded bg-white shadow">
+                    <div class="media align-items-start p-2 p-md-4">
+                        <img id="image" src="../images/employee.png" class="rounded mr-4" width="90" alt="...">
+                        <div class="d-flex flex-column mr-4">
+                            <input type="file" id="fileInput" style="display: none;" accept="image/*">
+                            <button class="btn btn-primary rounded my-1" onclick="openFilePicker()">Change</button>
+                            <button class="btn btn-danger rounded my-1" onclick="removeImage()">Remove</button>
+                        </div>
+                        <div class="media-body my-2">
+                            <h4 class="mt-0">Carl Andersson</h4>
+                            <p>you primary and login email : info@job.com </p>
+                        </div>
+                        <div class="d-flex mr-4">
+                            <button class="btn btn-danger rounded m-1">Cancel changes </button>
+                            <button class="btn btn-primary rounded m-1">save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="container-fluid p-4 pt-0" id="back-client">
+                <div class="content-container rounded bg-white shadow py-3">
+                    <div class="d-flex justify-content-start align-items-center py-1">
+                        <h4 class="px-4 py-2">main information </h4>
+                    </div>
+                    <div class="content-body">
+                        <form class="">
+                            <div class="px-4 ">
+                                <div class="form-row my-4 align-items-end">
+                                    <div class="col-md-1 col-6">
+                                        <div>
+                                            <label>Day</label>
+                                        </div>
+                                        <div class="mb-3">
+                                            <select class="form-control" id="day" name="dd"></select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-2 col-6">
+                                        <div>
+                                            <label>month</label>
+                                        </div>
+                                        <div class="mb-3">
+                                            <select class="form-control" id="month" name="mm"
+                                                onchange="change_month(this)"></select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-2 col-6">
+                                        <div>
+                                            <label>year</label>
+                                        </div>
+                                        <div class="mb-3">
+                                            <select class="form-control" id="year" name="yyyy"
+                                                onchange="change_year(this)"></select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-12 px-3 ">
+                                        <div class="form-group form-check">
+                                            <input type="checkbox" class="form-check-input" id="birthday">
+                                            <label class="form-check-label" for="birthday">show my birthday for other
+                                                employees</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-row my-4 align-items-end">
+                                    <div class="col-md-3 col-12">
+                                        <div>
+                                            <label>First name</label>
+                                        </div>
+                                        <div class="mb-3">
+                                            <input type="text" class="form-control" placeholder="First name">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-12">
+                                        <div>
+                                            <label>last name</label>
+                                        </div>
+                                        <div class="mb-3">
+                                            <input type="text" class="form-control" placeholder="last name">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-12">
+                                        <div>
+                                            <label>Address</label>
+                                        </div>
+                                        <div class="mb-3">
+                                            <input type="text" class="form-control" placeholder="Address">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-1 col-6">
+                                        <div>
+                                            <label>Zip code</label>
+                                        </div>
+                                        <div class="mb-3">
+                                            <input type="text" class="form-control" placeholder="Zip">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 col-6">
+                                        <div>
+                                            <label>city</label>
+                                        </div>
+                                        <div class="mb-3">
+                                            <input type="text" class="form-control" placeholder="city">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 col-12">
+                                        <div>
+                                            <label>Mobile number (private) </label>
+                                        </div>
+                                        <div class="mb-3">
+                                            <input type="text" class="form-control" placeholder="00">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 col-12">
+                                        <div>
+                                            <label>Mobile number (job)</label>
+                                        </div>
+                                        <div class="mb-3">
+                                            <input type="text" class="form-control" placeholder="00">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-12">
+                                        <div>
+                                            <label>Email (private)</label>
+                                        </div>
+                                        <div class="mb-3">
+                                            <input type="email" class="form-control" placeholder="Email@info.com">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-12">
+                                        <div>
+                                            <label>Email (job)</label>
+                                        </div>
+                                        <div class="mb-3">
+                                            <input type="email" class="form-control" placeholder="Email@info.com">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 col-12">
+                                        <div>
+                                            <label>system Language</label>
+                                        </div>
+                                        <div class="d-flex align-items-center pr-3 border form-control py-1 mb-3">
+                                            <select class=" selectpicker" multiple aria-label="size 3 select example"
+                                                data-live-search="true">
+                                                <option>English</option>
+                                                <option>English 1</option>
+                                                <option>English 2</option>
+                                                <option>English 3</option>
+                                            </select>
+                                            <img class="input-svg" width="12" src="../images/img-droplist.svg">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3 col-12">
+                                        <div>
+                                            <label>your role</label>
+                                        </div>
+                                        <div class="d-flex align-items-center pr-3 border form-control py-1 mb-3">
+                                            <select class=" selectpicker" multiple aria-label="size 3 select example"
+                                                data-live-search="true">
+                                                <option>1</option>
+                                                <option> 2</option>
+                                                <option> 3</option>
+                                                <option> 4</option>
+                                            </select>
+                                            <img class="input-svg" width="12" src="../images/img-droplist.svg">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-2 col-12">
+                                        <div>
+                                            <label>Department</label>
+                                        </div>
+                                        <div class="d-flex align-items-center pr-3 border form-control py-1 mb-3">
+                                            <select class=" selectpicker" multiple aria-label="size 3 select example"
+                                                data-live-search="true">
+                                                <option>option</option>
+                                                <option>option 1</option>
+                                                <option>option 2</option>
+                                                <option>option 3</option>
+                                            </select>
+                                            <img class="input-svg" width="12" src="../images/img-droplist.svg">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3 col-12">
+                                        <div>
+                                            <label>Cost center</label>
+                                        </div>
+                                        <div class="d-flex align-items-center pr-3 border form-control py-1 mb-3">
+                                            <select class="selectpicker" multiple aria-label="size 3 select example"
+                                                data-live-search="true">
+                                                <option>option</option>
+                                                <option>option 1</option>
+                                                <option>option 2</option>
+                                                <option>option 3</option>
+                                            </select>
+                                            <img class="input-svg" width="12" src="../images/img-droplist.svg">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3 col-12">
+                                        <div>
+                                            <label>Building</label>
+                                        </div>
+                                        <div class="d-flex align-items-center pr-3 border form-control py-1 mb-3">
+                                            <select class=" selectpicker" multiple aria-label="size 3 select example"
+                                                data-live-search="true">
+                                                <option>Building</option>
+                                                <option>Building 1</option>
+                                                <option>Building 2</option>
+                                                <option>Building 3</option>
+                                            </select>
+                                            <img class="input-svg" width="12" src="../images/img-droplist.svg">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="container-fluid p-4" id="back-client">
+                <div class="content-container rounded bg-white shadow p-2 p-md-4 pb-md-5">
+                    <div class="d-flex justify-content-start align-items-center py-1 mb-3">
+                        <h4 class="px-4 py-2">Change password </h4>
+                    </div>
+                    <div class="content-body px-md-4">
+                        <form class="row align-items-end" id="Changepassword">
+                            <div class="col-md-3 col-12">
+                                <div><label for="newPassword">New Password</label></div>
+                                <div class="mb-3">
+                                    <input type="password" class="form-control" id="newPassword" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$" placeholder=""
+                                        required>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-12">
+                                <div><label for="repeatPassword">Repeat New Password</label></div>
+                                <div class="mb-3">
+                                    <input type="password" class="form-control" id="repeatPassword" placeholder="" required>
+                                </div>
+                                <div id="passwordMismatchAlert" class="position-absolute text-danger" style="display: none;">Password mismatch.</div>
+
+                            </div>
+                            <div class="col-md-3 col-12 text-center mb-3">
+                                <button type="submit" class="btn btn-primary py-2 px-4">save</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid p-4" id="back-client">
+                <div class="content-container rounded bg-white shadow p-2 p-md-4">
+                    <div class="d-flex justify-content-between align-items-center py-1 mb-3">
+                        <h4 class="px-4 py-2">Notification</h4>
+                        <div class="d-flex">
+
+                            <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
+                                <label class="switch">
+                                    <input type="checkbox" class="group-article" checked>
+                                    <span class="slider round"></span>
+                                </label>
+                                <label class="form-check-label mx-2" for="flexSwitchCheckChecked">System
+                                    notification</label>
+                            </div>
+
+                            <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
+                                <label class="switch">
+                                    <input type="checkbox" class="group-article" checked>
+                                    <span class="slider round"></span>
+                                </label>
+                                <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Email
+                                    notification</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-body row px-md-4">
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="form-group form-check">
+                                <input type="checkbox" class="form-check-input" id="Check1">
+                                <label class="form-check-label" for="Check1">when someone tagged you</label>
+                            </div>
+                            <div class="form-group form-check">
+                                <input type="checkbox" class="form-check-input" id="Check2">
+                                <label class="form-check-label" for="Check2">When someone posts in you profile </label>
+                            </div>
+                            <div class="form-group form-check">
+                                <input type="checkbox" class="form-check-input" id="Check2">
+                                <label class="form-check-label" for="Check2">When someone comments you posts </label>
+                            </div>
+                            <div class="form-group form-check">
+                                <input type="checkbox" class="form-check-input" id="Check2">
+                                <label class="form-check-label" for="Check2">When someone send a massage to you </label>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="form-group form-check">
+                                <input type="checkbox" class="form-check-input" id="Check1">
+                                <label class="form-check-label" for="Check1">when someone tagged you</label>
+                            </div>
+                            <div class="form-group form-check">
+                                <input type="checkbox" class="form-check-input" id="Check2">
+                                <label class="form-check-label" for="Check2">When someone posts in you profile </label>
+                            </div>
+                            <div class="form-group form-check">
+                                <input type="checkbox" class="form-check-input" id="Check2">
+                                <label class="form-check-label" for="Check2">When someone comments you posts </label>
+                            </div>
+                            <div class="form-group form-check">
+                                <input type="checkbox" class="form-check-input" id="Check2">
+                                <label class="form-check-label" for="Check2">When someone send a massage to you </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+
+    <script>
+        $('.ui.dropdown').dropdown();
+    </script>
+    <!-- global js -->
+    <script src="../JS/global/jquery/jquery-3.4.1.min.js"></script>
+    <script src="../JS/global/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="../JS/global/bootstrap/bootstrap-select.js"></script>
+    <script src="../JS/global/datePicker/datepicker.js"></script>
+    <script src="../JS/layout.js"></script>
+
+    <script type="text/javascript">
+        //img
+        function openFilePicker() {
+            const fileInput = document.getElementById("fileInput");
+            fileInput.addEventListener("change", function () {
+                const selectedFile = this.files[0];
+                if (selectedFile) {
+                    const reader = new FileReader();
+                    reader.onload = function (e) {
+                        const image = document.getElementById("image");
+                        image.src = e.target.result;
+                    };
+                    reader.readAsDataURL(selectedFile);
+                }
+            });
+            fileInput.click();
+        }
+        function removeImage() {
+            const image = document.getElementById("image");
+            image.src = "../images/employee.png";
+        }
+
+
+        // select  birthday => day + month + year
+        let Days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];// index => month [0-11]
+
+        $(document).ready(function () {
+            let option = '<option value="day">day</option>';
+            let selectedDay = "day";
+            for (let i = 1; i <= Days[0]; i++) { //add option days
+                option += '<option value="' + i + '">' + i + '</option>';
+            }
+            $('#day').append(option);
+            $('#day').val(selectedDay);
+
+            option = '<option value="month">month</option>';
+            let selectedMon = "month";
+            const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+            for (let i = 1; i <= 12; i++) {
+                option += '<option value="' + i + '">' + monthNames[i - 1] + '</option>';
+            }
+            $('#month').append(option);
+            $('#month').val(selectedMon);
+
+            option = '<option value="month">month</option>';
+            selectedMon = "month";
+            for (let i = 1; i <= 12; i++) {
+                option += '<option value="' + i + '">' + monthNames[i - 1] + '</option>';
+            }
+            $('#month2').append(option);
+            $('#month2').val(selectedMon);
+
+            let d = new Date();
+            option = '<option value="year">year</option>';
+            selectedYear = "year";
+            for (let i = d.getFullYear(); i >= 1990; i--) {
+                option += '<option value="' + i + '">' + i + '</option>';
+            }
+            $('#year').append(option);
+            $('#year').val(selectedYear);
+        });
+
+        function isLeapYear(year) {
+            year = parseInt(year);
+            if (year % 4 != 0) {
+                return false;
+            } else if (year % 400 == 0) {
+                return true;
+            } else if (year % 100 == 0) {
+                return false;
+            } else {
+                return true;
+            }
+        }
+
+        function change_year(select) {
+            if (isLeapYear($(select).val())) {
+                Days[1] = 29;
+            } else {
+                Days[1] = 28;
+            }
+            if ($("#month").val() == 2) {
+                let day = $('#day');
+                let val = $(day).val();
+                $(day).empty();
+                option = '<option value="day">day</option>';
+                for (let i = 1; i <= Days[month]; i++) { //add option days
+                    option += '<option value="' + i + '">' + i + '</option>';
+                }
+                $(day).append(option);
+                if (val > Days[month]) {
+                    val = 1;
+                }
+                $(day).val(val);
+            }
+        }
+
+        function change_month(select) {
+            day = $('#day');
+            let val = $(day).val();
+            $(day).empty();
+            option = '<option value="day">day</option>';
+            let month = parseInt($(select).val()) - 1;
+            for (let i = 1; i <= Days[month]; i++) { //add option days
+                option += '<option value="' + i + '">' + i + '</option>';
+            }
+            $(day).append(option);
+            if (val > Days[month]) {
+                val = 1;
+            }
+            $(day).val(val);
+        }
+
+
+        //Password 
+        const newPasswordInput = document.getElementById("newPassword");
+        const repeatPasswordInput = document.getElementById("repeatPassword");
+        const passwordMismatchAlert = document.getElementById("passwordMismatchAlert");
+
+        repeatPasswordInput.addEventListener("input", function () {
+            const newPassword = newPasswordInput.value;
+            const repeatPassword = repeatPasswordInput.value;
+
+            if (newPassword !== repeatPassword) {
+                passwordMismatchAlert.style.display = "block";
+            } else {
+                passwordMismatchAlert.style.display = "none";
+            }
+        });
+
+    </script>
+
+</body>
+
+</html>
