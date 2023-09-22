@@ -1184,3 +1184,6 @@ td.ui-sortable {
 .dx-pivotgrid .dx-grandtotal {
   background-color: #d3e2fb;
 }
+.apexcharts-tooltip.apexcharts-theme-light {
+  color: #000;
+}
