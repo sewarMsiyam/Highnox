@@ -189,7 +189,7 @@ table {
   padding: 1rem 2rem;
 }
 .basicInput {
-  background: #E8E8E8 !important;
+  background:var(--select-input) !important;
   color: #848484;
 }
 .select2-container--default .select2-selection--single {
