@@ -89,9 +89,9 @@ function addToDoTable() {
   console.log(toggleId , menuId);
   const liId = generateUniqueId("li");
   const li = document.createElement("li");
-  li.className = "column";
+  li.className = "column ";
   li.id = liId;
-  li.style = `background-color: #F2F2F2; width:350px !important;height: fit-content ;border-radius: 15px !important;overflow: hidden;`;
+  li.className += "column-todo";
   li.innerHTML = `
                <div class="d-flex justify-content-between px-3 py-3" style="background-color: ${getRandomColor()};">
                     <div class="d-flex flex-row justify-content-center text-box" style="width:100%">

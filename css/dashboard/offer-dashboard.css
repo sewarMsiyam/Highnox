@@ -168,11 +168,11 @@ td {
   border-right: none;
 }
 .tr:nth-child(odd) {
-  background: white;
+  background: var(--bg-white);
 }
 
 .tr:nth-child(even) {
-  background: #fff;
+  background: var(--bg-white);
 }
 
 /* .tr:hover {
@@ -391,7 +391,7 @@ input::placeholder, textarea::placeholder {
 }
 
 .tr-active {
-  background-color: #fff !important;
+  background-color: var(--bg-white) !important;
 }
 
 .tr-not-active {

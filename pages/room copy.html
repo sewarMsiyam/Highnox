@@ -2,76 +2,36 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <title>highnox</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
-    <link rel="icon" href="../images/Highnox.png" type="image/x-icon" />
+  <meta charset="utf-8">
+  <title>highnox</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+  <link rel="icon" href="../images/Highnox.png" type="image/x-icon" />
 
-    <link rel="stylesheet" href="../css/semantic.min.css">
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <script src="../JS/semantic.min.js"></script>
-    <!-- global style -->
-    <link href="../css/global/datepicker/datepicker.css" rel="stylesheet">
-    <link href="../css/global/bootstrap/bootstrap.min.css" rel="stylesheet">
-    <link href="../css/global/bootstrap/bootstrap-select.css" rel="stylesheet">
-    <link href="../css/global/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/semantic.min.css"  >
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="../JS/semantic.min.js"></script>
 
-    <!-- dashboard style -->
-    <link href="../css/dashboard/main-dashboard.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="../css/dashboard/style.css">
-    <link rel="stylesheet" type="text/css" href="../css/dashboard/screen.css">
-    <link rel="stylesheet" href="../css/dashboard/media.css">
+  <link href="../css/global/datepicker/datepicker.css" rel="stylesheet">
 
-    <!-- Icon Font Stylesheet cdn -->
-    <link rel="stylesheet" href="../css/global/font-awesome/css/all.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- global style -->
+  <link href="../css/global/bootstrap/bootstrap.min.css" rel="stylesheet">
+  <link href="../css/global/bootstrap/bootstrap-select.css" rel="stylesheet">
+  <link href="../css/global/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="../css/layout.css">
+  <!-- dashboard style -->
+  <link href="../css/dashboard/main-dashboard.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../css/dashboard/style.css">
+  <link rel="stylesheet" type="text/css" href="../css/dashboard/screen.css">
+  <link rel="stylesheet" href="../css/dashboard/media.css" >
 
-    <style>
-        :root,
-        :root.light {
-            --bg-white: #fff;
-        }
-
-        :root.dark {
-            --bg-white: #1d2a35;
-        }
-
-        /*********** dark icons *******************/
-        .theme-btn {
-            width: 30px;
-            height: 30px;
-            display: inline-flex;
-            align-items: center;
-            border-radius: 30px;
-            border: 1px solid gray;
-            justify-content: center;
-            color: var(--primary);
-            background: initial;
-            outline: none !important;
-        }
-
-        .theme-btn.light {
-            display: none;
-        }
-
-        .dark .theme-btn.dark {
-            display: none;
-        }
-
-        .dark .theme-btn.light {
-            display: block;
-        }
-
-        .bg-white {
-            background-color: var(--bg-white) !important;
-        }
-    </style>
+  <!-- Icon Font Stylesheet cdn -->
+  <link rel="stylesheet" href="../css/global/font-awesome/css/all.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../css/layout.css">
 </head>
-
 <body>
     <main class="layout" data-sidebar-minimize="off">
         <!-- Sidebar Start -->
@@ -271,8 +231,6 @@
         </div>
         <!-- Sidebar End -->
 
-
-
         <!-- Content Start -->
         <div class="content">
             <!-- Navbar Start -->
@@ -320,7 +278,14 @@
                 <i class="bi bi-three-dots-vertical"></i>
                 <div class="navbar-icons-container navbar-nav align-items-center ms-auto p-3 p-lg"
                     style="gap: 0.7rem; flex-wrap: wrap;">
-
+                    <div class="nav-item dropdown">
+                        <button class="theme-btn light" onclick="setTheme('light')" title="Light mode">
+                            <i class="bi bi-brightness-high-fill"></i>
+                        </button>
+                        <button class="theme-btn dark" onclick="setTheme('dark')" title="Dark mode">
+                            <i class="bi bi-moon-stars-fill"></i>
+                        </button>
+                    </div>
                     <!--Search in responsive-->
                     <div class="nav-item dropdown d-lg-none">
                         <a href="#" class="nav-link" data-bs-toggle="dropdown">
@@ -378,18 +343,6 @@
                         </div>
                     </div>
                     <!--languages drop down ends-->
-                    <div class="nav-item dropdown">
-                        <button class="theme-btn light" onclick="setTheme('light')" title="Light mode">
-                            <i class="bi bi-brightness-high-fill"></i>
-                        </button>
-                        <button class="theme-btn dark" onclick="setTheme('dark')" title="Dark mode">
-                            <i class="bi bi-moon-stars-fill"></i>
-                        </button>
-                    </div>
-
-
-
-
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link" data-bs-toggle="dropdown" id="zoom-button">
                             <i class="fa-solid fa-expand fullsec"></i>
@@ -488,30 +441,27 @@
                         </div>
                     </div>
                     <!--notification drop down ends-->
-                    <!--dashboard drop down starts-->
-                    <div class="nav-item dropdown nav-link-position">
-                        <a href="#" class="nav-link text-dark font-weight-bold" data-bs-toggle="dropdown">
-                            <span class="bi bi-grid text-dark font-weight-bold"></span> Space Management <span
-                                class="fa-solid fa-caret-down"></span>
-                        </a>
-                        <div class="dropdown-down dropdown-menu dropdown-menu-end bg-light border-0 m-0 p-0">
-                            <div class="triangle"
-                                style="border-color: transparent transparent #2f3b4e; right: 10px; top: -8px;">
-                            </div>
-                            <div class="settings dashboard">
-                                <p style="border-top-right-radius: 10px; border-top-left-radius: 10px;">Dashboard</p>
-                                <div>
-                                    <a href="#" class="dropdown-item"><i class="bi bi-grid"></i>Space Management</a>
-                                    <a href="#" class="dropdown-item"><i class="bi bi-grid"></i>Conference
-                                        Management</a>
-                                    <a href="#" class="dropdown-item"><i class="bi bi-grid"></i>Tickets</a>
-                                    <a href="#" class="dropdown-item"><i class="bi bi-grid"></i>CRM</a>
-                                    <a href="#" class="dropdown-item"><i class="bi bi-grid"></i>Mass Email</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- dashboard drop down end -->
+                             <!--dashboard drop down starts-->
+          <div class="nav-item dropdown nav-link-position">
+            <a href="#" class="nav-link text-dark font-weight-bold" data-bs-toggle="dropdown">
+              <span class="bi bi-grid text-dark font-weight-bold"></span> Space Management <span class="fa-solid fa-caret-down"></span>
+            </a>
+            <div class="dropdown-down dropdown-menu dropdown-menu-end bg-light border-0 m-0 p-0">
+              <div class="triangle" style="border-color: transparent transparent #2f3b4e; right: 10px; top: -8px;">
+              </div>
+              <div class="settings dashboard">
+                <p style="border-top-right-radius: 10px; border-top-left-radius: 10px;">Dashboard</p>
+                <div>
+                  <a href="#" class="dropdown-item"><i class="bi bi-grid"></i>Space Management</a>
+                  <a href="#" class="dropdown-item"><i class="bi bi-grid"></i>Conference Management</a>
+                  <a href="#" class="dropdown-item"><i class="bi bi-grid"></i>Tickets</a>
+                  <a href="#" class="dropdown-item"><i class="bi bi-grid"></i>CRM</a>
+                  <a href="#" class="dropdown-item"><i class="bi bi-grid"></i>Mass Email</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- dashboard drop down end -->
                     <!-- settings drop down start -->
                     <div class="nav-item dropdown nav-link-position gear-container">
                         <a href="#" class="nav-link" data-bs-toggle="dropdown">
@@ -586,478 +536,82 @@
             </nav>
             <!-- End Navbar  -->
 
-
             <div class="container-fluid p-4" id="back-client">
-                <div class="content-container rounded bg-white shadow">
-                    <div class="media align-items-start p-2 p-md-4">
-                        <img id="image" src="../images/employee.png" class="rounded mr-4" width="90" alt="...">
-                        <div class="d-flex flex-column mr-4">
-                            <input type="file" id="fileInput" style="display: none;" accept="image/*">
-                            <button class="btn btn-primary rounded my-1" onclick="openFilePicker()">Change</button>
-                            <button class="btn btn-danger rounded my-1" onclick="removeImage()">Remove</button>
-                        </div>
-                        <div class="media-body my-2">
-                            <h4 class="mt-0">Carl Andersson</h4>
-                            <p>you primary and login email : info@job.com </p>
-                        </div>
-                        <div class="d-flex mr-4">
-                            <button class="btn btn-danger rounded m-1">Cancel changes </button>
-                            <button class="btn btn-primary rounded m-1">save changes</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-
-            <div class="container-fluid p-4 pt-0" id="back-client">
                 <div class="content-container rounded bg-white shadow py-3">
-                    <div class="d-flex justify-content-start align-items-center py-1">
-                        <h4 class="px-4 py-2">main information </h4>
+                    <div class="content-top d-flex justify-content-start align-items-center py-1">
+                        <h4 class="px-4 py-2">Room</h4>
                     </div>
-                    <div class="content-body">
-                        <form class="">
-                            <div class="px-4 ">
-                                <div class="form-row my-4 align-items-end">
-                                    <div class="col-md-1 col-6">
-                                        <div>
-                                            <label>Day</label>
-                                        </div>
-                                        <div class="mb-3">
-                                            <select class="form-control" id="day" name="dd"></select>
-                                        </div>
-                                    </div>
 
-                                    <div class="col-md-2 col-6">
-                                        <div>
-                                            <label>month</label>
-                                        </div>
-                                        <div class="mb-3">
-                                            <select class="form-control" id="month" name="mm"
-                                                onchange="change_month(this)"></select>
-                                        </div>
-                                    </div>
+                    <div class="container-fluid px-4 pb-4" id="back-client">
+                   
 
-                                    <div class="col-md-2 col-6">
-                                        <div>
-                                            <label>year</label>
-                                        </div>
-                                        <div class="mb-3">
-                                            <select class="form-control" id="year" name="yyyy"
-                                                onchange="change_year(this)"></select>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-12 px-3 ">
-                                        <div class="form-group form-check">
-                                            <input type="checkbox" class="form-check-input" id="birthday">
-                                            <label class="form-check-label" for="birthday">show my birthday for other
-                                                employees</label>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="form-row my-4 align-items-end">
-                                    <div class="col-md-3 col-12">
-                                        <div>
-                                            <label>First name</label>
-                                        </div>
-                                        <div class="mb-3">
-                                            <input type="text" class="form-control" placeholder="First name">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3 col-12">
-                                        <div>
-                                            <label>last name</label>
-                                        </div>
-                                        <div class="mb-3">
-                                            <input type="text" class="form-control" placeholder="last name">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3 col-12">
-                                        <div>
-                                            <label>Address</label>
-                                        </div>
-                                        <div class="mb-3">
-                                            <input type="text" class="form-control" placeholder="Address">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-1 col-6">
-                                        <div>
-                                            <label>Zip code</label>
-                                        </div>
-                                        <div class="mb-3">
-                                            <input type="text" class="form-control" placeholder="Zip">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-2 col-6">
-                                        <div>
-                                            <label>city</label>
-                                        </div>
-                                        <div class="mb-3">
-                                            <input type="text" class="form-control" placeholder="city">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-2 col-12">
-                                        <div>
-                                            <label>Mobile number (private) </label>
-                                        </div>
-                                        <div class="mb-3">
-                                            <input type="text" class="form-control" placeholder="00">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-2 col-12">
-                                        <div>
-                                            <label>Mobile number (job)</label>
-                                        </div>
-                                        <div class="mb-3">
-                                            <input type="text" class="form-control" placeholder="00">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3 col-12">
-                                        <div>
-                                            <label>Email (private)</label>
-                                        </div>
-                                        <div class="mb-3">
-                                            <input type="email" class="form-control" placeholder="Email@info.com">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3 col-12">
-                                        <div>
-                                            <label>Email (job)</label>
-                                        </div>
-                                        <div class="mb-3">
-                                            <input type="email" class="form-control" placeholder="Email@info.com">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-2 col-12">
-                                        <div>
-                                            <label>system Language</label>
-                                        </div>
-                                        <div class="d-flex align-items-center pr-3 border form-control py-1 mb-3">
-                                            <select class=" selectpicker" multiple aria-label="size 3 select example"
-                                                data-live-search="true">
-                                                <option>English</option>
-                                                <option>English 1</option>
-                                                <option>English 2</option>
-                                                <option>English 3</option>
-                                            </select>
-                                            <img class="input-svg" width="12" src="../images/img-droplist.svg">
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-3 col-12">
-                                        <div>
-                                            <label>your role</label>
-                                        </div>
-                                        <div class="d-flex align-items-center pr-3 border form-control py-1 mb-3">
-                                            <select class=" selectpicker" multiple aria-label="size 3 select example"
-                                                data-live-search="true">
-                                                <option>1</option>
-                                                <option> 2</option>
-                                                <option> 3</option>
-                                                <option> 4</option>
-                                            </select>
-                                            <img class="input-svg" width="12" src="../images/img-droplist.svg">
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-2 col-12">
-                                        <div>
-                                            <label>Department</label>
-                                        </div>
-                                        <div class="d-flex align-items-center pr-3 border form-control py-1 mb-3">
-                                            <select class=" selectpicker" multiple aria-label="size 3 select example"
-                                                data-live-search="true">
-                                                <option>option</option>
-                                                <option>option 1</option>
-                                                <option>option 2</option>
-                                                <option>option 3</option>
-                                            </select>
-                                            <img class="input-svg" width="12" src="../images/img-droplist.svg">
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-3 col-12">
-                                        <div>
-                                            <label>Cost center</label>
-                                        </div>
-                                        <div class="d-flex align-items-center pr-3 border form-control py-1 mb-3">
-                                            <select class="selectpicker" multiple aria-label="size 3 select example"
-                                                data-live-search="true">
-                                                <option>option</option>
-                                                <option>option 1</option>
-                                                <option>option 2</option>
-                                                <option>option 3</option>
-                                            </select>
-                                            <img class="input-svg" width="12" src="../images/img-droplist.svg">
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-3 col-12">
-                                        <div>
-                                            <label>Building</label>
-                                        </div>
-                                        <div class="d-flex align-items-center pr-3 border form-control py-1 mb-3">
-                                            <select class=" selectpicker" multiple aria-label="size 3 select example"
-                                                data-live-search="true">
-                                                <option>Building</option>
-                                                <option>Building 1</option>
-                                                <option>Building 2</option>
-                                                <option>Building 3</option>
-                                            </select>
-                                            <img class="input-svg" width="12" src="../images/img-droplist.svg">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
                     </div>
+
                 </div>
             </div>
-
-
-            <div class="container-fluid p-4" id="back-client">
-                <div class="content-container rounded bg-white shadow p-2 p-md-4 pb-md-5">
-                    <div class="d-flex justify-content-start align-items-center py-1 mb-3">
-                        <h4 class="px-4 py-2">Change password </h4>
-                    </div>
-                    <div class="content-body px-md-4">
-                        <form class="row align-items-end" id="Changepassword">
-                            <div class="col-md-3 col-12">
-                                <div><label for="newPassword">New Password</label></div>
-                                <div class="mb-3">
-                                    <input type="password" class="form-control" id="newPassword" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$" placeholder=""
-                                        required>
-                                </div>
-                            </div>
-                            <div class="col-md-3 col-12">
-                                <div><label for="repeatPassword">Repeat New Password</label></div>
-                                <div class="mb-3">
-                                    <input type="password" class="form-control" id="repeatPassword" placeholder="" required>
-                                </div>
-                                <div id="passwordMismatchAlert" class="position-absolute text-danger" style="display: none;">Password mismatch.</div>
-
-                            </div>
-                            <div class="col-md-3 col-12 text-center mb-3">
-                                <button type="submit" class="btn btn-primary py-2 px-4">save</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-
-            <div class="container-fluid p-4" id="back-client">
-                <div class="content-container rounded bg-white shadow p-2 p-md-4">
-                    <div class="d-flex justify-content-between align-items-center py-1 mb-3">
-                        <h4 class="px-4 py-2">Notification</h4>
-                        <div class="d-flex">
-
-                            <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
-                                <label class="switch">
-                                    <input type="checkbox" class="group-article" checked>
-                                    <span class="slider round"></span>
-                                </label>
-                                <label class="form-check-label mx-2" for="flexSwitchCheckChecked">System
-                                    notification</label>
-                            </div>
-
-                            <div class="form-check form-switch col-12-responsive mt-4 d-flex ">
-                                <label class="switch">
-                                    <input type="checkbox" class="group-article" checked>
-                                    <span class="slider round"></span>
-                                </label>
-                                <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Email
-                                    notification</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="content-body row px-md-4">
-                        <div class="col-12 col-md-6 col-lg-4">
-                            <div class="form-group form-check">
-                                <input type="checkbox" class="form-check-input" id="Check1">
-                                <label class="form-check-label" for="Check1">when someone tagged you</label>
-                            </div>
-                            <div class="form-group form-check">
-                                <input type="checkbox" class="form-check-input" id="Check2">
-                                <label class="form-check-label" for="Check2">When someone posts in you profile </label>
-                            </div>
-                            <div class="form-group form-check">
-                                <input type="checkbox" class="form-check-input" id="Check2">
-                                <label class="form-check-label" for="Check2">When someone comments you posts </label>
-                            </div>
-                            <div class="form-group form-check">
-                                <input type="checkbox" class="form-check-input" id="Check2">
-                                <label class="form-check-label" for="Check2">When someone send a massage to you </label>
-                            </div>
-                        </div>
-
-                        <div class="col-12 col-md-6 col-lg-4">
-                            <div class="form-group form-check">
-                                <input type="checkbox" class="form-check-input" id="Check1">
-                                <label class="form-check-label" for="Check1">when someone tagged you</label>
-                            </div>
-                            <div class="form-group form-check">
-                                <input type="checkbox" class="form-check-input" id="Check2">
-                                <label class="form-check-label" for="Check2">When someone posts in you profile </label>
-                            </div>
-                            <div class="form-group form-check">
-                                <input type="checkbox" class="form-check-input" id="Check2">
-                                <label class="form-check-label" for="Check2">When someone comments you posts </label>
-                            </div>
-                            <div class="form-group form-check">
-                                <input type="checkbox" class="form-check-input" id="Check2">
-                                <label class="form-check-label" for="Check2">When someone send a massage to you </label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
         </div>
     </main>
 
-
     <script>
         $('.ui.dropdown').dropdown();
-    </script>
-    <!-- global js -->
-    <script src="../JS/global/jquery/jquery-3.4.1.min.js"></script>
-    <script src="../JS/global/bootstrap/bootstrap.bundle.min.js"></script>
-    <script src="../JS/global/bootstrap/bootstrap-select.js"></script>
-    <script src="../JS/global/datePicker/datepicker.js"></script>
-    <script src="../JS/layout.js"></script>
+      </script>
+    
+      <!-- global js -->
+      <script src="../JS/global/jquery/jquery-3.4.1.min.js"></script>
+      <script src="../JS/client/main.js"></script>
+      <script src="../JS/global/bootstrap/bootstrap.bundle.min.js"></script>
+      <script src="../JS/global/bootstrap/bootstrap-select.js"></script>
+      <script src="../JS/global/datePicker/datepicker.js"></script>
+      <script src="../JS/global/swiper/swiper-bundle.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+      <script src="../JS/layout.js"></script>
+    
 
     <script type="text/javascript">
-        //img
-        function openFilePicker() {
-            const fileInput = document.getElementById("fileInput");
-            fileInput.addEventListener("change", function () {
-                const selectedFile = this.files[0];
-                if (selectedFile) {
-                    const reader = new FileReader();
-                    reader.onload = function (e) {
-                        const image = document.getElementById("image");
-                        image.src = e.target.result;
-                    };
-                    reader.readAsDataURL(selectedFile);
-                }
-            });
-            fileInput.click();
-        }
-        function removeImage() {
-            const image = document.getElementById("image");
-            image.src = "../images/employee.png";
-        }
+        $('.trtabler').on('click', function (event) {
+            const target = $(event.target);
 
-
-        // select  birthday => day + month + year
-        let Days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];// index => month [0-11]
-
-        $(document).ready(function () {
-            let option = '<option value="day">day</option>';
-            let selectedDay = "day";
-            for (let i = 1; i <= Days[0]; i++) { //add option days
-                option += '<option value="' + i + '">' + i + '</option>';
+            if (target.is('td:last-child')) {
+                event.preventDefault();
+            } else if (target.is('td:last-child button')) {
+                event.preventDefault();
+            } else if (target.is('td:last-child button img')) {
+                event.preventDefault();
+            } else if (target.is('td:last-child .tooltip-left')) {
+                event.preventDefault();
+            } else if (target.is('td:last-child div img')) {
+                event.preventDefault();
+            } else if (target.is('td:last-child button i')) {
+                event.preventDefault();
+            } else if (target.is('td:first-child')) {
+                event.preventDefault();
+            } else if (target.is('td:first-child input[type="checkbox"]')) {
+                const checkbox = target.find('input[type="checkbox"]');
+                checkbox.prop('checked', !checkbox.prop('checked'));
+            } else {
+                window.location.href = 'create-room.html';
             }
-            $('#day').append(option);
-            $('#day').val(selectedDay);
-
-            option = '<option value="month">month</option>';
-            let selectedMon = "month";
-            const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-            for (let i = 1; i <= 12; i++) {
-                option += '<option value="' + i + '">' + monthNames[i - 1] + '</option>';
-            }
-            $('#month').append(option);
-            $('#month').val(selectedMon);
-
-            option = '<option value="month">month</option>';
-            selectedMon = "month";
-            for (let i = 1; i <= 12; i++) {
-                option += '<option value="' + i + '">' + monthNames[i - 1] + '</option>';
-            }
-            $('#month2').append(option);
-            $('#month2').val(selectedMon);
-
-            let d = new Date();
-            option = '<option value="year">year</option>';
-            selectedYear = "year";
-            for (let i = d.getFullYear(); i >= 1990; i--) {
-                option += '<option value="' + i + '">' + i + '</option>';
-            }
-            $('#year').append(option);
-            $('#year').val(selectedYear);
         });
 
-        function isLeapYear(year) {
-            year = parseInt(year);
-            if (year % 4 != 0) {
-                return false;
-            } else if (year % 400 == 0) {
-                return true;
-            } else if (year % 100 == 0) {
-                return false;
-            } else {
-                return true;
-            }
-        }
-
-        function change_year(select) {
-            if (isLeapYear($(select).val())) {
-                Days[1] = 29;
-            } else {
-                Days[1] = 28;
-            }
-            if ($("#month").val() == 2) {
-                let day = $('#day');
-                let val = $(day).val();
-                $(day).empty();
-                option = '<option value="day">day</option>';
-                for (let i = 1; i <= Days[month]; i++) { //add option days
-                    option += '<option value="' + i + '">' + i + '</option>';
-                }
-                $(day).append(option);
-                if (val > Days[month]) {
-                    val = 1;
-                }
-                $(day).val(val);
-            }
-        }
-
-        function change_month(select) {
-            day = $('#day');
-            let val = $(day).val();
-            $(day).empty();
-            option = '<option value="day">day</option>';
-            let month = parseInt($(select).val()) - 1;
-            for (let i = 1; i <= Days[month]; i++) { //add option days
-                option += '<option value="' + i + '">' + i + '</option>';
-            }
-            $(day).append(option);
-            if (val > Days[month]) {
-                val = 1;
-            }
-            $(day).val(val);
-        }
-
-
-        //Password 
-        const newPasswordInput = document.getElementById("newPassword");
-        const repeatPasswordInput = document.getElementById("repeatPassword");
-        const passwordMismatchAlert = document.getElementById("passwordMismatchAlert");
-
-        repeatPasswordInput.addEventListener("input", function () {
-            const newPassword = newPasswordInput.value;
-            const repeatPassword = repeatPasswordInput.value;
-
-            if (newPassword !== repeatPassword) {
-                passwordMismatchAlert.style.display = "block";
-            } else {
-                passwordMismatchAlert.style.display = "none";
-            }
+        //Swiper  img model
+        new Swiper(".mySwiper", {
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+            },
         });
+
+
+
+
+
+ 
 
     </script>
+
 
 </body>
 

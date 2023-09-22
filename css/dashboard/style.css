@@ -13,12 +13,19 @@
   color: #fff;
 }
 .btn-secondary2 {
-  background: #EFEEEE !important;
-  color: #000;
-  border: 1px solid #EFEEEE;
+  background: var(--btn-secondary2) !important;
+  color: var(--text-body);
+  border: 1px solid  var(--border-table);
+}
+.btn-light{
+  border-color: var(--border);
 }
 .btn-secondary:hover {
   color: #000;
+}
+.btn-secondary2:hover {
+  background-color: var(--bg-body) !important;
+  color: var(--text-body) !important;
 }
 .border-radius-2 {
   border-radius: 2px !important;
@@ -39,6 +46,15 @@
 .datepicker input {
   border: 0;
 } */
+.ui.upward.dropdown>.menu{
+  background: inherit !important;
+}
+.ui.dropdown .menu>.item {
+  color: inherit;
+}
+.ui.dropdown .menu>.item:hover {
+    color: var(--text-body);
+}
 .main-backgorund-color {
   background: #364153 !important;
 }
@@ -58,7 +74,7 @@ table {
       padding-right: 0 !important;
 }
 .input-svg {
-  height: 18px;
+  height: 20px;
 }
 .padding-0 {
   padding: 0;
@@ -101,7 +117,7 @@ table {
     gap: 0.5rem;
 }
 .file-button {
-  background-color: white;
+  background-color: var(--bg-white);
     border: 1px dashed #ccc;
     width: 100%;
     text-align: center;
@@ -127,12 +143,12 @@ table {
     border: 1px solid #364153 !important;
 }
 .cancel-btn {
-    background: #fff;
-    color: #364153 !important;
+    background: var(--bg-white);
+    color: var(--title-text) !important;
     padding: 0.7rem 2rem;
     width: fit-content;
     border-radius: 3px;
-    border: 1px solid #364153 !important;
+    border: 1px solid var(--title-text) !important;
     outline: none !important;
 }
 .cancel-btn:hover {
@@ -158,7 +174,7 @@ table {
     height: 20px;
 }
 .bg-gray {
-  background: #F2F2F2 !important;
+  background: var(--sale-card) !important;
 }
 .bg-transparent {
   background: transparent;
@@ -168,7 +184,7 @@ table {
 }
 /* main dashbaord */
 .topSection {
-  background: white;
+  background: var(--bg-white);
   border-radius: 1rem;
   padding: 1rem 2rem;
 }
@@ -191,12 +207,12 @@ table {
 }
 
 .firstNav {
-    background: white;
+    background: var(--bg-white);
     border-radius: 1rem;
     margin: 2rem 0;
     padding: 1rem 2rem;
     gap: 3rem;
-    box-shadow:0 3px 6px #00000029;
+    box-shadow:0 3px 6px var(--box-shadow);
     align-items: center;
   }
   .firstNav .nav-link {
@@ -212,8 +228,8 @@ table {
     border: none !important;
     outline: none !important;
     background-color: transparent;
-    color: black;
-  }
+    color: var(--text-dark) !important;
+  } 
   .firstNav button {
     font-size: 12px;
   }
@@ -244,7 +260,7 @@ table {
     justify-content: flex-end !important;
   } */
   .search-form {
-    background: #e8e8e8;
+    background: var(--select-input);
     align-items: center;
     padding: 0px 8px;
     border-radius: 13px;
@@ -253,13 +269,23 @@ table {
     height: 33px;
   }
   .search-form input[type='search'] {
-    background: #e8e8e8;
+    background: var(--select-input);
     text-indent: 15px;
     border: 0;
   }
+  .search-form.pos {
+    background: var(--pos-select-input);
+  }
+  .search-form.pos input[type='search'] {
+    background: var(--pos-select-input);  }
   .search-form img {
     height: 18px;
   }
+  .pos-light .btn-light:hover , .pos-light .btn-light:not(:disabled):not(.disabled):active {
+    color: var(--text-body) !important;
+    background-color: var(--primary);
+    border-color: var(--border);
+}
   .search-placeholder {
     padding: 0;
   }
@@ -280,7 +306,7 @@ table {
     height: 33px;
   }
   .select-input {
-    background: #e8e8e8;
+    background: var(--select-input);
     height: 40px;
     display: flex;
     justify-content: space-between;
@@ -289,11 +315,21 @@ table {
     border-radius: 3px;
     width: 100% !important;
   }
+  .select-input.meeting-room{
+    background: var(--meeting-date-input) !important;
+  }
+  .select-input.meeting-room input {
+    background: var(--meeting-date-input);
+  }
+.primaryDarkStyle a.btn{
+  background: var(--primaryDarkStyle) !important;
+  box-shadow: 0 0 3px #49566b !important;
+}
 .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
   width: 100% !important;
 }
   .second-select-input {
-    background: #fff;
+    background: var(--bg-white);
     height: 40px;
     display: flex;
     justify-content: center;
@@ -303,7 +339,7 @@ table {
     box-shadow: 0 3px 6px #00000029;
   }
   .third-select-input {
-    background: #e8e8e8;
+    background: var(--select-input);
     height: 40px;
     display: flex;
     justify-content: center;
@@ -316,7 +352,7 @@ table {
   }
 
   .table .second-select-input {
-    background: #fff;
+    background: var(--bg-white);
     height: calc(2.25rem + 2px);
     display: flex;
     justify-content: center;
@@ -326,8 +362,8 @@ table {
     box-shadow: none;
   }
   .table .second-select-input input, .table .third-select-input input {
-    border-top: 1px solid #E1E1E1;
-    border-bottom: 1px solid #E1E1E1;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
   }
   .third-select-input input {
     background: transparent;
@@ -336,10 +372,10 @@ table {
     background: transparent;
   }
   .border-bottom-1 {
-    border-bottom: 1px solid #E1E1E1;
+    border-bottom: 1px solid var(--border);
   }
   .border-top-1 {
-    border-top: 1px solid #E1E1E1;
+    border-top: 1px solid var(--border);
   }
   .border-radius-0 {
     border-radius: 0 !important;
@@ -347,7 +383,7 @@ table {
   .input-text {
     width: 100%;
     border: 0;
-    background: #e8e8e8;
+    background: inherit;
     outline: none;
   }
   .max-width-20-percentage {
@@ -392,7 +428,10 @@ table {
       padding: 1rem 2rem;
 }
 .bgTable {
-  background: #F2F2F2;
+  background: var(--table-room);
+}
+.bgTable.table-bordered td, .bgTable.table-bordered th {
+    border: 1px solid var(--border-table);
 }
 .boxShaddowTable {
   box-shadow: 0 3px 6px #00000029;
@@ -412,7 +451,7 @@ tr {
 .style-th {
   flex-grow: 1;
   font-size: 12px !important;
-  color: #1D1D1D;
+  color: var(--style-th);
   text-align: center;
   padding: 0 4px;
 }
@@ -490,13 +529,14 @@ ul {
 
 /*content attributes*/
 .content-container {
+  min-height: 100vh;
   border-radius: 4px;
 }
 .content-top {
-  border-bottom: 1px solid #CECECE;
+  border-bottom: 1px solid var(--content-top);
 }
 .content-form {
-  background: #F2F2F2;
+  background: var(--sale-card);
   border-radius: 4px;
 }
 .content-form h2 {
@@ -505,16 +545,16 @@ ul {
 /* end content attributes */
 /*invoices*/
 .greenBg {
-  background: #DAF8CB !important;
+  background: #DAF8CB80 !important;
 }
 .grayBg {
-  background: #EEEAEA !important;
+  background: #EEEAEA80 !important;
 }
 .yellowBg {
-  background: #F0F1C3 !important;
+  background: #F0F1C380 !important;
 }
 .blueVilotBg {
-  background: #edafaf !important;
+  background: #edafaf80 !important;
 }
 .total-div {
   width: 20%;
@@ -592,7 +632,7 @@ input:checked + .slider:before {
   border-radius: 10px;
 }
 .profile-image-white {
-  border: 10px solid white;
+  border: 10px solid var(--bg-white);
   border-radius: 100%;
 }
 .card-image-profile {
@@ -600,6 +640,9 @@ input:checked + .slider:before {
 }
 .textarea-profile {
   height: 140px;
+  color: var(--text-body);
+  border: none !important;
+
 }
 .stars .checked {
   color: orange;
@@ -706,14 +749,14 @@ input:checked + .slider:before {
 
 .investment-container-title,
 .add-clients-table-title {
-    color: #364153;
+    color: var(--title-text);
     font-size: 20px;
     font-family: "MontserratBold";
     margin-bottom: 1.5rem;
 }
 
 .investment-sub-container {
-    background-color: #fff;
+    background-color: var(--bg-primary-white);
     padding: 1.5rem;
     border-radius: 1rem;
 }
@@ -728,7 +771,7 @@ input:checked + .slider:before {
 }
 
 .investment-card {
-    background-color: #f2f2f2;
+    background-color: var(--card-gray);
     display: flex;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     border-radius: 1rem;
@@ -747,7 +790,7 @@ input:checked + .slider:before {
 }
 
 .investment-card-content-title {
-    color: #364153;
+    color: var(--title-text);
     font-size: 15px;
     font-family: "MontserratBold";
     margin-bottom: 0.8rem;
@@ -759,7 +802,7 @@ input:checked + .slider:before {
     color: #848484;
 }
 .bs-searchbox .form-control{
-  border: 1px solid var(--primary);
+  border: 1px solid #bdc5d896;
 }
 .bootstrap-select>.dropdown-toggle.bs-placeholder, .bootstrap-select>.dropdown-toggle.bs-placeholder:active, .bootstrap-select>.dropdown-toggle.bs-placeholder:focus, .bootstrap-select>.dropdown-toggle.bs-placeholder:hover {
   color: #999 !important;
@@ -768,7 +811,7 @@ input:checked + .slider:before {
   outline: none !important;
 }
 .bootstrap-select .btn{
-  color: #495057 !important;
+  color: var(--style-th) !important;
   background: transparent !important;
   border: 0 !important;
   outline: none !important;
@@ -797,7 +840,7 @@ input:checked + .slider:before {
 
 .pagination {
   gap: 1rem;
-  background-color: white;
+  background-color:var(--pagination);
   padding: 1rem;
   border-radius: 1rem;
   width: -moz-fit-content;
@@ -806,7 +849,7 @@ input:checked + .slider:before {
   justify-content: space-evenly;
   align-items: center;
   height: 49px !important;
-  box-shadow: 0px 0px 8px #dcdcdc;
+  box-shadow: 0px 0px 8px var(--pagination-shadow);
 }
 .tit-meetroom{
   color:#364153;
@@ -855,14 +898,14 @@ input:checked + .slider:before {
   margin-bottom: 15px;
   font-size: 14px !important;
   font-family: "MontserratSemiBold";
-  color: #364153;
+  color: var(--title-text);
 }
 .modal .input {
   border: 0px !important;
   height: 40px;
   border-radius: 5px;
   padding: 0 10px;
-  background-color: #F3F2F2;
+  background-color: var(--bg-body);
   width: 100%;
   font-size: 14px !important;
   font-family: 'MontserratRegular' !important;
@@ -911,12 +954,16 @@ td.ui-sortable {
 .fs-10{
   font-size:10px
 }
+.bg-input-email{
+  background-color: var(--input-email) !important;
+
+}
 
 
 .table .form-control{
   text-align: center;
   font-weight: 400;
-  color: #212529;
+  color: var(--text-body);
   font-size: 11px;
   height: calc(2.25rem + 2px);
 }
@@ -1006,7 +1053,9 @@ td.ui-sortable {
 .sotTble{
   padding: 0 3px;
 }
-
+.bg-inlineNow{
+  background-color: var(--select-input);
+}
 
 
 
@@ -1030,7 +1079,7 @@ td.ui-sortable {
 
 
 .imgbox li {
-  background: #fff;
+  background: var(--bg-white);
   padding: 10px;
   display: flex;
   justify-content: space-between;
@@ -1093,7 +1142,7 @@ td.ui-sortable {
   top: 50%;
   transform: translateY(-50%);
   background: #233450;
-  color: #fff;
+  color: var(--text-body);
   padding: 10px;
   border-radius: 10px 0 0 10px;
   font-size: 24px;
@@ -1107,7 +1156,7 @@ td.ui-sortable {
     z-index: 1045;
     display: flex;
     max-width: 100%;
-    color: #000;
+    color: var(--text-body);
     visibility: visible;
     background-color: #fff;
     background-clip: padding-box;
@@ -1123,7 +1172,6 @@ td.ui-sortable {
     
 } 
 
-
 .offcanvas.active {
   transform: translateX(0);
 }
@@ -1131,4 +1179,8 @@ td.ui-sortable {
 
 .bootstrap-select .dropdown-toggle:focus{
     outline: none !important;
+}
+
+.dx-pivotgrid .dx-grandtotal {
+  background-color: #d3e2fb;
 }

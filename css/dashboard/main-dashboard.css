@@ -3,7 +3,7 @@
 .nav-btn {
   outline: none !important;
   height: 100% !important;
-  color: var(--primary) !important;
+  color: var(--text-body) !important;
   font-size: 1rem !important;
   font-family: "MontserratSemiBold" !important;
 }
@@ -36,9 +36,12 @@ section {
 
 article > div {
   border-radius: 0.8rem !important;
-  background-color: var(--light);
+  background-color: var(--bg-white);
 }
+rect.highcharts-background{
+  fill: var(--bg-white) !important;
 
+}
 article ul {
   margin: 0 1rem;
 }
@@ -101,8 +104,8 @@ a:hover {
   transition: 0.5s;
 }
 .dropdown a:focus{
-  background-color: #eeeeee !important;
-  color:black !important
+  background-color: inherit !important;
+  color: var(--text-body) !important
 }
 .btn:hover {
   color: var(--light);
@@ -297,11 +300,11 @@ a:hover {
     right: -100%;
     top: 100%;
     width: 100%;
-    background-color: var(--light);
+    background-color: inherit;
     display: none;
     justify-content: center;
     padding: 0 2rem;
-    box-shadow: 0 4px 4px #cccccc;
+    box-shadow: 0 4px 4px #cccccc1c;
     transition: all 0.2s ease-in-out;
   }
 
@@ -379,7 +382,7 @@ a:hover {
 
 nav .dropdown-menu {
   border-radius: 15px;
-  background-color: var(--light);
+  background-color: var(--bg-light);
   right: 0;
   left: auto;
   width: auto !important;
@@ -441,16 +444,17 @@ nav .dropdown-menu {
   display: flex;
   align-items: center;
   gap: 1rem;
-  border-bottom: 0.5px solid #eeeeee;
+  border-bottom: 0.5px solid var(--border-ui-input);
+  color: var(--text-dark);
 }
 
 .dropdown-menu .settings .dropdown-item:hover {
-  background-color: #f3f3f3;
+  background-color: var(--hover-table);
 }
 
 .dropdown-menu .settings .dropdown-item i {
-  background-color: var(--light);
-  box-shadow: 0 3px 6px #00000029;
+  background-color: var(--bg-white);
+  box-shadow: 0 3px 6px var(--bg-body);
   width: 30px;
   height: 30px;
   display: flex;
@@ -473,7 +477,8 @@ nav .dropdown-menu {
   display: flex;
   align-items: center;
   gap: 1.5rem;
-  border-bottom: 0.5px solid #eeeeee;
+  border-bottom: 0.5px solid var(--hover-table);
+  background-color: var(--bg-white);
 }
 
 .dropdown-menu .dropdown-item.link i {
@@ -483,7 +488,10 @@ nav .dropdown-menu {
 .dropdown-menu .dropdown-item.link:nth-last-child(1) {
   border-bottom: 0px !important;
 }
-
+.dropdown-item:focus, .dropdown-item:hover{
+  color: var(--text-body);
+  background: var(--bg-body);
+}
 .dropdown-menu .user-details .image-container > div:nth-child(2) {
   width: 100%;
   flex-shrink: 0;
@@ -559,7 +567,7 @@ nav .dropdown-menu {
 }
 
 .table-container .table thead {
-  background-color: #f6f6f6;
+  background-color: var(--hover-table);
 }
 
 .table-container .table label {
@@ -611,7 +619,7 @@ article.table-container > div {
 
 .table-container .table.another tr:hover,
 tbody tr:hover {
-  background-color: #f6f6f6;
+  background-color: var(--hover-table);
 }
 .search-placeholder::placeholder{
   color: gray !important;
@@ -785,7 +793,7 @@ tbody tr:hover {
 .tooltip-left  {
   position: relative;
   display: inline-block;
-  border-bottom: 1px dotted black;
+  /* border-bottom: 1px dotted black; */
 }
 
 .tooltip-left .tooltiptext {
@@ -879,10 +887,17 @@ tbody tr:hover {
     width: 25% !important;
 }
 }
+#sticky-footer{
+  background-color: var(--footer) !important; 
+  position: relative;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  text-align:center;
+}
 
-
-
+/* 
 .print-dropdown .dropdown.cancel-btn:hover {
   color: #364153 !important;
-
-}
+} */

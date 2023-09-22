@@ -280,7 +280,14 @@
                 <i class="bi bi-three-dots-vertical"></i>
                 <div class="navbar-icons-container navbar-nav align-items-center ms-auto p-3 p-lg"
                     style="gap: 0.7rem; flex-wrap: wrap;">
-
+                    <div class="nav-item dropdown">
+                        <button class="theme-btn light" onclick="setTheme('light')" title="Light mode">
+                            <i class="bi bi-brightness-high-fill"></i>
+                        </button>
+                        <button class="theme-btn dark" onclick="setTheme('dark')" title="Dark mode">
+                            <i class="bi bi-moon-stars-fill"></i>
+                        </button>
+                    </div>
                     <!--Search in responsive-->
                     <div class="nav-item dropdown d-lg-none">
                         <a href="#" class="nav-link" data-bs-toggle="dropdown">
@@ -1436,18 +1443,16 @@
 					<div class="text-select">
 						Sender Email
 					</div>
-					<div class="container-inner" style="background-color: #F3F2F2;">
-						<input class="form-control input" type="text" placeholder="Enter Name"
-							style="background-color: #F3F2F2;" />
+					<div class="container-inner bg-input-email ">
+						<input class="form-control bg-input-email input" type="text" placeholder="Enter Name" />
 					</div>
 				</div>
 				<div class="d-flex flex-column descripton-area-container px-4 py-1 mb-3" style="width: 100%;">
 					<div class="text-select">
 						Reciver Email
 					</div>
-					<div class="container-inner" style="background-color: #F3F2F2;">
-						<input class="form-control input" type="text" placeholder="Enter Name"
-							style="background-color: #F3F2F2;" />
+					<div class="container-inner bg-input-email">
+						<input class="form-control input bg-input-email" type="text" placeholder="Enter Name"/>
 					</div>
 				</div>
 				<div class="d-flex flex-row  px-4 py-1 mb-3" style="gap:25px">
@@ -1455,9 +1460,8 @@
 						<div class="text-select">
 							CC
 						</div>
-						<div class="container-inner" style="background-color: #F3F2F2;">
-							<input class="form-control input" type="text" placeholder="Enter Name"
-								style="background-color: #F3F2F2;" />
+						<div class="container-inner bg-input-email">
+							<input class="form-control input bg-input-email" type="text" placeholder="Enter Name"/>
 						</div>
 					</div>
 
@@ -1468,9 +1472,8 @@
 							BC
 						</div>
 
-						<div class="container-inner" style="background-color: #F3F2F2;">
-							<input class="form-control input" type="text" placeholder="Enter Name"
-								style="background-color: #F3F2F2;" />
+						<div class="container-inner bg-input-email">
+							<input class="form-control input bg-input-email" type="text" placeholder="Enter Name"/>
 						</div>
 					</div>
 
@@ -1480,15 +1483,14 @@
 						<div class="text-select">
 							Subject
 						</div>
-						<div class="container-inner" style="background-color: #F3F2F2;">
-							<input class="form-control input" type="text" placeholder="Enter Name"
-								style="background-color: #F3F2F2;" />
+						<div class="container-inner bg-input-email">
+							<input class="form-control input bg-input-email" type="text" placeholder="Enter Name"/>
 						</div>
 					</div>
 				</div>
 				<div class="file-container-input px-4 py-1 mb-3" style="width: 100%;">
 					<div class="text-select"> Message </div>
-					<textarea class="form-control" id="editor" style="background-color: #F3F2F2;"></textarea>
+					<textarea class="form-control bg-input-email" id="editor"></textarea>
 				</div>
 				<div class="d-flex justify-content-center align-items-center m-3 flex-wrap" style="gap:15px">
 					<div class="file-container-input w-75 ">

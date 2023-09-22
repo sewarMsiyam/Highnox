@@ -21,7 +21,8 @@ cursor: pointer;
 }
 
 .to-do .to-do-task {
-  background-color: white;
+  background-color: var(--bg-primary-white);
+  color: var(--text-body);
 display: -webkit-box;
 display: -ms-flexbox;
 display: flex;
@@ -35,14 +36,14 @@ transition: all 0.3s;
 height: 173px;
 border-radius: 15px;
 cursor: move;
-box-shadow: 0 1px 3px #F2F2F2;
+box-shadow: 0 1px 3px var(--sale-card);
 padding: 15px;
 justify-content: space-between;
 }
 .to-do .to-do-task .to-do-details{
   font-size: 15px;
   font-family: "MontserratMedium";
-  color: #364153;
+  color: var(--text-body) !important;
 }
 .to-do .to-do-task-list {
   /* min-height: 100% ; */
@@ -251,7 +252,7 @@ justify-content: space-between;
   height: 40px !important;
   border-radius: 5px !important;
   padding: 0 10px !important;
-  background-color: #F3F2F2 !important;
+  background-color: var(--input-email) !important;
 }
 
 
@@ -385,6 +386,41 @@ input.call-picker {
 #dragulaModalCenter .select-input .input-svg{
   position: absolute;
     right: 30px;
+}
+.input-form-todo{
+  background:var(--select-input); 
+  align-items: center; 
+  padding: 0px 15px;
+  border-radius: 13px; 
+  width:85%
+}
+.input-form-todo input{
+  background:var(--select-input) !important;
+  text-indent: 15px;
+}
+.column-todo{
+  background-color: var(--sale-card); 
+  width:350px !important;
+  height: fit-content;
+  border-radius: 15px !important;
+  overflow: hidden;
+}
+.smool-list{
+  height: fit-content !important; color:#364153
+}
+.add-new-to-do input{
+  background-color: var(--bg-primary-white);
+    color: var(--text-body);
+}
+.lable-color{
+  height: 40px; border-radius: 5px; padding: 0 7px; background-color: var(--select-input); 
+}
+.tox :not(svg):not(rect) {
+  fill: #b1a3a3;
+}
+.tox .tox-toolbar, .tox .tox-toolbar__overflow, .tox .tox-toolbar__primary {
+  background-color: #ff0000 !important;
+  background-color: #ff0000 !important;
 }
 /* 
 #add_user .dropdown-toggle .filter-option-inner .filter-option-inner-inner {
